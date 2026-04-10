@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "remixicon";
+  src: url('/remixicon.woff2') format("woff2");
+  font-display: swap;
+}
+
+[class^="ri-"], [class*=" ri-"] {
+  font-family: 'remixicon' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ri-xs { font-size: 8px; }
+.ri-sm { font-size: 12px; }
+.ri-1x { font-size: 16px; }
+.ri-2x { font-size: 19px; }
+.ri-3x { font-size: 24px; }
+
+.ri-sticky-note-fill:before { content: "\f19a"; }
+.ri-book-2-fill:before { content: "\ead2"; }
+.ri-chat-voice-fill:before { content: "\eb76"; }
+.ri-arrow-left-s-line:before { content: "\ea64"; }

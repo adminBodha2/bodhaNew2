@@ -1,0 +1,86 @@
+[
+  {
+    "date": "2026-01-01T00:00:00.000Z",
+    "formattedDate": "Jan 1",
+    "meta": {
+      "title": "Research Projects",
+      "author": [
+        "Bodha"
+      ],
+      "category": "Main Page",
+      "tags": [
+        "bodha",
+        "culture",
+        "research"
+      ],
+      "date": "2026-01-01T00:00:00.000Z",
+      "image": "/images/bodhacover.png",
+      "excerpt": "Our research areas fall in 3 categories - Institutional Design, Policy and Strategic Affairs, Intellectual Output.",
+      "words": "999"
+    },
+    "linkpath": "/research"
+  },
+  {
+    "date": "2026-01-01T00:00:00.000Z",
+    "formattedDate": "Jan 1",
+    "meta": {
+    "title": "Big Questions",
+      "author": [
+        "Bodha"
+      ],
+      "category": "Main Page",
+      "tags": [
+        "bodha",
+        "culture",
+        "research"
+      ],
+      "date": "2026-01-01T00:00:00.000Z",
+      "image": "/images/bodhacover.png",
+      "excerpt": "Big questions that capture core concerns in the contemporary journey of Hindu society.",
+      "words": "999"
+    },
+    "linkpath": "/big-questions"
+  },
+  {
+    "date": "2026-01-01T00:00:00.000Z",
+    "formattedDate": "Jan 1",
+    "meta": {
+    "title": "Bodha Lab",
+      "author": [
+        "Bodha"
+      ],
+      "category": "Main Page",
+      "tags": [
+        "bodha",
+        "culture",
+        "research"
+      ],
+      "date": "2026-01-01T00:00:00.000Z",
+      "image": "/images/bodhacover.png",
+      "excerpt": "Bodha Lab documents our ongoing work, opinions, readings, and deep research. Select any item in the menu to explore.",
+      "words": "999"
+    },
+    "linkpath": "/lab"
+  },
+  {
+    "date": "2026-01-01T00:00:00.000Z",
+    "formattedDate": "Jan 1",
+    "meta": {
+    "title": "Academy",
+      "author": [
+        "Bodha"
+      ],
+      "category": "Main Page",
+      "tags": [
+        "bodha",
+        "culture",
+        "research"
+      ],
+      "date": "2026-01-01T00:00:00.000Z",
+      "image": "/images/bodhacover.png",
+      "excerpt": "Bodha Lab documents our ongoing work, opinions, readings, and deep research. Select any item in the menu to explore.",
+      "words": "999"
+    },
+    "linkpath": "/lab"
+  }
+]
