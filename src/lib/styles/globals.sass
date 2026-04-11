@@ -72,16 +72,16 @@ html, body
 		align-items: start
 	@media screen and (min-width: 1025px)
 		&.stacked
-			column-gap: 48px
-			row-gap: 48px
+			column-gap: 3rem
+			row-gap: 3rem
 		&.stacked-2
-			column-gap: 48px
-			row-gap: 48px
+			column-gap: 3rem
+			row-gap: 3rem
 		&.stacked16
-			gap: 16px
+			gap: 1rem
 		&.stacked-4816
-			column-gap: 48px
-			row-gap: 16px
+			column-gap: 3rem
+			row-gap: 1rem
 		&.five
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 		&.four
@@ -96,13 +96,15 @@ html, body
 			grid-template-columns: 1fr 32%
 	@media screen and (max-width: 1024px)
 		&.stacked
-			column-gap: 48px
-			row-gap: 16px
+			column-gap: 3rem
+			row-gap: 1rem
 		&.stacked-2
-			column-gap: 48px
-			row-gap: 32px
+			column-gap: 3rem
+			row-gap: 2rem
 		&.stacked16
-			gap: 16px
+			gap: 1rem
+		&.stacked-4816
+			row-gap: 1rem
 		&.four, &.three, &.two, &.five
 			grid-template-columns: 1fr
 		&.four.stay2, &.three.stay2
@@ -140,17 +142,17 @@ html, body
 
 .stdpad
 	@media screen and (min-width: 1201px)
-		padding-left: 128px
-		padding-right: 128px
+		padding-left: 5rem
+		padding-right: 5rem
 	@media screen and (min-width: 1025px) and (max-width: 1200px)
-		padding-left: 64px
-		padding-right: 64px
+		padding-left: 3rem
+		padding-right: 3rem
 	@media screen and (min-width: 631px) and (max-width: 1024px)
-		padding-left: 32px
-		padding-right: 32px
+		padding-left: 2rem
+		padding-right: 2rem
 	@media screen and (max-width: 630px)
-		padding-left: 20px
-		padding-right: 20px
+		padding-left: 1rem
+		padding-right: 1rem
 
 .box100
 	min-height: 100vh
@@ -440,16 +442,34 @@ img.blog-image
 .box-1
 	border-bottom: 1px solid var(--color-border)
 
-.box-1, .box-2
+.box-2
+	border-top: 1px solid var(--color-border)
+
+.box-1, .box-2, .box-3
 	display: flex
 	flex-direction: column
-	row-gap: 2rem
 	@media screen and (min-width: 1025px)
-		padding-top: 3rem
-		padding-bottom: 3rem
+		padding-top: 4rem
+		padding-bottom: 4rem
+		row-gap: 2.5rem
 	@media screen and (max-width: 1024px)
 		padding-top: 3rem
 		padding-bottom: 3rem
+		row-gap: 1.5rem
+
+.box-t
+	display: flex
+	flex-direction: column
+	@media screen and (min-width: 1025px)
+		padding-top: 8rem
+		row-gap: 2.5rem
+		&.andB
+			padding-bottom: 4rem
+	@media screen and (max-width: 1024px)
+		padding-top: 7rem
+		row-gap: 1.5rem
+		&.andB
+			padding-bottom: 3rem
 
 .primary
 	position: relative

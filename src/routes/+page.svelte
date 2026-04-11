@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Title2 from '$lib/comps/page-title.svelte';
 	import Title3 from '$lib/comps/page-title.svelte';
@@ -41,36 +41,41 @@
 	metaImage={$metaImage}
 ></Head>
 
+<Parallax imageLink="/images/heroimage2.webp" />
 <Container>
-	<div class="marginx"></div>
-	<Parallax imageLink="/images/heroimage2.webp" />
-	<div class="box-1">
-		<h1 class="width70 source-serif page-hero">Bodha is a <span class="blue italic">think tank</span> and <span class="blue italic">research group</span>,</h1>
-		<h6 class="width70 thin source-serif">
+	<div class="box-3" id="first">
+		<h1 class="width50 source-serif page-hero">Bodha is a <span class="blue italic">think tank</span> and <span class="blue italic">research group</span>,</h1>
+		<h5 class="width80 thin source-serif">
 			focused on contemporary issues of cultural concern, to inform core areas of policy with
-			wisdom drawn from Hindu traditions. We advance intellectual churn within the Hindu
-			renaissance, and curate cultural experiences of core Hindu institutions such as the temple.
-		</h6>
-		<div class="column landing-p rgap16 width50">
-			<p class="p-bot-b">
-				About our <a class="blank linked tt-u" href="/research"><b>research projects</b></a>
-			</p>
-			<p class="p-bot-b">Explore our <a class="blank linked tt-u" href="/blog"><b>writings</b></a></p>
-			<p class="p-bot-b">
-				<a class="blank linked tt-u" href="/lab"><b>current notes</b>,</a> opinions, and more
-			</p>
-			<p>
-				Visit <a class="blank linked tt-u" href="/library"><b>Bodha Open Library</b></a>
-			</p>
+			wisdom drawn from Hindu traditions. We catalyze intellectual churn within the Hindu
+			renaissance, advance the case for Indian Knowledge Systems (IKS), and curate cultural experiences of core Hindu institutions such as the temple.
+		</h5>
+		<div class="grid four cgap32 rgap16 ptop32">
+			<div class="column features">
+				<img class="icon" src="/images/icon-research.png" alt="research"/>
+				<p>about our <a class="blank tt-u" href="/research"><b>research projects</b></a></p>
+			</div>
+			<div class="column features">
+				<img class="icon" src="/images/icon-writings.png" alt="writings"/>
+				<p>explore our <a class="blank tt-u" href="/blog"><b>writings</b></a></p>
+			</div>
+			<div class="column features">
+				<img class="icon" src="/images/icon-inspiration.png" alt="inspiration"/>
+				<p><a class="blank tt-u" href="/inspiration"><b>SCHOOLS AND THINKERS</b></a> we follow</p>
+			</div>
+			<div class="column features">
+				<img class="icon" src="/images/icon-library.png" alt="bodha library"/>
+				<p>visit <a class="blank tt-u" href="/library"><b>Bodha Open Library</b></a></p>
+			</div>
 		</div>
 	</div>
-	<div class="box-1">
+	<div class="box-2">
 		<Title text="Verticals" />
 		<div class="grid two cgap16 rgap16">
 			<div class="column rgap16 blogbox2">
 				<img class="vert" src="/images/vertical-research.webp" alt="research" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/research">Research</a></h4>
-				<p class="tight source-serif big">
+				<p class="tight big">
 					To illuminate hidden universal forces and long arcs in foreign and public policy; to
 					reveal the design of core Hindu institutions like the temple, gurukula, family, and
 					charity; and to turn the social sciences lens with a Hindu view, Bodha engages in focused
@@ -81,7 +86,7 @@
 			<div class="column rgap16 blogbox2">
 				<img class="vert" src="/images/vertical-tours.webp" alt="cultural tours" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/anveshi">Cultural Tours</a></h4>
-				<p class="tight source-serif big">
+				<p class="tight big">
 					A guided tour of four to five days to beautiful and hitherto unexplored temples and
 					kshetras of Bharatavarsha. Anveshi tours are full of architectural, sculptural and
 					cultural splendor, and also an immersion into living systems carrying beautiful cultural
@@ -91,7 +96,7 @@
 			<div class="column rgap16 blogbox2">
 				<img class="vert" src="/images/vertical-scholars.webp" alt="bodha academy" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/academy">Bodha Academy</a></h4>
-				<p class="tight source-serif big">
+				<p class="tight big">
 					Modern fault lines in Hindu society stem from an identity crisis manufactured by the
 					British, by institutionalizing identity-based fault lines through academia and other
 					institutions. At Bodha, we address this by training scholars every year in anthropology
@@ -101,7 +106,7 @@
 			<div class="column rgap16 blogbox2">
 				<img class="vert" src="/images/vertical-bigquestions.webp" alt="big questions" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/big-questions">The Big Questions</a></h4>
-				<p class="tight source-serif big">
+				<p class="tight big">
 					Every year we will formulate big questions stating major problems that capture core
 					concerns in the contemporary journey of Hindu society, and put those questions to great
 					thinkers, leaders and activists. The Big Questions vertical will seek answers which will
@@ -110,10 +115,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="box-1">
+	<div class="box-2">
 		<div class="column">
 			<Title4 text="Writings" />
-			<h6 class="thin">Explore long form essays, opinions, research output, and more at our <a href="/blog" class="blank linked"><b>BLOG.</b></a></h6>
+			<p class="big">Explore long form essays, opinions, research output, and more at our <a href="/blog" class="blank linked"><b>BLOG.</b></a></p>
 		</div>
 		{#if blogs && labs && blogs.length > 0 && labs.length > 0}
 			<div class="grid three stacked-2">
@@ -132,7 +137,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="box-1">
+	<div class="box-2">
 		<Title2 text="Publications" />
 		<div class="grid two stacked-2">
 			<div class="column rgap16">
@@ -184,7 +189,7 @@
 	<div class="box-2">
 		<div class="column">
 			<Title3 text="Videos" />
-			<h6 class="thin">Talks, conferences, podcasts - <a href="/videos" class="blank linked"><b>SEE ALL.</b></a></h6>
+			<p class="big">Talks, conferences, podcasts - <a href="/videos" class="blank linked"><b>SEE ALL.</b></a></p>
 		</div>
 		{#if vids && vids.length > 0}
 			<div class="grid three stacked-2">
@@ -209,15 +214,20 @@
 
 <style lang="sass">
 
-p.p-bot-b
-	padding-bottom: 0.75rem
+#first
+	@media screen and (min-width: 1025px)
+		min-height: 100vh
+		justify-content: center
+
+.features
+	border-top: 1px solid var(--color-border)
+	padding-top: 1rem
 
 h1.page-hero
 	@media screen and (min-width: 1025px)
-		font-size: 4rem
 		letter-spacing: -2px
+		line-height: 1.2
 	@media screen and (max-width: 1024px)
-		font-size: 2.5em
 		letter-spacing: -1px
 		line-height: 1.2
 
@@ -234,6 +244,7 @@ img.vert
 img.vert2
 	object-fit: cover
 	object-position: center center
+	border-radius: 5px
 	@media screen and (min-width: 1025px)
 		width: 100%
 		height: 280px
@@ -252,10 +263,20 @@ img.book
 	@media screen and (max-width: 1024px)
 		height: 320px
 
+img.icon
+	object-fit: contain
+	width: 36px
+
 .marginx
 	@media screen and (min-width: 1025px)
 		height: 80px
 	@media screen and (max-width: 1024px)
 		height: 56px
+
+.features
+	row-gap: 1rem
+	&:hover
+		a
+			color: var(--blue-main)
 
 </style>

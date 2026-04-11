@@ -31,23 +31,23 @@
   {#if iW >= 1025}
   <div class="row ycenter cgap16">
 	<Drop1 label="RESEARCH">
-	  <div class="column">
-		<p class="tt-u borderbot pbot8" style="letter-spacing: -0.5px"><a class="blank" href="/research">All Projects</a></p>
-		<p class="tt-u borderbot ptop8 pbot8" style="letter-spacing: -0.5px"><a class="blank" href="/big-questions">Big Questions</a></p>
-		<p class="tt-u ptop8" style="letter-spacing: -0.5px"><a class="blank" href="/lab">Lab</a></p>
+	  <div class="column rgap16">
+		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/research">All Projects</a></p>
+		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/big-questions">Big Questions</a></p>
+		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/lab">Lab</a></p>
 	  </div>
 	</Drop1>
 	<Drop2 label="LEARNING">
-	  <div class="column">
-		<p class="tt-u borderbot pbot8" style="letter-spacing: -0.5px"><a class="blank" href="/academy">Academy</a></p>
-		<p class="tt-u borderbot ptop8 pbot8" style="letter-spacing: -0.5px"><a class="blank" href="/inspiration">Inspiration</a></p>
-		<p class="tt-u ptop8" style="letter-spacing: -0.5px"><a class="blank" href="/library">Library</a></p>
+	  <div class="column rgap16">
+		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/academy">Academy</a></p>
+		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/inspiration">Inspiration</a></p>
+		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/library">Library</a></p>
 	  </div>
 	</Drop2>
-	<p class="sm tt-u"><a class="blank" href="/anveshi">Anveshi</a></p>
-	<p class="sm tt-u"><a class="blank" href="/blog">Blog</a></p>
-	<p class="sm tt-u"><a class="blank" href="/team">Team</a></p>
-	<p class="sm tt-u bold"><a class="blank" href="/search">Search</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/anveshi">Anveshi</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/blog">Blog</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/team">Team</a></p>
+	<p class="navitem sm tt-u bold"><a class="blank" href="/search">Search</a></p>
   </div>
   {:else}
 	<div class="row ycenter cgap16">
@@ -85,13 +85,19 @@
 			width: 100%
 			margin-left: -34px
 
-p
+p.navitem
 	font-weight: 500
 	letter-spacing: -0.5px
 	a.blank
 		&:hover
-			color: var(--color-alt)
+			color: var(--blue-main)
 	&.bold
 		font-weight: 700
+
+p.navinitem
+	font-weight: 400
+	&:hover
+		a
+			color: var(--blue-main)
 
 </style>

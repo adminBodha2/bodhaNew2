@@ -13,7 +13,7 @@
 <div class="separator"></div>
 <button
 	class="blank column xcenter ycenter rgap4"
-	style="margin-bottom: 16px"
+	style="margin-bottom: 1rem"
 	onclick={() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}}
@@ -21,47 +21,47 @@
 	<Scroller />
 	<small class="lgrey">scroll to top</small>
 </button>
-<div class="column bordertop mainer">
+<div class="column mainer">
 	<div class="stdpad column rgap32">
-		<div class="grid two rgap24">
-			<div class="column rgap8">
-				<p class="pbot4 lgrey thinner">readings:</p>
-				<p class="white thinner sm">
+		<div class="grid two rgap24 pbot16">
+			<div class="column rgap16">
+				<p class="lgrey thinner sm">readings:</p>
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/blog"><b>BLOG</b></a> - expert, long-form essays and opinions
 				</p>
-				<p class="white thinner sm">
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/lab"><b>LAB</b></a> - notes on what we're reading and researching
 				</p>
-				<p class="white thinner sm">
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/library"><b>BODHA OPEN LIBRARY</b></a> - collection of texts,
 					papers, scriptures
 				</p>
-				<p class="white thinner sm">
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/inspiration"><b>INSPIRATION</b></a> - thinkers and schools
 					of thought that we learn from
 				</p>
 			</div>
-			<div class="column rgap8">
-				<p class="pbot4 lgrey thinner">research and more:</p>
-				<p class="white thinner sm">
+			<div class="column rgap16">
+				<p class="lgrey thinner sm">research and more:</p>
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/research"><b>RESEARCH</b></a> - all our current and planned
 					projects
 				</p>
-				<p class="white thinner sm">
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/big-questions"><b>BIG QUESTIONS</b></a> - that we are asking,
 					and answering
 				</p>
-				<p class="white thinner sm">
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/academy"><b>ACADEMY</b></a> - our work on compounding and
 					scaling research
 				</p>
-				<p class="white thinner sm">
+				<p class="white thinner">
 					<a class="blank linkedlight" href="/anveshi"><b>BODHA ANVESHI</b></a> - temple tours, cultural
 					and sacred immersion
 				</p>
 			</div>
 		</div>
-		<div class="column ptop32" style="border-top: 1px solid #373737">
+		<div class="column ptop32" style="border-top: 1px solid #252525">
 			<div class="grid two rgap24">
 				<div class="column rgap8">
 					<small class="white"
@@ -71,7 +71,7 @@
 						>Bodha Research Pvt Ltd | Svayambodha Centre For Culture Studies Foundation</small
 					>
 				</div>
-				<div class="row ycenter xright mleft cgap8">
+				<div class="row ycenter xright mleft cgap16">
 					<a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
 						<Twitter />
 					</a>
@@ -112,12 +112,12 @@
 
 .mainer
 	width: 100%
-	background: linear-gradient(170deg,rgba(7, 57, 104, 1) 0%, rgba(7, 35, 64, 1) 31%, rgba(7, 14, 26, 1) 61%, rgba(10, 4, 4, 1) 100%)
+	background: linear-gradient(180deg,rgba(7, 57, 104, 1) 0%, rgba(7, 29, 48, 1) 27%, rgba(7, 14, 26, 1) 61%, rgba(10, 4, 4, 1) 100%)
 	@media screen and (min-width: 1025px)
-		padding-top: 128px
-		padding-bottom: 128px
+		padding-top: 8rem
+		padding-bottom: 8rem
 	@media screen and (max-width: 1024px)
-		padding-top: 88px
-		padding-bottom: 88px
+		padding-top: 5.5rem
+		padding-bottom: 5.5rem
 
 </style>

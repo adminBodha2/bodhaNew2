@@ -55,17 +55,16 @@
   background: white
   overflow: hidden
   display: grid
-  row-gap: 16px
+  row-gap: 1rem
   z-index: 1000
   grid-template-rows: 0fr
   transition: grid-template-rows 0.2s ease
-  min-width: 240px
+  min-width: 400px
   border-radius: 4px
   &.open
     grid-template-rows: 1fr
-    border: 1px solid #d7d7d7
-    padding: 8px 24px
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+    border: 1px solid var(--color-border)
+    padding: 2rem
 
 .menu :global(> *)
   overflow: hidden

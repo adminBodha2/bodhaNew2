@@ -24,45 +24,22 @@
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}/>
 
 <div class="lab-landing">
-  <p class="lab-landing-eyebrow">Bodha Lab</p>
-  <h1 class="lab-landing-title">Working notes,<br>in the open.</h1>
-  <p class="lab-landing-desc">Ongoing opinions, readings, reports, and deep research notes — published as they develop.</p>
-
-  {#if labItems.length > 0}
-    <!--
-    <div class="lab-stats-row">
-      <div class="lab-stat">
-        <span class="lab-stat-num">{labItems.length}</span>
-        <span class="lab-stat-label">notes</span>
-      </div>
-      <div class="lab-stat">
-        <span class="lab-stat-num">{categoryCount}</span>
-        <span class="lab-stat-label">categories</span>
-      </div>
-    </div>
-    -->
-    <div class="lab-cards-wrap">
-      <div class="lab-cards-grid">
-        {#each labItems as item}
-          <a class="lab-card p32" href={item.linkpath}>
-            <div class="lab-card-meta">
-              <span class="lab-card-cat">
-                <i class={
-                  item.meta.category === 'Books' ? 'ri-book-2-fill ri-1x' :
-                  item.meta.category === 'Opinions' ? 'ri-chat-voice-fill ri-1x' :
-                  'ri-sticky-note-fill ri-1x'
-                }></i>
-                {item.meta.category}
-              </span>
-              <span class="lab-card-date">{item.formattedDate}</span>
-            </div>
-            <p class="lab-card-title">{item.meta.title}</p>
-            <p class="lab-card-excerpt">{item.meta.excerpt}</p>
-          </a>
-        {/each}
-      </div>
-    </div>
-
-  {/if}
-
+	<h2 class="source-serif tight pbot16">Working notes, <br>ongoing inquiries, and more...</h2>
+  	<p class="grey sm pbot32">Ongoing opinions, readings, reports, and deep research notes — published as they develop.</p>
+	<div class="box-2">
+		{#if labItems.length > 0}
+			<div class="grid three stacked-2">
+				{#each labItems as item}
+					<div class="column">
+						<div class="row ycenter xbetween">
+							<small class="blue tt-u">{item.meta.category}</small>
+							<small class="lgrey">{item.formattedDate}</small>
+						</div>
+						<p class="source-serif big"><a href={item.linkpath} class="blank"><b>{item.meta.title}</b></a></p>
+						<p class="sm grey">{item.meta.excerpt}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
 </div>

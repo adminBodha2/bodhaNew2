@@ -22,44 +22,13 @@
 	metaUrl={'https://www.bodharesearch.in' + $page.url.pathname}
 />
 
-<div class="lab-article">
-	<a class="article-back-item" href="/lab">
-		<i class="ri-arrow-left-s-line ri-2x" style="color: var(--blue-light)"></i>
-		<span class="article-back-title">BODHA LAB</span>
-	</a>
-	<h2 class="lab-article-title">{data.title}</h2>
-	<p class="lab-article-excerpt">{data.excerpt}</p>
-	<div class="lab-article-meta">
-		<span class="lab-article-pill">
-			<i
-				style="color: var(--blue-main)"
-				class={data.category === 'Books'
-					? 'ri-book-2-fill ri-2x'
-					: data.category === 'Opinions'
-						? 'ri-chat-voice-fill ri-2x'
-						: 'ri-sticky-note-fill ri-2x'}
-			></i>
-			{data.category}</span
-		>
-		<span class="lab-article-date">{dOM} {mOD}, {yOP}</span>
+<div class="lab-article column rgap48">
+	<div>
+		<small class="blue"><a class="blank" href="/lab">BODHA LAB</a> | <span class="lgrey tt-u">{data.category} | {dOM} {mOD}, {yOP}</span></small>
+		<h2 class="source-serif">{data.title}</h2>
+		<p class="sm">{data.excerpt}</p>
 	</div>
 	<article class="lab-article-body column">
 		<svelte:component this={data.content} />
 	</article>
 </div>
-
-<style lang="sass">
-
-.article-back-item
-  text-decoration: none
-  font-size: 12px
-  font-weight: 700
-  letter-spacing: -0.3px
-  margin-bottom: 24px
-  &:hover
-    .article-back-title
-      color: var(--blue-light)
-  .article-back-title
-    color: var(--grey-ink)
-
-</style>

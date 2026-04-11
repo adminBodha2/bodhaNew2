@@ -1,145 +1,157 @@
 <script lang="ts">
+	import { onMount, tick } from 'svelte';
+	import autoAnimate from '@formkit/auto-animate';
+	import { bigQuestions } from '$lib/utils/supabaseClient';
+	import Container from '$lib/comps/container.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Title from '$lib/comps/page-title.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 
-  import { onMount, tick } from 'svelte'
-  import { bigQuestions } from '$lib/utils/supabaseClient'
-  import Container from '$lib/comps/container.svelte'
-  import Head from '$lib/comps/headcomponent.svelte'
-  import Parallax from '$lib/comps/parallaxhalf.svelte'
-  import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
-  import useEmblaCarousel from 'embla-carousel-svelte'
-  import type { EmblaCarouselType } from 'embla-carousel'
+	$metaTitle = 'Bodha - Big Questions';
+	$metaDescription =
+		'Big questions that capture core concerns in the contemporary journey of Hindu society.';
+	$metaUrl = 'https://www.bodharesearch.in/big-questions';
+	$metaImage = '/images/bodhacover.png';
 
-  $metaTitle = 'Bodha - Big Questions'
-  $metaDescription = 'Big questions that capture core concerns in the contemporary journey of Hindu society.'
-  $metaUrl = 'https://www.bodharesearch.in/big-questions'
-  $metaImage = '/images/bodhacover.png'
+	let projects: any;
+	let ready = false;
+	let activeIndex: number | null = null; // null = show all
 
-  let projects:any
-  let emblaApi: EmblaCarouselType | undefined
-  let options = { loop: true }
-  let plugins: never[] = []
-  let ready = false
+	function showItem(index: number | null) {
+	activeIndex = index;
+}
 
-  function onInit(event: CustomEvent<EmblaCarouselType>) {
-    emblaApi = event.detail
-  }
-
-  onMount(() => {
-    (async () => {
-      projects = await bigQuestions();
-      await tick();
-      ready = true
-    })();
-    function handleKeydown(e: KeyboardEvent) {
-      if (e.key === 'ArrowLeft') emblaApi?.scrollPrev()
-      if (e.key === 'ArrowRight') emblaApi?.scrollNext()
-    }
-
-    document.addEventListener('keydown', handleKeydown)
-
-    return () => {
-      document.removeEventListener('keydown', handleKeydown)
-    }
-  })
-
+	onMount(() => {
+		(async () => {
+			projects = await bigQuestions();
+			await tick();
+			ready = true;
+		})();
+	});
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+></Head>
 
+<Parallax imageLink="/images/cover-bigq.webp" />
 <Container>
-  <div class="box100 column rgap32 top-pad">
-    <div class="row ycenter xbetween borderbot pbot16">
-      <small class="tt-u blue">BIG QUESTIONS</small>
-    </div>
-    <Parallax imageLink="/images/cover-bigq.webp"/>
-    <div class="grid two cgap64 rgap16">
-      <div class="column rgap16">
-        <h6 class="thin">
-          Hindu society today sits at the cusp of great change. Hindu consciousness is awakening across the nation and awareness of civilizational issues is rising. Established mentalities about Hindu society, dharma, and culture are being challenged, status quos are being quashed, and new paradigms are coming into force. An intellectual renaissance is underway.
-        </h6>
-        <h6 class="thin">
-          Bodha wants to aid the process by asking provocative questions about some of the most fundamental problems and open questions that Hindu society faces today. There are issues that are not settled, questions that are perennially asked by every Hindu generation, and novel dilemmas that we face today.
-        </h6>
-      </div>
-      <div class="column rgap16">
-        <h6 class="thin">
-          In our Big Question series, we will ask one significant question every year at Bodha, and go to great scholars, activists, thinkers, leaders and stakeholders of Hindu cultural renaissance.
-        </h6>
-        <h6>
-          Their answers will be compiled and published as a book with an introduction about the question, and the problem that it addresses. By this, at Bodha, we intend to initiate great intellectual churn in Hindu society, leading to narrative building which will aid the reestablishment of a correct Hindu worldview rooted in facts and history.
-        </h6>
-      </div>
-    </div>
-    <div class="column rgap8 pbot32">
-      <h6 class="blue">Explore all Big Questions below.</h6>
-      <p class="sm grey notice">Swipe left/right to explore</p>
-    </div>
-  </div>
-  {#if projects && projects.length > 0 && ready}
-    <div class="box50 column rgap32">
-      <div class="embla">
-        <div class="embla__viewport" use:useEmblaCarousel={{ options, plugins }} on:emblaInit={onInit}>
-          <div class="embla__container">
-            {#each projects as item}
-              <div class="embla__slide blogbox2">
-                <div class="grid two cgap64 emblagrid rgap24">
-                  <div class="column down pbot16">
-                    <div class="row ycenter cgap16 mwrap rgap16">                
-                      <img class="icon" src={item.icon} alt={item.question}/>
-                      <h4>{item.id}. {item.question}</h4>
-                    </div>
-                    <pre class="big ptop16">{item.description}</pre>
-                  </div>
-                  <div class="column up">
-                    <img class="image-fit" src={item.image} alt={item.question}/>
-                  </div>
-                </div>
-              </div>
-            {/each}
-          </div>
-        </div>
-        <div class="row ycenter cgap16 ptop32 bordertop">
-          <button on:click={() => emblaApi?.scrollPrev()} class="embla__prev button-main">PREV</button>
-          <button on:click={() => emblaApi?.scrollNext()} class="embla__next button-main">NEXT</button>
-        </div>
-      </div>
-    </div>
-  {/if}
+	<div class="box-3" id="first">
+		<div class="grid two stacked-4816">
+			<h6 class="source-serif thin">
+				Hindu society today sits at the cusp of great change. Hindu consciousness is awakening
+				across the nation and awareness of civilizational issues is rising. Established mentalities
+				about Hindu society, dharma, and culture are being challenged, status quos are being
+				quashed, and new paradigms are coming into force. An intellectual renaissance is underway.
+			</h6>
+			<h6 class="source-serif thin">
+				Bodha will aid this process by asking provocative questions about some of the most
+				fundamental problems and open questions that Hindu society faces today. There are issues
+				that are not settled, questions that are perennially asked by every Hindu generation, and
+				novel dilemmas that we face today.
+			</h6>
+		</div>
+	</div>
+	<div class="box-2">
+		<div class="column rgap16">
+			<Title text="The Big Questions" />
+			<div class="row wrap cgap8 rgap8">
+				<button class="ftnbtn" on:click={() => showItem(null)} class:active={activeIndex === null}>All</button>
+				<div class="row wrap cgap8 rgap8">
+				{#each projects as _, i}
+				<button class="ftnbtn" on:click={() => showItem(i)} class:active={activeIndex === i}>
+					{i + 1}
+				</button>
+			{/each}
+			</div>
+			</div>
+		</div>
+		{#if projects && projects.length > 0 && ready}
+			<div class="column rgap32" use:autoAnimate>
+				{#each projects as item, i}
+				{#if activeIndex === null || activeIndex === i}
+					<div class="grid two right cgap64 emblagrid rgap24 question">
+						<div class="column rgap16 down pbot16">
+							<div class="column rgap16 borderbot pbot16">
+								<img class="icon" src={item.icon} alt={item.question} />
+								<h4 class="source-serif">{item.id}. {item.question}</h4>
+							</div>
+							<pre class="big">{item.description}</pre>
+						</div>
+						<div class="column up">
+							<img class="image-fit" src={item.image} alt={item.question} />
+						</div>
+					</div>
+				{/if}
+				{/each}
+			</div>
+		{/if}
+	</div>
 </Container>
 
 <style lang="sass">
 
+button.ftnbtn
+	font-size: 12px
+	background: #ffffff
+	border: 1px solid var(--blue-main)
+	color: var(--blue-main)
+	padding: 6px 12px
+	letter-spacing: 0.04em
+	text-transform: uppercase
+	border-radius: 8px
+	cursor: pointer
+	transition: all 0.08s
+	&:hover
+		background: var(--blue-main)
+		color: #FFFFFF
+	&.active
+		background: var(--blue-dark)
+		color: #FFFFFF
+
+#first
+	min-height: 50vh
+	justify-content: center
+
+.question
+	border: 1px solid var(--color-border)
+	border-radius: 5px
+	.down
+		@media screen and (min-width: 1025px)
+			padding: 2rem
+		@media screen and (max-width: 1024px)
+			padding: 1rem
+
 img.image-fit
-  object-fit: cover
-  object-position: center center
-  @media screen and (min-width: 1025px)
-    width: 100%
-    height: 100%
-  @media screen and (max-width: 1024px)
-    width: 100%
-    height: 240px
+	object-fit: cover
+	object-position: center center
+	@media screen and (min-width: 1025px)
+		width: 100%
+		height: 100%
+	@media screen and (max-width: 1024px)
+		width: 100%
+		height: 240px
 
 .grid.two.emblagrid
-  @media screen and (max-width: 1024px)
-    grid-template-areas: "up" "down"
-    .up
-      grid-area: up
-    .down
-      grid-area: down
-
-p.notice
-  @media screen and (min-width: 1025px)
-    display: none
+	@media screen and (max-width: 1024px)
+		grid-template-areas: "up" "down"
+		.up
+			grid-area: up
+		.down
+			grid-area: down
 
 img.icon
-  object-fit: contain
-  object-position: center center
-  @media screen and (min-width: 1025px)
-    height: 40px
-    width: 40px
-  @media screen and (max-width: 1024px)
-    height: 32px
-    width: 32px
-
+	object-fit: contain
+	object-position: center center
+	@media screen and (min-width: 1025px)
+		height: 56px
+		width: 56px
+	@media screen and (max-width: 1024px)
+		height: 42px
+		width: 42px
 
 </style>

@@ -1,78 +1,103 @@
 <script lang="ts">
-
-  import { onMount } from 'svelte'
-  import { allResearch } from '$lib/utils/supabaseClient';
+	import { onMount } from 'svelte';
+	import { allResearch } from '$lib/utils/supabaseClient';
 	import { page } from '$app/stores';
-  import Container from '$lib/comps/container.svelte'
-  import Head from '$lib/comps/headcomponent.svelte'
-  export let data
+	import Container from '$lib/comps/container.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
+	export let data;
 
-  let projects: any
+	let projects: any;
 
-  onMount(() => {
-    (async() => {
-      projects = await allResearch();
-    })();
-  })
-
+	onMount(() => {
+		(async () => {
+			projects = await allResearch();
+		})();
+	});
 </script>
 
-<Head title={data.research} metaDescription='Explore our research projects at Bodha.' metaImage='/images/bodhacover.png' metaUrl={'https://www.bodharesearch.in' + $page.url.pathname}/>
+<Head
+	title={data.research}
+	metaDescription="Explore our research projects at Bodha."
+	metaImage="/images/bodhacover.png"
+	metaUrl={'https://www.bodharesearch.in' + $page.url.pathname}
+/>
 
 <Container>
-  <div class="box100 column rgap32 top-pad solo">
-    <div class="row ycenter xbetween borderbot pbot16">
-      <div class="row ycenter cgap8">
-        <small class="blue"><a class="blank" href="/research">RESEARCH</a></small>
-        <small class="lgrey">></small>
-        <small class="tt-u lgrey">{data.research}</small>
-      </div>
-    </div>
-    <div class="grid two right rgap64">
-      <div class="column rgap16">
-        <h2 class="steady">{data.research}</h2>
-        <img class="key pbot16" src={data.image} alt={data.research}/>
-        <pre class="big">{data.detail}</pre>
-      </div>
-      <div class="column rgap16 sider">
-        <div class="column rgap16">
-        <p class="sm16 lgrey">All Projects</p>
-        {#if projects && projects.length > 0}
-          <div class="column">
-            {#each projects as item}
-              <p class="thin tight borderbot pbot8 ptop8 forstyle"><a class="blank color" href="/research/{item.slug}">{item.research}</a></p>
-            {/each}
-          </div>
-        {/if}
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="box-t">
+		<div class="column rgap4">
+		<div class="row ycenter xbetween">
+			<div class="row ycenter cgap8">
+				<small class="blue"><a class="blank" href="/research">RESEARCH</a></small>
+				<small class="lgrey">></small>
+				<small class="tt-u lgrey">{data.research}</small>
+			</div>
+		</div>
+		<h2 class="source-serif tight">{data.research}</h2>
+		<p class="tt-l italic"># {data.type}</p>
+		</div>
+	</div>
+	<div class="box-3">
+		<div class="grid two right rgap32">
+			<div class="column rgap32 item-box">
+				<img class="key" src={data.image} alt={data.research} />
+				<pre class="big">{data.detail}</pre>
+			</div>
+			<div class="column sider">
+				<div class="insider rgap24 column">
+					<p class="source-serif"><b>All Projects</b></p>
+					{#if projects && projects.length > 0}
+						<div class="column rgap16">
+							{#each projects as item}
+								<p class="thin tight forstyle sm grey">
+									<a class="blank color" href="/research/{item.slug}">{item.research}</a>
+								</p>
+							{/each}
+						</div>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</div>
 </Container>
 
 <style lang="sass">
 
+.item-box
+	@media screen and (min-width: 1025px)
+		border: 1px solid var(--color-border)
+		padding: 3rem
+		border-radius: 5px
+		background: #fcfcfc
+
 p.forstyle
-  transition: padding 0.2s ease
-  @media screen and (min-width: 1025px)
-    &:hover
-      padding-left: 12px
+	transition: padding 0.2s ease
+	@media screen and (min-width: 1025px)
+		&:hover
+			padding-left: 5px
+
+h2
+	@media screen and (max-width: 1024px)
+		margin-top: 0.5rem
 
 pre
-  font-family: var(--font-sans)
+	font-family: var(--font-sans)
 
 .sider
-  @media screen and (min-width: 1025px)
-    padding-left: 64px
-  @media screen and (max-width: 1024px)
-    border-top: 1px solid #e7e7e7
-    padding-top: 32px
+	height: 100%
+	@media screen and (min-width: 1025px)
+		padding-left: 64px
+		.insider
+			position: sticky
+			top: 8rem
+	@media screen and (max-width: 1024px)
+		border-top: 1px solid #e7e7e7
+		padding-top: 32px
 
 img.key
-  object-fit: cover
-  object-position: center center
-  width: 100%
-  @media screen and (min-width: 1025px)
-    height: 480px
+	object-fit: cover
+	object-position: center center
+	width: 100%
+	@media screen and (min-width: 1025px)
+		height: 480px
 
 </style>

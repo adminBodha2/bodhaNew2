@@ -8,7 +8,7 @@
 <svelte:window bind:scrollY={scroY}/>
 
 <div class="imager">
-  <img src={imageLink} alt="parallax header" style="transform: translateY({scroY/1.4}px)"/>
+  <img src={imageLink} alt="parallax header" style="transform: translateY({scroY/1.8}px)"/>
 </div>
 
 <style lang="sass">
@@ -17,7 +17,6 @@
   overflow: hidden
   @media screen and (min-width: 1025px)
     height: 100vh
-    padding: 80px
     img
       object-fit: cover
       object-position: center center
