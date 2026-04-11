@@ -1,4 +1,8 @@
 <script lang="ts">
+
+	import { fade, fly } from 'svelte/transition';
+	import { quintOut, cubicIn } from 'svelte/easing';
+	import { page } from '$app/state';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
@@ -36,7 +40,14 @@
 <header class="row ycenter">
 	<Header />
 </header>
-{@render children?.()}
+{#key page.url.pathname}
+  <main
+    in:fly={{ y: 12, duration: 210, easing: quintOut }}
+    out:fade={{ duration: 120, easing: cubicIn }}
+  >
+    {@render children?.()}
+  </main>
+{/key}
 <footer class="column">
 	<Bottom />
 </footer>
@@ -51,8 +62,8 @@ header
 	z-index: 999
 	border-bottom: 1px solid var(--color-border)
 	@media screen and (min-width: 1025px)
-		height: 80px
-		margin-bottom: -80px
+		height: 72px
+		margin-bottom: -72px
 	@media screen and (max-width: 1024px)
 		height: 64px
 		margin-bottom: -64px

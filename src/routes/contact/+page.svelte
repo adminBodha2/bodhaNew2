@@ -38,13 +38,3 @@
 		  </div> 
 	</div>
 </Container>
-
-<style lang="sass">
-
-.mmVH
-	@media screen and (min-width: 1025px)
-		min-height: calc(100vh - 144px)
-	@media screen and (max-width: 1024px)
-		min-height: calc(100vh - 112px)
-
-</style>

@@ -28,13 +28,13 @@
         {#each faqs as item, i}
           <button class="blank column ytop rgap4 ta-l xleft acco-box" use:autoAnimate on:click={() => openIndex = openIndex === i ? null : i}>
             <div class="row ycenter cgap8 width100 inside-acco">
-              <h6 class="tight">{item.question}</h6>
+              <p class="tight bold">{item.question}</p>
               {#if iW > 1024}
               <ChevD rotated={openIndex === i}/>
               {/if}
             </div>
             {#if openIndex === i}
-              <pre>{item.answer}</pre>
+              <pre class="sm">{item.answer}</pre>
             {/if}
           </button>
         {/each}

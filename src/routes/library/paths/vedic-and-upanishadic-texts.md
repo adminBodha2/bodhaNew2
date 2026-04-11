@@ -1,0 +1,25 @@
+---
+title: Vedic and Upanishadic Texts
+description: Sources centered on the Vedas, Rigvedic interpretation, and Upanishads, especially themes of revelation, ritual, self, brahman, and liberation.
+---
+
+<p><a href="/library/the-advaita-vedanta-of-brahmasiddhi" class="blank linked">The Advaita Vedanta of Brahmasiddhi</a>, by Allen Wright Thrasher - Study of the Brahmasiddhi tradition and major issues in Advaita metaphysics and epistemology.</p>
+<p><a href="/library/the-vedas" class="blank linked">The Vedas</a>, by Chandrasekharendra Saraswati - General introduction to the Vedas, outlining their structure, themes, ritual setting, and long civilizational influence.</p>
+<p><a href="/library/aitareya-upanishad" class="blank linked">Aitareya Upanishad</a>, by  - English edition or translation of the Aitareya Upanishad, highlighting creation, consciousness, and the identity of the self with ultimate reality.</p>
+<p><a href="/library/brhadaranyak-upanishad" class="blank linked">Brhadaranyak Upanishad</a>, by  - English edition or translation of the Brhadaranyak Upanishad, highlighting selfhood, negation, sacrifice, and the search for brahman.</p>
+<p><a href="/library/chandogya-upanishad" class="blank linked">Chandogya Upanishad</a>, by  - English edition or translation of the Chandogya Upanishad, highlighting meditation, sacred speech, ritual symbolism, and the teaching of tat tvam asi.</p>
+<p><a href="/library/isha-upanishad" class="blank linked">Isha Upanishad</a>, by  - English edition or translation of the Isha Upanishad, highlighting renunciation, action, inner self, and the relation between knowledge and world-engagement.</p>
+<p><a href="/library/katha-upanishad" class="blank linked">Katha Upanishad</a>, by  - English edition or translation of the Katha Upanishad, highlighting death, the self, disciplined choice, and liberation through insight.</p>
+<p><a href="/library/kena-upanishad" class="blank linked">Kena Upanishad</a>, by  - English edition or translation of the Kena Upanishad, highlighting the limits of ordinary cognition and the grounding of mind and speech in brahman.</p>
+<p><a href="/library/maitrayaniya-upanishad" class="blank linked">Maitrayaniya Upanishad</a>, by  - English edition or translation of the Maitrayaniya Upanishad, highlighting self-knowledge, mind, time, cosmology, and yogic discipline.</p>
+<p><a href="/library/mandukya-upanishad" class="blank linked">Mandukya Upanishad</a>, by  - English edition or translation of the Mandukya Upanishad, highlighting Om, waking-dream-sleep states, and the non-dual fourth state.</p>
+<p><a href="/library/mundaka-upanishad" class="blank linked">Mundaka Upanishad</a>, by  - English edition or translation of the Mundaka Upanishad, highlighting higher and lower knowledge, brahman, renunciation, and liberation.</p>
+<p><a href="/library/prashna-upanishad" class="blank linked">Prashna Upanishad</a>, by  - English edition or translation of the Prashna Upanishad, highlighting six questions on prana, cosmology, Om, and the inner self.</p>
+<p><a href="/library/taittiriya-upanishad" class="blank linked">Taittiriya Upanishad</a>, by  - English edition or translation of the Taittiriya Upanishad, highlighting the sheaths of the self, brahman as bliss, and the transmission of Vedic learning.</p>
+<p><a href="/library/light-of-the-vedas" class="blank linked">Light of the Vedas</a>, by David Frawley - Newsletter-style reflections and essays on Vedic spirituality, leadership, and contemporary applications of Vedic thought.</p>
+<p><a href="/library/rigveda-a-historical-analysis" class="blank linked">Rigveda a Historical Analysis</a>, by Shrikant Talageri - Historical reading of the Rigveda that uses textual evidence to discuss chronology, culture, and social setting.</p>
+<p><a href="/library/the-riks" class="blank linked">The Riks</a>, by Shri Paramasiva Iyer - Selection and interpretation of Rigvedic hymns highlighting poetic vision, symbolism, and early Vedic spirituality.</p>
+<p><a href="/library/the-secret-of-the-veda" class="blank linked">The Secret of the Veda</a>, by Sri Aurobindo - Sri Aurobindo’s symbolic interpretation of the Vedic hymns as spiritual and psychological texts rather than merely ritual documents.</p>
+<p><a href="/library/treatise-on-rigveda" class="blank linked">Treatise on Rigveda</a>, by Vedayana - Extended interpretive study of the Rigveda with attention to language, symbolism, and historical understanding.</p>
+<p><a href="/library/wisdom-of-the-ancient-seers" class="blank linked">Wisdom of the Ancient Seers</a>, by David Frawley - Introductory reflections on Vedic and Upanishadic insight framed for modern readers.</p>
+<p><a href="/library/gulmavrikshayurveda" class="blank linked">Gulmavrikshayurveda</a>, by Unknown - Traditional treatise on plants, horticulture, and knowledge systems related to trees and cultivation.</p>

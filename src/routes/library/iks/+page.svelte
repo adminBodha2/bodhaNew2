@@ -6,14 +6,14 @@
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
   
 	let books:any
-	$metaTitle = 'Bodha - Library | Shatrubodha'
-	$metaDescription = 'Readings in Shatrubodha.'
-	$metaUrl = 'https://www.bodharesearch.in/library/shatrubodha'
+	$metaTitle = 'Bodha - Library | Indian Knowledge Systems'
+	$metaDescription = 'Readings in IKS.'
+	$metaUrl = 'https://www.bodharesearch.in/library/iks'
 	$metaImage = '/images/bodhacover.png'
   
 	onMount(() => {
 	  (async() => {
-		books = await selectedOpenLibrary('shatrubodha');
+		books = await selectedOpenLibrary('iks');
 	  })();
 	})
   
@@ -26,7 +26,7 @@
 		  <div class="pbot8">
 			  <small class="blue"><a class="blank" href="/library">BODHA OPEN LIBRARY</a></small>
 		  </div>
-		  <h2 class="source-serif">Shatrubodha</h2>
+		  <h2 class="source-serif">Indian Knowledge Systems</h2>
 	  </div>
 	  {#if books && books.length > 0}
 	  <div class="grid two stacked-4816 ptop32 pbot64">

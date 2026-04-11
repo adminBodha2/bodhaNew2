@@ -42,6 +42,21 @@
   {/if}
 </div>
 <div class="box-2">
+	<h4 class="source-serif">Learning Paths</h4>
+	<div class="grid two rgap8">
+		<p><a class="blank linked" href="/library/paths/arts-performance-and-aesthetics">Arts, Performance, and Aesthetics</a></p>
+		<p><a class="blank linked" href="/library/paths/darshanas-and-philosophy">Darshanas and Philosophy</a></p>
+		<p><a class="blank linked" href="/library/paths/dharma-ethics-and-law">Dharma, Ethics, Law</a></p>
+		<p><a class="blank linked" href="/library/paths/hinduism-overview">Hindu Overview</a></p>
+		<p><a class="blank linked" href="/library/paths/history-polity-and-society">History, Polity, and Society</a></p>
+		<p><a class="blank linked" href="/library/paths/indian-knowledge-systems">Indian Knowledge Systems</a></p>
+		<p><a class="blank linked" href="/library/paths/indology-and-civilizational-critique">Indology and Civilizational Critique</a></p>
+		<p><a class="blank linked" href="/library/paths/language-logic-and-sanskrit">Language, Logic, Sanskrit</a></p>
+		<p><a class="blank linked" href="/library/paths/puranic-and-itihasic-literature">Puranic and Itihasic Literature</a></p>
+		<p><a class="blank linked" href="/library/paths/vedic-and-upanishadic-texts">Vedic and Upanishadic Texts</a></p>
+	</div>
+</div>
+<div class="box-2">
 	<div class="column rgap8">
 		<h4 class="source-serif">Resources</h4>
 		<p class="sm">A compilation of learning, text, and other resources across the web:</p>

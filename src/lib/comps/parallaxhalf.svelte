@@ -14,15 +14,16 @@
 <style lang="sass">
 
 .imager
-  overflow: hidden
-  img
-    object-fit: cover
-    object-position: center center
-    @media screen and (min-width: 1025px)
-      width: 100%
-      height: 70vh
-    @media screen and (max-width: 1024px)
-      width: 100%
-      height: 100%
+	overflow: hidden
+	img
+		object-fit: cover
+		object-position: center center
+		@media screen and (min-width: 1025px)
+			width: 100%
+			height: 70vh
+		@media screen and (max-width: 1024px)
+			width: 100%
+			height: 100%
+			margin-top: 64px
 
 </style>

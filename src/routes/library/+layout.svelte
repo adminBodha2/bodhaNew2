@@ -4,7 +4,6 @@
   import { page } from '$app/stores';
   import '$lib/styles/lab.sass';
   import { selectedOpenLibrary } from '$lib/utils/supabaseClient'
-  import Container from '$lib/comps/container.svelte'
 
   let isCat = Array(8).fill(false)
 	let category = '';
@@ -52,7 +51,6 @@
 						<button class="ftnbtn" class:active={isCat[4]} on:click={() => {toggleCat(4); setCategory('scriptural')}}>Scriptural</button>
 						<button class="ftnbtn" class:active={isCat[5]} on:click={() => {toggleCat(5); setCategory('shatrubodha')}}>Shatrubodha</button>
 						<button class="ftnbtn" class:active={isCat[6]} on:click={() => {toggleCat(6); setCategory('svayambodha')}}>Svayambodha</button>
-						<button class="ftnbtn" class:active={isCat[7]} on:click={() => {toggleCat(7); setCategory('general')}}>General</button>
 					  </div>
 					  <div class="one-item column rgap8 bordertop ptop16">
 						{#if isCat.some(v => v) && setCat && setCat.length > 0}

@@ -1,0 +1,25 @@
+---
+title: Indology and Civilizational Critique
+description: Modern critical works examining Indology, orientalism, academic method, and the ideological framing of Indian traditions and civilization.
+---
+
+<p><a href="/library/cry-hindutva-how-rhetoric-trumps-intellect" class="blank linked">Cry Hindutva How Rhetoric Trumps Intellect</a>, by Vishwa Adluri, Joydeep Bagchee - Critical intervention on contemporary Hindutva rhetoric and the costs of replacing scholarship with slogans.</p>
+<p><a href="/library/german-indology-aryanism-and-anti-semitism" class="blank linked">German Indology Aryanism and Anti Semitism</a>, by Vishwa Adluri, Joydeep Bagchee - Study of German Indology and its entanglement with racial theory, Aryanism, and anti-Semitism.</p>
+<p><a href="/library/greeks-in-india" class="blank linked">Greeks in India</a>, by Demettios Vasilliades - Historical study of Greek presence in India and the cultural exchanges that followed.</p>
+<p><a href="/library/heidegger-and-the-inquiry-into-technology" class="blank linked">Heidegger and the Inquiry into Technology</a>, by Joydeep Bagchee - Essay using Heidegger to interrogate technology, modernity, and civilizational critique.</p>
+<p><a href="/library/hindu-studies-in-a-secular-academy" class="blank linked">Hindu Studies in a Secular Academy</a>, by Vishwa Adluri - Reflection on the institutional framing of Hindu studies and the limits of secular academic categories.</p>
+<p><a href="/library/hindu-temples-vol-1" class="blank linked">Hindu Temples Vol 1</a>, by Sita Ram Goel - Documentation and interpretation of the destruction, transformation, and historical memory of Hindu temples.</p>
+<p><a href="/library/hindu-temples-vol-2" class="blank linked">Hindu Temples Vol 2</a>, by Sita Ram Goel - Continuation of the documentary record on Hindu temples, iconoclasm, and historical memory.</p>
+<p><a href="/library/how-i-became-a-hindu" class="blank linked">How I Became a Hindu</a>, by Sita Ram Goel - Personal and polemical reflection on religious identity, conviction, and civilizational self-understanding.</p>
+<p><a href="/library/jews-and-hindus-in-indology" class="blank linked">Jews and Hindus in Indology</a>, by Vishwa Adluri, Joydeep Bagchee - Comparative study of how Jewish and Hindu traditions have been handled within modern Indology.</p>
+<p><a href="/library/methods-and-context-rethinking-religion" class="blank linked">Methods and Context Rethinking Religion</a>, by Vishwa Adluri, Joydeep Bagchee - Methodological critique of dominant religious-studies frameworks and their application to India.</p>
+<p><a href="/library/paradigm-lost-the-application-of-the-historical-critical-method-to-the-bhagavadgita" class="blank linked">Paradigm Lost the Application of the Historical Critical Method to the Bhagavadgita</a>, by Vishwa Adluri, Joydeep Bagchee - Critique of applying historical-critical methods reductively to the Bhagavad Gita.</p>
+<p><a href="/library/philosophy-and-criticism" class="blank linked">Philosophy and Criticism</a>, by Vishwa Adluri, Joydeep Bagchee - Essay on the relation between philosophical interpretation and critical academic method.</p>
+<p><a href="/library/poetic-immortality-to-salvation" class="blank linked">Poetic Immortality to Salvation</a>, by Vishwa Adluri, Joydeep Bagchee - Study tracing shifts from heroic-poetic ideals toward soteriological concerns in Sanskrit traditions.</p>
+<p><a href="/library/pride-and-prejudice-orientalism-and-germany" class="blank linked">Pride and Prejudice Orientalism and Germany</a>, by Vishwa Adluri - Study of German orientalism and the ideological lenses shaping Indological interpretation.</p>
+<p><a href="/library/the-banality-of-indology" class="blank linked">The Banality of Indology</a>, by Vishwa Adluri, Joydeep Bagchee - Sharp critique of routinized assumptions and methodological shallowness in Indological scholarship.</p>
+<p><a href="/library/the-nay-science" class="blank linked">The Nay Science</a>, by Vishwa Adluri, Joydeep Bagchee - Provocative reflection on scholarship, critique, and the ideological posture of academic knowledge.</p>
+<p><a href="/library/the-origins-of-racism-in-the-humanities" class="blank linked">The Origins of Racism in the Humanities</a>, by Vishwa Adluri, Joydeep Bagchee - Argument about how racial categories entered humanistic scholarship through philology and related disciplines.</p>
+<p><a href="/library/the-passion-of-paul-hacker" class="blank linked">The Passion of Paul Hacker</a>, by Vishwa Adluri, Joydeep Bagchee - Critical study of Paul Hacker and the theological-political assumptions behind his work on Hindu traditions.</p>
+<p><a href="/library/the-real-threat-to-humanities-today" class="blank linked">The Real Threat to Humanities Today</a>, by Vishwa Adluri, Joydeep Bagchee - Essay arguing that methodological decay, not external pressure alone, endangers the humanities.</p>
+<p><a href="/library/theses-on-indology" class="blank linked">Theses on Indology</a>, by Vishwa Adluri, Joydeep Bagchee - Programmatic theses outlining a critique of Indology and an alternative scholarly orientation.</p>

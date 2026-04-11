@@ -96,8 +96,8 @@
       border-left: 1px solid #d7d7d7
       padding: 32px 32px 32px 64px
       position: sticky
-      top: 80px
-      height: calc(100vh - 80px)
+      top: 72px
+      height: calc(100vh - 72px)
       overflow-y: scroll
       &::-webkit-scrollbar
         width: 4px
