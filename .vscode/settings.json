@@ -1,0 +1,30 @@
+{
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode",
+		"editor.tabSize": 4,
+		"editor.indentSize": 4,
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[sass]": {
+		"editor.defaultFormatter": "syler.sass-indented",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4,
+		"editor.detectIndentation": false
+	},
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"[yaml]": {
+		"editor.insertSpaces": false
+	},
+	"[dockercompose]": {
+		"editor.insertSpaces": false
+	},
+	"editor.defaultFormatter": "svelte.svelte-vscode"
+}

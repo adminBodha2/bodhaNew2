@@ -7,12 +7,17 @@
 
 <div class="row ycenter xleft">
   <Arrow/>
-  <h3 class="steady">{text}</h3>
+  <h2 class="source-serif">{text}</h2>
 </div>
 
 <style lang="sass">
 
+h2
+	letter-spacing: -2px
+	@media screen and (max-width: 1024px)
+		letter-spacing: -0.5px
+
 .row
-  margin-left: -8px
+	margin-left: -8px
 
 </style>

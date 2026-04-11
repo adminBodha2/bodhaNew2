@@ -1,12 +1,11 @@
 <script lang="ts">
-
-  import { onMount } from 'svelte'
-  import autoAnimate from '@formkit/auto-animate'
-  import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture } from '$lib/utils/supabaseClient'
+	import { onMount } from 'svelte';
+	import autoAnimate from '@formkit/auto-animate';
+	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-  import Headerpage from '$lib/comps/pageheader.svelte'
-  import FAQ from '$lib/comps/anveshifaqs.svelte'
+	import Headerpage from '$lib/comps/pageheader.svelte';
+	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 
 	$metaTitle = 'Bodha - Anveshi';
@@ -15,42 +14,41 @@
 	$metaUrl = 'https://www.bodharesearch.in/anveshi';
 	$metaImage = '/images/bodhacover.png';
 
-  let currproj:any
-  let futureproj:any
-  let sY: number
-  let regionAnveshi:any
-  let region:string = 'northern india'
+	let currproj: any;
+	let futureproj: any;
+	let sY: number;
+	let regionAnveshi: any;
+	let region: string = 'northern india';
 
-  let isRegion = Array(8).fill(false)
-  isRegion[0] = true
+	let isRegion = Array(8).fill(false);
+	isRegion[0] = true;
 
-  function setRegion(newRegion:string){
-    region = newRegion;
-    (async () => {
-      regionAnveshi = await selectedAnveshiFuture(region)
-    })();
-  }
+	function setRegion(newRegion: string) {
+		region = newRegion;
+		(async () => {
+			regionAnveshi = await selectedAnveshiFuture(region);
+		})();
+	}
 
-  function toggleRegion(index:number){
+	function toggleRegion(index: number) {
 		isRegion[index] = !isRegion[index];
 		for (let i = 0; i < isRegion.length; i++) {
 			if (i !== index && isRegion[i] === true) {
 				isRegion[i] = false;
 			}
 		}
-  }
+	}
 
-  onMount(() => {
-    (async() => {
-      currproj = await anveshiCurrent();
-      futureproj = await anveshiFuture();
-      regionAnveshi = await selectedAnveshiFuture(region)
-    })();
-  })
-
+	onMount(() => {
+		(async () => {
+			currproj = await anveshiCurrent();
+			futureproj = await anveshiFuture();
+			regionAnveshi = await selectedAnveshiFuture(region);
+		})();
+	});
 </script>
 
-<svelte:window bind:scrollY={sY}/>
+<svelte:window bind:scrollY={sY} />
 
 <Head
 	title={$metaTitle}
@@ -60,14 +58,19 @@
 ></Head>
 
 <div class="column screener-wrap">
-  <div class="screener" style="transform: translateY({sY/2}px)">
-    <div class="column inscreen xcenter ycenter">
-      <small class="white">BODHA ANVESHI</small>
-      <h1 class="ptop8 pbot16 source-serif white tight ta-c">We are born <i>anveshi -</i><br>seekers by nature.</h1>
-      <p class="tight white ta-c pbot16">Sacred journeys to unexplored kshetras of India.<br>Where, every outer journey becomes an inner journey.</p>
-      <a class="button-main" href="/anveshi/kullu">OPEN NOW - KULLU CHAPTER</a>
-    </div>
-  </div>
+	<div class="screener" style="transform: translateY({sY / 2}px)">
+		<div class="column inscreen xcenter ycenter">
+			<small class="white">BODHA ANVESHI</small>
+			<h1 class="ptop8 pbot16 source-serif white tight ta-c">
+				We are born <i>anveshi -</i><br />seekers by nature.
+			</h1>
+			<p class="tight white ta-c pbot16">
+				Sacred journeys to unexplored kshetras of India.<br />Where, every outer journey becomes an
+				inner journey.
+			</p>
+			<a class="button-main" href="/anveshi/kullu">OPEN NOW - KULLU CHAPTER</a>
+		</div>
+	</div>
 </div>
 <Container>
 	<div class="column ptop64 pbot64">
@@ -118,94 +121,149 @@
 					historical sites, but living systems that have sustained vibrant cultural traditions for
 					thousands of years.
 				</h6>
-        <!--<a class="button-main" href="/anveshi/kullu">OPEN - Kullu Chapter</a>-->
+				<!--<a class="button-main" href="/anveshi/kullu">OPEN - Kullu Chapter</a>-->
 			</div>
 		</div>
 	</div>
 	<div class="column ycenter rgap32 ptop64 pbot64">
-    <Headerpage text="Current Chapters"/>
-    {#if currproj && currproj.length > 0}
-      <div class="grid two cgap48 rgap32">
-        {#each currproj as item}
-          {#if item.pageactive === true}
-          <a class="blank linkbox container-a" href="/anveshi{item.link}">
-            <div class="image-container radius" style="overflow: hidden">
-              <img class="vert" src={item.image} alt={item.chapter}/>
-            </div>
-            {#if item.regopen === true}
-            <div class="row ycenter cgap8 ptop16 pbot8">
-              <div class="label2"><small class="white">OPEN NOW!</small></div>
-              <h4 class="tight">{item.chapter} Chapter</h4>
-            </div>
-            {:else}
-              <h4 class="tight ptop16 pbot8">{item.chapter} Chapter</h4>
-            {/if}
-            <div class="column rgap8 pbot8">
-              <h6 class="thin">{item.desc}</h6>
-              <div class="row ycenter cgap8 rgap8 mwrap">
-                <div class="label"><p class="sm grey">{item.fromto}</p></div>
-              </div>
-            </div>
-          </a>
-          {:else}
-          <div class="column container-a">
-            <div class="image-container radius" style="overflow: hidden">
-              <img class="vert" src={item.image} alt={item.chapter}/>
-            </div>
-            {#if item.regopen === true}
-            <div class="row ycenter cgap8 ptop16 pbot8">
-              <div class="label2"><small class="white">OPEN NOW!</small></div>
-              <h4 class="tight">{item.chapter} Chapter</h4>
-            </div>
-            {:else}
-              <h4 class="tight ptop24 pbot8">{item.chapter} Chapter</h4>
-            {/if}
-            <div class="column rgap8 pbot8">
-              <h6 class="thin">{item.desc}</h6>
-              <div class="label"><p class="sm grey">{item.fromto}</p></div>
-            </div>
-          </div>
-          {/if}
-        {/each}
-      </div>
-    {/if}
+		<Headerpage text="Current Chapters" />
+		{#if currproj && currproj.length > 0}
+			<div class="grid two cgap48 rgap32">
+				{#each currproj as item}
+					{#if item.pageactive === true}
+						<a class="blank linkbox container-a" href="/anveshi{item.link}">
+							<div class="image-container radius" style="overflow: hidden">
+								<img class="vert" src={item.image} alt={item.chapter} />
+							</div>
+							{#if item.regopen === true}
+								<div class="row ycenter cgap8 ptop16 pbot8">
+									<div class="label2"><small class="white">OPEN NOW!</small></div>
+									<h4 class="tight">{item.chapter} Chapter</h4>
+								</div>
+							{:else}
+								<h4 class="tight ptop16 pbot8">{item.chapter} Chapter</h4>
+							{/if}
+							<div class="column rgap8 pbot8">
+								<h6 class="thin">{item.desc}</h6>
+								<div class="row ycenter cgap8 rgap8 mwrap">
+									<div class="label"><p class="sm grey">{item.fromto}</p></div>
+								</div>
+							</div>
+						</a>
+					{:else}
+						<div class="column container-a">
+							<div class="image-container radius" style="overflow: hidden">
+								<img class="vert" src={item.image} alt={item.chapter} />
+							</div>
+							{#if item.regopen === true}
+								<div class="row ycenter cgap8 ptop16 pbot8">
+									<div class="label2"><small class="white">OPEN NOW!</small></div>
+									<h4 class="tight">{item.chapter} Chapter</h4>
+								</div>
+							{:else}
+								<h4 class="tight ptop24 pbot8">{item.chapter} Chapter</h4>
+							{/if}
+							<div class="column rgap8 pbot8">
+								<h6 class="thin">{item.desc}</h6>
+								<div class="label"><p class="sm grey">{item.fromto}</p></div>
+							</div>
+						</div>
+					{/if}
+				{/each}
+			</div>
+		{/if}
 	</div>
-  <div class="column ytop rgap32 ptop64 pbot64">
-    <Headerpage text="Future Chapters"/>
-    <div class="row ycenter cgap8 mwrap rgap8">
-      <button class="selectable" class:selected={isRegion[0]} on:click={() => {toggleRegion(0); setRegion('northern india')}}>North</button>
-      <button class="selectable" class:selected={isRegion[1]} on:click={() => {toggleRegion(1); setRegion('eastern india')}}>East</button>
-      <button class="selectable" class:selected={isRegion[2]} on:click={() => {toggleRegion(2); setRegion('western india')}}>West</button>
-      <button class="selectable" class:selected={isRegion[3]} on:click={() => {toggleRegion(3); setRegion('southern india')}}>South</button>
-      <button class="selectable" class:selected={isRegion[4]} on:click={() => {toggleRegion(4); setRegion('central india')}}>Center</button>
-      <button class="selectable" class:selected={isRegion[5]} on:click={() => {toggleRegion(5); setRegion('himalayas')}}>Himalayas</button>
-      <button class="selectable" class:selected={isRegion[6]} on:click={() => {toggleRegion(6); setRegion('international')}}>International</button>
-      <button class="selectable" class:selected={isRegion[7]} on:click={() => {toggleRegion(7)}}>All</button>
-    </div>
-    {#if futureproj && futureproj.length > 0 && isRegion[7]}
-      <div class="grid four cgap32 rgap24" use:autoAnimate>
-        {#each futureproj as item}
-          <div class="column">
-            <img class="smallerimage" src={item.gallery} alt={item.chapter}/>
-            <h5 class="tight pbot4 ptop8">{item.chapter}</h5>
-            <p class="sm pbot8">{item.shortdesc}</p>
-             <small class="blue tt-u">{item.region}</small>
-          </div>
-        {/each}
-      </div>
-    {:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
-      <div class="grid four cgap32 rgap24" use:autoAnimate>
-        {#each regionAnveshi as item}
-          <div class="column">
-            <img class="smallerimage" src={item.gallery} alt={item.chapter}/>
-            <h5 class="tight pbot8 ptop8">{item.chapter}</h5>
-            <p class="sm">{item.shortdesc}</p>
-          </div>
-        {/each}
-      </div>
-    {/if}
-  </div>
-  <FAQ/>
+	<div class="column ytop rgap32 ptop64 pbot64">
+		<Headerpage text="Future Chapters" />
+		<div class="row ycenter cgap8 mwrap rgap8">
+			<button
+				class="selectable"
+				class:selected={isRegion[0]}
+				on:click={() => {
+					toggleRegion(0);
+					setRegion('northern india');
+				}}>North</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[1]}
+				on:click={() => {
+					toggleRegion(1);
+					setRegion('eastern india');
+				}}>East</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[2]}
+				on:click={() => {
+					toggleRegion(2);
+					setRegion('western india');
+				}}>West</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[3]}
+				on:click={() => {
+					toggleRegion(3);
+					setRegion('southern india');
+				}}>South</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[4]}
+				on:click={() => {
+					toggleRegion(4);
+					setRegion('central india');
+				}}>Center</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[5]}
+				on:click={() => {
+					toggleRegion(5);
+					setRegion('himalayas');
+				}}>Himalayas</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[6]}
+				on:click={() => {
+					toggleRegion(6);
+					setRegion('international');
+				}}>International</button
+			>
+			<button
+				class="selectable"
+				class:selected={isRegion[7]}
+				on:click={() => {
+					toggleRegion(7);
+				}}>All</button
+			>
+		</div>
+		{#if futureproj && futureproj.length > 0 && isRegion[7]}
+			<div class="grid four cgap32 rgap24" use:autoAnimate>
+				{#each futureproj as item}
+					<div class="column">
+						<img class="smallerimage" src={item.gallery} alt={item.chapter} />
+						<h5 class="tight pbot4 ptop8">{item.chapter}</h5>
+						<p class="sm pbot8">{item.shortdesc}</p>
+						<small class="blue tt-u">{item.region}</small>
+					</div>
+				{/each}
+			</div>
+		{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
+			<div class="grid four cgap32 rgap24" use:autoAnimate>
+				{#each regionAnveshi as item}
+					<div class="column">
+						<img class="smallerimage" src={item.gallery} alt={item.chapter} />
+						<h5 class="tight pbot8 ptop8">{item.chapter}</h5>
+						<p class="sm">{item.shortdesc}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
+	<FAQ />
 </Container>
 
 <style lang="sass">

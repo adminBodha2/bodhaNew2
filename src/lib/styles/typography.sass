@@ -1,0 +1,356 @@
+.serif
+	font-family: var(--serif-item)
+
+pre
+	box-sizing: border-box
+	white-space: pre-line
+	white-space: -moz-pre-line
+	white-space: -pre-line
+	white-space: -o-pre-line
+	word-wrap: break-word
+	word-break: break-word
+	overflow: hidden
+	font-family: var(--font-sans)
+	font-optical-sizing: auto
+
+small
+	font-size: var(--text-xxxs)
+
+.sans
+	font-family: var(--font-sans)
+	font-optical-sizing: auto
+
+.playfair
+	font-family: var(--font-serif)
+	font-optical-sizing: auto
+
+h1
+	font-size: 4.196rem
+	&.tight
+		line-height: 1.28
+h2
+	font-size: 3.567rem
+h3
+	font-size: 2.686rem
+h4
+	font-size: 2.148rem
+h5
+	font-size: 1.719rem
+h6
+	font-size: 1.375rem
+p, pre
+	font-size: 1.1rem
+	&.sm
+		font-size: 0.875rem
+	&.big
+		font-size: 1.28rem
+
+@media screen and (max-width: 1024px)
+	p, pre
+		font-size: 1rem
+		&.sm
+			font-size: 0.9rem
+		&.big
+			font-size: 1.25rem
+	h6
+		font-size: 1.2rem
+	h5
+		font-size: 1.67rem
+	h4
+		font-size: 1.875rem
+	h2
+		font-size: 2.467rem
+
+@media screen and (min-width: 1025px)
+	h1
+		letter-spacing: -0.4px
+		line-height: 1.4
+		&.blogtitle
+			font-size: 80px
+		&.tight
+			line-height: 1.28
+	h2
+		letter-spacing: -0.4px
+		line-height: 1.4
+		&.steady
+			font-size: 32px
+		&.tight
+			line-height: 1.28
+	h3
+		letter-spacing: -0.4px
+		line-height: 1.4
+		&.tight
+			line-height: 1.28
+	h4
+		letter-spacing: -0.4px
+		line-height: 1.4
+		&.tight
+			line-height: 1.28
+	h5
+		line-height: 1.6
+		&.tight
+			line-height: 1.28
+	h6
+		line-height: 1.6
+		&.tight
+			line-height: 1.28
+	p, pre
+		line-height: 1.6
+		&.tight
+			line-height: 1.4
+@media screen and (max-width: 1024px)
+	h1
+		&.blogtitle
+			font-size: 40px
+	h2
+		&.steady
+			font-size: 22px
+	h3
+		&.tight
+			line-height: 1.28
+	h4
+		line-height: 1.28
+	h5
+		line-height: 1.6
+		&.tight
+			line-height: 1.28
+	h6
+		line-height: 1.6
+		&.tight
+			line-height: 1.28
+	p, pre
+		line-height: 1.4
+		&.tight
+			line-height: 1.4
+
+p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
+	margin: 0
+	color: var(--black-ink)
+
+p, pre
+	letter-spacing: 0px
+	&.bold
+		font-weight: 600
+
+.italic
+	font-style: italic
+
+.bold900
+	font-weight: 900
+
+small.italic
+	font-style: italic
+
+h6
+	letter-spacing: 0px
+
+.blog-container
+	p, li, h4, pre
+		font-family: var(--font-serif)
+	a
+		text-decoration-color: var(--blue-light)
+		color: inherit
+	img
+		object-fit: contain !important
+	@media screen and (min-width: 1025px)
+		img
+			height: 400px !important
+			margin-bottom: 16px
+		p, pre, ul, ol
+			font-size: 21px
+			line-height: 1.6
+			margin-bottom: 1rem
+		li
+			font-size: 21px
+			line-height: 1.6
+		blockquote
+			border-left: 4px solid var(--blue-light)
+			margin-left: 0
+			margin-right: 0
+			padding-left: 16px
+			font-style: italic
+			margin-top: 2rem
+			margin-bottom: 2rem
+			cite
+				font-size: 14px
+				color: #878787
+		h6
+			font-size: 21px
+			margin-bottom: 1rem
+			margin-top: 2rem
+		h5
+			font-size: 24px
+			margin-top: 2rem
+			margin-bottom: 2rem
+		h4
+			font-size: 32px
+			letter-spacing: -0.5px
+			margin-bottom: 1rem
+			margin-top: 3rem
+	@media screen and (max-width: 1024px)
+		img
+			max-height: 400px !important
+			width: 100% 
+			margin-bottom: 16px
+		p, pre, ul, ol
+			font-size: 19px
+			line-height: 1.6
+			margin-bottom: 1rem
+		li
+			font-size: 19px
+			line-height: 1.6
+		blockquote
+			border-left: 4px solid var(--blue-light)
+			margin-left: 0
+			margin-right: 0
+			padding-left: 16px
+			font-style: italic
+			margin-top: 2rem
+			margin-bottom: 2rem
+		h6
+			font-size: 21px
+			margin-bottom: 1rem
+			margin-top: 2rem
+		h5
+			font-size: 21px
+			margin-top: 2rem
+			margin-bottom: 2rem
+		h4
+			font-size: 26px
+			letter-spacing: -0.5px
+			margin-bottom: 1rem
+			margin-top: 3rem
+
+
+.labtext
+	a
+		color: var(--blue-light)
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	sup
+		color: var(--blue-light)
+		font-size: 12px
+	@media screen and (min-width: 1025px)
+		h5
+			font-size: 27px
+			margin-top: 2rem
+			margin-bottom: 1rem
+		h6
+			font-size: 21px
+			margin-bottom: 1rem
+			margin-top: 1rem
+		p, pre
+			font-size: 18px
+			margin-bottom: 16px
+			line-height: 1.6
+		li
+			font-size: 18px
+			line-height: 1.6
+		blockquote
+			border-left: 4px solid var(--blue-light)
+			margin-left: 0
+			margin-right: 0
+			padding-left: 16px
+			padding-bottom: 0
+			font-style: italic
+			p
+				margin-bottom: 0
+	@media screen and (max-width: 1024px)
+		h5
+			font-size: 24px
+			margin-bottom: 1rem
+			margin-top: 2rem
+		h6
+			font-size: 20px
+			margin-bottom: 1rem
+			margin-top: 1rem
+		p, pre
+			font-size: 18px
+			line-height: 1.4
+			margin-bottom: 16px
+		li
+			font-size: 18px
+			line-height: 1.4
+		blockquote
+			border-left: 4px solid var(--blue-light)
+			margin-left: 0
+			margin-right: 0
+			padding-left: 16px
+			font-style: italic
+
+.ta-c
+	text-align: center
+	@media screen and (max-width: 1024px)
+		&.mleft
+			text-align: left
+.ta-l
+	text-align: left
+.tt-u
+	text-transform: uppercase
+.tt-l
+	text-transform: lowercase
+
+.white
+	color: #FFFFFF
+.blue
+	color: var(--blue-main)
+.grey
+	color: var(--grey-ink)
+.lgrey
+	color: #a7a7a7
+
+.thin
+	font-weight: 400
+
+.thinner
+	font-weight: 300
+
+a
+	&.blank
+		text-decoration: none
+		color: inherit
+	&.blank.linker
+		&:hover
+			text-decoration: underline
+	&.blank.color
+		&:hover
+			color: var(--blue-light)
+	&.heading
+		text-decoration: none
+		color: inherit
+		&:hover
+			text-decoration: underline
+			text-decoration-color: var(--blue-main)
+	&.linked
+		color: var(--blue-main)
+	&.linkedlight
+		color: var(--blue-light)
+	&.bold
+		font-weight: 600
+	&.buttonheading
+		text-decoration: none
+		background: #171717
+		color: #FFFFFF
+		font-size: 14px
+		font-weight: 500
+		padding: 4px 8px
+		transition: 0.1s
+		&:hover
+			background: var(--blue-main)
+	&.button-main
+		background: var(--blue-main)
+		text-decoration: none
+		color: #FFFFFF
+		font-size: 13px
+		padding: 8px 16px
+		width: max-content
+		text-transform: uppercase
+		border-radius: 2px
+		transition: 0.06s
+		&:hover
+			background: var(--blue-dark)
+
+a.container
+	text-decoration: none
+	color: inherit

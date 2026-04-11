@@ -44,52 +44,33 @@
 <Container>
 	<div class="marginx"></div>
 	<Parallax imageLink="/images/heroimage2.webp" />
-	<div class="box50 column ycenter rgap32 pbot32 ptop64">
-		<div class="column rgap16 ycenter">
-			<h1 class="width70">Bodha is a <span class="blue">think tank and research group</span>,</h1>
-			<h6 class="width70 thin">
-				focused on contemporary issues of cultural concern, to inform core areas of policy with
-				wisdom drawn from Hindu traditions. We advance intellectual churn within the Hindu
-				renaissance, and curate cultural experiences of core Hindu institutions such as the temple.
-			</h6>
-			<!--
-      <h3 class="blue ptop16">Our Mandate</h3>
-      <div class="grid four stay2 stacked16">
-        <div class="column boxed">
-          <p>Provide a Hindu cultural lens to foreign policy and institutional design, with original research.</p>
-        </div>
-        <div class="column boxed">
-          <p>Ask pertinent questions about critical cultural problems and create a bank of actionable solutions.</p>
-        </div>
-        <div class="column boxed">
-          <p>Create immersive cultural experiences to make our youth more culturally aware and active.</p>
-        </div>
-        <div class="column boxed">
-          <p>Create institutional and academic depth by training scholars in critical disciplines.</p>
-        </div>
-      </div>
-      -->
-		</div>
-		<div class="column rgap8">
-			<p class="grey">
+	<div class="box-1">
+		<h1 class="width70 source-serif page-hero">Bodha is a <span class="blue italic">think tank</span> and <span class="blue italic">research group</span>,</h1>
+		<h6 class="width70 thin source-serif">
+			focused on contemporary issues of cultural concern, to inform core areas of policy with
+			wisdom drawn from Hindu traditions. We advance intellectual churn within the Hindu
+			renaissance, and curate cultural experiences of core Hindu institutions such as the temple.
+		</h6>
+		<div class="column landing-p rgap16 width50">
+			<p class="p-bot-b">
 				About our <a class="blank linked tt-u" href="/research"><b>research projects</b></a>
 			</p>
-			<p class="grey">Explore our <a class="blank linked tt-u" href="/blog"><b>writings</b></a></p>
-			<p class="grey">
+			<p class="p-bot-b">Explore our <a class="blank linked tt-u" href="/blog"><b>writings</b></a></p>
+			<p class="p-bot-b">
 				<a class="blank linked tt-u" href="/lab"><b>current notes</b>,</a> opinions, and more
 			</p>
-			<p class="grey">
+			<p>
 				Visit <a class="blank linked tt-u" href="/library"><b>Bodha Open Library</b></a>
 			</p>
 		</div>
 	</div>
-	<div class="box50 ycenter column rgap32 bordertop mid-pad">
+	<div class="box-1">
 		<Title text="Verticals" />
-		<div class="grid four cgap16 rgap16">
-			<div class="column rgap8 blogbox2">
-				<img class="vert pbot8" src="/images/vertical-research.webp" alt="research" />
-				<h5 class="blue"><a class="blank linker" href="/research">Research</a></h5>
-				<p class="tight">
+		<div class="grid two cgap16 rgap16">
+			<div class="column rgap16 blogbox2">
+				<img class="vert" src="/images/vertical-research.webp" alt="research" />
+				<h4 class="blue source-serif"><a class="blank linker" href="/research">Research</a></h4>
+				<p class="tight source-serif big">
 					To illuminate hidden universal forces and long arcs in foreign and public policy; to
 					reveal the design of core Hindu institutions like the temple, gurukula, family, and
 					charity; and to turn the social sciences lens with a Hindu view, Bodha engages in focused
@@ -97,30 +78,30 @@
 					theorization based on core cultural ideas.
 				</p>
 			</div>
-			<div class="column rgap8 blogbox2">
-				<img class="vert pbot8" src="/images/vertical-tours.webp" alt="cultural tours" />
-				<h5 class="blue"><a class="blank linker" href="/anveshi">Cultural Tours</a></h5>
-				<p class="tight">
+			<div class="column rgap16 blogbox2">
+				<img class="vert" src="/images/vertical-tours.webp" alt="cultural tours" />
+				<h4 class="blue source-serif"><a class="blank linker" href="/anveshi">Cultural Tours</a></h4>
+				<p class="tight source-serif big">
 					A guided tour of four to five days to beautiful and hitherto unexplored temples and
 					kshetras of Bharatavarsha. Anveshi tours are full of architectural, sculptural and
 					cultural splendor, and also an immersion into living systems carrying beautiful cultural
 					traditions for thousands of years.
 				</p>
 			</div>
-			<div class="column rgap8 blogbox2">
-				<img class="vert pbot8" src="/images/vertical-scholars.webp" alt="bodha academy" />
-				<h5 class="blue"><a class="blank linker" href="/academy">Bodha Academy</a></h5>
-				<p class="tight">
+			<div class="column rgap16 blogbox2">
+				<img class="vert" src="/images/vertical-scholars.webp" alt="bodha academy" />
+				<h4 class="blue source-serif"><a class="blank linker" href="/academy">Bodha Academy</a></h4>
+				<p class="tight source-serif big">
 					Modern fault lines in Hindu society stem from an identity crisis manufactured by the
 					British, by institutionalizing identity-based fault lines through academia and other
 					institutions. At Bodha, we address this by training scholars every year in anthropology
 					and sociology from an Indic point of view.
 				</p>
 			</div>
-			<div class="column rgap8 blogbox2">
-				<img class="vert pbot8" src="/images/vertical-bigquestions.webp" alt="big questions" />
-				<h5 class="blue"><a class="blank linker" href="/big-questions">The Big Questions</a></h5>
-				<p class="tight">
+			<div class="column rgap16 blogbox2">
+				<img class="vert" src="/images/vertical-bigquestions.webp" alt="big questions" />
+				<h4 class="blue source-serif"><a class="blank linker" href="/big-questions">The Big Questions</a></h4>
+				<p class="tight source-serif big">
 					Every year we will formulate big questions stating major problems that capture core
 					concerns in the contemporary journey of Hindu society, and put those questions to great
 					thinkers, leaders and activists. The Big Questions vertical will seek answers which will
@@ -129,52 +110,35 @@
 			</div>
 		</div>
 	</div>
-	<div class="box50 ycenter column rgap32 bordertop mid-pad">
+	<div class="box-1">
 		<div class="column">
 			<Title4 text="Writings" />
-			<p class="sm lgrey">
-				Explore long form essays, opinions, notes on ongoing research, and more...
-			</p>
+			<h6 class="thin">Explore long form essays, opinions, research output, and more at our <a href="/blog" class="blank linked"><b>BLOG.</b></a></h6>
 		</div>
 		{#if blogs && labs && blogs.length > 0 && labs.length > 0}
 			<div class="grid three stacked-2">
 				{#each blogs as item}
-					<div class="column rgap8">
-						<img src={item.meta.image} class="vert" alt={item.meta.title} />
-						<h6 class="tight">
-							<a class="blank linker" href={item.linkpath}>{item.meta.title}</a>
-						</h6>
-						<p class="sm16 tight grey">{item.meta.excerpt}</p>
-						<div class="row mwrap cgap8 rgap8">
-							{#each item.meta.tags as tag}
-								<p class="sm blue italic">#{tag}</p>
-							{/each}
-						</div>
+				<div class="column rgap16">
+					<img src={item.meta.image} class="vert2" alt={item.meta.title} />
+					<h5 class="source-serif tight"><a class="blank linker" href={item.linkpath}>{item.meta.title}</a></h5>
+					<p class="tight grey">{item.meta.excerpt}</p>
+					<div class="row mwrap cgap8 rgap8">
+						{#each item.meta.tags as tag}
+							<p class="sm blue italic">#{tag}</p>
+						{/each}
 					</div>
-				{/each}
-				{#each labs as item}
-					<div class="column rgap8 blogbox2">
-						<small class="blue italic tt-l">#{item.meta.category}</small>
-						<h6 class="tight">
-							<a class="blank linker" href={item.linkpath}>{item.meta.title}</a>
-						</h6>
-						<p class="sm16 grey">{item.meta.excerpt}</p>
-					</div>
+				</div>
 				{/each}
 			</div>
 		{/if}
-		<div class="row mwrap cgap8 rgap8 ycenter ptop8">
-			<a class="button-main" href="/blog">Visit Blog</a>
-			<a class="button-main" href="/lab">Visit Lab</a>
-		</div>
 	</div>
-	<div class="box100 ycenter column rgap32 bordertop mid-pad">
+	<div class="box-1">
 		<Title2 text="Publications" />
 		<div class="grid two stacked-2">
 			<div class="column rgap16">
 				<img class="book" src="/images/book-ss.webp" alt="svayambodha and shatrubodha" />
-				<h6>Svayambodha and Shatrubodha</h6>
-				<p class="sm16 grey">
+				<h5 class="source-serif tight">Svayambodha and Shatrubodha</h5>
+				<p class="grey">
 					This book is a small attempt to take the intellectual Hindu renaissance forward by
 					rekindling the viveka that is necessary to differentiate between dharma and adharma. The
 					Svayambodha–Shatrubodha framework does this by making Hindus aware of their civilizational
@@ -182,28 +146,21 @@
 					Dharma and Hindu society face today.
 				</p>
 				<div class="row mwrap cgap8 rgap8 ycenter">
-					<a
-						class="button-main"
-						target="_blank"
-						rel="noreferrer"
-						href="https://www.hindueshop.com/product/svayambodha-and-shatrubodha/">Hindu Eshop</a
-					>
-					<a
-						class="button-main"
-						target="_blank"
-						rel="noreferrer"
-						href="https://padhegaindia.in/product/svayambodha-and-shatrubodha-hindu-view-of-self-and-the-world-hb/"
-						>Padhega India</a
-					>
-					<a class="button-main" target="_blank" rel="noreferrer" href="https://amzn.in/d/hMAWoWD"
-						>Amazon</a
-					>
+					<a class="primary" target="_blank" rel="noreferrer" href="https://www.hindueshop.com/product/svayambodha-and-shatrubodha/">
+						<span>Hindu eShop</span>
+					</a>
+					<a class="primary" target="_blank" rel="noreferrer" href="https://padhegaindia.in/product/svayambodha-and-shatrubodha-hindu-view-of-self-and-the-world-hb/">
+						<span>Padhega India</span>
+					</a>
+					<a class="primary" target="_blank" rel="noreferrer" href="https://amzn.in/d/hMAWoWD">
+						<span>Amazon</span>
+					</a>
 				</div>
 			</div>
 			<div class="column rgap16">
 				<img class="book" src="/images/book-fm.webp" alt="fractal mandala" />
-				<h6>Fractal Maṇḍala</h6>
-				<p class="sm16 grey">
+				<h5 class="source-serif tight">Fractal Maṇḍala</h5>
+				<p class="grey">
 					Fractal Maṇḍala is a fresh exploration of Indian civilization through its own stories and
 					traditions. It follows India’s journey from the deep past of the Holocene to the early
 					Iron Age. Using the Purāṇas, Vedas, Itihāsas, and ancient genealogies, the book shows that
@@ -211,35 +168,31 @@
 					civilizational memory encoded in stories, songs, and symbols.
 				</p>
 				<div class="row mwrap cgap8 rgap8 ycenter">
-					<a
-						class="button-main"
-						target="_blank"
-						rel="noreferrer"
-						href="https://www.hindueshop.com/product/fractal-mandala/">Hindu Eshop</a
-					>
-					<a
-						class="button-main"
-						target="_blank"
-						rel="noreferrer"
-						href="https://padhegaindia.in/product/fractal-mandala-a-history-of-ancient-india/"
-						>Padhega India</a
-					>
-					<a class="button-main" target="_blank" rel="noreferrer" href="https://amzn.in/d/5a526b5"
-						>Amazon</a
-					>
+					<a class="primary" target="_blank" rel="noreferrer" href="https://www.hindueshop.com/product/fractal-mandala/">
+						<span>Hindu eShop</span>
+					</a>
+					<a class="primary" target="_blank" rel="noreferrer" href="https://padhegaindia.in/product/fractal-mandala-a-history-of-ancient-india/">
+						<span>Padhega India</span>
+					</a>
+					<a class="primary" target="_blank" rel="noreferrer" href="https://amzn.in/d/5a526b5">
+						<span>Amazon</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="box100 ycenter column rgap32 bordertop mid-pad">
-		<Title3 text="Videos" />
+	<div class="box-2">
+		<div class="column">
+			<Title3 text="Videos" />
+			<h6 class="thin">Talks, conferences, podcasts - <a href="/videos" class="blank linked"><b>SEE ALL.</b></a></h6>
+		</div>
 		{#if vids && vids.length > 0}
 			<div class="grid three stacked-2">
 				{#each vids as item}
 					<div class="column rgap16">
 						<Youtuber youTubeId={item.videoid} />
 						<div class="column rgap8">
-							<p class="bold tight">
+							<p class="big bold tight">
 								<a class="blank linker" href={item.link} target="_blank" rel="noreferrer"
 									>{item.name}</a
 								>
@@ -250,34 +203,59 @@
 				{/each}
 			</div>
 		{/if}
-		<a class="button-main" href="/videos">See All</a>
+
 	</div>
 </Container>
 
 <style lang="sass">
 
+p.p-bot-b
+	padding-bottom: 0.75rem
+
+h1.page-hero
+	@media screen and (min-width: 1025px)
+		font-size: 4rem
+		letter-spacing: -2px
+	@media screen and (max-width: 1024px)
+		font-size: 2.5em
+		letter-spacing: -1px
+		line-height: 1.2
+
 img.vert
-  object-fit: cover
-  object-position: center center
-  @media screen and (min-width: 1025px)
-    width: 100%
-    height: 320px
-  @media screen and (max-width: 1024px)
-    width: 100%
-    height: 240px
+	object-fit: cover
+	object-position: center center
+	@media screen and (min-width: 1025px)
+		width: 100%
+		height: 360px
+	@media screen and (max-width: 1024px)
+		width: 100%
+		height: 240px
+
+img.vert2
+	object-fit: cover
+	object-position: center center
+	@media screen and (min-width: 1025px)
+		width: 100%
+		height: 280px
+	@media screen and (max-width: 1024px)
+		width: 100%
+		height: 240px
 
 img.book
-  object-fit: contain
-  margin-right: auto
-  @media screen and (min-width: 1025px)
-    height: 360px
-  @media screen and (max-width: 1024px)
-    height: 320px
+	object-fit: contain
+	margin-right: auto
+	border-radius: 5px
+	background: var(--grey-ink)
+	@media screen and (min-width: 1025px)
+		height: 360px
+		padding: 1rem
+	@media screen and (max-width: 1024px)
+		height: 320px
 
 .marginx
-  @media screen and (min-width: 1025px)
-    height: 80px
-  @media screen and (max-width: 1024px)
-    height: 56px
+	@media screen and (min-width: 1025px)
+		height: 80px
+	@media screen and (max-width: 1024px)
+		height: 56px
 
 </style>

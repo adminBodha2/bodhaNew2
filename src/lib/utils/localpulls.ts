@@ -322,7 +322,7 @@ export async function limitBlog() {
 
   const sorted = filtered.sort((a, b) => b.date.getTime() - a.date.getTime())
 
-  return sorted.slice(0, 3)   // 🔥 Only first 3 posts
+  return sorted.slice(0, 6)   // 🔥 Only first 3 posts
 }
 
 export async function limitLab() {

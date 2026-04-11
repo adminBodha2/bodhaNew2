@@ -2,773 +2,495 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap')
 
 html, body
-  box-sizing: border-box
-  padding: 0
-  margin: 0
-  font-family: "Google Sans Flex", sans-serif
-  font-optical-sizing: auto
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	font-family: "Google Sans Flex", sans-serif
+	font-optical-sizing: auto
 
 *, :root
-  box-sizing: border-box
-
-.serif
-  font-family: var(--serif-item)
+	box-sizing: border-box
 
 .bdr
-  border: 1px solid red
+	border: 1px solid red
 
 .row, .column
-  display: flex
+	display: flex
 
 .row
-  flex-direction: row
-  &.wrapper
-    flex-wrap: wrap
-  &.xbetween
-    justify-content: space-between
-  &.xleft
-    justify-content: flex-start
-  &.xright
-    justify-content: flex-end
-    @media screen and (max-width: 1024px)
-      &.mleft
-        justify-content: flex-start
-  &.xcenter
-    justify-content: center
-  &.ycenter
-    align-items: center
-  &.ytop
-    align-items: flex-start
-  &.wrap
-    flex-wrap: wrap
-  @media screen and (max-width: 1024px)
-    &.mwrap
-      flex-wrap: wrap
+	flex-direction: row
+	&.wrapper
+		flex-wrap: wrap
+	&.xbetween
+		justify-content: space-between
+	&.xleft
+		justify-content: flex-start
+	&.xright
+		justify-content: flex-end
+		@media screen and (max-width: 1024px)
+			&.mleft
+				justify-content: flex-start
+	&.xcenter
+		justify-content: center
+	&.ycenter
+		align-items: center
+	&.ytop
+		align-items: flex-start
+	&.wrap
+		flex-wrap: wrap
+	@media screen and (max-width: 1024px)
+		&.mwrap
+			flex-wrap: wrap
 
 .column
-  flex-direction: column
-  &.ycenter
-    justify-content: center
-  &.ytop
-    justify-content: flex-start
-  &.xcenter
-    align-items: center
-    @media screen and (max-width: 1024px)
-      &.mleft
-        align-items: flex-start
-  &.xleft
-    align-items: flex-start
-    text-align: left
-  &.xright
-    align-items: flex-end
-    text-align: right
-  @media screen and (max-width: 1024px)
-    &.mrow
-      flex-direction: row
-      align-items: center
+	flex-direction: column
+	&.ycenter
+		justify-content: center
+	&.ytop
+		justify-content: flex-start
+	&.xcenter
+		align-items: center
+		@media screen and (max-width: 1024px)
+			&.mleft
+				align-items: flex-start
+	&.xleft
+		align-items: flex-start
+		text-align: left
+	&.xright
+		align-items: flex-end
+		text-align: right
+	@media screen and (max-width: 1024px)
+		&.mrow
+			flex-direction: row
+			align-items: center
 
 .grid
-  display: grid
-  grid-auto-flow: row
-  grid-template-rows: auto
-  &.ytop
-    align-items: start
-  @media screen and (min-width: 1025px)
-    &.stacked
-      column-gap: 48px
-      row-gap: 48px
-    &.stacked-2
-      column-gap: 48px
-      row-gap: 48px
-    &.stacked16
-      gap: 16px
-    &.stacked-4816
-      column-gap: 48px
-      row-gap: 16px
-    &.five
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-    &.four
-      grid-template-columns: 1fr 1fr 1fr 1fr
-    &.three
-      grid-template-columns: 1fr 1fr 1fr
-    &.two
-      grid-template-columns: 1fr 1fr
-    &.two.left
-      grid-template-columns: 32% 1fr
-    &.two.right
-      grid-template-columns: 1fr 32%
-  @media screen and (max-width: 1024px)
-    &.stacked
-      column-gap: 48px
-      row-gap: 16px
-    &.stacked-2
-      column-gap: 48px
-      row-gap: 32px
-    &.stacked16
-      gap: 16px
-    &.four, &.three, &.two, &.five
-      grid-template-columns: 1fr
-    &.four.stay2, &.three.stay2
-      grid-template-columns: 1fr 1fr
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	&.ytop
+		align-items: start
+	@media screen and (min-width: 1025px)
+		&.stacked
+			column-gap: 48px
+			row-gap: 48px
+		&.stacked-2
+			column-gap: 48px
+			row-gap: 48px
+		&.stacked16
+			gap: 16px
+		&.stacked-4816
+			column-gap: 48px
+			row-gap: 16px
+		&.five
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		&.four
+			grid-template-columns: 1fr 1fr 1fr 1fr
+		&.three
+			grid-template-columns: 1fr 1fr 1fr
+		&.two
+			grid-template-columns: 1fr 1fr
+		&.two.left
+			grid-template-columns: 32% 1fr
+		&.two.right
+			grid-template-columns: 1fr 32%
+	@media screen and (max-width: 1024px)
+		&.stacked
+			column-gap: 48px
+			row-gap: 16px
+		&.stacked-2
+			column-gap: 48px
+			row-gap: 32px
+		&.stacked16
+			gap: 16px
+		&.four, &.three, &.two, &.five
+			grid-template-columns: 1fr
+		&.four.stay2, &.three.stay2
+			grid-template-columns: 1fr 1fr
 
 .width100
-  width: 100%
+	width: 100%
 .width50
-  width: 50%
-  @media screen and (max-width: 1024px)
-    width: 100%
+	width: 50%
+	@media screen and (max-width: 1024px)
+		width: 100%
 .width60
-  width: 60%
-  @media screen and (max-width: 1024px)
-    width: 100%
+	width: 60%
+	@media screen and (max-width: 1024px)
+		width: 100%
 .width70
-  width: 70%
-  @media screen and (max-width: 1024px)
-    width: 100%
+	width: 70%
+	@media screen and (max-width: 1024px)
+		width: 100%
 .width80
-  width: 80%
-  @media screen and (max-width: 1024px)
-    width: 100%
+	width: 80%
+	@media screen and (max-width: 1024px)
+		width: 100%
 .width90
-  width: 90%
-  @media screen and (max-width: 1024px)
-    width: 100%
+	width: 90%
+	@media screen and (max-width: 1024px)
+		width: 100%
 .widthmax
-  width: max-content
-  @media screen and (max-width: 1024px)
-    width: 100%
+	width: max-content
+	@media screen and (max-width: 1024px)
+		width: 100%
 
 .height100
-  height: 100%
+	height: 100%
 
 .stdpad
-  @media screen and (min-width: 1201px)
-    padding-left: 128px
-    padding-right: 128px
-  @media screen and (min-width: 1025px) and (max-width: 1200px)
-    padding-left: 64px
-    padding-right: 64px
-  @media screen and (min-width: 631px) and (max-width: 1024px)
-    padding-left: 32px
-    padding-right: 32px
-  @media screen and (max-width: 630px)
-    padding-left: 20px
-    padding-right: 20px
+	@media screen and (min-width: 1201px)
+		padding-left: 128px
+		padding-right: 128px
+	@media screen and (min-width: 1025px) and (max-width: 1200px)
+		padding-left: 64px
+		padding-right: 64px
+	@media screen and (min-width: 631px) and (max-width: 1024px)
+		padding-left: 32px
+		padding-right: 32px
+	@media screen and (max-width: 630px)
+		padding-left: 20px
+		padding-right: 20px
 
 .box100
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  &.solo
-    min-height: 100vh
-  @media screen and (max-width: 1024px)
-    min-height: 64vh
-    &.solo
-      min-height: 100vh
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	&.solo
+		min-height: 100vh
+	@media screen and (max-width: 1024px)
+		min-height: 64vh
+		&.solo
+			min-height: 100vh
 
 .box50
-  min-height: 40vh
-  display: flex
-  flex-direction: column
+	min-height: 40vh
+	display: flex
+	flex-direction: column
 
 .cgap4
-  column-gap: 4px
+	column-gap: 0.25rem
 .cgap8
-  column-gap: 8px
+	column-gap: 0.5rem
 .cgap12
-  column-gap: 12px
+	column-gap: 0.75rem
 .cgap16
-  column-gap: 16px
+	column-gap: 1rem
 .cgap24
-  column-gap: 24px
+	column-gap: 1.5rem
 .cgap32
-  column-gap: 32px
+	column-gap: 2rem
 .cgap48
-  column-gap: 48px
+	column-gap: 3rem
 .cgap64
-  column-gap: 64px
+	column-gap: 4rem
 
 .rgap4
-  row-gap: 4px
+	row-gap: 0.25rem
 .rgap8
-  row-gap: 8px
+	row-gap: 0.5rem
 .rgap12
-  row-gap: 12px
+	row-gap: 0.75rem
 .rgap16
-  row-gap: 16px
+	row-gap: 1rem
 .rgap24
-  row-gap: 24px
+	row-gap: 1.5rem
 .rgap32
-  row-gap: 32px
+	row-gap: 2rem
 .rgap48
-  row-gap: 48px
+	row-gap: 3rem
 .rgap64
-  row-gap: 64px
+	row-gap: 4rem
 
 .ptop128
-  padding-top: 128px
+	padding-top: 8rem
 .ptop104
-  padding-top: 104px
+	padding-top: 6.5rem
 .ptop64
-  @media screen and (min-width: 1025px)
-    padding-top: 64px
-  @media screen and (max-width: 1024px)
-    padding-top: 32px
+	@media screen and (min-width: 1025px)
+		padding-top: 4rem
+	@media screen and (max-width: 1024px)
+		padding-top: 2rem
 .ptop32
-  padding-top: 32px
+	padding-top: 2rem
 .ptop24
-  padding-top: 24px
+	padding-top: 1.5rem
 .ptop16
-  padding-top: 16px
+	padding-top: 1rem
 .ptop8
-  padding-top: 8px
+	padding-top: 0.5rem
 .ptop4
-  padding-top: 4px
+	padding-top: 0.25rem
 .pbot128
-  padding-bottom: 128px
+	padding-bottom: 8rem
 .pbot104
-  padding-bottom: 104px
+	padding-bottom: 6.5rem
 .pbot64
-  @media screen and (min-width: 1025px)
-    padding-bottom: 64px
-  @media screen and (max-width: 1024px)
-    padding-bottom: 32px
+	@media screen and (min-width: 1025px)
+		padding-bottom: 4rem
+	@media screen and (max-width: 1024px)
+		padding-bottom: 2rem
 .pbot32
-  padding-bottom: 32px
+	padding-bottom: 2rem
 .pbot24
-  padding-bottom: 24px
+	padding-bottom: 1.5rem
 .pbot16
-  padding-bottom: 16px
+	padding-bottom: 1rem
 .pbot8
-  padding-bottom: 8px
+	padding-bottom: 0.5rem
 .pbot4
-  padding-bottom: 4px
+	padding-bottom: 0.25rem
 .py128
-  @media screen and (min-width: 1025px)
-    padding-top: 128px
-    padding-bottom: 128px
-  @media screen and (max-width: 1024px)
-    padding-top: 32px
-    padding-bottom: 32px
+	@media screen and (min-width: 1025px)
+		padding-top: 8rem
+		padding-bottom: 8rem
+	@media screen and (max-width: 1024px)
+		padding-top: 2rem
+		padding-bottom: 2rem
 .py128-m
-  @media screen and (min-width: 1025px)
-    padding-top: 128px
-    padding-bottom: 128px
-  @media screen and (max-width: 1024px)
-    padding-top: 96px
-    padding-bottom: 96px
+	@media screen and (min-width: 1025px)
+		padding-top: 8rem
+		padding-bottom: 8rem
+	@media screen and (max-width: 1024px)
+		padding-top: 6rem
+		padding-bottom: 6rem
 .py104
-  @media screen and (min-width: 1025px)
-    padding-top: 104px
-    padding-bottom: 104px
-  @media screen and (max-width: 1024px)
-    padding-top: 32px
-    padding-bottom: 32px
+	@media screen and (min-width: 1025px)
+		padding-top: 6.5rem
+		padding-bottom: 6.5rem
+	@media screen and (max-width: 1024px)
+		padding-top: 2rem
+		padding-bottom: 2rem
 
 .top-pad
-  @media screen and (min-width: 1025px)
-    padding-top: 104px
-    &.is-solo
-      padding-top: 104px
-  @media screen and (max-width: 1024px)
-    padding-top: 88px
-    &.is-solo
-      padding-top: 88px
+	@media screen and (min-width: 1025px)
+		padding-top: 6.5rem
+		&.is-solo
+			padding-top: 6.5rem
+	@media screen and (max-width: 1024px)
+		padding-top: 5.5rem
+		&.is-solo
+			padding-top: 5.5rem
 
 .mid-pad
-  padding-top: 64px
-  padding-bottom: 64px
+	padding-top: 4rem
+	padding-bottom: 4rem
 
 button
-  cursor: pointer
-  &.blank
-    display: flex
-    justify-content: center
-    align-items: center
-    padding: 0
-    margin: 0
-    border: none
-    background: none
-  &.taglabel
-    display: flex
-    justify-content: center
-    align-items: center
-    background: #424242
-    border: none
-    color: #FFFFFF
-    font-size: 15px
-    padding: 8px 16px
-    border-radius: 4px
-    &:hover
-      background: var(--blue-light)
-  &.buttonheading
-    display: flex
-    justify-content: center
-    align-items: center
-    border: none
-    background: #171717
-    color: #FFFFFF
-    font-size: 14px
-    font-weight: 500
-    padding: 4px 8px
-    transition: 0.1s
-    border-radius: 2px
-    text-transform: uppercase
-    font-family: var(--font-sans)
-    &:hover
-      background: var(--blue-main)
-    &.selected
-      background: var(--blue-light)
-  &.button-main-line
-    background: white
-    border: 1px solid var(--blue-light)
-    text-decoration: none
-    color: var(--blue-light)
-    font-size: 13px
-    padding: 8px 16px
-    width: max-content
-    text-transform: uppercase
-    border-radius: 2px
-    transition: 0.02s
-    &:hover
-      background: var(--blue-main)
-      color: white
-  &.button-main
-    background: var(--blue-main)
-    border: none
-    text-decoration: none
-    color: #FFFFFF
-    font-size: 13px
-    padding: 8px 16px
-    width: max-content
-    text-transform: uppercase
-    border-radius: 2px
-    transition: 0.06s
-    &:hover
-      background: var(--blue-dark)
+	cursor: pointer
+	&.blank
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		margin: 0
+		border: none
+		background: none
+	&.taglabel
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #424242
+		border: none
+		color: #FFFFFF
+		font-size: 15px
+		padding: 8px 16px
+		border-radius: 4px
+		&:hover
+			background: var(--blue-light)
+	&.buttonheading
+		display: flex
+		justify-content: center
+		align-items: center
+		border: none
+		background: #171717
+		color: #FFFFFF
+		font-size: 14px
+		font-weight: 500
+		padding: 4px 8px
+		transition: 0.1s
+		border-radius: 2px
+		text-transform: uppercase
+		font-family: var(--font-sans)
+		&:hover
+			background: var(--blue-main)
+		&.selected
+			background: var(--blue-light)
+	&.button-main-line
+		background: white
+		border: 1px solid var(--blue-light)
+		text-decoration: none
+		color: var(--blue-light)
+		font-size: 13px
+		padding: 8px 16px
+		width: max-content
+		text-transform: uppercase
+		border-radius: 2px
+		transition: 0.02s
+		&:hover
+			background: var(--blue-main)
+			color: white
+	&.button-main
+		background: var(--blue-main)
+		border: none
+		text-decoration: none
+		color: #FFFFFF
+		font-size: 13px
+		padding: 8px 16px
+		width: max-content
+		text-transform: uppercase
+		border-radius: 2px
+		transition: 0.06s
+		&:hover
+			background: var(--blue-dark)
 
 .bordertop
-  border-top: 1px solid var(--color-border)
+	border-top: 1px solid var(--color-border)
 
 .borderbot
-  border-bottom: 1px solid var(--color-border)
+	border-bottom: 1px solid var(--color-border)
 
 .bordbotblack
-  border-bottom: 2px solid #000000
+	border-bottom: 2px solid #000000
 
 //typography------------------------------------------------------------------------------------------------------------------------------------------------------
 
-pre
-  box-sizing: border-box
-  white-space: pre-line
-  white-space: -moz-pre-line
-  white-space: -pre-line
-  white-space: -o-pre-line
-  word-wrap: break-word
-  word-break: break-word
-  overflow: hidden
-  font-family: var(--font-sans)
-  font-optical-sizing: auto
-
-small
-  font-size: var(--text-xxxs)
-
-.sans
-  font-family: var(--font-sans)
-  font-optical-sizing: auto
-
-.playfair
-  font-family: var(--font-serif)
-  font-optical-sizing: auto
-
-h1
-  font-size: var(--text-xxl)
-  &.tight
-    line-height: 1.28
-h2
-  font-size: var(--text-xl)
-h3
-  font-size: var(--text-xls)
-h4
-  font-size: var(--text-lgx)
-h5
-  font-size: var(--text-lgs)
-h6
-  font-size: var(--text-mdx)
-p, pre
-  font-size: var(--text-md)
-  &.sm
-    font-size: var(--text-sm)
-  &.big
-    font-size: var(--text-mdx)
-
-@media screen and (min-width: 1025px)
-  h1
-    letter-spacing: -0.4px
-    line-height: 1.4
-    &.blogtitle
-      font-size: 80px
-    &.tight
-      line-height: 1.28
-  h2
-    letter-spacing: -0.4px
-    line-height: 1.4
-    &.steady
-      font-size: 32px
-    &.tight
-      line-height: 1.28
-  h3
-    letter-spacing: -0.4px
-    line-height: 1.4
-    &.tight
-      line-height: 1.28
-  h4
-    letter-spacing: -0.4px
-    line-height: 1.4
-    &.tight
-      line-height: 1.28
-  h5
-    line-height: 1.6
-    &.tight
-      line-height: 1.28
-  h6
-    line-height: 1.6
-    &.tight
-      line-height: 1.28
-  p, pre
-    line-height: 1.6
-    &.tight
-      line-height: 1.4
-@media screen and (max-width: 1024px)
-  h1
-    &.blogtitle
-      font-size: 40px
-  h2
-    &.steady
-      font-size: 22px
-  h3
-    &.tight
-      line-height: 1.28
-  h4
-    line-height: 1.28
-  h5
-    line-height: 1.6
-    &.tight
-      line-height: 1.28
-  h6
-    line-height: 1.6
-    &.tight
-      line-height: 1.28
-  p, pre
-    line-height: 1.4
-    &.tight
-      line-height: 1.4
-
-p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
-  margin: 0
-
-p, pre
-  letter-spacing: 0px
-  &.bold
-    font-weight: 600
-  &.italic
-    font-style: italic
-
-.bold900
-  font-weight: 900
-
-small.italic
-  font-style: italic
-
-h6
-  letter-spacing: 0px
-
-.blog-container
-  p, li, h4, pre
-    font-family: var(--font-serif)
-  a
-    text-decoration-color: var(--blue-light)
-    color: inherit
-  img
-    object-fit: contain !important
-  @media screen and (min-width: 1025px)
-    img
-      height: 400px !important
-      margin-bottom: 16px
-    p, pre, ul, ol
-      font-size: 21px
-      line-height: 1.6
-      margin-bottom: 1rem
-    li
-      font-size: 21px
-      line-height: 1.6
-    blockquote
-      border-left: 4px solid var(--blue-light)
-      margin-left: 0
-      margin-right: 0
-      padding-left: 16px
-      font-style: italic
-      margin-top: 2rem
-      margin-bottom: 2rem
-      cite
-        font-size: 14px
-        color: #878787
-    h6
-      font-size: 21px
-      margin-bottom: 1rem
-      margin-top: 2rem
-    h5
-      font-size: 24px
-      margin-top: 2rem
-      margin-bottom: 2rem
-    h4
-      font-size: 32px
-      letter-spacing: -0.5px
-      margin-bottom: 1rem
-      margin-top: 3rem
-  @media screen and (max-width: 1024px)
-    img
-      max-height: 400px !important
-      width: 100% 
-      margin-bottom: 16px
-    p, pre, ul, ol
-      font-size: 19px
-      line-height: 1.6
-      margin-bottom: 1rem
-    li
-      font-size: 19px
-      line-height: 1.6
-    blockquote
-      border-left: 4px solid var(--blue-light)
-      margin-left: 0
-      margin-right: 0
-      padding-left: 16px
-      font-style: italic
-      margin-top: 2rem
-      margin-bottom: 2rem
-    h6
-      font-size: 21px
-      margin-bottom: 1rem
-      margin-top: 2rem
-    h5
-      font-size: 21px
-      margin-top: 2rem
-      margin-bottom: 2rem
-    h4
-      font-size: 26px
-      letter-spacing: -0.5px
-      margin-bottom: 1rem
-      margin-top: 3rem
-
-.labtext
-  a
-    color: var(--blue-light)
-    text-decoration: none
-    &:hover
-      text-decoration: underline
-  sup
-    color: var(--blue-light)
-    font-size: 12px
-  @media screen and (min-width: 1025px)
-    h5
-      font-size: 27px
-      margin-top: 2rem
-      margin-bottom: 1rem
-    h6
-      font-size: 21px
-      margin-bottom: 1rem
-      margin-top: 1rem
-    p, pre
-      font-size: 18px
-      margin-bottom: 16px
-      line-height: 1.6
-    li
-      font-size: 18px
-      line-height: 1.6
-    blockquote
-      border-left: 4px solid var(--blue-light)
-      margin-left: 0
-      margin-right: 0
-      padding-left: 16px
-      padding-bottom: 0
-      font-style: italic
-      p
-        margin-bottom: 0
-  @media screen and (max-width: 1024px)
-    h5
-      font-size: 24px
-      margin-bottom: 1rem
-      margin-top: 2rem
-    h6
-      font-size: 20px
-      margin-bottom: 1rem
-      margin-top: 1rem
-    p, pre
-      font-size: 18px
-      line-height: 1.4
-      margin-bottom: 16px
-    li
-      font-size: 18px
-      line-height: 1.4
-    blockquote
-      border-left: 4px solid var(--blue-light)
-      margin-left: 0
-      margin-right: 0
-      padding-left: 16px
-      font-style: italic
-
-.ta-c
-  text-align: center
-  @media screen and (max-width: 1024px)
-    &.mleft
-      text-align: left
-.ta-l
-  text-align: left
-.tt-u
-  text-transform: uppercase
-.tt-l
-  text-transform: lowercase
-
-.white
-  color: #FFFFFF
-.blue
-  color: var(--blue-main)
-.grey
-  color: var(--grey-ink)
-.lgrey
-  color: #a7a7a7
-
-.thin
-  font-weight: 400
-
-.thinner
-  font-weight: 300
-
-a
-  &.blank
-    text-decoration: none
-    color: inherit
-  &.blank.linker
-    &:hover
-      text-decoration: underline
-  &.blank.color
-    &:hover
-      color: var(--blue-light)
-  &.heading
-    text-decoration: none
-    color: inherit
-    &:hover
-      text-decoration: underline
-      text-decoration-color: var(--blue-main)
-  &.linked
-    color: var(--blue-main)
-  &.linkedlight
-    color: var(--blue-light)
-  &.bold
-    font-weight: 600
-  &.buttonheading
-    text-decoration: none
-    background: #171717
-    color: #FFFFFF
-    font-size: 14px
-    font-weight: 500
-    padding: 4px 8px
-    transition: 0.1s
-    &:hover
-      background: var(--blue-main)
-  &.button-main
-    background: var(--blue-main)
-    text-decoration: none
-    color: #FFFFFF
-    font-size: 13px
-    padding: 8px 16px
-    width: max-content
-    text-transform: uppercase
-    border-radius: 2px
-    transition: 0.06s
-    &:hover
-      background: var(--blue-dark)
-
-a.container
-  text-decoration: none
-  color: inherit
-
 .label
-  background: #023E7D
-  width: max-content
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 4px 8px
-  border-radius: 4px
-  p, small
-    color: #FFFFFF
+	background: #023E7D
+	width: max-content
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 4px 8px
+	border-radius: 4px
+	p, small
+		color: #FFFFFF
 
 .label2
-  background: var(--blue-light)
-  width: max-content
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 4px 8px
-  border-radius: 4px
+	background: var(--blue-light)
+	width: max-content
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 4px 8px
+	border-radius: 4px
 
 .cat-pill
-  display: inline-flex
-  align-items: center
-  padding: 2px 10px
-  border-radius: 99px
-  background: #ffffff
-  color: var(--blue-main)
-  font-size: 12px
-  font-weight: 500
-  letter-spacing: 0.3px
-  text-transform: capitalize
-  width: max-content
+	display: inline-flex
+	align-items: center
+	padding: 2px 10px
+	border-radius: 99px
+	background: #ffffff
+	color: var(--blue-main)
+	font-size: 12px
+	font-weight: 500
+	letter-spacing: 0.3px
+	text-transform: capitalize
+	width: max-content
 
 .line-clamp-2
-  display: -webkit-box
-  -webkit-line-clamp: 2
-  -webkit-box-orient: vertical
-  overflow: hidden
+	display: -webkit-box
+	-webkit-line-clamp: 2
+	-webkit-box-orient: vertical
+	overflow: hidden
 
 //assorted---------------------------------------------------------------------------------------------------------------------------------
 
 .blogbox
-  background: #f7f7f7
-  padding: 24px
-  border-radius: 4px
+	background: #f7f7f7
+	padding: 24px
+	border-radius: 4px
 
 .blogbox2
-  border: 1px solid #d7d7d7
-  border-radius: 4px
-  padding: 16px
+	border: 1px solid #d7d7d7
+	border-radius: 4px
+	padding: 2rem
+	@media screen and (max-width: 1024px)
+		padding: 1rem
 
 img.blog-image
-  object-fit: cover
-  width: 100%
-  height: 240px
+	object-fit: cover
+	width: 100%
+	height: 240px
 
 .blog-container
-  img
-    object-fit: contain
-    @media screen and (min-width: 1025px)
-      max-height: 400px
-      width: 100%
-    @media screen and (max-width: 1024px)
-      width: 100%
+	img
+		object-fit: contain
+		@media screen and (min-width: 1025px)
+			max-height: 400px
+			width: 100%
+		@media screen and (max-width: 1024px)
+			width: 100%
 
 .embla
-  overflow: hidden
+	overflow: hidden
 
 .embla__viewport
-  overflow: hidden
+	overflow: hidden
 
 .embla__container
-  display: flex
-  touch-action: pan-y pinch-zoom
-  align-items: flex-start
+	display: flex
+	touch-action: pan-y pinch-zoom
+	align-items: flex-start
 
 .embla__slide
-  flex: 0 0 100%
-  min-width: 0
+	flex: 0 0 100%
+	min-width: 0
+
+.box-1
+	border-bottom: 1px solid var(--color-border)
+
+.box-1, .box-2
+	display: flex
+	flex-direction: column
+	row-gap: 2rem
+	@media screen and (min-width: 1025px)
+		padding-top: 3rem
+		padding-bottom: 3rem
+	@media screen and (max-width: 1024px)
+		padding-top: 3rem
+		padding-bottom: 3rem
+
+.primary
+	position: relative
+	text-decoration: none
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 5px
+	background: var(--blue-main)
+	overflow: hidden
+	cursor: pointer
+	border: none
+	width: max-content
+	&::after
+		content: ""
+		width: 0%
+		height: 100%
+		background: #073968
+		position: absolute
+		transition: all 0.4s ease-in-out
+		right: 0
+	&:hover::after
+		right: auto
+		left: 0
+		width: 100%
+	span
+		text-align: center
+		text-decoration: none
+		width: 100%
+		padding: 0.5rem 1rem
+		color: #fff
+		font-size: 0.9rem
+		z-index: 20
+		transition: all 0.3s ease-in-out
+	&:hover span
+		animation: scaleUp 0.3s ease-in-out
+
+@keyframes scaleUp
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(0.95)
+	100%
+		transform: scale(1)
