@@ -2,11 +2,12 @@
 
   import { page } from '$app/stores'
   import Menu from '$lib/icons/menu.svelte'
+  import Search from '$lib/icons/search.svelte'
   import Close from '$lib/icons/close.svelte'
   import Mobilemenu from '$lib/comps/mobilemenu.svelte'
   import Drop1 from '$lib/comps/menudropdown.svelte'
   import Drop2 from '$lib/comps/menudropdown.svelte'
-  import { menuState, toggleMenuState } from '$lib/utils/globalstores'
+  import { menuState, toggleMenuState, toggleSearch, searchState } from '$lib/utils/globalstores'
 
   let iW:number
   let scro:number
@@ -47,10 +48,17 @@
 	<p class="navitem sm tt-u"><a class="blank" href="/anveshi">Anveshi</a></p>
 	<p class="navitem sm tt-u"><a class="blank" href="/blog">Blog</a></p>
 	<p class="navitem sm tt-u"><a class="blank" href="/team">Team</a></p>
-	<p class="navitem sm tt-u bold"><a class="blank" href="/search">Search</a></p>
+	<button class="blank" on:click={toggleSearch}>
+		<Search/>
+	</button>
   </div>
   {:else}
 	<div class="row ycenter cgap16">
+		{#if !$menuState}
+		<button class="blank" on:click={toggleSearch}>
+			<Search/>
+		</button>
+		{/if}
 	  <button class="blank" on:click={toggleMenuState}>
 		{#if $menuState === true}
 		  <Close/>
@@ -91,8 +99,6 @@ p.navitem
 	a.blank
 		&:hover
 			color: var(--blue-main)
-	&.bold
-		font-weight: 700
 
 p.navinitem
 	font-weight: 500

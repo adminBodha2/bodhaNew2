@@ -6,12 +6,15 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { searchState, toggleSearch } from '$lib/utils/globalstores'
 	import '$lib/styles/globals.sass';
 	import '$lib/styles/tokens.sass';
+	import '$lib/styles/vars.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/icons.css';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
+	import SearchModal from '$lib/comps/searchmodal.svelte'
 
 	let { children } = $props();
 	let sY = $state(0);
@@ -51,6 +54,7 @@
 <footer class="column">
 	<Bottom />
 </footer>
+<SearchModal/>
 
 <style lang="sass">
 
