@@ -33,7 +33,7 @@
 ></Head>
 
 <Container>
-	<div class="box-nn">
+	<div class="box-nn-b">
 		<div class="grid two rgap32 cgap48">
 			<div class="column rgap24 ycenter thisdown">
 				<div class="label"><small class="tt-u">Bodha Courses</small></div>
@@ -315,6 +315,10 @@
 
 <style lang="sass">
 
+.box-nn-b
+	.grid.two
+		height: 100%
+
 .box-3
 	border: 1px solid var(--color-border)
 	padding-left: 4rem
@@ -344,7 +348,7 @@ img.key
 	@media screen and (max-width: 1024px)
 		height: 300px
 
-.box-nn
+.box-nn-b
 	.grid.two
 		height: 100%
 		@media screen and (max-width: 1024px)

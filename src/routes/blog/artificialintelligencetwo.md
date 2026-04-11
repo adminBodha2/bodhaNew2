@@ -20,7 +20,7 @@ Part 1 was an exegesis of what really is meant by notions of reality, nature, in
 
 In this- the 2nd and concluding part of the series, we describe the current situation and detail the path ahead. To do so, we must cover a few more fundamental definitions. Having understood the landscape of reality in Part 1, we now turn to the reality of “life” and “consciousness.”
 
-#### Paśu, Piśāca, Jīva, Ātman
+## Paśu, Piśāca, Jīva, Ātman
 
 **1- Paśu**,
 
@@ -44,7 +44,7 @@ These varied endowments of life-forms in reality- breathing, boundage, rootednes
 
 These terms can now be wrapped up under a thought experiment.
 
-#### A Thought Experiment
+## A Thought Experiment
 
 Imagine the house lizard, which despite our personal fears or distastes is a harmless reptile that in fact does us good by keeping our homes free of insects. But imagine this lizard now increased tenfold in size, and suddenly the danger to us is very real and present. It is the same danger that faces us on encounter with an alligator, or a snake protecting itself/its eggs.  
 
@@ -64,7 +64,7 @@ If this isn’t unsettling enough, consider the fact that consensus is we are pa
 
 What then is to be done? Cynicism and hopelessness are not our way, of course, nor a desperate cope. A positive, well-equipped, thoroughly-informed and rigorous strategy is demanded. So first, we may travel through the good tidings.
 
-#### The Good
+## The Good
 
 Autodidacts, builders and developers have never had it so good. Our own current website has been made possible entirely by chatGPT’s ability to generate code to technical specifications. The same time last year, we were managing a Wordpress website increasingly bloated with all sorts of plugins and templates. **The current website is coded from the ground-up on the Sveltekit framework, stored at Github, and deployed via Vercel. None of these are competencies we would have possessed without chatGPT.**  
 
@@ -90,7 +90,7 @@ Already the ‘other side’ has a head-start. Remember the example of Part 1 in
 
 All this is well and good, you might be thinking. So what do we do then, as individuals and as communities/ groups/ organizations?
 
-#### The Deed and the Danger
+## The Deed and the Danger
 
 First, the individual. As shown in the previous section, learning and competence-development, or even sheer capability-upgrade, is now vividly available to anyone willing. A rainbow-spectrum of projects, code-development, design-needs, copywriting briefs, travel plans and much more is now available to simple, precisely worded prompts. Visual imagery of all kinds is possible, again to only the easiest of “prompt-engineering” basics.  
 
@@ -104,7 +104,7 @@ For the community- us as a culture, as a religion, as a nation and as a civiliza
 
 New vectors of attack for nation, sovereignty and democratic processes will open up, if they haven’t already. Here we must as a citizenry make real the demand for a commensurately transparent, articulate and comprehensive security framework. As these technologies begin entering classrooms, exit polls, census and surveys, and eventually our online avatars, our microwaves and our credit-rating platforms, it will be on us to either coast along in the wave or to effect as much brakes and discussion at each step as we can.  
 
-#### The Takeaway
+## The Takeaway
 
 We must remember that in the history of capitalist enterprise, no industry has willingly, proactively or voluntarily disclaimed its own risks to individuals or communities. Big Oil did not do it, nor Big Sugar, and neither Big Tobacco. Big Tech has blitzed past the gate altogether, “disruptive” technology becoming a good thing a priori.  
 

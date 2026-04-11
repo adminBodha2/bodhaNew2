@@ -221,7 +221,7 @@
 
 .features
 	border-top: 1px solid var(--color-border)
-	padding-top: 1rem
+	padding-top: 2rem
 
 h1.page-hero
 	@media screen and (min-width: 1025px)

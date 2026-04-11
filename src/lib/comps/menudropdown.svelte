@@ -28,7 +28,7 @@
 .dropdown
   position: relative
   display: inline-block
-  z-index: 999
+  z-index: 1999
 
 .trigger
   cursor: pointer

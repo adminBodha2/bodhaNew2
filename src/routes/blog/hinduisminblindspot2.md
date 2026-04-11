@@ -35,7 +35,7 @@ He clearly knows enough to make these references and rightfully recruit them in 
 
 Of the above, the last point is a glaring omission prevalent to the entire psychedelic subculture/phenomenon. **An entire experience that quite tangibly puts one into encounter with entities of all kinds, in dimensions fundamentally real and yet non-material, seems to steadfastly avoid any reference to the one continuing belief system in the world that would actually platform such an experience with a detailed ontology**. And this instance of Hinduism in the blind spot brings us to our final example.
 
-#### The Almost Ṛṣi - Terence McKenna
+## The Almost Ṛṣi - Terence McKenna
 
 Why do we speak of McKenna, legendary and late psychonaut, as an _almost ṛṣi_? Like the ṛṣis of old, he did in fact touch some surface of the pure truth, even if barely a scratch. What he did is the literal description of a ṛṣi - pierce through the veil of ṛta and perceive the satya beyond - even if a speck of it. McKenna's latter-life ramblings, and a near-certain surrender to the deep state notwithstanding, for the briefest of moments in time he bore true witness. And yet only almost, because not to the enabling soil was he born. He came in a different culture, one both then and now being an inversion of everything true and real. No true ṛṣi could germinate in that soiled a soil, but some almost could - and McKenna was one of them.
 
@@ -51,7 +51,7 @@ With McKenna we are met with a case of Hinduism in the blind spot so glaring it 
 
 ##### But if it is not racism, bigotry, lack of curiosity, chauvinism, Hinduphobia or any such thing that we blame, and if it is not the people involved in specific that we criticize, then what really does this blind spot reveal to us?
 
-#### On Non-Translatables, Turned Gazes and Telling One's Own Story
+## On Non-Translatables, Turned Gazes and Telling One's Own Story
 
 For one, the blind spot vindicates the suggestion that fundamental Hindu concepts are non-translatable - famously articulated by Shri Rajiv Malhotra. One may replace a ‘spinal conduit' with a  ‘suśumnā nāḍī' or a ‘life-force' with a ‘prāṇa,' and vice-versa. But a natural grounding in Hindu ontology is needed to actually understand and anticipate how Hinduism possesses an organic taxonomy for many of the ideas at the edge of modern understanding on reality, consciousness, language etc.
 

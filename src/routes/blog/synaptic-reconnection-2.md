@@ -15,7 +15,7 @@ words: "3066"
 
 ...continued from [Part 1](/blog/synaptic-reconnection-1).
 
-#### Ontology, Epistemology, Teleology
+## Ontology, Epistemology, Teleology
 There is a fair bit of cognitive fatigue around these words<sup>1</sup>, but they denote things of root importance to how we make sense of the world. They act upon us even without our knowledge or conscious perception, and it can be said that they contain the ‘metadata’ to reality. Simply put, they refer to What Exists, How we Know it Exists, and Why it Exists (or What For). These aren’t things most of us spend our time worrying too much about. After all, things do exist, we seem to have ways of knowing this to certitudes, and as for why- explanations galore and we keep chugging along anyway.
 
 But quite like there are several biological processes constantly rolling inside us, below the level of our conscious perception and without our deliberation, our neurology draws from an accumulated base of impressions, biases, assumptions, acculturations and more that we are not always aware of. This is why lists abound for things like ‘logical fallacies’ and ‘unconscious biases.’ The metadata to meaning making is therefore of supreme salience in understanding the human mind– both as a discrete unit and as a grouping of culture. And to investigate this metadata is a uniquely human privilege. We are the only species (that we know of) that can look into the mirror of consciousness and recognize our own reflection staring back at us. And across time and place, when humans have done so they have hit upon an almost inexplicable intuition.
@@ -67,7 +67,7 @@ It should not unsettle us overmuch if the point to all this isn’t quite appare
 
 First we do have to traverse technical terrain once again- some basic working definitions we need to internalize. It does get steep, but the ride isn’t a bumpy one:
 
-#### Ontical, Ontological, Onomatopoeic
+## Ontical, Ontological, Onomatopoeic
 Earlier we spoke of ontical and ontological as two separate categories- known as the “ontological difference.” We lean on side of reductiveness, but in any case we speak of these not so much to understand them as Heidegger meant it but to use them as supplementary scaffolding in our own build.
 
 Ontic describes what is there, as opposed to the nature or properties of that being. For Heidegger, “ontical” signifies concrete, specific realities, whereas “ontological” signifies deeper underlying structures of reality.
@@ -91,7 +91,7 @@ What we are seeing between the Vaidika story and the linguistic derivation is a 
 
 What we are trying to establish here is that semantic onomatopoeia gives evidence to a thing’s ontological nature- it hints that the thing is a Being for itself- possessed of self-awareness, and not merely an ontical form. The onomatopoeia evidenced by Indian civilization asserts that it is ontological, not ontical- that Bhāratīya sāṃskṛtika cetanā is a real thing (thus making itihāsa, as Adluri describes it, the cintana pingback.) The civilization is self-aware, has agency, and its consciousness impacts its constituents- be they colonized or not. And this onomatopoeia gives us an immensely helpful ramp- we can follow the consonance ripples as if a trail of breadcrumbs and reconnect to the civilizational mind. The vyaṣṭi reintegrating with the samaṣṭi. A ghar-vāaapasi of a different kind. Let us do this now through ucchvas– also called an ontic bloom-a gradual mushrooming of meaning-realization (or consonance dawning). We do this for a very apparent aspect of the schema’s design- its tethering to ṛ/ ऋ in all the category names of L1 and L2. This is bootstrapping through language in action.
 
-#### The Ontic Bloom of ऋ
+## The Ontic Bloom of ऋ
 Some etymology: Pāṇini defined the root √ṛ as gatau and gatiprāpaṇa- motion/ movement and attainment of motion.
 
 Ṛta is derived from this by affixation or pratyaya- ṛ+kta (ऋ + क्त). This pratyaya denotes a sense of the passive past tense. Ṛta thus means “was put into motion” or “has been done,” (where done refers to the action denoted by the verb, in this case movement/motion.)
@@ -104,19 +104,19 @@ Thus do we say that it is not existence- which implies the coming into existence
 
 But then, at some point, ṛ + kta has been done -> movement has been attained– gatiprāpaṇayoh comes into being. The cosmic bubble which will contain things, or ontical forms. And so this bubble is called (ṛ+kta) ṛta. This explains the design of our schema. We shape it around ṛta since it denotes the pure, closest branching of sat. It is nothing but motion, rhythm. It is a-sat, yes, but it is still true, right, proper, efficient. It is a consonant reflected shard of reality, and an elaborate trail of ontic blooming is now possible for us:
 
-#### Sat and Bhava
+## Sat and Bhava
 
 1. The ontologically complete interpretation of ṛ + kta is that motion has been attained by “Being,” by “Sat.” This is different to saying that Sat has come into existence.  
 2. To come into existence is understood in Sanskrit as bhav– a cognacy to the modern “be” in English. In turn this gives us the word bhāva- expression, form or manner. The phenomenological and experience world is through bhav, through ontical forms coming into existence.  
 3. Bhav proceeds at its emergent pace or happening, but ṛta continues- it is both gatiprāpaṇayoḥ and also gatau- the attainment of motion and also movement itself.
 
-#### Ṛta, Dharma, Ārya
+## Ṛta, Dharma, Ārya
 
 The Indian imperative has been to be in flow and consonance with this motion, ie.- dharma is the endeavor to conduct life and society in consonance with ṛta.
 
 Another pratyaya to ṛ evokes the idea of “wanting to do” the action denoted by the verb, called the ṇyat pratyaya. Ṛ + ṇyat (ऋ + ण्यत्) gives us the word ārya – आर्य, ie. desiring gatiprāpaṇa- wishing to be in step with the rhythm of natural motion. All the expert philology and comparative linguistics of decades has not cared to factor such things in its imagined definitions of ‘Aryan.’ Or it has deliberately not done so. Ignorance or malice- we leave this open.
 
-#### The Ride is not Free
+## The Ride is not Free
 
 To be in motion, ie. to exist in ṛta, accumulates entropic debt. In the modern world we understand this through notions like sustainability, ‘give-back-to-community’ and carbon credit. The ancient Indians understood this as ṛṇa, or essential obligation.
 
@@ -134,7 +134,7 @@ To find a tethering within ṛta, a purpose or aim that situates it specifically
 
 The ontic bloom of ṛ connects us to the civilizational imperative, the harmony and consonance inherent to the design of dharma. Another way to put it is that what ṛta is to Existing, dharma is to Existence. Ṛta is flow, motion, movement in the ontological Sat, dharma is flow, tradition, sustenance in the ontical Bhav. This is why our aspiration is to be Āryas, why we consider rivers- ever in motion- to be sacred, and why flow- pravāha- is valued in sanātana dharma. In this light let us now examine the Ārtava and Ātmya layers again, this time with special focus on the civilizational thinking they reconnect us to. Each layer can yield ontic blooms like ṛ did.
 
-#### Ārtava and Ātmya Layers Revisited
+## Ārtava and Ātmya Layers Revisited
 These are maintained as a separate layer to reaffirm that ātman is an ontological form within the ontical bubble of ṛta. This is the great synthesis of the “ontological difference”. ‘That which breathes on its own,’ or ātman, is akin to that which exists on its own.
 
 Breathing is Existing, you and I are ontological shards of Sat/Brahman, experiencing motion/temporality.

@@ -38,7 +38,7 @@ words: "1023"
 
 This is the second article in the Navadurgā series, describing the second of the Navadurgā Devīs who is worshiped on the dvitīya tithī, Devī Brahmacāriṇī. Part 1 on Śailaputrī Devī can be accessed [at the article here](/blog/shailaputri).
 
-#### Dvitīyaṃ Brahmacāriṇī
+## Dvitīyaṃ Brahmacāriṇī
 
 >दधाना करपद्माभ्याम्  
 >अक्षमाला कमण्डलू।  
@@ -101,7 +101,7 @@ May we attain the wisdom, simplicity, emotional balance, and creativity this dvi
 
 Next - [Candraghaṇṭā | Navadurgā - Part 3](/blog/chandraghanta)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

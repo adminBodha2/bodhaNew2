@@ -45,7 +45,7 @@ We point to things and name them, very happy for the intelligence of doing so. S
 
 But the real story was not in his title, but his narrative. For he intuited that reality is made, at fundamental level, of Ideas. Of Memes. The story is on the surface in the language of genetics, but beneath that is the language of Memetics. So it’s not so much the story but the metastory that matters. And the Standard Model of Reality is but one metastory among many. The Selfish Gene, one narrative among many. The Ape that Walks is defined most fundamentally by its metastories. The metastories that descend to it from Culture create its present, and those it bequeaths on create the future. They create the design of human life, and we are here to consider a different metastory. So we retrace our steps to the beginning, to that Bang that was Big. And we start afresh:
 
-#### The Dhārmika Gene
+## The Dhārmika Gene
 
 There was no beginning. There was no end. There just was. Is-ness. We know it as Sat/सत् . Everything was already contained within, like all information on how to spread, how to inflate, how to bind, was already present in the womb that birthed the Bang. Like the seed that knows what kind of tree to become. Like the adult male who knows to begin balding at around the same age his father did. Thus we call it the Golden Womb- gold being a qualia of superlation. Hiraṇyagarbha. Where did this Hiraṇyagarbha reside? What was above it? What was below it? The Ṛgveda concedes that we do not know. It isn’t just Science that admits to the insurmountable gap of causal knowledge.
 

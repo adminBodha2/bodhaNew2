@@ -77,7 +77,7 @@ On certain days, at certain places, certain scriptures are read where these thre
 
 It is these festivals, temples and scriptures which keep the Hindu alive in public space. The Hindu responsibility is to recognize this and transfer this festive fervour to the next generation. For this is the importance of festivals, temples, and scriptures, in Hindu life.
 
-#### Endnotes:
+## Endnotes:
 
 - Swarup, Ram. The Word as Revelation.
 

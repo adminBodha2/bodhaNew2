@@ -14,7 +14,7 @@ words: "5777"
 
 This is part 2 of our detailer on the out-of-India model of Indo-European linguistic origins and dispersals. In this section we examine textual evidence on the matter. Part 1 can be read [here](/blog/bharatiya-wanderlust-1).
 
-#### Textual  
+## Textual  
 
 Fortunately for any researcher, textual analysis of the AIT problem suffices from the reading of a single book- the Ṛgveda. Unfortunately however, this is neither a book in a true sense nor in a language readily understandable. Further it is highly encoded, in that every word carries multiple meanings and entire verses can be interpreted from different schools of thought. For example, at one level the devas of Ṛgveda are personifications of natural phenomenon. This yields an interpretation of Ṛgvedic hymns as appeasements to the gods of nature. In another interpretation, devas are psychological phenomenon such that the same hymns are now internal calls to action, a drive to harness mental powers and direct them towards intended actions. Add to this the supremely vexing problem of Saṃskṛta itself. It has no alphabet case, no tangible way for us to differentiate between proper nouns, common nouns and adjectives. Take the word daurgaha. Daurgaha can be the name of a person, the name of a horse, a patronymic and also the property of being fast like a horse. Which meaning applies in which hymn, which interpretation to use for what verse?  
 
@@ -105,7 +105,7 @@ TB’s work and Talageri’s are broadly in agreement with each other, though bo
 
 This concludes part 2 of our detailer on the out-of-India model of Indo-European linguistic origins and dispersals. In the [next part](/blog/bharatiya-wanderlust-3) we will examine archaeological and genetic evidence.
 
-###### References
+### References
 
 1. Cavalli-Sforza, LL et al. The History and Geography of Human Genes. Princeton University Press.
 2. van Driem, G. The Prehistoric Peopling of Southeast Asia.

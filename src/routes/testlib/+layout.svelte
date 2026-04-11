@@ -105,7 +105,7 @@
   button
     background: var(--blue-dark)
     color: white
-    font-family: var(--font-sans)
+    font-family: 'Google Sans Flex', sans-serif
     font-size: 12px
     text-transform: uppercase
     padding: 6px 12px

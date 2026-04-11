@@ -80,7 +80,7 @@ h2
 		margin-top: 0.5rem
 
 pre
-	font-family: var(--font-sans)
+	font-family: 'Google Sans Flex', sans-serif
 
 .sider
 	height: 100%

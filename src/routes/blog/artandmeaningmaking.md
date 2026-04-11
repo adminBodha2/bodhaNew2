@@ -13,7 +13,7 @@ excerpt: There is a reason that as a culture we were more interested in ‘what 
 words: "2126"
 ---
 
-#### Meaning Making in Culture
+## Meaning Making in Culture
 
 Of all the functions that Culture provides us, one of the greatest is the meaning making process. Man’s quest for meaning in life is eternal and it has been the primary function of Culture to provide meaning in individual and social life. All tradition and dharma affirms that life is not random; it has meaning. That something exists instead of nothing; that there is a cosmos, intelligent life, and a species capable of reflecting upon its own existence, is not a random occurrence.
 
@@ -37,7 +37,7 @@ Meaning infuses all life: right from birth. It is derived from the identities th
 
 Birth, death, life, dharma, art, everything is full of meaning. But before we come to the role of art in the meaning-making process it is necessary to investigate whether the meaning-making process in itself is just necessary or also a sufficient condition.
 
-#### The Anchor of Dharma
+## The Anchor of Dharma
 
 The meaning-making process is a necessary but not a sufficient condition. A lot of crazy cults are meaningful to their followers and yet they are at the end of the day – crazy cults and nothing more. Communism ‘made sense’ to a lot of people who saw it with a hope that it would relieve them from the miserable existence that a materialistic life threw them into. Fundamentalist religious cults associated with historical Abrahamic religions also tend to give great meanings to their adherents. The inquisitors who burned ‘heathens’ and ‘witches’ to death also had a certain meaning in life. Such meaning is not only not sufficient, but inherently dangerous.
 
@@ -47,7 +47,7 @@ In Sanātana ethos the ultimate goal is always mokṣa. This does not mean that 
 
 The tether of mokṣa prevents the degeneration of the meaning-making process into internally consistent but ultimately false cults. This is the universal, the mārgīya element of the process. When the ultimate principle is mokṣa, the path never wavers too far from the goal. While Mārga provides the principle, Deśa provides the material propos. The deśīya element takes care that the saṃsāra doesn’t get lost or the quest doesn’t become insipid in the pursuit of mokṣa. It makes sure that the meaning also makes our lives beautiful and enjoyable. And art is the vāhana, the vehicle of the deśīya element. Art is how we see meaning even in the banal and the mundane and art is how we see beauty.
 
-#### Art as a Meaning Making Process
+## Art as a Meaning Making Process
 
 Art is something which lends naturally to this process. Through symbols, metaphors, idioms and anecdotes, the ordinary is rendered extra-ordinary, bearing great meaning. Great truths, secrets and mysteries of life are made accessible by great seers and artists by reflecting them in the world around us. Bearing the aspect of the divine, something more than its material aspects suggest, everything becomes elevated and meaningful. As the Dasarūpa states:
 
@@ -77,7 +77,7 @@ There is a reason that as a culture we were more interested in ‘what happens�
 
 ##### Those symbols, metaphors and analogies are bridges to the divine and art is the process which can still help individuals to recreate a world full of meaning and satisfaction; which can help them out of moral and ethical dilemmas of life; which can help them overcome meaningless and aimlessness. Art is the redemptive force of culture
 
-#### Endnotes
+## Endnotes
 
 1. Eiseley, Loren. The Firmament of Time. Bison Books, 1999.
 2. R. Lipsey, (ed.), Coomaraswamy. Selected Papers, Volume 1. Princeton University Press, 1977.

@@ -29,7 +29,7 @@ On this note, there is a wise dictum by Śrī Nisargadatta Maharāja:
 
 That is to say, anything stretched too far becomes the exact opposite. Gandhian non-violence leads to genocide of Hindus. Buddhist ahimsa led to multiple genocides all over Buddhist countries. Western hypersensitivity towards war will result in the West being taken over by barbarians - whose lifestyle is the permanent state of war, total war, jihad.  
 
-#### Dharma, always, is balance
+## Dharma, always, is balance
 
 Culture is protected by men who hold the sword in one hand and paintbrush in the other. It is defended by those who can sing paeans to the beauty of a spring flower blooming in court, and the next day cut off heads and limbs of enemies in the battlefield. Culture is preserved also by those women who can suckle newborns with one hand and wield a sword with the other. This is why Goddess Kālī would seem bībhatsa only to someone who sees Her through a rudimentary and binary lens. She is beautiful because she is ferocious - and that is how almost all our gods are in different ways. Our temples depict them with such diverse āyudhas in their many hands. In one hand a book, and another a sword. Even Sarasvatī Devī has a form known as Mātaṅgī who is ferocious and warlike.  
 
@@ -59,7 +59,7 @@ As the Japanese saying goes:
 
 Which brings us to a curious and concerning condition -  
 
-#### The Saruman Syndrome
+## The Saruman Syndrome
 
 In The Lord of the Rings, a good wizard named Saruman studies the ways of the Other, the evil king Sauron. Unfortunately, Saruman becomes so fascinated with the other side that _he eventually becomes one of them_. **This is the Saruman Syndrome**.  
 

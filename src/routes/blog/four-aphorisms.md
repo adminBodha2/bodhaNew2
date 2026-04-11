@@ -34,7 +34,7 @@ Among known life forms, the emergent phenomenon finds maximum expression in homo
 
 This is how over a long course of time (itihāsa) a civilization (Bhārata) has come into consciousness (dharma). And this emergence is along four principles, or sūtras. We call these the Caturasūtrāḥ, or Four Aphorisms, and internalizing these is an essential prerequisite to understanding Bhāratīya itihāsa, as the civilization experienced it.
 
-#### 1
+## 1
 
 <h5>यथा स्मृति: चैतन्यं चैतन्य: जीवं च।<br>तथा इतिहास: संस्कृतिं संस्कृति: समूहं च।।<br>
 yathā smṛtiḥ caitanyam caitanyaḥ jīvam ca<br>tathā itihāsaḥ saṃskṛtim saṃskṛtiḥ samūham ca</h5>
@@ -49,7 +49,7 @@ Profound realizations dawn with even this single principle internalized. Broken 
 
 We use the word samūha for collective/group to evoke phonetic kinship with saṃskṛti- it is our collective kṛti. And just like consciousness, though phenomenological, it is a unique felt-experience. Decolonisation is shedding the acquired syntactic-semiotic-semantic memeplex of teṣāṃkṛti – their kṛti- or a foreign civilization.
 
-#### 2
+## 2
 
 <h5>यथा चैतन्य: उभावस्ति कर्ता कृत्यं स्मृते:।<br>तथा संस्कृति: उभावस्ति कर्ता कृत्यं इतिहासस्य।।<br>
 yathā caitanyaḥ ubhāvasti kartā kṛtyaṃ smṛteḥ<br>tathā saṃskṛtiḥ ubhāvasti kartā kṛtyaṃ itihāsasya</h5>
@@ -64,7 +64,7 @@ Itihāsa is the “mempool” that Indian civilization is in constant conversati
 
 Now, when our access to and traditional engagements with the mempool are broken, our civilization moves forward aimlessly, pulled in the sway of “development, progress and technology” that may land a future Bezos or Musk a lordship over Asteroid X1A21, but we have no vision of where it may land us. What Adluri writes above is in fact the very process these principles highlight- the emergence of self-consciousness through information being processed in complex ways, over a long period of time. When a civilization is in conversation with its past, it generates learnings and ethicality. When a civilization approaches it only as an academic discipline, it may remember the exact date when Columbus landed on a new world, but is bound to repeat the same evils again.
 
-#### 3
+## 3
 
 <h5>यथा जीव: युक्त:भवति स्वधर्म: ऋतं सचेतं स्मृत्या।<br>तथा संस्कृति: युक्त:भवति सामान्यधर्म: ऋतं सचेतं इतिहासेन।।<br>
 yathā jīvaḥ yuktaḥbhavati svadharmaṛtaṃ sacetaṃ smṛtyā<br>tathā saṃskṛtiḥ yuktaḥbhavati sāmānyadharmaṛtam sacetaṃ itihāsena</h5>
@@ -75,7 +75,7 @@ This sūtra highlights the parallelism between individual and collective- vyaṣ
 
 If our date of birth wasn’t recorded by our parents, would we even know it? And if we didn’t know it, would it negate our felt experience and mean that we were never born? If these questions point to the absurd, we must relate the same for civilization as well. Thus is dharma called sanātana, thus are our earliest ṛṣis called mānasaputras, and thus is Brahmā himself known as the svayambhu. We care more for the lessons our ancestors embedded into lore, for the things our history can teach us, than we do for the intricacies of historia. For both individual and collective, the purpose of itihāsa is a rooting to dharma, it is the very means to self-conscious reflection.
 
-#### 4
+## 4
 
 <h5>यथा चैतन्य: युक्ते ऋतं स्वपूर्णमण्डलयति कश्चितवस्थायाम्।<br>तथा संस्कृति: युक्ते ऋतं संपूर्णमण्डलयति कश्चित्वस्थायाम्।।<br>
 yathā caitanyaḥ yukte ṛtaṃ svapūrṇamaṇḍalayati kaścitavasthāyām<br>tathā saṃskṛtiḥ yukte ṛtam sampūrṇamaṇḍalayati kaścitavasthāyām</h5>

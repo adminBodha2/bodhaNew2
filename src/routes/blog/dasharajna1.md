@@ -31,7 +31,7 @@ In this essay we examine the above and other claims around the Dāśarājña thr
 
 The study uses 5 translations of the Ṛgveda. The base is the Jamison-Brereton (henceforth, JB) version in English, which is supplemented by Wilson and Griffith’s translations. Geldner’s German translation and Trivedi’s Hindi translation are also used. All of this is done under a specific paradigm for Indo-European (IE) dispersals and the Mature Harappan Civilisation, as established by Talageri and Tonoyan-Belyayev (henceforth, TB). The exercise will reveal that the Dāśarājña sūktas can be read as an account of political consolidation of Mature Harappan, and of IE dispersals out-of-India theory (OIT, where India was the PIE homeland).
 
-#### A - Framework 1 : Mature Harappan and IE Dispersals
+## A - Framework 1 : Mature Harappan and IE Dispersals
 
 The proto-Indo-European (PIE) homeland question is a scholastic field too vast to succinctly discuss here. The overall landscape is well covered by Mallory-Adams, and the Indian view of this is given decent consideration by Bryant. It bears reiteration that dogmatic (or ignorant) dismissals of the PIE question are untenable. Whether one appeals to a wave-theory of language evolution, or to the archaic nature of Saṃskṛtam, the linguistically validated existence of a hypothetical PIE is taken as established in this essay. A few periodizations are important in this context, beginning with Kenoyer’s periods of the Indus-Sarasvatī Civilization (ISC):
 
@@ -81,7 +81,7 @@ Against this, the combined works of Talageri, TB, Kazanas, Semenenko and Elst ma
 
 **2. 2500/2000 BC: Eastern IE languages leave the homeland.** They have satem characteristics, but still no chariots. Witzel notes the Lithuanian ratas to mean wheel, circle. In OIT, this is when proto-forms of Armenian, Greek, Albanian and Iranian leave the homeland in 2600-1900 BC, during the Mature Harappan. This is TB’s classic Ṛg Vedic period, of Indra-Agni-Soma. Talageri asserts that “_the recorded evidence of the Ṛg Veda has the last 5 IE branches in Punjab, on the Paruṣṇī’s banks._” This is predicated on a reading of the Dāśarājña sūktas, but Witzel rejects Talageri’s conclusions even as he too reads a battle of ten kings.
 
-#### B - Framework 2 : Chronology of Indian Lineages
+## B - Framework 2 : Chronology of Indian Lineages
 
 There are many debates on whether to consider any historicity to the Purāṇas at all. Witzel favors discarding their authority altogether, and whether this is done or not, the Ṛgveda must be taken as a more reliable timestamp. But the baby need not be thrown out with the bath water, and the Purāṇas are surprisingly in note with archaeological, linguistic or other evidence—provided they are read a certain way.
 
@@ -95,7 +95,7 @@ What’s left is a date for the Mahābhārata. Archaeoastronomical readings that
 
 Subhash Kak points to the actual options—2100, 1900 or 1500 BC. Benedetti favors 1500 BC, which yields 2150 BC as the era of Sudās. A date of 1900 BC places Sudās in 2550 BC. In other words, he falls squarely in 1- the Mature Harappan, and 2- the wave of Eastern IE dispersals.
 
-#### C - The Ṛgveda and Maṇḍala 7
+## C - The Ṛgveda and Maṇḍala 7
 
 The Ṛgveda is a collection of 10 books, or Maṇḍalas, which each contain several hymns, or sūktas, that are made of verses, or mantras. To Indian tradition, the Ṛgvedic poets were not mantra-kārtas but mantra-dārṣṭas. This means they did not create or compose the sūktas, but perceived them through their evolved dṛṣṭi. This is why the Vedas are considered apauruṣeya—authorless, and anādi—eternal. Comparable situations are the law of gravitation, which existed before Newton described it, and the continent of North America, which existed long before Columbus discovered it.
 
@@ -119,7 +119,7 @@ The two frameworks detailed above- 1. Mature Harappan and IE Dispersals, and 2. 
 
 With this equation established, the Dāśarājña data can now be examined. This shall be taken up in [Part 2](/blog/dasharajna2).
 
-#### References:
+## References:
 
 1. Witzel, M. [Rig Vedic History: Poets, Chieftains and Polities](https://www.academia.edu/713988/R_gvedic_history_poets_chieftains_and_polities)
 2. Jamison, SW and Brereton JP. The Rigveda (in English). Oxford University Press

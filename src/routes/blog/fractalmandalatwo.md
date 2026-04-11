@@ -26,7 +26,7 @@ But if the dharma-vṛkṣa is strong, if the leaves and branches are well-roote
 
 Thus develops a mesh network of ideas, synthesized over many millennia, layers built atop layers into a fractal maṇḍala, and decentralized among the collective. It is called Dharma. It is the Bhāratīya Ethos. But more problems await the civilizational trajectory.
 
-#### 3: The Fundamental Problem of Conflicting Ethos
+## 3: The Fundamental Problem of Conflicting Ethos
 Petty religions, ever anxious and insecure, their pettiness always causing internal rifts, do not rise above the level of us-vs.-them. They remain grappling with the fundamental problem of multiple tribes, their solutions no more sophisticated than wiping out those that are not “us.” But viewed from the level of civilizational trajectory, once multiple tribes have united under a common ethos, they must then face the ethos of other tribal collectives. It is easy to call this a problem of conflicting religions, but in reality it is the problem of conflicting dharmas- or rather of dharma vs. adharma.
 
 Indian civilizational memory of course has grappled with this problem many times over. It began with Hiraṇyakaśipu, who could not accept the dharma of his son and resorted to adharma to impose his will. It happened again with Veṇa, who grew vain and oppressed his people. But these were individual jīvas straying from dharma, and even the great Deva – Asura rivalry was not one of conflicting ethos. It is relatively convenient when dharma is stable, and there are the odd deviations from it now and then. It is vastly more complicated when the other side plays with a different dharma, or rather without dharma at all.
@@ -57,7 +57,7 @@ The Śukras and Bṛhaspatis, the Bhṛgus and Āṅgirasas, the fire-bringers a
 
 What Vasiṣṭha did for the Vedic Indians was no different to what Śukra did for the Samudra Manthan-ing Devas and Asuras. But to do it all over again, at a higher level of civilization, is to embed fractal resilience. We call this resilience because, given this consolidation, when civilization was unsettled again- this time by geology itself- it gave birth to one of the greatest Indians of all time. But before we reach him, let us understand the next fundamental problem in civilizational trajectory.
 
-#### 4: The Fundamental Problem of Individual Well-being
+## 4: The Fundamental Problem of Individual Well-being
 Imagine a world that has suitably resolved all the problems we have listed above. Does that create a utopia then? Is civilizational trajectory over, the end of history? Western civilization would have us believe so. In its narrative, it has resolved all previous problems and history is over. The future only consists of those joining this civilizational consensus, or those losing their culture to European museums which descendants will pay handsomely to visit. But when the jana gets resolved with such hyper-chauvinistic focus, it is the jīva that suffers.
 
 Take Korea, a civilization that has taken two opposing routes on the trajectory, and consider the jīva not in North but South Korea. This jīva lives in great economic and infrastructural prosperity. He/she lives under a healthy, functioning democracy. The jīva can participate in global discourse through mind-bogglingly high internet speeds, and the jīva can benefit from economic prosperity and travel to anywhere in the world he/she wants to. But Seoul, the capital of South Korea, also has one of the world’s highest depression and suicide rates.
@@ -110,7 +110,7 @@ We learnt of the centuries of conflict preceding the high civilization of Mature
 
 Each a maṇḍala in itself. Each a whole, yet each forming one pearl in a string, the string itself a maṇḍala. A fractal at every layer, all re-iterating the same truth over and over again, from different angles, as if we are in a civilizational psychedelic trip of cosmic import. And yet, the trajectory is not complete. The maṇḍala is woven, the fractals are embedded. But what is the super-structure? What will mesh dharma, artha, kāma and mokṣa into a stable whole that can become sanātana- or eternal?
 
-#### 5: The Fundamental Problem of Stewarding it All
+## 5: The Fundamental Problem of Stewarding it All
 What is capitalism? What is communism? What is an open market? What is a welfare state? What are taxes? What is Amazon? What is Elon Musk’s soon-to-come Starlink Satellite Internet? What is a patent, or a copyright? What is the Bilderberg meeting? What is a glass-ceiling, and what is nepotism?
 
 You see, what a civilization does best is generate collective wealth. Not only of the physical kind, but also of the intellectual and aesthetic kinds. And if/when the preceding four fundamental problems are solved, civilization still faces the ultimate problem. What is to be done with this wealth? How is it to be managed? Who should own it? What checks to embed into the system?
@@ -143,7 +143,7 @@ The Indian civilization has a deep well to draw from, one that truly runs back t
 
 ##### It is a Fractal Maṇḍala. It is Home.
 
-#### The Fractal Maṇḍala
+## The Fractal Maṇḍala
 Zoom in to the level of the Ṛgveda, where experts will tell us we find semi-nomadic pastoralists composing hymns to the ‘Gods of Natural Phenomena.’ When they want rain, they pray to Indra, the God of Thunder. When they conduct a ritual, they pray to Agni, the God of Fire. For every need they might have, they have a God. A God of Water, and of Wind. A Goddess of Dawn, and of the Rivers. A God here, a Goddess there. Ah, such simple pastoralists, these Vedic Indians.
 
 Now remove that foreigner lens, and use that of our own civilization. Focus again.

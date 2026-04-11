@@ -8,6 +8,7 @@
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Title from '$lib/comps/page-title.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
+	import Anveshilogo from '$lib/assets/anveshilogo.svelte'
 
 	$metaTitle = 'Bodha - Anveshi';
 	$metaDescription =
@@ -20,7 +21,8 @@
 	let sY: number;
 	let regionAnveshi: any;
 	let region: string = 'northern india';
-
+	let goTime:boolean
+	$: goTime = sY >= 300;
 	let isRegion = Array(8).fill(false);
 	isRegion[0] = true;
 
@@ -75,6 +77,9 @@
 </div>
 <Container>
 	<div class="box-2">
+		<div class="row ycenter borderbot pbot64">
+			<Anveshilogo goTime={goTime}/>
+		</div>
 		<div class="grid two stacked">
 			<div class="column rgap16">
 				<h6 class="thin source-serif">

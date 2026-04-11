@@ -20,7 +20,7 @@ The Dāśarājña data was the examined in [Part Two](/blog/dasharajna2).
 
 Following this data, parsing, and re-contextualization, the Reign of Sudās Paijavana along with the Conclusion, Epilogues, and Appendices are covered in this final installment of the article.
 
-#### F - The Reign of Sudās Paijavana
+## F - The Reign of Sudās Paijavana
 
 **Given the** re-contextualization, an attempt can be made to paint a temporal sequence of Sudās’ reign. This is conjectural territory that plays within the two frameworks, and brings in Paurāṇika testimony provided it does not violate Ṛgvedic data.
 
@@ -58,7 +58,7 @@ At the long end of these campaigns, Sudās conducts a rājasūya, the regnal rit
 
 In other words, in 2500 BC, around the time that the Harappan Civilization enters its mature, integration phase, there is evidence of a political force spreading across its entire geographical extent. Sudās Paijavana gives clear evidence of the ruling authority behind Mature Harappan.
 
-#### G - Conclusion
+## G - Conclusion
 
 This essay engages in the following three steps:
 
@@ -74,7 +74,7 @@ In the epilogue to this era, a final wave of consolidation is conducted a few ge
 
 ##### Celebrates the victories of Sudās in his battles against ten kings, which once and for all established Bharata supremacy in northern India, ushered in Mature Harappan, triggered the dispersal of Eastern IE languages, and set the stage for the formation of proto-Bhāratavarṣa.
 
-#### H - Epilogue 1 : Prior IE Dispersals
+## H - Epilogue 1 : Prior IE Dispersals
 
 Sudās’ era is one of Eastern IE language dispersals. Prior to this were dispersals of proto-Anatolian and proto-Tocharian in 3700-3300 BC and of Western IE languages in 3000-2500 BC. Talageri traces Western IE dispersal in the attestation of Celtic drui, or druids, who were priests that held sacred knowledge in an exclusive dialect and transmitted it orally for generations, and connects it to Druhyu. He notes Druhyus to be a general name for IE people and priests, both, that are distant from Pūru-Bharatas. This is why they are mentioned alongside Bhṛgus in the Ṛg Veda, and the Aṅgrā in the Avesta (both are priestly classes).
 
@@ -90,7 +90,7 @@ Finally, if Anatolian is sister to PIE and split much earlier, or if major lingu
 
 In other words, Paurāṇika tradition distinctly remembers that notable changes took place 7000-6000 BC. These are attested archaeologically in Mehrgarh and Bhirrana, and genetically through influx of “Iranian” genes into India during the same period. Pṛthu Vainya is remembered as the first king, born with armor and weapon in hand. Before him there were no cities, no agriculture, and no metallurgy. After him there were large farms, irrigated canals, long-distance trade and major shopping complexes. This is why Greek records knew of 6000 years of Indian dynasties.
 
-#### I - Epilogue 2 : Forgotten Sudās
+## I - Epilogue 2 : Forgotten Sudās
 
 Why is Sudās not remembered by Paurāṇika tradition? In the traditional list of ṣoḍaśa-rājikas, or sixteen cakravartins, why does Sudās not feature, if he was so instrumental in proto-Bhāratavarṣa? In the entire Bharata dynasty, which lent India its name, only Bharata and Suhotra are remembered as cakravartins, and they are early kings in the line. What of the Bharatas mentioned in the Ṛg Veda—Sudās, Divodāsa, Sṛñjaya, Devavāta, Vadhryāśva, Devaśravas, Sahadeva and Somaka? Why has an entire dynasty, clearly pivotal to ushering mature Indian civilization, been ignored by historical tradition?
 
@@ -102,11 +102,11 @@ The Kurus have no hesitation alluding to their Bharata origins, or even to Pūru
 
 The eponymous Kuru founder is said to descend from Saṁvaraṇa, the Pūru that Sudās defeated and exiled into the forest. Kuru and his descendants can be excused for holding a dynastic grudge against the Tṛtsus, which they eventually vindicate—evidenced by the quick end of Sudās’ line after Kuru’s rise. In the new Bhāratavarṣa of the Kurus, the only rulers bards were not permitted to sing of were the ones that besieged the Kuru ancestor. This is why Sudās is known, not through historical tradition, but through his incidental presence in assiduously preserved instruments of sound.
 
-#### J - Appendix
+## J - Appendix
 
 The Dāśarājña sūktas: 7-18-5 to 7-18-19, 7-18-24, 7-33-3 to 7-33-6, 7-33-14, 7-83-1 to 7-83-8, 7-19-3, 1-63-7, 1-126-7, 3-53-9, 3-53-14, 3-53-24, 6-27-5, 6-27-8.
 
-#### References:
+## References:
 
 1. Witzel, M. [Rig Vedic History: Poets, Chieftains and Polities](https://www.academia.edu/713988/R_gvedic_history_poets_chieftains_and_polities)
 2. Jamison, SW and Brereton JP. The Rigveda (in English). Oxford University Press

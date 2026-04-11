@@ -36,7 +36,7 @@ words: "1138"
 >and ninth is Siddhidātrī, these are well-known as the Navadurgās,  
 >these names were indeed uttered by the great Lord Brahmā himself.  
 
-#### Śarada Navarātrī
+## Śarada Navarātrī
 
 In our tradition - across Bhāratavarṣa, Navarātrī is most commonly celebrated twice a year. The festival of 9 auspicious days and nights - that is 9 proper tithis, according to the Hindu pañcāṅga - occurs once each in Dakṣiṇāyana and Uttarāyaṇa. In Dakṣiṇāyana, it takes place during the waning lunar fortnight or śukla pakṣa, of the Āśvayuja māsa or month. This occurs during the Śarada ṛtu or season, and is thus known as Śarada Navarātrī. And in Uttarāyaṇa, it takes place during the śukla pakṣa of Caitra māsa; in Vasanta ṛtu, therefore known as Caitra or Vasanta Navarātrī.
 
@@ -54,7 +54,7 @@ Just as Śrī Vināyaka was welcomed into the home a few weeks before the commen
 
 With this year’s Navarātrī Durgā Pūjā, let us explore each Navadurgā Devī in depth.
 
-#### || Prathamaṃ Śailaputrī Ca ||
+## || Prathamaṃ Śailaputrī Ca ||
 
 >वन्दे वाञ्छितलाभाय  
 >चन्द्रार्धकृतशेखराम्।  
@@ -94,7 +94,7 @@ This pratipadā, may we remain steadfast in our sādhanā and pray to Devī Śai
 
 Next - [Brahmacāriṇī | Navadurgā - Part 2](/blog/brahmacharini)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśati, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

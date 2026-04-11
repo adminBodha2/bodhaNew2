@@ -26,7 +26,7 @@ Due to this, the evolution of dialects into mature literary languages that conti
 
 These disruptions regularly prevented speakers from creating manuscripts in their dialects. This further prevented a regional standardization of literary language within a certain linguistic area, which is necessary for a dialect to become a language. The common man kept speaking these dialects and also kept creating oral literature in these languages but very few great works of written literature were created. Very few manuscripts were created. As a result, these dialects remained loose, in the absence of any standardization.
 
-#### Mother Saṃskṛta vs. Persian/ Arabic Colonialism
+## Mother Saṃskṛta vs. Persian/ Arabic Colonialism
 
 In the pre-Islamic era, the overarching umbrella of Saṃskṛta culture and literature would continuously keep informing local and regional cultures and literatures about classical ideas and would even loan words about concepts which were new or philosophical in nature. This two-way process kept the regional cultures rich and made Saṃskṛta, the real lingua franca of India. This umbrella of Saṃskṛta culture kept India culturally unified and linguistically diverse. It simultaneously preserved diversity and ensured unity.
 

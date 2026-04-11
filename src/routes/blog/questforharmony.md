@@ -16,7 +16,7 @@ words: "4417"
 
 One of the most fundamental quests of human life is to be happy. One can debate on the meaning of the word ‘happiness’ but the quest itself remains indisputable. All human actions pivot around this central quest. While individuals want to be happy, institutions rush to fulfill this ‘need’. Almost all of contemporary relations between the individuals and the institutions can be seen through this relationship whether the institution is the State, the free market, or a religion. So the question to ask is: are we happy today?
 
-#### The Faultline of Use-Values and Consumption of Commodities
+## The Faultline of Use-Values and Consumption of Commodities
 
 There are two ways to assess happiness. One is the way of metrics, of numbers. One can count how much a person earns; what is the HDI of the city he lives in; how politically stable the country is; what is the status of the economy; the ease with which the public institutions work; the status of healthcare and education and various other metrics that constitute the surveys which measure ‘happiness’ and ‘standards of living’ today.
 
@@ -44,7 +44,7 @@ According to Illich this overwhelming stress on consumption of commodities has r
 
 This imbalanced tradeoff of use-values for commodities is ubiquitous. What is the most curious aspect of this dichotomy is that it is not necessary to chart two different countries, societies or economies to see this faultline. It runs right through the modern individual. You will find that often it is the same individual who is doing quite well on the metrical chart and very bad on the experiential one. Metrically he is doing very well and emotionally very bad.
 
-#### Dichotomy of Desires
+## Dichotomy of Desires
 Bearing all these dichotomies inside him, the modern man leads a Kafkaesque existence, unable to make sense of the world around him. The story of unlimited progress and development is sold to him and he is told that it can be verified by anyone. The methods of verification, however, metric in nature, are created by the same institutions which sold him the story in the first place. While technology becomes a handmaiden of politics, science too does not offer much respite for in absence of Nature-conducive culture, all it offers is objective knowledge of the world around man, but nothing about the workings of the internal cosmos, the cidākāśa. As Loren Eiseley, one of the greatest thinkers of our times says:
 
 > The western scientific achievement, great though it is, has not concerned itself enough with the creation of better human beings, nor with self-discipline. It has concentrated instead upon things, and assumed that the good life would follow. Therefore it hungers for infinity. Outward in that infinity lies the Garden the sixteenth-century voyagers did not find. We no longer call it the Garden. We are sophisticated men. We call it, vaguely, “progress”, because that word in itself implies the endless movement of pursuit. We have abandoned the past without realizing that without the past the pursued future has no meaning, that it leads, as Morris has anticipated, to the world of artless, dehumanized man.
@@ -69,10 +69,10 @@ But was it always like this? And is there an alternative? Do we have answers in 
 
 Culture was not always pitted against Nature as it is in today’s modern world. Nature-conducive cultures existed all over the world, but its most expansive expression was seen in Bhāratavarṣa dictated by the values of Sanātana Dharma.
 
-#### Conflict Paradigm
+## Conflict Paradigm
 Culture in various modern definitions is seen as a tool of man to mold Nature for his own needs. In this Man vs. Nature narrative, culture and technology are always pitted against the forces of Nature. It is a patently Judeo-Christian and Biblical narrative where the entire Earth and all its inhabitants are given in dominion by God to man for his personal use. According to this narrative, there is an eternal struggle between Culture and Nature. Culture is actually a tool of man to help win this battle and make a conquest of Nature. This paradigm of culture is better understood as the Nature-Culture Conflict Paradigm.
 
-#### Continuum Paradigm
+## Continuum Paradigm
 This is not how culture is understood in a dharmic society like Bhāratavarṣa. The word for culture is ‘saṃskṛti ’ संस्कृति, while the word for Nature is प्रकृति. saṃskṛti is the refinement and elevation of prakṛti. Culture is an elevation of Nature.
 
 In the Judeo-Christian paradigm Nature is pitted against Culture in an eternal struggle. In Bhāratavarṣa, Culture goes in harmony with Nature and even improves on it, not by destroying it, but by observing its physical rules while spiritually transcending it. Dharma, the carrier of saṃskṛti, overseas the balance of Culture and Nature and keeps them in harmony and not conflict. This paradigm of culture can be called the Nature-Culture-Continuum Paradigm.
@@ -89,7 +89,7 @@ If one were to use just a single expression to explain the civilization of Sanā
 
 This balance was achieved by paying equal attention to various aspects of life as seen in the vision of varṇāśrama dharma. Artha and Kāma, the pursuit of material prosperity and pleasure was not discouraged in Bhāratavarṣa at all. Instead they were two of the four pillars of a dhārmic life. But they were balanced with the goal of mokṣa and the path of dharma. A dynamic balance was created in which one aspect of life did not overwhelm the other. Culture in such a setting acted as a thermostat which kept human life in a perpetual dynamic equilibrium.
 
-#### Breaking of the Second Order
+## Breaking of the Second Order
 In a nutshell, we can say that almost all modern problems that we discussed above exist because currently the Nature-Culture Conflict Paradigm reigns supreme, and is trying to completely obliterate cultures, societies and institutions which espouse and propagate Nature-Culture Continuum Paradigm.
 
 We know that the natural order no longer binds man. The natural order was broken when man’s ancestor broke out of the food chain by discovering technology and becoming the apex predator. But there was something different about this new apex predator. All species in a food chain are limited by their natural environment, even the apex predator. The new technology that man discovered allowed him to thwart most natural rules. The natural order was the First Order, which man broke.
@@ -105,7 +105,7 @@ This destructive paradigm is the Conflict Paradigm and under the garb of globali
 
 The Conflict Paradigm was germinated in the Judeo-Christian world; came to perfection in the creation of the modern post-Enlightenment West; exported to the entire world during the heyday of European colonialism; and universalized during the post-war era in the name of liberal democracy, globalized planet and the bill of individual human rights. The State, the market, and all the attendant institutions of global democracy collude in the continued imposition of the Conflict Paradigm over the rest of the world.
 
-#### Culture Against Policy in Traditional Societies
+## Culture Against Policy in Traditional Societies
 In the case of countries like Bhāratavarṣa this conflict can be seen very sharply as most of its society and most of its individuals are still governed by traditions of Sanātana Dharma. Meanwhile all of its modern institutions including the State, the market, the media, the academia and the healthcare system are all governed by imported institutions which are part of the global West. There is a direct clash between Indic society and culture on one hand and all its modern institutions on the other. Its Culture is in deep dissonance with its Policy.
 
 While the policies of the Indian State further the Conflict Paradigm, its Culture tries to scramble defense against it. But being excluded from power it is at a serious disadvantage, and continuously pushed to margins, it is eventually headed for complete dissolution if there is no course correction and the dissonance between India’s Culture and Policy isn’t solved.
@@ -117,7 +117,7 @@ As discussed above, culture in India existed in harmony with Nature and did not 
 
 Coomaraswamy said that the fundamental quest of an Indian artist is not to just imitate Nature, but to improve upon it by imparting spiritual meaning to it by using artistic license. That is why the gods have many hands and feet. They display attributes and convey different bhāvas of the artist and the yogī. They are meant to educate and elevate the viewer to a higher plane of consciousness and not just imitate Nature.
 
-#### The Artist and the Aesthete
+## The Artist and the Aesthete
 Art in India is used to elevate the consciousness of the individual to a higher plane so he cultivates higher pleasures. By doing this, he makes his path towards self-realization easier and also makes his life in this samsāra more pleasant and full of aesthetic experience. In fact, the theory of aesthetics of Indian art was developed by keeping this goal in mind. As Harsha Dehejia says:
 
 > While the artist occupies an exalted position in the Indian tradition, the aesthete is charged with an equally heavy responsibility. Art in the Indian tradition is not merely ornamental or decorative, not just an idle pastime or sport, not as outpouring of a superficial state of mind; and the aesthete in turn was not a mere spectator or voyeur but one who was expected to apply himself seriously and deliberately in the enjoyment and understanding of art.
@@ -132,7 +132,7 @@ The job of the artist is to bind the formless into the form. The job of the aest
 
 ##### In this way, by making the aesthete as important as the artist, the Hindu tradition provided art as a means to transcend the limitations of daily life. Art not just provided a happy respite from the drudgery of daily life, but also elevated the aesthete or the enjoyer of art to a higher plane of consciousness, thereby enriching his life in more than one way.
 
-#### Culture Creatives
+## Culture Creatives
 
 Dharma becomes manifest to us in the form of tradition which takes tangible forms as customs and rituals. Customs are the language of dharma. Similarly culture talks in the language of symbols. And these symbols are conveyed through art and literature. While art encodes this wisdom, the act of decoding its meaning leads the aesthete, the onlooker, onto a cultural journey. Going on this journey he comes across various stories, epic and short, religious and folk.
 
@@ -146,7 +146,7 @@ This is how the beautiful tradition withers. The link with the past disappears, 
 
 The infusion of this cultural wisdom in personal life will lead to psychological comfort and an ability to find solace in hardships and adversity. Culture so infused will be the cushion of the individual against the vagaries of life. At the level of society and state, this would result in a culture-conducive policy and consequently a Nature-conducive culture, once again establishing the Continuum Paradigm, resulting in sustainable living, personal well-being and ecological harmony.
 
-#### Endnotes:
+## Endnotes:
 
 1. Eiseley, Loren. The Firmament of Time. Bison Books, 1999.
 2. Dehejia, Harsha. The Advaita of Art. Motilal Banarsidas, 1996.

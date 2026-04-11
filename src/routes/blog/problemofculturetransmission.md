@@ -13,7 +13,7 @@ excerpt: Tradition is the bedrock on which civilization stands and culture flour
 words: "1385"
 ---
 
-#### Culture, Tradition and State
+## Culture, Tradition and State
 
 Tradition is the bedrock on which civilization stands and culture flourishes. And tradition is that which continues. For anything to be called tradition, it has to have continuity; an unbroken link with the past which has never disappeared. Tradition is not old. It is not new. It is that which is continuous; which flows like a river, something which is perpetually changing and yet has always been there in its form and spirit.
 
@@ -27,7 +27,7 @@ The modern State on the other hand is an actively anti-dhārmika state, where it
 
 However, that was scarcely a problem for Hindu society as it had managed to operate with a hostile State at the centre for hundreds of years. It had developed mechanisms and institutions, both mobile and permanent, which were capable of transferring culture orally almost with complete exception and often active opposite of the State.
 
-#### Evolutionary Foundations of Multi-Generational Family
+## Evolutionary Foundations of Multi-Generational Family
 Most Hindu institutions operated independently of the State. But it was often the institution of family which was the greatest carrier of tradition.
 
 ##### The fundamental unit of Hindu society was not individual but family – a multi-generational family – in which at least three generations lived together, from grandparents to grandchildren.
@@ -38,7 +38,7 @@ Evolutionary biologists like Edward O. Wilson tell us that while most animals ha
 
 Human society is also exactly like this. Parents do not have much time for art, literature and science, all the elevated aspects of human culture, for they have to earn their livelihood by working hard, be it an agricultural, industrial or a post-industrial society. The children are taken care of by grandparents who teach them all the nicer things about culture, things which make us human. They teach the grandchildren customs, traditions and rituals through stories, anecdotes and idioms while engaging with them playfully, even while taking care of them in daily life. And that is how culture is transferred, when three generations live together in the same home, in the same ‘nest’ as an evolutionary biologist would say.
 
-#### Where the ‘Nest’ Breaks Down and the Mechanisms of Culture Transfer Stop
+## Where the ‘Nest’ Breaks Down and the Mechanisms of Culture Transfer Stop
 But in a modern society the grandparents are no more. Family has come to mean nuclear family which has no place for grandparents. Most countries of the West and many metropolitan cities of even ancient civilizations like India are at a stage where even the nuclear family and marriage is no more and individuals are truly individuals. Parents have no time for their children. Let alone grandparents, even parents can’t bring their children up as both of the spouses have to ‘work’.
 
 It is virtually the institutions of the State and the corporate which ‘bring up’ the children, right from the time they are just six months old. The crèche, the kindergarten, the school, the college and the workspace claim and consume the children which are in a way ‘produced’ by individuals but then brought by the forces of the State and the market.
@@ -47,7 +47,7 @@ The mechanisms for transfer of culture, are thus, no more. As the grandmothers d
 
 The mechanisms for the transfer of culture are no more. Things are expected to deteriorate in this way for some time to come. But we need to make sure that culture and tradition continue, or at least simmer low until old and time-tested mechanisms are back.
 
-#### Cultural Story-Telling as a Solution
+## Cultural Story-Telling as a Solution
 
 What needs to be done is the universalization of Hindu traditions with an in-built design for customizations for individual and regional variation. How would this look in practice?
 

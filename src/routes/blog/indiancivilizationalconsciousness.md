@@ -18,7 +18,7 @@ Being of the same basic physio-neurological make, humans are largely the same ev
 
 The key to this system “jailbreaking” is the reconnection to one’s civilizational language. For language is like code, and like code it can be hacked. A good way to discern the native OS from the acquired one is to examine any given notion in the original code. In light of this, when we say ‘Indian Civilizational Consciousness,’ what we speak of is ‘Bhāratīya Sāṃskṛtika Cetanā (भारतीय सांस्कृतिक चेतना),’ and in reverse order we unpack each term as follows.
 
-#### Cetanā (चेतना)/Consciousness:
+## Cetanā (चेतना)/Consciousness:
 Against the profusion of words to describe mental phenomena that can be generated from roots such as √man (√मन्), √budh (√बुध्), √jñā (√ज्ञा), and √cit (√चित्), we find the English words mind, consciousness and brain of limited potential in understanding the mind-map of our ancient ancestors. Anticipating the modern world’s notice of ego, id, free-will, free-won’t, compatibilism and more, the ancients perceived many aspects to Mind, or Mentality. To them, consciousness was not mere thinking, nor the presence of thinking activity; and neither was it simply the presence of understanding or comprehension alone. It was the feedback-loop that existed between these processes — the process of reflection and self-awareness.
 
 ##### The mind that is aware of its thinking, that can reflect on it, and can contextualize what it comes to know or understand — is the conscious mind.
@@ -35,7 +35,7 @@ That itihāsa is history that has overcome historicism; that it is self-consciou
 
 To use notions developed by Martin Heidegger and cardinal to philosophy — since we speak of an ontologic and not of an ontic. The difference, reductively phrased, is that an ontic is a thing or entity as described through its properties- a clinical analysis. But an ontologic is Being — or what that thing/entity is to itself. That a civilization could be self-aware is understood better with the next word.
 
-#### Sāṃskṛtika (सांस्कृतिक)/ Civilizational:
+## Sāṃskṛtika (सांस्कृतिक)/ Civilizational:
 Rooted in the Latin word ‘civilis,’ the word ‘civilization’ came into its current usage in the 1600s from the French word ‘civiliser,’ — to bring out of barbarism, to introduce order and civil organization. Civilization is then the deliberate process of removing barbarism and increasing civility in the collective aggregate. This gives more information to Huntington’s definition- *‘the highest cultural grouping of people and the broadest level of cultural identity people have, short of that which distinguishes humans from other species.’*
 
 To reinforce salient terminology, Huntington’s definition is an ontic one, while the etymological one preceding it tends to ontologic – describing civilization from its own point of view. This ontologic definition acknowledges an intent, a deliberation to civilization, and this is what’s evoked in the Indian word for it too. Saṃskṛti, or well-effected; well put-together. It is the result of saṃskaraṇa — to accomplish something with purification and consecration. Hidden within this is the word ‘samyak (सम्यक्), which means ‘in the same direction, in the same way, at the same time, together.’ In turn, samyak builds upon the prefix of ‘sam (सम्),’ which evokes the sense of togetherness.
@@ -48,7 +48,7 @@ It is this kind of civilization that could plausibly emerge into consciousness- 
 
 The churn of Bhāratīya saṃskṛti is that it is formed together, in collaboration, and has as its ideals not ‘civility’ or ‘liberty’ but loftier goals better understood with the third word.
 
-#### Bhāratīya (भारतीय) / Indian:
+## Bhāratīya (भारतीय) / Indian:
 Much ink still spills over the meaning and origin of ‘India,’ contention to the Sindhu/Indus derivation coming from the ‘Yin-tu/Indū’ of Chinese records. But as a recent book has reminded us — we are India, that is Bhārata. Reconnection with our civilizational consciousness will come not with an etymology of India, but with that of Bhārata —where the derivation from Bharata as patronymic is the mundane stuff of historia, of the ontic. But we seek the ontologic, and thus we notice the root- √bhṛ (भृ)- evocative of dhāraṇa, poṣaṇa and bharaṇa, or bearing, nourishing, supporting.
 
 **Bearing What?**
@@ -64,13 +64,13 @@ These exalted actions are found reflected in the hands of the simple potter, who
 
 The word ‘Bhāratīya’ thus has a dual connotation. Anything produced on this wheel of Dharma is Bhāratīya, and the accretion of emergent civilization means that the potter is also Bhāratīya — imbibed of the ṛta-consonant consciousness. More precisely —
 
-#### 1
+## 1
 Over untold millennia of information being processed in increasingly complex ways developed a collective cetanā – a consciousness. The account of this development is remembered in itihāsa.
 
-#### 2
+## 2
 Since it is conscious, it contains dialogue and feedback, cogitation and reflection. It displays accretion of felt-experience and consistency of a coherent mind. The coming into coherence, which is but culture in action, is saṃskṛti, or civilization.
 
-#### 3
+## 3
 Consciousness is an embodied phenomenon. It is how information feels, but the information is contained in a vessel – the mortal and material form. The sāṃskṛtika cetanā discernable in itihāsa and definable as dharma has embodied in what we call Bhārata.
 
 The coming together of these is what Shri KM Munshi referred to when he wrote of the “efforts of a people to will themselves into organic unity.” A civilizational moment is when this unity is of pure ekatva buddhi — when all awareness converges into one singular moment. The greater this convergence, the more clarified the awareness and more resolute the moment. At the apex of such a state, momentum takes over and the pot now spins seamlessly around the wheel. In balance with ṛta and in forward motion, unaided. This is the self-perpetuating civilizational moment. This is what we have come together to design — ie., methodically plan and arrange for.

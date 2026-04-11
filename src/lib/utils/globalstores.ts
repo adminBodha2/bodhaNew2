@@ -13,14 +13,7 @@ export function toggleMenuState(){
   }
 }
 
-const storedSearchState = browser ? JSON.parse(localStorage.getItem('searchState') || 'false') : false;
-export const searchState = writable(storedSearchState);
-export function toggleSearch(){
-  if (browser) {
-    searchState.update((mode) => {
-      const newMode = !mode;
-      localStorage.setItem('searchState', JSON.stringify(newMode));
-      return newMode;
-    })
+export const searchState = writable(false);
+export function toggleSearch() {
+	searchState.update((mode) => !mode);
   }
-}

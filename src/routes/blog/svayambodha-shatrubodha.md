@@ -12,7 +12,7 @@ excerpt: The Hindu civilizational discourse has arguably entered the sophisticat
 words: "3017"
 ---
 
-#### Why Do We Need a Framework?
+## Why Do We Need a Framework?
 Cultural phenomena progress through three phases: Naïve, Sophisticated and Decadent. A few of them however escape the downward turn towards decadence and acquire a canonical status. It is artefacts such as a definitive book, an anthem or a ritual that distinguish a canon from a mere trend.
 
 ##### With time, that becomes tradition.
@@ -41,12 +41,12 @@ It is not just attention but the very basis for trust that is denied. At this ju
 
 To know that you know how to know is the greatest asset – Our framework is an effort in service of this goal.
 
-#### The Greatest Problem that Hindus Face
+## The Greatest Problem that Hindus Face
 What is the greatest problem that the Hindu society currently faces? Is it a ‘lack of unity’? Let us take a look at societies and civilizations other than Hindu.
 
 Looking at Islamic and Christian societies it is more than evident that they are not united. Both Islamic and Christian societies are divided into thousands of sects which are constantly at war with each other. What gives them an edge and what always keeps them growing is their extremely sharp Śatrubodha – a sense of the enemy. No matter how much infighting they engage in, they know that a non-Muslim, or a non-Christian in respective cases, is always an enemy even if a tactical alliance has to be made.
 
-#### Śatrubodha with a Hierarchical Sense of Priorities
+## Śatrubodha with a Hierarchical Sense of Priorities
 The sense of ‘us’ and ‘them’ is extremely developed in Islamic and Christian societies. Their theology has terms and phrases to denote the other, like ‘heathen’ or ‘Kāffir’ and the Kāffir (the other) is always an enemy. The othering of the Kāffir is institutionalized and all-pervasive. This is what gives them an edge.
 
 It turns out that a society can have as much infighting as it wants, until it has a highly developed Śatrubodha with a hierarchical sense of priority in which the ‘in’ group is always preferred when a choice has to be made. Internal faultlines don’t matter if the pyramid of priorities coupled with Śatrubodha is put into practice. It is this practice which led one of the Ali brothers, who were ‘friends’ with M. K. Gandhi, to say this: “According to my religion and creed, I do hold an adulterous and a fallen Mussalman to be better than Mahatma Gandhi.”
@@ -57,7 +57,7 @@ Prophetic Monotheistic sects keep winning because they have a highly developed �
 
 Some Hindu scholars, saints and groups have been focusing on developing this Śatrubodha. Starting from Swami Dayananda, Swami Vivekananda and Śri Aurobindo and continuing to Śri Ram Swarup and Śri Sita Ram Goel and their followers, attempts have been made in the past 150 years to develop Śatrubodha in Hindus, although very few groups barring one or two have used the word ‘Śatrubodha’ in this context.
 
-#### Svayaṃbodha and Śatrubodha joined by the Axle of Dharma
+## Svayaṃbodha and Śatrubodha joined by the Axle of Dharma
 The good news is that more and more Hindus are waking up and developing a sense of Śatrubodha, understanding and studying the enemy to be able to defeat them. But is that enough? Is it enough to know your enemy?
 
 In the past two decades, even those Hindus who have a highly developed Śatrubodha faltered on their own identity, culture and civilization. In their eagerness to recognize, call out and differentiate from the enemy (Śatrubodha) they have lost all sense of ‘Svayambodha’. They have started thinking that it is enough to recognize and fight the enemy and it does not matter what our identity is, so far it remains different from the Śatru, the civilizational enemy.
@@ -66,7 +66,7 @@ But this is not so. Svayaṃbodha (the sense of ‘us’) is as crucial as Śatr
 
 The ratha of Bhāratiya civilization rests on the axle of dharma with two wheels of Svayamabodha and Śatrubodha on each end. No wheel is greater or lesser than the other. For a civilization to sustain and continue it needs both in equal measures. To understand how crucial both are, let us see what happens in the absence of one of the bodhas.
 
-#### When a Civilization Lacks Śatrubodha
+## When a Civilization Lacks Śatrubodha
 At many points in our history, it is the critical lack of Śatrubodha which has defeated us. The misplaced magnanimity and chivalry of our Kṣatriyas who would let the Islamic invaders go after defeating them on the battlefield proved fatal for them and everything they held dear.
 
 They could not see that the ethics that they were extending to the enemy were not what the enemy practiced. Even after showing mercy and chivalry to an invader many times and letting him go after defeating him in battlefield, when the same invader defeated them once he would behead him alive, molest and enslave women and children in his civilization and destroy all that the Hindu king loved.
@@ -79,13 +79,13 @@ The only possibility for a culture facing an existential threat from a barbarian
 
 To be able to formulate a response, create institutions and even scriptures instructing for the emergent situation, and spreading it to every individual of the native society is called Śatrubodha. And there is no substitute for it.
 
-#### When a Civilization lacks Svayaṃbodha
+## When a Civilization lacks Svayaṃbodha
 Let us now analyze what happens when Svayaṃbodha is missing in a society. Many Hindus with highly developed Śatrubodha in the past few decades have correctly identified that they are culturally and civilizationally ‘different’ from Islamic and Christian civilizations. They have condemned the barbarism and arbitrariness of Shariat like legal systems. But this has led them to believe that just because they are different from monotheists it means that the Hindu society has no rules and regulations whatsoever; just because Hindu dharma is not a belief system like Islam, it has no customs, rituals or traditions at all. They have come to believe that ‘being Hindu’ means following no rules and customs, having no beliefs, and having no clear sense of identity.
 
 In pursuit of Śatrubodha they have lost all sense of Svayaṃbodha. And when Svayaṃbodha is lost, no matter how well one fights the enemy, there is nothing worth left defending. You become ‘Hindu in name only’ – HINO. You defend the borders well, but inside the civilization crumbles, culture decays, multiple identities wither and a universal political identity takes over which considers ‘lack of unity’ as the overarching problem of Hindus and aims for a Hindu society devoid of all identities except that of political Hinduism, which treats individuals as nothing more than identical units, who can be mobilized for a political response.
 In an attempt to ‘be different’, all sense of ‘being Hindu’ is lost. An identity which hinges just on ‘difference’ loses sense of the core. THAT is why Svayaṃbodha is as important as Śatrubodha. It is equally critical to know ‘who we are’ and not just ‘who we are not’.
 
-#### Being Hindu: Developing Svayaṃbodha
+## Being Hindu: Developing Svayaṃbodha
 What then is this Svayaṃbodha for Hindus? What is Sanātana dharma or Hindu dharma? What does it mean ‘being Hindu’?
 
 ##### Hindu dharma, at its most fundamental is its rituals and customs on one hand and its sādhanā paddhatis, practice of meditation on the other. Let us take them one by one.
@@ -102,7 +102,7 @@ A Hindu cannot be a nihilist who does anything that strikes his fancy; follows a
 
 Being Hindu means to follow our duties and responsibilities towards Nature and culture as ordained in the Panca Ṛṇa system. Being Hindu means to live multiple identities allowing for all diversity of life and human nature, but at the same time developing a sense of priority amongst these identities based on the pyramid of dharma in which the highest and most critical peg is always dharma followed by deṣa, varṇa, jāti and all other ancient and contemporary identities.
 
-#### How and Why Do We Apply the SS Framework on our World
+## How and Why Do We Apply the SS Framework on our World
 The Hindu today stands on a crossroads. Great changes are happening to our world, some good, some bad. Some might lead us towards cultural rejuvenation and the establishment of a dharmic world order. Some threaten to dismantle our world by breaking it apart, by destroying our institutions and by changing us from within. The SS framework will help us navigate in ascertaining and choosing what is our core, what has to be firmly rejected; what needs to be carried forward and what needs to be jettisoned.
 
 Every age has its own contingencies and emergencies. The SS framework will help us in responding to them and come up with a working plan, reduced to a simple yet holistic worldview which is mobile, transferrable and scalable. Some of the basic questions and problems that this framework will help us navigate through are:

@@ -20,16 +20,16 @@
 
 <div class="row ycenter cgap16">
   <button class="blank" on:click={() => share(facebookShareUrl)}>
-    <FB color={'var(--color-alt)'} size=24/>
+    <FB color={'var(--primary)'} size=28/>
   </button>
   <button class="blank" on:click={() => share(twitterShareUrl)}>
-    <Twitter color={'var(--color-alt)'} size=24/>
+    <Twitter color={'var(--primary)'} size=28/>
   </button>
   <button class="blank" on:click={() => share(whatsappShareUrl)}>
-    <Whatsapp color={'var(--color-alt)'} size=24/>
+    <Whatsapp color={'var(--primary)'} size=28/>
   </button>
   <button class="blank" on:click={() => share(linkedInShareUrl)}>
-    <Linkedin color={'var(--color-alt)'} size=24/>
+    <Linkedin color={'var(--primary)'} size=28/>
   </button>
 </div>
 

@@ -47,7 +47,7 @@ This article is Part 9 in the Navadurgā series, describing the ninth of the Nav
 * [Part 7 on Kālarātrī Devī](/blog/kalaratri)
 * [Part 8 on Mahāgaurī Devī](/blog/mahagauri)
 
-#### || *Navamaṃ Siddhidātrī Ca* ||
+## || *Navamaṃ Siddhidātrī Ca* ||
 
 >सिद्धगन्धर्वयक्षाद्यैरसुरैरमरैरपि ।  
 >सेव्यमाना सदा भूयात्सिद्धिदा सिद्धिदायिनी ॥
@@ -104,11 +104,11 @@ Mā Siddhidātrī’s favorite flower is the campā, or champa, and her color is
 >dhammillakāyai ca jaṭādharāya namaḥ śivāyai ca namaḥ śivāya || 1 ||
 <cite>Śrī Ardhanārīśvara Stotram</cite>
 
-#### || Navadurgāḥ Prakīrtitāḥ ||
+## || Navadurgāḥ Prakīrtitāḥ ||
 
 Navadurgā symbolizes nine forms of Ādi Parā Śakti. At Navarātrī time, Devī Śakti is welcomed into our homes in these nine forms and more. Navarātrī includes a visarjana on navamī, the ninth day but concludes with the tenth day of celebration known as Vijaya Daśamī or Daśaharā. For it is on the Daśaharā tithi that not only did Śrī Rāma annihilate Rāvaṇa; but also Śrī Durgā Devī, in various avatāras, triumphed over different asurās. These episodes of various forms of Śakti triumphing over hordes of asuras on the battlefield, and finally destroying each formidable one, are beautifully described in the Devī Mahātmya of the Mārkaṇḍeya Purāṇa, in the revered text known as Śrī Durgā Saptaśatī. We have seen a bit about each Navadurgā with this article series - yet, may our knowledge and reverence for Devī only grow more and more each day. May all our thoughts, words, and actions be devoted towards her in an act of service and as a sacred offering.
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Mahātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

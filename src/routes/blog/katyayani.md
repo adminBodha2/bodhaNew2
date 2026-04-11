@@ -44,7 +44,7 @@ This article is Part 6 in the Navadurgā series, describing the sixth of the Nav
 * [Part 4 on Kūṣmāṇḍā Devī](/blog/kushmanda)
 * [Part 5 on Skandamātā Devī](/blog/skandamata)
 
-#### || Ṣaṣṭhaṃ Kātyāyanī Tathā ||
+## || Ṣaṣṭhaṃ Kātyāyanī Tathā ||
 
 >चन्द्रहासोज्ज्वलकरा  
 >शार्दूलवरवाहना।  
@@ -103,7 +103,7 @@ This ṣaṣṭhī, may we attain the determination and unwavering faith granted
 
 Next - [Kālarātri | Navadurgā - Part 7](/blog/kalaratri)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

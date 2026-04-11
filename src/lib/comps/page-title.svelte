@@ -13,7 +13,7 @@
 <style lang="sass">
 
 h2
-	letter-spacing: -2px
+	letter-spacing: -1px
 	@media screen and (max-width: 1024px)
 		letter-spacing: -0.5px
 

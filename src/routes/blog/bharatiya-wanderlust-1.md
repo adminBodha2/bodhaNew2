@@ -44,7 +44,7 @@ A refutal of AIT is not predicated upon refuting PIE itself. While there are con
 
 It’s pertinent to note that the PIE and AIT theories are linguistic at heart. Indeed, linguists insist that questions on PIE and its homeland can be answered by linguistics alone. Another way to put this is that “pots don’t speak.” Which means that archaeology can tell us nothing about the languages of people, their origins or their dispersals. While AIT in India need be discussed in the contexts of textual, archaeological, genetic and astronomical evidence as well, let us consider the linguistic first. If linguists are right about the primacy of their field in settling the debate, the following section should suffice to establish OIT.
 
-###### Linguistic
+### Linguistic
 
 Here we have The Oxford Introduction to PIE and the PIE World by JP Mallory and DQ Adams<sup>4</sup> as a guiding light. In this eminently accessible text for the lay-reader, they examine the evidence of linguistics to explain how hypothetical PIE is reconstructed and what it implies about aspects of PIE people and their culture- physical landscape, flora and fauna, kinships and family structures, settlement/ dwelling patterns, material culture, diet, religion, mythology and ultimate origins. We get an insight into the ever-changing nature of CL, indeed of PIE itself, through Schleicher’s Tale. August Schleicher, a founding father of CL, attempted to write a complete story in reconstructed PIE. Reconstructed PIE is a hypothetical language that CL builds from its understanding of present or historically attested languages. The first sentence of Schleicher’s Tale was:
 
@@ -158,7 +158,7 @@ What we have here then is a case of an Aryan Invasion, which under the lack of e
 
 This concludes the first part of our detailer on the out-of-India model of Indo-European linguistic origins and dispersals. In the [next part](/blog/bharatiya-wanderlust-2), we will examine other lines of evidence, beginning with the textual evidence in the Ṛgveda.
 
-###### References
+### References
 
 1. Cavalli-Sforza, LL et al. The History and Geography of Human Genes. Princeton University Press.
 2. van Driem, G. The Prehistoric Peopling of Southeast Asia.

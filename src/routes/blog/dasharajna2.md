@@ -18,7 +18,7 @@ words: "4640"
 
 In light of this, the Dāśarājña data shall be examined in this Part Two.
 
-#### D - The Dāśarājña Data
+## D - The Dāśarājña Data
 
 The bulk of the data about the Battle of Ten Kings is found in sūktas of Maṇḍala 7, all attributed to Maitrāvaruṇi Vasiṣṭha. A complete list of the sūktas in question is shared as appendix to this essay. Some things of note:
 
@@ -38,7 +38,7 @@ The geographical aspect here is more important. If the rivers that Sudās is ass
 
 This is good reason not to read Vasiṣṭha vs. Viśvāmitra conflicts in the Ṛgveda, and to consider that ruler-purohita relationships were dynamic and complex. Line 2 here, combined with RV 3-33, gives evidence of Viśvāmitra helping Sudās cross Vipāś and Śutudrī, and should arguably be taken as no more than that. For the part of Sudās’ campaigns around these rivers, he was aided by the Kuśikas, and this is how Indra made friends with them. The reference indicates Kuśikas taking on Pūru-Bharata/Ṛgvedic ritual, which is affirmed by Viśvāmitra’s praise for the Āṅgirasas, the ṛṣis who were aligned to Sudās’ ancestor Divodāsa.
 
-#### E - Parsing the Data
+## E - Parsing the Data
 
 **The general interpretation of Dāśarājña as a singular battle among/with ten kings must be discarded.** At the very least, it must be supplemented with the clear evidence of Sudās’ campaigns along at least 4 rivers, and possibly as far as Magadha. When done with Sudās’ placement in ~2500 BC, this reorients the view for IE dispersals and Mature Harappan. Given the two frameworks, the few centuries prior to Sudās can be briefed.
 
@@ -131,7 +131,7 @@ Sudās’reign thus triggers two spatially exclusive trends. Within India, he’
 
 Following this data, parsing, and re-contextualization, the Reign of Sudās Paijavana along with Conclusion, Epilogues, and Appendices will be shared in the final installment of this article, [Dāṣarājña Recontextualized: Part 3](/blog/dasharajna3).
 
-#### References:
+## References:
 
 1. Witzel, M. [Rig Vedic History: Poets, Chieftains and Polities](https://www.academia.edu/713988/R_gvedic_history_poets_chieftains_and_polities)
 2. Jamison, SW and Brereton JP. The Rigveda (in English). Oxford University Press

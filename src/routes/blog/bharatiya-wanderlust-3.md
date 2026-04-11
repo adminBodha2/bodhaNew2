@@ -14,7 +14,7 @@ words: "6162"
 
 This is part 3 of our detailer on the out-of-India model of Indo-European linguistic origins and dispersals. In this concluding section we examine archaeological and genetic evidence on the matter before detailing 'true' Āryan history. Part 1 can be read [here](/blog/bharatiya-wanderlust-1), and Part 2 [here](/blog/bharatiya-wanderlust-2).
 
-#### Archaeological
+## Archaeological
 
 Decades of work has failed to provide any evidence of an invasion into north India. Even any purported migration from the west has not been found in the archaeological record. Compare this with the situation in Europe, mentioned previously, where there are clear archaeological markers of invasion by a foreign population from the east. The origin of this population has been posited as the Pontic Steppe, but nothing precludes the Pontic people (or their language/ culture) from having originated further east. Even genetic evidence that talks of Steppe Pastoralists confesses that their own ancestry is unknown.  
 
@@ -60,7 +60,7 @@ But sindhu is used here in a general sense as river, and the river in question i
 
 Having considered all the above, the story of AIT- which occupies a fixed point in time and can be explored linguistically, textually and archaeologically- deserves to be discarded. But a final word is called for by a relatively new entrant to the scene- genetics.  
 
-#### Genetic  
+## Genetic  
 
 As a field of hard, scientific data, genetics stands alone. To project it on history we need to provide a robust base built on textual, archaeological and linguistic evidence. The AIT in its current form is the Indian implication of a linguistically accepted theory on the PIE homeland. But AIT has no textual or archaeological evidence, and linguistic analysis along a Preservation Principle can argue for an Indian origin of PIE. There are and can be many arguments in this field, but between genetics and the AIT there is strictly no connection. Language and genes may originate the same way- through fact of who we are born to- but they evolve and disperse very differently. Genetic analysis of a thousand years from now cannot reveal what language you spoke at your deathbed. It can only supplement a contextual base of your life- where you lived, when, who your parents were, whether you left any writings behind, etc. These facts understood, in a paper titled The Formation of Human Populations in South and Central Asia, the genetic diversity of India has been shown to be composed of three genetic groups:  
 
@@ -80,7 +80,7 @@ These points alone should preclude further discussion into yDNA, mtDNA or haplog
 
 > “When Wheeler speaks of the Aryan invasion of the Land of Seven Rivers, he has no warranty at all, so far as I can see. If one checks the dozen references in the Ṛgveda to the seven rivers, there is nothing in any of them that to me implies an invasion. Despite Wheeler’s comments, it is difficult to see what is particularly non-Aryan about the Indus Valley.”  
 
-#### True Aryan History  
+## True Aryan History  
 
 While linguists such as Mallory-Adams concede that no certainties can be assigned regarding the PIE homeland, we must consider the psychological reason why out-of-India theories appear distasteful or motivated.  
 
@@ -118,7 +118,7 @@ Indians moved from nomadic to settled states without significant invasions or mi
 
 A final point is driven home by considering the term Drāviḍa. Quite like the word ārya it never had any racial connotations. Further, while Ārya was still a kind of ethnic denomination among some tribes, Drāviḍa was purely a geographic one. In their paper The A of ABC of Indian Chronology, Manogna Sastry and Megh Kalyanasundaram compile Ārya and Drāviḍa as they occur in Indian texts. It’s not surprising that in a survey of Indo-Aryan texts the ratio of Ārya to Drāviḍa is more than 10:1. What’s clinching is that in the oldest surviving works of Tamil literature- Ezhuttadikaram, Solladikaram and Poruladikaram- not a single instance of the word Drāviḍa is found! So much for Aryans vs. Dravidians.  
 
-#### A Note on the Title
+## A Note on the Title
 
 Witzel’s notorious “rebuttal” to Talageri came in the form of condescension, evident from the title containing ‘incredible wanderlust.’ Right off the bat, Witzel seeks to show how ridiculous Talageri’s proposition is. He suggests, sarcastically, that for it to be true, the Ṛgvedic tribes must have possessed an incredible wanderlust! It’s a great example of Western scholarship’s a priori disdain for traditional Indian narratives, for look how ridiculous Witzel’s position actually is:
 
@@ -132,7 +132,7 @@ Witzel’s notorious “rebuttal” to Talageri came in the form of condescensio
 
 For these reasons I elect to lampoon Witzel’s title in turn, and reaffirm the ancient and enduring Bhāratīya wanderlust. Yes, we had it. Yes, our sons and daughters reached your lands and conquered you- in a manner of speaking. Go ahead, take your time trying to come to terms with this. Till then, despite Koenraad Elst’s dismay at the Hindu apathy towards the larger PIE/IE debate, we can’t actually bring ourselves to care. This, more than anything else, explains even the ignorant Hindu’s dismissal of AIT. It simply doesn’t matter, though if it does, we have enough evidence in our armoury.  
 
-#### References
+## References
 
 1. Cavalli-Sforza, LL et al. The History and Geography of Human Genes. Princeton University Press.  
 2. van Driem, G. The Prehistoric Peopling of Southeast Asia.  

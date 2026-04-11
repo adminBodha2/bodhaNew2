@@ -23,7 +23,7 @@ We say this not as a way to dismiss of them or to undermine their curiosities an
 
 To explain what we mean, let us take a most recent example of Project Unity.
 
-#### Project Unity and the AI Experiment
+## Project Unity and the AI Experiment
 
 Jay Anderson runs Project Unity, a handle on [Twitter](https://twitter.com/TheProjectUnity) and a [Youtube](https://www.youtube.com/c/ProjectUnity) channel currently uncovering a fascinating experiment on prompting AI into uncharted and exploratory territory. Working with the AI from [Anthropic](https://www.anthropic.com/), Claude, he's produced a 69-page document titled ‘*Dimensional Bridging Archetypes Across Mystical Traditions and Frontier Physics Implying Deeper Reality Intersections.*' The paper begins with a self-description, which says-
 

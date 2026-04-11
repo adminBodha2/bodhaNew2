@@ -26,7 +26,7 @@ Even the design discipline such as biomimicry advocates the practice of using mo
 
 Vāstu Śastra takes care not just of the design and dimensions of the structure but also ensures the daivika presence in the house. We have lost most of these practices today. What we see currently even in suburban or rural areas are badly built structures not at all suited to its surroundings nor pleasing to the eye.  
 
-#### Balance of principles and innovation
+## Balance of principles and innovation
 
 Sanātana Dharma always works within the universal principles but it provides enough room for creativity and innovation. There is a fine balance between the two. **If there are no universals and boundaries then creativity takes the form of perversion. On the other hand, lack of self expression takes away innovation and meaning.**
 
@@ -34,7 +34,7 @@ Pursuit of  Artha and Kāma are as important as Dharma and Mokṣa. Our texts a
 
 One such story is of Kṛiṣṇa and Arjuna burning and clearing Khāṇḍavaprastha to raise a new capital, Indraprastha. When Pānḍavas received Khāṇḍavaprastha as part of the division of Hastināpura, on reaching they were distraught seeing only a  forest. Then, Kṛṣṇa suggested to Arjuna to burn the forest and raise a new capital, Indraprastha.
 
-#### What should inform us then?
+## What should inform us then?
 
 There is no doubt it is Dharma which should be the anchor to navigate through sansāra. By following the principles of Dharma, individuals can cultivate a deeper sense of connection with the sacred core and access the wisdom and guidance that it provides.
 
@@ -46,7 +46,7 @@ On the principles behind Vāstu, Prof. S K. Ramachandra Rao says-
 
 Once we lose this core, this sense of sacredness, we lose our connection to our identity. It becomes easier and then a norm to do away the traditional home, design and aesthetics.
 
-#### What is the reward for this restraint?
+## What is the reward for this restraint?
 
 Why should anyone follow these sacred design principles? What is the incentive? At the core of our civilization it has always been Dharma. Once that is established, everything else is arranged around that. Be it our birth, occupation, marriage and even death. Once we lose this anchor, we fall into degeneracy. Nothing remains sacred anymore. Everything around us becomes available for indulgence. This is not different from the Abhrahmic faith propagating how everything on watch is available for man’s consumption.
 
@@ -62,7 +62,7 @@ Lindy’s Effect is true for Sanātana Dharma too. One which has existed and thr
 
 This is because these traditions have proven to be resilient and adaptable over time and have been able to survive and evolve in response to changing circumstances.
 
-#### References
+## References
 
 - African Genesis, Robert Ardery  
 - Vāstu-śilpa-kosha- III, Prof. S K. Ramachandra Rao  

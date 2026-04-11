@@ -24,7 +24,7 @@
 <div class="column ytop rgap32">
 	<Title text="Frequently Asked Questions"/>
     {#if faqs && faqs.length > 0}
-      <div class="grid two stacked">
+      <div class="grid two stacked-22">
         {#each faqs as item, i}
           <button class="blank column ytop rgap4 ta-l xleft acco-box" use:autoAnimate on:click={() => openIndex = openIndex === i ? null : i}>
             <div class="row ycenter cgap8 width100 inside-acco">
@@ -45,14 +45,14 @@
 <style lang="sass">
 
 .inside-acco
-  @media screen and (min-width: 1025px)
-    justify-content: space-between
+	@media screen and (min-width: 1025px)
+		justify-content: space-between
 
 .acco-box
-  border-bottom: 1px solid var(--color-border)
-  padding-bottom: 16px
-  &:last-child
-    border-bottom: none
-    padding-bottom: 0
+	border-bottom: 1px solid var(--color-border)
+	padding-bottom: 1.5rem
+	&:last-child
+		border-bottom: none
+		padding-bottom: 0
 
 </style>

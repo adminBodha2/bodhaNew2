@@ -21,7 +21,7 @@ One of these civilizational forces is Christianity, which is a major player in t
 
 This information is enough to show that any important issue or conflict in north-east is instigated, arbitrated or appropriated by Christianity. The Church is not just a religious but a heavily political and institutional forces in Christian dominated states of the north-east, where even the State aid trickles down to the last man through the direct agency of the Church.  
 
-#### The Church is the lynchpin of North-east
+## The Church is the lynchpin of North-east
 
 It is important to understand the maneuvers of Christian missionaries, the Church, and the Islamic groups in north-east. As without understanding the intentions, aims and modus operandi of these forces the grand civilizational fight which is going on cannot be understood and without that the long arcs of history cannot be understood.  
 

@@ -42,7 +42,7 @@ This article is Part 4 in the Navadurgā series, describing the fourth of the Na
 * [Part 2 on Brahmacāriṇī Devī](/blog/brahmacharini)  
 * [Part 3 on Candraghaṇṭā Devī](/blog/chandraghanta)
 
-#### || Kūṣmāṇḍā iti caturthakaṃ ||
+## || Kūṣmāṇḍā iti caturthakaṃ ||
 
 >सुरासम्पूर्णकलशम्  
 >रुधिराप्लुतमेव च।  
@@ -159,11 +159,11 @@ This caturthī, through her concentrated upāsanā may we attain the jñāna śa
 
 Next - [Skandamātā | Navadurgā - Part 5](/blog/skandamata)
 
-#### Footnotes
+## Footnotes
 
 1. This understanding alone - of Devī as center of the solar system, as referenced in Śrī Lalitā Sahasranāma Stotram as ***bhānumaṇḍala-madhyasthā*** - gives us the insight that our ṛṣis and seers knew (1) the planet on which we live is not flat but spherical (2) the Sun is the center of our Solar System, not the Earth, and (3) all life comes from the Sun.  
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

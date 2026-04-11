@@ -45,7 +45,7 @@ This article is Part 7 in the Navadurgā series, describing the sixth of the Nav
 * [Part 5 on Skandamātā Devī](/blog/skandamata)
 * [Part 6 on Kātyāyanī Devī](/blog/katyayani)
 
-#### || Saptamaṃ Kālarātriḥ Ca ||
+## || Saptamaṃ Kālarātriḥ Ca ||
 
 >एकवेणी जपाकर्ण  
 >पूरा नग्ना खरास्थिता ।  
@@ -108,7 +108,7 @@ She is associated with the planet Saturn and her flower is the Kṛṣṇa kamal
 
 Next - [Mahāgaurī | Navadurgā - Part 8](/blog/mahagauri)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

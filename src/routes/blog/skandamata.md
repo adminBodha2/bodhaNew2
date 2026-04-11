@@ -43,7 +43,7 @@ This article is Part 5 in the Navadurgā series, describing the fifth of the Nav
 * [Part 3 on Candraghaṇṭā Devī](/blog/chandraghanta)
 * [Part 4 on Kūṣmāṇḍā Devī](/blog/kushmanda)
 
-#### || Pañcamaṃ Skandamātā Iti ||
+## || Pañcamaṃ Skandamātā Iti ||
 
 >सिंहासनगता नित्यम्  
 >पद्माश्रितकरद्वया ।  
@@ -98,7 +98,7 @@ This pañcamī, may we attain purification of mind, ability to nurture and prote
 
 Next - [Kātyāyanī | Navadurgā - Part 6](/blog/katyayani)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

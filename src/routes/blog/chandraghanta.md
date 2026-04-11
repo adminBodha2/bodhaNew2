@@ -38,7 +38,7 @@ words: "1141"
 
 This is the third article in the Navadurgā series, describing the third of the Navadurgā Devīs, who is worshiped on the tṛtīya tithi, Devī Candraghaṇṭā. Part 1 on Śailaputrī Devī can be accessed [here](/blog/shailaputri) and Part 2 on Brahmacāriṇī Devī [here](/blog/brahmacharini).
 
-#### || Tṛtīyaṃ Candraghaṇṭā Iti ||
+## || Tṛtīyaṃ Candraghaṇṭā Iti ||
 
 >पिण्डजप्रवरारूढा  
 >चन्दकोपास्त्रकैर्युता ।  
@@ -95,7 +95,7 @@ This tṛtīya, may we attain fearlessness and sheer strength, power, through th
 
 Next - [Kūṣmāṇḍā | Navadurgā - Part 4](/blog/kushmanda)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

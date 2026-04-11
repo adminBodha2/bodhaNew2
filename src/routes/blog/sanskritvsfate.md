@@ -13,7 +13,7 @@ excerpt: The battle between Sanskṛta and FATE languages (Farsi, Arabic, Turkis
 words: "3450"
 ---
 
-#### The Śiva-Śakti of Language
+## The Śiva-Śakti of Language
 
 “I speak Hindī” – millions from north India would say this. But how true is that? Can they really speak Hindī? Do they speak Hindī? If we observe what we speak and how we speak then we will find that we are practically speaking English or some other language by using the grammar of Hindī. All our nouns, adjectives and adverbs have become either English or Farsi, Arabic, Turkish or Urdu. The same is true about any other Indian language including Gujarati, Telugu, Kannada, Bangla etc.
 
@@ -27,7 +27,7 @@ When did this change and how; and what impact did it have on Bhāratīya civiliz
 
 The good thing is that our grammar is still our own. The Śakti element of our languages is still intact. Svarṇānjali is an effort to recombine the Śiva and Śakti elements of our languages. To understand that more deeply, we need to take a look at some historical aspects of the problem.
 
-#### A Beautiful Continuum
+## A Beautiful Continuum
 
 Language is not just a means of communication; it is the carrier of culture and civilization. It contains the seeds of our history; the seeds of our philosophy; and the identity of our civilization. Language is most central to our cultural consciousness. In Bhāratavarṣa, the land of Sanātana dharma, the status of language has been even higher. Out of the six vedāṅga, four are related directly to language. In our culture, nāma is primary, not rūpa. Language is not just a carrier of knowledge. We have the concept of  śabdabrahma, where language itself is knowledge. The chanting of mantras can reveal the knowledge which is hidden inside words. The entire Indian Knowledge System is based on this concept.
 
@@ -43,7 +43,7 @@ This process became faster rather than slower after the independence of India, a
 
 The continuum between the principle and the manifestation in Indian languages broke down.
 
-#### Language and Dharmic Consciousness
+## Language and Dharmic Consciousness
 
 There is a deep connection between a language and the culture in which it evolved. And it is not only the language which owes to culture; culture owes to the language too. Some thoughts, some metaphors and core ideas of a civilization and culture are only possible to be conveyed in the words of a language which co-evolved with the native culture. Once that language disappears it is not just the loss of a medium, but also the loss of an entire thought system –**linguicide is akin to ethnocide**.
 
@@ -57,7 +57,7 @@ One can attempt to call ‘ṛta’ as ‘cosmic rhythm’, but **can any phrase
 
 ‘Nāgarika’ means someone who has interests in all the arts, like a rasikā, and who remains in the city, and while enjoying all these arts also takes care that they are nourished and protected. **Can the word ‘citizen’ and its dry notification of the place of dwelling of a person convey what the word ‘nāgarika’ is capable of conveying?**
 
-#### Language and Creativity
+## Language and Creativity
 
 Language is deeply connected to the process of creativity. Man became man, when he discovered language and started cogitating on deeper and more abstract problems related to life, existence and culture. A regional language is deeply intimate with the culture, society, politics, food and all other aspects of human culture of the people inhabiting that linguistic and cultural space and the metaphors and idioms that come out in a regional language are capable of expressing the peculiarities and uniqueness of those people and culture. Such a language is capable of conveying deep messages in short metaphors, as the connection with that audio-visual and mental image is instant in the users of that language.
 
@@ -71,7 +71,7 @@ The English language for example has many positive notes connected to summers wh
 
 All these examples show that by replacing Indian languages or Sanskṛta words in Indian languages would kill the very soul of Bhāratīya culture and civilization. If we want to preserve our identity then we need to nourish regional and local languages. Our creativity depends upon the vitality of our regional languages and their Sanskṛta Niṣṭha vocabulary. Replacing them with English or FAT words will only result in the death of our creativity.
 
-#### How Sanskṛta helps Dialects evolve into Languages
+## How Sanskṛta helps Dialects evolve into Languages
 
 A dialect becomes a language when words and phrases for conveying the greatest of philosophical principles are created or imported and when great literature is written in that language. **In India this process of vernacular languages becoming classical languages was overseen by Devabhāṣā Sanskṛta which provided the ready-made vocabulary for conveying some of the most fundamental ideas universal to all over Bhāratīya cultural regions, whether the language in question was Gujarati, Bangla, Telugu or Hindī**.
 
@@ -85,7 +85,7 @@ The battle between Sanskṛta and FATE languages for the domination of the Śiva
 
 The victory of English or any other colonial language like Farsi, Arabic, Turkish or Urdu would signal, on the other hand, a bleak future where our souls, through the changing character of our languages will be available to conversion to alien ideas and religions; where the Śiva tattva of our languages will be lost; where all our languages and regions will fight with each other in a mutually destructive cultural war; and where the creative genius of this great land will die as its kṣetrīya languages die a slow death under the onslaught of English and FATE languages.
 
-#### The Need for Svarṇānjali
+## The Need for Svarṇānjali
 
 But things are not so bad. The grammar of our languages is still alive. The structure that we use is still Indic, it is still Sanātana. From the Hindū point of view, the Śakti tattva of our languages, the manifestation is still our own, and from here we can make a start and bring back the Indic seed/ principle back to our languages.
 
@@ -104,7 +104,7 @@ Svarṇānjali  aims to achieve:
 - **To look at Hindī literature and Indian arts from a Hindū perspective** – The third goal of Svarṇānjali  is to revisit literature, arts, drama, architecture, sculpture and cinema from a deep Hindū perspective.
 - **To aestheticize life** – The last goal is to discuss individual problems and perspectives from the eye of Hindū aesthetics and in the process give them an elevating and uplifting experience which will also be cathartic.
 
-#### The Tattva of Svarṇānjali
+## The Tattva of Svarṇānjali
 
 Hindī literature will be the main focus on Svarṇānjali in its inaugural season. We will discuss particular works, authors, eras of Hindī literature from the point of view of Hindū aesthetics.
 
@@ -118,7 +118,7 @@ Cinema is also a great carrier of public consciousness. Svarṇānjali  will dis
 
 **Svarṇānjali  will do a pūrva pakṣa of Western art from a Hindū aesthetic perspective.** So far only Hindū art has been analyzed from the point of view of Western aesthetics, but Svarṇānjali  seeks to reverse this and start a new tradition of looking at Western art from a Hindū point of view.
 
-#### The Prism of Svarṇānjali
+## The Prism of Svarṇānjali
 
 Hindū culture respects the connoisseur as much as the artist. A rasikā  is someone who takes rasa, ānanda(high pleasure) in arts and in general in life. **Hindū civilization is neither one to reject pleasure seeking completely and turn into a penal code of dos and don'ts, nor is it a civilization which is limited to hedonistic pleasure seeking**. Instead it has found a middle path of leading its followers to the highest path of knowledge while enjoying what the world has to offer. Here, a rasikā can also be a mumukṣu, one who wants to proceed on the path of knowledge.
 

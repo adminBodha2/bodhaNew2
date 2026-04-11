@@ -17,7 +17,7 @@ When thinking of what is fundamentally different between a _Hindu_ worldview and
 
 The seeming difference of a monotheistic conception vs. a polytheistic one is relatively superficial, in that it more describes an outcome of the fundamental than the fundamental itself. But deeper within, it elides the occurrence in one a healthy comfort with the very idea of multiplicity, and in the other an existential antagonism to it. This difference reveals itself beyond theological windows - for instance in the discipline of history.
 
-#### On the Multiplicity of Time
+## On the Multiplicity of Time
 
 Stalwarts such as Prof. Balagangadhara, Dr. Adluri and Dr. Bagchee have detailed how contemporary enterprises such as Indology and philology are stymied by a uni-linear notion of time, itself derived from the historicism that was necessary to uphold the Judeo-Christian worldview. How this happens can be understood as a series of steps human trajectory has taken in the past ~2000 years.
 
@@ -38,7 +38,7 @@ This fundamental difference in how time and the past are understood creates a co
 
 That emphasis on 'really' points to an even deeper difference in the Hindu and Abrahamic worldviews. A difference in core metaphysics. It reiterates the rift that is perceivable at more symptomatic layers as monism vs. multiplicity. And it is of specific concern in this essay because it helps reveal Hinduism's essential difference with even a range of secular, modern -isms, as we will see.
 
-#### The Rift in Core Metaphysics
+## The Rift in Core Metaphysics
 
 For the Abrahamic paradigm, the singular, linear view of time has second-order implications.
 
@@ -62,7 +62,7 @@ We do not live only once - we are born again and again, and the consequence of d
 
 This difference in a single-life metaphysics and a multiple-life metaphysics explains Hinduism's divergence from the modern -isms: capitalism, communism, atheism, scientism, rationalism, materialism, etc.
 
-#### The Single-life Metaphysics of Modernity
+## The Single-life Metaphysics of Modernity
 
 Whether explicitly or implicitly, the modern -isms are premised on the 'one life, everything happens only once paradigm'. Capitalism and communism may be non-theological, but both implicitly believe in a material, objective reality with 1) a discernible past, and 2) a future we can create. And both are dangerously accelerationist. Communism is inherently disruptive, for its eschatology requires the revolution of the proletariat and the collapse of incumbent order. Without being theological it ends up with the same incidence of eschatology becoming teleology.  
 

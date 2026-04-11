@@ -28,14 +28,14 @@ Some time after this period arrive on the scene the Kuru-Bhāratas, and among th
 
 ##### What happened in between3?
 
-#### Rāma. The Avātāra in You
+## Rāma. The Avātāra in You
 Rāma – *ram kartari ghañ ṇa vā* (रम् कर्तरि घञ् ण वा), which is to say that the word *‘rāma’* derives from the root √ram meaning playing, sporting, delighting, or as Pāṇini put it- *krīḍāyām.* In yet another display of Dharma’s multi-level coherence, the meaning of one avatāra’s name is but what the consequent avatāra (Kṛṣṇa) is celebrated for- one who plays, sports, delights. Who brings pleasure and rejoices.
 
 Our general inclination is to deify the avatāras such that they are exalted beyond laukika reach, much like an Abrahamic god- to be prayed to and kept separate from worldly considerations. But this belies the meaning of the term *‘avataraṇa,’* which is ‘to descend’ or ‘come down.’ Descend or come down where? Into the laukika realm, of course- where play out all of ṛta’s motions and rhythms. Where exist you and I- the Mind bound in matter. Where existed Arjuna and Sudās, eons ago.
 
 We may concede it to be a semantic matter- whether the avataraṇa or descent happened into the personage of a ‘real’ human being named Rāma, or whether the notion is entirely transcendent and cannot be shaped into mortal articulation. But a descent happened nonetheless, and this particular descent was memorialized for eternity by our civilization. As a descent of Viṣṇu, the Supreme Being and Sustainer of Ṛta, it is certainly to be exalted and deified. But from the Vedāntika vantage it is also the descent of Brahman into Ātman, and the two are but the same. **The avatāra of Rāma is thus also an avataraṇa into You.** It is the core Vedic archetype playing itself out all over again, the same fractal at a different level. This forms the premise for an ādhyātmika interpretation of the Rāmāyaṇa.
 
-#### The Ādhyātmika View
+## The Ādhyātmika View
 An unfortunate consequence of historical trajectory has been the atrophying of our civilizational mind-map against the expanse of the Anglicized and Judeo-Christian worldview. This is why while our ancestors conceived of a variety that included Bhagavān, Devatā, Īśvara to name a few, we equate all of them today to the singular ‘god.’ Similarly is soul/spirit equated to ‘ātmā,’ and spiritual to ādhyātmika. These may well be convenient placeholders for general discourse, but we must not forget the nuances that create a difference between our civilizational paradigm and the one prevalent today.
 
 Adhyātma – *adhi kṛt ātma* – ‘the self placed in front’. Beyond just ‘spiritual,’ which implies no real agency per se, ‘ādhyātmika’ is to be understood as the taking of initiative, an adoption of the position of one’s own purohita- conductor of the yajña. An ādhyātmika approach is one where we take conscious control of our mind and actions, thus placing the self in lead. It is this approach under which Sri Aurobindo revealed a whole new model of the Ṛgveda to us, which turned hitherto obscure and out of reach mantras into a manual for personal psychology that can very tangibly elevate our consciousness, if but we take the conscious decision to pursue the route. And it is not an exclusive or supreme paradigm, it is but one among many that can be used to approach the ancient texts (others being adhibhautika and adhidaivika).
@@ -46,7 +46,7 @@ In the laukika model there is much that lines up conveniently here. Bharata puro
 
 In other words, the “ādhyātmika” or “yogika” initiation that Vasiṣṭha Maitravaruṇi conducts for Sudās is likely inherited from practices then prevalent in the Gangetic belt. And there is nothing controversial really in such a suggestion. Dharma is sanātana, but human activities follow temporally across the worldly realm and cannot be removed from laukika realities. What we call Dharma/Hinduism today is the gradual but sure synthesis of many subcontinental practices under a unifying umbrella and imperative. That umbrella is of the Brahman and Ātman, and the imperative is of transcending the limitations of the latter to (re)unify with the former. In the ādhyātmika model then, Rāma’ story is a manual for personal transcendence.
 
-#### Adhyātma Rāmāyaṇa
+## Adhyātma Rāmāyaṇa
 This interpretation of the tale comes to us, not surprisingly, from the same tradition where the Veda, Mahābhārata and Purāṇas spring from – Veda Vyāsa. It is found embedded in the Brahmāṇḍa Purāṇa and constitutes more than 1/3rd of the text. Here Rāma is represented as Brahman, and his tale is elevated to an instruction for us to view our own lives as the ātma’s Vedāntika journey back to the Brahman. As is to be expected of multi-level coherence, the model holds for each fractal in the maṇḍala. With the *‘avatarita Rāma,’* which is the Brahman descended into the Ātman, ‘Rāma’s Ayaṇa’ is the Ātman’s Journey. And in this journey the Ātman is taken from ignorance to light, from tamas to jyoti, by vanquishing the Asura within.
 
 What is the Asura within? Ego, or ahaṃkāra – which is but the flaw we find in Rāvaṇa, otherwise a devout Śiva bhakta. Rāvaṇa’s arrogance is in this model a metaphor for the ego within us, which leads the Ātman not towards light but towards ignorance – further away from Brahman. And in this journey Rāma (or the Ātman) is accompanied by Sītā- the Mind, or Manas. It is the Mind that one must reclaim from arrogance and ego, in order to climb higher in the journey towards Brahman.
@@ -65,7 +65,7 @@ We see then why Rāma’s celebration is a celebration of Light. For Light in th
 
 ##### We celebrate the return of Rāma with a Festival of Lights, for if his journey- Rāma’s Ayaṇa- is recreated within us, it generates within us the Supreme Light. His journey within us is the journey from untruth to truth. From Darkness to Light. It is the rising of Agni from earth to sky, the ultimate union, or Yoga. It is what the Veda is a secret into.
 
-#### Endnotes
+## Endnotes
 
 1. By Pāṇini’s rules of grammar, brahman = √bṛh + manin and ātman = √at + maniṇ, where √bṛh and √at are dhātus, and manin/maniṇ is an affix (pratyaya). √bṛh is often replaced by √bṛṃh to mean still the same- grow, increase, outpour; and √at means continual, pervading, binding. In other words brahman is an outpouring, while ātman is continual outpouring bound. It is no surprise that some of our greatest grammarians were also perceptive Vedāntika ṛṣis.  
 2. At the laukika level of Ṛgvedic interpretation for example, the dāśarājña mantras (Battle of Ten Kings) are a quasi-historical account of Sudās’ campaigns against enemy tribes. In the ādhyātmika interpretation of the same account, it is all part of purohita Vasiṣṭha Maitrāvaruṇi’s initiation of Sudās into the yogika practice.  

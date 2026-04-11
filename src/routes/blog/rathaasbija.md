@@ -13,7 +13,7 @@ excerpt: Dharma is sanātana, but civilizational emergence follows a worldly tra
 words: "2276"
 ---
 
-#### Visions of the Maṇḍala
+## Visions of the Maṇḍala
 A maṇḍala has no beginning and no end- like the ouroboros snake that eats its own tail. This is why Dharma is qualified as Sanātana, and why ancient ṛṣis spoke of the greats before them, forming a line that went back to the very origin of consciousness and Mind- to Brahmā. Intuitions behind a “fractal maṇḍala” framing have come to many before. In his profound and must-read article at Prāgyatā, Kiran Varanasi describes civilizational Bhārata as an “Infinite Lotus.” He writes on infinity, nested levels of meaning, fractals, the ouroboros snake and more, explaining why an Infinite Lotus is symbolic of our civilization. In this talk at the BLF 2016 (beginning at 06:30), Shri Rajiv Malhotra explains how in India **“the same civilization is encoded in multiple ways, just like the same DNA is encoded in every leaf of a tree.”** Shri Aurobindo too intuited this about Bhārata- arguably better than anyone ever has- and observed:
 
 > “The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge- often obscured or overlaid, seizes on old imperfect clues and is led by them to new discoveries.”
@@ -24,7 +24,7 @@ Dharma, or the vast body of multi-level (fractal) coherence (maṇḍala) that o
 
 One such bīja is ratha, or रथ
 
-#### Unpacking Ratha as a Civilizational Seed
+## Unpacking Ratha as a Civilizational Seed
 We begin with the material, the laukika, where our ancestors at some stage in their trajectory had a revolutionary insight- they could domesticate animals and use them for labor! On a parallel trajectory, they realized the mobility upgrade in placing round things below what they moved- i.e., the wheel. With the convergence of these discrete revolutions was born a historical milestone- the animal pulled wagon. The ratha.
 
 Those “educated” in history will already be surprised. The ratha? Isn’t that the classic chariot, the one used in war and pulled by stallions? A small example of otherwise is in Ṛgveda maṇḍala 6 (among the earliest), sūkta 27, where the word ratha is translated by most scholars as wagon. This makes sense, for the ratha in question is being pulled by oxen. We may concede that, as can happen with language over entrenchment and civilizational flowering, “ratha” was eventually reserved for a specific type, while newer words for “wagon” found generic carriage. But this was a technical digression for the pedantically curious, and we may return to the ratha. An animal pulled wagon. A new technology.
@@ -47,7 +47,7 @@ But all of that was in the laukika. In the transcendent, in the felt-experience 
 
 A formulation of the Self which, if we let others narrate our history- was conceived by our ancestors during their time “speaking IE languages, incorporating horses and chariots, composing nature hymns” and basically nomading across a large swathe of Eurasia! Laughable, but we move on. A single word, one object, a microcosm of a fractal, can reach full bloom in Dharma and yet yield the same civilizational truths. Encoded this way, the bīja can then be planted- and an infinite lotus thus blooms. Vṛkṣa from bīja, bīja from vṛḳṣa. From one, the other arises. But from which? Who knows…
 
-#### The Bīja, Embedded
+## The Bīja, Embedded
 In the Ṛgveda, the ratha led by a team of stallions, the aśvas, and Indra as the driver, is the raging symbol of intent- of you, the Self. The stallions, symbols of impulse and hasty action, are the Maruts- Indra’s ever-ready assistants. The aśvas can be yoked, just as the Maruts are at Indra’s command. The Ṛgvedic ratha is a memetic call-to-action, a way for our ancestors to inspire us to yoke the stallion, race the chariot, and triumph like Indra. Ṛgvedic names such as Sudās- who invoke Indra- are not yet equipped with horse-chariots. But they already imagine their hero to be such. On the laukika plane, a people familiar with aśva-pulled chariots would naturally aspire to faster, stronger, more durable aśvas. But only a consciousness for technology as intent materialized, and its drivers symbolic of our impulses and indecisions, stands chance of avoiding a never-ending race for still faster, still stronger, still more durable.
 
 In the Mahābhārata, the archetypal motif is of Arjuna, a son of Indra. But unlike the previous iterations of ratha where the Self is the driver, his chariot is driven by a companion, a sārathi, Kṛṣṇa, or Viṣṇu, or an avatāra. The maṇḍala blooms just the same. Arjuna must defeat clouds of the mind, he must yoke determination and courage, he must uphold Dharma, he must live the victory of Indra in his own life. His is the hero’s journey, which was the celebrated journey of Indra, and could also be the story of You. And his task is simpler, if in the old model of a chariot he lets in a new companion, a sārathi. Similarly can the Self realize Viṣṇu, the Transcendent and Immanent Mind behind it all. But the journey is still the same. As is Arjuna, so are you. A single bīja, the simple ratha, fully embedded in the maṇḍala is infinitely adaptable. There is no one singular way for the Self to reign the chariot, there are at least two.

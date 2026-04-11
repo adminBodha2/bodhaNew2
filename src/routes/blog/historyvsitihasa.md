@@ -26,15 +26,15 @@ Indeed, this is what (at least the) elder generations of Indians do on a daily b
 
 **Pūru, Anu, Yadu, Druhyu, Turvaśa, Bharata, Kuru.** The first five here are commonly considered the pañca-gaṇa of the Ṛgveda (though this is never explicitly stated in it), and in Paurāṇika testimony they spring from the five sons of cakravartin Yayati Nāhuṣya. Of the Bharatas and the Kurus (or Kauravas), there is no introduction needed. These are all important names, and indeed we consider them to be real tribes of an Indian past. It is these Bharatas, descended from the cakravartin patriarch of the same name, that lend to our nation its name- Bhārata. Ṛgvedic testimony on these tribes gives important information on issues like Indo-European origins and timelines. But let us reference that in the Pauraṇika schema, names such as Indra, Manu, Kaśyapa and more do not refer to a specific individual but are titles occupied by different people across the ages. In other words, they are nominal. Could it be so for these names as well? We find answers in the dhātubhiḥ vyutpattiḥ, or etymology from dhātus.
 
-#### Pūru
+## Pūru
 From the root √pū, to which Pāṇini assigns the evocation of cleansing, or purifying- pāvane. The same evocation also yields roots √pūj and √pur, where the latter means ‘to be ahead’ or ‘go in front’ (cleansing, or consecration of land, went in front of its inhabitation)- also giving the word purohita. Rooted thus, the word ‘pūru’ refers to someone who purifies, who cleanses, and who goes in front. The youngest son of Yayati, it was Pūru who ‘was placed ahead’ and given the central part of his “kingdom,” which broadly lay between the Sarasvatī and Yamunā rivers. There exists an elaborate Paurāṇika story on the generosity of Pūru that won him the primary region despite being the youngest.
 
 In turn, Pūru’s descendants multiplied in the generations to come- even the later Bharatas and Kurus traced descent from him. How coincidental is it, that civilizationally and ontologically formative words like puruṣa, purohita, pūjā and pura share root with a civilizationally formative tribe?[^1] Or is it no coincidence at all? Especially when we notice that the word pūru implies a purifier, a cleanser- someone who used fire, agni, to clear and consecrate a land for inhabitation. It appears that Pūru and the Pūrus may be entirely a descriptive nominal- not real names at all.
 
-#### Anu
+## Anu
 From the root √an, which evokes breathing, or something ongoing- prāṇane. ‘Anu’ is translated as that which ‘breathes alongside,’ ‘is near to,’ or ‘has a share.’ Ṛgvedic examination (a la Talageri) reveals the Pūrus to be culturally most aligned to the Anu-s, or Ānavas. Both considered fire sacred, and both embarked upon a path of ritual hymnology. In fact, Talageri finds reason to speculate that the Bhṛgus[^2], a formative ṛṣi clan, were originally aligned to the Ānavas- with the clan of Jamadagni Bhārgava defecting to the Pūru side. Again- how coincidental that among all the Ṛgvedic tribes, the ones appearing relatively most aligned- or sharing ancient origins- to the Puru-Bharatas are also named commensurately! ‘Ānava’ yields the meaning of kind to men, or benevolent. A ruler in the Ānava line, Sivi Auśinara, is remembered in the Purāṇas as a cakravartin, with elaborate tales of his charity and piety. And in the Ṛgveda, Bharadvāja Bṛhaspati lauds the generosity of Abhyavartin Cāyamāna- another Ānava.
 
-#### Yadu
+## Yadu
 Some ṛcas in the Ṛgveda refer to a people named Yakṣu, which most translations equate to Yadu. If so, we may connect Yadu to the root √yakṣ, and without it to the root √yaj alone, the latter of which lends to us a core civilisational ontic- yajña. Both roots evoke worship, consecration, decoration- devapūja, sangatikaraṇa, dāneṣu, bhakṣana.
 
 We also have the word yadi, which evokes who, which, if, how, why kind of questions. In the Purāṇas, the Yakṣas are an ancient people with wavering allegiances. In some wars they fight alongside Daityas, in others they rally for the Ādityas. Similar ambiguity is found for Yadus in the Ṛgveda, especially in the dāśarājña ṛcas as chronicled here. In RV 7-18-6 is mention of Puroḍā Yakṣu, and translations cannot agree on whether it’s the name of a person or refers to a tribe, or whether Yakṣu is a play on Yadu. There is also disagreement on whether the reference is to an enemy or an ally of Sudās. Trivedi’s Hindi translation asserts amity, and even finds the ṛca to mean that Yadu(s) were attempting to negotiate a truce between Sudās and his enemies. We hope that the pattern is now becoming evident.
@@ -43,24 +43,24 @@ We also have the word yadi, which evokes who, which, if, how, why kind of questi
 
 Pūrus were not a people literally named such[^3], but rather the people who first purified, or consecrated, in Indian civilizational memory[^4]. The Ānavas were those who, at least at the earliest reaches of this memory, walked alongside the Pūrus. This supports Talageri’s speculations that the Harappan phase of Indian civilization was peopled by the Pūrus and Ānavas. Yadus were the third people in the mix. They too had rituals of a kind, they too conducted devapūjā, but of their actual political alliances little could be concluded. Note in this context that even Kṛṣṇa Yādava of the Mahābhārata era first discouraged his people from adopting Vedic fire ritualism- instead turning them to attachment to the hills, forest and groves (this changed after his tutelage under Sandīpani was complete). The onomatopoeia becomes unmistakable after we examine the next two names under similar methodology.
 
-#### Druhyu, Turvaśa
+## Druhyu, Turvaśa
 From the roots √dru and √turv respectively. Both are evocative of violence or malice- hiṃsā, jighāṃsā. The Druhyus are ‘enemies’ in Indian memory wherever you look, and throughout the period of Ṛgvedic history are the frontal tribe that protagonists are warring against. It is Druhyus that Māndhātṛ pushes out of India, and it is Druhyus that Sudās conclusively puts out of the pale of Indian geography- both being instrumental waves that spread Indo-European out of India. The Dasyus that are maligned in RV are Druhyu ‘priests,’ and none of their leaders find prominent mention in the Paurāṇika record.
 
 Said to ‘come from far shores’ or from ‘shores afar,’ the Turvaśas too never really appear an allied or harmless tribe. When combined with the root √aś, evocative of union- saṅghāte, we sense a paradox in turv + aś, one that reflects in their frequent pairing with the Yadus. Not for nothing does the Jamison-Brereton translation declare- “the shifting alliances of the participants in the Ten Kings battle are notorious and well-discussed.” By this point we must withdraw our skepticism and concede that these are not coincidences. The names we visit are nominal and do not seem to be proper nouns, culminating in the next realization.
 
-#### Bharata
+## Bharata
 From the root √bhṛ, meaning to carry or sustain- bharaṇa and dharaṇa. ie, carry the agni or sustain the dharma, or take forward the cardinal ontology and ritualplex of Indian civilization- to be bhāratas. ‘Bharaṭa’ also means a potter, or one who shapes, evoking the shaping of culture, and as the Bharatas claimed descent from the Pūrus, we find a common metaphor for puruṣa-prakṛti in that of clay and pot[^5]. A recursive and ontological onomatopoeia is writ large in the name Bharata, as it is also in the earliest purohitas of the tribe- Bṛhaspatis. As asynchronous as the phraseology is, Bharatas are the ‘people of the book’ in the Ṛgveda, the ones who invite and establish agni upon the Sarasvatī, and the victorious protagonists of the dāśarājña. Later kings in their line are cakravartins in the Purāṇas, and both Kauravas and Pāṇḍavas trace descent from them. Though the matter is obvious by now, for rhythmic consonance with previous sections we remark-
 
 ##### How coincidental that among all the Ṛgvedic tribes, the ones that clearly entrenched Vedic ritualism- itself a descent from the developing dharma of previous manvantaras, via the Pūrus- are also named commensurately.
 
-#### Kuru
+## Kuru
 Kuru comes from the roots √ku and √kur, both evocative of sound or speech- śabde. Alternatively, it is derived from √kṛ, which means do, or act- karaṇe. So what is it that the Kurus did exactly? For one, they ‘effected’ (kṛta) a wide-reaching political form to the emergent civilization previously ushered by Pūrus and Bharatas. A Kuru branch reached as far as modern Bihar, establishing the janapada/proto-janapada of Magadha where civilization turned to empire centuries later (Mauryas and Guptas). Some branches migrated north, establishing linguistic and cultural roots in a land thus called Uttarakuru- the final wave of IE dispersals out of India and the staging ground for IE ‘invasion’ of Europe.
 
 But also established during the Kuru period was śikṣā- organized Vedic learning and transmission, and pada pāṭha- the systematic breakdown of Vedic ṛcas into words- or śabdas. The Pūrus and Bharatas ensured a crystallization of tradition preceding them, and the Kurus gave the binding glue in the form of the science of sound and precise memorization of sacred knowledge. More than anything else, this is what they did- karaṇa of śabda. What other name would we call them then, if not kuru- the doers. We may now compare two separate and different accounts to recapitulate that-
 
 ##### History is Ontic, Itihāsa Ontologic
 
-#### A (short and selected) History of Ancient India
+## A (short and selected) History of Ancient India
 In the earliest phase of the current era, a tribe descended from Pūru and bearing his name rose to political prominence near the Sarasvatī and Yamunā rivers. Their branches multiplied, and they both married into and warred with other tribes such as Aikṣvākus and Yadus.
 
 Losing this stature after the campaigns of Māndhātṛ, they found resurgence through Duṣyaṅta. In a tale of descent one is allowed to be skeptical of, a son named Bharata became ruler after Duṣyaṅta, and rose to cakravartin fame.
@@ -71,7 +71,7 @@ In their rise, the Bharatas also had to contend among each other, and a line sub
 
 The above is a listing of things that happened, and of groups or people involved in these things- ontic types.
 
-#### A (detailed but selected) Itihāsa of Bhārata:
+## A (detailed but selected) Itihāsa of Bhārata:
 Saṃskṛti rises and falls. Dharma is sanātana but undergoes yugas unending. Its re-inception begins anew epoch on epoch, and in each epoch the primeval remembrance to establish the civilizational focus on Mind, or Intent, or Mānasa, is thus called Manu.
 
 We speak not of institution nor of the the top-down effect of organization, but the bottom-up emergence of bhāratīya sāṃskṛtika cetanā- Indian civilizational consciousness. So of course the Manus established no religion- they simply embodied a continuing cultural ontology. And of course of those that succeeded them many were not in subscription to this culture.
@@ -106,7 +106,7 @@ The Purāṇas declare- *“Origin and annihilation occur continuously among liv
 
 For if you notice, you find that the jaundiced king in our greatest epic is called Pāṇḍu (meaning yellowish, pale), and the ‘compiler’ of said epic recorded his own presence as Vyāsa (meaning assembler, arranger). Itihāsa was never giving us historia, it was giving us an ontological account.
 
-###### Endnotes:
+### Endnotes:
 [^1]: Referring to a chronological framework developed [here](https://www.indica.today/research/puranas-as-source-for-chronology/), it can even be speculated that Pūrus were the lead tribe to usher the Sothi-Siswal and pre-Harappan archaeological periods. That is, they were in front of material civilisational progress.  
 [^2]: Bhṛgu stems from the root √bhṛ, evoking to sustain, carry or nourish- bharaṇa, dhāraṇa, poṣaṇa. This root builds to the word bhṛg, considered onomatopoeic for the crackling sound of fire, which lends the name Bhṛgu. He is credited in the Ṛgveda as introducing fire to the ārya people. So the ṛṣi who introduced the Vedic form of fire ritualism happened to be named after the onomatopoeic for the sound of fire? Coincidental again…  
 [^3]: This helps debunk the anyway sketchy association of a much later Porus to Pūru. By any interpretation of the Paurāṇika record, the Pūru name was of negligible prominence even by the time of Kurus and Pāṇḍavas, let alone another 1200-1500 years after them.  

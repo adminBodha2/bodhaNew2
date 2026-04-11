@@ -15,7 +15,7 @@ words: "3969"
 
 The following is some elaborate freethinking on history, deep history, and the macro-historic trajectories of species, civilization and consciousness. I am brought to these views varyingly by hard evidence, leading synchronisms, reasoning, furious self-debating, bold speculation, and everything in between. The idea is to distill a paradigm of history, formed over the past few decades of engagement with it. To begin-
 
-#### It Exists
+## It Exists
 
 Yes, a linear view of time and history is now laughably outdated. 	
 
@@ -46,7 +46,7 @@ As might be obvious to the keen reader by now, this has a deep consequence on is
 1. On the matter of Vaidika 'history,' and the affront it allegedly commits to the apauruṣeya and anādi nature of Vaidika knowledge.
 2. On the matter of 'dating' Rāma and Kṛṣṇa, allegedly disrespectful to the divinity and avatāra stature they carry within Hindu tradition.
 
-#### How Sanātana, if History?
+## How Sanātana, if History?
 
 Resolving the above 2 conundrums is in fact remarkably simple, for they are no conundrums at all. To begin, since we are not investigating on the plank of Reality A, we are making no comments on belief, devotion, cultural wisdom, ontology or praxis. Intellectual honesty demands that any queries approaching these must be directed to śāstrika experts or the wisdom of self-realized seers, or failing these - to the altar of humility at the least.
 
@@ -68,7 +68,7 @@ So - projects to date the epics, or assertions of specific janmatithis and chron
 
 So history exists, and Hindu history exists as much as any other. But there's a problem-  
 
-#### We Know Nothing
+## We Know Nothing
 
 Here's something most curious. Broadly put, the modern homo sapiens (us) has been around for at least 3,00,000 years. ‘Modern' homo sapiens implies exactly as much cognitive, emotional, and reasoning ability as any of us might muster today; and our kind of intelligent ape has been roaming earth for a very long time. Further, we are likely not even the first human beings. Ancestral species before us might have been fully sapient as well - implying as much complexity of individual and society as exists in us. Now, consider the theories forwarded for how we might have invented the wheel and organized agriculture -  
 
@@ -92,7 +92,7 @@ This point is important, because speculations into past eras of humanity, wiped 
 
 But in reality, humanity may have indeed witnessed multiple eras and epochs, some scoring high on various scales of complexity, culture, civilization, and material prosperity. While this does not allow us to speculate carelessly and fantastically, it forces us to be humble in our dismissals of bold new discoveries, or at least less arrogant in our assertions of ‘Holocene myopia'.
 
-#### What I Think I Know
+## What I Think I Know
 
 Human history runs deep, and has seen several cycles of civilizational rise and fall. In fact, civilization is NOT a scaling problem - it is a sustaining problem. Consequently, human inquiries into reality and streams of knowledge are indeed ‘sanātana' - running so inscrutably back in time that they seem to have ‘always existed', i.e., anādi and apauruṣeya.  
 
@@ -110,7 +110,7 @@ We can understand better the Paurāṇika Indians' concerns over rāja dharma an
 
 ##### Without a sincere nod to the FELT REALITY of Reality B, pray, what songs would we sing when we reconvene in Reality A?  
 
-#### Out of India, and Back to It
+## Out of India, and Back to It
 
 I'm fascinated by the 'others' - ancient high civilizations that no longer exist, but would have once been contemporaneous to periods of Indian civilization. Imaginations of Egyptian Book of Dead readers conversing with austere Indian Vedāntins are all the more colored by the lack of any real details to channel them. What would the first-contacts of those eras have looked like? How did pre-bronze-age caravan riders of Balochistan come to trade lapis lazuli with coastal desert dwellers of Bahrain? What was it about the ancient world, that made the Greeks who learnt of Kṛṣṇa immediately analogize him to Herakles? And what happened with the advent of desert monotheisms that fatefully eradicated this pure essence from the world?
 

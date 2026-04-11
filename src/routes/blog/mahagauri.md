@@ -46,7 +46,7 @@ This article is Part 8 in the Navadurgā series, describing the eighth of the Na
 * [Part 6 on Kātyāyanī Devī](/blog/katyayani)
 * [Part 7 on Kālarātrī Devī](/blog/kalaratri)
 
-#### || *Mahāgauri iti ca Aṣṭamam* ||
+## || *Mahāgauri iti ca Aṣṭamam* ||
 
 >श्वेते वृषे समारूढा  
 >श्वेताम्बरधरा शुचि:।  
@@ -91,7 +91,7 @@ This aṣṭamī, may we gain peace and the ability to endure all experiences - 
 
 Next - [Siddhidātrī | Navadurgā - Part 9](/blog/siddhidatri)
 
-#### References
+## References
 
 1. Śrī Durgā Saptaśatī, Devī Māhātmyam, Mārkaṇḍeya Purāṇa
 2. Navadurgā Stotram

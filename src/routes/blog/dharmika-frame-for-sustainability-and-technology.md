@@ -23,13 +23,13 @@ After generations of war, guided by their gurus, the Ādityas and Daityas come t
 
 We will revisit this frame after a brief detour into Saṃskṛta roots, and how they shape our thinking about these concepts.
 
-#### Our Words for Technology
+## Our Words for Technology
 
 At the root of most Saṃskṛta words for things such as technology, mechanics, and engineering sits the word ‘yantra,’ as found in terms such as yāntriki, yantra-tantra, yantra-vidyā, yantra-jñāna, and more. In the Apte dictionary, ‘yantra’ is defined as ‘that which restrains or fastens, any prop or support.’ The etymology given is of यन्त्र्-अच्, deriving the word from the dhātu √yantr. In the Dhātupāṭha, Śrī Pāṇini defines √yantr as ‘restraining, curbing, checking’ or ‘saṅkocana.’ A further connection can be made with the dhātu √yam, which means ‘checking, curbing, restraining, moving around’ - 	apariveṣaṇe, uparame, pariveṣaṇe. Most literally then, ‘yantra’ translates to ‘an instrument of curbing and restraint.’
 
 This reveals to us a key insight in how Indian thought approaches technology. A yantra in the Indian context is encoded with the evocation of hesitation and restraint. This scales to all words formed from it, including the words for technology listed at the beginning of this section. Contrast this with the current model extant across the globe - move fast and break things, disruptive innovation, accelerationism, and values-agnosticism.
 
-#### Our Words for Sustainability
+## Our Words for Sustainability
 
 When it comes to sustainability, Saṃskṛta equivalents are identifiable based on what aspect of sustainability we wish to evoke. Words such as ‘saṁrakṣaṇa’ highlight the aspect of conservation or preservation, while ‘sthiratā’ evokes stability. There are also words such as ‘samañjasatā,’ ‘yuktajīvanam,’ and ‘dhruvatā’ which evoke balance and stability. But the words that seem to capture the whole of sustainability are ‘dhāraṇīyatā’ and ‘dhāryatā,’ both of which stem from the root √dhṛ, which means ‘holding, being, supporting’ or ‘avasthāne’ and ‘avadhvaṃsane.’ The same root also gives to us the very name for Indic thought and tradition - dharma (धृ-मन्).
 
@@ -39,7 +39,7 @@ Dharma encompasses the notions of tradition, rule, order, and stability. It is b
 
 With these notions for technology and sustainability established, we may visit the Churning of the Ocean in a new light.
 
-#### Samudra Manthana as a Technological Allegory
+## Samudra Manthana as a Technological Allegory
 
 Material technology has limited scope, and it naturally tends towards excess, disharmony, and greed. Left unchecked with the Asuras, the mṛta sañjīvanī vidyā becomes dangerous technology - instrumental in the spread of adharma over dharma. Or given our current frame, the spread of disruptive accelerationism over sustainability and restrained usage.
 
@@ -53,11 +53,11 @@ Emerges from the churning Airāvata, taken by Indra. Emerges Ucchaiśravas, take
 
 We are thus served the following lessons on technology and sustainability through using the Samudra Manthana as a telling allegory:
 
-###### Collaboration is Essential
+### Collaboration is Essential
 
 Progress requires cooperation across diverse perspectives, including opposing ones. This mirrors the Ādityas and Daityas working together despite their differences. In the modern world, all forms of technology are heavily centralized. Oligarchic corporations and individuals own the platforms that seemingly guarantee our freedoms of speech and ability to communicate with each other. Far from a decentralized, collaborative technological society, we accelerate towards a [brave new world](/blog/tightrope) that weaponizes our attentions against us.
 
-###### Ethics Must Guide Innovation
+### Ethics Must Guide Innovation
 
 Like Bṛhaspati’s oversight of the process, modern technological advancements need ethical frameworks to ensure they align with sustainability and the greater good. This is in direct contrast to the modern ‘values-agnostic nihilism’ prevalent in design and creatorship. When we move fast and break things, when we make a virtue out of disruption, we make the cardinal error of thinking that progress is a scaling problem. In reality, all of civilization is a sustaining problem, not a scaling problem. Left on its own, technology is inherently āsurika. It channels intellect, desire, and ambition towards actions that are ultimately adhārmika and unsustainable. To bring dhāryatā into our yāntrikī, we need the ethics of dharma.
 
