@@ -25,7 +25,7 @@
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
 <div class="pbot32">
-	<h5 class="source-serif thin width70 pbot8">
+	<h5 class="source-serif thin width80 pbot8">
 		<i>"The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge- often obscured or overlaid, seizes on old imperfect clues and is led by them to new discoveries."</i>
 	</h5>
 	<cite class="lgrey">- Sri Aurobindo</cite>
@@ -41,10 +41,15 @@
 		</h6>
 	</div>
 </div>
+<img src="/images/key-inspiration.webp" alt="inspiration"/>
 
 <style lang="sass">
 
 cite
 	font-style: normal
+
+img
+	object-fit: cover
+	width: 100%
 
 </style>

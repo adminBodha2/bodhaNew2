@@ -38,7 +38,7 @@
 	metaImage={$metaImage}
 ></Head>
 
-<Parallax imageLink="/images/cover-bigq.webp" />
+<Parallax imageLink="/images/key-bigquestions.webp" />
 <Container>
 	<div class="box-3" id="first">
 		<div class="grid two stacked-4816">

@@ -4,6 +4,7 @@
   import { anveshiFaqs } from '$lib/utils/supabaseClient'
   import autoAnimate from '@formkit/auto-animate'
   import Headerpage from '$lib/comps/pageheader.svelte'
+  import Title from '$lib/comps/page-title.svelte'
   import ChevD from '$lib/icons/chevron-down.svelte'
 
   let faqs:any
@@ -20,10 +21,10 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="column ytop rgap32 ptop64 pbot64">
-  <Headerpage text="Frequently Asked Questions"/>
+<div class="column ytop rgap32">
+	<Title text="Frequently Asked Questions"/>
     {#if faqs && faqs.length > 0}
-      <div class="grid two cgap32 rgap16">
+      <div class="grid two stacked">
         {#each faqs as item, i}
           <button class="blank column ytop rgap4 ta-l xleft acco-box" use:autoAnimate on:click={() => openIndex = openIndex === i ? null : i}>
             <div class="row ycenter cgap8 width100 inside-acco">

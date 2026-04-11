@@ -45,7 +45,7 @@
 				</nav>
 			</div>
 		</aside>
-		<main class="lab-main">
+		<main class="lab-main pbot64">
 			<slot></slot>
 		</main>
 	</div>

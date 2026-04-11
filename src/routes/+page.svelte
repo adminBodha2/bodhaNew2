@@ -267,12 +267,6 @@ img.icon
 	object-fit: contain
 	width: 36px
 
-.marginx
-	@media screen and (min-width: 1025px)
-		height: 80px
-	@media screen and (max-width: 1024px)
-		height: 56px
-
 .features
 	row-gap: 1rem
 	&:hover

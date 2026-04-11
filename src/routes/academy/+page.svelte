@@ -2,10 +2,7 @@
 
   import Container from '$lib/comps/container.svelte'
   import Head from '$lib/comps/headcomponent.svelte'
-  import FB from '$lib/icons/facebook.svelte'
-  import Twitter from '$lib/icons/twitter.svelte'
-  import Insta from '$lib/icons/instagram.svelte'
-  import Linkedin from '$lib/icons/linkedin.svelte'
+import Parallax from '$lib/comps/parallaxhalf.svelte'
   import Title from '$lib/comps/page-title.svelte'
   import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
 
@@ -18,6 +15,7 @@
 
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
+<Parallax imageLink="/images/key-academy.webp" />
 <Container>
 	<div class="box-t andB">
 		<div class="grid two stacked">
