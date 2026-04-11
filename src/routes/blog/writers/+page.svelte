@@ -15,24 +15,18 @@
 </script>
 
 <Container>
-  <div class="box100 ytop column top-pad solo">
-    <div class="row ycenter xbetween borderbot pbot16">
-      <div class="row ycenter cgap8">
-        <small class="blue"><a class="blank" href="/blog">BLOG</a></small>
-        <small class="lgrey">></small>
-        <small><b>WRITERS</b></small>
-      </div>
-      <div class="row ycenter cgap8">
-        <a class="buttonheading" href="/blog">BLOG</a>
-        <a class="buttonheading" href="/blog/tags">TAGS</a>
-      </div>
-    </div>
-    {#if writers && writers.length > 0}
-      <div class="column ptop32 pbot32">
-        {#each writers as item}
-          <h6><a class="heading" href="/blog/writers/{item.writer}">{item.writer}</a></h6>
-        {/each}
-      </div>
-    {/if}
-  </div>
+	<div class="box-t">
+		<div class="row ycenter cgap8">
+			<a class="ftnbtn" href="/blog">BLOG</a>
+			<a class="ftnbtn" href="/blog/writers">WRITERS</a>
+			<a class="ftnbtn" href="/blog/tags">TAGS</a>
+		  </div>
+		  {#if writers && writers.length > 0}
+		  <div class="column">
+			{#each writers as item}
+			  <h6 class="source-serif thin"><a class="heading" href="/blog/writers/{item.writer}">{item.writer}</a></h6>
+			{/each}
+		  </div>
+		{/if}
+	</div>
 </Container>

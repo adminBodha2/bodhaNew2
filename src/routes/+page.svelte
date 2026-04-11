@@ -48,7 +48,7 @@
 		<h5 class="width80 thin source-serif">
 			focused on contemporary issues of cultural concern, to inform core areas of policy with
 			wisdom drawn from Hindu traditions. We catalyze intellectual churn within the Hindu
-			renaissance, advance the case for Indian Knowledge Systems (IKS), and curate cultural experiences of core Hindu institutions such as the temple.
+			renaissance, advance the case for Indian Knowledge Systems (IKS), and curate immersive cultural experiences.
 		</h5>
 		<div class="grid four cgap32 rgap16 ptop32">
 			<div class="column features">
@@ -236,7 +236,7 @@ img.vert
 	object-position: center center
 	@media screen and (min-width: 1025px)
 		width: 100%
-		height: 360px
+		height: 300px
 	@media screen and (max-width: 1024px)
 		width: 100%
 		height: 240px

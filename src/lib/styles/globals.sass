@@ -77,6 +77,9 @@ html, body
 		&.stacked-2
 			column-gap: 3rem
 			row-gap: 3rem
+		&.stacked-22
+			column-gap: 2rem
+			row-gap: 2rem
 		&.stacked16
 			gap: 1rem
 		&.stacked-4816
@@ -101,6 +104,8 @@ html, body
 		&.stacked-2
 			column-gap: 3rem
 			row-gap: 2rem
+		&.stacked-22
+			row-gap: 1.5rem
 		&.stacked16
 			gap: 1rem
 		&.stacked-4816
@@ -297,7 +302,7 @@ button
 		color: #FFFFFF
 		font-size: 15px
 		padding: 8px 16px
-		border-radius: 4px
+		border-radius: 8px
 		&:hover
 			background: var(--blue-light)
 	&.buttonheading
@@ -529,6 +534,25 @@ button.ftnbtn
 	border: 1px solid var(--blue-main)
 	color: var(--blue-main)
 	padding: 6px 12px
+	letter-spacing: 0.04em
+	text-transform: uppercase
+	border-radius: 8px
+	cursor: pointer
+	transition: all 0.08s
+	&:hover
+		background: var(--blue-main)
+		color: #FFFFFF
+	&.active
+		background: var(--blue-dark)
+		color: #FFFFFF
+
+a.ftnbtn
+	font-size: 12px
+	background: #ffffff
+	border: 1px solid var(--blue-main)
+	color: var(--blue-main)
+	padding: 6px 12px
+	text-decoration: none
 	letter-spacing: 0.04em
 	text-transform: uppercase
 	border-radius: 8px

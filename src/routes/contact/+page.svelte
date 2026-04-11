@@ -18,26 +18,33 @@
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
 <Container>
-  <div class="box100 column ytop rgap32 top-pad solo">
-    <div class="row ycenter xbetween borderbot pbot16">
-      <small class="tt-u blue">Contact Us</small>
-    </div>
-    <p>Write to us at <span class="blue">contact@bodharesearch.in</span><br>
-      or, reach out on social media-
-    </p>
-    <div class="row cgap16 ycenter">
-      <a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-        <Twitter size=24 color={'var(--color-alt'}/>
-      </a>
-      <a class="blank" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-        <FB size=24 color={'var(--color-alt'}/>
-      </a>
-      <a class="blank" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-        <Insta size=24 color={'var(--color-alt'}/>
-      </a>
-      <a class="blank" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-        <Linkedin size=24 color={'var(--color-alt'}/>
-      </a>
-    </div> 
-  </div>
+	<div class="box-t mmVH">
+		<p>Write to us at <span class="blue">contact@bodharesearch.in</span><br>
+			or, reach out on social media-
+		  </p>
+		  <div class="row cgap16 ycenter">
+			<a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
+			  <Twitter size=24 color={'var(--color-alt'}/>
+			</a>
+			<a class="blank" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
+			  <FB size=24 color={'var(--color-alt'}/>
+			</a>
+			<a class="blank" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
+			  <Insta size=24 color={'var(--color-alt'}/>
+			</a>
+			<a class="blank" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
+			  <Linkedin size=24 color={'var(--color-alt'}/>
+			</a>
+		  </div> 
+	</div>
 </Container>
+
+<style lang="sass">
+
+.mmVH
+	@media screen and (min-width: 1025px)
+		min-height: calc(100vh - 144px)
+	@media screen and (max-width: 1024px)
+		min-height: calc(100vh - 112px)
+
+</style>

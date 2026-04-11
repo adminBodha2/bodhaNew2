@@ -11,10 +11,10 @@
 	width: 100%
 	height: 100%
 	@media screen and (min-width: 1025px)
-		grid-template-columns: 320px 1fr
+		grid-template-columns: 360px 1fr
 		grid-template-areas: "side main"
 		// Draws the sidebar divider line through the full shell height incl. bottom padding
-		background-image: linear-gradient(to right, transparent 320px, var(--color-border) 320px, var(--color-border) 321px, transparent 321px)
+		background-image: linear-gradient(to right, transparent 360px, var(--color-border) 360px, var(--color-border) 361px, transparent 361px)
 	@media screen and (max-width: 1024px)
 		grid-template-columns: 1fr
 		grid-template-areas: "main" "side"
@@ -48,6 +48,7 @@
 		height: calc(100vh - 8rem)
 		width: 100%
 		overflow-y: scroll
+		padding-bottom: 2rem
 	@media screen and (max-width: 1024px)
 		width: 100%
 		padding-bottom: 3rem
