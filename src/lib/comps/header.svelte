@@ -95,7 +95,7 @@ p.navitem
 		font-weight: 700
 
 p.navinitem
-	font-weight: 400
+	font-weight: 500
 	&:hover
 		a
 			color: var(--blue-main)

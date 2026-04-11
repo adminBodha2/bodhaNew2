@@ -95,24 +95,6 @@
 
 <style lang="sass">
 
-button.ftnbtn
-	font-size: 12px
-	background: #ffffff
-	border: 1px solid var(--blue-main)
-	color: var(--blue-main)
-	padding: 6px 12px
-	letter-spacing: 0.04em
-	text-transform: uppercase
-	border-radius: 8px
-	cursor: pointer
-	transition: all 0.08s
-	&:hover
-		background: var(--blue-main)
-		color: #FFFFFF
-	&.active
-		background: var(--blue-dark)
-		color: #FFFFFF
-
 #first
 	min-height: 50vh
 	justify-content: center
