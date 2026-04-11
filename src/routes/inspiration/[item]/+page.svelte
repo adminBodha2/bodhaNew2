@@ -8,9 +8,9 @@
 
 <Head title={data.name} metaDescription='The primary thinkers and schools of thought we follow.' metaImage='/images/bodhacover.png' metaUrl={'https://www.bodharesearch.in' + $page.url.pathname}/>
 
-<div class="column rgap16 width90">
-  <h5>{data.name}</h5>
+<div class="column rgap16 pbot64">
   <img class={data.type} src={data.image} alt={data.name}/>
+  <h2 class="source-serif">{data.name}</h2>
   <pre>{data.content}</pre>
 </div>
 
