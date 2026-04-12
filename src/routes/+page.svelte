@@ -220,7 +220,7 @@
 		justify-content: center
 
 .features
-	border-top: 1px solid var(--color-border)
+	border-top: 1px solid var(--grey-sm)
 	padding-top: 2rem
 
 h1.page-hero
@@ -256,7 +256,7 @@ img.book
 	object-fit: contain
 	margin-right: auto
 	border-radius: 5px
-	background: var(--grey-ink)
+	background: var(--grey-lg)
 	@media screen and (min-width: 1025px)
 		height: 360px
 		padding: 1rem
@@ -271,6 +271,6 @@ img.icon
 	row-gap: 1rem
 	&:hover
 		a
-			color: var(--blue-main)
+			color: var(--theme)
 
 </style>

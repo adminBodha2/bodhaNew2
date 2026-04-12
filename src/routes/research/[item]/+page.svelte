@@ -64,10 +64,10 @@
 
 .item-box
 	@media screen and (min-width: 1025px)
-		border: 1px solid var(--color-border)
+		border: 1px solid var(--grey-sm)
 		padding: 3rem
 		border-radius: 5px
-		background: #fcfcfc
+		background: var(--grey-xs)
 
 p.forstyle
 	transition: padding 0.2s ease
@@ -90,7 +90,7 @@ pre
 			position: sticky
 			top: 8rem
 	@media screen and (max-width: 1024px)
-		border-top: 1px solid #e7e7e7
+		border-top: 1px solid var(--grey-sm)
 		padding-top: 32px
 
 img.key

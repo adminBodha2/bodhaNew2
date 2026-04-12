@@ -63,7 +63,7 @@
   border-radius: 4px
   &.open
     grid-template-rows: 1fr
-    border: 1px solid var(--color-border)
+    border: 1px solid var(--grey-sm)
     padding: 2rem
 
 .menu :global(> *)

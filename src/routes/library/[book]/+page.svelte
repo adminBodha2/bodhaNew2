@@ -31,7 +31,7 @@
 .pdf-box
 	iframe
 		border-radius: 16px
-		border: 1px solid var(--color-border)
+		border: 1px solid var(--grey-sm)
 		@media screen and (min-width: 1025px)
 			height: 800px
 			width: 85%

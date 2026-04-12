@@ -4,7 +4,6 @@
 	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Headerpage from '$lib/comps/pageheader.svelte';
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Title from '$lib/comps/page-title.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
@@ -302,7 +301,7 @@ img.smallerimage
     transition: transform 0.45s ease
   &:hover
     h4
-      color: var(--blue-main)
+      color: var(--theme)
     img
       transform: scale(110%)
 

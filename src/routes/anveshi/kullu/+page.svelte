@@ -165,7 +165,7 @@
 <style lang='sass'>
 
 .templar
-	border: 1px solid var(--color-border)
+	border: 1px solid var(--grey-sm)
 	@media screen and (min-width: 1025px)
 		border-radius: 0 8px 8px 0
 		.texter

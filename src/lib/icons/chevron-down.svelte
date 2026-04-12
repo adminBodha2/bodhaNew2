@@ -1,7 +1,7 @@
 <script lang="ts">
 
   export let size = 32
-  export let fill = 'var(--blue-main)'
+  export let fill = 'var(--theme)'
   export let rotated = false
 
 </script>

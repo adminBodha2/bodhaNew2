@@ -49,7 +49,7 @@
 		justify-content: space-between
 
 .acco-box
-	border-bottom: 1px solid var(--color-border)
+	border-bottom: 1px solid var(--grey-sm)
 	padding-bottom: 1.5rem
 	&:last-child
 		border-bottom: none

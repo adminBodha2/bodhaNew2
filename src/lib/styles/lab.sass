@@ -14,7 +14,7 @@
 		grid-template-columns: 360px 1fr
 		grid-template-areas: "side main"
 		// Draws the sidebar divider line through the full shell height incl. bottom padding
-		background-image: linear-gradient(to right, transparent 360px, var(--color-border) 360px, var(--color-border) 361px, transparent 361px)
+		background-image: linear-gradient(to right, transparent 360px, var(--grey-sm) 360px, var(--grey-sm) 361px, transparent 361px)
 	@media screen and (max-width: 1024px)
 		grid-template-columns: 1fr
 		grid-template-areas: "main" "side"
@@ -29,7 +29,7 @@
 		padding-top: 8rem
 	@media screen and (max-width: 1024px)
 		padding-top: 2rem
-		border-top: 1px solid var(--color-border)
+		border-top: 1px solid var(--grey-sm)
 
 .lab-main
 	grid-area: main
@@ -57,18 +57,10 @@
 	::-webkit-scrollbar
 		width: 4px
 	::-webkit-scrollbar-thumb
-		background: var(--blue-main)
-		border-bottom: 400px solid #FFFFFF
+		background: var(--theme)
+		border-bottom: 400px solid var(--background)
 	::-webkit-scrollbar-track
-		background: #FFFFFF
-
-.lab-side-label
-	font-size: 11px
-	font-weight: 700
-	text-transform: uppercase
-	color: var(--label-grey)
-	text-decoration: none
-	padding-right: 2rem
+		background: var(--background)
 
 .lab-nav
 	display: flex
@@ -81,13 +73,9 @@ p.lab-nav-item
 		color:  inherit
 		text-decoration: none
 	&:hover
-		color: var(--blue-main)
+		color: var(--theme)
 	@media screen and (max-width: 1024px)
 		font-size: 1rem
-
-.article-back-item
-	display: flex
-	align-items: center
 
 .lab-nav-title
 	font-weight: 400
@@ -101,12 +89,6 @@ p.lab-nav-item
 	@media screen and (max-width: 1024px)
 		font-size: 15px
 
-.lab-nav-date
-	font-size: 11px
-	color: #ccc
-	white-space: nowrap
-	flex-shrink: 0
-
 // ---- Landing page ------------------------------------------
 
 .lab-landing
@@ -117,25 +99,25 @@ p.lab-nav-item
 	font-size: 10px
 	font-weight: 700
 	text-transform: uppercase
-	color: var(--label-grey)
+	color: var(--grey-md)
 	margin: 0 0 16px 0
 
 a.lab-landing-eyebrow
 	font-size: 11px
 	font-weight: 700
 	text-transform: uppercase
-	color: var(--label-grey)
+	color: var(--grey-md)
 	margin: 0 0 16px 0
 	text-decoration: none
 	&:hover
-		color: var(--blue-main)
+		color: var(--theme)
 
-.lab-landing-title, .lab-article-title
+.lab-landing-title
 	font-size: 45px
 	letter-spacing: -1.2px
 	font-family: var(--serif-item)
 	line-height: 1.06
-	color: var(--black-ink)
+	color: var(--primary)
 	margin: 0
 	@media screen and (max-width: 1024px)
 		font-size: 36px
@@ -143,52 +125,16 @@ a.lab-landing-eyebrow
 
 .lab-landing-desc
 	font-size: 16px
-	color: #666
+	color: var(--grey-md)
 	line-height: 1.7
 	margin: 14px 0 0 0
 	max-width: 440px
 
 .lab-landing-desc-wide
 	font-size: 16px
-	color: #666
+	color: var(--grey-md)
 	line-height: 1.7
 	margin: 14px 0 0 0
-
-.lab-stats-row
-	display: flex
-	align-items: flex-end
-	gap: 3rem
-	padding: 2rem 0
-	border-top: 1px solid var(--color-border)
-	margin-top: 2rem
-
-.lab-stat
-	display: flex
-	flex-direction: column
-	gap: 4px
-
-.lab-stat-num
-	font-size: 48px
-	font-weight: 750
-	color: var(--black-ink)
-	letter-spacing: -3px
-	line-height: 1
-	@media screen and (max-width: 1024px)
-		font-size: 36px
-		letter-spacing: -2px
-
-.lab-stat-label
-	font-size: 12px
-	color: var(--label-grey)
-	letter-spacing: 0.4px
-
-.lab-notes-label
-	font-size: 11px
-	font-weight: 700
-	letter-spacing: 1.8px
-	text-transform: uppercase
-	color: var(--blue-main)
-	margin: 3rem 0 1rem 0
 
 .lab-cards-wrap
 	background: transparent
@@ -200,25 +146,22 @@ a.lab-landing-eyebrow
 	border-bottom: none
 	@media screen and (min-width: 1025px)
 		grid-template-columns: 1fr 1fr 1fr
-		border: 1px solid var(--color-border)
+		border: 1px solid var(--grey-sm)
 	@media screen and (max-width: 1024px)
 		grid-template-columns: 1fr
 
 .lab-card
 	display: flex
 	flex-direction: column
-	border-bottom: 1px solid var(--color-border)
+	border-bottom: 1px solid var(--grey-sm)
 	transition: background 0.11s
 	text-decoration: none
 	color: inherit
 	background: transparent
 	@media screen and (min-width: 1025px)
-		border-right: 1px solid var(--color-border)
+		border-right: 1px solid var(--grey-sm)
 		&:nth-child(3n)
 			border-right: none
-	&:hover
-		.lab-card-title
-			color: var(--blue-dark)
 	&.p32
 		padding: 2rem
 	&.p16
@@ -229,34 +172,9 @@ a.lab-landing-eyebrow
 		&:last-child
 			margin-bottom: 0
 
-.lab-card-meta
-	display: flex
-	align-items: center
-	justify-content: space-between
-	margin-bottom: 12px
-
-.lab-card-cat
-	font-size: var(--size-tags)
-	text-transform: uppercase
-	color: var(--blue-light)
-
-.lab-card-date
-	font-size: var(--size-tags)
-	color: var(--light-ink)
-
-.lab-card-title
-	font-size: 17.2px
-	font-weight: 700
-	color: var(--black-ink)
-	letter-spacing: -0.3px
-	line-height: 1.4
-	margin: 0 0 10px 0
-	transition: color 0.15s
-	flex: 1
-
 .lab-card-excerpt
 	font-size: 13px
-	color: var(--grey-ink)
+	color: var(--grey-lg)
 	line-height: 1.5
 	display: -webkit-box
 	-webkit-line-clamp: 3
@@ -271,36 +189,8 @@ a.lab-landing-eyebrow
 	display: flex
 	flex-direction: column
 	@media screen and (max-width: 1024px)
-		border-bottom: 1px solid var(--color-border)
+		border-bottom: 1px solid var(--grey-sm)
 		padding-bottom: 3rem
-
-.lab-article-meta
-	display: flex
-	align-items: center
-	gap: 10px
-	margin-top: 0
-	border-top: 1px solid var(--color-border)
-	padding-top: 1rem
-	margin-top: 1rem
-
-.lab-article-pill
-	display: inline-flex
-	align-items: center
-	font-size: 10px
-	color: var(--grey-ink)
-	text-transform: uppercase
-	line-height: 1.6
-
-.lab-article-date
-	font-size: 10px
-	color: var(--grey-ink)
-	text-transform: uppercase
-
-.lab-article-excerpt
-	font-size: 16px
-	color: var(--grey-ink)
-	line-height: 1.7
-	margin: 14px 0 0 0
 
 .lab-article-body
 	img
@@ -310,9 +200,9 @@ a.lab-landing-eyebrow
 		max-height: 540px
 		object-fit: contain
 		margin-right: auto
-		border: 1px solid var(--grey-ink)
+		border: 1px solid var(--grey-lg)
 		padding: 1rem
-		background: var(--color-border)
+		background: var(--grey-sm)
 		border-radius: 6px
 		margin-bottom: 1rem
 	p
@@ -339,7 +229,7 @@ a.lab-landing-eyebrow
 		font-weight: 600
 		letter-spacing: -0.2px
 		line-height: 1.4
-		color: #222
+		color: var(--primary)
 		margin: 1.5rem 0 0.5rem 0
 	h5
 		margin: 0 0 1.5rem 0
@@ -349,18 +239,18 @@ a.lab-landing-eyebrow
 		font-size: 21px
 		line-height: 1.4
 	a
-		color: var(--blue-main)
+		color: var(--theme)
 		text-decoration: none
 		text-underline-offset: 3px
 		transition: text-decoration-color 0.15s
 		&:hover
-			text-decoration-color: var(--blue-main)
+			text-decoration-color: var(--theme)
 	em, i
 		font-style: italic
 		color: inherit
 	strong
 		font-weight: 650
-		color: #111
+		color: var(--primary)
 	ul, ol
 		margin: 0 0 1.5rem 0
 		padding-left: 1.5rem
@@ -376,8 +266,8 @@ a.lab-landing-eyebrow
 		font-family: var(--font-serif)
 		margin: 0 0 1.5rem 0
 		padding: 0.5rem 0 0.25rem 1.5rem
-		border-left: 3px solid var(--blue-light)
-		color: #000
+		border-left: 3px solid var(--themesub)
+		color: var(--primary)
 		font-style: italic
 		font-size: 21px
 		line-height: 1.75
@@ -388,21 +278,21 @@ a.lab-landing-eyebrow
 		display: block
 		font-size: 13px
 		font-style: normal
-		color: #aaa
+		color: var(--grey-md)
 		margin-top: 0.5rem
 	hr
 		border: none
-		border-top: 1px solid #e8e8e8
+		border-top: 1px solid var(--grey-sm)
 		margin: 3rem 0
 	code
 		font-family: 'JetBrains Mono', 'Fira Code', monospace
 		font-size: 13px
-		background: #f4f4f4
+		background: var(--grey-xs)
 		padding: 2px 6px
 		border-radius: 4px
-		color: #333
+		color: var(--primary)
 	pre
-		background: #f4f4f4
+		background: var(--grey-xs)
 		border-radius: 6px
 		padding: 1.5rem
 		overflow-x: auto

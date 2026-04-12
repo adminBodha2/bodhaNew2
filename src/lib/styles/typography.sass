@@ -141,7 +141,7 @@ small.italic
 		font-family: 'Source Serif 4', serif
 		line-height: 1.2
 	a
-		text-decoration-color: var(--blue-light)
+		text-decoration-color: var(--themesub)
 		color: inherit
 	img
 		object-fit: contain !important
@@ -159,7 +159,7 @@ small.italic
 			font-size: 1.4rem
 			line-height: 1.7
 		blockquote
-			border-left: 4px solid var(--blue-main)
+			border-left: 4px solid var(--theme)
 			margin-left: 0
 			margin-right: 0
 			padding-left: 16px
@@ -171,7 +171,7 @@ small.italic
 				line-height: 1.5
 			cite
 				font-size: 14px
-				color: #878787
+				color: var(--grey-std)
 		h5
 			font-size: 1.74rem
 			margin-top: 2.4rem
@@ -201,7 +201,7 @@ small.italic
 			font-size: 1.32rem
 			line-height: 1.55
 		blockquote
-			border-left: 4px solid var(--blue-main)
+			border-left: 4px solid var(--theme)
 			margin-left: 0
 			margin-right: 0
 			padding-left: 16px
@@ -214,7 +214,7 @@ small.italic
 				line-height: 1.5
 			cite
 				font-size: 14px
-				color: #878787
+				color: var(--grey-std)
 		h5
 			font-size: 1.45rem
 			margin-top: 2rem
@@ -245,13 +245,13 @@ small.italic
 	text-transform: capitalize
 
 .white
-	color: #FFFFFF
+	color: var(--background)
 .blue
 	color: var(--theme)
 .grey
-	color: var(--grey-ink)
+	color: var(--grey-lg)
 .lgrey
-	color: #a7a7a7
+	color: var(--grey-md)
 
 .thin
 	font-weight: 400
@@ -268,33 +268,33 @@ a
 			text-decoration: underline
 	&.blank.color
 		&:hover
-			color: var(--blue-light)
+			color: var(--themesub)
 	&.heading
 		text-decoration: none
 		color: inherit
 		&:hover
 			text-decoration: underline
-			text-decoration-color: var(--blue-main)
+			text-decoration-color: var(--theme)
 	&.linked
-		color: var(--blue-main)
+		color: var(--theme)
 	&.linkedlight
-		color: var(--blue-light)
+		color: var(--themesub)
 	&.bold
 		font-weight: 600
 	&.buttonheading
 		text-decoration: none
-		background: #171717
-		color: #FFFFFF
+		background: var(--primary)
+		color: var(--background)
 		font-size: 14px
 		font-weight: 500
 		padding: 4px 8px
 		transition: 0.1s
 		&:hover
-			background: var(--blue-main)
+			background: var(--theme)
 	&.button-main
-		background: var(--blue-main)
+		background: var(--theme)
 		text-decoration: none
-		color: #FFFFFF
+		color: var(--background)
 		font-size: 13px
 		padding: 8px 16px
 		width: max-content
@@ -302,7 +302,7 @@ a
 		border-radius: 2px
 		transition: 0.06s
 		&:hover
-			background: var(--blue-dark)
+			background: var(--themealt)
 
 a.container
 	text-decoration: none

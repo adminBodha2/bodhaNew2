@@ -91,11 +91,11 @@
 
 .research-area
 	h4
-		border-bottom: 1px solid var(--color-border)
+		border-bottom: 1px solid var(--grey-sm)
 		padding-bottom: 1rem
 
 .research-outer
-	border: 1px solid var(--color-border)
+	border: 1px solid var(--grey-sm)
 	padding: 2rem
 	border-radius: 5px
 	@media screen and (max-width: 1024px)

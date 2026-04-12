@@ -74,7 +74,7 @@
 			<div class="column rgap32" use:autoAnimate>
 				{#each projects as item, i}
 				{#if activeIndex === null || activeIndex === i}
-					<div class="grid two right cgap64 emblagrid rgap24 question">
+					<div class="grid two right cgap64 emgrid rgap24 question">
 						<div class="column rgap16 down pbot16">
 							<div class="column rgap16 borderbot pbot16">
 								<img class="icon" src={item.icon} alt={item.question} />
@@ -100,7 +100,7 @@
 	justify-content: center
 
 .question
-	border: 1px solid var(--color-border)
+	border: 1px solid var(--grey-sm)
 	border-radius: 5px
 	.down
 		@media screen and (min-width: 1025px)
@@ -118,7 +118,7 @@ img.image-fit
 		width: 100%
 		height: 240px
 
-.grid.two.emblagrid
+.grid.two.emgrid
 	@media screen and (max-width: 1024px)
 		grid-template-areas: "up" "down"
 		.up

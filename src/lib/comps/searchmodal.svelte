@@ -104,12 +104,12 @@ input
 	::-webkit-scrollbar
 		width: 4px
 	::-webkit-scrollbar-thumb
-		background: var(--blue-main)
+		background: var(--theme)
 	::-webkit-scrollbar-track
-		background: #FFFFFF
+		background: var(--background)
 
 .search-modal
-	background: #FFFFFF
+	background: var(--background)
 	border: 1px solid var(--grey-sm)
 	border-radius: 8px
 	z-index: 2999

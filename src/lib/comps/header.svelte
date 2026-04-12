@@ -98,12 +98,12 @@ p.navitem
 	letter-spacing: -0.5px
 	a.blank
 		&:hover
-			color: var(--blue-main)
+			color: var(--theme)
 
 p.navinitem
 	font-weight: 500
 	&:hover
 		a
-			color: var(--blue-main)
+			color: var(--theme)
 
 </style>

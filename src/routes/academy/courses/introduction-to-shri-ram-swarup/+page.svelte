@@ -320,7 +320,7 @@
 		height: 100%
 
 .box-3
-	border: 1px solid var(--color-border)
+	border: 1px solid var(--grey-sm)
 	padding-left: 4rem
 	padding-right: 4rem
 	border-radius: 8px
@@ -360,7 +360,7 @@ img.key
 	@media screen and (max-width: 1024px)
 		padding-top: 4rem
 		padding-bottom: 3rem
-		border-bottom: 1px solid var(--color-border)
+		border-bottom: 1px solid var(--grey-sm)
 
 .thisdown
 	@media screen and (min-width: 1025px)

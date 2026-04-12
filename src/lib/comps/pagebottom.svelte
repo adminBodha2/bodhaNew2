@@ -67,7 +67,7 @@
 					<small class="white"
 						>© 2026 Bodha | Designed at Bodha Lab | <a class="blank linkedlight" href="/contact">Contact</a></small
 					>
-					<small style="color: #a7a7a7"
+					<small style="color: var(--grey-md)"
 						>Bodha Research Pvt Ltd | Svayambodha Centre For Culture Studies Foundation</small
 					>
 				</div>

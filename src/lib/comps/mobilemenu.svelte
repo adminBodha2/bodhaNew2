@@ -23,7 +23,7 @@
 .mobilemenu
 	width: 100vw
 	height: calc(100vh - 64px)
-	background: #FFFFFF
+	background: var(--background)
 	position: fixed
 	top: 64px
 	left: 0

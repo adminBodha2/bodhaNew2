@@ -95,7 +95,7 @@
 <style lang="sass">
 
 .book-box
-  border-bottom: 1px solid var(--color-border)
+  border-bottom: 1px solid var(--grey-sm)
   padding-bottom: 12px
   &:last-child
     border-bottom: none
@@ -103,7 +103,7 @@
 
 .accordion-wrapper
   button
-    background: var(--blue-dark)
+    background: var(--themealt)
     color: white
     font-family: 'Google Sans Flex', sans-serif
     font-size: 12px
@@ -111,7 +111,7 @@
     padding: 6px 12px
     border-radius: 3px
     &:hover
-      background: var(--blue-main)
+      background: var(--theme)
 
 .doc-page
   display: grid
@@ -134,7 +134,7 @@
     top: 64px
     height: calc(100vh - 64px)
     padding: 64px 32px 32px 0
-    border-right: 1px solid var(--color-border)
+    border-right: 1px solid var(--grey-sm)
     overflow-y: scroll
 
 .doc-main

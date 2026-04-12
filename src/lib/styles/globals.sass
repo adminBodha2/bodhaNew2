@@ -10,10 +10,6 @@ html, body
 *, :root
 	box-sizing: border-box
 
-button
-	p
-		font-family: "Google Sans Flex", sans-serif
-
 .bdr
 	border: 1px solid red
 
@@ -227,22 +223,12 @@ button
 	padding-bottom: 0.5rem
 .pbot4
 	padding-bottom: 0.25rem
-.top-pad
-	@media screen and (min-width: 1025px)
-		padding-top: 6.5rem
-		&.is-solo
-			padding-top: 6.5rem
-	@media screen and (max-width: 1024px)
-		padding-top: 5.5rem
-		&.is-solo
-			padding-top: 5.5rem
-
-.mid-pad
-	padding-top: 4rem
-	padding-bottom: 4rem
 
 button
 	cursor: pointer
+	font-family: "Google Sans Flex", sans-serif
+	p
+		font-family: "Google Sans Flex", sans-serif
 	&.blank
 		display: flex
 		justify-content: center
@@ -255,21 +241,21 @@ button
 		display: flex
 		justify-content: center
 		align-items: center
-		background: #424242
+		background: var(--primaryalt)
 		border: none
-		color: #FFFFFF
+		color: var(--background)
 		font-size: 15px
 		padding: 8px 16px
 		border-radius: 8px
 		&:hover
-			background: var(--blue-light)
+			background: var(--themesub)
 	&.buttonheading
 		display: flex
 		justify-content: center
 		align-items: center
 		border: none
-		background: #171717
-		color: #FFFFFF
+		background: var(--primary)
+		color: var(--background)
 		font-size: 14px
 		font-weight: 500
 		padding: 4px 8px
@@ -278,14 +264,14 @@ button
 		text-transform: uppercase
 		font-family: 'Google Sans Flex', sans-serif
 		&:hover
-			background: var(--blue-main)
+			background: var(--theme)
 		&.selected
-			background: var(--blue-light)
+			background: var(--themesub)
 	&.button-main-line
 		background: white
-		border: 1px solid var(--blue-light)
+		border: 1px solid var(--themesub)
 		text-decoration: none
-		color: var(--blue-light)
+		color: var(--themesub)
 		font-size: 13px
 		padding: 8px 16px
 		width: max-content
@@ -293,13 +279,13 @@ button
 		border-radius: 2px
 		transition: 0.02s
 		&:hover
-			background: var(--blue-main)
+			background: var(--theme)
 			color: white
 	&.button-main
-		background: var(--blue-main)
+		background: var(--theme)
 		border: none
 		text-decoration: none
-		color: #FFFFFF
+		color: var(--background)
 		font-size: 13px
 		padding: 8px 16px
 		width: max-content
@@ -307,67 +293,23 @@ button
 		border-radius: 2px
 		transition: 0.06s
 		&:hover
-			background: var(--blue-dark)
+			background: var(--themealt)
 
 .bordertop
-	border-top: 1px solid var(--color-border)
+	border-top: 1px solid var(--grey-sm)
 
 .borderbot
-	border-bottom: 1px solid var(--color-border)
-
-.bordbotblack
-	border-bottom: 2px solid #000000
-
-//typography------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.label
-	background: #023E7D
-	width: max-content
-	display: flex
-	align-items: center
-	justify-content: center
-	padding: 5px 8px
-	border-radius: 4px
-	p, small
-		color: #FFFFFF
-
-.label2
-	background: var(--blue-light)
-	width: max-content
-	display: flex
-	align-items: center
-	justify-content: center
-	padding: 4px 8px
-	border-radius: 4px
-
-.cat-pill
-	display: inline-flex
-	align-items: center
-	padding: 2px 10px
-	border-radius: 99px
-	background: #ffffff
-	color: var(--blue-main)
-	font-size: 12px
-	font-weight: 500
-	letter-spacing: 0.3px
-	text-transform: capitalize
-	width: max-content
-
-.line-clamp-2
-	display: -webkit-box
-	-webkit-line-clamp: 2
-	-webkit-box-orient: vertical
-	overflow: hidden
+	border-bottom: 1px solid var(--grey-sm)
 
 //assorted---------------------------------------------------------------------------------------------------------------------------------
 
 .blogbox
-	background: #f7f7f7
+	background: var(--grey-xs)
 	padding: 24px
 	border-radius: 4px
 
 .blogbox2
-	border: 1px solid #d7d7d7
+	border: 1px solid var(--grey-std)
 	border-radius: 4px
 	padding: 2rem
 	@media screen and (max-width: 1024px)
@@ -387,26 +329,11 @@ img.blog-image
 		@media screen and (max-width: 1024px)
 			width: 100%
 
-.embla
-	overflow: hidden
-
-.embla__viewport
-	overflow: hidden
-
-.embla__container
-	display: flex
-	touch-action: pan-y pinch-zoom
-	align-items: flex-start
-
-.embla__slide
-	flex: 0 0 100%
-	min-width: 0
-
 .box-1
-	border-bottom: 1px solid var(--color-border)
+	border-bottom: 1px solid var(--grey-sm)
 
 .box-2
-	border-top: 1px solid var(--color-border)
+	border-top: 1px solid var(--grey-sm)
 
 .box-1, .box-2, .box-3
 	display: flex
@@ -465,7 +392,7 @@ img.blog-image
 	justify-content: center
 	align-items: center
 	border-radius: 5px
-	background: var(--blue-main)
+	background: var(--theme)
 	overflow: hidden
 	cursor: pointer
 	border: none
@@ -474,7 +401,7 @@ img.blog-image
 		content: ""
 		width: 0%
 		height: 100%
-		background: #073968
+		background: var(--themealt)
 		position: absolute
 		transition: all 0.4s ease-in-out
 		right: 0
@@ -487,7 +414,7 @@ img.blog-image
 		text-decoration: none
 		width: 100%
 		padding: 0.5rem 1rem
-		color: #fff
+		color: var(--background)
 		font-size: 0.9rem
 		z-index: 20
 		transition: all 0.3s ease-in-out
@@ -504,9 +431,9 @@ img.blog-image
 
 button.ftnbtn
 	font-size: 12px
-	background: #ffffff
-	border: 1px solid var(--blue-main)
-	color: var(--blue-main)
+	background: var(--background)
+	border: 1px solid var(--theme)
+	color: var(--theme)
 	padding: 6px 12px
 	letter-spacing: 0.04em
 	text-transform: uppercase
@@ -514,17 +441,17 @@ button.ftnbtn
 	cursor: pointer
 	transition: all 0.08s
 	&:hover
-		background: var(--blue-main)
-		color: #FFFFFF
+		background: var(--theme)
+		color: var(--background)
 	&.active
-		background: var(--blue-dark)
-		color: #FFFFFF
+		background: var(--themealt)
+		color: var(--background)
 
 a.ftnbtn
 	font-size: 12px
-	background: #ffffff
-	border: 1px solid var(--blue-main)
-	color: var(--blue-main)
+	background: var(--background)
+	border: 1px solid var(--theme)
+	color: var(--theme)
 	padding: 6px 12px
 	text-decoration: none
 	letter-spacing: 0.04em
@@ -533,17 +460,17 @@ a.ftnbtn
 	cursor: pointer
 	transition: all 0.08s
 	&:hover
-		background: var(--blue-main)
-		color: #FFFFFF
+		background: var(--theme)
+		color: var(--background)
 	&.active
-		background: var(--blue-dark)
-		color: #FFFFFF
+		background: var(--themealt)
+		color: var(--background)
 
 button.ftnbtn-b
 	font-size: 14px
-	background: #404040
-	border: 1px solid var(--black-ink)
-	color: #FFFFFF
+	background: var(--primaryalt)
+	border: 1px solid var(--primary)
+	color: var(--background)
 	padding: 6px 16px
 	letter-spacing: 0.02em
 	text-transform: uppercase
@@ -551,9 +478,9 @@ button.ftnbtn-b
 	cursor: pointer
 	transition: all 0.08s
 	&:hover
-		background: var(--blue-dark)
-		color: #FFFFFF
+		background: var(--themealt)
+		color: var(--background)
 	&.active
-		background: var(--blue-main)
-		border: 1px solid var(--blue-main)
-		color: #FFFFFF
+		background: var(--theme)
+		border: 1px solid var(--theme)
+		color: var(--background)

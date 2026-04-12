@@ -1,7 +1,7 @@
 <script lang="ts">
 
   export let size = '24'
-  export let color = '#FFFFFF'
+  export let color = 'var(--background)'
 
 </script>
 

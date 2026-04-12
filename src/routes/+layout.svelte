@@ -6,9 +6,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import { searchState, toggleSearch } from '$lib/utils/globalstores'
 	import '$lib/styles/globals.sass';
-	import '$lib/styles/tokens.sass';
 	import '$lib/styles/vars.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/icons.css';
@@ -62,9 +60,9 @@ header
 	width: 100%
 	position: sticky
 	top: 0
-	background: #FFFFFF
+	background: var(--background)
 	z-index: 999
-	border-bottom: 1px solid var(--color-border)
+	border-bottom: 1px solid var(--grey-sm)
 	@media screen and (min-width: 1025px)
 		height: 72px
 		margin-bottom: -72px
@@ -74,6 +72,6 @@ header
 
 footer
 	width: 100%
-	border-top: 1px solid var(--color-border)
+	border-top: 1px solid var(--grey-sm)
 
 </style>
