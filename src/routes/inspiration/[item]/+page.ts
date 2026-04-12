@@ -1,13 +1,13 @@
-import { supabase } from '$lib/utils/supabaseClient'
-
 export async function load({ params }: { params: { item: string } }) {
-  const { data, error } = await supabase
-    .from('db-schools')
-    .select()
-    .eq('slug', `${params.item}`)
-    .order('id')
-    .single()
-  if (error) throw new Error(error.message)
-  return data
+	const post = await import(`../${params.item}.md`);
+	const { title, image, type, id } = post.metadata;
+	const content = post.default;
 
+	return {
+		content,
+		title,
+		type,
+		image,
+		id
+	};
 }

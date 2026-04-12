@@ -1,6 +1,6 @@
 ---
 title: Voice of India School of Śatrubodha
-image: /images/schools/voice-of-india-shatrubodha/webp
+image: /images/schools/voice-of-india-shatrubodha.webp
 type: school
 id: 3
 ---

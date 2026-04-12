@@ -73,7 +73,7 @@
 		<Title text="Verticals" />
 		<div class="grid two cgap16 rgap16">
 			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/vertical-research.webp" alt="research" />
+				<img class="vert" src="/images/key-research.webp" alt="research" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/research">Research</a></h4>
 				<p class="tight big">
 					To illuminate hidden universal forces and long arcs in foreign and public policy; to
@@ -94,7 +94,7 @@
 				</p>
 			</div>
 			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/vertical-scholars.webp" alt="bodha academy" />
+				<img class="vert" src="/images/key-academy.webp" alt="bodha academy" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/academy">Bodha Academy</a></h4>
 				<p class="tight big">
 					Modern fault lines in Hindu society stem from an identity crisis manufactured by the

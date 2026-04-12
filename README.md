@@ -48,11 +48,12 @@ bodharesearch.in/
 **Prerequisites**
 - Node.js (v18 or higher recommended)
 - Yarn (`npm install -g yarn`)
+- A .env file with `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 
 ```bash
 # Clone the repo
-git clone https://github.com/bodharesearch/bodharesearch.in.git
-cd bodharesearch.in
+git clone https://github.com/adminBodha2/bodhaNew2
+cd bodhaNew2
 
 # Install dependencies
 yarn install

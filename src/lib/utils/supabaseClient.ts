@@ -22,26 +22,6 @@ export async function selectedOpenLibrary(type:string){
   return data
 }
 
-export async function allSchools(){
-  const { data, error } = await supabase
-  .from('db-schools')
-  .select()
-  .eq('type','school')
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
-}
-
-export async function allThinkers(){
-  const { data, error } = await supabase
-  .from('db-schools')
-  .select()
-  .eq('type','thinker')
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
-}
-
 export async function sixVideos(){
   const { data, error } = await supabase
   .from('db-videos')

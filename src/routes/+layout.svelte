@@ -6,8 +6,8 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import '$lib/styles/globals.sass';
 	import '$lib/styles/vars.sass';
+	import '$lib/styles/globals.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/icons.css';
 	import Header from '$lib/comps/header.svelte';

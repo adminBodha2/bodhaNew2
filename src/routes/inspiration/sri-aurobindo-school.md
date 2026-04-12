@@ -1,6 +1,6 @@
 ---
 title: Sri Aurobindo’s School
-image: /images/schools/sri-aurobindo-school/webp
+image: /images/schools/sri-aurobindo-school.webp
 type: school
 id: 2
 ---

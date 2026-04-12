@@ -1,6 +1,6 @@
 ---
 title: Swami Vivekananda's School
-image: /images/schools/swami-vivekananda-school/webp
+image: /images/schools/swami-vivekananda-school.webp
 type: school
 id: 1
 ---
