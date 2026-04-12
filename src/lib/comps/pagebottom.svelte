@@ -65,8 +65,9 @@
 			<div class="grid two rgap24">
 				<div class="column rgap8">
 					<small class="white"
-						>© 2026 Bodha | Designed at Bodha Lab | <a class="blank linkedlight" href="/contact">Contact</a></small
+						>© 2026 Bodha | <a class="blank linkedlight" href="/contact">Contact</a></small
 					>
+					<small class="white">Designed at Bodha Lab | <a class="blank linkedlight" href="https://github.com/adminBodha2/bodhaNew2" target="_blank" rel="noreferrer">Github Repo</a></small>
 					<small style="color: var(--grey-md)"
 						>Bodha Research Pvt Ltd | Svayambodha Centre For Culture Studies Foundation</small
 					>
