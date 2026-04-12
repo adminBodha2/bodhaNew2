@@ -13,7 +13,7 @@
 	$metaDescription =
 		'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
 	$metaUrl = 'https://www.bodharesearch.in/anveshi';
-	$metaImage = '/images/bodhacover.png';
+	$metaImage = '/images/key-anveshi.webp';
 
 	let currproj: any;
 	let futureproj: any;
@@ -286,7 +286,7 @@ img.smallerimage
     height: calc(50vh + 64px)
 
 .screener
-  background-image: url('/images/cover-anveshi.webp')
+  background-image: url('/images/key-anveshi.webp')
   background-position: center center
   background-size: cover
   width: 100%

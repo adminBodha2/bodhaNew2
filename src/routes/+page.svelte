@@ -84,7 +84,7 @@
 				</p>
 			</div>
 			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/vertical-tours.webp" alt="cultural tours" />
+				<img class="vert" src="/images/key-anveshi.webp" alt="cultural tours" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/anveshi">Cultural Tours</a></h4>
 				<p class="tight big">
 					A guided tour of four to five days to beautiful and hitherto unexplored temples and
@@ -104,7 +104,7 @@
 				</p>
 			</div>
 			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/vertical-bigquestions.webp" alt="big questions" />
+				<img class="vert" src="/images/key-bigquestions.webp" alt="big questions" />
 				<h4 class="blue source-serif"><a class="blank linker" href="/big-questions">The Big Questions</a></h4>
 				<p class="tight big">
 					Every year we will formulate big questions stating major problems that capture core
