@@ -4,6 +4,7 @@
   import Head from '$lib/comps/headcomponent.svelte'
 import Parallax from '$lib/comps/parallaxfull.svelte'
   import Title from '$lib/comps/page-title.svelte'
+  import Card from '$lib/comps/card-comp.svelte'
   import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
 
   $metaTitle = 'Bodha Academy'
@@ -26,33 +27,22 @@ import Parallax from '$lib/comps/parallaxfull.svelte'
 	<div class="box-2">
 		<Title text="Courses"/>
 		<div class="grid two stacked-2">
-			<div class="column blogbox2 rgap16">
-				<img class="vert" src="/images/srg-square.webp" alt="shri sita ram goel"/>
-				<h5 class="source-serif"><a class="blank" href="/academy/courses/introduction-to-shri-ram-swarup">Introduction to Shri Ram Swarup</a></h5>
-				<p class="sm grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
+			<Card link="/academy/courses/introduction-to-shri-ram-swarup" imageLink="/images/srg-square.webp">
+				<h5 class="source-serif">Introduction to Shri Ram Swarup</h5>
+				<p class="grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
 				<div class="row wrap cgap8 rgap8 ycenter xbetween">
 					<small class="blue"><b>CONCLUDED</b></small>
-					<small class="tt-u">Instructor - Pankaj Saxena</small>
+					<small class="label white tt-u">Instructor - Pankaj Saxena</small>
 				</div>
-			</div>
-			<div class="column blogbox2 rgap16">
-				<img class="vert" src="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp" alt="ancient indian history"/>
-				<h5 class="source-serif"><a class="blank" href="/academy/courses/introduction-to-shri-ram-swarup">Ancient Indian History</a></h5>
+			</Card>
+			<Card noLink={true} imageLink="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp">
+				<h5 class="source-serif">Ancient Indian History</h5>
 				<p class="sm grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
 				<div class="row wrap cgap8 rgap8 ycenter xbetween">
 					<small class="blue"><b>UPCOMING</b></small>
-					<small class="tt-u">Instructor - Amritanshu Pandey</small>
+					<small class="label white tt-u">Instructor - Amritanshu Pandey</small>
 				</div>
-			</div>
+			</Card>	
 		</div>
 	</div>
 </Container>
-
-<style lang="sass">
-
-img.vert
-	object-fit: cover
-	width: 100%
-	height: 320px
-
-</style>
