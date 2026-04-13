@@ -250,7 +250,7 @@
 			<p class="gm grey">Cohort photos from the previous chapters of Anveshi.</p>
 		</div>
 		{#if pastproj && pastproj.length > 0}
-			<div class="grid four stacked-2">
+			<div class="grid three stacked-2">
 				{#each pastproj as item}
 					<div class="column rgap8">
 						<img class="pastproj" src={item.gallery} alt={item.chapter}/>
@@ -270,13 +270,13 @@
 img.pastproj
 	object-fit: cover
 	width: 100%
-	height: 200px
+	height: 240px
 	border-radius: 8px
 	transform-origin: center center
 	transition: all 0.34s ease
 	@media screen and (min-width: 1025px)
 		&:hover
-			transform: scale(1.2) translateY(-8px)
+			transform: scale(1.1) translateY(-8px)
 
 .inside
 	padding: 0 1.5rem 1.5rem 1.5rem
