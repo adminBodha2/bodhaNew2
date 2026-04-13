@@ -1,7 +1,7 @@
 <script lang="ts">
 
-	import { slide, fly } from 'svelte/transition';
-	import { quintOut, cubicIn } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
 	import { page } from '$app/state';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
@@ -45,8 +45,8 @@
 </header>
 {#key page.url.pathname}
   <main
-    in:fly={{ y: 30, duration: 180, delay: 280, easing: quintOut }}
-    out:fly={{ y: -30, duration: 240, easing: cubicIn }}
+    in:fly={{ y: 30, duration: 180, delay: 200, easing: quintOut }}
+    out:fly={{ y: -30, duration: 240, easing: quintIn }}
 	onintroend={() => { if (page.url.hash) {document.querySelector(page.url.hash)?.scrollIntoView()}}}
   >
     {@render children?.()}
