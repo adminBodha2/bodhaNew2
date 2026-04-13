@@ -26,11 +26,15 @@
 />
 
 <section class="content-area">
-	<Crumb item1="RESEARCH" item1Link="/research" show2={true} item2={data.title} />
+	<Crumb item1="RESEARCH" item1Link="/research" show2={true} item2={data.type} />
 	<div class="column rgap32">
-		<div class="column rgap8">
-			<h2 class="source-serif tight">{data.title}</h2>
-			<small class="label white tt-c">{data.type}</small>
+		<div class="column rgap16">
+			<h2 class="source-serif tight pbot8">{data.title}</h2>
+			<div class="row cgap8 rgap8 ycenter">
+				{#each data.tags as tag}
+				<small class="label white tt-c">{tag}</small>
+				{/each}
+			</div>
 		</div>
 		<div class="parallax">
 			<img

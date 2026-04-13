@@ -30,12 +30,12 @@
 		{#if labItems.length > 0}
 			<div class="grid three stacked-2">
 				{#each labItems as item}
-					<div class="column">
+					<div class="column rgap8">
 						<div class="row ycenter xbetween">
 							<small class="blue tt-u">{item.meta.category}</small>
 							<small class="lgrey">{item.formattedDate}</small>
 						</div>
-						<p class="big"><a href={item.linkpath} class="blank"><b>{item.meta.title}</b></a></p>
+						<p class="big tight"><a href={item.linkpath} class="blank"><b>{item.meta.title}</b></a></p>
 						<p class="sm grey">{item.meta.excerpt}</p>
 					</div>
 				{/each}
