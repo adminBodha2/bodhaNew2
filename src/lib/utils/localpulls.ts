@@ -1,3 +1,29 @@
+type PulledEntry = {
+  date: Date
+  formattedDate: string
+  meta: Record<string, unknown>
+  linkpath: string
+}
+
+function toBlogEntry(path: string, metadata: Record<string, unknown> | undefined) {
+  if (!metadata?.date) {
+    return null
+  }
+
+  const date = new Date(String(metadata.date))
+
+  if (Number.isNaN(date.getTime())) {
+    return null
+  }
+
+  return {
+    date,
+    formattedDate: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+    meta: metadata,
+    linkpath: path.slice(11, -3)
+  } satisfies PulledEntry
+}
+
 export async function fullBlog() {
   const allfiles = import.meta.glob('/src/routes/blog/*.md')
   const filed = Object.entries(allfiles)
@@ -6,20 +32,13 @@ export async function fullBlog() {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       const { metadata } = await resolver()
-      const pathitem = path.slice(11, -3)
-      const date = new Date(metadata.date as string);
-      const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      return {
-        date,
-        formattedDate,
-        meta: metadata,
-        linkpath: pathitem
-      };
+      return toBlogEntry(path, metadata)
     })
   )
-  // Filter out the null values before sorting
-  const filtered = eachfiled.filter(entry => entry !== null);
-  return filtered.sort((a, b) => b!.date.getTime() - a!.date.getTime());
+
+  return eachfiled
+    .filter((entry): entry is PulledEntry => entry !== null)
+    .sort((a, b) => b.date.getTime() - a.date.getTime())
 }
 
 export async function writersWithCountsAlphabetical() {
@@ -27,7 +46,6 @@ export async function writersWithCountsAlphabetical() {
   const allfiles = { ...posts };
   const filed = Object.entries(allfiles);
   const writerCounts = new Map(); // Create a map to store tag counts
-
   await Promise.all(
     filed.map(async ([, resolver]) => {
       // @ts-expect-error//why
@@ -43,7 +61,6 @@ export async function writersWithCountsAlphabetical() {
       });
     })
   );
-
   const distinctWriters = [...writerCounts.keys()]
   const writersWithCounts = distinctWriters.map((writer) => ({
     writer,
@@ -215,20 +232,12 @@ export async function writerPosts(writer?: string) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       const { metadata } = await resolver()
-      const pathitem = path.slice(11, -3)
-      const date = new Date(metadata.date as string);
-      const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      return {
-        date,
-        formattedDate,
-        meta: metadata,
-        linkpath: pathitem
-      };
+      return toBlogEntry(path, metadata)
     })
   )
 
   // remove nulls / invalid date entries
-  const filteredNonNull = eachfiled.filter(entry => entry && entry.date instanceof Date && !isNaN(entry.date.getTime()));
+  const filteredNonNull = eachfiled.filter((entry): entry is PulledEntry => entry !== null);
 
   // if a category was provided, filter by it (supports meta.category as string or string[])
   const filteredByWriter = writer

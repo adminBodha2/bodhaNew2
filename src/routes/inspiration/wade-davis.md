@@ -3,6 +3,10 @@ title: Wade Davis
 image: /images/thinkers/wade-davis.webp
 type: thinker
 id: 4
+description: An ethnobotanist who spent decades living with indigenous peoples across the world and documented what is actually lost when a language or culture dies - not diversity as abstraction, but irreplaceable knowledge systems encoded over millennia.
+tags:
+  - culture
+  - ecology
 ---
 
 One of the greatest cultural anthropologists of our time, he is the disciple of the ethnobotanist Sir Richard Evan Shultes. His greatest contribution is his work in some of the most pristine tribes all over the world where he tries to translate their millennia old wisdom about Nature, culture and life to a tone deaf modern world.

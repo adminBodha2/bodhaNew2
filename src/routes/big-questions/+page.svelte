@@ -69,7 +69,7 @@
 			</div>
 		</div>
 		{#if questions && questions.length > 0}
-			<div class="column rgap32 slider-box" use:autoAnimate>
+			<div class="column rgap32 slider-box ptop32" use:autoAnimate>
 				{#each questions as item, i}
 				{#if activeIndex === null || activeIndex === i}
 				<div class="grid two right stacked-4816 emgrid question">

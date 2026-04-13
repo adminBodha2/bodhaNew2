@@ -3,6 +3,9 @@ title: School of Cultural Traditionalists
 image: /images/schools/cultural-traditionalists-school.webp
 type: school
 id: 6
+description: The oldest living school in India - scholars who see themselves as contemporary interpreters of the same tradition that produced the Upanishads and the Nāṭyaśāstra - treating metaphysics, aesthetics, and philosophy as one continuous project rather than separate departments.
+tags:
+  - indian-knowledge-systems
 ---
 
 This school of thought can be considered the oldest school of thought in India since it takes inspiration and sees itself directly in the line of the great scholars and saints of ancient India who created Bharatvarsha’s scriptures, philosophies and metaphysics. They see their role as the contemporary interpreters of the great Hindu tradition, expounding upon its metaphysics, history, philosophy and culture.

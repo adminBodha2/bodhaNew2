@@ -3,6 +3,10 @@ title: Loren Eiseley
 image: /images/thinkers/loren-eiseley.webp
 type: thinker
 id: 2
+description: An anthropologist who wrote like a poet and thought like a mystic - Eiseley's meditations on time, evolution, and consciousness are the closest Western science has come to the Hindu sense of cosmic scale and existential wonder without borrowing the vocabulary.
+tags:
+  - ecology
+  - modernity
 ---
 
 The philosopher of philosophers, Loren Eiseley was a scientist, an anthropologist, but he was also above categorization. He was not a traditional philosopher propounding an ‘-ism’ or championing a school of thought. He could be most accurately called a ‘modern Thoreau’. He seamlessly mixed literature with category-defying philosophy, directly commenting upon nature of existence and life on earth.

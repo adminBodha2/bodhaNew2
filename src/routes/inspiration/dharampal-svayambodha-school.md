@@ -3,6 +3,11 @@ title: Dharampal School of Svayambodha
 image: /images/schools/dharampal-svayambodha-school.webp
 type: school
 id: 4
+description: Built on Dharampal's archival discoveries about pre-colonial India, this school argues that Svayambodha - self-knowledge grounded in India's actual historical capacities - is the precondition for any viable Indian future, not a romantic luxury.
+tags:
+  - hindu-institutions
+  - history
+  - svayambodha
 ---
 
 A school of thought which emerged after India’s independence was the Dharampal School of Thought. It built upon the Gandhian ideas of education and has contributed greatly to India’s public discourse. Gandhi was a great critique of the British and their institutions. Particularly in education he had remarked that how India had a vibrant education system and how the British uprooted and supplanted it with a system which has been eroding Indian’s Knowledge Tradition ever since.

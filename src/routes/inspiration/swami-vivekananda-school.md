@@ -3,6 +3,10 @@ title: Swami Vivekananda's School
 image: /images/schools/swami-vivekananda-school.webp
 type: school
 id: 1
+description: The school that launched Hindu renaissance - Vivekananda's reading of Vedanta as both universal philosophy and basis for Hindu action produced the template every subsequent Hindu revivalist movement has worked with, consciously or not.
+tags:
+  - consciousness
+  - hindu-renaissance
 ---
 
 During the British Raj, this great land of Sanatana Dharma threw contemporary interpreters of the Sanatana tradition, some of the greatest names being Swami Vivekananda, Shri Aurobindo and Swami Dayananda. Swami Vivekananda reaffirmed the spiritual tradition of Bharatvarsha and gave us a call for action. With the grace and will of his Guru, Ramakrishna Paramhamsa he gave the call for Hindu Renaissance by invoking all its spiritual core and traditional foundations.

@@ -67,7 +67,7 @@
 			<div class="grid three stacked-2">
 			  {#each exArt as item}
 				<div class="column">
-				  <h5 class="source-serif tight"><a class="blank linker" href={item.link} target="_blank" rel="noreferrer">{item.title}</a></h5>
+				  <h6 class="source-serif tight"><a class="blank linker" href={item.link} target="_blank" rel="noreferrer">{item.title}</a></h6>
 				  <p class="sm grey">{item.author} | <span class="blue">{item.blog}</span></p>
 				</div>
 			  {/each}

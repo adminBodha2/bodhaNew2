@@ -9,7 +9,7 @@ tags:
   - karma
 date: 2025-06-06
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/civilizations-as-karmic-streams.webp
-excerpt:Civilizations are not collections of events but kārmika streams - living ontological entities shaped by accumulated collective action across deep time. An essay that reframes civilizational history as metaphysics.
+excerpt: Civilizations are not collections of events but kārmika streams - living ontological entities shaped by accumulated collective action across deep time. An essay that reframes civilizational history as metaphysics.
 words: "4502"
 ---
 

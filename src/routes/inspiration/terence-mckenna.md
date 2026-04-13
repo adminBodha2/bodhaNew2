@@ -3,6 +3,10 @@ title: Terence McKenna
 image: /images/thinkers/terence.webp
 type: thinker
 id: 19
+description: A psychedelic philosopher whose stoned-ape hypothesis, archaic revival, and novelty theory sit at the fringe of respectable discourse but ask the right questions - why did human consciousness change so dramatically, and what exactly is it moving toward?
+tags:
+  - consciousness
+  - modernity
 ---
 
 Terence is today more often associated with pseudo-science and fringe theories, but for a few decades he pushed the frontiers of how we understand life, the universe, and everything. Among his major contributions is the ‘stoned-ape’ hypothesis, which points out the glaring temporal gap between the rise of modern homo sapiens and the advent of higher-order thinking in them - art, music, culture. He was also famously critical of modern culture, going so far as to say that “culture is not your friend.”

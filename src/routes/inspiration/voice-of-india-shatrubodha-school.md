@@ -3,6 +3,10 @@ title: Voice of India School of Śatrubodha
 image: /images/schools/voice-of-india-shatrubodha.webp
 type: school
 id: 3
+description: The school that insists on Śatrubodha - knowing your adversary clearly - as the precondition for Hindu survival; its critique of prophetic monotheism as structurally incompatible with a pluralist civilization remains the most rigorous analysis in this space.
+tags:
+  - purva-paksha
+  - shatrubodha
 ---
 
 Swami Dayananda tried to once again invoke the Shatrubodha by telling us who we are not. He showed us why Prophetic Monotheistic ideologies are opposite to the spirit of Sanatana Dharma. He gave us categories of thought and also a plan of action to reclaim our culture from the colonial impositions. But the run up to the independence blurred this initiative for almost a century.

@@ -1,0 +1,1855 @@
+{
+  "aesthetics": [
+    {
+      "filename": "artandmeaningmaking",
+      "title": "Art and Meaning Making",
+      "route": "/blog/artandmeaningmaking"
+    },
+    {
+      "filename": "artist-in-art",
+      "title": "The Artist in Art",
+      "route": "/research/artist-in-art"
+    },
+    {
+      "filename": "dharmic-design",
+      "title": "Dharmic Design",
+      "route": "/research/dharmic-design"
+    },
+    {
+      "filename": "kapila-vatsyayana",
+      "title": "Kapila Vatsyayana",
+      "route": "/inspiration/kapila-vatsyayana"
+    },
+    {
+      "filename": "ms-hiriyanna",
+      "title": "MS Hiriyanna",
+      "route": "/inspiration/ms-hiriyanna"
+    },
+    {
+      "filename": "narrative-non-fiction-school",
+      "title": "School of Narrative Non-fiction",
+      "route": "/inspiration/narrative-non-fiction-school"
+    },
+    {
+      "filename": "sanskritvsfate",
+      "title": "Sanskṛta vs. FATE Languages",
+      "route": "/blog/sanskritvsfate"
+    }
+  ],
+  "civilizational-consciousness": [
+    {
+      "filename": "azaan-and-freedom-of-expression-are-they-compatible",
+      "title": "Azaan and Freedom of Expression - Are They Compatible?",
+      "route": "https://www.indiafacts.org.in/azaan-and-freedom-of-expression/"
+    },
+    {
+      "filename": "being-indian",
+      "title": "What does 'Being Indian' Mean?",
+      "route": "/big-questions/being-indian"
+    },
+    {
+      "filename": "civilizations-as-karmic-streams",
+      "title": "Civilizations as Kārmika Streams",
+      "route": "/blog/civilizations-as-karmic-streams"
+    },
+    {
+      "filename": "cultureandwarfare",
+      "title": "Culture and Warfare - Finding Balance Through Dharma",
+      "route": "/blog/cultureandwarfare"
+    },
+    {
+      "filename": "dasharajna1",
+      "title": "Dāśarājña Recontextualized - Part 1",
+      "route": "/blog/dasharajna1"
+    },
+    {
+      "filename": "dasharajna2",
+      "title": "Dāśarājña Recontextualized - Part 2",
+      "route": "/blog/dasharajna2"
+    },
+    {
+      "filename": "dasharajna3",
+      "title": "Dāśarājña Recontextualized - Part 3",
+      "route": "/blog/dasharajna3"
+    },
+    {
+      "filename": "dharmika-frame-for-sustainability-and-technology",
+      "title": "A Dharmika Frame for Sustainability and Technology",
+      "route": "/blog/dharmika-frame-for-sustainability-and-technology"
+    },
+    {
+      "filename": "dharmikagene",
+      "title": "The Dhārmika Gene",
+      "route": "/blog/dharmikagene"
+    },
+    {
+      "filename": "does-india-have-a-national-language",
+      "title": "Does India Have a National Language?",
+      "route": "https://www.indiafacts.org.in/india-national-language/"
+    },
+    {
+      "filename": "equality-vs-nature-how-hierarchy-can-help-us-save-the-planet",
+      "title": "Equality vs Nature - How Hierarchy Can Help Us Save the Planet",
+      "route": "https://www.indiafacts.org.in/equality-vs-nature-hierarchy-can-help-us-save-planet/"
+    },
+    {
+      "filename": "four-aphorisms",
+      "title": "Caturasūtra - Four Aphorisms",
+      "route": "/blog/four-aphorisms"
+    },
+    {
+      "filename": "fractalmandalaone",
+      "title": "Fractal Maṇḍala 1- the Macrohistoric Case for India's Civilizational Primacy",
+      "route": "/blog/fractalmandalaone"
+    },
+    {
+      "filename": "fractalmandalatwo",
+      "title": "Fractal Maṇḍala 2- the Macrohistoric Case for India's Civilizational Primacy",
+      "route": "/blog/fractalmandalatwo"
+    },
+    {
+      "filename": "grandhistoryone",
+      "title": "Grand History, Part 1",
+      "route": "/blog/grandhistoryone"
+    },
+    {
+      "filename": "hindu-deities-in-central-asia-a-forgotten-chapter-of-history",
+      "title": "Hindu Deities in Central Asia - A Forgotten Chapter of History",
+      "route": "https://www.indiafacts.org.in/hindu-deities-central-asia-forgotten-chapter-history/"
+    },
+    {
+      "filename": "hindu-institution-generate",
+      "title": "What Hindu Institution Will Generate All Others?",
+      "route": "/big-questions/hindu-institution-generate"
+    },
+    {
+      "filename": "hindu-liberals-the-slave-soldiers-of-islamism",
+      "title": "Hindu Liberals - The Slave Soldiers of Islamism",
+      "route": "https://www.indiafacts.org.in/hindu-liberals-slave-soldiers-islamism/"
+    },
+    {
+      "filename": "hindu-renaissance",
+      "title": "What Idea Must Die, for Hindu Renaissance?",
+      "route": "/big-questions/hindu-renaissance"
+    },
+    {
+      "filename": "hindu-response-to-enlightenment",
+      "title": "Hindu Response to Enlightenment",
+      "route": "/research/hindu-response-to-enlightenment"
+    },
+    {
+      "filename": "hindu-unity-and-diversity",
+      "title": "Is Hindu Unity Compatible With Indian Diversity?",
+      "route": "/big-questions/hindu-unity-and-diversity"
+    },
+    {
+      "filename": "historyvsitihasa",
+      "title": "History is Ontic but Itihāsa is Ontologic – a Fractal Maṇḍala Essay",
+      "route": "/blog/historyvsitihasa"
+    },
+    {
+      "filename": "how-scrollin-is-part-of-omidyars-breaking-india-network",
+      "title": "How Scroll.in is Part of Omidyar's Breaking India Network",
+      "route": "https://www.indiafacts.org.in/scrollin-part-omidyars-breaking-india-network/"
+    },
+    {
+      "filename": "indiancivilizationalconsciousness",
+      "title": "Indian Civilizational Consciousness",
+      "route": "/blog/indiancivilizationalconsciousness"
+    },
+    {
+      "filename": "km-munshi",
+      "title": "KM Munshi",
+      "route": "/inspiration/km-munshi"
+    },
+    {
+      "filename": "man-who-turned-down-the-skull-cap-how-india-sees-narendra-modi",
+      "title": "The Man Who Turned Down the Skull Cap - How India Sees Narendra Modi",
+      "route": "https://www.indiafacts.org.in/man-turned-skull-cap-india-sees-narendra-modi/"
+    },
+    {
+      "filename": "political-traditionalists-school",
+      "title": "School of Political Traditionalists",
+      "route": "/inspiration/political-traditionalists-school"
+    },
+    {
+      "filename": "pundits-how-hindu-hillmen-secretly-mapped-central-asia",
+      "title": "Pundits - How Hindu Hillmen Secretly Mapped Central Asia",
+      "route": "https://www.indiafacts.org.in/pundits-hindu-hillmen-secretly-mapped-central-asia/"
+    },
+    {
+      "filename": "questforharmony",
+      "title": "Quest for Harmony",
+      "route": "/blog/questforharmony"
+    },
+    {
+      "filename": "ramasjourney",
+      "title": "Rāma’s Journey – the Avatāra in You, a Fractal Maṇḍala Essay",
+      "route": "/blog/ramasjourney"
+    },
+    {
+      "filename": "rathaasbija",
+      "title": "Ratha as a Bīja of Civilizational DNA, a Fractal Maṇḍala Essay",
+      "route": "/blog/rathaasbija"
+    },
+    {
+      "filename": "sri-aurobindo-school",
+      "title": "Sri Aurobindo’s School",
+      "route": "/inspiration/sri-aurobindo-school"
+    },
+    {
+      "filename": "svayambodha-shatrubodha",
+      "title": "Svayambodha and Śatrubodha - Two Wheels of Civilization",
+      "route": "/blog/svayambodha-shatrubodha"
+    },
+    {
+      "filename": "synaptic-reconnection-1",
+      "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 1",
+      "route": "/blog/synaptic-reconnection-1"
+    },
+    {
+      "filename": "synaptic-reconnection-2",
+      "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 2",
+      "route": "/blog/synaptic-reconnection-2"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-the-global-gameplan",
+      "title": "Unfinished Agendas of Radical Islam - The Global Gameplan",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-global-gameplan/"
+    },
+    {
+      "filename": "vs-naipaul",
+      "title": "VS Naipaul",
+      "route": "/inspiration/vs-naipaul"
+    },
+    {
+      "filename": "we-the-hindus-what-the-cab-means-for-hindu-civilization",
+      "title": "We the Hindus - What the CAB Means for Hindu Civilization",
+      "route": "https://www.indiafacts.org.in/hindus-cab-means-hindu-civilization/"
+    },
+    {
+      "filename": "what-bodha-logo-means",
+      "title": "What the Bodha Logo Means - The Square, the Circle and the Eye of Wisdom",
+      "route": "/blog/what-bodha-logo-means"
+    },
+    {
+      "filename": "what-will-destroy",
+      "title": "What Will Destroy Hindu Society?",
+      "route": "/big-questions/what-will-destroy"
+    },
+    {
+      "filename": "why-liberals-hate-baahubali",
+      "title": "Why Liberals Hate Baahubali",
+      "route": "https://www.indiafacts.org.in/why-liberals-hate-baahubali/"
+    },
+    {
+      "filename": "will-save-sanatana-dharma",
+      "title": "What Will Save Sanatana Dharma?",
+      "route": "/big-questions/will-save-sanatana-dharma"
+    }
+  ],
+  "consciousness": [
+    {
+      "filename": "artandmeaningmaking",
+      "title": "Art and Meaning Making",
+      "route": "/blog/artandmeaningmaking"
+    },
+    {
+      "filename": "arthur-koestler",
+      "title": "Arthur Koestler",
+      "route": "/inspiration/arthur-koestler"
+    },
+    {
+      "filename": "artificialintelligence",
+      "title": "Artificial Intelligence is Here - Part 1, from Before to Now",
+      "route": "/blog/artificialintelligence"
+    },
+    {
+      "filename": "artificialintelligencetwo",
+      "title": "Artificial Intelligence is Here - Part 2, from Now to Henceforth",
+      "route": "/blog/artificialintelligencetwo"
+    },
+    {
+      "filename": "cultureandwarfare",
+      "title": "Culture and Warfare - Finding Balance Through Dharma",
+      "route": "/blog/cultureandwarfare"
+    },
+    {
+      "filename": "difference-between-us",
+      "title": "The Difference Between Us - on One-life vs. Multiple-life Metaphysics",
+      "route": "/blog/difference-between-us"
+    },
+    {
+      "filename": "dukh-depression-and-journeys-of-life-depression-is-the-absence-of-dukkha-part-i",
+      "title": "Dukh, Depression and Journeys of Life - Depression is the Absence of Dukkha - Part I",
+      "route": "https://www.indiafacts.org.in/dukh-depression-journeys-life-depression-absence-dukkha-part-i/"
+    },
+    {
+      "filename": "four-aphorisms",
+      "title": "Caturasūtra - Four Aphorisms",
+      "route": "/blog/four-aphorisms"
+    },
+    {
+      "filename": "grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche",
+      "title": "Grasping for the Beyond - On a Critical Schism in the Modern Psyche",
+      "route": "https://www.indiafacts.org.in/grasping-beyond-critical-schism-modern-psyche/"
+    },
+    {
+      "filename": "hindu-view-of-the-simulation-hypothesis",
+      "title": "Hindu View of the Simulation Hypothesis",
+      "route": "https://www.indiafacts.org.in/hindu-view-simulation-hypothesis/"
+    },
+    {
+      "filename": "hinduisminblindspot1",
+      "title": "Hinduism in the Blind Spot - Part 1",
+      "route": "/blog/hinduisminblindspot1"
+    },
+    {
+      "filename": "hinduisminblindspot2",
+      "title": "Hinduism in the Blind Spot - Part 2",
+      "route": "/blog/hinduisminblindspot2"
+    },
+    {
+      "filename": "ms-hiriyanna",
+      "title": "MS Hiriyanna",
+      "route": "/inspiration/ms-hiriyanna"
+    },
+    {
+      "filename": "sk-rama-rao",
+      "title": "SK Ramachandra Rao",
+      "route": "/inspiration/sk-rama-rao"
+    },
+    {
+      "filename": "swami-vivekananda-school",
+      "title": "Swami Vivekananda's School",
+      "route": "/inspiration/swami-vivekananda-school"
+    },
+    {
+      "filename": "terence-mckenna",
+      "title": "Terence McKenna",
+      "route": "/inspiration/terence-mckenna"
+    },
+    {
+      "filename": "what-bodha-logo-means",
+      "title": "What the Bodha Logo Means - The Square, the Circle and the Eye of Wisdom",
+      "route": "/blog/what-bodha-logo-means"
+    }
+  ],
+  "culture": [
+    {
+      "filename": "artandmeaningmaking",
+      "title": "Art and Meaning Making",
+      "route": "/blog/artandmeaningmaking"
+    },
+    {
+      "filename": "dharmikagene",
+      "title": "The Dhārmika Gene",
+      "route": "/blog/dharmikagene"
+    },
+    {
+      "filename": "indicenvironmentalism",
+      "title": "Indic Environmentalism - A Balance between Tradition and Innovation",
+      "route": "/blog/indicenvironmentalism"
+    },
+    {
+      "filename": "problemofculturetransmission",
+      "title": "The Problem of Culture Transmission",
+      "route": "/blog/problemofculturetransmission"
+    },
+    {
+      "filename": "questforharmony",
+      "title": "Quest for Harmony",
+      "route": "/blog/questforharmony"
+    },
+    {
+      "filename": "what-bodha-logo-means",
+      "title": "What the Bodha Logo Means - The Square, the Circle and the Eye of Wisdom",
+      "route": "/blog/what-bodha-logo-means"
+    },
+    {
+      "filename": "why-liberals-hate-baahubali",
+      "title": "Why Liberals Hate Baahubali",
+      "route": "https://www.indiafacts.org.in/why-liberals-hate-baahubali/"
+    }
+  ],
+  "decolonization": [
+    {
+      "filename": "decolonizationapersonalfootprint",
+      "title": "Decolonization - A Personal Footprint and Some Ramp Ways",
+      "route": "/blog/decolonizationapersonalfootprint"
+    },
+    {
+      "filename": "dharampal",
+      "title": "Dharampal",
+      "route": "/inspiration/dharampal"
+    },
+    {
+      "filename": "did-brahmins-monopolize-knowledge-in-ancient-india",
+      "title": "Did Brahmins Monopolize Knowledge in Ancient India?",
+      "route": "https://www.indiafacts.org.in/brahmins-monopolize-knowledge-ancient-india/"
+    },
+    {
+      "filename": "fractalmandalaone",
+      "title": "Fractal Maṇḍala 1- the Macrohistoric Case for India's Civilizational Primacy",
+      "route": "/blog/fractalmandalaone"
+    },
+    {
+      "filename": "fractalmandalatwo",
+      "title": "Fractal Maṇḍala 2- the Macrohistoric Case for India's Civilizational Primacy",
+      "route": "/blog/fractalmandalatwo"
+    },
+    {
+      "filename": "synaptic-reconnection-1",
+      "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 1",
+      "route": "/blog/synaptic-reconnection-1"
+    },
+    {
+      "filename": "synaptic-reconnection-2",
+      "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 2",
+      "route": "/blog/synaptic-reconnection-2"
+    },
+    {
+      "filename": "vs-naipaul",
+      "title": "VS Naipaul",
+      "route": "/inspiration/vs-naipaul"
+    },
+    {
+      "filename": "witzels-realm-on-reputationist-concerns-over-indias-reclamation-of-its-history",
+      "title": "Witzel's Realm - On Reputationist Concerns Over India's Reclamation of Its History",
+      "route": "https://www.indiafacts.org.in/witzels-realm-reputationist-concerns-indias-reclamation-history/"
+    }
+  ],
+  "devi": [
+    {
+      "filename": "brahmacharini",
+      "title": "Brahmacāriṇī | Navadurgā - Part 2",
+      "route": "/blog/brahmacharini"
+    },
+    {
+      "filename": "chandraghanta",
+      "title": "Candraghaṇṭā | Navadurgā - Part 3",
+      "route": "/blog/chandraghanta"
+    },
+    {
+      "filename": "kalaratri",
+      "title": "Kālarātri | Navadurgā - Part 7",
+      "route": "/blog/kalaratri"
+    },
+    {
+      "filename": "katyayani",
+      "title": "Kātyāyanī | Navadurgā - Part 6",
+      "route": "/blog/katyayani"
+    },
+    {
+      "filename": "kushmanda",
+      "title": "Kūṣmāṇḍā | Navadurgā - Part 4",
+      "route": "/blog/kushmanda"
+    },
+    {
+      "filename": "mahagauri",
+      "title": "Mahāgaurī | Navadurgā - Part 8",
+      "route": "/blog/mahagauri"
+    },
+    {
+      "filename": "shailaputri",
+      "title": "Śailaputrī | Navadurgā - Part 1",
+      "route": "/blog/shailaputri"
+    },
+    {
+      "filename": "siddhidatri",
+      "title": "Siddhidātrī | Navadurgā - Part 9",
+      "route": "/blog/siddhidatri"
+    },
+    {
+      "filename": "skandamata",
+      "title": "Skandamātā | Navadurgā - Part 5",
+      "route": "/blog/skandamata"
+    },
+    {
+      "filename": "towardsdharmacentricpolity",
+      "title": "Towards Dharma-centric Polity - Lokmanya Tilak and the Universalization of Gaṇeśa Utsava",
+      "route": "/blog/towardsdharmacentricpolity"
+    }
+  ],
+  "dharma": [
+    {
+      "filename": "bodha-pyramid-of-priorities-nature-of-hindu-orgs",
+      "title": "Bodha, the Pyramid of Priorities and the Nature of Hindu Organizations",
+      "route": "/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs"
+    },
+    {
+      "filename": "core-of-sanatana-dharma",
+      "title": "What is the Core of Sanatana Dharma?",
+      "route": "/big-questions/core-of-sanatana-dharma"
+    },
+    {
+      "filename": "cultureandwarfare",
+      "title": "Culture and Warfare - Finding Balance Through Dharma",
+      "route": "/blog/cultureandwarfare"
+    },
+    {
+      "filename": "modernity-and-hindu-values",
+      "title": "Is Modernity Compatible With Hindu Values?",
+      "route": "/big-questions/modernity-and-hindu-values"
+    },
+    {
+      "filename": "ram-swarup",
+      "title": "Ram Swarup",
+      "route": "/inspiration/ram-swarup"
+    },
+    {
+      "filename": "sri-aurobindo-school",
+      "title": "Sri Aurobindo’s School",
+      "route": "/inspiration/sri-aurobindo-school"
+    },
+    {
+      "filename": "structure-of-hindu-charity",
+      "title": "Structure of Hindu Charity",
+      "route": "/research/structure-of-hindu-charity"
+    },
+    {
+      "filename": "svayambodha-shatrubodha",
+      "title": "Svayambodha and Śatrubodha - Two Wheels of Civilization",
+      "route": "/blog/svayambodha-shatrubodha"
+    },
+    {
+      "filename": "theodore-dalrymple",
+      "title": "Theodore Dalrymple",
+      "route": "/inspiration/theodore-dalrymple"
+    },
+    {
+      "filename": "we-the-hindus-what-the-cab-means-for-hindu-civilization",
+      "title": "We the Hindus - What the CAB Means for Hindu Civilization",
+      "route": "https://www.indiafacts.org.in/hindus-cab-means-hindu-civilization/"
+    },
+    {
+      "filename": "will-save-sanatana-dharma",
+      "title": "What Will Save Sanatana Dharma?",
+      "route": "/big-questions/will-save-sanatana-dharma"
+    }
+  ],
+  "dharmic-statecraft": [
+    {
+      "filename": "dharmic-design",
+      "title": "Dharmic Design",
+      "route": "/research/dharmic-design"
+    },
+    {
+      "filename": "hindu-institution-generate",
+      "title": "What Hindu Institution Will Generate All Others?",
+      "route": "/big-questions/hindu-institution-generate"
+    },
+    {
+      "filename": "new-indian-republic",
+      "title": "Does India Need Another Republic?",
+      "route": "/big-questions/new-indian-republic"
+    },
+    {
+      "filename": "political-traditionalists-school",
+      "title": "School of Political Traditionalists",
+      "route": "/inspiration/political-traditionalists-school"
+    }
+  ],
+  "ecology": [
+    {
+      "filename": "ahoiashtami",
+      "title": "Ahoi Aṣtamī – How Hindu Dharma Teaches Deep Ecology through Festivals",
+      "route": "/blog/ahoiashtami"
+    },
+    {
+      "filename": "bernd-heinrich",
+      "title": "Bernd Heinrich",
+      "route": "/inspiration/bernd-heinrich"
+    },
+    {
+      "filename": "dharmika-frame-for-sustainability-and-technology",
+      "title": "A Dharmika Frame for Sustainability and Technology",
+      "route": "/blog/dharmika-frame-for-sustainability-and-technology"
+    },
+    {
+      "filename": "eo-wilson",
+      "title": "EO Wilson",
+      "route": "/inspiration/eo-wilson"
+    },
+    {
+      "filename": "equality-vs-nature-how-hierarchy-can-help-us-save-the-planet",
+      "title": "Equality vs Nature - How Hierarchy Can Help Us Save the Planet",
+      "route": "https://www.indiafacts.org.in/equality-vs-nature-hierarchy-can-help-us-save-planet/"
+    },
+    {
+      "filename": "indicenvironmentalism",
+      "title": "Indic Environmentalism - A Balance between Tradition and Innovation",
+      "route": "/blog/indicenvironmentalism"
+    },
+    {
+      "filename": "james-lovelock",
+      "title": "James Lovelock",
+      "route": "/inspiration/james-lovelock"
+    },
+    {
+      "filename": "loren-eiseley",
+      "title": "Loren Eiseley",
+      "route": "/inspiration/loren-eiseley"
+    },
+    {
+      "filename": "robert-ardrey",
+      "title": "Robert Ardrey",
+      "route": "/inspiration/robert-ardrey"
+    },
+    {
+      "filename": "truth-and-the-humbug-in-greta-thunbergs-climate-change-speech",
+      "title": "The Truth and the Humbug in Greta Thunberg's Climate Change Speech",
+      "route": "https://www.indiafacts.org.in/the-truth-and-the-humbug-in-greta-thunbergs-climate-change-speech/"
+    },
+    {
+      "filename": "wade-davis",
+      "title": "Wade Davis",
+      "route": "/inspiration/wade-davis"
+    }
+  ],
+  "festivals": [
+    {
+      "filename": "ahoiashtami",
+      "title": "Ahoi Aṣtamī – How Hindu Dharma Teaches Deep Ecology through Festivals",
+      "route": "/blog/ahoiashtami"
+    },
+    {
+      "filename": "chath",
+      "title": "Chaṭh - a Living Tradition and Cultural Homecoming",
+      "route": "/blog/chath"
+    },
+    {
+      "filename": "dharmic-circuits-sacred-pathways-part-1",
+      "title": "Dharmic Circuits - Sacred Pathways - Part 1",
+      "route": "https://www.indiafacts.org.in/dharmic-circuits-sacred-pathways-part-1/"
+    },
+    {
+      "filename": "gloryofkrishnajanmashtami",
+      "title": "Recollection: The Glory of Śrī Kṛṣṇa Janmāṣṭamī",
+      "route": "/blog/gloryofkrishnajanmashtami"
+    },
+    {
+      "filename": "kshetrashastrautsava",
+      "title": "Kṣetra, Śāstra, Utsava",
+      "route": "/blog/kshetrashastrautsava"
+    },
+    {
+      "filename": "ramasjourney",
+      "title": "Rāma’s Journey – the Avatāra in You, a Fractal Maṇḍala Essay",
+      "route": "/blog/ramasjourney"
+    },
+    {
+      "filename": "towardsdharmacentricpolity",
+      "title": "Towards Dharma-centric Polity - Lokmanya Tilak and the Universalization of Gaṇeśa Utsava",
+      "route": "/blog/towardsdharmacentricpolity"
+    },
+    {
+      "filename": "turnersoftime",
+      "title": "Turners of Time - How Hindu Festivals Rotate the Year",
+      "route": "/blog/turnersoftime"
+    }
+  ],
+  "hindu-institutions": [
+    {
+      "filename": "bodha-pyramid-of-priorities-nature-of-hindu-orgs",
+      "title": "Bodha, the Pyramid of Priorities and the Nature of Hindu Organizations",
+      "route": "/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs"
+    },
+    {
+      "filename": "case-against-aol-a-case-of-malicious-prosecution",
+      "title": "Case Against AOL - A Case of Malicious Prosecution",
+      "route": "https://www.indiafacts.org.in/case-aol-case-malicious-prosecution/"
+    },
+    {
+      "filename": "dharampal-svayambodha-school",
+      "title": "Dharampal School of Svayambodha",
+      "route": "/inspiration/dharampal-svayambodha-school"
+    },
+    {
+      "filename": "hindu-institution-generate",
+      "title": "What Hindu Institution Will Generate All Others?",
+      "route": "/big-questions/hindu-institution-generate"
+    },
+    {
+      "filename": "hindu-models-of-temple-management",
+      "title": "Hindu Models of Temple Management",
+      "route": "/research/hindu-models-of-temple-management"
+    },
+    {
+      "filename": "hindu-unity-and-diversity",
+      "title": "Is Hindu Unity Compatible With Indian Diversity?",
+      "route": "/big-questions/hindu-unity-and-diversity"
+    },
+    {
+      "filename": "interchanging-dynamics-of-hindu-family",
+      "title": "Interchanging Dynamics of the Hindu Family",
+      "route": "/research/interchanging-dynamics-of-hindu-family"
+    },
+    {
+      "filename": "new-indian-republic",
+      "title": "Does India Need Another Republic?",
+      "route": "/big-questions/new-indian-republic"
+    },
+    {
+      "filename": "problemofculturetransmission",
+      "title": "The Problem of Culture Transmission",
+      "route": "/blog/problemofculturetransmission"
+    },
+    {
+      "filename": "story-of-a-priest",
+      "title": "Story of a Priest",
+      "route": "https://www.indiafacts.org.in/story-of-a-priest/"
+    },
+    {
+      "filename": "structure-of-hindu-charity",
+      "title": "Structure of Hindu Charity",
+      "route": "/research/structure-of-hindu-charity"
+    }
+  ],
+  "hindu-renaissance": [
+    {
+      "filename": "hindu-renaissance",
+      "title": "What Idea Must Die, for Hindu Renaissance?",
+      "route": "/big-questions/hindu-renaissance"
+    },
+    {
+      "filename": "hindu-samizdat-how-hindus-respond-to-censorship-and-bias",
+      "title": "Hindu Samizdat - How Hindus Respond to Censorship and Bias",
+      "route": "https://www.indiafacts.org.in/hindu-samizdat-hindus-respond-censorship-bias/"
+    },
+    {
+      "filename": "km-munshi",
+      "title": "KM Munshi",
+      "route": "/inspiration/km-munshi"
+    },
+    {
+      "filename": "man-who-turned-down-the-skull-cap-how-india-sees-narendra-modi",
+      "title": "The Man Who Turned Down the Skull Cap - How India Sees Narendra Modi",
+      "route": "https://www.indiafacts.org.in/man-turned-skull-cap-india-sees-narendra-modi/"
+    },
+    {
+      "filename": "sri-aurobindo-school",
+      "title": "Sri Aurobindo’s School",
+      "route": "/inspiration/sri-aurobindo-school"
+    },
+    {
+      "filename": "swami-vivekananda-school",
+      "title": "Swami Vivekananda's School",
+      "route": "/inspiration/swami-vivekananda-school"
+    },
+    {
+      "filename": "tapan-ghosh-a-true-hindu-warrior",
+      "title": "Tapan Ghosh - A True Hindu Warrior",
+      "route": "https://www.indiafacts.org.in/tapan-ghosh-true-hindu-warrior/"
+    }
+  ],
+  "history": [
+    {
+      "filename": "100-years-of-russian-revolution-i-is-communism-compatible-with-democracy",
+      "title": "100 Years of Russian Revolution - I - Is Communism Compatible with Democracy?",
+      "route": "https://www.indiafacts.org.in/russian-revolution-communism-democracy/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-ii-how-communism-killed-freedom-of-expression",
+      "title": "100 Years of Russian Revolution - II - How Communism Killed Freedom of Expression",
+      "route": "https://www.indiafacts.org.in/communism-killed-freedom-expression/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-iii-communism-and-treason",
+      "title": "100 Years of Russian Revolution - III - Communism and Treason",
+      "route": "https://www.indiafacts.org.in/communism-treason/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-iv-was-indira-gandhi-a-soviet-agent",
+      "title": "100 Years of Russian Revolution - IV - Was Indira Gandhi a Soviet Agent?",
+      "route": "https://www.indiafacts.org.in/indira-gandhi-soviet-agent/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-v-how-marxism-still-influences-indian-politics",
+      "title": "100 Years of Russian Revolution - V - How Marxism Still Influences Indian Politics",
+      "route": "https://www.indiafacts.org.in/how-marxism-still-influences-indian-politics/"
+    },
+    {
+      "filename": "ancient-temples-and-modern-dacoits-part-iii-the-architectural-workshop-of-the-gurjara-pratiharas",
+      "title": "Ancient Temples and Modern Dacoits Part III - The Architectural Workshop of the Gurjara-Pratiharas",
+      "route": "https://www.indiafacts.org.in/ancient-temples-modern-dacoits-part-iii-architectural-workshop-gurjara-pratiharas/"
+    },
+    {
+      "filename": "bharatiya-wanderlust-1",
+      "title": "Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 1",
+      "route": "/blog/bharatiya-wanderlust-1"
+    },
+    {
+      "filename": "bharatiya-wanderlust-2",
+      "title": "Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 2",
+      "route": "/blog/bharatiya-wanderlust-2"
+    },
+    {
+      "filename": "bharatiya-wanderlust-3",
+      "title": "Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 3",
+      "route": "/blog/bharatiya-wanderlust-3"
+    },
+    {
+      "filename": "civilizations-as-karmic-streams",
+      "title": "Civilizations as Kārmika Streams",
+      "route": "/blog/civilizations-as-karmic-streams"
+    },
+    {
+      "filename": "closing-the-pamir-gap-the-great-game-series",
+      "title": "Closing the Pamir Gap - The Great Game Series",
+      "route": "https://www.indiafacts.org.in/closing-pamir-gap-great-game-series/"
+    },
+    {
+      "filename": "continuous-comprehensive-and-cumulative-the-knowledge-tradition-of-india",
+      "title": "Continuous, Comprehensive and Cumulative - The Knowledge Tradition of India",
+      "route": "https://www.indiafacts.org.in/continuous-comprehensive-cumulative-knowledge-tradition-india/"
+    },
+    {
+      "filename": "dasharajna1",
+      "title": "Dāśarājña Recontextualized - Part 1",
+      "route": "/blog/dasharajna1"
+    },
+    {
+      "filename": "dasharajna2",
+      "title": "Dāśarājña Recontextualized - Part 2",
+      "route": "/blog/dasharajna2"
+    },
+    {
+      "filename": "dasharajna3",
+      "title": "Dāśarājña Recontextualized - Part 3",
+      "route": "/blog/dasharajna3"
+    },
+    {
+      "filename": "decolonizationapersonalfootprint",
+      "title": "Decolonization - A Personal Footprint and Some Ramp Ways",
+      "route": "/blog/decolonizationapersonalfootprint"
+    },
+    {
+      "filename": "dharampal",
+      "title": "Dharampal",
+      "route": "/inspiration/dharampal"
+    },
+    {
+      "filename": "dharampal-svayambodha-school",
+      "title": "Dharampal School of Svayambodha",
+      "route": "/inspiration/dharampal-svayambodha-school"
+    },
+    {
+      "filename": "did-brahmins-monopolize-knowledge-in-ancient-india",
+      "title": "Did Brahmins Monopolize Knowledge in Ancient India?",
+      "route": "https://www.indiafacts.org.in/brahmins-monopolize-knowledge-ancient-india/"
+    },
+    {
+      "filename": "does-india-have-a-national-language",
+      "title": "Does India Have a National Language?",
+      "route": "https://www.indiafacts.org.in/india-national-language/"
+    },
+    {
+      "filename": "fighting-for-india-britain-vs-russia-in-the-great-game",
+      "title": "Fighting for India - Britain vs Russia in the Great Game",
+      "route": "https://www.indiafacts.org.in/fighting-india-britain-vs-russia-great-game/"
+    },
+    {
+      "filename": "four-aphorisms",
+      "title": "Caturasūtra - Four Aphorisms",
+      "route": "/blog/four-aphorisms"
+    },
+    {
+      "filename": "fractalmandalaone",
+      "title": "Fractal Maṇḍala 1- the Macrohistoric Case for India's Civilizational Primacy",
+      "route": "/blog/fractalmandalaone"
+    },
+    {
+      "filename": "fractalmandalatwo",
+      "title": "Fractal Maṇḍala 2- the Macrohistoric Case for India's Civilizational Primacy",
+      "route": "/blog/fractalmandalatwo"
+    },
+    {
+      "filename": "grandhistoryone",
+      "title": "Grand History, Part 1",
+      "route": "/blog/grandhistoryone"
+    },
+    {
+      "filename": "hindu-deities-in-central-asia-a-forgotten-chapter-of-history",
+      "title": "Hindu Deities in Central Asia - A Forgotten Chapter of History",
+      "route": "https://www.indiafacts.org.in/hindu-deities-central-asia-forgotten-chapter-history/"
+    },
+    {
+      "filename": "historyvsitihasa",
+      "title": "History is Ontic but Itihāsa is Ontologic – a Fractal Maṇḍala Essay",
+      "route": "/blog/historyvsitihasa"
+    },
+    {
+      "filename": "how-lenin-tried-to-foment-communist-revolution-in-india",
+      "title": "How Lenin Tried to Foment Communist Revolution in India",
+      "route": "https://www.indiafacts.org.in/how-lenin-tried-foment-communist-revolution-india/"
+    },
+    {
+      "filename": "how-old-is-the-hindu-temple",
+      "title": "How Old is the Hindu Temple?",
+      "route": "https://www.indiafacts.org.in/how-old-is-the-hindu-temple/"
+    },
+    {
+      "filename": "how-to-become-a-superpower-inside-the-'great-game",
+      "title": "How to Become a Superpower - Inside the Great Game",
+      "route": "https://www.indiafacts.org.in/how-to-become-superpower-inside-great-game/"
+    },
+    {
+      "filename": "how-turkey-and-germany-planned-holy-jihad-against-india",
+      "title": "How Turkey and Germany Planned Holy Jihad Against India",
+      "route": "https://www.indiafacts.org.in/how-turkey-germany-planned-holy-jihad-india/"
+    },
+    {
+      "filename": "in-memoriam-life-and-works-of-shri-n-s-rajaram",
+      "title": "In Memoriam - Life and Works of Shri N.S. Rajaram",
+      "route": "https://www.indiafacts.org.in/in-memoriam-life-and-works-of-shri-n-s-rajaram/"
+    },
+    {
+      "filename": "kaiser-sultan-and-the-holy-jihad-in-india",
+      "title": "Kaiser, Sultan and the Holy Jihad in India",
+      "route": "https://www.indiafacts.org.in/kaiser-sultan-holy-jihad-india/"
+    },
+    {
+      "filename": "km-munshi",
+      "title": "KM Munshi",
+      "route": "/inspiration/km-munshi"
+    },
+    {
+      "filename": "making-of-early-kashmir-the-making-of-a-new-literary-star",
+      "title": "Making of Early Kashmir - The Making of a New Literary Star",
+      "route": "https://www.indiafacts.org.in/making-early-kashmir-making-new-literary-star/"
+    },
+    {
+      "filename": "narrative-non-fiction-school",
+      "title": "School of Narrative Non-fiction",
+      "route": "/inspiration/narrative-non-fiction-school"
+    },
+    {
+      "filename": "on-what-is-a-hindu-temple",
+      "title": "On What is a Hindu Temple",
+      "route": "https://www.indiafacts.org.in/on-what-is-a-hindu-temple/"
+    },
+    {
+      "filename": "pundits-how-hindu-hillmen-secretly-mapped-central-asia",
+      "title": "Pundits - How Hindu Hillmen Secretly Mapped Central Asia",
+      "route": "https://www.indiafacts.org.in/pundits-hindu-hillmen-secretly-mapped-central-asia/"
+    },
+    {
+      "filename": "puranas-as-the-source-for-a-chronology-of-indian-history",
+      "title": "Puranas as the Source for a Chronology of Indian History",
+      "route": "https://www.indiafacts.org.in/puranas-source-chronology-indian-history/"
+    },
+    {
+      "filename": "race-for-lhasa-the-great-game-series",
+      "title": "Race for Lhasa - The Great Game Series",
+      "route": "https://www.indiafacts.org.in/race-lhasa-great-game-series/"
+    },
+    {
+      "filename": "re-imposing-the-jizyah-decoding-sharjeel-imams-speech",
+      "title": "Re-imposing the Jizyah - Decoding Sharjeel Imam's Speech",
+      "route": "https://www.indiafacts.org.in/re-imposing-the-jizyah-decoding-sharjeel-imams-speech/"
+    },
+    {
+      "filename": "svayambodha-and-shatrubodha-review",
+      "title": "Book Review | Svayambodha and Shatrubodha",
+      "route": "/blog/svayambodha-and-shatrubodha-review"
+    },
+    {
+      "filename": "synaptic-reconnection-1",
+      "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 1",
+      "route": "/blog/synaptic-reconnection-1"
+    },
+    {
+      "filename": "synaptic-reconnection-2",
+      "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 2",
+      "route": "/blog/synaptic-reconnection-2"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-case-1-lebanon",
+      "title": "Unfinished Agendas of Radical Islam - Case 1 - Lebanon",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-case-1-lebanon/"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-case-2-armenia-and-turkey",
+      "title": "Unfinished Agendas of Radical Islam - Case 2 - Armenia and Turkey",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-case-2-armenia-turkey/"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-case-3-greece-and-spain",
+      "title": "Unfinished Agendas of Radical Islam - Case 3 - Greece and Spain",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-case-3-greece-spain/"
+    },
+    {
+      "filename": "witzels-realm-on-reputationist-concerns-over-indias-reclamation-of-its-history",
+      "title": "Witzel's Realm - On Reputationist Concerns Over India's Reclamation of Its History",
+      "route": "https://www.indiafacts.org.in/witzels-realm-reputationist-concerns-indias-reclamation-history/"
+    }
+  ],
+  "indian-knowledge-systems": [
+    {
+      "filename": "ak-saran",
+      "title": "AK Saran",
+      "route": "/inspiration/ak-saran"
+    },
+    {
+      "filename": "conscilience-school",
+      "title": "School of Conscilience",
+      "route": "/inspiration/conscilience-school"
+    },
+    {
+      "filename": "continuous-comprehensive-and-cumulative-the-knowledge-tradition-of-india",
+      "title": "Continuous, Comprehensive and Cumulative - The Knowledge Tradition of India",
+      "route": "https://www.indiafacts.org.in/continuous-comprehensive-cumulative-knowledge-tradition-india/"
+    },
+    {
+      "filename": "core-of-sanatana-dharma",
+      "title": "What is the Core of Sanatana Dharma?",
+      "route": "/big-questions/core-of-sanatana-dharma"
+    },
+    {
+      "filename": "cultural-traditionalists-school",
+      "title": "School of Cultural Traditionalists",
+      "route": "/inspiration/cultural-traditionalists-school"
+    },
+    {
+      "filename": "dharampal",
+      "title": "Dharampal",
+      "route": "/inspiration/dharampal"
+    },
+    {
+      "filename": "dharmikagene",
+      "title": "The Dhārmika Gene",
+      "route": "/blog/dharmikagene"
+    },
+    {
+      "filename": "did-brahmins-monopolize-knowledge-in-ancient-india",
+      "title": "Did Brahmins Monopolize Knowledge in Ancient India?",
+      "route": "https://www.indiafacts.org.in/brahmins-monopolize-knowledge-ancient-india/"
+    },
+    {
+      "filename": "dukh-depression-and-journeys-of-life-depression-is-the-absence-of-dukkha-part-i",
+      "title": "Dukh, Depression and Journeys of Life - Depression is the Absence of Dukkha - Part I",
+      "route": "https://www.indiafacts.org.in/dukh-depression-journeys-life-depression-absence-dukkha-part-i/"
+    },
+    {
+      "filename": "eo-wilson",
+      "title": "EO Wilson",
+      "route": "/inspiration/eo-wilson"
+    },
+    {
+      "filename": "hindu-frameworks-of-education",
+      "title": "Hindu Frameworks of Education",
+      "route": "/research/hindu-frameworks-of-education"
+    },
+    {
+      "filename": "hindu-response-to-enlightenment",
+      "title": "Hindu Response to Enlightenment",
+      "route": "/research/hindu-response-to-enlightenment"
+    },
+    {
+      "filename": "hindu-view-of-the-simulation-hypothesis",
+      "title": "Hindu View of the Simulation Hypothesis",
+      "route": "https://www.indiafacts.org.in/hindu-view-simulation-hypothesis/"
+    },
+    {
+      "filename": "how-old-is-the-hindu-temple",
+      "title": "How Old is the Hindu Temple?",
+      "route": "https://www.indiafacts.org.in/how-old-is-the-hindu-temple/"
+    },
+    {
+      "filename": "kapila-vatsyayana",
+      "title": "Kapila Vatsyayana",
+      "route": "/inspiration/kapila-vatsyayana"
+    },
+    {
+      "filename": "many-meanings-of-the-hindu-temple",
+      "title": "The Many Meanings of the Hindu Temple",
+      "route": "https://www.indiafacts.org.in/many-meanings-hindu-temple/"
+    },
+    {
+      "filename": "ms-hiriyanna",
+      "title": "MS Hiriyanna",
+      "route": "/inspiration/ms-hiriyanna"
+    },
+    {
+      "filename": "on-what-is-a-hindu-temple",
+      "title": "On What is a Hindu Temple",
+      "route": "https://www.indiafacts.org.in/on-what-is-a-hindu-temple/"
+    },
+    {
+      "filename": "practice-but-not-proven",
+      "title": "What Do Hindus Practice, but Cannot Prove?",
+      "route": "/big-questions/practice-but-not-proven"
+    },
+    {
+      "filename": "puranas-as-the-source-for-a-chronology-of-indian-history",
+      "title": "Puranas as the Source for a Chronology of Indian History",
+      "route": "https://www.indiafacts.org.in/puranas-source-chronology-indian-history/"
+    },
+    {
+      "filename": "teaching-and-research-the-rot-that-has-set-in",
+      "title": "Teaching and Research - The Rot That Has Set In",
+      "route": "https://www.indiafacts.org.in/teaching-research-rot-set/"
+    },
+    {
+      "filename": "wade-davis",
+      "title": "Wade Davis",
+      "route": "/inspiration/wade-davis"
+    }
+  ],
+  "karma": [
+    {
+      "filename": "civilizations-as-karmic-streams",
+      "title": "Civilizations as Kārmika Streams",
+      "route": "/blog/civilizations-as-karmic-streams"
+    },
+    {
+      "filename": "practice-but-not-proven",
+      "title": "What Do Hindus Practice, but Cannot Prove?",
+      "route": "/big-questions/practice-but-not-proven"
+    }
+  ],
+  "mahabharata": [
+    {
+      "filename": "gloryofkrishnajanmashtami",
+      "title": "Recollection: The Glory of Śrī Kṛṣṇa Janmāṣṭamī",
+      "route": "/blog/gloryofkrishnajanmashtami"
+    },
+    {
+      "filename": "kshetrashastrautsava",
+      "title": "Kṣetra, Śāstra, Utsava",
+      "route": "/blog/kshetrashastrautsava"
+    }
+  ],
+  "modernity": [
+    {
+      "filename": "100-years-of-russian-revolution-ii-how-communism-killed-freedom-of-expression",
+      "title": "100 Years of Russian Revolution - II - How Communism Killed Freedom of Expression",
+      "route": "https://www.indiafacts.org.in/communism-killed-freedom-expression/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-v-how-marxism-still-influences-indian-politics",
+      "title": "100 Years of Russian Revolution - V - How Marxism Still Influences Indian Politics",
+      "route": "https://www.indiafacts.org.in/how-marxism-still-influences-indian-politics/"
+    },
+    {
+      "filename": "artificialintelligence",
+      "title": "Artificial Intelligence is Here - Part 1, from Before to Now",
+      "route": "/blog/artificialintelligence"
+    },
+    {
+      "filename": "artificialintelligencetwo",
+      "title": "Artificial Intelligence is Here - Part 2, from Now to Henceforth",
+      "route": "/blog/artificialintelligencetwo"
+    },
+    {
+      "filename": "dharmika-frame-for-sustainability-and-technology",
+      "title": "A Dharmika Frame for Sustainability and Technology",
+      "route": "/blog/dharmika-frame-for-sustainability-and-technology"
+    },
+    {
+      "filename": "equality-vs-nature-how-hierarchy-can-help-us-save-the-planet",
+      "title": "Equality vs Nature - How Hierarchy Can Help Us Save the Planet",
+      "route": "https://www.indiafacts.org.in/equality-vs-nature-hierarchy-can-help-us-save-planet/"
+    },
+    {
+      "filename": "grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche",
+      "title": "Grasping for the Beyond - On a Critical Schism in the Modern Psyche",
+      "route": "https://www.indiafacts.org.in/grasping-beyond-critical-schism-modern-psyche/"
+    },
+    {
+      "filename": "hindu-view-of-the-simulation-hypothesis",
+      "title": "Hindu View of the Simulation Hypothesis",
+      "route": "https://www.indiafacts.org.in/hindu-view-simulation-hypothesis/"
+    },
+    {
+      "filename": "loren-eiseley",
+      "title": "Loren Eiseley",
+      "route": "/inspiration/loren-eiseley"
+    },
+    {
+      "filename": "modernity-and-hindu-values",
+      "title": "Is Modernity Compatible With Hindu Values?",
+      "route": "/big-questions/modernity-and-hindu-values"
+    },
+    {
+      "filename": "nassim-nicholas-taleb",
+      "title": "Nassim Nicholas Taleb",
+      "route": "/inspiration/nassim-nicholas-taleb"
+    },
+    {
+      "filename": "teaching-and-research-the-rot-that-has-set-in",
+      "title": "Teaching and Research - The Rot That Has Set In",
+      "route": "https://www.indiafacts.org.in/teaching-research-rot-set/"
+    },
+    {
+      "filename": "theodore-dalrymple",
+      "title": "Theodore Dalrymple",
+      "route": "/inspiration/theodore-dalrymple"
+    },
+    {
+      "filename": "thou-shalt-not-comment-the-dictatorship-of-scrollin",
+      "title": "Thou Shalt Not Comment - The Dictatorship of Scroll.in",
+      "route": "https://www.indiafacts.org.in/thou-shalt-not-comment-the-dictatorship-of-scrollin/"
+    },
+    {
+      "filename": "tightrope",
+      "title": "Walking the Tightrope Between Big Brother and Soma",
+      "route": "/blog/tightrope"
+    },
+    {
+      "filename": "truth-and-the-humbug-in-greta-thunbergs-climate-change-speech",
+      "title": "The Truth and the Humbug in Greta Thunberg's Climate Change Speech",
+      "route": "https://www.indiafacts.org.in/the-truth-and-the-humbug-in-greta-thunbergs-climate-change-speech/"
+    }
+  ],
+  "navaratri": [
+    {
+      "filename": "brahmacharini",
+      "title": "Brahmacāriṇī | Navadurgā - Part 2",
+      "route": "/blog/brahmacharini"
+    },
+    {
+      "filename": "chandraghanta",
+      "title": "Candraghaṇṭā | Navadurgā - Part 3",
+      "route": "/blog/chandraghanta"
+    },
+    {
+      "filename": "kalaratri",
+      "title": "Kālarātri | Navadurgā - Part 7",
+      "route": "/blog/kalaratri"
+    },
+    {
+      "filename": "katyayani",
+      "title": "Kātyāyanī | Navadurgā - Part 6",
+      "route": "/blog/katyayani"
+    },
+    {
+      "filename": "kushmanda",
+      "title": "Kūṣmāṇḍā | Navadurgā - Part 4",
+      "route": "/blog/kushmanda"
+    },
+    {
+      "filename": "mahagauri",
+      "title": "Mahāgaurī | Navadurgā - Part 8",
+      "route": "/blog/mahagauri"
+    },
+    {
+      "filename": "shailaputri",
+      "title": "Śailaputrī | Navadurgā - Part 1",
+      "route": "/blog/shailaputri"
+    },
+    {
+      "filename": "siddhidatri",
+      "title": "Siddhidātrī | Navadurgā - Part 9",
+      "route": "/blog/siddhidatri"
+    },
+    {
+      "filename": "skandamata",
+      "title": "Skandamātā | Navadurgā - Part 5",
+      "route": "/blog/skandamata"
+    }
+  ],
+  "northeast-india": [
+    {
+      "filename": "battle-for-dharma-north-east",
+      "title": "The Battle for Dharma in North-East",
+      "route": "/research/battle-for-dharma-north-east"
+    },
+    {
+      "filename": "battleagainsthindusinmanipur",
+      "title": "The Battle Against Hindus in Manipur",
+      "route": "/blog/battleagainsthindusinmanipur"
+    },
+    {
+      "filename": "dangs-anatomy-of-religious-terror",
+      "title": "Dangs - Anatomy of Religious Terror",
+      "route": "/research/dangs-anatomy-of-religious-terror"
+    },
+    {
+      "filename": "year-in-hajong-village",
+      "title": "A Year in Hajong Village",
+      "route": "/research/year-in-hajong-village"
+    }
+  ],
+  "out-of-india-theory": [
+    {
+      "filename": "bharatiya-wanderlust-1",
+      "title": "Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 1",
+      "route": "/blog/bharatiya-wanderlust-1"
+    },
+    {
+      "filename": "bharatiya-wanderlust-2",
+      "title": "Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 2",
+      "route": "/blog/bharatiya-wanderlust-2"
+    },
+    {
+      "filename": "bharatiya-wanderlust-3",
+      "title": "Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 3",
+      "route": "/blog/bharatiya-wanderlust-3"
+    },
+    {
+      "filename": "in-memoriam-life-and-works-of-shri-n-s-rajaram",
+      "title": "In Memoriam - Life and Works of Shri N.S. Rajaram",
+      "route": "https://www.indiafacts.org.in/in-memoriam-life-and-works-of-shri-n-s-rajaram/"
+    },
+    {
+      "filename": "puranas-as-the-source-for-a-chronology-of-indian-history",
+      "title": "Puranas as the Source for a Chronology of Indian History",
+      "route": "https://www.indiafacts.org.in/puranas-source-chronology-indian-history/"
+    },
+    {
+      "filename": "rathaasbija",
+      "title": "Ratha as a Bīja of Civilizational DNA, a Fractal Maṇḍala Essay",
+      "route": "/blog/rathaasbija"
+    },
+    {
+      "filename": "witzels-realm-on-reputationist-concerns-over-indias-reclamation-of-its-history",
+      "title": "Witzel's Realm - On Reputationist Concerns Over India's Reclamation of Its History",
+      "route": "https://www.indiafacts.org.in/witzels-realm-reputationist-concerns-indias-reclamation-history/"
+    }
+  ],
+  "purva-paksha": [
+    {
+      "filename": "100-years-of-russian-revolution-i-is-communism-compatible-with-democracy",
+      "title": "100 Years of Russian Revolution - I - Is Communism Compatible with Democracy?",
+      "route": "https://www.indiafacts.org.in/russian-revolution-communism-democracy/"
+    },
+    {
+      "filename": "alexander-solzhenitsyn",
+      "title": "Alexander Solzhenitsyn",
+      "route": "/inspiration/alexander-solzhenitsyn"
+    },
+    {
+      "filename": "arthur-koestler",
+      "title": "Arthur Koestler",
+      "route": "/inspiration/arthur-koestler"
+    },
+    {
+      "filename": "artist-in-art",
+      "title": "The Artist in Art",
+      "route": "/research/artist-in-art"
+    },
+    {
+      "filename": "freedomofexpression",
+      "title": "Freedom of Expression",
+      "route": "/blog/freedomofexpression"
+    },
+    {
+      "filename": "hindu-response-to-enlightenment",
+      "title": "Hindu Response to Enlightenment",
+      "route": "/research/hindu-response-to-enlightenment"
+    },
+    {
+      "filename": "in-the-name-of-defending-islam-i-understanding-the-muslim-psyche",
+      "title": "In the Name of Defending Islam - I - Understanding the Muslim Psyche",
+      "route": "https://www.indiafacts.org.in/in-name-defending-islam-understanding-muslim-psyche/"
+    },
+    {
+      "filename": "in-the-name-of-defending-islamii-how-radical-muslims-play-victim",
+      "title": "In the Name of Defending Islam - II - How Radical Muslims Play Victim",
+      "route": "https://www.indiafacts.org.in/in-name-defending-islam-ii-how-radical-muslims-play-victim/"
+    },
+    {
+      "filename": "ivan-illich",
+      "title": "Ivan Illich",
+      "route": "/inspiration/ivan-illich"
+    },
+    {
+      "filename": "letter-to-a-moderate-muslim",
+      "title": "Letter to a Moderate Muslim",
+      "route": "https://www.indiafacts.org.in/letter-moderate-muslim/"
+    },
+    {
+      "filename": "nassim-nicholas-taleb",
+      "title": "Nassim Nicholas Taleb",
+      "route": "/inspiration/nassim-nicholas-taleb"
+    },
+    {
+      "filename": "ram-swarup",
+      "title": "Ram Swarup",
+      "route": "/inspiration/ram-swarup"
+    },
+    {
+      "filename": "theodore-dalrymple",
+      "title": "Theodore Dalrymple",
+      "route": "/inspiration/theodore-dalrymple"
+    },
+    {
+      "filename": "voice-of-india-shatrubodha-school",
+      "title": "Voice of India School of Śatrubodha",
+      "route": "/inspiration/voice-of-india-shatrubodha-school"
+    },
+    {
+      "filename": "witzels-realm-on-reputationist-concerns-over-indias-reclamation-of-its-history",
+      "title": "Witzel's Realm - On Reputationist Concerns Over India's Reclamation of Its History",
+      "route": "https://www.indiafacts.org.in/witzels-realm-reputationist-concerns-indias-reclamation-history/"
+    }
+  ],
+  "rama": [
+    {
+      "filename": "ramajanmabhumi",
+      "title": "Śrī Rāma Comes Back to Ayodhyā",
+      "route": "/blog/ramajanmabhumi"
+    },
+    {
+      "filename": "ramasjourney",
+      "title": "Rāma’s Journey – the Avatāra in You, a Fractal Maṇḍala Essay",
+      "route": "/blog/ramasjourney"
+    },
+    {
+      "filename": "returnoframa",
+      "title": "राम आयेंगे!",
+      "route": "/blog/returnoframa"
+    }
+  ],
+  "sanskrit": [
+    {
+      "filename": "decolonizinglanguage",
+      "title": "Decolonizing Language",
+      "route": "/blog/decolonizinglanguage"
+    },
+    {
+      "filename": "does-india-have-a-national-language",
+      "title": "Does India Have a National Language?",
+      "route": "https://www.indiafacts.org.in/india-national-language/"
+    },
+    {
+      "filename": "sanskritvsfate",
+      "title": "Sanskṛta vs. FATE Languages",
+      "route": "/blog/sanskritvsfate"
+    }
+  ],
+  "shatrubodha": [
+    {
+      "filename": "100-years-of-russian-revolution-i-is-communism-compatible-with-democracy",
+      "title": "100 Years of Russian Revolution - I - Is Communism Compatible with Democracy?",
+      "route": "https://www.indiafacts.org.in/russian-revolution-communism-democracy/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-ii-how-communism-killed-freedom-of-expression",
+      "title": "100 Years of Russian Revolution - II - How Communism Killed Freedom of Expression",
+      "route": "https://www.indiafacts.org.in/communism-killed-freedom-expression/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-iii-communism-and-treason",
+      "title": "100 Years of Russian Revolution - III - Communism and Treason",
+      "route": "https://www.indiafacts.org.in/communism-treason/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-iv-was-indira-gandhi-a-soviet-agent",
+      "title": "100 Years of Russian Revolution - IV - Was Indira Gandhi a Soviet Agent?",
+      "route": "https://www.indiafacts.org.in/indira-gandhi-soviet-agent/"
+    },
+    {
+      "filename": "100-years-of-russian-revolution-v-how-marxism-still-influences-indian-politics",
+      "title": "100 Years of Russian Revolution - V - How Marxism Still Influences Indian Politics",
+      "route": "https://www.indiafacts.org.in/how-marxism-still-influences-indian-politics/"
+    },
+    {
+      "filename": "azaan-and-freedom-of-expression-are-they-compatible",
+      "title": "Azaan and Freedom of Expression - Are They Compatible?",
+      "route": "https://www.indiafacts.org.in/azaan-and-freedom-of-expression/"
+    },
+    {
+      "filename": "battle-for-dharma-north-east",
+      "title": "The Battle for Dharma in North-East",
+      "route": "/research/battle-for-dharma-north-east"
+    },
+    {
+      "filename": "battleagainsthindusinmanipur",
+      "title": "The Battle Against Hindus in Manipur",
+      "route": "/blog/battleagainsthindusinmanipur"
+    },
+    {
+      "filename": "case-against-aol-a-case-of-malicious-prosecution",
+      "title": "Case Against AOL - A Case of Malicious Prosecution",
+      "route": "https://www.indiafacts.org.in/case-aol-case-malicious-prosecution/"
+    },
+    {
+      "filename": "closing-the-pamir-gap-the-great-game-series",
+      "title": "Closing the Pamir Gap - The Great Game Series",
+      "route": "https://www.indiafacts.org.in/closing-pamir-gap-great-game-series/"
+    },
+    {
+      "filename": "dangs-anatomy-of-religious-terror",
+      "title": "Dangs - Anatomy of Religious Terror",
+      "route": "/research/dangs-anatomy-of-religious-terror"
+    },
+    {
+      "filename": "difference-between-us",
+      "title": "The Difference Between Us - on One-life vs. Multiple-life Metaphysics",
+      "route": "/blog/difference-between-us"
+    },
+    {
+      "filename": "fighting-for-india-britain-vs-russia-in-the-great-game",
+      "title": "Fighting for India - Britain vs Russia in the Great Game",
+      "route": "https://www.indiafacts.org.in/fighting-india-britain-vs-russia-great-game/"
+    },
+    {
+      "filename": "hindu-liberals-the-slave-soldiers-of-islamism",
+      "title": "Hindu Liberals - The Slave Soldiers of Islamism",
+      "route": "https://www.indiafacts.org.in/hindu-liberals-slave-soldiers-islamism/"
+    },
+    {
+      "filename": "hindu-samizdat-how-hindus-respond-to-censorship-and-bias",
+      "title": "Hindu Samizdat - How Hindus Respond to Censorship and Bias",
+      "route": "https://www.indiafacts.org.in/hindu-samizdat-hindus-respond-censorship-bias/"
+    },
+    {
+      "filename": "how-lenin-tried-to-foment-communist-revolution-in-india",
+      "title": "How Lenin Tried to Foment Communist Revolution in India",
+      "route": "https://www.indiafacts.org.in/how-lenin-tried-foment-communist-revolution-india/"
+    },
+    {
+      "filename": "how-scrollin-is-part-of-omidyars-breaking-india-network",
+      "title": "How Scroll.in is Part of Omidyar's Breaking India Network",
+      "route": "https://www.indiafacts.org.in/scrollin-part-omidyars-breaking-india-network/"
+    },
+    {
+      "filename": "how-to-become-a-superpower-inside-the-'great-game",
+      "title": "How to Become a Superpower - Inside the Great Game",
+      "route": "https://www.indiafacts.org.in/how-to-become-superpower-inside-great-game/"
+    },
+    {
+      "filename": "how-turkey-and-germany-planned-holy-jihad-against-india",
+      "title": "How Turkey and Germany Planned Holy Jihad Against India",
+      "route": "https://www.indiafacts.org.in/how-turkey-germany-planned-holy-jihad-india/"
+    },
+    {
+      "filename": "in-the-name-of-defending-islam-i-understanding-the-muslim-psyche",
+      "title": "In the Name of Defending Islam - I - Understanding the Muslim Psyche",
+      "route": "https://www.indiafacts.org.in/in-name-defending-islam-understanding-muslim-psyche/"
+    },
+    {
+      "filename": "in-the-name-of-defending-islamii-how-radical-muslims-play-victim",
+      "title": "In the Name of Defending Islam - II - How Radical Muslims Play Victim",
+      "route": "https://www.indiafacts.org.in/in-name-defending-islam-ii-how-radical-muslims-play-victim/"
+    },
+    {
+      "filename": "intellectual-terrorism-of-the-left-the-case-for-dr-makarand-paranjape",
+      "title": "Intellectual Terrorism of the Left - The Case for Dr. Makarand Paranjape",
+      "route": "https://www.indiafacts.org.in/intellectual-terrorism-left-case-dr-makarand-paranjape/"
+    },
+    {
+      "filename": "kaiser-sultan-and-the-holy-jihad-in-india",
+      "title": "Kaiser, Sultan and the Holy Jihad in India",
+      "route": "https://www.indiafacts.org.in/kaiser-sultan-holy-jihad-india/"
+    },
+    {
+      "filename": "letter-to-a-moderate-muslim",
+      "title": "Letter to a Moderate Muslim",
+      "route": "https://www.indiafacts.org.in/letter-moderate-muslim/"
+    },
+    {
+      "filename": "race-for-lhasa-the-great-game-series",
+      "title": "Race for Lhasa - The Great Game Series",
+      "route": "https://www.indiafacts.org.in/race-lhasa-great-game-series/"
+    },
+    {
+      "filename": "ram-swarup",
+      "title": "Ram Swarup",
+      "route": "/inspiration/ram-swarup"
+    },
+    {
+      "filename": "re-imposing-the-jizyah-decoding-sharjeel-imams-speech",
+      "title": "Re-imposing the Jizyah - Decoding Sharjeel Imam's Speech",
+      "route": "https://www.indiafacts.org.in/re-imposing-the-jizyah-decoding-sharjeel-imams-speech/"
+    },
+    {
+      "filename": "shri-ram-swarup-on-the-communist-challenge",
+      "title": "Shri Ram Swarup on the Communist Challenge",
+      "route": "https://www.indiafacts.org.in/shri-ram-swarup-communist-challenge/"
+    },
+    {
+      "filename": "svayambodha-and-shatrubodha-review",
+      "title": "Book Review | Svayambodha and Shatrubodha",
+      "route": "/blog/svayambodha-and-shatrubodha-review"
+    },
+    {
+      "filename": "tapan-ghosh-a-true-hindu-warrior",
+      "title": "Tapan Ghosh - A True Hindu Warrior",
+      "route": "https://www.indiafacts.org.in/tapan-ghosh-true-hindu-warrior/"
+    },
+    {
+      "filename": "teaching-and-research-the-rot-that-has-set-in",
+      "title": "Teaching and Research - The Rot That Has Set In",
+      "route": "https://www.indiafacts.org.in/teaching-research-rot-set/"
+    },
+    {
+      "filename": "thou-shalt-not-comment-the-dictatorship-of-scrollin",
+      "title": "Thou Shalt Not Comment - The Dictatorship of Scroll.in",
+      "route": "https://www.indiafacts.org.in/thou-shalt-not-comment-the-dictatorship-of-scrollin/"
+    },
+    {
+      "filename": "truth-and-the-humbug-in-greta-thunbergs-climate-change-speech",
+      "title": "The Truth and the Humbug in Greta Thunberg's Climate Change Speech",
+      "route": "https://www.indiafacts.org.in/the-truth-and-the-humbug-in-greta-thunbergs-climate-change-speech/"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-case-1-lebanon",
+      "title": "Unfinished Agendas of Radical Islam - Case 1 - Lebanon",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-case-1-lebanon/"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-case-2-armenia-and-turkey",
+      "title": "Unfinished Agendas of Radical Islam - Case 2 - Armenia and Turkey",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-case-2-armenia-turkey/"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-case-3-greece-and-spain",
+      "title": "Unfinished Agendas of Radical Islam - Case 3 - Greece and Spain",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-case-3-greece-spain/"
+    },
+    {
+      "filename": "unfinished-agendas-of-radical-islam-the-global-gameplan",
+      "title": "Unfinished Agendas of Radical Islam - The Global Gameplan",
+      "route": "https://www.indiafacts.org.in/unfinished-agendas-radical-islam-global-gameplan/"
+    },
+    {
+      "filename": "voice-of-india-shatrubodha-school",
+      "title": "Voice of India School of Śatrubodha",
+      "route": "/inspiration/voice-of-india-shatrubodha-school"
+    },
+    {
+      "filename": "vs-naipaul",
+      "title": "VS Naipaul",
+      "route": "/inspiration/vs-naipaul"
+    },
+    {
+      "filename": "we-the-hindus-what-the-cab-means-for-hindu-civilization",
+      "title": "We the Hindus - What the CAB Means for Hindu Civilization",
+      "route": "https://www.indiafacts.org.in/hindus-cab-means-hindu-civilization/"
+    },
+    {
+      "filename": "what-will-destroy",
+      "title": "What Will Destroy Hindu Society?",
+      "route": "/big-questions/what-will-destroy"
+    },
+    {
+      "filename": "why-saba-naqvi-is-afraid-of-mullahs-on-tv-and-why-we-must-encourage-that",
+      "title": "Why Saba Naqvi is Afraid of Mullahs on TV - And Why We Must Encourage That",
+      "route": "https://www.indiafacts.org.in/why-saba-naqvi-is-afraid-of-mullahs-on-tv-and-why-we-must-encourage-that/"
+    },
+    {
+      "filename": "will-save-sanatana-dharma",
+      "title": "What Will Save Sanatana Dharma?",
+      "route": "/big-questions/will-save-sanatana-dharma"
+    }
+  ],
+  "svayambodha": [
+    {
+      "filename": "ak-saran",
+      "title": "AK Saran",
+      "route": "/inspiration/ak-saran"
+    },
+    {
+      "filename": "being-indian",
+      "title": "What does 'Being Indian' Mean?",
+      "route": "/big-questions/being-indian"
+    },
+    {
+      "filename": "brahmacharini",
+      "title": "Brahmacāriṇī | Navadurgā - Part 2",
+      "route": "/blog/brahmacharini"
+    },
+    {
+      "filename": "chandraghanta",
+      "title": "Candraghaṇṭā | Navadurgā - Part 3",
+      "route": "/blog/chandraghanta"
+    },
+    {
+      "filename": "continuous-comprehensive-and-cumulative-the-knowledge-tradition-of-india",
+      "title": "Continuous, Comprehensive and Cumulative - The Knowledge Tradition of India",
+      "route": "https://www.indiafacts.org.in/continuous-comprehensive-cumulative-knowledge-tradition-india/"
+    },
+    {
+      "filename": "dharampal-svayambodha-school",
+      "title": "Dharampal School of Svayambodha",
+      "route": "/inspiration/dharampal-svayambodha-school"
+    },
+    {
+      "filename": "difference-between-us",
+      "title": "The Difference Between Us - on One-life vs. Multiple-life Metaphysics",
+      "route": "/blog/difference-between-us"
+    },
+    {
+      "filename": "grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche",
+      "title": "Grasping for the Beyond - On a Critical Schism in the Modern Psyche",
+      "route": "https://www.indiafacts.org.in/grasping-beyond-critical-schism-modern-psyche/"
+    },
+    {
+      "filename": "ivan-illich",
+      "title": "Ivan Illich",
+      "route": "/inspiration/ivan-illich"
+    },
+    {
+      "filename": "kalaratri",
+      "title": "Kālarātri | Navadurgā - Part 7",
+      "route": "/blog/kalaratri"
+    },
+    {
+      "filename": "katyayani",
+      "title": "Kātyāyanī | Navadurgā - Part 6",
+      "route": "/blog/katyayani"
+    },
+    {
+      "filename": "kushmanda",
+      "title": "Kūṣmāṇḍā | Navadurgā - Part 4",
+      "route": "/blog/kushmanda"
+    },
+    {
+      "filename": "mahagauri",
+      "title": "Mahāgaurī | Navadurgā - Part 8",
+      "route": "/blog/mahagauri"
+    },
+    {
+      "filename": "shailaputri",
+      "title": "Śailaputrī | Navadurgā - Part 1",
+      "route": "/blog/shailaputri"
+    },
+    {
+      "filename": "siddhidatri",
+      "title": "Siddhidātrī | Navadurgā - Part 9",
+      "route": "/blog/siddhidatri"
+    },
+    {
+      "filename": "skandamata",
+      "title": "Skandamātā | Navadurgā - Part 5",
+      "route": "/blog/skandamata"
+    }
+  ],
+  "temple": [
+    {
+      "filename": "ancient-temples-and-modern-dacoits-part-iii-the-architectural-workshop-of-the-gurjara-pratiharas",
+      "title": "Ancient Temples and Modern Dacoits Part III - The Architectural Workshop of the Gurjara-Pratiharas",
+      "route": "https://www.indiafacts.org.in/ancient-temples-modern-dacoits-part-iii-architectural-workshop-gurjara-pratiharas/"
+    },
+    {
+      "filename": "dharmic-circuits-sacred-pathways-part-1",
+      "title": "Dharmic Circuits - Sacred Pathways - Part 1",
+      "route": "https://www.indiafacts.org.in/dharmic-circuits-sacred-pathways-part-1/"
+    },
+    {
+      "filename": "dharmic-circuits-the-temple-the-grove-and-the-lake-part-3",
+      "title": "Dharmic Circuits - The Temple, The Grove and The Lake - Part 3",
+      "route": "https://www.indiafacts.org.in/dharmic-circuits-temple-grove-lake-part-3/"
+    },
+    {
+      "filename": "hindu-models-of-temple-management",
+      "title": "Hindu Models of Temple Management",
+      "route": "/research/hindu-models-of-temple-management"
+    },
+    {
+      "filename": "how-old-is-the-hindu-temple",
+      "title": "How Old is the Hindu Temple?",
+      "route": "https://www.indiafacts.org.in/how-old-is-the-hindu-temple/"
+    },
+    {
+      "filename": "journey-with-anveshi",
+      "title": "My Journey with Anveshi",
+      "route": "/blog/journey-with-anveshi"
+    },
+    {
+      "filename": "many-meanings-of-the-hindu-temple",
+      "title": "The Many Meanings of the Hindu Temple",
+      "route": "https://www.indiafacts.org.in/many-meanings-hindu-temple/"
+    },
+    {
+      "filename": "on-what-is-a-hindu-temple",
+      "title": "On What is a Hindu Temple",
+      "route": "https://www.indiafacts.org.in/on-what-is-a-hindu-temple/"
+    },
+    {
+      "filename": "sk-rama-rao",
+      "title": "SK Ramachandra Rao",
+      "route": "/inspiration/sk-rama-rao"
+    },
+    {
+      "filename": "story-of-a-priest",
+      "title": "Story of a Priest",
+      "route": "https://www.indiafacts.org.in/story-of-a-priest/"
+    },
+    {
+      "filename": "temples-of-madhya-pradesh",
+      "title": "Temples of Madhya Pradesh",
+      "route": "/research/temples-of-madhya-pradesh"
+    }
+  ],
+  "thinkers": [
+    {
+      "filename": "conscilience-school",
+      "title": "School of Conscilience",
+      "route": "/inspiration/conscilience-school"
+    },
+    {
+      "filename": "in-memoriam-life-and-works-of-shri-n-s-rajaram",
+      "title": "In Memoriam - Life and Works of Shri N.S. Rajaram",
+      "route": "https://www.indiafacts.org.in/in-memoriam-life-and-works-of-shri-n-s-rajaram/"
+    },
+    {
+      "filename": "intellectual-terrorism-of-the-left-the-case-for-dr-makarand-paranjape",
+      "title": "Intellectual Terrorism of the Left - The Case for Dr. Makarand Paranjape",
+      "route": "https://www.indiafacts.org.in/intellectual-terrorism-left-case-dr-makarand-paranjape/"
+    },
+    {
+      "filename": "making-of-early-kashmir-the-making-of-a-new-literary-star",
+      "title": "Making of Early Kashmir - The Making of a New Literary Star",
+      "route": "https://www.indiafacts.org.in/making-early-kashmir-making-new-literary-star/"
+    },
+    {
+      "filename": "shri-ram-swarup-on-the-communist-challenge",
+      "title": "Shri Ram Swarup on the Communist Challenge",
+      "route": "https://www.indiafacts.org.in/shri-ram-swarup-communist-challenge/"
+    },
+    {
+      "filename": "tapan-ghosh-a-true-hindu-warrior",
+      "title": "Tapan Ghosh - A True Hindu Warrior",
+      "route": "https://www.indiafacts.org.in/tapan-ghosh-true-hindu-warrior/"
+    }
+  ],
+  "tradition": [
+    {
+      "filename": "chath",
+      "title": "Chaṭh - a Living Tradition and Cultural Homecoming",
+      "route": "/blog/chath"
+    },
+    {
+      "filename": "dharmic-circuits-sacred-pathways-part-1",
+      "title": "Dharmic Circuits - Sacred Pathways - Part 1",
+      "route": "https://www.indiafacts.org.in/dharmic-circuits-sacred-pathways-part-1/"
+    },
+    {
+      "filename": "dharmic-circuits-the-temple-the-grove-and-the-lake-part-3",
+      "title": "Dharmic Circuits - The Temple, The Grove and The Lake - Part 3",
+      "route": "https://www.indiafacts.org.in/dharmic-circuits-temple-grove-lake-part-3/"
+    },
+    {
+      "filename": "dukh-depression-and-journeys-of-life-depression-is-the-absence-of-dukkha-part-i",
+      "title": "Dukh, Depression and Journeys of Life - Depression is the Absence of Dukkha - Part I",
+      "route": "https://www.indiafacts.org.in/dukh-depression-journeys-life-depression-absence-dukkha-part-i/"
+    },
+    {
+      "filename": "kshetrashastrautsava",
+      "title": "Kṣetra, Śāstra, Utsava",
+      "route": "/blog/kshetrashastrautsava"
+    },
+    {
+      "filename": "problemofculturetransmission",
+      "title": "The Problem of Culture Transmission",
+      "route": "/blog/problemofculturetransmission"
+    },
+    {
+      "filename": "story-of-a-priest",
+      "title": "Story of a Priest",
+      "route": "https://www.indiafacts.org.in/story-of-a-priest/"
+    }
+  ],
+  "yoga": [
+    {
+      "filename": "swami-vivekananda-school",
+      "title": "Swami Vivekananda's School",
+      "route": "/inspiration/swami-vivekananda-school"
+    }
+  ]
+}

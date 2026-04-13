@@ -3,6 +3,10 @@ title: KM Munshi
 image: /images/thinkers/km-munshi.webp
 type: thinker
 id: 20
+description: Freedom fighter, novelist, and founder of Bharatiya Vidya Bhavan, Munshi spent his life reconstructing the cultural and historical memory that colonial education had systematically razed - the Somnath restoration was as much an act of historiography as politics.
+tags:
+  - history
+  - civilizational-consciousness
 ---
 
 Kanhaiyalal Maneklal Munshi ji stands as one of those rare figures who refused to let India's past be buried beneath the debris of colonial historiography and contemporary amnesia. A freedom fighter, novelist, lawyer, and statesman, Munshi ji wore many hats - but it is as a cultural architect that his legacy burns brightest. He understood, long before it became fashionable to say so, that a civilization disconnected from its roots is a civilization adrift.

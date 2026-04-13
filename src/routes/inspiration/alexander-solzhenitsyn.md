@@ -3,6 +3,9 @@ title: Alexander Solzhenitsyn
 image: /images/thinkers/alexander-s.webp
 type: thinker
 id: 6
+description: The man who survived the Soviet gulag and wrote its testimony - Solzhenitsyn's warning that Western atheist materialism produces the same totalitarian logic as communism remains unrefuted by anyone who has read him carefully.
+tags:
+  - purva-paksha
 ---
 
 Great tragedy, besides much strife, results in great literature. The 20th century experiment with communism in Soviet Union resulted in one of the greatest human tragedies ever with millions of direct casualties besides much cultural and religious destruction. Alexander Solzhenitsyn, an inmate of a communist labor camp, came out of it and told its story to the entire world in heartbreakingly beautiful prose.

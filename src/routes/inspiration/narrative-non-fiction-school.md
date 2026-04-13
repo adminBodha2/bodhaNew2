@@ -3,6 +3,10 @@ title: School of Narrative Non-fiction
 image: /images/schools/narrative-non-fiction-school.webp
 type: school
 id: 8
+description: India is a civilization that transmits knowledge through story - this school recovers that epistemic mode and applies it to contemporary civilizational questions through long-form narrative that neither academia nor journalism can produce.
+tags:
+  - aesthetics
+  - history
 ---
 
 India is a story-telling civilization. Even in the most abstract texts on philosophy like the Upanishads, we have stories. And we could not stay on the Vedas and the attendant literature but expanded into Itihasas and Puranas, creating one of the greatest written gamut of literature anywhere in the world. But that did not satisfy either, and we created the world's largest collection of wisdom stories collected under many names like Panchatantra, Kathasaritsagara, Jatakas, Hitopadesha, Shukasaptati, Vikram Betala, and many more.

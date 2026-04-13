@@ -5,6 +5,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte'
+	import Card from '$lib/comps/card-comp.svelte'
 	import { allSchools, allThinkers } from '$lib/utils/localpulls'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 

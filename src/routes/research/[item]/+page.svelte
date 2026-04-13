@@ -32,7 +32,7 @@
 			<h2 class="source-serif tight pbot8">{data.title}</h2>
 			<div class="row cgap8 rgap8 ycenter">
 				{#each data.tags as tag}
-				<small class="label white tt-c">{tag}</small>
+				<small class="label white tt-c">{tag.replaceAll('-', ' ')}</small>
 				{/each}
 			</div>
 		</div>

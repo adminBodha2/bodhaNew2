@@ -3,6 +3,10 @@ title: Ram Swarup
 image: /images/thinkers/ram-swarup.webp
 type: thinker
 id: 1
+description: The thinker who explained what the Vedic gods actually are, how polytheism works as a philosophical system, and why the prophetic monotheist critique of Hinduism fundamentally misunderstands what it is attacking - essential reading before any encounter with missionary argument.
+tags:
+  - purva-paksha
+  - shatrubodha
 ---
 
 One of the greatest philosophers to come out of India in 20th century, Shri Ram Swarup spoke on India’s vast tradition of metaphysics. He explained how the Vedic mantras work; how the gods become manifest; how the pagan gods who have now disappeared can be brought back; how language can be a pathway to ultimate reality.

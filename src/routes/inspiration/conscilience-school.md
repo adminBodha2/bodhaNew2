@@ -3,6 +3,10 @@ title: School of Conscilience
 image: /images/schools/conscilience-school.webp
 type: school
 id: 7
+description: This school holds that the West's divorce between sciences and humanities is a civilizational pathology - and that the Indian knowledge tradition, which never separated the two, offers a working model of their reintegration.
+tags:
+  - indian-knowledge-systems
+  - tags
 ---
 
 The West has a knowledge system problem - the divorce of sciences and humanities. Science in Christian Europe rose as a revolt against religion, because Christianity has no means of verifying the truth claims of its text. It believes in dogma which is unchanging and static. In such a worldview knowledge freezes and ossifies. Science found a way out by creating the experimental method to verify hypotheses. Thus, it gave a reality check to western epistemology and consequently knowledge exploded.

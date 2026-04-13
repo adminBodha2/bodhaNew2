@@ -3,6 +3,9 @@ title: School of Political Traditionalists
 image: /images/schools/political-traditionalists-school.webp
 type: school
 id: 5
+description: A school of Hindu conservatism drawing on Burke, Scruton, and Indian classical statecraft to argue for civilizational continuity over ideological reinvention - increasingly influential in post-Nehruvian policy but insufficiently read outside political circles.
+tags:
+  - civilizational-consciousness
 ---
 
 Ever since the polity in India’s has veered away from Nehruvian secularism a school of thought has become extremely influential in dictating India’s future and policy. They are broadly called as conservatives or rightists but they are more diverse than these two words suggest. They take inspiration from the Burkian school of conservative thought in the West, currently exemplified by Sir Roger Scruton. But they also build upon the political theories which are instructed in India’s epics and other scriptures.

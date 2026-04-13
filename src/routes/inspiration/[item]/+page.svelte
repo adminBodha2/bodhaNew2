@@ -17,9 +17,17 @@
 />
 
 <section class="content-area">
-	<Crumb item1="INSPIRATION" item1Link="/inspiration" show2={true} item2={data.title} />
-	<div class="column rgap32">
+	<div class="column pbot32">
+		<Crumb item1="INSPIRATION" item1Link="/inspiration" show2={true} item2={data.title} />
 		<h2 class="source-serif tight">{data.title}</h2>
+		<p class="sm grey ptop8 pbot16">{data.description}</p>
+		<div class="row cgap8 rgap8 ycenter">
+			{#each data.tags as tag}
+				<small class="label white tt-u">{tag.replaceAll('-', ' ')}</small>
+			{/each}
+		</div>
+	</div>
+	<div class="column rgap32">
 		<div class="parallax">
 			<img
 				class="key"
