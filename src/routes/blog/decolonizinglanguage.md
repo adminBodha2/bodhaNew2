@@ -5,8 +5,8 @@ author:
 category: Culture Today
 tags:
   - language
-  - hindi
-excerpt: The role of colonialism in hindering the linguistic evolution in North India and the need to re-infuse the spirit of Sanskṛta into Hindī language and to free it from FATE words
+  - sanskrit
+excerpt: How colonialism froze the evolution of North Indian vernaculars by installing FATE languages (Farsi, Arabic, Turkish, English) as prestige languages - and what it would take to let them grow again.
 date: 2023-05-28
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/decolonizing-language.webp
 words: "2414"

@@ -5,11 +5,11 @@ author:
 category: Thought Pieces
 tags:
   - culture
-  - family
+  - hindu-institutions
   - tradition
 date: 2022-09-12
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/problem-of-culture-transmission.webp
-excerpt: Tradition is the bedrock on which civilization stands and culture flourishes. And tradition is that which continues. But how exactly does it continue? How is it transferred to the next generation?
+excerpt: Tradition is a living chain of transmission - an examination of the specific mechanisms by which Hindu civilization has carried its deepest knowledge forward, and where those mechanisms are breaking today.
 words: "1385"
 ---
 

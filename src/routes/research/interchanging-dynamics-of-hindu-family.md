@@ -2,6 +2,9 @@
 title: Interchanging Dynamics of the Hindu Family
 type: institutional design
 image: /images/research/4.webp
+description: How has the Hindu family - long considered the basic unit of Hindu society rather than the individual - actually changed from its classical model? A field study introducing statistical and sociological rigor to questions that have been answered, until now, only by anecdote.
+tags:
+  - hindu-institutions
 ---
 
 Much is said about the pros and cons of family in India, both joint and nuclear. But very few attempts have been made to study Hindu family as it is now, in its various dimensions and along with all the problems that plague it in many ways. Is the Hindu family no longer living a life as it was supposed to do in the classical Hindu era? Has it deviated from the model life given in the shastras? And if so, then is it Hindu any longer? Are there any ways possible in which it can evolve into new ways and yet maintain the core and the soul of being Hindu?

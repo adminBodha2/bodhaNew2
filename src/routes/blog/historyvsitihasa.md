@@ -5,11 +5,10 @@ author:
 category: History and Civilization
 tags:
   - history
-  - new ideas
-  - civilization
+  - civilizational-consciousness
 date: 2022-09-18
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/history-vs-itihasa.webp
-excerpt: In this essay we engage in emic freethinking, and look at some names from Indian itihāsa in a new light. How many such stories might we find in the Purāṇas, Epics and other texts? And if we did, would we not understand our past better?
+excerpt: The distinction between history (ontic, event-centered) and itihāsa (ontologic, truth-centered) is not a quaint traditional category but a methodological difference with profound consequences for how India should understand and narrate its own past.
 words: "3991"
 ---
 

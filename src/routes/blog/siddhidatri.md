@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the ninth in the Navadurgā series, an overview of the Navarātrī festival. Part 9, aligning with the ninth of the 9 auspicious tithis of Navarātrī, describes her form as Siddhidātrī.
+excerpt: Ninth and final in the Navadurgā series - the theology and iconography of Siddhidātrī Devī - the granter of all siddhis, the form who completes the Navarātrī cycle and whose worship is the culmination of the entire nine-day journey.
 date: 2024-10-12
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/siddhidatri.webp
 words: "1408"

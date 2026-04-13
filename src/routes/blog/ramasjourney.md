@@ -5,11 +5,11 @@ author:
 category: Thought Pieces
 tags:
   - festivals
-  - new ideas
+  - civilizational-consciousness
   - rama
 date: 2022-10-24
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ramas-journey.webp
-excerpt: We celebrate the return of Rāma with a Festival of Lights, for if his journey- Rāma’s Ayaṇa- is recreated within us, it generates within us the Supreme Light. His journey within us is the journey from untruth to truth. From Darkness to Light. It is the rising of Agni from earth to sky, the ultimate union, or Yoga.
+excerpt: Rāma's exile and return as inner journey - reading the Rāmāyaṇa as a map of the soul's trajectory - and why Dīpāvalī marks a cosmological reorientation of consciousness.
 words: "2205"
 ---
 

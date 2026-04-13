@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the fourth in the Navadurgā series, an overview of the Navarātrī festival. Part 4, aligning with the fourth of the 9 auspicious tithis of Navarātrī, describes her form as Kūṣmāṇḍā.
+excerpt: Fourth in the Navadurgā series - the theology and iconography of Kūṣmāṇḍā Devī - the form who created the universe with her smile, and who is propitiated for health, vitality, and the removal of darkness.
 date: 2024-10-06
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/kushmanda.webp
 words: "1471"

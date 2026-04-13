@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the second in the Navadurgā series, an overview of the Navarātrī festival. Part 2, aligning with the second of the 9 auspicious tithis of Navarātrī, describes her form as Brahmacāriṇī.
+excerpt: Second in the Navadurgā series - the theology and iconography of Brahmacāriṇī Devī - the form of Durgā who represents austerity, renunciation, and the discipline through which the soul approaches the absolute.
 date: 2024-10-04
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/brahmacharini.webp
 words: "1023"

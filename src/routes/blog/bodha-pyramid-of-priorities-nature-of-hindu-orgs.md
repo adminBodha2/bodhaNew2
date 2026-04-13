@@ -5,10 +5,10 @@ author:
 category: Thought Pieces
 tags:
   - dharma
-  - hindu causes
+  - hindu-institutions
 date: 2025-12-05
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/pyramid.webp
-excerpt: A reflective piece explaining Bodha's origins, and the ways in which Sanatana Dharma accomodates both unity and diversity.
+excerpt: Why Hindu organizational fragmentation is a feature, not a failure - Bodha's argument that Sanatana Dharma requires a diversity of independent organizations rather than monolithic unity, and what this means for civilizational strategy.
 words: "1115"
 ---
 

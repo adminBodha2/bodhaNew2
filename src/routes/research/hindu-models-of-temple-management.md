@@ -2,6 +2,10 @@
 title: Hindu Models of Temple Management
 type: institutional design
 image: /images/research/1.webp
+description: How did the traditional Hindu temple function as a self-governing civilizational institution - and what would it take to recover that from state-imposed bureaucratic management? Research building the case for culture-sensitive temple governance by documenting indigenous models of administration.
+tags:
+  - hindu-institutions
+  - temple
 ---
 
 Our temples have been the center of our civilization for millennia, serving as the heartbeats of our cultural and spiritual identity. These sacred spaces stand as living examples of indigenous management and administration, meticulously crafted over centuries by devoted communities. Beyond their architectural grandeur, Hindu temples embody the essence of our collective ethos, playing multifaceted roles in our society. They serve as spiritual, religious, cultural, socio-economic, social welfare and paralegal institutions.

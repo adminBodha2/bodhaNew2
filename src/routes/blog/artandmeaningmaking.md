@@ -4,12 +4,12 @@ author:
   - Pankaj Saxena
 category: Thought Pieces
 tags:
-  - arts
-  - meaning-making
+  - aesthetics
+  - consciousness
   - culture
 date: 2022-09-25
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/artandmeaningmaking.webp
-excerpt: There is a reason that as a culture we were more interested in ‘what happens’ than ‘what happened’. ‘What happened’ becomes dated. ‘What happened’ is limited. While ‘what happens’ is timeless and limitless. The great seers of this great land observed the world from a śuddha citta and created analogies capable of reflecting the timeless and divine principles and messages which are still relevant to us. And they did this through poetry, literature and art.
+excerpt: Hindu aesthetics begins where Western aesthetics ends - the Indian tradition was interested in the effect of art on the soul, beyond the representation of reality, and this difference reveals two fundamentally incompatible metaphysical starting points.
 words: "2126"
 ---
 

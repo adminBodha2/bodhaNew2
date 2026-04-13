@@ -8,7 +8,7 @@ tags:
   - culture
 date: 2023-02-28
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/indic-environmentalism.webp
-excerpt: Sanātana Dharma always works within the universal principles but it provides enough room for creativity and innovation. To move the discourse on environmentalism further, we have to apply the framework which has existed from time immemorial to design our actions and processes, the design of Dharma itself, Ṛta in Design.
+excerpt: Sanātana Dharma's environmental ethic is central to it - an argument that the dhārmika relationship with nature provides a more coherent ecological framework than either Western environmentalism or techno-optimism.
 words: "1443"
 ---
 

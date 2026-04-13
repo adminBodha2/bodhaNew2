@@ -414,3 +414,31 @@ export async function allSchools() {
 	  .sort((a, b) => a.meta.title.localeCompare(b.meta.title));
 	return groupedPosts
   }
+
+  export async function allQuestions() {
+	const posts = import.meta.glob('/src/routes/big-questions/*.md')
+	const allfiles = { ...posts };
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+	  filed.map(async ([path, resolver]) => {
+		const mod = await resolver() as {
+			metadata:any
+			default: any; // compiled Svelte component
+		  };
+		  const { metadata } = mod;
+		  const content = mod.default;
+		  const pathitem = path.slice(11, -3);
+		return {
+		  meta: metadata,
+		  content,
+		  linkpath: pathitem
+		};
+	  })
+	)
+	const validPosts = eachfiled.filter((post): post is NonNullable<typeof post> => post !== null);
+	const groupedPosts = validPosts
+	.sort((a, b) => {
+		return a.meta.id - b.meta.id;
+	  });
+	return groupedPosts
+  }

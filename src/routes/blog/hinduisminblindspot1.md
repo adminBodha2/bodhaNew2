@@ -5,8 +5,7 @@ author:
 category: Thought Pieces
 tags:
   - consciousness
-  - research
-excerpt: Part 1 of an essay exploring the curious absence of investigations into Hinduism and its ontology even among the free-thinking and open-minded segments of research and exploration.
+excerpt: Part 1 - why Hinduism sits in the blind spot of open-minded, progressive Western intellectual discourse, from a structural failure of the secular liberal framework to perceive non-Abrahamic religion on its own terms.
 date: 2023-12-25
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/hinduism-in-blindspot.webp
 words: "1152"

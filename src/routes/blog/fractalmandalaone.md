@@ -5,11 +5,11 @@ author:
 category: History and Civilization
 tags:
   - decolonization
-  - new ideas
+  - civilizational-consciousness
   - history
 date: 2022-08-04
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/fractal-mandala.webp
-excerpt: "The Fractal Maṇḍala is Indian civilizational consciousness: multi-level coherent. Here we draw from Indian macrohistory to evidence this."
+excerpt: Part 1 - the Fractal Maṇḍala as a model of Indian civilizational consciousness - multi-level, coherent, self-similar at every scale - and why recovering this model is the prerequisite for any meaningful cultural or institutional regeneration.
 words: "4536"
 ---
 

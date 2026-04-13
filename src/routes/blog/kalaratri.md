@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the seventh in the Navadurgā series, an overview of the Navarātrī festival. Part 7, aligning with the seventh of the 9 auspicious tithis of Navarātrī, describes her form as Kālarātri.
+excerpt: Seventh in the Navadurgā series - the theology and iconography of Kālarātri Devī - the most fearsome form, destroyer of darkness and ignorance, whose terrifying appearance conceals absolute protection for the devotee.
 date: 2024-10-09
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/kalaratri.webp
 words: "1194"

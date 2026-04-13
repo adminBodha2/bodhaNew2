@@ -5,11 +5,10 @@ author:
 category: Culture Today
 tags:
   - aesthetics
-  - language
-  - hindi
+  - sanskrit
 date: 2023-06-25
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/sanskrit-vs-fate.webp
-excerpt: The battle between Sanskṛta and FATE languages (Farsi, Arabic, Turkish, English) for the domination of the Śiva tattva of our languages is the battle which will decide the cultural fate of Bhāratavarśa. The victory of Sanskṛta in this battle will be a linguistic equivalent of decolonizing India.
+excerpt: The battle between Saṃskṛta and FATE languages (Farsi, Arabic, Turkish, English) for the cognitive and expressive inheritance of India - why language is not culture-agnostic, but the primary site of civilizational contestation.
 words: "3450"
 ---
 

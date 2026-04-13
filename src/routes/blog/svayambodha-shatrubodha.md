@@ -4,11 +4,11 @@ author:
   - Pankaj Saxena
 category: Culture Today
 tags:
-  - civilization
+  - civilizational-consciousness
   - dharma
 date: 2022-11-13
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/svayambodha-shatrubodha.webp
-excerpt: The Hindu civilizational discourse has arguably entered the sophisticated phase. This is marked by a shift in the content of the discourse, a transition from the political to the cultural, civilizational and metaphysical. What then are the challenges and how can we develop the thinking resources to overcome those?
+excerpt: Hindu civilizational discourse has entered its sophisticated phase - an argument that Svayambodha (self-knowledge) and Shatrubodha (knowledge of the adversary) now constitute a canonical framework.
 words: "3017"
 ---
 

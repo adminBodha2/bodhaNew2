@@ -5,10 +5,10 @@ author:
 category: Culture Today
 tags:
   - festivals
-  - ganesha
+  - tradition
 date: 2022-09-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/towards-dharma-centric-polity.webp
-excerpt: As dharma disappears from daily personal life, and from specific regions, universalized Hindu festivals are capable of bringing dharma back again at the center. As temples become the primary vehicle of Hindu regeneration all over Bhāratavarṣa, festivals can become the Hindu regenerators in the north.
+excerpt: As dharma recedes from both personal life and public governance, what would a genuinely dharma-centric political order look like - and is it achievable within or only beyond the current Indian constitutional framework?
 words: "2148"
 ---
 

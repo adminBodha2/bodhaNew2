@@ -4,12 +4,12 @@ author:
   - Pankaj Saxena
 category: Thought Pieces
 tags:
-  - civilization
+  - civilizational-consciousness
   - consciousness
   - dharma
 date: 2023-10-25
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/culture-and-warfare.webp
-excerpt: This article explores the intricate balance of dharma, drawing lessons from literature and history to emphasize the importance of maintaining cultural and moral integrity between civilization and barbarism.
+excerpt: Drawing on H. G. Wells, the Mahābhārata, and dhārmika philosophy to argue that the collapse of the distinction between culture and barbarism is a civilizational crisis - and that dharma is the only framework adequate to it.
 words: "1018"
 ---
 

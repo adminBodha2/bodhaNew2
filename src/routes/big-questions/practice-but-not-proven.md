@@ -1,8 +1,12 @@
 ---
-title: What Do Hindus Practice, but Cannot Prove?
+title: What Do Hindus Practice, but Cannot Prove
 image: /images/bgicons/practice.png
 icon: /images/questions/10.webp
 id: 10
+description: What do Hindus practice with deep śraddhā but cannot prove - karma phala siddhānta, reincarnation, mantra efficacy - and what is the right epistemic posture toward such axioms?
+tags:
+  - indian-knowledge-systems
+  - karma
 ---
 
 Conscious Hindus differentiate themselves from Muslims and Christians on the basis of belief. They say that while Islam and Christianity demand blind belief in their dogmas, Hindu dharma is not the same as the truth claims in its texts can be verified. Although the laboratory for testing many of the central axioms of Hindu dharma is an inner one, like yoga and meditation.

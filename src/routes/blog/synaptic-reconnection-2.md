@@ -6,10 +6,10 @@ category: Thought Pieces
 tags:
   - decolonization
   - history
-  - new ideas
+  - civilizational-consciousness
 date: 2022-07-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/synaptic-reconnection.webp
-excerpt: Mental schema for synaptic reconnection to the civilizational consciousness. This is part 2 of an ongoing series.
+excerpt: Part 2 - completing the synaptic reconnection framework - the specific conceptual structures through which a Dhārmika consciousness can be rebuilt in a mind shaped by colonial education.
 words: "3066"
 ---
 

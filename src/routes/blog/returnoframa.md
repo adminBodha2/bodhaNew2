@@ -5,10 +5,9 @@ author:
 category: Culture Today
 tags:
   - rama
-  - ayodhya
 date: 2024-01-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/return-of-rama.webp
-excerpt: The grassroots rise of devotion and fervor for Śrī Rāma, symbolized by the grand Śrī Rāma temple in Ayodhya, emphasizing the unexpected and powerful force of Śrī Rāma Cetanā that emerged from the bottom of society.
+excerpt: A first-person account of the devotional groundswell preceding the 2024 Ayodhyā pratiṣṭhā - what a spontaneous civilizational awakening looks and feels like from the inside - and what it reveals about the living roots of Hindu consciousness.
 words: "1156"
 ---
 

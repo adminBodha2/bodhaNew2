@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the first in the Navadurgā series, opening with an overview of the Navarātrī festival. Part 1, aligning with the first of the 9 auspicious tithis of Navarātrī, describes her form as worshipped on pratipadā or prathamaḥ - Śailaputrī, the daughter of Himavān. She represents unwavering strength and determination, akin to the unyielding mountains, crucial for a sādhaka or seeker at the beginning of their journey.
+excerpt: Opening the Navadurgā series - an introduction to the Navarātrī tradition followed by the theology and iconography of Śailaputrī Devī - daughter of the mountain, first of the nine forms, embodiment of primal śakti.
 date: 2024-10-03
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/shailaputri.webp
 words: "1138"

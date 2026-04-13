@@ -6,10 +6,10 @@ category: Thought Pieces
 tags:
   - decolonization
   - history
-  - new ideas
+  - civilizational-consciousness
 date: 2022-06-02
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/synaptic-reconnection.webp
-excerpt: A preliminary schema to reconnect with civilizational consciousness. Developing a complete Ontology, Epistemology and Teleology for Bhārata.
+excerpt: Part 1 - a preliminary schema for reconnecting with civilizational consciousness - what it means to fill the empty space that decolonization creates with a genuinely Dhārmika ontology, epistemology, and teleology.
 words: "5676"
 ---
 

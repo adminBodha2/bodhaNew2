@@ -5,10 +5,9 @@ author:
 category: Culture Today
 tags:
   - festivals
-  - holi
 date: 2023-03-13
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/turners-of-time.webp
-excerpt: Exploring the significance of Holi and Hindu festivals as profound cultural markers that rotate the year, intertwining cosmic cycles with human culture.
+excerpt: Holi and Hindu festivals as turners of time - how the festival calendar structures experience, transmits ecological wisdom, and keeps alive the felt relationship between human life and cosmic rhythm across generations.
 words: "1339"
 ---
 

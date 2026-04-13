@@ -8,7 +8,7 @@ tags:
   - festivals
 date: 2022-10-17
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ahoiashtami.webp
-excerpt: The festival of Ahoi Aṣṭamī instills the deep sense in Hindus that our actions have consequences; that human civilization destroys Nature by the sheer act of living in great groups and thus has to make extra efforts to respect and protect Nature; and that we have to give back to Nature as we take much from it.
+excerpt: A festival most Hindus have forgotten exists - Ahoi Aṣṭamī as a window into how Hindu civilization transmits ecological and relational wisdom through the devotional practice of mothers, one week before Diwali.
 words: "1391"
 ---
 

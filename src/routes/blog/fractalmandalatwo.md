@@ -5,11 +5,11 @@ author:
 category: History and Civilization
 tags:
   - decolonization
-  - new ideas
+  - civilizational-consciousness
   - history
 date: 2022-08-26
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/fractal-mandala.webp
-excerpt: A continuation and conclusion of part 1, where we established the notion of civilizational trajectory, marked two fundamental problems in it, and appraised the Indian experience on the same to make the case for our civilizational primacy.
+excerpt: Part 2 - completing the Fractal Maṇḍala framework and its implications for how Hindu civilization organizes knowledge, culture, institution, and cosmos into a single coherent ontological structure.
 words: "6161"
 ---
 

@@ -4,12 +4,12 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - metaphysics
+  - consciousness
   - svayambodha
   - shatrubodha
 date: 2024-05-06
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/difference-between-us.webp
-excerpt: This essay explores the contrast between one-life and multiple-life metaphysical views in Hindu and Abrahamic traditions, highlighting differences in the perception of time and reality.
+excerpt: What actually separates the Hindu and Abrahamic worldviews at the deepest level is not ritual, theistic dimensions, or scripture but the one-life versus multiple-life metaphysical foundation - and the implications of that single difference ramify through everything.
 words: "2258"
 ---
 

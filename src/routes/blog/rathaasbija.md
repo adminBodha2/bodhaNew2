@@ -4,12 +4,11 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
-  - aryan
-  - chariot
-  - new ideas
+  - out-of-india-theory
+  - civilizational-consciousness
 date: 2022-09-30
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ratha-as-bija.webp
-excerpt: Dharma is sanātana, but civilizational emergence follows a worldly trajectory where the technologies we develop shape and form us in turn. Here we look at an ancient technology, the ratha or chariot, and unpack its significance in the Indian civilizational trajectory.
+excerpt: The ratha (chariot) as a bīja - a seed form that contains the entire Dhārmika worldview in compressed symbolic code - an essay in reading Hindu iconography as philosophical argument embedded in form.
 words: "2276"
 ---
 

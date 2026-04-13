@@ -5,8 +5,7 @@ author:
 category: Thought Pieces
 tags:
   - consciousness
-  - research
-excerpt: Part 2 of an essay exploring the curious absence of investigations into Hinduism and its ontology even among the free-thinking and open-minded segments of research and exploration.
+excerpt: Part 2 - continuing the diagnosis of why even well-meaning Western and westernized Indian intellectuals systematically fail to engage with Hinduism - and what a genuine encounter with it would actually require.
 date: 2023-12-27
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/hinduism-in-blindspot.webp
 words: "2035"

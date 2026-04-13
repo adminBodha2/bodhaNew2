@@ -5,8 +5,8 @@ author:
 category: History and Civilization
 tags:
   - history
-  - civilization
-excerpt: In this concluding part we bring home the narrative. Set within a specific historic context, and considering all the data available, what can we conclude about this famous Ṛgvedic event.
+  - civilizational-consciousness
+excerpt: Part 3 - the concluding reconstruction of the Dāśarājña - placing the battle in specific historical and geographic context and drawing out its implications for India's deep civilizational memory.
 date: 2023-10-19
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/dasharajna.webp
 words: "3278"

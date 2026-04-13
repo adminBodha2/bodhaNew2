@@ -4,11 +4,10 @@ author:
   - Pankaj Saxena
 category: Culture Today
 tags:
-  - ayodhya
   - rama
 date: 2023-11-12
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ramjanmabhoomi.webp
-excerpt: The collective memory of Hindus when it comes to Ayodhyā and the history of Hindu reclamation.
+excerpt: The Ram Janmabhūmi movement as civilizational memory rather than political campaign - how the 500-year struggle for Ayodhyā maps onto the deeper Hindu understanding of sacred geography and the permanence of divine presence in place.
 words: "1659"
 ---
 

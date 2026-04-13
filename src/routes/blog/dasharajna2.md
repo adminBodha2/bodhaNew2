@@ -5,8 +5,8 @@ author:
 category: History and Civilization
 tags:
   - history
-  - civilization
-excerpt: In this part, we examine and parse the data mentioned in the texts where thorough backing is uncovered for the out-of-India Theory, with Bhārata being the proto-Indo-European homeland.
+  - civilizational-consciousness
+excerpt: Part 2 - a close reading of the textual data in Ṛgveda Maṇḍala 7, parsing the battle's participants, geography, and historical context against established chronologies of Indian lineages.
 date: 2023-10-16
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/dasharajna.webp
 words: "4640"

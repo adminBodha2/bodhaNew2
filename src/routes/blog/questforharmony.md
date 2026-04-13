@@ -5,10 +5,10 @@ author:
 category: Thought Pieces
 tags:
   - culture
-  - harmony
+  - civilizational-consciousness
 date: 2022-05-26
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/quest-for-harmony.webp
-excerpt: In our introductory essay, Pankaj Saxena tells us what the cultural imperative is, and the redemption it provides.
+excerpt: Bodha's founding essay - why India's cultural redemption requires recovering its civilizational orientation toward harmony - and why this is not a sentimental project but a rigorous civilizational imperative with practical stakes.
 words: "4417"
 ---
 

@@ -5,8 +5,8 @@ author:
 category: Thought Pieces
 tags:
   - consciousness
-  - technology
-excerpt: The emergence of artificial intelligence and its impact on human existence, raising questions about cultural representation and moral responsibility in the age of AI.
+  - modernity
+excerpt: AI arrives as a non-neutral civilizational event - a comparison of simulation theory, Vedānta, and modern physics asks whether the intelligence emerging from our machines is something the Dhārmika tradition already has a vocabulary for.
 date: 2023-06-02
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/artificialintelligence.webp
 words: "2252"

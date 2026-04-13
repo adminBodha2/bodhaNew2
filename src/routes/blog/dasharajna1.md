@@ -5,8 +5,8 @@ author:
 category: History and Civilization
 tags:
   - history
-  - civilization
-excerpt: In this essay series, using substantiated frameworks for out-of-India migrations, and Paurāṇika genealogy, Sudās of the Ṛgveda is introduced as the man who ushered in proto-Bhāratavarṣa.
+  - civilizational-consciousness
+excerpt: Part 1 of a three-part reconstruction of the Dāśarājña (Battle of Ten Kings) as an early datable event in Indian history, reexamining Ṛgveda Maṇḍala 7 using Out-of-India chronological frameworks.
 date: 2023-10-12
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/dasharajna.webp
 words: "3768"

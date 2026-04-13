@@ -2,6 +2,9 @@
 title: A Year in Hajong Village
 type: policy and strategic affairs
 image: /images/research/7.webp
+description: How does a small Hindu tribal community in a Christian-majority region preserve its religious and cultural identity under conversion pressure? An ethnographic documentation of Hajong festivals, rituals, and livelihoods in Meghalaya's Garo Hills - a community invisible to most academic and policy discourse.
+tags:
+  - north-east-india
 ---
 
 The Hajongs are a Scheduled Tribe community living mainly in the Garo Hills, Meghalaya. Despite being officially recognized as a Scheduled Tribe, the Hajong community continues to face neglect and exclusion from public services, employment opportunities, and political representation. Their marginalization is often sharpened by their identity as Hindus in a largely Christian region.

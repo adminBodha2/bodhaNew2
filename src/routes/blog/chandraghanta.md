@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the third in the Navadurgā series, an overview of the Navarātrī festival. Part 3, aligning with the third of the 9 auspicious tithis of Navarātrī, describes her form as Candraghaṇṭā.
+excerpt: Third in the Navadurgā series - the theology and iconography of Candraghaṇṭā Devī - the warrior form whose crescent-bell emblem signals the transition from inner austerity to active, world-facing śakti.
 date: 2024-10-05
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/chandraghanta.webp
 words: "1141"

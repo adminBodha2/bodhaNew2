@@ -5,11 +5,10 @@ author:
 category: Thought Pieces
 tags:
   - anveshi
-  - travel
-  - temples
+  - temple
 date: 2026-03-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/journey-with-anveshi.webp
-excerpt: A first-person account of how temple-going evolved into Anveshi, a structured program taking cohorts to Hindu temple clusters across India. The animating conviction - these kshetras, approached with shraddha and right guidance, transform people.
+excerpt: The origin story of Anveshi, Bodha's structured temple-visit practice - how collective temple-going became a form of civilizational reconnection - and what it reveals about how living tradition actually perpetuates itself.
 words: "1753"
 ---
 

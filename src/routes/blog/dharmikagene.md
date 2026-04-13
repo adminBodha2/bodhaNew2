@@ -4,12 +4,12 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - science
+  - civilizational-consciousness
   - culture
-  - civilization
+  - indian-knowledge-systems
 date: 2023-01-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/dharmic-gene.webp
-excerpt: A novel re-articulation of the understanding of Dharma, and Bhāratīya culture, as a quest for harmony. Here we contrast the 'Standard Model of Reality' and the biological concept of a 'selfish gene' with the Indian Model of Reality, and the consequent imperative it yields.
+excerpt: A fundamental re-articulation of Dharma as a civilizational inheritance - the genetic-level encoding that tells Bhāratīya culture how to understand itself, its cosmos, and its obligations across generations.
 words: "4047"
 ---
 

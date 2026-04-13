@@ -8,7 +8,7 @@ tags:
   - tradition
 date: 2022-11-14
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/chath.webp
-excerpt: We owe a lot to our mothers and grandmothers, who carry forth traditions year after year diligently. In the case of Chath, it involves fasting for more than thirty six hours and standing in cold water, all for the wellbeing of their family. Even amidst apathy towards culture by many, Chaṭh gives me hope.
+excerpt: Chaṭh as lived civilizational memory - a personal account of returning to Bihar for the festival, and what the survival of this demanding, water-centered rite reveals about the deep roots of Hindu devotional practice in the body and the land.
 words: "1793"
 ---
 

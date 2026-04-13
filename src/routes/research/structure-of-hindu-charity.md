@@ -2,6 +2,9 @@
 title: Structure of Hindu Charity
 type: institutional design
 image: /images/research/2.webp
+description: How much charitable activity do Hindus actually conduct - and what does documenting it reveal about the false narrative that missionaries filled a philanthropic vacuum in India? Field studies measuring Hindu philanthropy in cash, kind, and services across Indian towns and villages.
+tags:
+  - hindu-institutions
 ---
 
 It is often alleged that Hindus do not engage in charity enough and that is why agents like Christian missionaries and western churches had to fill the gap by providing charity to create educational, healthcare and other fundamental institutions in India. By experience, Hindus know that this is wrong but due to the dharmic injunction of not talking about charity, Hindus are not used to document or showcase their philanthropic activities.

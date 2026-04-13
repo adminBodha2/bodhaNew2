@@ -4,12 +4,12 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - civilization
+  - civilizational-consciousness
   - history
   - karma
 date: 2025-06-06
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/civilizations-as-karmic-streams.webp
-excerpt: Civilizations are not just histories or structures, they're kārmika streams shaping the soul’s journey across lifetimes. Understanding this helps us navigate today’s chaos with deeper clarity and purpose.
+excerpt:Civilizations are not collections of events but kārmika streams - living ontological entities shaped by accumulated collective action across deep time. An essay that reframes civilizational history as metaphysics.
 words: "4502"
 ---
 

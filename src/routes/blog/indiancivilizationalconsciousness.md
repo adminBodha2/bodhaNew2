@@ -4,11 +4,10 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - new ideas
-  - civilization
+  - civilizational-consciousness
 date: 2022-08-15
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/indian-civilizational-consciousness.webp
-excerpt: A short essay on this Independence Day, that re-examines the meaning of 'Indian civilizational consciousness' from the dhātus.
+excerpt: Written on India's 75th Independence Day - a precise exposition of what 'Indian Civilizational Consciousness' actually means - and why it is the necessary foundation for anything India does next.
 words: "1813"
 ---
 

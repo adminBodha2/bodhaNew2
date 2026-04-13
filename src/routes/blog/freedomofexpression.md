@@ -4,11 +4,11 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - critiques
+  - purva-paksha
   - review
 date: 2023-07-31
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/freedom-of-expression.webp
-excerpt: Need for clarity in understanding opposing forces to dhārmika thought and the importance of thinkers like Śrī Sita Ram Goel in the context of freedom of expression.
+excerpt: Why clarity about the nature of prophetic monotheism's claim on speech is a prerequisite for any meaningful Hindu engagement with the politics of free expression - the conceptual tools for a discourse that currently lacks them.
 words: "997"
 ---
 

@@ -4,12 +4,12 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
-  - metaphysics
+  - consciousness
   - history
-  - civilization
+  - civilizational-consciousness
 date: 2022-06-05
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/four-aphorisms.webp
-excerpt: An articulation of four essential aphorisms to internalize, in understanding the Indian civilizational consciousness.
+excerpt: Four foundational aphorisms for understanding Indian civilizational consciousness, drawn from across the tradition - compact enough to internalize, substantial enough to orient an entire intellectual project.
 words: "1873"
 ---
 

@@ -2,6 +2,10 @@
 title: Hindu Frameworks of Education
 type: institutional design
 image: /images/research/3.webp
+description: What living models of traditional Hindu education still survive in India - and what do they demonstrate about the alternative to Western schooling? Field studies of surviving gurukulas, pathshalas, and vidyalayas documenting how Indian Knowledge Systems are transmitted in practice today.
+tags:
+  - indian-knowledge-systems
+  - hindu-institutions
 ---
 
 India has continuity of traditions and institutions. That is why it is a living system. This stands as true in the field of education. Though mainstream education in India today might be a pale imitation of the West, its ancient institutions are still alive, albeit in a reduced form, as are the Indian Knowledge Systems (IKS). There are still gurukulas, pathshalas, vidyalayas, and agraharas which are run on ancient models, which are still functioning almost exactly like they were in ancient India. And there is still the vast knowledge of IKS - awaiting its induction into the education of all Indians.

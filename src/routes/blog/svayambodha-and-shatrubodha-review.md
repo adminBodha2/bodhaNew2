@@ -4,10 +4,10 @@ author:
   - Amritanshu Pandey
 category: Culture Today
 tags:
-  - islam
-  - christianity
   - history
-excerpt: Svayambodha and Shatrubodha by Pankaj Saxena offers a vital framework for Hindus to understand their true identity and civilizational threats, a crucial guide in our current civilizational moment.
+  - shatrubodha
+  - review
+excerpt: A review of Pankaj Saxena's *Svayambodha and Shatrubodha* - the book that gives Hindu civilizational discourse its most precise vocabulary for self-knowledge and knowledge of adversarial forces.
 date: 2025-07-19
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/svayambodha-shatrubodha.webp
 words: "1939"

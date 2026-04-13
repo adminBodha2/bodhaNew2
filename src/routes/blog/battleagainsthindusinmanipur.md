@@ -4,12 +4,11 @@ author:
   - Pankaj Saxena
 category: Culture Today
 tags:
-  - manipur
-  - meitei
+  - northeast-india
   - shatrubodha
 date: 2023-05-06
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/battle-against-hindus.webp
-excerpt: Ostensibly, the civil war in Manipur is a clash between Kuki and Meitei tribes over poppy plantation disputes and Scheduled Tribe categorization. Behind these tribal rivalries, however, lies a broader civilizational struggle, with Christianity playing a significant role. Only by understanding these arcs can we create long-term strategies for survival and peace.
+excerpt: The Manipur conflict is not a tribal dispute but a civilizational one - how the Christian missionary conversion of Kuki tribes created a political wedge that the Indian state misreads as ethnic tension while Meitei Hindu identity is the actual target.
 words: "2004"
 ---
 

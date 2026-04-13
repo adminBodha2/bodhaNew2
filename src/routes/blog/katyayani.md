@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the sixth in the Navadurgā series, an overview of the Navarātrī festival. Part 6, aligning with the sixth of the 9 auspicious tithis of Navarātrī, describes her form as Kātyāyanī.
+excerpt: Sixth in the Navadurgā series - the theology and iconography of Kātyāyanī Devī - the fierce warrior form born to destroy the demon Mahiṣāsura, and the deity invoked for strength in the face of civilizational threat.
 date: 2024-10-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/katyayani.webp
 words: "1228"

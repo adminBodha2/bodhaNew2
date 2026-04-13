@@ -4,12 +4,12 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - technology
-  - sustainability
-  - new ideas
+  - civilizational-consciousness
+  - ecology
+  - modernity
 date: 2024-12-09
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/dharmic-frame-for-sustainability.webp
-excerpt: An essay elaborating how the Samudra Manthana story offers a profound allegory for sustainable and ethical technological innovation, emphasizing collaboration, ethical guidance, and harmony with natural laws.
+excerpt: The Samudra Manthana as an ancient framework for thinking about technology, resource extraction, and sustainable cooperation - a Dhārmika alternative to both extractivist capitalism and romantic environmentalism.
 words: "1576"
 ---
 

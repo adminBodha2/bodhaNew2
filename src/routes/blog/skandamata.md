@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the fifth in the Navadurgā series, an overview of the Navarātrī festival. Part 5, aligning with the fifth of the 9 auspicious tithis of Navarātrī, describes her form as Skandamātā.
+excerpt: Fifth in the Navadurgā series - the theology and iconography of Skandamātā Devī - mother of Skanda (Kārttikeya), the form that holds together the energies of motherhood, courage, and cosmic order.
 date: 2024-10-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/skandamata.webp
 words: "908"

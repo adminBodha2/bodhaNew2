@@ -4,13 +4,13 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - technology
-  - dystopia
-excerpt: Exploring the intersection of Orwell's totalitarian surveillance and Huxley's seductive consumerism, the article delves into modern challenges to freedom and individuality in a digital age.
+  - modernity
+excerpt: India walks a tightrope between two dystopias - Orwell's totalitarian surveillance state and Huxley's pleasure-addicted passivity. A Dhārmika reading of both futures and the framework that could thread between them.
 date: 2023-12-20
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/tightrope.webp
 words: "2494"
 ---
+
 Orwell and Huxley, two literary titans, painted contrasting yet eerily prophetic visions of dystopian futures. Orwell's "1984" is a stark tableau of totalitarian dread, where Big Brother's iron fist crushes individuality and truth becomes a twisted weapon. Huxley's "Brave New World" presents a subtler horror – a hedonistic Eden, where engineered happiness breeds complacency and drowns genuine meaning in a sea of drugged up stupor. In the modern world we’re told to be afraid of Orwell’s dystopia. If we do not keep up the vigilance, it is portrayed, then the Orwellian monsters of fascism, suppression and oppression are just around the corner.
 
 But all this while, the Huxleyan soma that would have us willingly walk to the brink cocoons us through social media, streaming technologies and propaganda mass media. Orwell’s harsh warnings flare intermittently—censorship, surveillance, tyranny flash their teeth before receding. But Huxley’s honeyed venom infuses the water itself. And poison drank willingly digs far deeper than blows imposed from without.

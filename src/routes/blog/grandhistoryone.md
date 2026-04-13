@@ -5,11 +5,10 @@ author:
 category: History and Civilization
 tags:
   - history
-  - civilization
-  - mythology
+  - civilizational-consciousness
 date: 2024-08-17
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/grand-history.webp
-excerpt: Exploring the depths of history and civilization, this article delves into the interplay of time, human knowledge, and the trajectories that shape our collective consciousness.
+excerpt: A speculative but evidence-grounded attempt at macro-history - tracing the deep trajectory of human consciousness and civilization from pre-linguistic origins through the emergence of the great civilizational streams.
 words: "3969"
 ---
 

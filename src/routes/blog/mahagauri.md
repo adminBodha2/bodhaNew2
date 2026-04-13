@@ -7,7 +7,7 @@ tags:
   - svayambodha
   - navaratri
   - devi
-excerpt: The article is the eighth in the Navadurgā series, an overview of the Navarātrī festival. Part 8, aligning with the eighth of the 9 auspicious tithis of Navarātrī, describes her form as Mahāgaurī.
+excerpt: Eighth in the Navadurgā series - the theology and iconography of Mahāgaurī Devī - the luminous, peaceful form that follows Kālarātri, representing the purity and grace that emerge after the destruction of all that is false.
 date: 2024-10-10
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/mahagauri.webp
 words: "1089"

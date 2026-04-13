@@ -5,10 +5,10 @@ author:
 category: History and Civilization
 tags:
   - history
-  - aryan
+  - out-of-india-theory
 date: 2024-01-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp
-excerpt: This essay series challenges the Aryan Invasion Theory, advocating for the Out-of-India Model (OIT) by analyzing linguistic, textual, genetic, and archaeological evidence to suggest that the roots of Indo-European languages and cultures originate in India.
+excerpt: Part 1 of a three-part dismantling of the Aryan Invasion/Migration Theory - the textual, genetic, and archaeological evidence increasingly supports an Out-of-India model for Indo-European dispersal - and the implications are civilizationally significant.
 words: "8039"
 ---
 

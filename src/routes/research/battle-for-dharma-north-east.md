@@ -2,6 +2,10 @@
 title: The Battle for Dharma in North-East
 type: policy and strategic affairs
 image: /images/research/6.webp
+description: What has large-scale conversion and demographic change done to the Dhārmika civilizational fabric of Northeast India? A deep policy study of how missionary activity and political isolation have severed the region from the rest of Bhārata - and what reversal requires.
+tags:
+  - north-east-india
+  - shatrubodha
 ---
 
 The North East of India has long been a conduit for connecting India to the rest of the world on its East, having a distinct dharmic culture of its own. The Northeast as it is commonly known, is home to some of the most distinctive tribal cultures in the world. Although distinct in nature, their customs and traditions are inextricably linked to that of the rest of India, and strongly represent the diversity part of the famous axiom: ‘Unity in Diversity’, that marks India’s identity. Bauddha dharma, Vaishnava dharma, Shakta and many other indigenous religious-traditions have characterized NE India for centuries.

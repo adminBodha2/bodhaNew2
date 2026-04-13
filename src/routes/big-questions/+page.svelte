@@ -1,7 +1,8 @@
 <script lang="ts">
+
 	import { onMount, tick } from 'svelte';
 	import autoAnimate from '@formkit/auto-animate';
-	import { bigQuestions } from '$lib/utils/supabaseClient';
+	import { allQuestions } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
@@ -14,21 +15,22 @@
 	$metaUrl = 'https://www.bodharesearch.in/big-questions';
 	$metaImage = '/images/key-bigquestions.webp';
 
-	let projects: any;
+	let questions:any
 	let ready = false;
-	let activeIndex: number | null = null; // null = show all
+	let activeIndex:number | null = null
 
-	function showItem(index: number | null) {
-	activeIndex = index;
-}
+	function showItem(index:number | null) {
+		activeIndex = index
+	}
 
 	onMount(() => {
-		(async () => {
-			projects = await bigQuestions();
+		(async() => {
+			questions = await allQuestions();
 			await tick();
 			ready = true;
 		})();
-	});
+	})
+
 </script>
 
 <Head
@@ -58,34 +60,39 @@
 	</div>
 	<div class="box-2">
 		<div class="column rgap16">
-			<Title text="The Big Questions" />
+			<Title text="The Big Questions"/>
 			<div class="row wrap cgap8 rgap8">
 				<button class="ftnbtn" on:click={() => showItem(null)} class:active={activeIndex === null}>All</button>
-				<div class="row wrap cgap8 rgap8">
-				{#each projects as _, i}
-				<button class="ftnbtn" on:click={() => showItem(i)} class:active={activeIndex === i}>
-					{i + 1}
-				</button>
-			{/each}
-			</div>
+				{#each questions as _, i}
+					<button class="ftnbtn" on:click={() => showItem(i)} class:active={activeIndex === i}>{i + 1}</button>
+				{/each}
 			</div>
 		</div>
-		{#if projects && projects.length > 0 && ready}
+		{#if questions && questions.length > 0}
 			<div class="column rgap32 slider-box" use:autoAnimate>
-				{#each projects as item, i}
+				{#each questions as item, i}
 				{#if activeIndex === null || activeIndex === i}
-					<div class="grid two right cgap32 emgrid rgap24 question">
-						<div class="column rgap16 down pbot16">
-							<div class="column rgap16 borderbot pbot16">
-								<img class="icon" src={item.icon} alt={item.question} />
-								<h6 class="source-serif">{item.id}. {item.question}</h6>
-							</div>
-							<pre>{item.description}</pre>
+				<div class="grid two right stacked-4816 emgrid question">
+					<div class="column rgap24 down pbot16">
+						<div class="row mwrap ycenter cgap8 rgap16">
+							<img class="icon" src={item.meta.image} alt={item.meta.title}/>
+							<h4 class="source-serif tight">{item.meta.id} - {item.meta.title}</h4>
 						</div>
-						<div class="column up">
-							<img class="image-fit" src={item.image} alt={item.question} />
+						<article class="classic-document borderbot pbot16">
+							<svelte:component this={item.content}/>
+						</article>
+					</div>
+					<div class="column up back-screen" style="background-image: url({item.meta.icon})">
+						<div class="in-screen column xleft rgap16">
+							<p class="white sm">{item.meta.description}</p>
+							<div class="row wrap rgap8 ycenter cgap8">
+								{#each item.meta.tags as tag}
+								<small class="label light white tt-u">{tag.replaceAll('-', ' ')}</small>
+								{/each}
+							</div>
 						</div>
 					</div>
+				</div>
 				{/if}
 				{/each}
 			</div>
@@ -95,31 +102,42 @@
 
 <style lang="sass">
 
+.back-screen
+	background-position: center center
+	background-size: cover
+	border-radius: 8px
+	height: 400px
+	overflow: hidden
+	&:hover
+		.in-screen
+			opacity: 0
+	.in-screen
+		transition: all 0.15s ease
+		background: linear-gradient(360deg,rgba(18, 18, 18, 0) 1%, rgba(18, 18, 18, 0.5) 59%, rgba(18, 18, 18, 0.7) 81%, rgba(18, 18, 18, 0.95) 100%)
+		height: 100%
+		width: 100%
+		position: relative
+		top: 0
+		left: 0
+		padding: 1rem
+		@media screen and (max-width: 1024px)
+			justify-content: flex-end
+			background: linear-gradient(180deg,rgba(18, 18, 18, 0) 1%, rgba(18, 18, 18, 0.6) 59%, rgba(18, 18, 18, 0.78) 81%, rgba(18, 18, 18, 0.89) 100%)
+	@media screen and (min-width: 1025px)
+		height: 100%
+
 #first
 	min-height: 50vh
 	justify-content: center
 
 .question
-	border: 1px solid var(--grey-sm)
 	border-radius: 8px
 	overflow: hidden
 	.down
 		@media screen and (min-width: 1025px)
-			padding: 2rem
+			padding: 0.2rem
 		@media screen and (max-width: 1024px)
 			padding: 1rem
-
-img.image-fit
-	object-fit: cover
-	object-position: center center
-	@media screen and (min-width: 1025px)
-		width: 100%
-		height: 100%
-	@media screen and (max-width: 1024px)
-		width: 100%
-		height: 240px
-
-.grid.two.emgrid
 	@media screen and (max-width: 1024px)
 		grid-template-areas: "up" "down"
 		.up
@@ -131,10 +149,10 @@ img.icon
 	object-fit: contain
 	object-position: center center
 	@media screen and (min-width: 1025px)
-		height: 42px
-		width: 42px
+		height: 36px
+		width: 36px
 	@media screen and (max-width: 1024px)
-		height: 42px
-		width: 42px
+		height: 32px
+		width: 32px
 
 </style>
