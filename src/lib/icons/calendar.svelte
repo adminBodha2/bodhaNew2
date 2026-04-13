@@ -1,7 +1,7 @@
 <script lang="ts">
 
   export let size = 32
-  export let fill = "#023E7D"
+  export let fill = "var(--themealt)"
 
 </script>
 

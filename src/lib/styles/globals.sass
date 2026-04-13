@@ -423,6 +423,23 @@ img.blog-image
 	&:hover span
 		animation: scaleUp 0.3s ease-in-out
 
+.primary.black
+	border: 1px solid #9a9a9a
+	background: #474747
+	&::after
+		background: #9a9a9a
+	span
+		color: var(--whitefix)
+
+.primary.black.smaller
+	span
+		font-size: 0.75rem
+		padding: 0.5rem
+		text-transform: uppercase
+	&.active
+		background: var(--theme)
+		border: 1px solid var(--themealt)
+
 .primary.anveshi
 	background: var(--anveshi-color)
 	&::after

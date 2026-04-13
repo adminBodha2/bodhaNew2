@@ -1,11 +1,13 @@
 <script lang="ts">
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import autoAnimate from '@formkit/auto-animate';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 	import Calendar from '$lib/icons/calendar.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Sessions from '$lib/icons/sessions.svelte';
 	import Time from '$lib/icons/time.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 
 	$metaTitle = 'Introduction to Shri Ram Swarup - Bodha Courses';
 	$metaDescription = 'Online course on the works and thoughts of Shri Ram Swarup.';
@@ -36,7 +38,7 @@
 	<div class="box-nn-b">
 		<div class="grid two rgap32 cgap48">
 			<div class="column rgap24 ycenter thisdown">
-				<div class="label"><small class="tt-u">Bodha Courses</small></div>
+				<Crumb item1="ACADEMY" item1Link="/academy" show2={true} item2="COURSES"/>
 				<h1 class="source-serif tight">Introduction to Shri Ram Swarup</h1>
 				<p class="grey borderbot  pbot32">
 					Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last
@@ -70,25 +72,26 @@
 	</div>
 	<div class="box-3">
 		<div class="row ofitems cgap16 mwrap rgap16">
-			<button class="ftnbtn-b" class:active={isItem[0]} on:click={() => toggleItem(0)}
-				>Overview</button
+			<button class="primary black smaller" class:active={isItem[0]} on:click={() => toggleItem(0)}
+				><span>Overview</span></button
 			>
-			<button class="ftnbtn-b" class:active={isItem[1]} on:click={() => toggleItem(1)}
-				>Audience</button
+			<button class="primary black smaller" class:active={isItem[1]} on:click={() => toggleItem(1)}
+				><span>Audience</span></button
 			>
-			<button class="ftnbtn-b" class:active={isItem[2]} on:click={() => toggleItem(2)}
-				>Takeaways</button
+			<button class="primary black smaller" class:active={isItem[2]} on:click={() => toggleItem(2)}
+				><span>Takeaways</span></button
 			>
-			<button class="ftnbtn-b" class:active={isItem[3]} on:click={() => toggleItem(3)}
-				>Facilitator</button
+			<button class="primary black smaller" class:active={isItem[3]} on:click={() => toggleItem(3)}
+				><span>Facilitator</span></button
 			>
-			<button class="ftnbtn-b" class:active={isItem[4]} on:click={() => toggleItem(4)}
-				>Sessions</button
+			<button class="primary black smaller" class:active={isItem[4]} on:click={() => toggleItem(4)}
+				><span>Sessions</span></button
 			>
 		</div>
-		<div class="column itemsarea">
+		<div class="column itemsarea" use:autoAnimate>
 			{#if isItem[0]}
-				<div class="grid two stacked">
+				<h4 class="source-serif borderbot pbot16">Overview</h4>
+				<div class="grid two stacked ptop32">
 					<h6 class="thin source-serif">
 						Shri Ram Swarup was one of the finest thinkers of Bharatavarsha, who commented upon
 						every important aspect of Hindu culture; and upon the nature of Bharata’s civilizational
@@ -110,10 +113,10 @@
 			{:else if isItem[1]}
 				<div class="column rgap32">
 					<h4 class="source-serif borderbot pbot16">Who is the Course For?</h4>
-					<div class="grid four stacked">
+					<div class="grid four stacked-2">
 						<div class="column rgap16">
 							<h6 class="blue">Thinkers</h6>
-							<p class="sm">Thinkers who want to develop a deep understanding of Sanatana Dharma and Hindu
+							<p>Thinkers who want to develop a deep understanding of Sanatana Dharma and Hindu
 								cosmology will immensely benefit from the deep insights that Shri Ram Swarup has about
 								our tradition. Those who want to understand the civilizational struggles of
 								Bharatavarsha and Hindu Dharma vis-à-vis monotheistic colonialisms will also benefit
@@ -121,7 +124,7 @@
 						</div>
 						<div class="column rgap16">
 							<h6 class="blue">Activists</h6>
-							<p class="sm">Cultural activists and civilizational nationalists who are determined to protect the
+							<p>Cultural activists and civilizational nationalists who are determined to protect the
 								ideological, as well as geographical integrity of Bharatavarsha, will gain great
 								perspective and insights about what to do about the problems that the Hindu society
 								faces. Those who want a global network of dharmic sects will also gain various
@@ -129,7 +132,7 @@
 						</div>
 						<div class="column rgap16">
 							<h6 class="blue">Scholars</h6>
-							<p class="sm">
+							<p>
 								Scholars studying comparative religion, cultural anthropology, sociology, philosophy
 								and political science will immensely benefit from the comprehension of Hindu Dharma
 								and society based on the works of Shri Ram Swarup. His works have many potential ideas
@@ -138,7 +141,7 @@
 						</div>
 						<div class="column rgap16">
 							<h6 class="blue">Students</h6>
-							<p class="sm">
+							<p>
 								India’s textbooks do not do justice to the history, culture and civilization of
 								Bharatavarsha. Shri Ram Swarup wrote in order to correct this fault in our
 								historiography. He does not just tell us the true history of our country and Dharma,
@@ -154,7 +157,7 @@
 					<div class="grid two stacked-2">
 						<div class="column rgap16">
 							<h6 class="blue">Developing Svayambodha</h6>
-							<p class="sm">
+							<p>
 								Who are we? Every society has to ask this question every time we lose sight of our
 								identity, origin and roots. What does being Hindu mean? What are the universal
 								principles of Hindu Dharma? What are the core ideas of Bharatiya culture and
@@ -165,7 +168,7 @@
 						</div>
 						<div class="column rgap16">
 							<h6 class="blue">Developing Shatrubodha</h6>
-							<p class="sm">
+							<p>
 								India is locked in a civilizational struggle with two colonialisms: European Christian
 								colonialism and Middle Eastern colonialism. It is necessary to understand the
 								theological, institutional and religious inspiration behind them. It is necessary to
@@ -176,7 +179,7 @@
 						</div>
 						<div class="column rgap16">
 							<h6 class="blue">Developing Respect for Tradition</h6>
-							<p class="sm">
+							<p>
 								Dharma makes itself manifest through traditions, customs and rituals. That is why,
 								ever since the Vedas were written in Bharatavarsha, rituals have a central importance
 								in Sanatana Dharma. But how do these rituals work? How do mantras operate? How do they
@@ -188,7 +191,7 @@
 						</div>
 						<div class="column rgap16">
 							<h6 class="blue">Developing a Plan for Pagan Revival</h6>
-							<p class="sm">
+							<p>
 								One of the greatest dreams of Shri Ram Swarup was to revive the pagan, polytheistic
 								traditions all over the world. And it was his firm belief that Sanatana Dharma, being
 								a great living tradition, is capable of providing a cultural umbrella under which
@@ -201,26 +204,30 @@
 					</div>
 				</div>
 			{:else if isItem[3]}
-				<div class="column rgap16">
-					<img class="phot" src="/images/team/PS.webp" alt="pankaj saxena" />
-					<h6 class="thin source-serif">
-						<b>Pankaj Saxena</b> is a founder of Bodha and an author on Hindu temples, aesthetics, arts,
-						literature, history and culture. But he also calls himself a Voice of India graduate. Early
-						in life, by the grace of his guru, he encountered the works of Shri Ram Swarup, published
-						by Voice of India. And that started him on a journey of civilizational immersion. Through
-						the works of Shri Ram Swarup, he realized the importance of Sanatana Dharma in the greater
-						scheme of things. It made him look at the world through a deeply Sanatana/ Hindu point of
-						view. Ever since then he tries to spread the world of Shri Ram Swarup; particularly focusing
-						on his deep spiritual anchor, the yogic vision behind this worldview, and his call for a pagan
-						revival and unity, presided and guided by a living ancient, pagan civilization like Bharatavarsha.
-						Pankaj is a witness to the awakening of a generation through the works of Shri Ram Swarup
-						and Shri Sita Ram Goel. With this course, he seeks to take their vision further.
-					</h6>
+				<div class="column rgap32">
+					<h4 class="source-serif borderbot pbot16">Facilitator</h4>
+					<div class="grid two left cgap48 rgap24">
+						<img class="phot" src="/images/team/PS.webp" alt="pankaj saxena" />
+						<h6 class="thin source-serif">
+							<b>Pankaj Saxena</b> is a founder of Bodha and an author on Hindu temples, aesthetics, arts,
+							literature, history and culture. But he also calls himself a Voice of India graduate. Early
+							in life, by the grace of his guru, he encountered the works of Shri Ram Swarup, published
+							by Voice of India. And that started him on a journey of civilizational immersion. Through
+							the works of Shri Ram Swarup, he realized the importance of Sanatana Dharma in the greater
+							scheme of things. It made him look at the world through a deeply Sanatana/ Hindu point of
+							view. Ever since then he tries to spread the world of Shri Ram Swarup; particularly focusing
+							on his deep spiritual anchor, the yogic vision behind this worldview, and his call for a pagan
+							revival and unity, presided and guided by a living ancient, pagan civilization like Bharatavarsha.
+							Pankaj is a witness to the awakening of a generation through the works of Shri Ram Swarup
+							and Shri Sita Ram Goel. With this course, he seeks to take their vision further.
+						</h6>
+					</div>
 				</div>
 			{:else if isItem[4]}
-				<div class="grid four stacked-2">
+			<h4 class="source-serif borderbot pbot16">Sessions</h4>
+				<div class="grid four stacked-2 ptop32">
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">Session 1 - Inverting the Gaze: A Hindu View of the World</p>
+						<p class="tight big bold blue pbot16">Session 1 - Inverting the Gaze: A Hindu View of the World</p>
 						<p class="tight sm pbot8">
 							Studying the purva paksha of the two religions in his books like ‘Hindu View of
 							Christianity and Islam’ and ‘Hinduism and Monotheistic religions’.
@@ -231,7 +238,7 @@
 						</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">Session 2 - The Mind of the Other: A Critique of Islam</p>
+						<p class="tight big bold blue pbot16">Session 2 - The Mind of the Other: A Critique of Islam</p>
 						<p class="tight sm pbot8">
 							Understanding the true nature of Islam and Prophetic Monotheism, and how the Muslim
 							mind works. This chapter will also deal with the issue of women in Islam.
@@ -242,7 +249,7 @@
 						</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">
+						<p class="tight big bold blue pbot16">
 							Session 3 - The Missionary Threat to India: A Critique of Christianity
 						</p>
 						<p class="tight sm pbot8">
@@ -255,7 +262,7 @@
 						</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">
+						<p class="tight big bold blue pbot16">
 							Session 4 - Theory and Practice of Communism: A Critique of Communism
 						</p>
 						<p class="tight sm pbot8">
@@ -269,7 +276,7 @@
 						</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">Session 5 - Hindu View of Buddhism and Sikhism</p>
+						<p class="tight big bold blue pbot16">Session 5 - Hindu View of Buddhism and Sikhism</p>
 						<p class="tight sm pbot8">
 							Analyzing similarities, problems and conflicts between the two dharmic sects of
 							Hinduism and Buddhism on one hand, and between Hinduism and Sikhism on the other.
@@ -281,7 +288,7 @@
 						</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">Session 6 - On Hinduism: Looking upon Ourselves</p>
+						<p class="tight big bold blue pbot16">Session 6 - On Hinduism: Looking upon Ourselves</p>
 						<p class="tight sm pbot8">
 							Studying our own tradition, religion and culture through the most universal of
 							concepts and practices and reflecting upon the reasons of the cultural self-alienation
@@ -290,7 +297,7 @@
 						<p class="sm italic lgrey">Books Consulted: On Hinduism: Reviews & Reflections</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">Session 7 - Meditations: A Sadhaka’s View of the World</p>
+						<p class="tight big bold blue pbot16">Session 7 - Meditations: A Sadhaka’s View of the World</p>
 						<p class="tight sm pbot8">
 							Gazing inwards into the greatest yogic tradition of the world, analyzing Patanjali
 							Yoga and its importance in our lives along with analyzing the nature of gods.
@@ -298,7 +305,7 @@
 						<p class="sm italic lgrey">Books Consulted: Meditations: Yogas, Gods, Religions</p>
 					</div>
 					<div class="column">
-						<p class="tight big source-serif bold blue pbot16">
+						<p class="tight big bold blue pbot16">
 							Session 8 - Sanatana Dharma and Pagan Religions of the World
 						</p>
 						<p class="tight sm pbot8">
@@ -320,16 +327,16 @@
 		height: 100%
 
 .box-3
-	border: 1px solid var(--grey-sm)
-	padding-left: 4rem
-	padding-right: 4rem
-	border-radius: 8px
-	@media screen and (max-width: 1024px)
-		padding-left: 0
-		padding-right: 0
-		border: none
+	border-top: 1px solid var(--grey-sm)
+	padding-left: 0
+	padding-right: 0
+	.row.ofitems
+		padding-bottom: 1rem
+	@media screen and (min-width: 1025px)
+		padding-left: 4rem
+		padding-right: 4rem
 		.row.ofitems
-			padding-bottom: 1rem
+			padding-bottom: 0
 
 .parent > .column
 	flex: 1
@@ -367,12 +374,12 @@ img.key
 		padding-right: 16px
 
 img.phot
-	border-radius: 50%
+	border-radius: 8px
+	object-fit: cover
+	width: 100%
 	@media screen and (min-width: 1025px)
-		height: 144px
-		width: 144px
+		height: 100%
 	@media screen and (max-width: 1024px)
-		height: 144px
-		width: 144px
+		height: 300px
 
 </style>
