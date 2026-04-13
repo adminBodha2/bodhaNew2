@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import { fade, fly } from 'svelte/transition';
+	import { slide, fly } from 'svelte/transition';
 	import { quintOut, cubicIn } from 'svelte/easing';
 	import { page } from '$app/state';
 	import favicon from '$lib/assets/favicon.svg';
@@ -45,8 +45,9 @@
 </header>
 {#key page.url.pathname}
   <main
-    in:fly={{ y: 12, duration: 210, easing: quintOut }}
-    out:fade={{ duration: 120, easing: cubicIn }}
+    in:fly={{ y: -30, duration: 180, delay: 280, easing: quintOut }}
+    out:fly={{ y: 30, duration: 240, easing: cubicIn }}
+	onintroend={() => { if (page.url.hash) {document.querySelector(page.url.hash)?.scrollIntoView()}}}
   >
     {@render children?.()}
   </main>

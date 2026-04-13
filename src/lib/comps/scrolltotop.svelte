@@ -1,21 +1,25 @@
 <script lang="ts">
 
-  import Top from '$lib/icons/uparrow.svelte'
+  export let size = 32
 
 </script>
 
 
 <div class="blank">
-  <Top/>
+	<svg viewBox="0 0 24 24" height={size} width={size} fill="var(--themealt)" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2ZM13 12H16L12 8L8 12H11V16H13V12Z"/></svg>
 </div>
 
 <style lang="sass">
 
 .blank
-  background: none
-  height: 32px
-  width: 32px
-  border-radius: 50%
-  cursor: pointer
+	background: none
+	height: 32px
+	width: 32px
+	border-radius: 50%
+	cursor: pointer
+	&:hover
+		svg
+			fill: var(--theme)
+
 
 </style>

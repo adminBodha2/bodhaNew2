@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Card from '$lib/comps/card-comp.svelte'
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Title2 from '$lib/comps/page-title.svelte';
@@ -42,14 +43,49 @@
 ></Head>
 
 <Parallax imageLink="/images/heroimage2.webp" />
-<Container>
+<Container narrow={true}>
 	<div class="box-3" id="first">
 		<h1 class="width50 source-serif page-hero">Bodha is a <span class="blue italic">think tank</span> and <span class="blue italic">research group</span>,</h1>
-		<h5 class="width80 thin source-serif">
+		<h5 class="source-serif thin">
 			focused on contemporary issues of cultural concern, to inform core areas of policy with
 			wisdom drawn from Hindu traditions. We catalyze intellectual churn within the Hindu
 			renaissance, advance the case for Indian Knowledge Systems (IKS), and curate immersive cultural experiences.
 		</h5>
+		<div class="grid four stay2 cgap64 rgap24">
+			<div class="column rgap16 features">
+				<h6 class="tight">Our Work</h6>
+				<p class="big">
+					<a class="blank linked" href="/research">Research Projects</a><br>
+					<a class="blank linked" href="/big-questions">Big Questions</a><br>
+					<a class="blank linked" href="/lab">Bodha Lab</a>
+				</p>
+			</div>
+			<div class="column rgap16 features">
+				<h6 class="tight">Learning</h6>
+				<p class="big">
+					<a class="blank linked" href="/academy">Bodha Academy</a><br>
+					<a class="blank linked" href="/academy/courses">Online Courses</a><br>
+					<a class="blank linked" href="/library">Bodha Open Library</a>
+				</p>
+			</div>
+			<div class="column rgap16 features">
+				<h6 class="tight">Anveshi</h6>
+				<p class="big">
+					<a class="blank linked" href="/anveshi#current-chapters">Current Chapters</a><br>
+					<a class="blank linked" href="/anveshi#future-chapters">Future Chapters</a><br>
+					<a class="blank linked" href="/anveshi#faqs">FAQs</a>
+				</p>
+			</div>
+			<div class="column rgap16 features">
+				<h6 class="tight">About Us</h6>
+				<p class="big">
+					<a class="blank linked" href="/inspiration">Our Inspiration</a><br>
+					<a class="blank linked" href="/team">The Team</a><br>
+					<a class="blank linked" href="/videos">Talks, Podcasts, etc.</a>
+				</p>
+			</div>
+		</div>
+		<!--
 		<div class="grid four cgap32 rgap16 ptop32">
 			<div class="column features">
 				<img class="icon" src="/images/icon-research.png" alt="research"/>
@@ -68,68 +104,65 @@
 				<p>visit <a class="blank tt-u" href="/library"><b>Bodha Open Library</b></a></p>
 			</div>
 		</div>
+		-->
 	</div>
 	<div class="box-2">
 		<Title text="Verticals" />
-		<div class="grid two cgap16 rgap16">
-			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/key-research.webp" alt="research" />
-				<h4 class="blue source-serif"><a class="blank linker" href="/research">Research</a></h4>
-				<p class="tight big">
+		<div class="grid two stacked-2">
+			<Card link="/research" imageLink="/images/key-research.webp">
+				<h4 class="blue">Research</h4>
+				<p class="big">
 					To illuminate hidden universal forces and long arcs in foreign and public policy; to
 					reveal the design of core Hindu institutions like the temple, gurukula, family, and
 					charity; and to turn the social sciences lens with a Hindu view, Bodha engages in focused
 					research projects. These projects combine deep and immersive field research with rigorous
 					theorization based on core cultural ideas.
 				</p>
-			</div>
-			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/key-anveshi.webp" alt="cultural tours" />
-				<h4 class="blue source-serif"><a class="blank linker" href="/anveshi">Cultural Tours</a></h4>
-				<p class="tight big">
+			</Card>
+			<Card link="/anveshi" imageLink="/images/key-anveshi.webp">
+				<h4 class="blue">Bodha Anveshi</h4>
+				<p class="big">
 					A guided tour of four to five days to beautiful and hitherto unexplored temples and
 					kshetras of Bharatavarsha. Anveshi tours are full of architectural, sculptural and
 					cultural splendor, and also an immersion into living systems carrying beautiful cultural
 					traditions for thousands of years.
 				</p>
-			</div>
-			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/key-academy.webp" alt="bodha academy" />
-				<h4 class="blue source-serif"><a class="blank linker" href="/academy">Bodha Academy</a></h4>
-				<p class="tight big">
-					Modern fault lines in Hindu society stem from an identity crisis manufactured by the
-					British, by institutionalizing identity-based fault lines through academia and other
-					institutions. At Bodha, we address this by training scholars every year in anthropology
-					and sociology from an Indic point of view.
-				</p>
-			</div>
-			<div class="column rgap16 blogbox2">
-				<img class="vert" src="/images/key-bigquestions.webp" alt="big questions" />
-				<h4 class="blue source-serif"><a class="blank linker" href="/big-questions">The Big Questions</a></h4>
-				<p class="tight big">
+			</Card>
+			<Card link="/academy" imageLink="/images/key-academy.webp">
+				<h4 class="blue">Academy</h4>
+				<p class="big">
 					Every year we will formulate big questions stating major problems that capture core
 					concerns in the contemporary journey of Hindu society, and put those questions to great
 					thinkers, leaders and activists. The Big Questions vertical will seek answers which will
 					move the needle towards solving the stated problems.
 				</p>
-			</div>
+			</Card>
+			<Card link="/big-questions" imageLink="/images/key-bigquestions.webp">
+				<h4 class="blue">Big Questions</h4>
+				<p class="big">
+					Modern fault lines in Hindu society stem from an identity crisis manufactured by the
+					British, by institutionalizing identity-based fault lines through academia and other
+					institutions. At Bodha, we address this by training scholars every year in anthropology
+					and sociology from an Indic point of view.
+				</p>
+			</Card>
 		</div>
 	</div>
 	<div class="box-2">
 		<div class="column">
 			<Title4 text="Writings" />
-			<p class="big">Explore long form essays, opinions, research output, and more at our <a href="/blog" class="blank linked"><b>BLOG.</b></a></p>
+			<p>Explore long form essays, opinions, research output, and more at our <a href="/blog" class="blank linked"><b>BLOG.</b></a></p>
 		</div>
 		{#if blogs && labs && blogs.length > 0 && labs.length > 0}
-			<div class="grid three stacked-2">
+			<div class="grid three stacked-2" style="align-items: stretch">
 				{#each blogs as item}
-				<div class="column rgap16">
+				<div class="column rgap16 height100" style="justify-content: space-between">
 					<img src={item.meta.image} class="vert2" alt={item.meta.title} />
 					<h5 class="source-serif tight"><a class="blank linker" href={item.linkpath}>{item.meta.title}</a></h5>
 					<p class="tight grey">{item.meta.excerpt}</p>
 					<div class="row mwrap cgap8 rgap8">
 						{#each item.meta.tags as tag}
-							<p class="sm blue italic">#{tag}</p>
+							<small class="label white">#{tag}</small>
 						{/each}
 					</div>
 				</div>
@@ -142,7 +175,7 @@
 		<div class="grid two stacked-2">
 			<div class="column rgap16">
 				<img class="book" src="/images/book-ss.webp" alt="svayambodha and shatrubodha" />
-				<h5 class="source-serif tight">Svayambodha and Shatrubodha</h5>
+				<h5 class="tight ptop8">Svayambodha and Shatrubodha</h5>
 				<p class="grey">
 					This book is a small attempt to take the intellectual Hindu renaissance forward by
 					rekindling the viveka that is necessary to differentiate between dharma and adharma. The
@@ -164,7 +197,7 @@
 			</div>
 			<div class="column rgap16">
 				<img class="book" src="/images/book-fm.webp" alt="fractal mandala" />
-				<h5 class="source-serif tight">Fractal Maṇḍala</h5>
+				<h5 class="tight ptop8">Fractal Maṇḍala</h5>
 				<p class="grey">
 					Fractal Maṇḍala is a fresh exploration of Indian civilization through its own stories and
 					traditions. It follows India’s journey from the deep past of the Holocene to the early
@@ -231,23 +264,13 @@ h1.page-hero
 		letter-spacing: -1px
 		line-height: 1.2
 
-img.vert
-	object-fit: cover
-	object-position: center center
-	@media screen and (min-width: 1025px)
-		width: 100%
-		height: 300px
-	@media screen and (max-width: 1024px)
-		width: 100%
-		height: 240px
-
 img.vert2
 	object-fit: cover
 	object-position: center center
 	border-radius: 5px
 	@media screen and (min-width: 1025px)
 		width: 100%
-		height: 280px
+		height: 240px
 	@media screen and (max-width: 1024px)
 		width: 100%
 		height: 240px
@@ -261,11 +284,8 @@ img.book
 		height: 360px
 		padding: 1rem
 	@media screen and (max-width: 1024px)
-		height: 320px
-
-img.icon
-	object-fit: contain
-	width: 36px
+		height: 280px
+		padding: 1rem
 
 .features
 	row-gap: 1rem

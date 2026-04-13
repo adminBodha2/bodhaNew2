@@ -127,7 +127,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="box-2">
+	<div class="box-2" id="current-chapters">
 		<Title text="Current Chapters"/>
 		{#if currproj && currproj.length > 0}
 		<div class="grid two stacked-2">
@@ -175,7 +175,7 @@
 		</div>
 	{/if}
 	</div>
-	<div class="box-2">
+	<div class="box-2" id="future-chapters">
 		<Title text="Future Chapters"/>
 		<div class="row ycenter cgap8 mwrap rgap8">
 			<button
@@ -265,7 +265,7 @@
 		</div>
 	{/if}
 	</div>
-	<div class="box-2">
+	<div class="box-2" id="faqs">
 		<FAQ />
 	</div>
 </Container>
