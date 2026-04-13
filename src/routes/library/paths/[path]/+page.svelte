@@ -1,16 +1,30 @@
 <script lang="ts">
 
-	export let data
+	import { page } from '$app/state'
+	import Container from '$lib/comps/container.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Head from '$lib/comps/headcomponent.svelte'
+
+	export let data;
 
 </script>
 
-<div class="borderbot pbot32">
-	<div class="row ycenter cgap8">
-		<small class="blue"><a class="blank" href="/library">BODHA OPEN LIBRARY</a></small>
+<Head
+	title={'Bodha | Learning Path - ' + data.title}
+	metaDescription={data.description}
+	metaImage="/images/bodhacover.png"
+	metaUrl={'https://www.bodharesearch.in' + page.url.pathname}
+/>
+
+<Container narrow={true}>
+	<div class="box-t">
+		<div class="column borderbot pbot32">
+			<Crumb item1="BODHA OPEN LIBRARY" item1Link="/library"/>
+			<h2 class="source-serif tight pbot8">{data.title}</h2>
+			<p class="grey sm">{data.description}</p>
+		</div>
+		<div class="classic-document">
+			<svelte:component this={data.content}/>
+		</div>
 	</div>
-	<h3 class="source-serif">{data.title}</h3>
-	<p class="grey sm">{data.description}</p>
-</div>
-<div class="column ptop32 rgap16 pbot64 width80">
-	<svelte:component this={data.content}/>
-</div>
+</Container>

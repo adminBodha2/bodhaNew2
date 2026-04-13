@@ -26,5 +26,6 @@
 	"[dockercompose]": {
 		"editor.insertSpaces": false
 	},
-	"editor.defaultFormatter": "svelte.svelte-vscode"
+	"editor.defaultFormatter": "svelte.svelte-vscode",
+	"prettier.printWidth": 400
 }

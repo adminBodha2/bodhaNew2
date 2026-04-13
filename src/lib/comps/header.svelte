@@ -36,22 +36,14 @@
   </div>
   {#if iW >= 1025}
   <div class="row ycenter cgap16">
-	<Drop1 label="RESEARCH">
-	  <div class="column rgap16">
-		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/research">All Projects</a></p>
-		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/big-questions">Big Questions</a></p>
-		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/lab">Lab</a></p>
-	  </div>
-	</Drop1>
-	<Drop2 label="LEARNING">
-	  <div class="column rgap16">
-		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/academy">Academy</a></p>
-		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/inspiration">Inspiration</a></p>
-		<p class="navinitem tt-u" style="letter-spacing: -0.5px"><a class="blank" href="/library">Library</a></p>
-	  </div>
-	</Drop2>
+	<p class="navitem sm tt-u"><a class="blank" href="/research">Research</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/big-questions">Big Questions</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/academy">Academy</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/library">Library</a></p>
 	<p class="navitem sm tt-u"><a class="blank" href="/anveshi">Anveshi</a></p>
 	<p class="navitem sm tt-u"><a class="blank" href="/blog">Blog</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/inspiration">Inspiration</a></p>
+	<p class="navitem sm tt-u"><a class="blank" href="/lab">Lab</a></p>
 	<p class="navitem sm tt-u"><a class="blank" href="/team">Team</a></p>
 	<button class="blank" on:click={toggleSearch}>
 		<Search/>
