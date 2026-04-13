@@ -135,7 +135,7 @@
 				<img class="temple" src={item.image} alt={item.temple}/>
 			  </div>
 			  <div class="column ytop texter">
-				<h4 class="source serif">{item.temple}</h4>
+				<h4 class="source-serif">{item.temple}</h4>
 				<p>{item.description}</p>
 			  </div>
 			</div>

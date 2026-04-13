@@ -2,14 +2,14 @@
 
   import Container from '$lib/comps/container.svelte'
   import Head from '$lib/comps/headcomponent.svelte'
-import Parallax from '$lib/comps/parallaxhalf.svelte'
+import Parallax from '$lib/comps/parallaxfull.svelte'
   import Title from '$lib/comps/page-title.svelte'
   import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
 
   $metaTitle = 'Bodha Academy'
   $metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.'
   $metaUrl = 'https://www.bodharesearch.in/academy'
-  $metaImage = '/images/bodhacover.png'
+  $metaImage = '/images/key-academy.webp'
 
 </script>
 

@@ -27,7 +27,7 @@
 	<small class="lgrey">scroll to top</small>
 </button>
 </div>
-<div class="column mainer">
+<div class="column mainer" class:darker={$darkTheme}>
 	<div class="stdpad column rgap32">
 		<div class="grid two rgap24 pbot16">
 			<div class="column rgap16">
@@ -127,6 +127,8 @@
 .mainer
 	width: 100%
 	background: linear-gradient(180deg,rgba(7, 57, 104, 1) 0%, rgba(7, 29, 48, 1) 27%, rgba(7, 14, 26, 1) 61%, rgba(10, 4, 4, 1) 100%)
+	&.darker
+		background: linear-gradient(180deg,rgba(17, 17, 17, 1) 1%, rgba(13, 18, 31, 1) 46%, rgba(1, 20, 38, 1) 100%)
 	@media screen and (min-width: 1025px)
 		padding-top: 8rem
 		padding-bottom: 8rem

@@ -4,7 +4,7 @@
 	import { bigQuestions } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 
@@ -12,7 +12,7 @@
 	$metaDescription =
 		'Big questions that capture core concerns in the contemporary journey of Hindu society.';
 	$metaUrl = 'https://www.bodharesearch.in/big-questions';
-	$metaImage = '/images/bodhacover.png';
+	$metaImage = '/images/key-bigquestions.webp';
 
 	let projects: any;
 	let ready = false;
