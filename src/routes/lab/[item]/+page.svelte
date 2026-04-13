@@ -22,7 +22,7 @@
 	metaUrl={'https://www.bodharesearch.in' + $page.url.pathname}
 />
 
-<section class="content-area">
+<section class="content-area labber">
 	<div class="borderbot pbot32">
 		<small class="blue"><a class="blank" href="/lab">BODHA LAB</a> | <span class="lgrey tt-u">{data.category}</span></small>
 		<h2 class="source-serif">{data.title}</h2>

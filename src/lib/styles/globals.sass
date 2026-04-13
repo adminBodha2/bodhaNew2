@@ -519,24 +519,26 @@ button.ftnbtn-b
 
 section.content-area
 	width: 100%
-	img
-		border-radius: 8px
-		max-width: 100%
-		height: auto
-		max-height: 540px
-		object-fit: contain
-		margin-right: auto
-		border: 1px solid var(--grey-sm)
-		padding: 1rem
-		background: var(--grey-xxs)
-		margin-bottom: 1rem
-	@media screen and (max-width: 1024px)
+	&.labber
 		img
-			width: 100%
-			padding: 0
 			border-radius: 8px
-			border: none
-			background: none
+			max-width: 100%
+			height: auto
+			max-height: 540px
+			object-fit: contain
+			margin-right: auto
+			border: 1px solid var(--grey-sm)
+			padding: 1rem
+			background: var(--grey-xxs)
+			margin-bottom: 1rem
+	@media screen and (max-width: 1024px)
+		&.labber
+			img
+				width: 100%
+				padding: 0
+				border-radius: 8px
+				border: none
+				background: none
 	@media screen and (min-width: 1025px)
 		width: 504px
 	@media screen and (min-width: 1201px)

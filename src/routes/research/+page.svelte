@@ -89,26 +89,4 @@
 	min-height: 50vh
 	justify-content: center
 
-.research-area
-	h4
-		border-bottom: 1px solid var(--grey-sm)
-		padding-bottom: 1rem
-
-.research-outer
-	border: 1px solid var(--grey-sm)
-	padding: 2rem
-	border-radius: 5px
-	@media screen and (max-width: 1024px)
-		padding: 1rem
-
-img.vert
-	object-fit: cover
-	object-position: center center
-	@media screen and (min-width: 1025px)
-		width: 100%
-		height: 280px
-	@media screen and (max-width: 1024px)
-		width: 100%
-		height: 200px
-
 </style>
