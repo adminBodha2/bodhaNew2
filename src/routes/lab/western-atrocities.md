@@ -7,11 +7,11 @@ excerpt: 'A compilation of atrocities committed by Western countries over the ce
 
 It's a well-known toolkit - whenever the 'global order' wishes to effect a regime change or any social engineering in a nation, a ream of atrocity literature is unleashed to show how colonized nations were better off for their colonization, and how the experience helped rid them of evils in their own societies. A key part of *turning the gaze* then is having a ready list of Western atrocities. For the simple truth is, the systematic violence of Western colonialism killed tens of millions of people across five centuries. From the near-annihilation of Caribbean indigenous populations within decades of Columbus's arrival to concentration camps in 20th-century Africa, colonial powers employed genocide, engineered famine, forced labor, and mass violence as instruments of control and extraction. This compilation documents the scope and scale of these atrocities across nine Western colonial powers, drawing on contemporary scholarship and primary sources.
 
-## Britain
+### Britain
 
 The British Empire, history's largest, left a trail of violence across every inhabited continent. Three patterns recur - engineered famines that killed millions in India and Ireland, concentration camps and counterinsurgency brutality in Africa, and the systematic destruction of indigenous peoples in Australia and Tasmania.
 
-### Indian Famines
+#### Indian Famines
 
 British India experienced 31 major famines during 190 years of colonial rule, compared to 17 in the preceding two millennia. The deadliest demonstrate how ideology killed:
 
@@ -21,27 +21,27 @@ British India experienced 31 major famines during 190 years of colonial rule, co
 
 Historian Mike Davis calculates 29 million deaths in Victorian-era Indian famines alone based on official British data.
 
-### Concentration Camps, Counterinsurgency
+#### Concentration Camps, Counterinsurgency
 
 - The Boer War concentration camps (1900-1902) interned 154,000 people across 109 camps. Deaths - 27,927 Boers (24,074 children under 16) and at least 14,154 Black Africans. Peak death rate reached 344 per 1,000 annually—ten times Glasgow's rate.<sup>2</sup> Field Marshal Lord Kitchener's "scorched earth" policy destroyed 30,000 farmhouses.<sup>3</sup>
 
 - The Kenya Emergency (1952-1960)<sup>4</sup> saw 70,000-150,000 Mau Mau suspects detained without trial. Systematic torture included sexual violence and the "dilution technique." In 2013, Britain paid £19.9 million to 5,000+ Kenyan torture victims. Colonial Office directives had ordered destruction of documents showing "racial discrimination against Africans."
 
-### Tasmania and Australia
+#### Tasmania and Australia
 
 - The Tasmanian Aboriginal population collapsed from 3,000-15,000 in 1803 to 46 survivors by 1847. The Black War (1824-1832) killed 600-900 Aboriginal people. Lieutenant Governor George Arthur declared martial law and offered bounties—£5 for adults, £2 for children. Raphael Lemkin, who coined "genocide," included Tasmania as a case study.
 
 Across Australia, the Colonial Frontier Massacres Project documents 400+ massacres of Indigenous people. Queensland alone saw an estimated 67,000 killed at a 44:1 ratio of Aboriginal to settler deaths.
 
-### Transatlantic Slave Trade
+#### Transatlantic Slave Trade
 
 British ships transported approximately 3.4 million Africans between 1640 and 1807. Mortality during the Middle Passage averaged 13%; overall mortality from capture to arrival reached 40% when including deaths during capture, coastal holding, and Caribbean "seasoning."
 
-## France
+### France
 
 French colonialism produced some of history's most brutal labor regimes in the Caribbean and among the bloodiest wars of decolonization in the 20th century.
 
-### Algeria
+#### Algeria
 
 - The Conquest of Algeria (1830-1875) killed an estimated 500,000-1,000,000 Algerians from a population of approximately 3 million.<sup>5</sup> Marshal Thomas-Robert Bugeaud implemented scorched-earth policies<sup>6</sup>, Alexis de Tocqueville advocated "total domination" including war against civilians.<sup>7</sup> A 1834 French commission acknowledged France had "outdone in barbarity the barbarians" it claimed to civilize.<sup>8</sup>
 
@@ -51,61 +51,61 @@ French colonialism produced some of history's most brutal labor regimes in the C
 
 - The Paris Massacre of October 17, 1961 saw police under Maurice Papon attack 25,000+ peaceful Algerian protesters, killing over 100—some shot, others thrown into the Seine.
 
-### Forced Famine and Labor
+#### Forced Famine and Labor
 
 - The Congo-Océan Railway (1921-1934) killed 17,000-60,000<sup>11</sup> workers among the 127,250 Africans<sup>12</sup> conscripted at gunpoint. Stanford historian J.P. Daughton found it "cheaper to let workers starve than feed them."
 
 - The Voulet-Chanoine Expedition (1898-1899) through present-day Mali, Niger, and Chad killed an estimated 10,000-12,000 civilians. Lieutenant-Colonel Klobb, sent to arrest the commanders, wrote: "Arrived in a small village, burnt down, full of corpses. Two little girls hanged from a branch."<sup>13</sup>
 
-### Madagascar and Indochina
+#### Madagascar and Indochina
 
 - The Madagascar Uprising suppression (1947-1948) killed 30,000-89,000 according to various estimates. Methods included prisoners thrown alive from airplanes and machine-gunning 120-160 MDRM members in railway wagons.<sup>14</sup>
 
 - In Vietnam, colonial rule featured forced labor on plantations with 25% death rates and the 1946 Haiphong bombardment killing 2,000-6,000 Vietnamese.
 
-## Spain
+### Spain
 
 Spanish conquest initiated the demographic catastrophe of the Americas. Within 130 years of Columbus, 95% of the hemisphere's population had died.
 
-### Caribbean Genocide
+#### Caribbean Genocide
 
 - The Taíno population of Hispaniola collapsed from an estimated 250,000-1,000,000 in 1492 to 32,000 by 1514 and approximately 600 by 1531. Yale University's Genocide Studies Program classifies this as genocide. Christopher Columbus established a tribute system requiring gold from all Taíno over 14; those who failed faced forced labor or death. The 1503 Jaragua Massacre saw over 100 Taíno leaders burned alive.
 
 - Bartolomé de las Casas, former conquistador turned Dominican friar, documented systematic atrocities including burning, disembowelment, and child murder. His 1542 account led to the New Laws—the first abolition of native slavery in European colonial history.
 
-### Continental Conquest
+#### Continental Conquest
 
 - The Conquest of Mexico (1519-1600) saw population decline from approximately 12-25 million to 1-2 million—a 90%+ collapse. The 1519 Cholula Massacre killed thousands of unarmed men; the 1520 Toxcatl Massacre attacked Aztecs during a religious ceremony.
 
 - The Conquest of Peru began with the 1532 Battle of Cajamarca, where Spanish forces massacred thousands of Atahualpa's unarmed followers before executing the Inca emperor despite receiving history's largest ransom.
 
-### Potosi, Cuba
+#### Potosi, Cuba
 
 - The silver mines of Potosí, Bolivia, operated from 1545-1825. Death toll estimates range from "far over one million" (conservative academic estimate) to 8 million (Eduardo Galeano's commonly cited figure). The mita system conscripted 13,500 workers annually from 16 Andean provinces. Workers descended 750+ feet on rotted ladders, carried 100-pound ore sacks, and faced mercury poisoning at the "mine of death" at Huancavelica, where one-third of workers died.
 
 - General Valeriano Weyler's<sup>15</sup> Cuban reconcentration camps (1896-1898) relocated 300,000+ rural Cubans, killing at least 170,000 (approximately 10% of Cuba's population). Death rates reached 77% in certain camps. This was the first modern concentration camp system—the term "concentration camp" derives from "reconcentration."
 
-## Portugal
+### Portugal
 
 Portugal pioneered and dominated the transatlantic slave trade, transporting more enslaved Africans than any other nation.
 
-### Transatlantic Slavery
+#### Transatlantic Slavery
 
 Portuguese and Brazilian ships transported over 5.8 million Africans — 46% of the total trade.<sup>16</sup> Mortality during the Middle Passage averaged 12.5-15%; deaths from capture through "seasoning" in the Americas reached approximately 50% within four years.<sup>17</sup>
 
-### Forced Labor Systems
+#### Forced Labor Systems
 
 - Angola's chibalo system produced catastrophic mortality. A 1947 report found 40% annual mortality among forced laborers and 60% infant mortality.<sup>18</sup> Portuguese deputy Henrique Galvão documented "shameful outrages" — forced labor of "women, of children, of the sick, of decrepit old men" — concluding "only the dead are really exempt from forced labor." Galvão was arrested; his report suppressed.<sup>19</sup>
 
 - São Tomé's serviçais system (1869-1908) recruited 67,000 Africans on five-year contracts — none ever returned home.<sup>20</sup> Mortality exceeded 10% annually even on the best-run estates.<sup>21</sup>
 
-### Colonial Wars
+#### Colonial Wars
 
 - The Portuguese Colonial Wars (1961-1974) killed approximately 100,000 Africans.<sup>22</sup> The Wiriyamu Massacre (December 16, 1972) in Mozambique killed 385 named civilians<sup>23</sup> — 28% of five villages' population<sup>24</sup> — by grenades, shooting, and burning<sup>25</sup>. In 2022, Portuguese PM António Costa acknowledged it as an "unforgivable act."<sup>26</sup>
 
 - The Manufahi Rebellion suppression (1911-1912) in East Timor killed 15,000-25,000 Timorese—over 5% of the population.<sup>27</sup>
 
-### Goa
+#### Goa
 
 - The 1510 Conquest: Afonso de Albuquerque's forces killed approximately 6,800 people in a single day—"800 Turks and over 6,000 moors" by his own estimate, including civilians.<sup>77</sup> Over 350 Hindu temples were destroyed by 1560; a 1569 royal letter recorded all temples in Portuguese India had been "demolished and burnt down."<sup>78</sup> In Salcete district alone, 300 temples destroyed between 1560-1575.<sup>79</sup>
 
@@ -115,11 +115,11 @@ Portuguese and Brazilian ships transported over 5.8 million Africans — 46% of 
 
 - 1955 Massacre: On August 15, 1955, Portuguese forces fired on 3,000-5,000 unarmed activists attempting peaceful entry into Goa, killing 21-30 demonstrators.<sup>86</sup> Portugal refused all negotiations until forcibly ejected by Indian military action in December 1961, ending 451 years of colonial rule.
 
-## Belgium
+### Belgium
 
 Belgian colonialism's defining atrocity occurred in the Congo Free State—King Leopold II's personal property from 1885-1908.
 
-### Rubber Terror
+#### Rubber Terror
 
 - The Congo Free State's rubber collection system caused population decline estimated at 1.2-13 million deaths, with approximately 10 million emerging as a commonly cited scholarly figure.<sup>28</sup> A 1919 Belgian Government Commission confirmed roughly half the population perished in rubber provinces.<sup>29</sup>
 
@@ -127,41 +127,41 @@ Belgian colonialism's defining atrocity occurred in the Congo Free State—King 
 
 - Conditions included hostage-taking (every station maintained prisoner stockades), village burning, and deliberate famine as rubber collection removed men from agriculture.<sup>31</sup> Roger Casement's 1904<sup>32</sup> report and E.D. Morel's campaign exposed conditions, leading to Belgian annexation in 1908.
 
-### Lumumba Assassination
+#### Lumumba Assassination
 
 Belgium bears "moral responsibility" for the January 17, 1961 assassination of Patrice Lumumba, the Congo's first democratically elected Prime Minister. Count Harold d'Aspremont Lynden's October 1960 cable ordered "definitive elimination of Patrice Lumumba." Belgian personnel supervised the execution; Belgian officer Gerard Soete led the team that dismembered and dissolved the bodies.
 
-### Rwanda
+#### Rwanda
 
 Belgian colonial policy rigidified Hutu/Tutsi identities into immutable categories based on pseudo-scientific racial theories. Mandatory identity cards introduced in 1932-1933 — continued until 1996 — enabled rapid identification of victims at roadblocks during the 1994 genocide that killed approximately 800,000-1 million.
 
-## Netherlands
+##3 Netherlands
 
 The Dutch East India Company (VOC) employed exceptional violence to establish and maintain trade monopolies.
 
-### Banda Genocide
+#### Banda Genocide
 
 The Banda Islands Massacre (1621) eliminated over 90% of the population to secure the world's only nutmeg source.<sup>33</sup> Governor-General Jan Pieterszoon Coen — "The Butcher of Banda" — deployed 19 ships, 1,655 Dutch soldiers, and 286 Japanese ronin. Pre-conquest population - 13,000-15,000.<sup>34</sup> Survivors - fewer than 1,000.<sup>35</sup> Methods included mass executions (44 village elders beheaded, heads impaled), forced suicides (groups jumped off cliffs), deportations, and starvation.<sup>36</sup>
 
-### Cultivation System
+#### Cultivation System
 
 The Cultuurstelsel (1830-1870) extracted 840 million guilders (€8 billion in 2018 value) from Java—19-32% of Netherlands state revenues.<sup>37</sup> The system required 20% of village land for export crops and 66 days of annual corvée labor (frequently exceeded).<sup>38</sup> Mortality rates increased 30% during this period; the 1840s saw widespread famine as cash crops displaced food production.
 
-### Aceh War
+#### Aceh War
 
 The Aceh War (1873-1914) — 40+ years of conflict — killed 50,000-100,000 Acehnese. German advisor Dr. Christiaan Snouck Hurgronje recommended destroying religious leaders. Contemporary critics accused the government of volkerenmoord (genocide).
 
-### Indonesian Independence War
+#### Indonesian Independence War
 
 - The Indonesian War of Independence (1945-1949) caused approximately 100,000-300,000 Indonesian deaths. A 2022 Dutch historical review concluded: "The use of extreme violence by the Dutch armed forces was not only widespread, but often deliberate" and "was condoned at every level - political, military and legal."<sup>39</sup>
 
 - Captain Raymond Westerling's South Sulawesi campaign (1946-1947) killed 3,000-40,000 through night raids, mass assemblies, and summary executions.<sup>40</sup> The Rawagede Massacre (December 9, 1947) killed 150-431 village males—essentially eliminating the male population. A UN committee called the killings "deliberate and merciless."
 
-## Germany
+### Germany
 
 German colonialism, though brief (1884-1915), produced the 20th century's first recognized genocide.
 
-### Herero and Nama Genocide
+#### Herero and Nama Genocide
 
 - The genocide in German South-West Africa (1904-1908) killed approximately 65,000-100,000 people—80% of the Herero population and 50% of the Nama.<sup>41</sup>
 
@@ -171,21 +171,21 @@ German colonialism, though brief (1884-1915), produced the 20th century's first 
 
 - In May 2021, Germany formally recognized the genocide and agreed to €1.1 billion in development projects.
 
-### Maji Maji Suppression
+#### Maji Maji Suppression
 
 The Maji Maji Rebellion suppression (1905-1907) in German East Africa killed 75,000-300,000.<sup>42</sup> Governor Count Adolf von Götzen implemented scorched-earth tactics - burning villages, destroying crops, confiscating food. Captain Wangenheim wrote - "Only hunger and want can bring about a final submission." The resulting famine, called ukame ("Great Hunger"), devastated the region.
 
-## Italy
+### Italy
 
 Italian colonialism's atrocities remained largely unacknowledged until recent decades, obscured by the Italiani brava gente ("Italians, good people") myth.<sup>43</sup>
 
-### Libya
+#### Libya
 
 The Libyan genocide (1929-1934) killed 40,000-100,000 in concentration camps — one-third of Cyrenaica's population<sup>44</sup>. Vice-Governor Rodolfo Graziani established 16 camps in the Sirte desert; 100,000-110,000 civilians were forcibly deported.<sup>45</sup> Pietro Badoglio wrote to Graziani - *"The course has been set, and we must carry it out to the end, even if the entire population of Cyrenaica must perish."*<sup>46</sup>
 
 - Additional methods included death marches, chemical weapons, 12,000 executions<sup>47</sup>, and systematic livestock destruction that eliminated 98% of camels and 97% of horses.
 
-### Ethiopia
+#### Ethiopia
 
 - Italy's Ethiopian War (1935-1941) featured extensive chemical weapons use despite Italy's ratification of the 1925 Geneva Protocol. Up to one-third of Ethiopian casualties resulted from mustard gas and phosgene attacks. Italian aircraft bombed Red Cross hospitals.
 
@@ -195,11 +195,11 @@ The Libyan genocide (1929-1934) killed 40,000-100,000 in concentration camps —
 
 - Ethiopian government claims totaled 382,800 civilian deaths including 35,000 in concentration camps and 300,000 from destruction-related privations.
 
-## USA
+### USA
 
 American expansion combined indigenous genocide, overseas colonial wars, and Cold War interventions that collectively killed millions.
 
-### Indigenous Genocide
+#### Indigenous Genocide
 
 - Pre-contact population in present-day U.S. territory: 5-10 million. By 1900: 237,000.<sup>52</sup>
 
@@ -207,11 +207,11 @@ American expansion combined indigenous genocide, overseas colonial wars, and Col
 
 - Benjamin Madley's research documents the California genocide (1846-1873) - 9,492-16,094 California Indians killed directly<sup>59</sup> in over 370 massacres<sup>60</sup>, population fell from 150,000 to 30,000.<sup>61</sup> The state legislature raised $1.51 million to fund anti-Indian militia operations<sup>62</sup>. Long Beach Governor Gavin Newsom formally acknowledged state genocide in 2019.<sup>63</sup>
 
-### Philippine-American War
+#### Philippine-American War
 
 The Philippine-American War (1899-1913) killed 200,000+ Filipino civilians from violence, famine, and disease, plus 20,000+ combatants.<sup>64</sup> On Samar, Brigadier General Jacob Smith ordered - "Kill everyone over the age of ten" and make the interior "a howling wilderness." Documented torture included the "water cure" — waterboarding.<sup>65</sup>
 
-### Cold War Interventions
+#### Cold War Interventions
 
 - The 1954 Guatemala coup overthrew democratically elected President Jacobo Árbenz.<sup>66</sup> The subsequent civil war (1960-1996) killed 200,000+, mostly indigenous Maya civilians<sup>67</sup>, including documented genocide of the Mayan Ixil population.
 
@@ -221,7 +221,7 @@ The Philippine-American War (1899-1913) killed 200,000+ Filipino civilians from 
 
 - Iraq War civilian deaths (2003-2011+) range from 186,000<sup>73</sup> (documented) to 461,000<sup>74</sup> (PLOS Medicine study) to over 1 million (survey estimates).
 
-## Methodology and Historiographical Debates
+### Methodology and Historiographical Debates
 
 Casualty estimates throughout this compilation reflect ongoing scholarly debates. Key methodological considerations include:
 
@@ -231,7 +231,7 @@ Disease versus violence - Scholars debate the relative contribution of epidemic 
 
 Genocide classification - Not all documented mass atrocities meet legal definitions of genocide, which requires intent to destroy a group. Scholars increasingly employ case-by-case analysis rather than blanket classifications. Source limitations - Colonial records systematically undercounted indigenous deaths while overreporting colonial casualties. Population-based survey studies produce higher estimates than body count methods.
 
-## Conclusion
+### Conclusion
 
 The documented record reveals colonial violence as systematic rather than exceptional. Across centuries and continents, Western powers employed similar methods: forced labor systems that killed through exhaustion and starvation; concentration camps with deliberately lethal conditions; scorched-earth campaigns targeting civilian food supplies; and direct massacres. The scale—tens of millions dead—exceeded many 20th-century atrocities that receive greater attention.
 
@@ -239,7 +239,7 @@ Three patterns emerge from this evidence. First, economic extraction systems reg
 
 Modern acknowledgments remain partial. Germany recognized the Herero and Nama genocide in 2021; Belgium apologized for Lumumba's assassination in 2022; the U.S. Congress apologized for the Hawaiian overthrow in 1993. Most colonial powers have issued limited expressions of "sorrow" or "regret" while resisting formal apologies, reparations, or genocide classifications. The historical record, however, speaks for itself.
 
-## Endnotes
+### Endnotes
 
 1. [Colonial Biopolitics and the Great Bengal Famine of 1943](https://pmc.ncbi.nlm.nih.gov/articles/PMC9735018/)  
 2. [Concentration camps in the South African War? Here are the real facts](https://theconversation.com/concentration-camps-in-the-south-african-war-here-are-the-real-facts-112006)  

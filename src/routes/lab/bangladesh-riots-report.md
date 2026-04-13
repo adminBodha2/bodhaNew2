@@ -7,7 +7,7 @@ excerpt: 'A report on the ongoing riots and lynchings in Bangladesh.'
 
 <img src="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/misc/ethniccleansong.jpeg" class="headimage" alt="ethnic cleansing of hindus in bangladesh"/>
 
-## Timeline
+### Timeline
 
 - December 12, 2025: Sharif Osman Hadi (32), a student activist and aspiring MP, was shot by masked gunmen leaving a mosque in Dhaka. He was critically wounded and evacuated to Singapore for treatment.
 - December 18, 2025: Hadi succumbed to his injuries in a Singapore hospital on Thursday night. News of his death sparked immediate unrest. The Inqilab Moncho (revolutionary student platform) quickly announced him a martyr and called for protests.
@@ -15,7 +15,7 @@ excerpt: 'A report on the ongoing riots and lynchings in Bangladesh.'
 - December 19, 2025: The interim government (led by Chief Advisor Muhammad Yunus) declared a national mourning for Saturday. Security forces – police, Border Guard Bangladesh (BGB), and army – were deployed in Dhaka (especially around Parliament and the airport) to maintain order. A manhunt was announced: police released photos of two suspects in Hadi’s murder and offered a reward for information. Meanwhile, protests continued: demonstrators clashed with police and stoned the Assistant Indian High Commissioner’s residence in Chittagong.
 - December 20, 2025: Hadi’s funeral was held at Dhaka’s National Parliament Plaza under tight security. The government had banned drone flights around the Sangsad Bhaban (Parliament) during the Janaza and urged citizens to remain calm and law-abiding. By this date the unrest had largely subsided, but investigations and security efforts continued.
 
-## Lynching
+### Lynching
 
 <img class="lynching" src="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/misc/lynching.jpeg" alt="lynching of Dipu Chandra Das"/>
 
@@ -25,7 +25,7 @@ The lynching immediately drew outrage. Das’s family learned of the attack via 
 
 *Caution - Extremely Graphic Video* - [Dipu Das' lynching](https://x.com/iiamkrshn/status/2001895846204575914?s=20)
 
-## Historical Patterns
+### Historical Patterns
 
 The December 2025 events fit a recurring pattern of mob violence in Bangladesh. Key precedents include:
 
@@ -33,7 +33,7 @@ The December 2025 events fit a recurring pattern of mob violence in Bangladesh. 
 - Durga Puja violence (2021): Amnesty International warned that mob attacks during Hindu festivals in 2021 – homes and temples burned – illustrated a “state failure” to protect minorities. Police often treat such mobs leniently.
 - General rise of lynchings (2024): In the year since Sheikh Hasina’s fall, Bangladesh has seen dozens of lynchings over rumors. For example, clashes in the Chittagong Hill Tracts (a tribal region) saw indigenous and Bengali mobs fight over a supposed bike theft lynching. The VOA noted that at least 21 people were killed by mobs from August to September 2024 in various protests. Human-rights experts warn that such communal violence has repeatedly been used politically: killings of Bengalis or minorities are often portrayed as “politically motivated”, but the blame on entire communities remains a risk. All parties have called for a minority protection law and stronger action – a demand long ignored.
 
-## Coverage
+### Coverage
 
 - [NDTV World](https://www.ndtv.com/world-news/bangladesh-protests-sharif-osman-hadi-prothom-alo-the-daily-star-computers-cash-food-looted-cctvs-broken-in-attack-on-bangladesh-dailies-media-offices-9852662) - How Violence Unfolded At Bangladesh Media Offices And The Aftermath
 - [The Daily Star](https://www.thedailystar.net/news/bangladesh/news/sharif-osman-hadi-no-more-4061841) - Sharif Osman Hadi no more

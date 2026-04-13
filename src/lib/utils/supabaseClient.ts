@@ -72,15 +72,6 @@ export async function otherAmrit(){
   return data
 }
 
-export async function allResearch(){
-  const { data, error } = await supabase
-  .from('db-research')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
-}
-
 export async function bigQuestions(){
   const { data, error } = await supabase
   .from('db-questions')

@@ -7,7 +7,7 @@ excerpt: 'A brief compilation on how Hindu Indonesia was Islamized.'
 
 The transformation of Indonesia from Hindu civilization to Muslim-majority nation was not the peaceful, trade-driven process often portrayed. Historical evidence reveals military conquest of Hindu kingdoms, systematic suppression of Hindu practice, forced flight of populations, and ongoing persecution. As Dang Hyang Nirartha, a Javanese Brahmin sage who fled to Bali in 1489, explained - he *"never returned to Java, because Hinduism in Java had been suppressed by Islam."*<sup>1</sup>
 
-## Demak Sultanate's Campaigns (1475-1548)
+### Demak Sultanate's Campaigns (1475-1548)
 
 Demak waged systematic military campaigns to conquer Hindu territories:
 
@@ -19,7 +19,7 @@ Demak waged systematic military campaigns to conquer Hindu territories:
 
 The sources explicitly describe Demak "conquering" Hindu territories and defeating Hindu "resistance." Raden Patah, Demak's founder, is described as waging war against his own father, the Hindu king, becoming *"the avenger of his mother's wrongs, and rebelling against the authority of his father, defeated him decisively in battle."*<sup>2</sup>
 
-## Banten's Conquest of Sunda Pajajaran (1526-1579)
+### Banten's Conquest of Sunda Pajajaran (1526-1579)
 
 West Java's Hindu Sunda Kingdom fell to Islamic military conquest -
 
@@ -29,11 +29,11 @@ West Java's Hindu Sunda Kingdom fell to Islamic military conquest -
 
 Sources note - *"From these territories he created the Sultanate of Banten"*<sup>4</sup> - Hindu territory was conquered and transformed into Islamic sultanate.
 
-## Sultan Agung's "Holy War" Against Blambangan (1636-1640)
+### Sultan Agung's "Holy War" Against Blambangan (1636-1640)
 
 Encyclopedia Britannica explicitly describes Sultan Agung's campaign against the last Hindu kingdom in East Java as a *"holy war against infidels."*<sup>9</sup> This was conquest justified in explicitly religious terms.
 
-## Mass Migration to Bali
+### Mass Migration to Bali
 
 The collapse of Majapahit triggered mass Hindu exodus - *"A large number of courtiers, artisans, priests, and members of the royalty moved east to the island of Bali."*<sup>5</sup>
 
@@ -49,7 +49,7 @@ The Tengger people - only 600,000 Javanese who remained Hindu - fled to mountain
 
 Scholar Robert W. Hefner noted - *"Five centuries after the fall of its last Hindu-Buddhist kingdom, Java retains only one small population that preserves a non-Islamic priestly tradition."*<sup>1</sup>
 
-## What Happened to Those Who Remained?
+### What Happened to Those Who Remained?
 
 The sources reveal -
 
@@ -59,7 +59,7 @@ The sources reveal -
 
 ##### This indicates Hindus who didn't convert had to flee to remote areas to maintain their faith - classic pattern of religious persecution.
 
-## Modern Evidence of Continuing Suppression
+### Modern Evidence of Continuing Suppression
 
 The historical suppression continued into modern times:
 
@@ -77,7 +77,7 @@ The historical suppression continued into modern times:
 
 Indonesia post-independence officially recognized *"only monotheistic religions under pressure from political Islam"* and *"required an individual to have a religion to gain full Indonesian citizenship rights, and officially Indonesia did not recognize Hindus. It considered Hindus as orang yang belum beragama (people without religion), and as those who must be converted."*<sup>10</sup>
 
-## The Pattern Across the Archipelago
+### The Pattern Across the Archipelago
 
 - Aceh - *"Sultan Johan Syah...defeated the Hindu and Buddhist Kingdom of Indra Purba"* in 1205, establishing Banda Aceh<sup>17</sup>  
 - The pattern - *"He conquered Daya, and submitted the people to Islam"*<sup>17</sup>  
@@ -203,7 +203,7 @@ The "peaceful trade-driven conversion" narrative serves to whitewash this histor
 
 Java's Hindu civilization did not "peacefully evolve" into Islamic civilization. It was conquered, suppressed, and driven into exile, surviving only where geography and military power made it defensible. The testimony of those who lived through it - like Dang Hyang Nirartha who fled because *"Hinduism in Java had been suppressed by Islam"* - tells the true story.
 
-## Endnotes
+### Endnotes
 
 1. [Balinese and Hindus in Indonesia](https://minorityrights.org/communities/balinese-and-hindus/)  
 2. [Indonesia History - Sultanate of Demak](https://www.globalsecurity.org/military/world/indonesia/history-sultanate-demak.htm)  
@@ -230,7 +230,7 @@ Java's Hindu civilization did not "peacefully evolve" into Islamic civilization.
 23. [Islamization in Southeast Asia](https://kyoto-seas.org/pdf/31/1/310104.pdf)  
 24. [Dozens of Houses of Worship Closed, Vandalized in Indonesia: Rights Commission](https://www.benarnews.org/english/news/indonesian/tolerance-11062020170903.html)
 
-## Appendix
+### Appendix
 
 The following is sourced from X, via the handle [@Ofer_binshtok](https://x.com/Ofer_binshtok/status/1997950545034641676?s=20):
 
@@ -318,11 +318,3 @@ The myth is dead. We have buried it along with all the blood, money, and fear it
 Summary Table: The Scale of Islamic Violence in Indonesia:
 
 <img src="/images/lab/indonesia.png" alt="summary table"/>
-
-<style lang="sass">
-
-img
-  object-fit: contain !important
-  width: 100% !important
-
-</style>

@@ -39,7 +39,7 @@
 ></Head>
 
 <Parallax imageLink="/images/key-bigquestions.webp" />
-<Container>
+<Container narrow={true}>
 	<div class="box-3" id="first">
 		<div class="grid two stacked-4816">
 			<h6 class="source-serif thin">
@@ -71,16 +71,16 @@
 			</div>
 		</div>
 		{#if projects && projects.length > 0 && ready}
-			<div class="column rgap32" use:autoAnimate>
+			<div class="column rgap32 slider-box" use:autoAnimate>
 				{#each projects as item, i}
 				{#if activeIndex === null || activeIndex === i}
-					<div class="grid two right cgap64 emgrid rgap24 question">
+					<div class="grid two right cgap32 emgrid rgap24 question">
 						<div class="column rgap16 down pbot16">
 							<div class="column rgap16 borderbot pbot16">
 								<img class="icon" src={item.icon} alt={item.question} />
-								<h4 class="source-serif">{item.id}. {item.question}</h4>
+								<h6 class="source-serif">{item.id}. {item.question}</h6>
 							</div>
-							<pre class="big">{item.description}</pre>
+							<pre>{item.description}</pre>
 						</div>
 						<div class="column up">
 							<img class="image-fit" src={item.image} alt={item.question} />
@@ -101,7 +101,8 @@
 
 .question
 	border: 1px solid var(--grey-sm)
-	border-radius: 5px
+	border-radius: 8px
+	overflow: hidden
 	.down
 		@media screen and (min-width: 1025px)
 			padding: 2rem
@@ -130,8 +131,8 @@ img.icon
 	object-fit: contain
 	object-position: center center
 	@media screen and (min-width: 1025px)
-		height: 56px
-		width: 56px
+		height: 42px
+		width: 42px
 	@media screen and (max-width: 1024px)
 		height: 42px
 		width: 42px

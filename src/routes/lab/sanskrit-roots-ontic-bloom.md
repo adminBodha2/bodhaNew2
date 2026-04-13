@@ -7,7 +7,7 @@ excerpt: 'Work area for emerging notes and thoughts on Sanskrit roots and their 
 
 I am convinced that Sanskrit, among other things, is a language laden with *ontological onomatopoeia* - where sound, meaning, and reality converge. Each Sanskrit root, dhatu, is a seed of consciousness from which entire philosophical universes unfold. I call this the *ontic bloom*, a neural recalibration that happens when we perceive how meaning crystallizes from primordial sound-forms. This here is a notes area where I will continue to add emerging thoughts on this thesis.
 
-## The Primordial Creative Principle
+### The Primordial Creative Principle
 
 कृ (√kṛ) - to do, make, create.
 
@@ -22,7 +22,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - विकार (vikāra) - modification, the process by which brahman appears as world  
 - संस्कार (saṁskāra) - mental impressions that shape consciousness and behavior
 
-## The Light of Consciousness
+### The Light of Consciousness
 
 ज्ञा (√jñā) - to know, recognize.
 
@@ -37,7 +37,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - ज्ञाता (jñātā) - the knower, the witnessing consciousness  
 - संज्ञा (saṁjñā) - recognition, name, sign - how consciousness recognizes itself in forms
 
-## The Principle of Stability
+### The Principle of Stability
 
 स्था (√sthā) - to stand, remain, exist.
 
@@ -50,7 +50,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - प्रतिष्ठा (pratiṣṭhā) - establishment, consecration, the grounding of divine presence  
 - स्वस्थ (svastha) - healthy, established in one's own nature (sva-stha)  
 
-## Dynamic Principle
+### Dynamic Principle
 
 गम् (√gam) - to go, move, approach.
 
@@ -61,7 +61,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - संगम (saṅgama) - confluence, meeting of paths or rivers, sacred junctions  
 - गायत्री (gāyatrī) - the sacred mantra that carries consciousness toward light
 
-## Being and Manifestation
+### Being and Manifestation
 
 भू (√bhū) - to become, exist.
 
@@ -77,7 +77,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - विभू (vibhū) - all-pervading, omnipresent consciousness  
 - संभव (sambhava) - possibility, potential manifestation
 
-## Grace and Generosity
+### Grace and Generosity
 
 दा (√dā) - to give, grant.
 
@@ -91,7 +91,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - दक्षिणा (dakṣiṇā) - ritual gift, offering to guru or deity  
 - दया (dayā) - compassion, mercy, the heart's spontaneous giving
 
-## Cosmic Harmony
+### Cosmic Harmony
 
 ऋत् (√ṛt) - to go, move in cosmic order.
 
@@ -106,7 +106,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - ऋच् (ṛc) - verse, hymn that captures cosmic truth in sound  
 - ऋद्धि (ṛddhi) - prosperity, spiritual power arising from alignment with order
 
-## Mental Processing
+### Mental Processing
 
 मन् (√man) - to think, know mentally.
 
@@ -120,7 +120,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - मेधा (medhā) - intelligence, wisdom, mental brilliance  
 - स्मृति (smṛti) - memory, remembered tradition, the mind's retention of truth  
 
-## Sacred Utterance
+### Sacred Utterance
 
 वद् (√vad) - to speak, say.
 
@@ -134,7 +134,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - अनुवाद (anuvāda) - translation, following the original utterance  
 - प्रवाद (pravāda) - discourse, authoritative statement
 
-## Devotional Service
+### Devotional Service
 
 सेव् (√sev) - to serve, honor.
 
@@ -147,7 +147,7 @@ The root √kṛ represents the fundamental creative force - the transition from
 - समर्पण (samarpaṇa) - surrender, offering everything to the divine  
 - निष्काम (niṣkāma) - desireless, action without ego-attachment
 
-## The Three Core Triads
+### The Three Core Triads
 
 These roots yield three meaningful triads-
 
@@ -157,7 +157,7 @@ These roots yield three meaningful triads-
 
 Each dhātu reveals an aspect of the fundamental truth: consciousness (cit) manifests as creative power (śakti) through the play of māyā, while remaining eternally established in its own nature. The spiritual journey is the recognition of this truth through various means - knowledge (jñāna), action (karma), devotion (bhakti), and direct experience (samādhi). Understanding these root connections helps us perceive the unified vision behind diverse Hindu concepts, appreciate how language itself embodies spiritual insights, and use etymology as a tool for deeper philosophical understandings.
 
-## The Suffixes
+### The Suffixes
 
 Various suffixes in Sanskrit imply specific meanings. Once we understand this, the meaning of various words blooms internally. Examples:
 

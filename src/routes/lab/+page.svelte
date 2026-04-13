@@ -23,7 +23,7 @@
 
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}/>
 
-<div class="lab-landing">
+<section class="lab-landing content-area">
 	<h2 class="source-serif tight pbot16">Working notes, <br>ongoing inquiries, and more...</h2>
   	<p class="grey sm pbot32">Ongoing opinions, readings, reports, and deep research notes — published as they develop.</p>
 	<div class="box-2">
@@ -35,11 +35,11 @@
 							<small class="blue tt-u">{item.meta.category}</small>
 							<small class="lgrey">{item.formattedDate}</small>
 						</div>
-						<p class="source-serif big"><a href={item.linkpath} class="blank"><b>{item.meta.title}</b></a></p>
+						<p class="big"><a href={item.linkpath} class="blank"><b>{item.meta.title}</b></a></p>
 						<p class="sm grey">{item.meta.excerpt}</p>
 					</div>
 				{/each}
 			</div>
 		{/if}
 	</div>
-</div>
+</section>

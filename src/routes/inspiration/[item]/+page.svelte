@@ -37,17 +37,6 @@
 
 <style lang="sass">
 
-section.content-area
-	width: 100%
-	@media screen and (min-width: 1025px)
-		width: 504px
-	@media screen and (min-width: 1201px)
-		width: 680px
-	@media screen and (min-width: 1441px)
-		width: 850px
-	@media screen and (min-width: 1921px)
-		width: 1400px
-
 .parallax
 	width: 100%
 	overflow: hidden

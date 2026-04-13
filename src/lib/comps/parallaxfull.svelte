@@ -25,7 +25,6 @@
   @media screen and (max-width: 1024px)
     height: 320px
     margin-top: 64px
-    padding: 0 16px
     img
       object-fit: cover
       object-position: center center

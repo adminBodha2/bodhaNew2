@@ -45,8 +45,8 @@
 </header>
 {#key page.url.pathname}
   <main
-    in:fly={{ y: -30, duration: 180, delay: 280, easing: quintOut }}
-    out:fly={{ y: 30, duration: 240, easing: cubicIn }}
+    in:fly={{ y: 30, duration: 180, delay: 280, easing: quintOut }}
+    out:fly={{ y: -30, duration: 240, easing: cubicIn }}
 	onintroend={() => { if (page.url.hash) {document.querySelector(page.url.hash)?.scrollIntoView()}}}
   >
     {@render children?.()}

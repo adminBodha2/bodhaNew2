@@ -7,11 +7,11 @@
 </script>
 
 {#if noLink}
-<div class="column rgap24">
+<div class="column rgap24 card-outer">
 	<div class="imagebox">
 		<img src={imageLink} alt="click-to-navigate"/>
 	</div>
-	<div class="textbox">
+	<div class="textbox column rgap16">
 		<slot></slot>
 	</div>
 </div>
@@ -42,13 +42,13 @@
 	border-radius: 8px
 	height: 240px
 	@media screen and (min-width: 1025px)
-		height: 360px
+		height: 280px
 
 img
 	object-fit: cover
 	object-position: center center
 	height: 100%
 	width: 100%
-	transition: all 0.15s ease
+	transition: all 0.25s ease
 
 </style>

@@ -38,7 +38,9 @@ h4
 h5
 	font-size: 1.719rem
 h6
-	font-size: 1.575rem
+	font-size: 1.475rem
+	&.source-serif
+		letter-spacing: -0.35px
 p, pre
 	font-size: 1.1rem
 	&.sm
@@ -325,18 +327,34 @@ a.container
 
 .classic-document
 	p, pre
-		font-size: 1.2rem
+		font-size: 1.12rem
 		margin-bottom: 1.2rem
 		line-height: 1.6
 	ul, ol
-		padding-left: 1rem
+		padding-left: 2rem
 	li
-		font-size: 1.2rem
+		font-size: 1.12rem
 		margin-bottom: 0.5rem
+		line-height: 1.6
 	h3
 		font-size: 1.687rem
 		margin-top: 2.5rem
 		margin-bottom: 1.2rem
+	h4
+		font-size: 1.5rem
+		margin-bottom: 1.2rem
+		padding-top: 1.2rem
+	h5
+		font-size: 1.2rem
+	a
+		text-decoration: none
+		color: var(--theme)
+		&:hover
+			text-decoration: underline
+	blockquote
+		font-style: italic
+		p
+			color: var(--grey-lg)
 	@media screen and (min-width: 1025px)
 		p, pre, li
 			font-size: 1.25rem

@@ -18,17 +18,18 @@
 <Head
 	title={data.title}
 	metaDescription={data.excerpt}
-	metaImage="/images/bodhacover.png"
+	metaImage="/images/key-research.webp"
 	metaUrl={'https://www.bodharesearch.in' + $page.url.pathname}
 />
 
-<div class="lab-article column rgap48">
-	<div>
-		<small class="blue"><a class="blank" href="/lab">BODHA LAB</a> | <span class="lgrey tt-u">{data.category} | {dOM} {mOD}, {yOP}</span></small>
+<section class="content-area">
+	<div class="borderbot pbot32">
+		<small class="blue"><a class="blank" href="/lab">BODHA LAB</a> | <span class="lgrey tt-u">{data.category}</span></small>
 		<h2 class="source-serif">{data.title}</h2>
-		<p class="sm">{data.excerpt}</p>
+		<p class="sm pbot16">{data.excerpt}</p>
+		<small class="label white">{dOM} {mOD}, {yOP}</small>
 	</div>
-	<article class="lab-article-body column">
+	<article class="classic-document ptop32">
 		<svelte:component this={data.content} />
 	</article>
-</div>
+</section>
