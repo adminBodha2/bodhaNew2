@@ -4,12 +4,17 @@
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
 	import Scroller from '$lib/comps/scrolltotop.svelte';
+	import Sun from '$lib/icons/sun.svelte'
+	import Moon from '$lib/icons/moon.svelte'
+	import { darkTheme, toggleTheme } from '$lib/utils/globalstores'
+
 
 	let sY = $state(0);
 </script>
 
 <svelte:window bind:scrollY={sY} />
 
+<div class="column xcenter" style="background: var(--background">
 <div class="separator"></div>
 <button
 	class="blank column xcenter ycenter rgap4"
@@ -21,6 +26,7 @@
 	<Scroller />
 	<small class="lgrey">scroll to top</small>
 </button>
+</div>
 <div class="column mainer">
 	<div class="stdpad column rgap32">
 		<div class="grid two rgap24 pbot16">
@@ -74,7 +80,7 @@
 				</div>
 				<div class="row ycenter xright mleft cgap16">
 					<a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-						<Twitter />
+						<Twitter color="var(--whitefix)" />
 					</a>
 					<a
 						class="blank"
@@ -82,7 +88,7 @@
 						rel="noreferrer"
 						target="_blank"
 					>
-						<FB />
+						<FB color="var(--whitefix)" />
 					</a>
 					<a
 						class="blank"
@@ -90,7 +96,7 @@
 						rel="noreferrer"
 						target="_blank"
 					>
-						<Insta />
+						<Insta color="var(--whitefix)"  />
 					</a>
 					<a
 						class="blank"
@@ -98,8 +104,15 @@
 						rel="noreferrer"
 						target="_blank"
 					>
-						<Linkedin />
+						<Linkedin color="var(--whitefix)"  />
 					</a>
+					<button class="blankbtn" onclick={toggleTheme}>
+						{#if $darkTheme}
+						<Sun/>
+						{:else}
+						<Moon/>
+						{/if}
+					</button>
 				</div>
 			</div>
 		</div>

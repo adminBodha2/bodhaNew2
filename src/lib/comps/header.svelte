@@ -7,7 +7,7 @@
   import Mobilemenu from '$lib/comps/mobilemenu.svelte'
   import Drop1 from '$lib/comps/menudropdown.svelte'
   import Drop2 from '$lib/comps/menudropdown.svelte'
-  import { menuState, toggleMenuState, toggleSearch, searchState } from '$lib/utils/globalstores'
+  import { menuState, toggleMenuState, toggleSearch, darkTheme } from '$lib/utils/globalstores'
 
   let iW:number
   let scro:number
@@ -25,8 +25,13 @@
 <div class="row width100 ycenter xbetween stdpad sans">
   <div class="row ycenter">
 	<a class="blank row ycenter logoholder" href="/">
+	{#if $darkTheme}
+	<img class="rotator dark" src="/images/rotator-d.png" alt="rotator" style="transform: rotate({scro/8}deg)"/>
+	<img class="rest dark" src="/images/rest-d.png" alt="rest"/>
+	{:else}
 	  <img class="rotator" src="/images/rotator.png" alt="rotator" style="transform: rotate({scro/8}deg)"/>
 	  <img class="rest" src="/images/rest.png" alt="rest"/>
+	  {/if}
 	</a>
   </div>
   {#if iW >= 1025}

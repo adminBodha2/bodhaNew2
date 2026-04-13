@@ -10,6 +10,7 @@
 	import '$lib/styles/globals.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/icons.css';
+	import { darkTheme } from '$lib/utils/globalstores'
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte'
@@ -38,6 +39,7 @@
 	</script>
 </svelte:head>
 
+<div class:light={!$darkTheme} class:dark={$darkTheme}>
 <header class="row ycenter">
 	<Header />
 </header>
@@ -53,8 +55,12 @@
 	<Bottom />
 </footer>
 <SearchModal/>
+</div>
 
 <style lang="sass">
+
+main
+	background: var(--background)
 
 header
 	width: 100%

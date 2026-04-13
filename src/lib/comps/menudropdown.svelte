@@ -9,7 +9,7 @@
 
 <div class="dropdown" role="navigation" on:mouseenter={() => (hovered = true)} on:mouseleave={() => (hovered = false)}>
   <div class="trigger row ycenter">
-    <p class="sm tt-u" style="font-weight: 500" class:active={hovered}>{label}</p>
+    <p class="sm tt-u" style="font-weight: 500; color: var(--primary)" class:active={hovered}>{label}</p>
     <span class="chevron" class:rotated={hovered}>
       <ChevronDown size={chevronSize}/>
     </span>
@@ -52,7 +52,7 @@
   position: absolute
   top: 100%
   left: 0
-  background: white
+  background: var(--background)
   overflow: hidden
   display: grid
   row-gap: 1rem

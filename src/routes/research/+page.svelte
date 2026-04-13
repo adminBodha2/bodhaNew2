@@ -9,7 +9,7 @@
 	$metaDescription =
 		'Our research areas fall in 3 categories - Institutional Design, Policy and Strategic Affairs, Intellectual Output.';
 	$metaUrl = 'https://www.bodharesearch.in/research';
-	$metaImage = '/images/bodhacover.png';
+	$metaImage = '/images/key-research.png';
 </script>
 
 <Head
