@@ -16,7 +16,7 @@ import Parallax from '$lib/comps/parallaxfull.svelte'
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
 <Parallax imageLink="/images/key-academy.webp" />
-<Container>
+<Container narrow={true}>
 	<div class="box-t andB">
 		<div class="grid two stacked">
 			<h6 class="source-serif thin">Modern fault lines in Hindu society stem from a clash of identities which were created, and made more prominent, during the colonial era through academia and allied institutions. We want to correct this by our field studies program. In conducting these studies, we aim  to decolonize research methodology and arrive upon an Indic lens of research. This is not possible without creating a line of scholars who are capable of carrying this work forward, to next decade and then beyond to the next generation.</h6>
@@ -25,7 +25,7 @@ import Parallax from '$lib/comps/parallaxfull.svelte'
 	</div>
 	<div class="box-2">
 		<Title text="Courses"/>
-		<div class="grid three stacked">
+		<div class="grid two stacked-2">
 			<div class="column blogbox2 rgap16">
 				<img class="vert" src="/images/srg-square.webp" alt="shri sita ram goel"/>
 				<h5 class="source-serif"><a class="blank" href="/academy/courses/introduction-to-shri-ram-swarup">Introduction to Shri Ram Swarup</a></h5>

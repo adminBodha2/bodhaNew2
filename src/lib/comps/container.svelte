@@ -16,7 +16,8 @@
 	padding-right: 16px
 	&.narrow
 		width: 100%
-		place-self: center
+		margin-left: auto
+		margin-right: auto
 	@media screen and (min-width: 1025px)
 		padding-left: 32px
 		padding-right: 32px
