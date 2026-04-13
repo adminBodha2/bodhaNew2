@@ -4,6 +4,7 @@
 	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Card from '$lib/comps/card-comp.svelte'
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Title from '$lib/comps/page-title.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
@@ -21,7 +22,7 @@
 	let regionAnveshi: any;
 	let region: string = 'northern india';
 	let goTime:boolean
-	$: goTime = sY >= 300;
+	$: goTime = sY >= 0;
 	let isRegion = Array(8).fill(false);
 	isRegion[0] = true;
 
@@ -61,26 +62,22 @@
 
 <div class="column screener-wrap">
 	<div class="screener" style="transform: translateY({sY / 2}px)">
-		<div class="column inscreen xcenter ycenter">
+		<div class="column rgap24 inscreen xcenter ycenter">
 			<small class="white">BODHA ANVESHI</small>
-			<h1 class="ptop8 pbot16 source-serif white tight ta-c">
-				We are born <i>anveshi -</i><br />seekers by nature.
-			</h1>
+			<Anveshilogo goTime={goTime}/>
 			<p class="tight white ta-c pbot16">
 				Sacred journeys to unexplored kshetras of India.<br />Where, every outer journey becomes an
 				inner journey.
 			</p>
-			<a class="primary" href="/anveshi/kullu"><span>OPEN NOW - KULLU CHAPTER</span></a>
+			<a class="primary anveshi" href="/anveshi/kullu"><span>OPEN NOW - KULLU CHAPTER</span></a>
 		</div>
 	</div>
 </div>
-<Container>
+<Container narrow={true}>
 	<div class="box-2">
-		<div class="row ycenter borderbot pbot64">
-			<Anveshilogo goTime={goTime}/>
-		</div>
 		<div class="grid two stacked">
 			<div class="column rgap16">
+				<h4 class="source-serif tight">We are born <span style="color: #D3633A"><i>anveshi</i></span> - seekers by nature.</h4>
 				<h6 class="thin source-serif">
 					Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa. The word
 					anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer.
@@ -100,7 +97,6 @@
 					shaped by such courageous journeys—taken by individuals and communities—that have
 					transformed the course of civilizations.
 				</h6>
-				<h6 class="source-serif">We are born anveṣī - seekers by nature.</h6>
 			</div>
 			<div class="column rgap16">
 				<h6 class="thin source-serif">
@@ -128,58 +124,35 @@
 		</div>
 	</div>
 	<div class="box-2" id="current-chapters">
-		<Title text="Current Chapters"/>
+		<Title anveshi={true} text="Current Chapters"/>
 		{#if currproj && currproj.length > 0}
 		<div class="grid two stacked-2">
 			{#each currproj as item}
-				{#if item.pageactive === true}
-					<a class="blank linkbox column rgap16 blogbox2" href="/anveshi{item.link}">
-						<div class="image-container radius" style="overflow: hidden">
-							<img class="vert" src={item.image} alt={item.chapter} />
-						</div>
+					<Card link="/anveshi{item.link}" imageLink={item.image}>
 						{#if item.regopen === true}
-							<div class="row ycenter cgap8">
-								<div class="label2"><small class="white">OPEN NOW!</small></div>
-								<h4 class="tight source-serif">{item.chapter} Chapter</h4>
-							</div>
-						{:else}
+						<div class="row ycenter cgap8">
+							<small class="label anveshi white">OPEN NOW!</small>
 							<h4 class="tight source-serif">{item.chapter} Chapter</h4>
-						{/if}
-						<div class="column rgap16">
-							<h6 class="thin">{item.desc}</h6>
-							<div class="row ycenter cgap8 rgap8 mwrap">
-								<div class="label"><p class="sm grey">{item.fromto}</p></div>
-							</div>
 						</div>
-					</a>
-				{:else}
-					<div class="column container-a rgap16 blogbox2">
-						<div class="image-container radius" style="overflow: hidden">
-							<img class="vert" src={item.image} alt={item.chapter} />
-						</div>
-						{#if item.regopen === true}
-							<div class="row ycenter cgap8">
-								<div class="label2"><small class="white">OPEN NOW!</small></div>
-								<h4 class="tight source-serif">{item.chapter} Chapter</h4>
-							</div>
-						{:else}
-							<h4 class="tight source-serif">{item.chapter} Chapter</h4>
-						{/if}
-						<div class="column rgap16">
-							<h6 class="thin">{item.desc}</h6>
-							<div class="label"><p class="sm grey">{item.fromto}</p></div>
+					{:else}
+						<h4 class="tight source-serif">{item.chapter} Chapter</h4>
+					{/if}
+					<div class="column rgap24">
+						<p class="big">{item.desc}</p>
+						<div class="row ycenter cgap8 rgap8 mwrap">
+							<p class="label anveshi white sm">{item.fromto}</p>
 						</div>
 					</div>
-				{/if}
+					</Card>
 			{/each}
 		</div>
 	{/if}
 	</div>
 	<div class="box-2" id="future-chapters">
-		<Title text="Future Chapters"/>
+		<Title anveshi={true} text="Future Chapters"/>
 		<div class="row ycenter cgap8 mwrap rgap8">
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[0]}
 				on:click={() => {
 					toggleRegion(0);
@@ -187,7 +160,7 @@
 				}}>North</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[1]}
 				on:click={() => {
 					toggleRegion(1);
@@ -195,7 +168,7 @@
 				}}>East</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[2]}
 				on:click={() => {
 					toggleRegion(2);
@@ -203,7 +176,7 @@
 				}}>West</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[3]}
 				on:click={() => {
 					toggleRegion(3);
@@ -211,7 +184,7 @@
 				}}>South</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[4]}
 				on:click={() => {
 					toggleRegion(4);
@@ -219,7 +192,7 @@
 				}}>Center</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[5]}
 				on:click={() => {
 					toggleRegion(5);
@@ -227,7 +200,7 @@
 				}}>Himalayas</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[6]}
 				on:click={() => {
 					toggleRegion(6);
@@ -235,7 +208,7 @@
 				}}>International</button
 			>
 			<button
-				class="ftnbtn"
+				class="ftnbtn anveshi"
 				class:active={isRegion[7]}
 				on:click={() => {
 					toggleRegion(7);
@@ -245,21 +218,25 @@
 		{#if futureproj && futureproj.length > 0 && isRegion[7]}
 		<div class="grid four stacked-2" use:autoAnimate>
 			{#each futureproj as item}
-				<div class="column rgap16">
+				<div class="column rgap24 futurechapter">
 					<img class="smallerimage" src={item.gallery} alt={item.chapter} />
-					<h6 class="tight source-serif">{item.chapter}</h6>
-					<p class="sm grey">{item.shortdesc}</p>
-					<small class="blue tt-u">{item.region}</small>
+					<div class="inside column rgap16">
+						<h6 class="tight">{item.chapter}</h6>
+						<p class="sm grey">{item.shortdesc}</p>
+						<small class="label anveshi white tt-u">{item.region}</small>
+					</div>
 				</div>
 			{/each}
 		</div>
 	{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
 		<div class="grid four stacked-2" use:autoAnimate>
 			{#each regionAnveshi as item}
-				<div class="column rgap16">
+				<div class="column rgap24 futurechapter">
 					<img class="smallerimage" src={item.gallery} alt={item.chapter} />
-					<h6 class="tight source-serif">{item.chapter}</h6>
-					<p class="sm grey">{item.shortdesc}</p>
+					<div class="inside column rgap16">
+						<h6 class="tight">{item.chapter}</h6>
+						<p class="sm grey">{item.shortdesc}</p>
+					</div>
 				</div>
 			{/each}
 		</div>
@@ -272,47 +249,36 @@
 
 <style lang="sass">
 
+.inside
+	padding: 0 1.5rem 1.5rem 1.5rem
+
 img.smallerimage
-  object-fit: cover
-  width: 100%
-  height: 160px
+	object-fit: cover
+	width: 100%
+	height: 200px
 
 .screener-wrap
-  width: 100%
-  overflow: hidden
-  @media screen and (min-width: 1025px)
-    height: 100vh
-  @media screen and (max-width: 1024px)
-    height: calc(50vh + 64px)
+	width: 100%
+	overflow: hidden
+	@media screen and (min-width: 1025px)
+		height: 100vh
+	@media screen and (max-width: 1024px)
+		height: calc(50vh + 64px)
 
 .screener
-  background-image: url('/images/key-anveshi.webp')
-  background-position: center center
-  background-size: cover
-  width: 100%
-  height: 100%
-  .inscreen
-    width: 100%
-    height: 100%
-    background: rgba(0,0,0,0.7)
+	background-image: url('/images/key-anveshi.webp')
+	background-position: center center
+	background-size: cover
+	width: 100%
+	height: 100%
+	.inscreen
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.7)
 
-.linkbox
-  img
-    transition: transform 0.45s ease
-  &:hover
-    h4
-      color: var(--theme)
-    img
-      transform: scale(110%)
-
-img.vert
-  object-fit: cover
-  object-position: center center
-  @media screen and (min-width: 1025px)
-    width: 100%
-    height: 320px
-  @media screen and (max-width: 1024px)
-    width: 100%
-    height: 240px
+.futurechapter
+	border: 1px solid var(--grey-sm)
+	border-radius: 8px
+	overflow: hidden
 
 </style>

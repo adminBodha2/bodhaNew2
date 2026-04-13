@@ -3,7 +3,6 @@
   import { onMount } from 'svelte'
   import { anveshiFaqs } from '$lib/utils/supabaseClient'
   import autoAnimate from '@formkit/auto-animate'
-  import Headerpage from '$lib/comps/pageheader.svelte'
   import Title from '$lib/comps/page-title.svelte'
   import ChevD from '$lib/icons/chevron-down.svelte'
 
@@ -22,19 +21,19 @@
 <svelte:window bind:innerWidth={iW}/>
 
 <div class="column ytop rgap32">
-	<Title text="Frequently Asked Questions"/>
+	<Title anveshi={true} text="Frequently Asked Questions"/>
     {#if faqs && faqs.length > 0}
       <div class="grid two stacked-22">
         {#each faqs as item, i}
           <button class="blank column ytop rgap4 ta-l xleft acco-box" use:autoAnimate on:click={() => openIndex = openIndex === i ? null : i}>
-            <div class="row ycenter cgap8 width100 inside-acco">
+            <div class="row ycenter cgap16 width100 inside-acco">
               <p class="tight bold">{item.question}</p>
               {#if iW > 1024}
-              <ChevD rotated={openIndex === i}/>
+              <ChevD fill="var(--anveshi-color)" rotated={openIndex === i}/>
               {/if}
             </div>
             {#if openIndex === i}
-              <pre class="sm">{item.answer}</pre>
+              <pre class="grey">{item.answer}</pre>
             {/if}
           </button>
         {/each}

@@ -423,6 +423,13 @@ img.blog-image
 	&:hover span
 		animation: scaleUp 0.3s ease-in-out
 
+.primary.anveshi
+	background: var(--anveshi-color)
+	&::after
+		background: var(--anveshidark)
+	span
+		color: var(--whitefix)
+
 @keyframes scaleUp
 	0%
 		transform: scale(1)
@@ -448,6 +455,15 @@ button.ftnbtn
 	&.active
 		background: var(--themealt)
 		color: var(--background)
+	&.anveshi
+		border: 1px solid var(--anveshi-color)
+		color: var(--anveshi-color)
+		&:hover
+			background: var(--anveshi-color)
+			color: var(--whitefix)
+		&.active
+			background: var(--anveshidark)
+			color: var(--whitefix)
 
 a.ftnbtn
 	font-size: 12px
@@ -498,6 +514,8 @@ button.ftnbtn-b
 	text-decoration: none
 	p, small
 		color: var(--background)
+	&.anveshi
+		background: var(--anveshi-color)
 
 section.content-area
 	width: 100%

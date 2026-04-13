@@ -2,12 +2,13 @@
 
   import Arrow from '$lib/icons/arrow-right.svelte'
   export let text = 'Title'
+  export let anveshi = false
 
 </script>
 
 <div class="row ycenter xleft">
-  <Arrow/>
-  <h2 class="source-serif">{text}</h2>
+<Arrow color={anveshi ? "#D3633A" : undefined} />
+  <h2 class="source-serif tight">{text}</h2>
 </div>
 
 <style lang="sass">

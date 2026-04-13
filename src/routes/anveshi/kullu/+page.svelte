@@ -37,18 +37,17 @@
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
 <Parallax imageLink="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/kullu/12.webp" />
-<Container>
+<Container narrow={true}>
 	<div class="box-1" id="first">
 		<div class="grid two right stacked">
 			<div class="column rgap8">
-				<small class="blue"><a class="blank" href="/anveshi">BACK TO ANVESHI</a></small>
-				<h4 class="source-serif">Come explore the sacred kshetras of the <span class="blue">Kullu valley in Himachal Pradesh</span>. Come to experience the divine here, and the festivals organized to celebrate that divine. Come to Bodha Anveshi - Kullu Chapter to experience Himachal in a way you have never before.</h4>
+				<h4 class="source-serif">Come explore the sacred kshetras of the <span class="anveshi-o">Kullu valley in Himachal Pradesh</span>. Come to experience the divine here, and the festivals organized to celebrate that divine. Come to Bodha Anveshi - Kullu Chapter to experience Himachal in a way you have never before.</h4>
 			</div>
 			<div class="column rgap16">
 				<h6>18 - 23 April 2026 | ₹45,999</h6>
 				<div class="row cgap8 ycenter">
-				  <a class="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdGOxxUH32klulnlGriEQUI6uK2tiJLFmH98K04tAbaAU4sUw/viewform" target="_blank" rel="noreferrer"><span>REGISTER NOW</span></a>
-				  <a class="primary" href="https://drive.google.com/file/d/1BH2N3UKiWYuZCcyUXlcYoYgIReDJnnxW/view?usp=drive_link" target="_blank" rel="noreferrer"><span>BROCHURE</span></a>
+				  <a class="primary anveshi" href="https://docs.google.com/forms/d/e/1FAIpQLSdGOxxUH32klulnlGriEQUI6uK2tiJLFmH98K04tAbaAU4sUw/viewform" target="_blank" rel="noreferrer"><span>REGISTER NOW</span></a>
+				  <a class="primary anveshi" href="https://drive.google.com/file/d/1BH2N3UKiWYuZCcyUXlcYoYgIReDJnnxW/view?usp=drive_link" target="_blank" rel="noreferrer"><span>BROCHURE</span></a>
 				</div>
 			</div>
 		</div>
@@ -60,17 +59,17 @@
 		</div>
 	</div>
 	<div class="box-1 itinbox">
-		<Title text="Itinerary"/>
+		<Title anveshi={true} text="Itinerary"/>
 		<div class="grid three stacked-2">
 			<div class="column rgap8 daybox">
 				<img src="/images/anveshi/day-0.png" alt="day 0"/>
-			  	<p class="big bold">Day 0 - Arrival in Chandigarh</p>
-			  	<p class="tight grey">Stay the night in Chandigarh.</p>
+			  	<p class="big bold ptop8 anveshi-o">Day 0 - Arrival in Chandigarh</p>
+			  	<p class="tight">Stay the night in Chandigarh.</p>
 			</div>
 			<div class="column rgap8 daybox">
 				<img src="/images/anveshi/day-1.png" alt="day 1"/>
-			  <p class="big bold">Day 1 - Chandigarh to Jibih</p>
-			  <p class="tight grey">
+			  <p class="big bold ptop8 anveshi-o">Day 1 - Chandigarh to Jibih</p>
+			  <p class="tight">
 				1. Mansa Devi<br>
 				2. Naina Devi<br>
 				3. Submerged Temples<br>
@@ -78,8 +77,8 @@
 			</div>
 			<div class="column rgap8 daybox">
 				<img src="/images/anveshi/day-2.png" alt="day 2"/>
-			  <p class="big bold">Day 2 - Jibih</p>
-			  <p class="tight grey">
+			  <p class="big bold ptop8 anveshi-o">Day 2 - Jibih</p>
+			  <p class="tight">
 				1. Shringa Rishi Temple<br>
 				2. Chehni Kothi<br>
 				3. Shesha Naga Temple<br>
@@ -88,8 +87,8 @@
 			</div>
 			<div class="column rgap8 daybox">
 				<img src="/images/anveshi/day-3.png" alt="day 3"/>
-			  <p class="big bold">Day 3 - Jibih to Manali</p>
-			  <p class="tight grey">
+			  <p class="big bold ptop8 anveshi-o">Day 3 - Jibih to Manali</p>
+			  <p class="tight">
 				1. Baseshwar Mahadeva Temple<br>
 				2. Adi Brahma Temple<br>
 				3. Gaurishankar Temple<br>
@@ -99,8 +98,8 @@
 			</div>
 			<div class="column rgap8 daybox">
 				<img src="/images/anveshi/day-4.png" alt="day 4"/>
-			  <p class="big bold">Day 4 - North - Naggar, Dashal</p>
-			  <p class="tight grey">
+			  <p class="big bold ptop8 anveshi-o">Day 4 - North - Naggar, Dashal</p>
+			  <p class="tight">
 				1. Hadimba Temple<br>
 				2. Jagatipatt Temple<br>
 				3. Vishnu Temple<br>
@@ -112,17 +111,17 @@
 			</div>
 			<div class="column rgap8 daybox">
 				<img src="/images/anveshi/day-5.png" alt="day 5"/>
-			  <p class="big bold">Day 5 - Yatra Ends</p>
-			  <p class="tight grey">We leave very early in the morning to Chandigarh airport and from there, to our destinations.</p>
+			  <p class="big bold ptop8 anveshi-o">Day 5 - Yatra Ends</p>
+			  <p class="tight">We leave very early in the morning to Chandigarh airport and from there, to our destinations.</p>
 			</div>
 		  </div>
 	</div>
 	<div class="box-1 temps">
-		<Title text="Temples"/>
+		<Title anveshi={true} text="Temples"/>
 		{#if temps && temps.length > 0 && ready}
 		<div class="row wrap cgap8 rgap8">
 			{#each temps as _, i}
-			<button class="ftnbtn" on:click={() => showItem(i)} class:active={activeIndex === i}>
+			<button class="ftnbtn anveshi" on:click={() => showItem(i)} class:active={activeIndex === i}>
 				{i + 1}
 			</button>
 		{/each}
@@ -134,8 +133,8 @@
 			  <div class="image-box">
 				<img class="temple" src={item.image} alt={item.temple}/>
 			  </div>
-			  <div class="column ytop texter">
-				<h4 class="source-serif">{item.temple}</h4>
+			  <div class="column ytop texter rgap16">
+				<h4>{item.temple}</h4>
 				<p>{item.description}</p>
 			  </div>
 			</div>
@@ -146,8 +145,11 @@
 	</div>
 	<div class="box-nn">
 		<FAQ/>
+		<div class="bordertop ptop32">
+			<a class="primary anveshi" href="/anveshi"><span>ANVESHI HOME</span></a>
+		</div>
 	</div>
-	<a class="primary" href="/anveshi"><span>ANVESHI HOME</span></a>
+	
 </Container>
 
 <!--
@@ -166,8 +168,9 @@
 
 .templar
 	border: 1px solid var(--grey-sm)
+	overflow: hidden
 	@media screen and (min-width: 1025px)
-		border-radius: 0 8px 8px 0
+		border-radius: 8px
 		.texter
 			padding: 2rem 2rem 2rem 0
 	@media screen and (max-width: 1024px)
