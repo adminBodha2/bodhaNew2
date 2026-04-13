@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import autoAnimate from '@formkit/auto-animate';
-	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture } from '$lib/utils/supabaseClient';
+	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture, anveshiPast } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Card from '$lib/comps/card-comp.svelte'
@@ -18,6 +18,7 @@
 
 	let currproj: any;
 	let futureproj: any;
+	let pastproj:any;
 	let sY: number;
 	let regionAnveshi: any;
 	let region: string = 'northern india';
@@ -47,6 +48,7 @@
 			currproj = await anveshiCurrent();
 			futureproj = await anveshiFuture();
 			regionAnveshi = await selectedAnveshiFuture(region);
+			pastproj = await anveshiPast();
 		})();
 	});
 </script>
@@ -242,12 +244,39 @@
 		</div>
 	{/if}
 	</div>
+	<div class="box-2" id="past-chapters">
+		<div class="column rgap8">
+			<Title anveshi={true} text="Past Chapters"/>
+			<p class="gm grey">Cohort photos from the previous chapters of Anveshi.</p>
+		</div>
+		{#if pastproj && pastproj.length > 0}
+			<div class="grid four stacked-2">
+				{#each pastproj as item}
+					<div class="column rgap8">
+						<img class="pastproj" src={item.gallery} alt={item.chapter}/>
+						<p class="big bold">{item.chapter}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
 	<div class="box-2" id="faqs">
 		<FAQ />
 	</div>
 </Container>
 
 <style lang="sass">
+
+img.pastproj
+	object-fit: cover
+	width: 100%
+	height: 200px
+	border-radius: 8px
+	transform-origin: center center
+	transition: all 0.34s ease
+	@media screen and (min-width: 1025px)
+		&:hover
+			transform: scale(1.2) translateY(-8px)
 
 .inside
 	padding: 0 1.5rem 1.5rem 1.5rem
