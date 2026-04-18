@@ -1,0 +1,106 @@
+.blog-card.external
+	transition: all 0.2s ease
+	&:hover
+		transform: scale(1.015)
+
+#first
+	padding-top: 72px
+	padding-bottom: 4rem
+	@media screen and (min-width: 1025px)
+		padding-top: 88px
+		padding-bottom: 4rem
+
+.blog-card
+	border: 1px solid #efefef
+	background: #f7f7f7
+	padding: 8px
+	.blog-card-top
+		border-top: 1px solid #e1e1e1
+		border-left: 1px solid #e1e1e1
+		border-right: 1px solid #e1e1e1
+		height: 100%
+		background: #FFF
+		border-radius: 5px 5px 0 0
+		.blog-card-title-area, .blog-card-text
+			padding-left: 1.5rem
+			padding-right: 1.5rem
+		.blog-card-title-area
+			padding-top: 1.5rem
+			margin-bottom: 1rem
+			row-gap: 4px
+			p
+				border-bottom: 1px solid var(--themeborder)
+				padding-bottom: 4px
+		.blog-card-text
+			padding-bottom: 1rem
+	.blog-card-row
+		border-left: 1px solid #e1e1e1
+		border-right: 1px solid #e1e1e1
+		border-bottom: 1px solid #e1e1e1
+		background: #FFF
+		row-gap: 8px
+		padding-bottom: 1.5rem
+		padding-left: 1rem
+		padding-right: 1rem
+		padding-top: 1rem
+		border-radius: 0 0 5px 5px
+	@media screen and (max-width: 1024px)
+		padding: 8px
+		border: none
+		background: #e1e1e1
+		border-radius: 5px
+		&.external
+			background: #FFF
+			padding: 1rem
+			border: var(--stroke-focus)
+			.blog-card-title-area
+				padding: 0
+			.blog-card-top
+				border: none
+				padding: 0
+			.blog-card-row
+				padding: 0
+				border: 0
+				margin-top: 1rem
+			.blog-card-text
+				padding: 0
+
+.blog-canvas
+	padding: 2rem
+	border: var(--stroke-medium)
+	background: #FFF
+	row-gap: 2rem
+	.row.mcol.blog-strip
+		justify-content: space-between
+	@media screen and (max-width: 1024px)
+		padding: 1rem 8px
+		row-gap: 1.5rem
+		.blog-strip
+			padding-left: 1rem
+			padding-right: 1rem
+		.row.mcol.blog-strip
+			align-items: flex-start
+			row-gap: 8px
+			justify-content: flex-start
+
+.blog-card-image
+	overflow: hidden
+	img
+		object-fit: cover
+		width: 100%
+		transition: all 0.3s ease
+		height: 280px
+		@media screen and (min-width: 1025px)
+			height: 300px
+
+.blog-card
+	@media screen and (min-width: 1025px)
+		&:hover
+			.blog-card-image
+				border-radius: 5px
+				img
+					transform: scale(0.95)
+					border-radius: 5px
+
+.blog-grid
+	padding: 2rem

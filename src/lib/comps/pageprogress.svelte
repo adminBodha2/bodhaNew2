@@ -47,7 +47,7 @@
 .scroll-progress
 	width: 100%
 	position: fixed
-	top: 72px
+	top: 80px
 	left: 0
 	z-index: 500
 	@media screen and (max-width: 1024px)

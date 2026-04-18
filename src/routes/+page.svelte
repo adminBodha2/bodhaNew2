@@ -2,21 +2,16 @@
 	import { onMount } from 'svelte';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Card from '$lib/comps/card-comp.svelte'
-	import Parallax from '$lib/comps/parallaxfull.svelte';
-	import Title from '$lib/comps/page-title.svelte';
-	import Title2 from '$lib/comps/page-title.svelte';
-	import Title3 from '$lib/comps/page-title.svelte';
-	import Title4 from '$lib/comps/page-title.svelte';
+	import BlogCard from '$lib/comps/blogcard.svelte';
+	import Parallax from '$lib/comps/parallaxfull.svelte'
 	import Youtuber from '$lib/comps/youtuber.svelte';
+	import Title from '$lib/comps/page-title.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
-	import { limitBlog, limitLab } from '$lib/utils/localpulls';
+	import { limitBlog } from '$lib/utils/localpulls';
 	import { sixVideos } from '$lib/utils/supabaseClient';
 
-	let scroY: number;
-	let vids: any;
-	let blogs: any;
-	let labs: any;
+	let vids: any[] = [];
+	let blogs: any[] = [];
 
 	$metaTitle = 'Bodha';
 	$metaDescription =
@@ -24,273 +19,408 @@
 	$metaUrl = 'https://www.bodharesearch.in';
 	$metaImage = '/images/bodhacover.png';
 
-	onMount(() => {
-		(async () => {
-			vids = await sixVideos();
-			blogs = await limitBlog();
-			labs = await limitLab();
-		})();
+	const jsonld = JSON.stringify([
+		{
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: 'Bodha Research',
+			url: 'https://www.bodharesearch.in',
+			logo: 'https://www.bodharesearch.in/images/bodhacover.png',
+			sameAs: [
+				'https://x.com/BodhaResearch',
+				'https://www.instagram.com/bodharesearch',
+				'https://www.linkedin.com/company/bodha-research/'
+			]
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'Bodha Research',
+			url: 'https://www.bodharesearch.in'
+		}
+	]);
+
+	const gateways = [
+		{
+			title: 'Research',
+			href: '/research',
+			kicker: 'Fieldwork',
+			desc: 'Institutional design, policy, strategic affairs, and deep cultural inquiry.'
+		},
+		{
+			title: 'Big Questions',
+			href: '/big-questions',
+			kicker: 'Inquiry',
+			desc: 'The major civilisational questions we think deserve sharp, sustained attention.'
+		},
+		{
+			title: 'Academy',
+			href: '/academy',
+			kicker: 'Learning',
+			desc: 'Courses, training, and the long work of building scholars and frameworks.'
+		},
+		{
+			title: 'Open Library',
+			href: '/library',
+			kicker: 'Reading',
+			desc: 'Books, curated shelves, and reading paths across Hindu thought and civilisational study.'
+		}
+	];
+
+	const verticals = [
+		{
+			title: 'Research',
+			href: '/research',
+			image: '/images/key-research.webp',
+			desc: 'Focused field research on institutions, policy, culture, and the lived structure of Hindu civilization.',
+			kicker: 'research'
+		},
+		{
+			title: 'Bodha Anveshi',
+			href: '/anveshi',
+			image: '/images/key-anveshi.webp',
+			desc: 'Immersive temple and kshetra journeys through places where civilizational memory still breathes.',
+			kicker: 'culture'
+		},
+		{
+			title: 'Academy',
+			href: '/academy',
+			image: '/images/key-academy.webp',
+			desc: 'Training, transmission, and the patient cultivation of thinkers rooted in Indic methods.',
+			kicker: 'learning'
+		},
+		{
+			title: 'Big Questions',
+			href: '/big-questions',
+			image: '/images/key-bigquestions.webp',
+			desc: 'Major questions that shape the contemporary Hindu condition and the path beyond confusion.',
+			kicker: 'research'
+		}
+	];
+
+	const publications = [
+		{
+			title: 'Svayambodha and Shatrubodha',
+			image: '/images/book-ss.webp',
+			desc: 'A framework for civilisational self-understanding and clarity about the threats Sanatana Dharma faces today.',
+			links: [
+				{ label: 'Hindu eShop', href: 'https://www.hindueshop.com/product/svayambodha-and-shatrubodha/' },
+				{ label: 'Padhega India', href: 'https://padhegaindia.in/product/svayambodha-and-shatrubodha-hindu-view-of-self-and-the-world-hb/' },
+				{ label: 'Amazon', href: 'https://amzn.in/d/hMAWoWD' }
+			]
+		},
+		{
+			title: 'Fractal Maṇḍala',
+			image: '/images/book-fm.webp',
+			desc: 'A fresh exploration of ancient India through civilisational memory, sacred history, and indigenous ways of preserving the past.',
+			links: [
+				{ label: 'Hindu eShop', href: 'https://www.hindueshop.com/product/fractal-mandala/' },
+				{ label: 'Padhega India', href: 'https://padhegaindia.in/product/fractal-mandala-a-history-of-ancient-india/' },
+				{ label: 'Amazon', href: 'https://amzn.in/d/5a526b5' }
+			]
+		}
+	];
+
+	onMount(async () => {
+		vids = await sixVideos();
+		blogs = await limitBlog();
 	});
 </script>
-
-<svelte:window bind:scrollY={scroY} />
 
 <Head
 	title={$metaTitle}
 	metaDescription={$metaDescription}
 	metaUrl={$metaUrl}
 	metaImage={$metaImage}
-></Head>
+	{jsonld}
+/>
 
-<Parallax imageLink="/images/heroimage2.webp" />
-<Container narrow={true}>
-	<div class="box-3" id="first">
-		<h1 class="width50 source-serif page-hero">Bodha is a <span class="blue italic">think tank</span> and <span class="blue italic">research group</span>,</h1>
-		<h5 class="source-serif thin">
-			focused on contemporary issues of cultural concern, to inform core areas of policy with
-			wisdom drawn from Hindu traditions. We catalyze intellectual churn within the Hindu
-			renaissance, advance the case for Indian Knowledge Systems (IKS), and curate immersive cultural experiences.
-		</h5>
-		<div class="grid four stay2 cgap64 rgap24">
-			<div class="column rgap16 features">
-				<h6 class="tight">Our Work</h6>
-				<p class="big">
-					<a class="blank linked" href="/research">Research Projects</a><br>
-					<a class="blank linked" href="/big-questions">Big Questions</a><br>
-					<a class="blank linked" href="/lab">Bodha Lab</a>
-				</p>
-			</div>
-			<div class="column rgap16 features">
-				<h6 class="tight">Learning</h6>
-				<p class="big">
-					<a class="blank linked" href="/academy">Bodha Academy</a><br>
-					<a class="blank linked" href="/academy/courses">Online Courses</a><br>
-					<a class="blank linked" href="/library">Bodha Open Library</a>
-				</p>
-			</div>
-			<div class="column rgap16 features">
-				<h6 class="tight">Anveshi</h6>
-				<p class="big">
-					<a class="blank linked" href="/anveshi#current-chapters">Current Chapters</a><br>
-					<a class="blank linked" href="/anveshi#future-chapters">Future Chapters</a><br>
-					<a class="blank linked" href="/anveshi#faqs">FAQs</a>
-				</p>
-			</div>
-			<div class="column rgap16 features">
-				<h6 class="tight">About Us</h6>
-				<p class="big">
-					<a class="blank linked" href="/inspiration">Our Inspiration</a><br>
-					<a class="blank linked" href="/team">The Team</a><br>
-					<a class="blank linked" href="/videos">Talks, Podcasts, etc.</a>
-				</p>
-			</div>
-		</div>
-		<!--
-		<div class="grid four cgap32 rgap16 ptop32">
-			<div class="column features">
-				<img class="icon" src="/images/icon-research.png" alt="research"/>
-				<p>about our <a class="blank tt-u" href="/research"><b>research projects</b></a></p>
-			</div>
-			<div class="column features">
-				<img class="icon" src="/images/icon-writings.png" alt="writings"/>
-				<p>explore our <a class="blank tt-u" href="/blog"><b>writings</b></a></p>
-			</div>
-			<div class="column features">
-				<img class="icon" src="/images/icon-inspiration.png" alt="inspiration"/>
-				<p><a class="blank tt-u" href="/inspiration"><b>SCHOOLS AND THINKERS</b></a> we follow</p>
-			</div>
-			<div class="column features">
-				<img class="icon" src="/images/icon-library.png" alt="bodha library"/>
-				<p>visit <a class="blank tt-u" href="/library"><b>Bodha Open Library</b></a></p>
-			</div>
-		</div>
-		-->
-	</div>
-	<div class="box-2">
-		<Title text="Verticals" />
-		<div class="grid two stacked-2">
-			<Card link="/research" imageLink="/images/key-research.webp">
-				<h4 class="blue">Research</h4>
-				<p class="big">
-					To illuminate hidden universal forces and long arcs in foreign and public policy; to
-					reveal the design of core Hindu institutions like the temple, gurukula, family, and
-					charity; and to turn the social sciences lens with a Hindu view, Bodha engages in focused
-					research projects. These projects combine deep and immersive field research with rigorous
-					theorization based on core cultural ideas.
-				</p>
-			</Card>
-			<Card link="/anveshi" imageLink="/images/key-anveshi.webp">
-				<h4 class="blue">Bodha Anveshi</h4>
-				<p class="big">
-					A guided tour of four to five days to beautiful and hitherto unexplored temples and
-					kshetras of Bharatavarsha. Anveshi tours are full of architectural, sculptural and
-					cultural splendor, and also an immersion into living systems carrying beautiful cultural
-					traditions for thousands of years.
-				</p>
-			</Card>
-			<Card link="/academy" imageLink="/images/key-academy.webp">
-				<h4 class="blue">Academy</h4>
-				<p class="big">
-					Every year we will formulate big questions stating major problems that capture core
-					concerns in the contemporary journey of Hindu society, and put those questions to great
-					thinkers, leaders and activists. The Big Questions vertical will seek answers which will
-					move the needle towards solving the stated problems.
-				</p>
-			</Card>
-			<Card link="/big-questions" imageLink="/images/key-bigquestions.webp">
-				<h4 class="blue">Big Questions</h4>
-				<p class="big">
-					Modern fault lines in Hindu society stem from an identity crisis manufactured by the
-					British, by institutionalizing identity-based fault lines through academia and other
-					institutions. At Bodha, we address this by training scholars every year in anthropology
-					and sociology from an Indic point of view.
-				</p>
-			</Card>
-		</div>
-	</div>
-	<div class="box-2">
-		<div class="column">
-			<Title4 text="Writings" />
-			<p>Explore long form essays, opinions, research output, and more at our <a href="/blog" class="blank linked"><b>BLOG.</b></a></p>
-		</div>
-		{#if blogs && labs && blogs.length > 0 && labs.length > 0}
-			<div class="grid three stacked-2" style="align-items: stretch">
-				{#each blogs as item}
-				<div class="column rgap16 height100" style="justify-content: space-between">
-					<img src={item.meta.image} class="vert2" alt={item.meta.title} />
-					<h5 class="source-serif tight"><a class="blank linker" href={item.linkpath}>{item.meta.title}</a></h5>
-					<p class="tight grey">{item.meta.excerpt}</p>
-					<div class="row mwrap cgap8 rgap8">
-						{#each item.meta.tags as tag}
-							<small class="label white">#{tag}</small>
-						{/each}
-					</div>
-				</div>
-				{/each}
-			</div>
-		{/if}
-	</div>
-	<div class="box-2">
-		<Title2 text="Publications" />
-		<div class="grid two stacked-2">
-			<div class="column rgap16">
-				<img class="book" src="/images/book-ss.webp" alt="svayambodha and shatrubodha" />
-				<h5 class="tight ptop8">Svayambodha and Shatrubodha</h5>
-				<p class="grey">
-					This book is a small attempt to take the intellectual Hindu renaissance forward by
-					rekindling the viveka that is necessary to differentiate between dharma and adharma. The
-					Svayambodha–Shatrubodha framework does this by making Hindus aware of their civilizational
-					core on one hand and by sensitizing them about the civilizational threats that Sanatana
-					Dharma and Hindu society face today.
-				</p>
-				<div class="row mwrap cgap8 rgap8 ycenter">
-					<a class="primary" target="_blank" rel="noreferrer" href="https://www.hindueshop.com/product/svayambodha-and-shatrubodha/">
-						<span>Hindu eShop</span>
-					</a>
-					<a class="primary" target="_blank" rel="noreferrer" href="https://padhegaindia.in/product/svayambodha-and-shatrubodha-hindu-view-of-self-and-the-world-hb/">
-						<span>Padhega India</span>
-					</a>
-					<a class="primary" target="_blank" rel="noreferrer" href="https://amzn.in/d/hMAWoWD">
-						<span>Amazon</span>
-					</a>
-				</div>
-			</div>
-			<div class="column rgap16">
-				<img class="book" src="/images/book-fm.webp" alt="fractal mandala" />
-				<h5 class="tight ptop8">Fractal Maṇḍala</h5>
-				<p class="grey">
-					Fractal Maṇḍala is a fresh exploration of Indian civilization through its own stories and
-					traditions. It follows India’s journey from the deep past of the Holocene to the early
-					Iron Age. Using the Purāṇas, Vedas, Itihāsas, and ancient genealogies, the book shows that
-					what is often called ‘myth’ today was, for ancient Indians, a way of preserving history—a
-					civilizational memory encoded in stories, songs, and symbols.
-				</p>
-				<div class="row mwrap cgap8 rgap8 ycenter">
-					<a class="primary" target="_blank" rel="noreferrer" href="https://www.hindueshop.com/product/fractal-mandala/">
-						<span>Hindu eShop</span>
-					</a>
-					<a class="primary" target="_blank" rel="noreferrer" href="https://padhegaindia.in/product/fractal-mandala-a-history-of-ancient-india/">
-						<span>Padhega India</span>
-					</a>
-					<a class="primary" target="_blank" rel="noreferrer" href="https://amzn.in/d/5a526b5">
-						<span>Amazon</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="box-2">
-		<div class="column">
-			<Title3 text="Videos" />
-			<p class="big">Talks, conferences, podcasts - <a href="/videos" class="blank linked"><b>SEE ALL.</b></a></p>
-		</div>
-		{#if vids && vids.length > 0}
-			<div class="grid three stacked-2">
-				{#each vids as item}
-					<div class="column rgap16">
-						<Youtuber youTubeId={item.videoid} />
-						<div class="column rgap8">
-							<p class="big bold tight">
-								<a class="blank linker" href={item.link} target="_blank" rel="noreferrer"
-									>{item.name}</a
-								>
-							</p>
-							<p class="sm blue">{item.channel}</p>
-						</div>
-					</div>
-				{/each}
-			</div>
-		{/if}
+<Parallax imageLink="/images/heroimage2.webp" isClass="is100"/>
 
+<Container narrow={true} scaled={true}>
+
+<div class="box std padded ycenter column" id="first">
+	<div class="home-panel column">
+		<div class="grid two ybottom tightrows">
+			<div class="box textbox">
+				<p class="eyebrow tt-u">Bodha Research</p>
+				<h1 class="source-serif"><span class="blue">Bodha</span> is a think tank and research group,</h1>
+			</div>
+			<p class="grey">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+		</div>
+		<div class="grid four stay2 tightrows">
+			{#each gateways as item}
+			<a class="gateway-card blank" href={item.href}>
+				<p class="citation lgrey tt-u">{item.kicker}</p>
+				<h3 class="source-serif item-title">{item.title}</h3>
+				<p class="small-text grey">{item.desc}</p>
+			</a>
+			{/each}
+		</div>
 	</div>
+</div>
+
+<div class="box std padded bordertop">
+	<div class="section-head">
+		<Title text="verticals"/>
+	</div>
+	<div class="grid two tight">
+		{#each verticals as item}
+		<a class="vertical-card blank" href={item.href}>
+			<img src={item.image} alt={item.title} />
+			<div class="vertical-body">
+				<span class="vertical-accent"></span>
+				<p class="citation lgrey tt-u">{item.kicker}</p>
+				<h3 class="item-title source-serif">{item.title}</h3>
+				<p class="small-text grey">{item.desc}</p>
+			</div>
+		</a>
+		{/each}
+	</div>
+</div>
+
+{#if blogs.length > 0}
+<div class="box std padded bordertop">
+	<div class="row mcol xbetween-mleft mleft ycenter rgap8">
+		<Title text="essays and articles"/>
+		<a class="section-link blank" href="/blog">See All</a>
+	</div>
+	<div class="standard-grid grid three">
+		{#each blogs as item, i}
+		<BlogCard
+			title={item.meta.title}
+			link={item.linkpath}
+			image={item.meta.image}
+			excerpt={item.meta.excerpt}
+			author={item.meta.author}
+			date={item.formattedDate}
+			words={item.meta.words}
+			numbering = "number"
+		>
+			{#each item.meta.tags as tag}
+			<a class="tag-pill tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			{/each}
+		</BlogCard>
+		{/each}
+	</div>
+</div>
+{/if}
+
+<div class="home-section">
+	<div class="section-head">
+		<Title text="publications"/>
+	</div>
+	<div class="grid two tight hover-grid">
+		{#each publications as pub}
+		<div class="publication-card">
+			<img class="publication-image" src={pub.image} alt={pub.title} />
+			<div class="box labelbox">
+				<h3 class="blog-title source-serif">{pub.title}</h3>
+				<p class="small-text grey">{pub.desc}</p>
+				<div class="row mwrap cgap16 rgap8">
+					{#each pub.links as link}
+					<a class="publication-link blank" href={link.href} target="_blank" rel="noreferrer">{link.label} →</a>
+					{/each}
+				</div>
+			</div>
+		</div>
+		{/each}
+	</div>
+</div>
+
+{#if vids.length > 0}
+<div class="home-section">
+	<div class="row mcol xbetween-mleft mleft ycenter rgap8">
+		<Title text="recent videos"/>
+		<a class="section-link blank" href="/videos">See All Talks</a>
+	</div>
+	<div class="standard-grid grid four">
+		{#each vids as item}
+		<a class="video-card blank number" href={item.link} target="_blank" rel="noreferrer">
+			<Youtuber youTubeId={item.videoid} />
+			<div class="box video-footer rgap8">
+				<p class="item-line tight">{item.name}</p>
+				<span class="video-accent self-bottom"></span>
+				<p class="citation lgrey tt-u">{item.channel}</p>
+			</div>
+		</a>
+		{/each}
+	</div>
+</div>
+{/if}
+
 </Container>
 
 <style lang="sass">
 
+// ── HERO ──────────────────────────────────────────────────
+
 #first
-	@media screen and (min-width: 1025px)
-		min-height: 100vh
-		justify-content: center
+	min-height: 100vh
 
-.features
-	border-top: 1px solid var(--grey-sm)
-	padding-top: 2rem
-
-h1.page-hero
-	@media screen and (min-width: 1025px)
-		letter-spacing: -2px
-		line-height: 1.2
+.home-panel
+	background: #FFFFFF
+	border: 1px solid rgba(0,0,0,0.07)
+	border-radius: 16px
+	row-gap: 4rem
+	padding: 4rem
+	box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.04)
 	@media screen and (max-width: 1024px)
-		letter-spacing: -1px
-		line-height: 1.2
+		padding: 1.5rem
+		row-gap: 2rem
 
-img.vert2
-	object-fit: cover
-	object-position: center center
-	border-radius: 5px
-	@media screen and (min-width: 1025px)
-		width: 100%
-		height: 240px
-	@media screen and (max-width: 1024px)
-		width: 100%
-		height: 240px
+// ── GATEWAY CARDS ─────────────────────────────────────────
 
-img.book
-	object-fit: contain
-	margin-right: auto
-	border-radius: 5px
-	background: var(--grey-lg)
-	@media screen and (min-width: 1025px)
-		height: 360px
-		padding: 1rem
-	@media screen and (max-width: 1024px)
-		height: 280px
-		padding: 1rem
-
-.features
-	row-gap: 1rem
+.gateway-card
+	display: flex
+	flex-direction: column
+	gap: 0.75rem
+	padding: 1.4rem
+	background: #F5F4F2
+	border: 1px solid rgba(0,0,0,0.06)
+	border-radius: 10px
+	transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease
+	&::before
+		content: ''
+		display: block
+		width: 32px
+		height: 2px
+		background: #222
+		border-radius: 1px
+		transition: width 0.2s ease
 	&:hover
-		a
-			color: var(--theme)
+		background: #EEEDEB
+		border-color: rgba(0,0,0,0.1)
+		box-shadow: 0 2px 8px rgba(0,0,0,0.05)
+		&::before
+			width: 48px
+
+// ── SECTION STRUCTURE ─────────────────────────────────────
+
+.home-section
+	display: flex
+	flex-direction: column
+	gap: var(--gap-std)
+	padding-top: var(--pad-std)
+	padding-bottom: var(--pad-std)
+	border-top: 1px solid var(--color-border)
+
+// ── VERTICALS ─────────────────────────────────────────────
+
+.vertical-card
+	display: flex
+	flex-direction: column
+	border: 1px solid rgba(0,0,0,0.07)
+	border-radius: 12px
+	overflow: hidden
+	background: #FFFFFF
+	box-shadow: 0 1px 3px rgba(0,0,0,0.03)
+	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease
+	padding: 1rem
+	&:hover
+		transform: translateY(-2px)
+		border-color: rgba(0,0,0,0.1)
+		box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03)
+		.vertical-accent
+			width: 48px
+	img
+		width: 100%
+		height: 320px
+		aspect-ratio: 16 / 9
+		object-fit: cover
+		display: block
+		border-radius: 5px
+		@media screen and (max-width: 1024px)
+			height: 240px
+
+.vertical-body
+	display: flex
+	flex-direction: column
+	gap: 0.6rem
+	padding: 1.25rem 1.4rem
+	border-top: 1px solid rgba(0,0,0,0.05)
+
+.vertical-accent
+	display: block
+	width: 28px
+	height: 2px
+	background: #222
+	border-radius: 1px
+	transition: width 0.2s ease
+	margin-bottom: 0.2rem
+
+.standard-grid
+	@media screen and (max-width: 1024px)
+		row-gap: 1rem
+
+// ── PUBLICATIONS ──────────────────────────────────────────
+
+.publication-card
+	display: flex
+	flex-direction: column
+	gap: 1.25rem
+	padding: 1.5rem
+	border: 1px solid rgba(0,0,0,0.06)
+	border-radius: 5px
+	background: var(--stone)
+	@media screen and (min-width: 1025px)
+		display: grid
+		grid-template-columns: 160px 1fr
+		align-items: start
+
+.publication-image
+	object-fit: contain
+	border-radius: 4px
+	display: block
+	@media screen and (min-width: 1025px)
+		height: 220px
+		width: 100%
+	@media screen and (max-width: 1024px)
+		height: 200px
+		margin-right: auto
+
+.publication-link
+	font-size: 0.78rem
+	font-weight: 500
+	color: #555
+	padding: 5px 12px
+	border-radius: 100px
+	border: 1px solid rgba(0,0,0,0.1)
+	background: #F5F4F2
+	transition: all 0.15s ease
+	&:hover
+		color: var(--theme)
+		border-color: rgba(25,113,194,0.28)
+		background: #FFFFFF
+
+// ── VIDEOS ────────────────────────────────────────────────
+
+
+.video-card
+	overflow: hidden
+	background: #FFFFFF
+	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
+	&:hover
+		transform: translateY(-2px)
+		.video-title
+			color: var(--themeaccent)
+		.video-accent
+			width: 48px
+
+.video-footer
+	padding: 1.1rem 1.2rem
+	border-top: 1px solid rgba(0,0,0,0.05)
+
+.video-accent
+	display: block
+	width: 28px
+	height: 2px
+	background: #222
+	border-radius: 1px
+	transition: width 0.2s ease
+
+.video-title
+	letter-spacing: -0.015em
+	transition: color 0.15s ease
 
 </style>

@@ -1,158 +1,198 @@
 <script lang="ts">
-
 	import { onMount, tick } from 'svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import { allQuestions } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Parallax from '$lib/comps/parallaxfull.svelte';
-	import Title from '$lib/comps/page-title.svelte';
+	import Title from '$lib/comps/page-title.svelte'
+	import Parallax from '$lib/comps/parallaxfull.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
+	import { createTempleNav } from '$lib/utils/templeNav';
 
-	$metaTitle = 'Bodha - Big Questions';
-	$metaDescription =
-		'Big questions that capture core concerns in the contemporary journey of Hindu society.';
+	$metaTitle = 'Bodha — Big Questions';
+	$metaDescription = 'Big questions that capture core concerns in the contemporary journey of Hindu society.';
 	$metaUrl = 'https://www.bodharesearch.in/big-questions';
 	$metaImage = '/images/key-bigquestions.webp';
 
-	let questions:any
+	let questions: any;
 	let ready = false;
-	let activeIndex:number | null = null
 
-	function showItem(index:number | null) {
-		activeIndex = index
-	}
+	const { selectedTemple, toggleTemple, handleTouchStart, handleTouchEnd } = createTempleNav(
+		() => questions,
+		() => ready
+	);
 
-	onMount(() => {
-		(async() => {
-			questions = await allQuestions();
-			await tick();
-			ready = true;
-		})();
-	})
-
+	onMount(async () => {
+		questions = await allQuestions();
+		await tick();
+		ready = true;
+	});
 </script>
 
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-></Head>
+<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage} />
 
-<Parallax imageLink="/images/key-bigquestions.webp" />
-<Container narrow={true}>
-	<div class="box-3" id="first">
-		<div class="grid two stacked-4816">
-			<h6 class="source-serif thin">
-				Hindu society today sits at the cusp of great change. Hindu consciousness is awakening
-				across the nation and awareness of civilizational issues is rising. Established mentalities
-				about Hindu society, dharma, and culture are being challenged, status quos are being
-				quashed, and new paradigms are coming into force. An intellectual renaissance is underway.
-			</h6>
-			<h6 class="source-serif thin">
-				Bodha will aid this process by asking provocative questions about some of the most
-				fundamental problems and open questions that Hindu society faces today. There are issues
-				that are not settled, questions that are perennially asked by every Hindu generation, and
-				novel dilemmas that we face today.
-			</h6>
-		</div>
+<Parallax imageLink="/images/key-bigquestions.webp" isClass="is50"/>
+<Container narrow={true} scaled={true}>
+<div class="box std padded">
+	<div class="box textbox">
+		<p class="eyebrow tt-u"><a class="linkonhover" href="/">Bodha</a></p>
+		<h1 class="page-title source-serif">Big Questions</h1>
+		<p class="small-text width60">Hindu consciousness is awakening across the nation. Bodha aids this process by asking provocative questions about the most fundamental problems and open questions that Hindu society faces today — issues that are not settled, perennially asked by every Hindu generation, and novel dilemmas of our time.</p>
 	</div>
-	<div class="box-2">
-		<div class="column rgap16">
-			<Title text="The Big Questions"/>
-			<div class="row wrap cgap8 rgap8">
-				<button class="ftnbtn" on:click={() => showItem(null)} class:active={activeIndex === null}>All</button>
-				{#each questions as _, i}
-					<button class="ftnbtn" on:click={() => showItem(i)} class:active={activeIndex === i}>{i + 1}</button>
-				{/each}
-			</div>
+</div>
+	{#if questions && questions.length > 0 && ready}
+	<div
+		class="box std padded bordertop"
+		role="region"
+		aria-label="Big Questions"
+		on:touchstart={handleTouchStart}
+		on:touchend={handleTouchEnd}
+	>
+		<Title text="Big Questions"/>
+
+		<div class="row cgap8 rgap8 mwrap">
+			<button class="filter-button" class:active={$selectedTemple[30]} on:click={() => toggleTemple(30)}>All</button>
+			{#each questions as _, i}
+			<button class="filter-button" class:active={$selectedTemple[i]} on:click={() => toggleTemple(i)}>{i + 1}</button>
+			{/each}
 		</div>
-		{#if questions && questions.length > 0}
-			<div class="column rgap32 slider-box ptop32" use:autoAnimate>
-				{#each questions as item, i}
-				{#if activeIndex === null || activeIndex === i}
-				<div class="grid two right stacked-4816 emgrid question">
-					<div class="column rgap24 down pbot16">
-						<div class="row mwrap ycenter cgap8 rgap16">
-							<img class="icon" src={item.meta.image} alt={item.meta.title}/>
-							<h4 class="source-serif tight">{item.meta.id} - {item.meta.title}</h4>
-						</div>
-						<article class="classic-document borderbot pbot16">
-							<svelte:component this={item.content}/>
-						</article>
-					</div>
-					<div class="column up back-screen" style="background-image: url({item.meta.icon})">
-						<div class="in-screen column xleft rgap16">
-							<p class="white sm">{item.meta.description}</p>
-							<div class="row wrap rgap8 ycenter cgap8">
-								{#each item.meta.tags as tag}
-								<small class="label light white tt-u">{tag.replaceAll('-', ' ')}</small>
-								{/each}
-							</div>
-						</div>
+
+		<div class="box std" use:autoAnimate>
+			{#each questions as item, i}
+			{#if $selectedTemple[30] || $selectedTemple[i]}
+			<div class="column question-card">
+				<div class="row ytop question-head mcol">
+					<img class="q-icon" class:blue={$selectedTemple[i]} src={item.meta.image} alt={item.meta.title} />
+					<div class="column" style="gap: 4px">
+						<h3 class="item-title source-serif">{item.meta.id} — {item.meta.title}</h3>
+						<!--
+						<a class="q-deeplink linkonhover" href="{item.linkpath}">Read in full →</a>
+						-->
 					</div>
 				</div>
-				{/if}
-				{/each}
+				<div class="grid two">
+					<div class="box textbox question-left">
+						<p class="small-text grey">{item.meta.description}</p>
+						<div class="row wrap cgap8">
+							{#each item.meta.tags as tag}
+							<p class="tag-pill colored tt-u">{tag.replaceAll('-', ' ')}</p>
+							{/each}
+						</div>
+						<div class="q-image">
+							<img src={item.meta.icon} alt={item.meta.title} />
+						</div>
+					</div>
+					<div class="box question-right classic-document">
+						<svelte:component this={item.content} />
+						<!--
+						<a class="linkedlight" href="{item.linkpath}">Read in full →</a>
+						-->
+					</div>
+				</div>
 			</div>
-		{/if}
+			{/if}
+			{/each}
+		</div>
 	</div>
+	{/if}
 </Container>
 
 <style lang="sass">
 
-.back-screen
-	background-position: center center
-	background-size: cover
-	border-radius: 8px
-	height: 400px
+// ── NAVIGATION ─────────────────────────────────────────────
+
+.q-nav
+	display: flex
+	flex-wrap: wrap
+	gap: 6px
+
+// ── QUESTION CARDS ─────────────────────────────────────────
+
+.q-list
+	display: flex
+	flex-direction: column
+	gap: var(--gap-std)
+
+.question-card
+	border: 1px solid rgba(0,0,0,0.06)
+	border-radius: 10px
 	overflow: hidden
-	&:hover
-		.in-screen
-			opacity: 0
-	.in-screen
-		transition: all 0.15s ease
-		background: linear-gradient(360deg,rgba(18, 18, 18, 0) 1%, rgba(18, 18, 18, 0.5) 59%, rgba(18, 18, 18, 0.7) 81%, rgba(18, 18, 18, 0.95) 100%)
-		height: 100%
-		width: 100%
-		position: relative
-		top: 0
-		left: 0
-		padding: 1rem
-		@media screen and (max-width: 1024px)
-			justify-content: flex-end
-			background: linear-gradient(180deg,rgba(18, 18, 18, 0) 1%, rgba(18, 18, 18, 0.6) 59%, rgba(18, 18, 18, 0.78) 81%, rgba(18, 18, 18, 0.89) 100%)
-	@media screen and (min-width: 1025px)
-		height: 100%
+	background: #fff
 
-#first
-	min-height: 50vh
-	justify-content: center
+.question-head
+	gap: 1rem
+	padding: 1.2rem 1.4rem
+	border-bottom: 1px solid rgba(0,0,0,0.06)
+	background: #fafafa
 
-.question
-	border-radius: 8px
-	overflow: hidden
-	.down
-		@media screen and (min-width: 1025px)
-			padding: 0.2rem
-		@media screen and (max-width: 1024px)
-			padding: 1rem
-	@media screen and (max-width: 1024px)
-		grid-template-areas: "up" "down"
-		.up
-			grid-area: up
-		.down
-			grid-area: down
-
-img.icon
+.q-icon
+	width: 40px
+	height: 40px
 	object-fit: contain
-	object-position: center center
+	flex-shrink: 0
+	filter: saturate(0) opacity(0.6)
+	&.blue
+		filter: saturate(1) opacity(1)
+
+.q-title
+	font-size: clamp(1rem, 2vw, 1.3rem)
+	font-weight: 400
+	line-height: 1.2
+	letter-spacing: -0.02em
+	color: #111
+	margin: 0
+
+.q-deeplink
+	font-size: 0.75rem
+	color: var(--text-ghost)
+	transition: color 0.12s ease
+	&:hover
+		color: var(--theme)
+
+.q-card-body
+	display: grid
 	@media screen and (min-width: 1025px)
-		height: 36px
-		width: 36px
+		grid-template-columns: 1fr 1fr
 	@media screen and (max-width: 1024px)
-		height: 32px
-		width: 32px
+		grid-template-columns: 1fr
+
+.question-left
+	display: flex
+	flex-direction: column
+	padding: 1.4rem
+	border-right: 1px solid rgba(0,0,0,0.06)
+	background: var(--stone)
+	@media screen and (max-width: 1024px)
+		border-right: none
+		border-bottom: 1px solid rgba(0,0,0,0.06)
+
+.q-desc
+	font-size: 0.9rem
+	line-height: 1.7
+	color: #555
+	margin: 0
+
+.q-tag
+	font-size: 8px
+	font-weight: 700
+	letter-spacing: 0.1em
+	color: var(--text-ghost)
+	padding: 2px 8px
+	border-radius: 100px
+	border: 1px solid rgba(0,0,0,0.08)
+	background: #F5F5F4
+
+.q-image
+	margin-top: auto
+	img
+		width: 100%
+		aspect-ratio: 16 / 9
+		object-fit: cover
+		border-radius: 6px
+		display: block
+		border: 1px solid rgba(0,0,0,0.06)
+
+.question-right
+	padding: 1.4rem
 
 </style>

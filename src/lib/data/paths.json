@@ -1,0 +1,283 @@
+[
+  {
+    "id": "civilizational-consciousness",
+    "title": "Civilizational Consciousness — The Core",
+    "subtitle": "The foundational Bodha journey",
+    "level": "entry",
+    "description": "What does Indian civilizational consciousness actually mean? This path begins with a precise definition, moves through dharma as civilizational DNA, and builds to a full schema for what reconnection to that consciousness requires.",
+    "steps": [
+      {
+        "nodeId": "article:indiancivilizationalconsciousness",
+        "note": "The foundational definition. Written on India's 75th Independence Day — start here before anything else."
+      },
+      {
+        "nodeId": "article:dharmikagene",
+        "note": "Dharma is not a rule or duty but the civilizational DNA of a people. Read this to understand what that DNA actually is."
+      },
+      {
+        "nodeId": "article:civilizations-as-karmic-streams",
+        "note": "Civilizations are not collections of events but living kārmika streams. This reframes what it means to belong to one."
+      },
+      {
+        "nodeId": "article:svayambodha-shatrubodha",
+        "note": "Introduces the two-wheel framework: svayambodha (self-knowledge) and śatrubodha (knowing your adversary). These two together are the engine of civilizational revival."
+      },
+      {
+        "nodeId": "article:synaptic-reconnection-1",
+        "note": "What reconnection to civilizational consciousness actually requires of modern Hindus. Part 1 of a detailed schema."
+      },
+      {
+        "nodeId": "article:synaptic-reconnection-2",
+        "note": "Part 2: the full schema for synaptic reconnection, laid out practically."
+      }
+    ]
+  },
+  {
+    "id": "purva-paksha",
+    "title": "Pūrva Pakṣa — Knowing the Adversary",
+    "subtitle": "The classical method of civilizational engagement",
+    "level": "intermediate",
+    "description": "Pūrva pakṣa is the classical Hindu method of studying an opposing view rigorously before refuting it. This path teaches the method, applies it to modernity and Western thought, and grounds it in the Voice of India tradition that made it systematic.",
+    "steps": [
+      {
+        "nodeId": "concept:purva-paksha",
+        "note": "Begin with the concept itself: the classical requirement to understand the adversary's position fully and charitably before mounting a response."
+      },
+      {
+        "nodeId": "article:artist-in-art",
+        "note": "Purva paksha in practice: Western art criticism turned inside out and evaluated through a Hindu lens."
+      },
+      {
+        "nodeId": "article:freedomofexpression",
+        "note": "Why clarity about prophetic monotheism's claim on speech is a prerequisite to any serious free speech debate in India."
+      },
+      {
+        "nodeId": "article:hindu-response-to-enlightenment",
+        "note": "Where does Enlightenment rationalism reveal its own metaphysical blind spots? The full Hindu counter-reading."
+      },
+      {
+        "nodeId": "book:purva-paksha-of-sheldon-pollocks-use-of-chronology",
+        "note": "A rigorous scholarly application: purva paksha of Sheldon Pollock's chronological methodologies. Shows the method at its most demanding."
+      },
+      {
+        "nodeId": "school:voice-of-india-shatrubodha-school",
+        "note": "The tradition that made śatrubodha systematic — the school that insists on knowing your adversary clearly as the foundation of Hindu intellectual response."
+      }
+    ]
+  },
+  {
+    "id": "svayambodha",
+    "title": "Svayambodha — Recovering Self-Knowledge",
+    "subtitle": "The Dharampal path",
+    "level": "entry",
+    "description": "Before you can know your adversary, you must know yourself. This path traces the tradition of svayambodha — self-knowledge — from its deepest metaphysical roots through the thinkers who recovered it and the school that systematized it.",
+    "steps": [
+      {
+        "nodeId": "article:difference-between-us",
+        "note": "Begin at the root: what actually separates Hindu and Abrahamic metaphysics — one-life vs. multiple-life cosmologies. Everything else follows from this."
+      },
+      {
+        "nodeId": "thinker:ak-saran",
+        "note": "AK Saran: the rare Indian sociologist who refused to think inside British intellectual frameworks, even when doing so was professionally costly."
+      },
+      {
+        "nodeId": "thinker:dharampal",
+        "note": "The historian who went back to British colonial archives and proved that India had flourishing literacy, science, and industry before colonialism. Recovered data changes everything."
+      },
+      {
+        "nodeId": "school:dharampal-svayambodha-school",
+        "note": "The school built on Dharampal's archival discoveries: India's pre-colonial self-understanding as the basis for civilizational recovery."
+      },
+      {
+        "nodeId": "article:svayambodha-and-shatrubodha-review",
+        "note": "A review of Pankaj Saxena's book that maps the full svayambodha-śatrubodha framework — a useful synthesis and map of both traditions."
+      }
+    ]
+  },
+  {
+    "id": "consciousness-and-dharma",
+    "title": "Consciousness and the Dhārmika Frame",
+    "subtitle": "The metaphysics underneath Hindu civilization",
+    "level": "intermediate",
+    "description": "Hindu civilization rests on a specific understanding of consciousness. This path moves from the metaphysical root of the Hindu-Abrahamic divide, through aesthetics and dharmic philosophy, to the contemporary questions of AI and modernity — all read through the same frame.",
+    "steps": [
+      {
+        "nodeId": "article:difference-between-us",
+        "note": "The metaphysical root: one-life vs. multiple-life cosmologies. Everything in Hindu thought flows from this starting point."
+      },
+      {
+        "nodeId": "article:artandmeaningmaking",
+        "note": "Hindu aesthetics begins where Western aesthetics ends. The Indian tradition was interested in the experience of consciousness, not the object."
+      },
+      {
+        "nodeId": "article:four-aphorisms",
+        "note": "Four aphorisms — Caturasūtra — that crystallize the Dhārmika frame in compact form. Return to these after every other article."
+      },
+      {
+        "nodeId": "article:hinduisminblindspot1",
+        "note": "Why modern educated Hindus are unable to see their own tradition clearly. The cognitive and institutional sources of the blind spot. Part 1."
+      },
+      {
+        "nodeId": "article:hinduisminblindspot2",
+        "note": "Part 2: what prevents clear self-perception and the conditions under which it can be recovered."
+      },
+      {
+        "nodeId": "article:artificialintelligence",
+        "note": "AI arrives not as neutral technology but as a civilizational event. Read through the Dhārmika frame built in prior steps. Part 1."
+      },
+      {
+        "nodeId": "article:artificialintelligencetwo",
+        "note": "Part 2: a proactive Dhārmika framework for navigating artificial intelligence — neither uncritical adoption nor fearful rejection."
+      }
+    ]
+  },
+  {
+    "id": "core-of-sanatana-dharma",
+    "title": "What is the Core of Sanatana Dharma?",
+    "subtitle": "Research Pathway #1",
+    "level": "advanced",
+    "description": "What is the unchanging core of Sanatana Dharma — an idea, an institution, a worldview, or a value system? Bodha's most foundational research question.",
+    "questionNodeId": "question:core-of-sanatana-dharma",
+    "steps": [
+      { "nodeId": "question:core-of-sanatana-dharma", "note": "Start here — the Big Question itself" },
+      { "nodeId": "article:dharmikagene", "note": "Dharma as civilizational DNA" },
+      { "nodeId": "article:four-aphorisms", "note": "Caturasūtra — the most compact articulation of the Dhārmika frame" },
+      { "nodeId": "article:difference-between-us", "note": "Metaphysical root: one-life vs. multiple-life cosmologies" },
+      { "nodeId": "book:logic-language-and-reality", "note": "Bimal Krishna Matilal on logic, language and reality in Indian thought" },
+      { "nodeId": "thinker:ms-hiriyanna", "note": "Hiriyanna’s systematic survey of Hindu philosophy" },
+      { "nodeId": "concept:sanatana-dharma", "note": "Core concept node — all related edges" }
+    ]
+  },
+  {
+    "id": "will-save-sanatana-dharma",
+    "title": "What Will Save Sanatana Dharma?",
+    "subtitle": "Research Pathway #2",
+    "level": "advanced",
+    "description": "Inspired by the Śaunaka praśna — what is the one idea, institution, or action whose presence would ensure the survival of Sanatana Dharma?",
+    "questionNodeId": "question:will-save-sanatana-dharma",
+    "steps": [
+      { "nodeId": "question:will-save-sanatana-dharma", "note": "The Big Question" },
+      { "nodeId": "article:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Bodha on the nature of Hindu organizations" },
+      { "nodeId": "article:svayambodha-shatrubodha", "note": "The two-wheel framework as survival mechanism" },
+      { "nodeId": "school:dharampal-svayambodha-school", "note": "Dharampal School as a candidate for generative institution" },
+      { "nodeId": "article:hindu-institution-generate", "note": "Directly related Big Question on generative institutions" },
+      { "nodeId": "thinker:dharampal", "note": "Dharampal’s archival recovery as a model of civilizational rescue" }
+    ]
+  },
+  {
+    "id": "being-indian",
+    "title": "What does 'Being Indian' Mean?",
+    "subtitle": "Research Pathway #3",
+    "level": "advanced",
+    "description": "What does Indian identity mean in light of Partition, the Muslim question, and conflicting nationalist visions from Gandhi to Savarkar to Nehru?",
+    "questionNodeId": "question:being-indian",
+    "steps": [
+      { "nodeId": "question:being-indian", "note": "The Big Question" },
+      { "nodeId": "book:how-i-became-a-hindu", "note": "Sita Ram Goel on civilizational self-understanding" },
+      { "nodeId": "article:we-the-hindus-what-the-cab-means-for-hindu-civilization", "note": "Civilizational reading of post-Partition identity" },
+      { "nodeId": "article:man-who-turned-down-the-skull-cap-how-india-sees-narendra-modi", "note": "Symbolic politics and civilizational self-respect" },
+      { "nodeId": "article:svayambodha-shatrubodha", "note": "Svayambodha as the foundation of any coherent Indian identity" }
+    ]
+  },
+  {
+    "id": "hindu-institution-generate",
+    "title": "What Hindu Institution Will Generate All Others?",
+    "subtitle": "Research Pathway #4",
+    "level": "advanced",
+    "description": "Which single Hindu institution — the Hindu state, the gurukula, or the temple — could regenerate all others if everything else were lost?",
+    "questionNodeId": "question:hindu-institution-generate",
+    "steps": [
+      { "nodeId": "question:hindu-institution-generate", "note": "The Big Question" },
+      { "nodeId": "article:story-of-a-priest", "note": "Living temple as generative institution" },
+      { "nodeId": "article:many-meanings-of-the-hindu-temple", "note": "Temple as multi-functional civilizational node" },
+      { "nodeId": "article:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Why fragmentation is a feature, not a bug" },
+      { "nodeId": "school:dharampal-svayambodha-school", "note": "Education/gurukula model" }
+    ]
+  },
+  {
+    "id": "will-save-sanatana-dharma-2",
+    "title": "What Will Destroy Hindu Society?",
+    "subtitle": "Research Pathway #5 (Sita Ram Goel track)",
+    "level": "advanced",
+    "description": "Sita Ram Goel's 1981 warning revisited — a rigorous examination of the forces most likely to destroy Hindu society.",
+    "questionNodeId": "question:what-will-destroy",
+    "steps": [
+      { "nodeId": "question:what-will-destroy", "note": "The Big Question" },
+      { "nodeId": "book:how-i-became-a-hindu", "note": "Sita Ram Goel’s foundational diagnosis" },
+      { "nodeId": "book:hindu-temples-vol-1", "note": "Historical memory of destruction" },
+      { "nodeId": "article:unfinished-agendas-of-radical-islam-the-global-gameplan", "note": "Demographic and ideological threats" },
+      { "nodeId": "article:hindu-liberals-the-slave-soldiers-of-islamism", "note": "Internal enablers" }
+    ]
+  },
+  {
+    "id": "modernity-and-hindu-values",
+    "title": "Is Modernity Compatible With Hindu Values?",
+    "subtitle": "Research Pathway #6",
+    "level": "advanced",
+    "description": "Is modernity — with its secularism, rights-framework, and assault on varṇāśrama dharma — compatible with Hindu values, or structurally hostile?",
+    "questionNodeId": "question:modernity-and-hindu-values",
+    "steps": [
+      { "nodeId": "question:modernity-and-hindu-values", "note": "The Big Question" },
+      { "nodeId": "article:hindu-response-to-enlightenment", "note": "Hindu counter-reading of Enlightenment" },
+      { "nodeId": "book:heidegger-and-the-inquiry-into-technology", "note": "Technology and modernity critique" },
+      { "nodeId": "article:grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche", "note": "Modern psyche’s loss of the sacred" },
+      { "nodeId": "article:artificialintelligence", "note": "AI as civilizational event" }
+    ]
+  },
+  {
+    "id": "practice-but-not-proven",
+    "title": "What Do Hindus Practice, but Cannot Prove?",
+    "subtitle": "Research Pathway #7",
+    "level": "advanced",
+    "description": "What do Hindus practice with deep śraddhā but cannot prove — karma phala siddhānta, reincarnation, mantra efficacy — and what is the right epistemic posture?",
+    "questionNodeId": "question:practice-but-not-proven",
+    "steps": [
+      { "nodeId": "question:practice-but-not-proven", "note": "The Big Question" },
+      { "nodeId": "article:difference-between-us", "note": "Metaphysical foundations" },
+      { "nodeId": "article:artificialintelligencetwo", "note": "Dhārmika framework for consciousness and AI" },
+      { "nodeId": "article:hindu-view-of-the-simulation-hypothesis", "note": "Māyā and simulation hypothesis" }
+    ]
+  },
+  {
+    "id": "new-indian-republic",
+    "title": "Does India Need Another Republic?",
+    "subtitle": "Research Pathway #8",
+    "level": "advanced",
+    "description": "Does India's constitution — built on rights rather than duties, and arguably biased against Hindus — need to be replaced with a second republic rooted in Dhārmika values?",
+    "questionNodeId": "question:new-indian-republic",
+    "steps": [
+      { "nodeId": "question:new-indian-republic", "note": "The Big Question" },
+      { "nodeId": "article:we-the-hindus-what-the-cab-means-for-hindu-civilization", "note": "Civilizational reading of recent constitutional assertions" },
+      { "nodeId": "book:hindu-studies-in-a-secular-academy", "note": "Secular academic categories vs. Dhārmika frame" }
+    ]
+  },
+  {
+    "id": "hindu-renaissance",
+    "title": "What Idea Must Die, for Hindu Renaissance?",
+    "subtitle": "Research Pathway #9",
+    "level": "advanced",
+    "description": "What idea must die for Hindu renaissance to happen — caste, secularism, modernity, sarva-dharma-samabhāva, or the very category of religion applied to dharma?",
+    "questionNodeId": "question:hindu-renaissance",
+    "steps": [
+      { "nodeId": "question:hindu-renaissance", "note": "The Big Question" },
+      { "nodeId": "article:hinduisminblindspot1", "note": "Hinduism in blind spot — Part 1" },
+      { "nodeId": "article:hinduisminblindspot2", "note": "Part 2 — recovery conditions" },
+      { "nodeId": "article:decolonizationapersonalfootprint", "note": "Decolonization as daily practice" },
+      { "nodeId": "article:svayambodha-shatrubodha", "note": "The two-wheel framework as renaissance engine" }
+    ]
+  },
+  {
+    "id": "hindu-unity-and-diversity",
+    "title": "Is Hindu Unity Compatible With Indian Diversity?",
+    "subtitle": "Research Pathway #10",
+    "level": "advanced",
+    "description": "Can Hindus unite without flattening the diversity that defines India? A civilizational question about whether unity and diversity are complementary or in fundamental tension.",
+    "questionNodeId": "question:hindu-unity-and-diversity",
+    "steps": [
+      { "nodeId": "question:hindu-unity-and-diversity", "note": "The Big Question" },
+      { "nodeId": "article:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Why Hindu organizational diversity is a feature" },
+      { "nodeId": "article:fractalmandalaone", "note": "Fractal Maṇḍala as model of unity-in-diversity" },
+      { "nodeId": "article:fractalmandalatwo", "note": "Part 2 — civilizational coherence at every scale" }
+    ]
+  }
+]

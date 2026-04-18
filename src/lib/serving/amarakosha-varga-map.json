@@ -1,0 +1,218 @@
+[
+  {
+    "iast": "svarga",
+    "slug": "ak-svarga",
+    "devanagari": "स्वर्गवर्गः",
+    "label": "Svarga — The Celestial",
+    "description": "The divine and celestial order — gods, heavens, and cosmic hierarchy.",
+    "wordCount": 737,
+    "conceptSlugs": ["cosmology", "afterlife"]
+  },
+  {
+    "iast": "brahma",
+    "slug": "ak-brahma",
+    "devanagari": "ब्रह्मवर्गः",
+    "label": "Brahma — The Sacred",
+    "description": "Brahminic knowledge, ritual, and spiritual practice.",
+    "wordCount": 386,
+    "conceptSlugs": ["dharma", "brahman", "ritual", "agnihotra", "brahma-sutra"]
+  },
+  {
+    "iast": "dhi",
+    "slug": "ak-dhi",
+    "devanagari": "धीवर्गः",
+    "label": "Dhī — Intellect and Cognition",
+    "description": "Mind, intellect, perception, aesthetic experience, and knowledge.",
+    "wordCount": 168,
+    "conceptSlugs": ["consciousness", "epistemology", "aesthetics", "rasa", "aesthetic-experience"]
+  },
+  {
+    "iast": "kala",
+    "slug": "ak-kala",
+    "devanagari": "कालवर्गः",
+    "label": "Kāla — Time",
+    "description": "Time, seasons, cosmic cycles, and the ordering of history.",
+    "wordCount": 290,
+    "conceptSlugs": ["history", "civilizational-thought", "ancient-india", "ancient-indian-history"]
+  },
+  {
+    "iast": "bhumi",
+    "slug": "ak-bhumi",
+    "devanagari": "भूमिवर्गः",
+    "label": "Bhūmi — The Earth",
+    "description": "Land, soil, geography, and the natural ground of civilization.",
+    "wordCount": 145,
+    "conceptSlugs": ["ecology", "ancient-geography", "archaeobotany"]
+  },
+  {
+    "iast": "manushya",
+    "slug": "ak-manushya",
+    "devanagari": "मनुष्यवर्गः",
+    "label": "Manuṣya — The Human",
+    "description": "Human life, society, relations, and the categories of personhood.",
+    "wordCount": 1105,
+    "conceptSlugs": ["civilizational-consciousness", "culture", "human-evolution"]
+  },
+  {
+    "iast": "kshatriya",
+    "slug": "ak-kshatriya",
+    "devanagari": "क्षत्रियवर्गः",
+    "label": "Kṣatriya — The Warrior",
+    "description": "War, governance, kingship, and the political order.",
+    "wordCount": 893,
+    "conceptSlugs": []
+  },
+  {
+    "iast": "vaishya",
+    "slug": "ak-vaishya",
+    "devanagari": "वैश्यवर्गः",
+    "label": "Vaiśya — Commerce and Agriculture",
+    "description": "Trade, agriculture, livestock, and the productive order.",
+    "wordCount": 869,
+    "conceptSlugs": ["ancient-trade", "ancient-agriculture"]
+  },
+  {
+    "iast": "shudra",
+    "slug": "ak-shudra",
+    "devanagari": "शूद्रवर्गः",
+    "label": "Śūdra — Craft and Service",
+    "description": "Artisans, service vocations, and the material arts.",
+    "wordCount": 353,
+    "conceptSlugs": []
+  },
+  {
+    "iast": "natya",
+    "slug": "ak-natya",
+    "devanagari": "नाट्यवर्गः",
+    "label": "Nāṭya — Performance",
+    "description": "Drama, dance, music, and the performing arts.",
+    "wordCount": 304,
+    "conceptSlugs": ["aesthetics", "arts-performance-and-aesthetics", "aesthetic-education"]
+  },
+  {
+    "iast": "shabdadi",
+    "slug": "ak-shabdadi",
+    "devanagari": "शब्दादिवर्गः",
+    "label": "Śabdādi — Sound and Language",
+    "description": "Speech, sound, grammar, and the philosophy of language.",
+    "wordCount": 229,
+    "conceptSlugs": ["comparative-linguistics", "bhartrhari"]
+  },
+  {
+    "iast": "vanaushadhi",
+    "slug": "ak-vanaushadhi",
+    "devanagari": "वनौषधिवर्गः",
+    "label": "Vanauṣadhi — Forest and Medicine",
+    "description": "Plants, herbs, forests, and Āyurvedic knowledge.",
+    "wordCount": 1451,
+    "conceptSlugs": ["ecology", "archaeobotany", "ancient-subsistence"]
+  },
+  {
+    "iast": "simhadi",
+    "slug": "ak-simhadi",
+    "devanagari": "सिंहादिवर्गः",
+    "label": "Siṃhādi — Animals",
+    "description": "Animals, birds, and the natural world.",
+    "wordCount": 407,
+    "conceptSlugs": ["ecology", "animal-domestication", "cattle-genomics"]
+  },
+  {
+    "iast": "vari",
+    "slug": "ak-vari",
+    "devanagari": "वारिवर्गः",
+    "label": "Vāri — Water",
+    "description": "Rivers, oceans, rain, and aquatic life.",
+    "wordCount": 353,
+    "conceptSlugs": ["ecology", "ancient-geography"]
+  },
+  {
+    "iast": "shaila",
+    "slug": "ak-shaila",
+    "devanagari": "शैलवर्गः",
+    "label": "Śaila — Mountains",
+    "description": "Mountains, rocks, and elevated geography.",
+    "wordCount": 67,
+    "conceptSlugs": ["ancient-geography", "ecology"]
+  },
+  {
+    "iast": "pura",
+    "slug": "ak-pura",
+    "devanagari": "पुरवर्गः",
+    "label": "Pura — The City",
+    "description": "Settlements, architecture, urban life, and built space.",
+    "wordCount": 151,
+    "conceptSlugs": ["ancient-urban-sites", "civilizational-consciousness"]
+  },
+  {
+    "iast": "vyoma",
+    "slug": "ak-vyoma",
+    "devanagari": "व्योमवर्गः",
+    "label": "Vyoma — The Sky",
+    "description": "Sky, atmosphere, celestial bodies, and the heavens above.",
+    "wordCount": 26,
+    "conceptSlugs": ["cosmology", "archaeoastronomy"]
+  },
+  {
+    "iast": "dig",
+    "slug": "ak-dig",
+    "devanagari": "दिग्वर्गः",
+    "label": "Dig — Direction and Space",
+    "description": "The eight directions and the spatial ordering of the cosmos.",
+    "wordCount": 389,
+    "conceptSlugs": ["cosmology", "ancient-geography"]
+  },
+  {
+    "iast": "naraka",
+    "slug": "ak-naraka",
+    "devanagari": "नरकवर्गः",
+    "label": "Naraka — The Infernal",
+    "description": "Hell realms, punishment, and the consequences of karma.",
+    "wordCount": 30,
+    "conceptSlugs": ["afterlife", "karma"]
+  },
+  {
+    "iast": "patalabhogi",
+    "slug": "ak-patalabhogi",
+    "devanagari": "पातालभोगिवर्गः",
+    "label": "Pātāla — The Underworld",
+    "description": "Nāgas, the underworld, and subterranean cosmology.",
+    "wordCount": 102,
+    "conceptSlugs": ["cosmology"]
+  },
+  {
+    "iast": "nanaartha",
+    "slug": "ak-nanaartha",
+    "devanagari": "नानार्थवर्गः",
+    "label": "Nānārtha — Polysemy",
+    "description": "Words with multiple meanings — the semantic richness of Sanskrit.",
+    "wordCount": 1688,
+    "conceptSlugs": ["comparative-darshanas", "categories"]
+  },
+  {
+    "iast": "sankirana",
+    "slug": "ak-sankirana",
+    "devanagari": "सङ्कीर्णवर्गः",
+    "label": "Saṅkīrṇa — The Mixed",
+    "description": "Miscellaneous categories not covered by other vargas.",
+    "wordCount": 357,
+    "conceptSlugs": ["categories"]
+  },
+  {
+    "iast": "avyaya",
+    "slug": "ak-avyaya",
+    "devanagari": "अव्ययवर्गः",
+    "label": "Avyaya — Indeclinables",
+    "description": "Particles, indeclinables, and the grammatical skeleton of Sanskrit.",
+    "wordCount": 208,
+    "conceptSlugs": ["comparative-linguistics"]
+  },
+  {
+    "iast": "visheshyanighna",
+    "slug": "ak-visheshyanighna",
+    "devanagari": "विशेष्यनिघ्नवर्गः",
+    "label": "Viśeṣyanighna — Adjectives",
+    "description": "Qualifiers, attributes, and the adjectival vocabulary of Sanskrit.",
+    "wordCount": 1038,
+    "conceptSlugs": ["categories", "comparative-darshanas"]
+  }
+]

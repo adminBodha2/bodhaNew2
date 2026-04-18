@@ -27,5 +27,9 @@
 		"editor.insertSpaces": false
 	},
 	"editor.defaultFormatter": "svelte.svelte-vscode",
-	"prettier.printWidth": 400
+	"prettier.printWidth": 400,
+	"editor.fontFamily": "\"Jet Brains Mono\", monospace",
+	"editor.fontSize": 14,
+	"prettier.tabWidth": 4,
+	"editor.tabSize": 2
 }

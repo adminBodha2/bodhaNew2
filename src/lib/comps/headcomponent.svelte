@@ -3,9 +3,13 @@
 	export let metaDescription: string;
 	export let metaUrl: string;
 	export let metaImage: string;
+	export let jsonld: string = '';
 </script>
 
 <svelte:head>
+	{#if jsonld}
+		{@html `<script type="application/ld+json">${jsonld}</script>`}
+	{/if}
 	<title>{title}</title>
 	<meta name="description" content={metaDescription} />
 	<meta property="og:title" content={title} />

@@ -1,8 +1,20 @@
 <script lang="ts">
 
   export let color = 'var(--theme)'
-  export let size = 40
+  export let size = 32
 
 </script>
 
-<svg viewBox="0 0 24 24" height={size} width={size} fill={color} stroke={color} xmlns="http://www.w3.org/2000/svg"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"/></svg>
+<div class="row xcenter ycenter">
+	<svg class="small" width={size} height={size} viewBox="0 0 6 9" fill=none xmlns="http://www.w3.org/2000/svg">
+		<path d="M2.82844 4.24269L0 1.41422L1.41424 0L5.65684 4.24269L1.41424 8.48529L0 7.07109L2.82844 4.24269Z" fill={color} />
+		</svg>
+</div>
+
+<style lang="sass">
+
+svg
+	@media screen and (max-width: 1024px)
+		transform: scale(0.8)
+
+</style>

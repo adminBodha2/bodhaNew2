@@ -3,137 +3,215 @@
 	import Twitter from '$lib/icons/twitter.svelte';
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
-	import Scroller from '$lib/comps/scrolltotop.svelte';
 	import Sun from '$lib/icons/sun.svelte'
 	import Moon from '$lib/icons/moon.svelte'
 	import { darkTheme, toggleTheme } from '$lib/utils/globalstores'
-
-
-	let sY = $state(0);
 </script>
 
-<svelte:window bind:scrollY={sY} />
+<div class="foot-wrap">
+	<div class="foot-inner narrowbox stdpad">
 
-<div class="column xcenter" style="background: var(--background">
-<div class="separator"></div>
-<button
-	class="blank column xcenter ycenter rgap4"
-	style="margin-bottom: 1rem"
-	onclick={() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}}
->
-	<Scroller />
-	<small class="lgrey">scroll to top</small>
-</button>
-</div>
-<div class="column mainer" class:darker={$darkTheme}>
-	<div class="stdpad column rgap32">
-		<div class="grid two rgap24 pbot16">
-			<div class="column rgap16">
-				<p class="lgrey thinner sm">readings:</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/blog"><b>BLOG</b></a> - expert, long-form essays and opinions
-				</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/lab"><b>LAB</b></a> - notes on what we're reading and researching
-				</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/library"><b>BODHA OPEN LIBRARY</b></a> - collection of texts,
-					papers, scriptures
-				</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/inspiration"><b>INSPIRATION</b></a> - thinkers and schools
-					of thought that we learn from
-				</p>
+		<div class="foot-top">
+			<div class="foot-brand">
+				<p class="foot-nam">Bodha</p>
+				<p class="foot-tagline">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
 			</div>
-			<div class="column rgap16">
-				<p class="lgrey thinner sm">research and more:</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/research"><b>RESEARCH</b></a> - all our current and planned
-					projects
-				</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/big-questions"><b>BIG QUESTIONS</b></a> - that we are asking,
-					and answering
-				</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/academy"><b>ACADEMY</b></a> - our work on compounding and
-					scaling research
-				</p>
-				<p class="white thinner">
-					<a class="blank linkedlight" href="/anveshi"><b>BODHA ANVESHI</b></a> - temple tours, cultural
-					and sacred immersion
-				</p>
-			</div>
+			<button
+				class="blank foot-scroll"
+				onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+			>
+				<span class="foot-scroll-arrow">↑</span>
+				<span class="foot-scroll-label tt-u">Top</span>
+			</button>
 		</div>
-		<div class="column ptop32" style="border-top: 1px solid #252525">
-			<div class="grid two rgap24">
-				<div class="column rgap8">
-					<small class="white"
-						>© 2026 Bodha | <a class="blank linkedlight" href="/contact">Contact</a></small
-					>
-					<small class="white">Designed at Bodha Lab | <a class="blank linkedlight" href="https://github.com/adminBodha2/bodhaNew2" target="_blank" rel="noreferrer">Github Repo</a></small>
-					<small style="color: var(--grey-md)"
-						>Bodha Research Pvt Ltd | Svayambodha Centre For Culture Studies Foundation</small
-					>
+
+		<div class="foot-grid">
+			<div class="foot-col">
+				<p class="eyebrow tt-u foot-col-label">Readings</p>
+				<div class="foot-links">
+					<a class="foot-link blank" href="/blog">Blog</a>
+					<a class="foot-link blank" href="/lab">Lab</a>
+					<a class="foot-link blank" href="/library">Open Library</a>
+					<a class="foot-link blank" href="/inspiration">Inspiration</a>
 				</div>
-				<div class="row ycenter xright mleft cgap16">
-					<a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-						<Twitter color="var(--whitefix)" />
-					</a>
-					<a
-						class="blank"
-						href="https://www.facebook.com/profile.php?id=61584291760187"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<FB color="var(--whitefix)" />
-					</a>
-					<a
-						class="blank"
-						href="https://www.instagram.com/bodharesearch"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<Insta color="var(--whitefix)"  />
-					</a>
-					<a
-						class="blank"
-						href="https://www.linkedin.com/company/bodha-research/"
-						rel="noreferrer"
-						target="_blank"
-					>
-						<Linkedin color="var(--whitefix)"  />
-					</a>
-					<button class="blankbtn" onclick={toggleTheme}>
-						{#if $darkTheme}
-						<Sun/>
-						{:else}
-						<Moon/>
-						{/if}
-					</button>
+			</div>
+			<div class="foot-col">
+				<p class="eyebrow tt-u foot-col-label">Work</p>
+				<div class="foot-links">
+					<a class="foot-link blank" href="/research">Research</a>
+					<a class="foot-link blank" href="/big-questions">Big Questions</a>
+					<a class="foot-link blank" href="/academy">Academy</a>
+					<a class="foot-link blank" href="/anveshi">Bodha Anveshi</a>
+				</div>
+			</div>
+			<div class="foot-col">
+				<p class="eyebrow tt-u foot-col-label">About</p>
+				<div class="foot-links">
+					<a class="foot-link blank" href="/team">Team</a>
+					<a class="foot-link blank" href="/contact">Contact</a>
+					<a class="foot-link blank" href="/path">Learning Paths</a>
 				</div>
 			</div>
 		</div>
+
+		<div class="foot-bottom">
+			<div class="foot-legal">
+				<small>© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/contact">Contact</a></small>
+				<small>Svayambodha Centre For Culture Studies Foundation</small>
+			</div>
+			<div class="foot-actions">
+				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
+					<Twitter color="var(--grey-lg)" />
+				</a>
+				<a class="blank foot-social" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
+					<FB color="var(--grey-lg)" />
+				</a>
+				<a class="blank foot-social" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
+					<Insta color="var(--grey-lg)" />
+				</a>
+				<a class="blank foot-social" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
+					<Linkedin color="var(--grey-lg)" />
+				</a>
+				<!--
+				<button class="blankbtn foot-social" onclick={toggleTheme}>
+					{#if $darkTheme}
+					<Sun/>
+					{:else}
+					<Moon/>
+					{/if}
+				</button>
+				-->
+			</div>
+		</div>
+
 	</div>
 </div>
 
 <style lang="sass">
 
-.separator
-	padding-top: 16px
-
-.mainer
+.foot-wrap
 	width: 100%
-	background: linear-gradient(180deg,rgba(7, 57, 104, 1) 0%, rgba(7, 29, 48, 1) 27%, rgba(7, 14, 26, 1) 61%, rgba(10, 4, 4, 1) 100%)
-	&.darker
-		background: linear-gradient(180deg,rgba(17, 17, 17, 1) 1%, rgba(13, 18, 31, 1) 46%, rgba(1, 20, 38, 1) 100%)
+	background: #F5F4F2
+
+.foot-inner
+	display: flex
+	flex-direction: column
+	gap: 0
 	@media screen and (min-width: 1025px)
-		padding-top: 8rem
-		padding-bottom: 8rem
+		padding-top: 4rem
+		padding-bottom: 3rem
 	@media screen and (max-width: 1024px)
-		padding-top: 5.5rem
-		padding-bottom: 5.5rem
+		padding-top: 3rem
+		padding-bottom: 2.5rem
+
+// ── TOP ROW ───────────────────────────────────────────────
+
+.foot-top
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	gap: 1.5rem
+	padding-bottom: 2.5rem
+	border-bottom: 1px solid rgba(0,0,0,0.08)
+	margin-bottom: 2.5rem
+
+.foot-brand
+	display: flex
+	flex-direction: column
+	gap: 0.45rem
+
+.foot-tagline
+	font-size: 0.82rem
+	line-height: 1.65
+	color: #888
+	max-width: 38ch
+	margin: 0
+
+.foot-scroll
+	display: flex
+	flex-direction: column
+	align-items: center
+	gap: 4px
+	padding: 10px 14px
+	border-radius: 8px
+	border: 1px solid rgba(0,0,0,0.08)
+	background: #FFFFFF
+	transition: all 0.15s ease
+	flex-shrink: 0
+	&:hover
+		border-color: rgba(0,0,0,0.15)
+		box-shadow: 0 2px 8px rgba(0,0,0,0.05)
+
+.foot-scroll-arrow
+	font-size: 1rem
+	color: #444
+	line-height: 1
+
+.foot-scroll-label
+	font-size: 8px
+	font-weight: 700
+	letter-spacing: 0.1em
+	color: #999
+
+// ── LINK GRID ─────────────────────────────────────────────
+
+.foot-grid
+	display: grid
+	gap: var(--gap-std)
+	padding-bottom: 2.5rem
+	border-bottom: 1px solid rgba(0,0,0,0.08)
+	margin-bottom: 2rem
+	@media screen and (min-width: 1025px)
+		grid-template-columns: repeat(3, 1fr)
+	@media screen and (max-width: 1024px)
+		grid-template-columns: repeat(2, 1fr)
+
+.foot-col
+	display: flex
+	flex-direction: column
+	gap: 1rem
+
+.foot-col-label
+	color: #999
+
+.foot-links
+	display: flex
+	flex-direction: column
+	gap: 0.6rem
+
+.foot-link
+	font-size: 0.88rem
+	color: #555
+	transition: color 0.12s ease
+	&:hover
+		color: var(--theme)
+
+// ── BOTTOM BAR ────────────────────────────────────────────
+
+.foot-bottom
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 1rem
+	flex-wrap: wrap
+
+.foot-legal
+	display: flex
+	flex-direction: column
+	gap: 3px
+	small
+		font-size: 11px
+		color: #aaa
+
+.foot-actions
+	display: flex
+	align-items: center
+	gap: 12px
+
+.foot-social
+	opacity: 0.6
+	transition: opacity 0.12s ease
+	&:hover
+		opacity: 1
 
 </style>

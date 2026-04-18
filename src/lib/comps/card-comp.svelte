@@ -3,52 +3,26 @@
 	export let link = ' '
 	export let imageLink = ' '
 	export let noLink = false
+	export let boxType = 'box'
 
 </script>
 
 {#if noLink}
-<div class="column rgap24 card-outer">
+<div class="card-outer {boxType} nuevocard">
 	<div class="imagebox">
 		<img src={imageLink} alt="click-to-navigate"/>
 	</div>
-	<div class="textbox column rgap16">
+	<div class="box textbox">
 		<slot></slot>
 	</div>
 </div>
 {:else}
-<a class="blank column rgap24 card-outer" href={link}>
+<a class="blank card-outer box-as-link {boxType} nuevocard" href={link}>
 	<div class="imagebox">
 		<img src={imageLink} alt="click-to-navigate"/>
 	</div>
-	<div class="textbox column rgap16">
+	<div class="box textbox">
 		<slot></slot>
 	</div>
 </a>
 {/if}
-
-<style lang="sass">
-
-.card-outer
-	&:hover
-		img
-			transform: scale(1.05)
-
-.textbox
-	@media screen and (min-width: 1025px)
-		padding: 0 1rem
-
-.imagebox
-	overflow: hidden
-	border-radius: 8px
-	height: 240px
-	@media screen and (min-width: 1025px)
-		height: 280px
-
-img
-	object-fit: cover
-	object-position: center center
-	height: 100%
-	width: 100%
-	transition: all 0.25s ease
-
-</style>

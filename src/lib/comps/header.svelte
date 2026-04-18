@@ -5,8 +5,6 @@
   import Search from '$lib/icons/search.svelte'
   import Close from '$lib/icons/close.svelte'
   import Mobilemenu from '$lib/comps/mobilemenu.svelte'
-  import Drop1 from '$lib/comps/menudropdown.svelte'
-  import Drop2 from '$lib/comps/menudropdown.svelte'
   import { menuState, toggleMenuState, toggleSearch, darkTheme } from '$lib/utils/globalstores'
 
   let iW:number
@@ -22,7 +20,7 @@
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={scro}/>
 
-<div class="row width100 ycenter xbetween stdpad sans">
+<div class="row width100 ycenter xbetween narrowbox">
   <div class="row ycenter">
 	<a class="blank row ycenter logoholder" href="/">
 	{#if $darkTheme}
@@ -35,20 +33,16 @@
 	</a>
   </div>
   {#if iW >= 1025}
-  <div class="row ycenter cgap16">
-	<p class="navitem sm tt-u"><a class="blank" href="/research">Research</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/big-questions">Big Questions</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/academy">Academy</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/library">Library</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/anveshi">Anveshi</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/blog">Blog</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/inspiration">Inspiration</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/lab">Lab</a></p>
-	<p class="navitem sm tt-u"><a class="blank" href="/team">Team</a></p>
-	<button class="blank" on:click={toggleSearch}>
-		<Search/>
-	</button>
-  </div>
+  <nav class="row ycenter tray">
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/research'} href="/research">Research</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/big-questions'} href="/big-questions">Big Questions</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/academy'} href="/academy">Academy</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/library'} href="/library">Library</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/anveshi'} href="/anveshi">Anveshi</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/blog'} href="/blog">Blog</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/inspiration'} href="/inspiration">Inspiration</a>
+	<a class="nav-link blank tt-u" class:active={firstSubroute === '/team'} href="/team">Team</a>
+  </nav>
   {:else}
 	<div class="row ycenter cgap16">
 		{#if !$menuState}
@@ -72,6 +66,33 @@
 
 <style lang="sass">
 
+.tray
+	column-gap: 4px
+	@media screen and (min-width: 1201px)
+		column-gap: 6px
+
+.nav-link
+	font-size: 12px
+	font-weight: 500
+	letter-spacing: 0.04em
+	color: var(--primary)
+	padding: 5px 9px
+	border-radius: 2px
+	transition: color 0.12s ease, background 0.12s ease
+	&:hover
+		color: var(--whitefix)
+		background: var(--theme)
+	&.active
+		color: var(--theme)
+		&:hover
+			color: var(--whitefix)
+
+.logoholder
+	transition: all 0.1s ease
+	transform-origin: center left
+	&:hover
+		transform: scale(1.04)
+
 .logoholder
 	@media screen and (min-width: 1025px)
 		img.rotator
@@ -89,18 +110,5 @@
 			height: 27.5px
 			width: 100%
 			margin-left: -34px
-
-p.navitem
-	font-weight: 500
-	letter-spacing: -0.5px
-	a.blank
-		&:hover
-			color: var(--theme)
-
-p.navinitem
-	font-weight: 500
-	&:hover
-		a
-			color: var(--theme)
 
 </style>

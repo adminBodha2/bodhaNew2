@@ -14,7 +14,7 @@
 	position: relative
 	width: 40px
 	height: 20px
-	border-radius: 8px
+	border-radius: 20px
 	background: var(--primaryalt)
 	border: 2px solid var(--primaryalt)
 	align-items: center

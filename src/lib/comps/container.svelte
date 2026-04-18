@@ -1,43 +1,38 @@
 <script lang="ts">
 
 	export let narrow = false
+	export let isTop = false
+	export let scaled = false
+	export let offcolor = false
+	export let toffcolor = false
 
 </script>
 
-<div class="pbot64 column" class:narrow={narrow}>
+<div class="pbot64 column" class:scaledTypo={scaled} class:top-cushion={isTop} class:widebox={!narrow} class:narrowbox={narrow} class:offcolor={offcolor} class:toffcolor={toffcolor}>
   <slot></slot>
 </div>
 
 <style lang="sass">
 
-.pbot64.column
-	min-height: calc(100vh - 72px)
-	padding-left: 16px
-	padding-right: 16px
-	&.narrow
-		width: 100%
-		margin-left: auto
-		margin-right: auto
+.pbot64.column.widebox
+	min-height: calc(100vh - 80px)
+	padding-left: 12px
+	padding-right: 12px
+	&.top-cushion
+		padding-top: 7rem
+		@media screen and (min-width: 1025px)
+			padding-top: 8rem
 	@media screen and (min-width: 1025px)
+		padding-left: 24px
+		padding-right: 24px
+	@media screen and (min-width: 1201px)
 		padding-left: 32px
 		padding-right: 32px
-		&.narrow
-			width: 928px
-			padding-left: 0
-			padding-right: 0
-	@media screen and (min-width: 1201px)
-		padding-left: 64px
-		padding-right: 64px
-		&.narrow
-			width: 1136px
-			padding-left: 0
-			padding-right: 0
-	@media screen and (min-width: 1441px)
-		padding-left: 80px
-		padding-right: 80px
-		&.narrow
-			width: 1280px
-			padding-left: 0
-			padding-right: 0
+
+.pbot64.column.narrowbox
+	min-height: 100vh
+
+.offcolor
+	background: #f7f7f7
 
 </style>

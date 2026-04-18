@@ -1,64 +1,41 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { page } from '$app/state';
+	import { selectedWriter } from '$lib/utils/localpulls';
+	import Container from '$lib/comps/container.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
+	import BlogCard from '$lib/comps/blogcard.svelte';
 
-  import { onMount } from 'svelte'
-  import { page } from '$app/stores';
-  import { selectedWriter } from '$lib/utils/localpulls'
-  import Container from '$lib/comps/container.svelte'
+	let writerName = page.params.writer ?? '';
+	let posts: any;
 
-  let posts:any
-  $: writerName = $page.params.writer
-
-  onMount(() => {
-    (async() => {
-      posts = await selectedWriter(writerName,50);
-    })()
-  })
-
+	onMount(async () => {
+		posts = await selectedWriter(writerName, 50);
+	});
 </script>
 
-<Container>
-	<div class="box-t">
-		<div class="row ycenter cgap8">
-			<a class="ftnbtn" href="/blog">BLOG</a>
-			<a class="ftnbtn" href="/blog/writers">WRITERS</a>
-			<a class="ftnbtn" href="/blog/tags">TAGS</a>
-		  </div>
-		  {#if posts && posts.length > 0}
-		  <div class="grid three stacked-2">
-			{#each posts as item}
-			  <div class="column rgap16 carrier">
-				<div class="column rgap16">
-					<a class="blank" href={item.linkpath}><img class="blog-image" src={item.meta.image} alt={item.meta.title}/></a>
-					<h5 class="source-serif tight"><a class="heading" href={item.linkpath}>{item.meta.title}</a></h5>
-					<p class="sm grey">{item.meta.excerpt}</p>
-				</div>
-				<div class="row ytop xbetween bordertop ptop16">
-				  <div class="column">
-					<p class="sm bold">{item.meta.author}</p>
-					<small class="lgrey italic">{item.meta.words} words</small>
-				  </div>
-				  <div class="row ycenter cgap16 mwrap">
-					{#each item.meta.tags as tag}
-					  <p class="sm blue italic"><a class="blank linker" href="/blog/tags/{tag}">{tag}</a></p>
-					{/each}
-				  </div>
-				</div>
-			  </div>
+<Head title="{writerName} — Bodha Blog" metaDescription="Essays by {writerName} at Bodha Research." metaUrl="https://www.bodharesearch.in/blog/writers/{writerName}" metaImage="/images/bodhacover.png" />
+
+	{#if posts && posts.length > 0}
+	<div class="box std">
+		<div class="standard-grid grid three">
+			{#each posts as item, i}
+			<BlogCard
+				title={item.meta.title}
+				link={item.linkpath}
+				image={item.meta.image}
+				excerpt={item.meta.excerpt}
+				author={item.meta.author}
+				date={item.formattedDate}
+				words={item.meta.words}
+				numbering="number{i}"
+			>
+				{#each item.meta.tags as tag}
+				<span class="tag-pill tt-u">{tag.replaceAll('-', ' ')}</span>
+				{/each}
+			</BlogCard>
 			{/each}
-		  </div>
-		{/if}
+		</div>
 	</div>
-</Container>
+	{/if}
 
-<style lang="sass">
-
-.grid.three.stacked-2
-	align-items: stretch
-	.carrier
-		height: 100%
-		justify-content: space-between
-
-img.blog-image
-	border-radius: 8px
-
-</style>

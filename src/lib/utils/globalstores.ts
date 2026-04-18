@@ -18,6 +18,11 @@ export function toggleSearch() {
 	searchState.update((mode) => !mode);
 }
 
+export const libraryMenu = writable(false)
+export function toggleLibraryMenu(){
+	libraryMenu.update((mode) => !mode);
+}
+
 const storedDarkTheme = browser ? JSON.parse(localStorage.getItem('darkTheme') || 'false') : false;
 export const darkTheme = writable(storedDarkTheme);
 export function toggleTheme() {
@@ -29,3 +34,5 @@ export function toggleTheme() {
 		});
 	}
 }
+
+export const iW = writable(false)

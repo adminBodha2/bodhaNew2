@@ -1,5 +1,354 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+body, html
+	font-family: var(--fontface-sans-flex)
+
+p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
+	margin: 0
+	color: var(--primary)
+
+.garamond
+	font-family: 'EB Garamond', serif
+
+.libre
+	font-family: 'Libre Caslon Text', serif
+
+.bold
+	font-weight: bold
+
+:root	
+	--fontface-sans: 'Google Sans', sans-serif
+	--fontface-sans-flex: 'Google Sans Flex', sans-serif
+	--fontface-serif: 'Source Serif 4', serif
+	--fontface-serif2: 'Libre Caslon Text', serif
+	--fontface-serif3: 'EB Garamond', serif
+
+.desk
+	--typeBase: 1.25rem
+	--typeBaseLow: 1.06rem
+	--typeScale: 1.25
+	--typeH1: calc(var(--typeBase) * var(--typeScale))
+	--typeH2: calc(var(--typeH1) * var(--typeScale))
+	--typeH3: calc(var(--typeH2) * var(--typeScale))
+	--typeH4: calc(var(--typeH3) * var(--typeScale))
+	--typeH5: calc(var(--typeH4) * var(--typeScale))
+	--typeH6: calc(var(--typeH5) * var(--typeScale))
+	--typePs: calc(var(--typeBase) * 0.875)
+
+.mobile
+	--typeBase: 1.2rem
+	--typeBaseLow: 1.06rem
+	--typeScale: 1.18
+	--typeScaleLow: 1.1
+	--typeH1: calc(var(--typeBase) * var(--typeScale))
+	--typeH2: calc(var(--typeH1) * var(--typeScale))
+	--typeH3: calc(var(--typeH2) * var(--typeScaleLow))
+	--typeH4: calc(var(--typeH3) * var(--typeScale))
+	--typeH5: calc(var(--typeH4) * var(--typeScaleLow))
+	--typeH6: calc(var(--typeH5) * var(--typeScale))
+	--typePs: calc(var(--typeBase) * 0.875)
+
+.source-serif
+	font-family: var(--fontface-serif)	
+
+.blog-article
+	p, pre, li
+		font-family: 'EB Garamond', serif
+		font-size: calc(var(--typeBase) * 1.3)
+		line-height: 1.5
+		margin-bottom: 1.25rem
+		@media screen and (max-width: 1024px)
+			font-size: calc(var(--typeBase) * 1.2)
+	h5
+		font-family: var(--fontface-sans-flex)
+		font-weight: 500
+		position: relative
+		padding-top: 1rem
+		margin-top: 3rem
+		margin-bottom: 2.5rem
+		&:before
+			content: ' '
+			width: 10%
+			height: 2px
+			background: var(--theme)
+			position: absolute
+			top: 0
+			left: 0
+	h2
+		font-size: var(--typeH3)
+		font-family: var(--fontface-sans)
+		font-weight: 600
+		letter-spacing: -0.03rem
+		margin-top: 2rem
+		padding-top: 2rem
+		margin-bottom: 1.25rem
+		border-top: 1px solid #f1f1f1
+
+//-------------------------HEADER 1--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+h1
+	line-height: 1.12
+	font-size: var(--typeH6)
+	&.thin
+		font-weight: 400
+	&.source-serif
+		font-weight: 600
+		letter-spacing: -0.06rem
+
+//-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+h2
+	line-height: 1.12
+	font-size: var(--typeH3)
+	letter-spacing: 0.03rem
+	&.thin
+		font-weight: 400
+	&.heading
+		font-size: calc(var(--typeH1) *0.8)
+	&.source-serif
+		font-weight: 500
+		letter-spacing: 0.01rem
+	&.title-small
+		font-size: var(--typeBase)
+		font-weight: 500
+
+//-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+h3
+	line-height: 1.2
+	font-size: var(--typeH3)
+	&.thin
+		font-weight: 400
+	&.card-title.source-serif
+		font-weight: 400
+		line-height: 1.25
+		letter-spacing: -0.02em
+		transition: color 0.15s ease
+h3.item-title, h3.blog-title
+	font-weight: 500
+
+.gateway-card, .vertical-card
+	&:hover
+		h3.item-title, h3.blog-title
+			color: var(--themeaccent)
+.hover-card
+	&:hover
+		h3.item-title, h3.blog-title
+			color: var(--themeaccent)
+.hover-card.anveshi
+	&:hover
+		h3.item-title, h3.blog-title
+			color: var(--anveshi-color)
+
+.desk
+	h3.source-serif
+		&.tight
+			line-height: 1.12
+		&.blog-card-title
+			font-size: calc(var(--typeH2) * var(--serif-adjust))
+	h3.item-title, h3.item-title.source-serif
+		font-size: var(--typeH3)
+		letter-spacing: -0.01rem
+	h3.blog-title, h3.blog-title.source-serif
+		font-size: var(--typeH2)
+		letter-spacing: -0.01rem
+
+
+.mobile
+	h3.item-title, h3.item-title.source-serif
+		font-size: var(--typeH3)
+		letter-spacing: -0.01rem
+	h3.blog-title, h3.blog-title.source-serif
+		font-size: var(--typeH3)
+		letter-spacing: 0.02rem
+
+//-------------------------HEADER 4--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+h4
+	line-height: 1.2
+	&.thin
+		font-weight: 400
+	&.tight
+		line-height: 1.12
+
+.desk
+	h4
+		font-size: var(--typeH2)
+		letter-spacing: -0.02rem
+	h4.source-serif 
+		font-size: calc(var(--typeH2) * var(--serif-adjust))
+		line-height: 1.4
+		letter-spacing: 0
+	h4.source-serif.blog-card-title.tight
+		line-height: 1.2
+
+.mobile
+	h4.source-serif
+		font-size: calc(var(--typeH2) * var(--serif-adjust))
+		letter-spacing: -0.01rem
+	h4
+		font-size: var(--typeH2)
+
+//-------------------------HEADER 5--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+h5
+	font-size: var(--typeH2)
+	line-height: 1.28
+	font-weight: 650
+	&.tight
+		line-height: 1.12
+	&.thin
+		font-weight: 400
+	&.source-serif
+		font-size: var(--typeH1)
+		font-weight: 550
+
+.desk
+	h5.source-serif
+		font-size: calc(var(--typeH2) * var(--serif-adjust))
+		letter-spacing: 0
+	h5.title-item
+		letter-spacing: -0.03rem
+
+.mobile
+	h5.source-serif
+		font-size: calc(var(--typeH2) * var(--serif-adjust) * .95)
+		font-weight: 600
+		letter-spacing: -0.03rem
+
+//-------------------------HEADER 6--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+h6
+	font-size: var(--typeH1)
+	line-height: 1.5
+	&.tight
+		line-height: 1.2
+	&.thin
+		font-weight: 400
+	&.source-serif
+		line-height: 1.45
+		font-weight: 400
+
+.desk
+	h6
+		font-size: var(--typeH1)
+	h6.source-serif
+		font-size: calc(var(--typeH1) * var(--serif-adjust))
+		letter-spacing: -0.01rem
+
+.mobile
+	h6
+		font-size: var(--typeH2)
+	h6.source-serif
+		font-size: calc(var(--typeH1))
+
+//-------------------------P, PRE, LI--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+p, pre, li
+	font-size: var(--typeBase)
+	line-height: 1.5
+	letter-spacing: 0
+	font-weight: 350
+	&.tight
+		line-height: 1.28
+	&.item-line
+		font-size: calc(var(--typeBase) * 0.8)
+	&.item-line.source-serif
+			font-weight: 600
+	&.citation
+		font-size: 8px
+		font-weight: 700
+		letter-spacing: 0.14em
+	&.small-text
+		font-size: 0.8rem
+		line-height: 1.5
+	&.citation-big
+		font-size: 10px
+		font-weight: 600
+	&.para-text
+		font-size: 1rem
+
+.desk
+	p, pre, li
+		&.highlight-text
+			font-size: var(--typeH2)
+			line-height: 1.5
+		&.card-text
+			line-height: 1.5
+			font-size: calc(var(--typeBase) * 1.05)
+			&.tight
+				line-height: 1.28
+		&.small-text
+			font-size: 0.9rem
+			letter-spacing: 0.01rem
+		&.source-serif.item-line
+			line-height: 1.2
+			font-size:  calc(var(--typeH2) * 1.1 )
+			letter-spacing: -0.01rem
+
+
+.mobile
+	p, pre, li
+		&.highlight-text
+			line-height: 1.4
+		&.highlight-text.source-serif
+			line-height: 1.5
+			font-size: var(--typeH2)
+		&.source-serif.item-line
+			line-height: 1.12
+			font-size:  calc(var(--typeH2) * 0.96 )
+			letter-spacing: -0.01rem
+		&.card-text
+			line-height: 1.4
+			font-size: calc(var(--typeBase) * 1.05)
+			&.tight
+				line-height: 1.28
+
+.desk, .mobile
+	.article-typography
+		p, pre, li
+			font-size: calc(var(--typeBase) * var(--serif-adjust-blog))
+			line-height: 1.6
+		p, pre
+			margin-bottom: 1.25rem
+
+.desk, .mobile	
+	.classic-document
+		p, pre, li
+			line-height: 1.6
+			font-size: 1.2rem
+		p, pre
+			margin-bottom: 1.25rem
+		ul, ol
+			margin-top: 0
+			margin-bottom: 1.25rem
+			padding-left: 1rem
+		h3
+			font-size: var(--typeH1)
+			font-weight: 600
+			maring-bottom: 1.25rem
+
+small
+	font-family: var(--fontface-sans)
+	font-size: 11px
+
+p.eyebrow
+	font-size: 11px
+	color: var(--grey-std)
+	letter-spacing: 0.02rem
+	transition: all 0.06s ease
+	&:hover
+		letter-spacing: 0
+	&.anveshi-o
+		color: var(--anveshi-color)
+
+p.subtitle
+	font-size: 0.875rem
+
+a.small-text, .small-text
+	font-size: 0.75rem
 
 pre
 	box-sizing: border-box
@@ -10,252 +359,13 @@ pre
 	word-wrap: break-word
 	word-break: break-word
 	overflow: hidden
-	font-family: 'Google Sans Flex', sans-serif
-	font-optical-sizing: auto
 
-small
-	font-size: 10px
-
-.serif-head
-	font-family: 'Playfair Display', serif
-
-.source-serif
-	font-family: 'Source Serif 4', serif
-
-.garamond
-	font-family: 'EB Garamond', serif
-
-h1
-	font-size: 4.196rem
-	&.tight
-		line-height: 1.2
-h2
-	font-size: 3.267rem
-h3
-	font-size: 2.686rem
-h4
-	font-size: 2.148rem
-	font-weight: 670
-	letter-spacing: 0px
-h5
-	font-size: 1.719rem
-	font-weight: 650
-	&.source-serif
-		font-weight: 650
-	&.source-serif.thin
-		font-weight: 400
-h6
-	font-size: 1.4rem
-	font-weight: 650
-	&.source-serif
-		letter-spacing: -0.35px
-		font-weight: 650
-	&.source-serif.thin
-		font-weight: 400
-p, pre
-	font-size: 1.1rem
-	&.sm
-		font-size: 0.9rem
-	&.big
-		font-size: 1.25rem
-
-@media screen and (max-width: 1024px)
-	p, pre
-		font-size: 1.125rem
-		&.sm
-			font-size: 1rem
-		&.big
-			font-size: 1.23rem
-	h6
-		font-size: 1.315rem
-	h5
-		font-size: 1.47rem
-	h4
-		font-size: 1.575rem
-	h2
-		font-size: 2.07rem
-	h1
-		font-size: 2.6rem
-
-@media screen and (min-width: 1025px)
-	h1
-		letter-spacing: -0.4px
-		line-height: 1.4
-		&.tight
-			line-height: 1.2
-	h2
-		letter-spacing: -0.4px
-		line-height: 1.4
-		&.steady
-			font-size: 32px
-		&.tight
-			line-height: 1.15
-	h3
-		letter-spacing: -0.4px
-		line-height: 1.4
-		&.tight
-			line-height: 1.28
-	h4
-		letter-spacing: -0.4px
-		line-height: 1.4
-		&.tight
-			line-height: 1.28
-	h5
-		line-height: 1.6
-		&.tight
-			line-height: 1.28
-		&.source-serif
-			letter-spacing: -0.35px
-	h6
-		line-height: 1.7
-		&.tight
-			line-height: 1.28
-	p, pre
-		line-height: 1.6
-		&.tight
-			line-height: 1.4
-@media screen and (max-width: 1024px)
-	h2
-		&.steady
-			font-size: 22px
-		&.tight
-			line-height: 1.2
-	h3
-		&.tight
-			line-height: 1.28
-	h4
-		line-height: 1.28
-	h5
-		line-height: 1.6
-		&.tight
-			line-height: 1.28
-	h6
-		line-height: 1.6
-		&.tight
-			line-height: 1.28
-	p, pre
-		line-height: 1.4
-		&.tight
-			line-height: 1.4
-
-p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
-	margin: 0
-	color: var(--primary)
-
-p, pre
-	letter-spacing: 0px
-	&.bold
-		font-weight: 600
+//----MODIFIERS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .italic
 	font-style: italic
-
-.bold900
-	font-weight: 900
-
-small.italic
-	font-style: italic
-
-.blog-container
-	p, li, pre, blockquote, em
-		font-family: 'EB Garamond', serif
-	h2, h3
-		font-family: 'Source Serif 4', serif
-		line-height: 1.2
-	a
-		text-decoration-color: var(--themesub)
-		color: inherit
-	img
-		object-fit: contain !important
-	@media screen and (min-width: 1025px)
-		img
-			height: 400px !important
-			margin-bottom: 16px
-		p, pre
-			font-size: 1.55rem
-			line-height: 1.7
-			margin-bottom: 2rem
-		ul, ol
-			padding-left: 1rem
-			margin-bottom: 2rem
-		li
-			font-size: 1.55rem
-			line-height: 1.7
-			margin-bottom: 0.6rem
-		blockquote
-			border-left: 4px solid var(--theme)
-			margin-left: 0
-			margin-right: 0
-			padding-left: 16px
-			font-style: italic
-			margin-top: 2rem
-			margin-bottom: 2rem
-			p
-				font-size: 1.5rem
-				line-height: 1.5
-			cite
-				font-size: 14px
-				color: var(--grey-std)
-		h5
-			font-size: 1.74rem
-			margin-top: 2.4rem
-			margin-bottom: 2.4rem
-		h2
-			font-size: 3rem
-			letter-spacing: -0.5px
-			margin-bottom: 1.5rem
-			margin-top: 4rem
-			line-height: 1.2
-		h3
-			font-size: 1.975rem
-			margin-top: 2.4rem
-			margin-bottom: 1rem
-	@media screen and (max-width: 1024px)
-		img
-			max-height: 400px !important
-			width: 100% 
-			margin-bottom: 16px
-		p, pre
-			font-size: 1.32rem
-			line-height: 1.55
-			margin-bottom: 1rem
-		ul, ol
-			padding-left: 1.2rem
-			margin-bottom: 1rem
-		li
-			font-size: 1.32rem
-			line-height: 1.55
-			line-height: 1rem
-		blockquote
-			border-left: 4px solid var(--theme)
-			margin-left: 0
-			margin-right: 0
-			padding-left: 16px
-			font-style: italic
-			margin-top: 2rem
-			margin-bottom: 1rem
-			padding: 0.8rem 0 0.4rem 0.8rem
-			p
-				font-size: 1.4rem
-				line-height: 1.5
-			cite
-				font-size: 14px
-				color: var(--grey-std)
-		h5
-			font-size: 1.45rem
-			margin-top: 2rem
-			margin-bottom: 2rem
-			line-height: 1.4
-		h2
-			font-size: 2rem
-			letter-spacing: -0.5px
-			margin-bottom: 1.6rem
-			margin-top: 4rem
-		h3
-			font-size: 1.7rem
-			margin-top: 2rem
-			margin-bottom: 1rem
-
+.ta-j
+	text-align: justified
 .ta-c
 	text-align: center
 	@media screen and (max-width: 1024px)
@@ -263,60 +373,72 @@ small.italic
 			text-align: left
 .ta-l
 	text-align: left
+.ta-r
+	text-align: right
+	@media screen and (max-width: 1024px)
+		&.mleft
+			text-align: left
+
 .tt-u
 	text-transform: uppercase
 .tt-l
 	text-transform: lowercase
 .tt-c
 	text-transform: capitalize
-
 .white
 	color: var(--whitefix)
 .blue
 	color: var(--theme)
+.blue-dark
+	color: var(--themealt)
 .anveshi-o
 	color: var(--anveshi-color)
 .grey
 	color: var(--grey-lg)
+.altprim
+	color: #676767
 .lgrey
-	color: var(--grey-md)
+	color: #b7b7b7
+.altcolor
+	color: var(--primaryalt)
+.heading.lgrey
+	color: #d7d7d7
+.w500
+	font-weight: 500
 
-.thin
-	font-weight: 400
+//----LINKS AND BUTTONS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-.thinner
-	font-weight: 300
+a.heading.single
+	font-size: var(--typeBase)
+	border: 1px solid #e1e1e1
+	border-radius: 4px
+	width: max-content
+	padding: 0.65rem 1rem
+	background: linear-gradient(180deg,rgba(250, 250, 250, 1) 29%, rgba(254, 254, 254, 1) 100%)
+	cursor: pointer
+	box-shadow: var(--sh4)
+	&:hover
+		box-shadow: none
+		background: #FFF
 
 a
-	&.underline
-		text-decoration-color: var(--theme)
-		color: inherit
-		&:hover
-			color: var(--theme)
-	&.blank
-		text-decoration: none
-		color: inherit
+	text-decoration: none
+	font-family: inherit
+	color: inherit
 	&.linker
 		&:hover
 			text-decoration: underline
 			text-decoration-color: var(--theme)
-	&.blank.color
+	&.linked
+		color: var(--themealtold)
 		&:hover
-			color: var(--themesub)
-	&.heading
-		text-decoration: none
+			color: var(--theme)
+	&.linkonhover
 		color: inherit
 		&:hover
-			text-decoration: underline
-			text-decoration-color: var(--theme)
-	&.linked
-		color: var(--theme)
-		&:hover
-			color: var(--themesub)
+			color: var(--theme)
 	&.linkedlight
-		color: var(--themesub)
-	&.bold
-		font-weight: 600
+		color: var(--theme)
 	&.buttonheading
 		text-decoration: none
 		background: var(--primary)
@@ -344,39 +466,24 @@ a.container
 	text-decoration: none
 	color: inherit
 
+
+.title-item
+	transition: transform 0.25s ease
+	position: relative
+	&:hover
+		transform: translateX(8px) translateY(-2px)
+		color: var(--themealt)
+
 .classic-document
-	p, pre
-		font-size: 1.12rem
-		margin-bottom: 1.2rem
-		line-height: 1.6
-	ul, ol
-		padding-left: 1.2rem
-	li
-		font-size: 1.12rem
-		margin-bottom: 0.5rem
-		line-height: 1.6
-	h3
-		font-size: 1.687rem
-		margin-top: 2.5rem
-		margin-bottom: 1.2rem
-	h4
-		font-size: 1.5rem
-		margin-bottom: 1.2rem
-		padding-top: 1.2rem
-	h5
-		font-size: 1.2rem
-	a
-		text-decoration: none
-		color: var(--theme)
-		&:hover
-			text-decoration: underline
-	blockquote
-		font-style: italic
-		p
-			color: var(--grey-lg)
-	&.b-q
-		p
-			font-size: 1.05rem
-	@media screen and (min-width: 1025px)
-		p, pre, li
-			font-size: 1.25rem
+	img
+		display: block
+		max-width: 100%
+		height: auto
+		max-height: 540px
+		object-fit: contain
+		margin-right: auto
+		border: 1px solid #e7e7e7
+		padding: 1rem
+		background: var(--stone)
+		border-radius: 6px
+		margin-bottom: 1rem

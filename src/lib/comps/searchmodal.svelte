@@ -8,7 +8,7 @@
 
 	let search: 'loading' | 'ready' = 'loading'
   	let searchTerm = ''
-  	let results: SearchResult[] = []      // <-- explicit type
+  	let results: SearchResult[] = []
 
 	function closeifOff() {
   		$searchState = false
@@ -29,7 +29,6 @@
 
   $: if (search === 'ready') {
     ;(async () => {
-      // if searchTerm is empty, clear results quickly (optional)
       if (!searchTerm.trim()) {
         results = []
         return
@@ -42,84 +41,211 @@
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="column search-modal-back" class:inside={$searchState} on:click={closeifOff}>
-	<div class="column search-modal rgap32" on:click|stopPropagation>
-		<div class="row ycenter xbetween">
-			<small class="blue">SEARCH</small>
-			<button class="blank" on:click={toggleSearch}>
+<div class="sm-back" class:open={$searchState} on:click={closeifOff}>
+	<div class="sm-panel" on:click|stopPropagation>
+
+		<div class="sm-header">
+			<div class="sm-header-left">
+				<span class="sm-icon">⌕</span>
+				<p class="eyebrow tt-u sm-label">Search</p>
+			</div>
+			<button class="blank sm-close" on:click={toggleSearch}>
 				<Close larger={true}/>
 			</button>
 		</div>
-		<div class="column search-and-result">
+
+		<div class="sm-input-wrap">
 			{#if search === 'ready'}
-				<input bind:value={searchTerm} placeholder="Search" autocomplete="off" spellcheck="false" type="search" class="search-input"/>
+				<input
+					bind:value={searchTerm}
+					placeholder="Search articles, books, topics…"
+					autocomplete="off"
+					spellcheck="false"
+					type="search"
+					class="sm-input"
+				/>
+			{:else}
+				<div class="sm-loading">
+					<span class="eyebrow tt-u">Loading index…</span>
+				</div>
 			{/if}
 		</div>
-		{#if results.length}
-		<div class="column tinned rgap16">
+
+		{#if results.length > 0}
+		<div class="sm-results">
 			{#each results as result}
-				<div class="column">
-					<p><a class="blank linked" href={result.slug} on:click={toggleSearch}>{@html result.title}</a></p>
-					<p class="sm lgrey">{@html result.content}</p>
-				</div>
+			<a class="sm-result blank" href={result.slug} on:click={toggleSearch}>
+				{#if result.category}
+				<span class="sm-result-cat eyebrow tt-u">{result.category}</span>
+				{/if}
+				<p class="sm-result-title">{@html result.title}</p>
+				{#if result.content}
+				<p class="sm-result-excerpt">{@html result.content}</p>
+				{/if}
+			</a>
 			{/each}
-			</div>
+		</div>
+		{:else if searchTerm.trim() && search === 'ready'}
+		<div class="sm-empty">
+			<p class="eyebrow tt-u">No results for "{searchTerm}"</p>
+		</div>
 		{/if}
+
 	</div>
 </div>
 
 <style lang="sass">
 
-input
-	padding: 1rem
-	border-radius: 8px
-	border: 1px solid var(--grey-std)
-
-.column.tinned
-	@media screen and (min-width: 1025px)
-		height: 75%
-		overflow-y: scroll
+.sm-back
+	position: fixed
+	inset: 0
+	z-index: 999
+	background: rgba(0,0,0,0)
+	backdrop-filter: blur(0px)
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	padding-top: 6vh
+	pointer-events: none
+	visibility: hidden
+	opacity: 0
+	transition: background 0.18s ease, backdrop-filter 0.18s ease, opacity 0.18s ease, visibility 0s 0.18s
+	&.open
+		background: rgba(0,0,0,0.35)
+		backdrop-filter: blur(6px)
+		pointer-events: all
+		visibility: visible
+		opacity: 1
+		transition: background 0.18s ease, backdrop-filter 0.18s ease, opacity 0.18s ease, visibility 0s 0s
 	@media screen and (max-width: 1024px)
-		height: calc(100vh - 240px)
-		overflow-y: scroll
+		padding-top: 0
+		align-items: flex-end
 
-.search-modal-back
+.sm-panel
+	background: #FFFFFF
+	border: 1px solid rgba(0,0,0,0.07)
+	border-radius: 16px
+	box-shadow: 0 8px 32px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.06)
 	display: flex
 	flex-direction: column
-	align-items: center
-	justify-content: center
-	height: 100vh
-	width: 100vw
-	position: fixed
-	top: 100vh
-	left: 0
-	z-index: 999
-	backdrop-filter: blur(7px)
-	transition: all 0.12s ease
-	padding: 0
-	&.inside
-		top: 0
-
-.search-modal
-	::-webkit-scrollbar
-		width: 4px
-	::-webkit-scrollbar-thumb
-		background: var(--theme)
-	::-webkit-scrollbar-track
-		background: var(--background)
-
-.search-modal
-	background: var(--background)
-	border: 1px solid var(--grey-sm)
-	border-radius: 8px
-	z-index: 2999
+	overflow: hidden
 	@media screen and (min-width: 1025px)
-		width: 60%
-		height: 80%
-		padding: 2rem
+		width: 56%
+		max-width: 680px
+		max-height: 78vh
 	@media screen and (max-width: 1024px)
 		width: 100%
-		height:  100%
-		padding: 2rem
+		max-height: 88dvh
+		border-bottom-left-radius: 0
+		border-bottom-right-radius: 0
+
+// ── HEADER ────────────────────────────────────────────────
+
+.sm-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 1.1rem 1.25rem
+	border-bottom: 1px solid rgba(0,0,0,0.06)
+	flex-shrink: 0
+
+.sm-header-left
+	display: flex
+	align-items: center
+	gap: 8px
+
+.sm-icon
+	font-size: 1rem
+	color: var(--text-ghost)
+	line-height: 1
+
+.sm-label
+	color: var(--text-ghost)
+
+.sm-close
+	color: var(--text-ghost)
+	transition: color 0.12s ease
+	&:hover
+		color: var(--text-main)
+
+// ── INPUT ─────────────────────────────────────────────────
+
+.sm-input-wrap
+	padding: 1rem 1.25rem
+	border-bottom: 1px solid rgba(0,0,0,0.06)
+	flex-shrink: 0
+
+.sm-input
+	width: 100%
+	padding: 0.7rem 0.9rem
+	font-size: 1rem
+	border: 1px solid rgba(0,0,0,0.1)
+	border-radius: 8px
+	background: #F5F4F2
+	color: var(--text-main)
+	transition: border-color 0.15s ease, box-shadow 0.15s ease
+	outline: none
+	&::placeholder
+		color: var(--text-ghost)
+	&:focus
+		border-color: var(--theme)
+		box-shadow: 0 0 0 3px rgba(var(--theme-rgb, 0,0,0), 0.06)
+		background: #FFFFFF
+
+.sm-loading
+	padding: 0.5rem 0
+
+// ── RESULTS ───────────────────────────────────────────────
+
+.sm-results
+	overflow-y: auto
+	flex: 1
+	padding: 0.75rem
+	display: flex
+	flex-direction: column
+	gap: 2px
+	&::-webkit-scrollbar
+		width: 4px
+	&::-webkit-scrollbar-thumb
+		background: rgba(0,0,0,0.12)
+		border-radius: 2px
+	&::-webkit-scrollbar-track
+		background: transparent
+
+.sm-result
+	display: flex
+	flex-direction: column
+	gap: 3px
+	padding: 0.85rem 1rem
+	border-radius: 10px
+	transition: background 0.12s ease
+	&:hover
+		background: #F5F4F2
+
+.sm-result-cat
+	color: var(--theme)
+	font-size: 9px
+
+.sm-result-title
+	font-size: 0.93rem
+	font-weight: 600
+	color: var(--text-main)
+	margin: 0
+	line-height: 1.3
+
+.sm-result-excerpt
+	font-size: 0.8rem
+	color: var(--text-ghost)
+	margin: 0
+	line-height: 1.5
+	display: -webkit-box
+	-webkit-line-clamp: 2
+	-webkit-box-orient: vertical
+	overflow: hidden
+
+.sm-empty
+	padding: 2rem 1.25rem
+	text-align: center
+	color: var(--text-ghost)
 
 </style>

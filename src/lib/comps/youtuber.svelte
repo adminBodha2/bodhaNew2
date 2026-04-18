@@ -11,7 +11,7 @@
   export let heighting = '100%';
   export let widthing = '100%';
 	export let iframe_styles: string = `
-		border-radius: 0.6rem;
+		border-radius: 0px;
 	`;
 
 	const { h, m, s } = skipTo;

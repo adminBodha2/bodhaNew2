@@ -1,0 +1,1127 @@
+button
+	cursor: pointer
+	&.blank
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		margin: 0
+		border: none
+		background: none
+	&.taglabel
+		display: flex
+		justify-content: center
+		align-items: center
+		background: #f0f0f0
+		border: 1px solid #e0e0e0
+		color: #555555
+		font-size: 15px
+		padding: 8px 16px
+		border-radius: 4px
+		transition: background 0.1s
+		&:hover
+			background: #e6e6e6
+			color: #333333
+	&.buttonheading
+		display: flex
+		justify-content: center
+		align-items: center
+		border: none
+		background: var(--primary)
+		color: var(--background)
+		font-size: 14px
+		font-weight: 500
+		padding: 4px 8px
+		transition: 0.1s
+		border-radius: 2px
+		text-transform: uppercase
+		&:hover
+			background: var(--theme)
+		&.selected
+			background: var(--themesub)
+	&.button-main-line
+		background: white
+		border: 1px solid var(--themesub)
+		text-decoration: none
+		color: var(--themesub)
+		font-size: 13px
+		padding: 8px 16px
+		width: max-content
+		text-transform: uppercase
+		border-radius: 2px
+		transition: 0.02s
+		&:hover
+			background: var(--theme)
+			color: white
+	&.button-main
+		background: var(--theme)
+		border: none
+		text-decoration: none
+		color: var(--background)
+		font-size: 13px
+		padding: 8px 16px
+		width: max-content
+		text-transform: uppercase
+		border-radius: 2px
+		transition: 0.06s
+		&:hover
+			background: var(--themealt)
+
+button.blankbtn
+	background: none
+	border:  none
+	padding: 0
+	cursor: pointer
+
+.primary
+	position: relative
+	text-decoration: none
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 4px
+	background: #eaeaea
+	overflow: hidden
+	cursor: pointer
+	border: 1px solid #d9d9d9
+	width: max-content
+	&::after
+		content: ""
+		width: 0%
+		height: 100%
+		background: var(--theme)
+		position: absolute
+		transition: all 0.24s ease-in-out
+		right: 50%
+	&:hover::after
+		right: auto
+		right: 0
+		width: 100%
+	span
+		text-align: center
+		text-decoration: none
+		width: 100%
+		padding: 0.7rem 1rem
+		color: var(--primaryalt)
+		font-weight: 500
+		font-size: 0.9rem
+		text-transform: uppercase
+		z-index: 20
+		transition: all 0.05s ease-in-out
+	&:hover span
+		animation: scaleUp 0.9s ease-in-out
+		color: #FFFFFF
+	@media screen and (min-width: 1025px)
+		font-size: 1rem
+
+@keyframes scaleUp
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)
+
+.primary.black
+	background: #474747
+	border: 1px solid #9a9a9a
+	&:hover
+		background: #5a5a5a
+	span
+		color: var(--whitefix)
+
+.primary.black.smaller
+	span
+		font-size: 0.75rem
+		padding: 0.5rem
+		text-transform: uppercase
+	&.active
+		background: var(--theme)
+		border: 1px solid var(--themealt)
+
+.primary.anveshi
+	background: var(--anveshi-color)
+	&::after
+		background: var(--anveshidark)
+	&:hover
+		background: var(--anveshi-color)
+	span
+		color: var(--whitefix)
+
+button.ftnbtn
+	font-size: 14px
+	background: var(--grey-md)
+	border: 1px solid var(--grey-xs)
+	color: #FFFFFF
+	padding: 8px 12px
+	letter-spacing: 0.04em
+	text-transform: uppercase
+	border-radius: 5px
+	cursor: pointer
+	transition: all 0.16s ease
+	&:hover
+		background: var(--grey-lg)
+		color: var(--background)
+		transform: scaleX(1.025)
+	&:active
+		transform: scale(1.1)
+	&.active
+		background: var(--themealtold)
+		color: var(--background)
+	&.anveshi
+		color: #FFFFFF
+		&:hover
+			background: var(--anveshi-color)
+			color: var(--whitefix)
+		&.active
+			background: var(--whitefix)
+			color: var(--anveshi-color)
+			border: 1px solid var(--anveshidark)
+			&:hover
+				background: var(--anveshi-color)
+				color: var(--whitefix)
+		&.darker
+			background: var(--anveshidark)
+			border: 1px solid var(--anveshidark)
+			font-size: 14px
+			font-weight: 600
+			&.active
+				color: #FFFFFF
+	&.darker
+		background: var(--theme)
+		border: 1px solid var(--themesub)
+
+a.ftnbtn
+	font-size: 14px
+	background: #fafafa
+	font-family: 'Google Sans', sans-serif
+	font-weight: 500
+	border: 1px solid #b7b7b7
+	color: #a7a7a7
+	padding: 0.5rem 1rem
+	text-decoration: none
+	letter-spacing: 0.04em
+	text-transform: uppercase
+	border-radius: 4px
+	cursor: pointer
+	transition: all 0.08s
+	&:hover
+		background: var(--theme)
+		color: var(--background)
+	&.active
+		background: var(--themealt)
+		color: var(--background)
+
+button.ftnbtn-b
+	font-size: 14px
+	background: var(--primaryalt)
+	border: 1px solid var(--primary)
+	color: var(--background)
+	padding: 6px 16px
+	letter-spacing: 0.02em
+	text-transform: uppercase
+	border-radius: 8px
+	cursor: pointer
+	transition: all 0.08s
+	&:hover
+		background: var(--themealt)
+		color: var(--background)
+	&.active
+		background: var(--theme)
+		border: 1px solid var(--theme)
+		color: var(--background)
+
+.label
+	background: #f0f0f0
+	border: 1px solid #e0e0e0
+	width: max-content
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 2px 5px
+	border-radius: 3px
+	text-decoration: none
+	color: #555555
+	p, small
+		color: #555555
+	&.anveshi
+		background: rgba(211, 99, 58, 0.08)
+		border: 1px solid rgba(211, 99, 58, 0.2)
+		color: var(--anveshi-color)
+		p, small
+			color: var(--anveshi-color)
+	&.light
+		background: rgba(25, 113, 194, 0.06)
+		border: 1px solid rgba(25, 113, 194, 0.15)
+		color: var(--theme)
+
+small.label
+	background: var(--theme)
+	color: white
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 500
+	letter-spacing: 0.01rem
+	margin-top: auto
+
+a.label
+	background: var(--theme)
+	border: 1px solid #676767
+	width: max-content
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 2px 6px
+	border-radius: 3px
+	text-decoration: none
+	color: #FFFFFF
+	font-size: 12px
+	font-family: var(--fontface-sans)
+	font-weight: 500
+	transition: all 0.08s ease
+	&:hover
+		background: var(--themealtold)
+		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.06), 3px 4px 6px rgba(0, 0, 0, 0.03)
+		transform: scale(1.02)
+
+
+.blogbox
+	background: var(--grey-xs)
+	padding: 1.2rem
+	border-radius: 8px
+	transition: background 0.12s
+	&:hover
+		background: #f0f0f0
+
+.blogbox2
+	border: 1px solid var(--grey-sm)
+	border-radius: 4px
+	padding: 2rem
+	@media screen and (max-width: 1024px)
+		padding: 1rem
+
+//-----------------PAGE CONTAINERS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.box
+	display: flex
+	flex-direction: column
+	&.std
+		row-gap: var(--gap-box)
+	&.padded
+		padding-top: var(--pad-std)
+		padding-bottom: var(--pad-std)
+	&.padded-ontop
+		padding-top: 8rem
+		padding-bottom: var(--pad-std)
+	&.padded-ontop.only
+		padding-top: 8rem
+		padding-bottom: 0
+	&.padded-top
+		padding-top: var(--pad-std)
+	&.padded-down
+		padding-bottom: var(--pad-std)
+	&.border-down
+		border-bottom: 1px solid var(--grey-sm)
+	&.border-top
+		border-top: 1px solid var(--grey-sm)
+	&.textbox
+		row-gap: var(--gap-text)
+	&.labelbox
+		row-gap: 8px
+	&.elembox
+		row-gap: var(--gap-elem)
+	&.bluebord-top
+		border-top: 1px solid var(--themeborder)
+	&.tightrows
+		row-gap: 12px
+
+.desk
+	&.min70
+		min-height: 70vh
+
+.desk
+	.box.viewHeight
+		height: 100vh
+	.box.viewHeight.atMin
+		min-height: 100vh
+
+.mobile
+	.box
+		&.viewHeight
+			height: 100%
+
+//-----------------PAGE SHELLS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.section-block
+	display: flex
+	flex-direction: column
+	gap: var(--gap-text)
+
+.section-link
+	color: var(--theme)
+	transition: color 0.12s ease
+	&:hover
+		color: var(--themealt)
+
+a.section-link
+	color: var(--theme)
+	font-size: 12px
+	&:hover
+		text-decoration: underline
+
+.standard-grid
+	display: grid
+	gap: 1px
+	background: rgba(0,0,0,0.06)
+	border: 1px solid rgba(0,0,0,0.06)
+	border-radius: 5px
+	overflow: hidden
+	@media screen and (max-width: 1024px)
+		background: #FFF
+	&.whiten
+		background: var(--whitefix)
+
+.tag-pill, p.tag-pill, a.tag-pill, .scaledTypo p.tag-pill
+	font-size: 7.5px
+	font-weight: 500
+	letter-spacing: 0.1em
+	color: #a1a1a1
+	padding: 2px 8px
+	border-radius: 100px
+	border: 1px solid #a1a1a1
+	background: var(--color-surface)
+	transition: all 0.06s ease
+	&:hover
+		color: var(--theme)
+		border-color: var(--theme)
+	&.colored
+		background: var(--themeaccent)
+		color: var(--whitefix)
+	&.anveshi
+		background: var(--anveshi-color)
+		color: var(--whitefix)
+		border: none
+
+.nuevocard
+	background: #ffffff
+	border: var(--border-rest)
+	border-radius: 5px
+	box-shadow: var(--shadow-rest)
+	transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.2s ease
+	&:hover
+		border-color: var(--border-hover)
+		box-shadow: var(--shadow-hover)
+		transform: translateY(-2px)
+
+.top-accent
+	position: relative
+	overflow: hidden
+	&::before
+		content : ' '
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 2px
+		background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.06) 50%, transparent 100%)
+		border-radius: 0 0 2px 2px
+
+button.page-btn
+	background: rgba(239, 238, 236, 0.4)
+	border-right: var(--stroke-focus)
+	border-top: none
+	border-bottom: none
+	border-left: none
+	color: var(--primaryalt)
+	font-weight: 500
+	transition: all 0.07s ease
+	font-size: 1.1rem
+	padding: 1rem 1.5rem
+	&:last-child
+		border-right: none
+	&:hover
+		background: var(--theme)
+		transform: scale(1.05)
+		border-right: 1px solid var(--theme)
+		color: #FFF
+	&:active
+		background: #ffffff
+		color: var(--theme)
+		box-shadow: none
+		transform: scale(1.1)
+	&.active
+		background: var(--themealtold)
+		color: #FFFFFF
+	@media screen and (max-width: 1024px)
+		border: var(--stroke-focus)
+		background: #FFF
+		border-radius: 3px
+		padding: 0.75rem
+		font-size: 1rem
+		border: var(--stroke-focus)
+		border-right: var(--stroke-focus)
+		&:hover
+			transform: scale(1)
+		&:last-child
+			border: var(--stroke-focus)
+
+.desk
+	.pagination
+		border-radius: 4px
+		overflow: hidden
+		width: max-content
+		border: var(--stroke-focus)
+		padding: 2px
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+	.card3
+		.card3-image
+			margin-bottom: -1rem
+			border-radius: 5px
+		.card3-text
+			h3
+				padding-right: 1rem
+			.classic-document
+				border: 1px solid #e1e1e1
+				background: #f9f9f9
+				padding: 2rem
+				border-radius: 5px 0 0 5px
+
+.senpon
+	box-shadow: 20px 25px -5px rgba(25, 113, 194, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.02)
+
+.mobile
+	.pagination
+		padding: 4px
+		border: var(--stroke-medium)
+		width: 100%
+		gap: 4px
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		background: #EDECE7
+		.all-button
+			grid-column: span 5
+	.card3
+		padding: 0.5rem
+		background: #f1f1f1
+		border-radius: 5px
+		border: 1px solid #d7d7d7
+		.card3-text
+			padding-left: 0.5rem
+			padding-right: 0.5rem
+			border-left: var(--stroke-focus)
+			border-bottom: var(--stroke-focus)
+			border-right: var(--stroke-focus)
+			background: #FFFFFF
+			padding: 2rem
+		.card3-image
+			border-top: var(--stroke-focus)
+			border-left: var(--stroke-focus)
+			border-right: var(--stroke-focus)
+
+.overlay1
+	background: rgba(244, 243, 238, 0.35)
+	border: 1px solid rgb(237, 236, 231)
+	padding: 4rem
+	border-radius: 5px
+
+.toffcolor
+	background: rgba(244, 243, 238, 0.37)
+
+.library-card
+	background: #FFF
+	border: 1px solid rgb(237, 236, 231)
+	padding: 1.5rem 1.2rem
+	border-radius: 4px
+	row-gap: 0.5rem
+	.library-card-text
+		row-gap: 0.5rem
+	.library-card-small-text
+		margin-top: 1rem
+
+.newslate
+	background: var(--color-white)
+	border: 1px solid var(--color-hairline)
+	border-radius: 5px
+	padding: 1.5rem
+
+.card-outer
+	background: #fafafa
+	border: 1px solid #e7e7e7
+	border-radius: 5px
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+	&.box
+		.imagebox
+			overflow: hidden
+	&.row
+		.imagebox
+			width: 520px
+			border: 1px solid #f1f1f1
+		.textbox
+			width: calc(100% - 520px)
+			border-top: 1px solid #f1f1f1
+			border-right: 1px solid #f1f1f1
+			border-bottom: 1px solid #f1f1f1
+	.textbox
+		background: #FFFFFF
+		border-radius: 5px
+
+.mobile
+	.card-outer
+		border: none
+		padding: 0
+		.imagebox
+			border-radius: 5px 5px 0 0
+			height: 280px
+			overflow: hidden
+		.textbox
+			border-radius: 0 0 5px 5px
+		&.row.mcol
+			.imagebox
+				border: 1px solid #e7e7e7
+				width: 100%
+			.textbox
+				width: 100%
+				border-top: none
+				border-left: 1px solid #e7e7e7
+				border-right: 1px solid #e7e7e7
+				border-bottom: 1px solid #e7e7e7
+				padding: 1.5rem 1em
+	.card-outer.box
+		border: 1px solid #e7e7e7
+		padding: 6px
+		.imagebox
+			border-top: 1px solid #e1e1e1
+			border-left: 1px solid #e1e1e1
+			border-right: 1px solid #e1e1e1
+		.textbox
+			border-left: 1px solid #e1e1e1
+			border-right: 1px solid #e1e1e1
+			border-bottom: 1px solid #e1e1e1
+			padding: 1.5rem 1rem
+	.card2
+		padding: 1rem
+		border-radius: 5px
+
+.card2
+	border: 1px solid #f1f1f1
+	background: #fafafa
+	&:hover
+		box-shadow: var(--sh4)
+
+.desk
+	.card-outer.row
+		padding: 1rem
+		.imagebox
+			border-radius: 5px
+		.textbox
+			padding: 2rem
+	.card-outer.box
+		padding: 1.5rem
+		.imagebox
+			height: 320px
+			overflow: hidden
+			border-radius: 5px 5px 0 0 
+		.textbox
+			height: calc(100% - 320px)
+			padding: 1.5rem 2rem
+			border: 1px solid #e7e7e7
+	.card2
+		padding: 2rem
+		border-radius: 5px
+
+a.card-outer
+	h3, h4
+		transition: all 0.15s ease
+		position: relative
+		&::after
+			content: " "
+			width: 0
+			height: 2px
+			bottom: 0
+			left: 0
+			background: var(--themealtold)
+			position: absolute
+			transition: all 0.3s ease
+	&:hover
+		h3, h4
+			&::after
+				width: 100%
+
+.backtype1
+	border-radius: 5px
+	background: #f5f5f5
+	border: 1px solid #eaeaea
+	padding: 8px
+	box-shadow: var(--shadow-low)
+
+.backtype2
+	border-radius: 5px
+	background: #e1e1e1
+	border: 1px solid #e1e1e1
+	padding: 5px
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.1)
+	&:hover
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0), 0 2px 6px rgba(0, 0, 0, 0)
+
+.backtype3
+	border-radius: 5px
+	background: #f1f1f1
+	overflow: hidden
+	p
+		padding: 0.5rem 0.75rem
+		background: #FFFFFF
+		border: 1px solid #e1e1e1
+	border: 1px solid #e1e1e1
+	padding: 5px
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05)
+	&:hover
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0), 0 2px 6px rgba(0, 0, 0, 0)
+
+.grid-card
+	background: #f7f7f7
+	border: var(--stroke-focus)
+	.card-item
+		background: #FFFFFF
+		border: var(--stroke-medium)
+		&:hover
+			box-shadow: var(--shadow-med)
+
+.desk
+	.grid-card
+		padding: 1rem
+		.card-item
+			padding: 2rem
+	.fitment
+		min-height: 100vh
+		&.box
+			justify-content: center
+	.result
+		background: #eaeaea
+		padding: 5px
+		border: 1px solid #e1e1e1
+		border-radius: 5px
+		transition: all 0.05s ease
+		box-shadow: var(--sh8)
+		&:hover
+			box-shadow: var(--sh1)
+		.textbox
+			background: #ffffff
+			border: 1px solid #d8d8d8
+			height: 100%
+			padding: 2rem
+			border-radius: 5px
+
+.mobile
+	.grid-card
+		padding: 0.6rem
+		.card-item
+			padding: 1.5rem 1rem
+
+
+.basic-card
+	background: #f1f1f1
+	padding: 0.5rem
+	row-gap: 8px
+	border-radius: 5px
+	h6, h4
+		background: #Fafafa
+		border: 1px solid #d9d9d9
+		padding: 0.5rem 1rem
+		border-radius: 5px
+		box-shadow: var(--shHero)
+	p
+		background: #FFFFFF
+		border: 1px solid #d9d9d9
+		padding: 1rem
+		border-radius: 5px
+		height: 100%
+	@media screen and (max-width: 1024px)
+		padding: 0.5rem
+
+.basic-card2
+	padding: 1rem
+	row-gap: 8px
+	background: #f1f1f1
+	height: max-content
+	.row
+		border: 1px solid #d9d9d9
+		background: #ffffff
+		padding: 1rem
+	> p
+			border: 1px solid #d9d9d9
+			background: #fafafa
+			padding: 1rem
+	&:hover
+		background: #f9f9f9
+
+.basic-card3
+	row-gap: 8px
+	height: max-content
+	border: 1px solid #FFFFFF
+	transition: all 0.2s ease
+	.row
+		border: 1px solid #d9d9d9
+		background: #fafafa
+		padding: 1rem
+	p.small-text
+		background: var(--anveshi-color)
+		padding: 0.25rem 0.5rem
+		color: #FFF
+		border-radius: 2px
+	p.card-text
+		border-top: 1px solid #d7d7d7
+		padding: 1rem
+	&.nixed
+		p.small-text
+			background: transparent
+			color: var(--primary)
+	@media screen and (max-width: 1024px)
+		padding: 0.5rem
+		background: #f1f1f1
+		border: var(--stroke-medium)
+		p.card-text
+			width: 100%
+			background: #FFF
+			border: 1px solid #d7d7d7
+
+@keyframes sway
+	0%
+		transform: translateX(0) scale(1.1)
+	50%
+		transform: translateX(3px) scale(1.1)
+	100%
+		transform: translateX(0) scale(1.1)
+
+.ftxbtn
+	position: relative
+	padding: 0.75rem 2.5rem
+	background: #f5f5f5
+	color: #8a8a8a
+	border-radius: 10px
+	border: 1px solid transparent
+	overflow: hidden
+	background-image: linear-gradient(#f5f5f5, #f5f5f5), linear-gradient(135deg, #ffffff 0%, #dcdcdc 25%, #ffffff 50%, #cfcfcf 75%, #ffffff 100%)
+	background-origin: border-box
+	background-clip: padding-box, border-box
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), inset 0 -1px 0 rgba(0,0,0,0.05)
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: -120%
+		width: 60%
+		height: 100%
+		background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.7) 50%, transparent 100%)
+		transform: skewX(-20deg)
+		transition: all 0.6s ease
+	&:hover::after
+		left: 120%
+
+.ftxbtn2
+	background: var(--themealtold)
+	font-size: 12px
+	color: #FFF
+	font-weight: bold
+	padding: 0.56rem 1rem
+	border-radius: 4px
+	cursor: pointer
+	text-transform: uppercase
+	overflow: hidden
+	letter-spacing: 1px
+	transition: all 0.1s ease
+	border: 1px solid #e1e1e1
+	box-shadow: 2px 4px 5px rgba(0,0,0,0.2)
+	transform-origin: center center
+	&:hover
+		box-shadow: 0 4px 15px rgba(0,0,0,0)
+		background: linear-gradient(145deg, #ffffff, #e6e6e6)
+		border: 1px solid #d1d1d1
+		background: var(--themealtold)
+		color: white
+	&:active
+		transform: scale(1.05)
+
+.blogtray
+	border: var(--stroke-focus)
+	padding: 0.75rem
+	background: #f4f4f4
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03)
+
+button.conceptbuttons
+	background-color: #fafafa
+	border: var(--stroke-focus)
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12)
+	transition: all 0.2s ease
+	outline: none
+	color:  var(--primary)
+	column-gap: 4px
+	border-radius: 4px
+	padding: 3px 15px
+	svg
+		path
+			fill: var(--primary)
+	p
+		font-size: 1.05rem
+		font-weight: 520
+	&:hover
+		background-color:  #FFF
+		border-color: var(--theme)
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18)
+		transform: translateY(-1px)
+		p
+			color: var(--theme)
+		svg
+			path
+				fill: var(--theme)
+	&:focus-visible
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35)
+	&.active
+		background: var(--themealt)
+		p
+			color: #FFF
+		svg
+			path
+				fill: #FFF
+
+// ── ANVESHI CHAPTER PAGES ─────────────────────────────────
+
+
+.ch-hero-panel
+	background: #FFFFFF
+	border: 1px solid rgba(0,0,0,0.07)
+	border-radius: 14px
+	padding: 2.5rem
+	box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.04)
+	display: flex
+	flex-direction: column
+	gap: 1.75rem
+	@media screen and (max-width: 1024px)
+		padding: 1.5rem
+		gap: 1.25rem
+
+.ch-kicker
+	display: flex
+	align-items: center
+	gap: 10px
+
+.ch-accent
+	display: block
+	width: 28px
+	height: 2px
+	background: var(--anveshi-color)
+	border-radius: 1px
+	flex-shrink: 0
+
+.ch-title
+	font-size: clamp(1.8rem, 3.5vw, 2.8rem)
+	font-weight: 400
+	line-height: 1.1
+	letter-spacing: -0.025em
+	color: var(--text-main)
+	margin: 0
+
+.ch-hero-body
+	display: grid
+	gap: var(--gap-std)
+	align-items: start
+	@media screen and (min-width: 1025px)
+		grid-template-columns: 1fr 1fr
+
+.ch-quote
+	font-size: clamp(1rem, 1.6vw, 1.15rem)
+	line-height: 1.8
+	color: var(--text-main)
+	margin: 0
+	em
+		color: var(--anveshi-color)
+		font-style: italic
+
+.ch-meta-col
+	display: flex
+	flex-direction: column
+	gap: 1rem
+
+.ch-meta-line
+	font-size: 0.95rem
+	font-weight: 600
+	color: var(--text-main)
+	margin: 0
+
+.ch-cta-row
+	display: flex
+	gap: 8px
+	flex-wrap: wrap
+
+.ch-prose
+	font-size: 0.92rem
+	line-height: 1.75
+	color: var(--text-sub)
+	margin: 0
+
+
+// ── ABOUT PROSE ───────────────────────────────────────────
+
+.ch-prose-grid
+	display: grid
+	gap: var(--gap-std)
+	@media screen and (min-width: 1025px)
+		grid-template-columns: 1fr 1fr
+
+// ── TEMPLES ───────────────────────────────────────────────
+
+.ch-temple-nav
+	display: flex
+	flex-wrap: wrap
+	gap: 6px
+
+button.ch-tnav-btn
+	font-size: 10px
+	font-weight: 700
+	letter-spacing: 0.06em
+	text-transform: uppercase
+	color: var(--text-sub)
+	background: transparent
+	border: 1px solid rgba(0,0,0,0.1)
+	border-radius: 6px
+	padding: 6px 12px
+	cursor: pointer
+	transition: all 0.15s ease
+	&:hover
+		border-color: var(--anveshi-color)
+		color: var(--anveshi-color)
+	&.active
+		background: var(--anveshi-color)
+		border-color: var(--anveshi-color)
+		color: #FFFFFF
+
+.ch-temple-grid
+	display: grid
+	gap: var(--gap-std)
+	&.three
+		@media screen and (min-width: 1025px)
+			grid-template-columns: repeat(3, 1fr)
+		@media screen and (min-width: 600px) and (max-width: 1024px)
+			grid-template-columns: repeat(2, 1fr)
+
+button.ch-temple-photo
+	position: relative
+	height: 240px
+	border-radius: 10px
+	background-size: cover
+	background-position: center
+	overflow: hidden
+	cursor: pointer
+	transition: transform 0.3s ease
+	border: none
+	&:hover
+		transform: scale(0.97)
+		.ch-temple-overlay
+			background: rgba(0,0,0,0.68)
+		.ch-temple-name
+			opacity: 1
+			transform: translateY(0)
+
+.ch-temple-overlay
+	position: absolute
+	inset: 0
+	background: rgba(0,0,0,0.1)
+	display: flex
+	align-items: flex-end
+	padding: 1.25rem
+	transition: background 0.25s ease
+
+.ch-temple-name
+	font-size: 0.88rem
+	font-weight: 600
+	color: #FFFFFF
+	margin: 0
+	opacity: 0
+	transform: translateY(6px)
+	transition: opacity 0.25s ease, transform 0.25s ease
+	text-align: left
+
+.ch-temple-detail
+	background: #FFFFFF
+	border: 1px solid rgba(0,0,0,0.07)
+	border-radius: 12px
+	overflow: hidden
+	box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.04)
+	display: grid
+	@media screen and (min-width: 1025px)
+		grid-template-columns: 360px 1fr
+	@media screen and (max-width: 1024px)
+		grid-template-columns: 1fr
+
+.ch-temple-detail-img
+	overflow: hidden
+	@media screen and (min-width: 1025px)
+		height: 320px
+	@media screen and (max-width: 1024px)
+		height: 220px
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.ch-temple-detail-body
+	padding: 2rem
+	display: flex
+	flex-direction: column
+	gap: 1rem
+	border-left: 1px solid rgba(0,0,0,0.06)
+	@media screen and (max-width: 1024px)
+		border-left: none
+		border-top: 1px solid rgba(0,0,0,0.06)
+		padding: 1.5rem
+
+.ch-temple-detail-title
+	font-size: clamp(1.2rem, 2vw, 1.5rem)
+	font-weight: 400
+	line-height: 1.2
+	color: var(--text-main)
+	margin: 0
+
+.ch-temple-detail-desc
+	font-size: 0.92rem
+	line-height: 1.75
+	color: var(--text-sub)
+	margin: 0
+
+.ch-back-row
+	padding-top: 1rem
+	border-top: 1px solid rgba(0,0,0,0.06)
+
+
+.number:nth-child(odd)
+	background: #fcfcfc
+	&:hover
+		background: #F9F8F6
+
+.number:nth-child(even)
+	background: #f9f9f9
+	&:hover
+		background: #F9F8F6
+
+.hero-sub
+	max-width: 66ch
+
+
+.filter-button
+	font-size: 0.78rem
+	font-weight: 500
+	padding: 5px 14px
+	border-radius: 100px
+	border: 1px solid rgba(0,0,0,0.1)
+	background: transparent
+	color: #666
+	cursor: pointer
+	transition: all 0.15s ease
+	&:hover
+		border-color: var(--theme)
+		color: var(--theme)
+	&.active
+		background: var(--theme)
+		border-color: var(--theme)
+		color: #FFF

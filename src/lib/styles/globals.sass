@@ -1,17 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap')
-
 html, body
 	box-sizing: border-box
 	padding: 0
 	margin: 0
-	font-family: "Google Sans Flex", sans-serif
-	font-optical-sizing: auto
+
+html
+	scroll-behaviour: smooth
 
 *, :root
 	box-sizing: border-box
 
 .bdr
 	border: 1px solid red
+
+.bordertop
+	border-top: 1px solid var(--grey-sm)
+
+.borderbot
+	border-bottom: 1px solid var(--grey-sm)
+img.blog-image
+	object-fit: cover
+	width: 100%
+	height: 240px
 
 .row, .column
 	display: flex
@@ -37,16 +46,30 @@ html, body
 		align-items: flex-start
 	&.wrap
 		flex-wrap: wrap
+	@media screen and (min-width: 1025px)
+		&.xbetween-mleft
+			justify-content: space-between
 	@media screen and (max-width: 1024px)
 		&.mwrap
 			flex-wrap: wrap
+		&.mcol
+			flex-direction: column
+			&.mleft.ycenter
+				align-items: flex-start
+		&.xcenter.mleft
+			justify-content: flex-start
 
 .column
 	flex-direction: column
 	&.ycenter
 		justify-content: center
+	&.ybetween
+		justify-content: space-between
+		height: 100%
 	&.ytop
 		justify-content: flex-start
+	&.ybottom
+		justify-content: flex-end
 	&.xcenter
 		align-items: center
 		@media screen and (max-width: 1024px)
@@ -58,6 +81,10 @@ html, body
 	&.xright
 		align-items: flex-end
 		text-align: right
+		@media screen and (max-width: 1024px)
+			&.mleft
+				align-items: flex-start
+				text-align: left
 	@media screen and (max-width: 1024px)
 		&.mrow
 			flex-direction: row
@@ -69,6 +96,35 @@ html, body
 	grid-template-rows: auto
 	&.ytop
 		align-items: start
+	&.ultra
+		column-gap: 6px
+		row-gap: 6px
+	&.tight
+		column-gap: var(--gap-small)
+		row-gap: var(--gap-small)
+	&.midgaps
+		column-gap: var(--gap-std)
+		row-gap: var(--gap-std)
+	&.widegaps
+		column-gap: var(--gap-lg)
+		row-gap: var(--gap-lg)
+	&.tightcols
+		column-gap: var(--gap-small)
+		row-gap: var(--gap-std)
+	&.tightrows
+		column-gap: var(--gap-std)
+		row-gap: var(--gap-small)
+	&.midrows.widegaps
+		column-gap: var(--gap-lg)
+		row-gap: var(--gap-std)
+	&.tightrows.widecol
+		column-gap: var(--gap-lg)
+		row-gap: var(--gap-small)
+	&.tightrows.midgaps
+		column-gap: var(--gap-std)
+		row-gap: var(--gap-small)
+	&.ybottom
+		align-items: end
 	@media screen and (min-width: 1025px)
 		&.stacked
 			column-gap: 2rem
@@ -96,6 +152,8 @@ html, body
 			grid-template-columns: 32% 1fr
 		&.two.right
 			grid-template-columns: 1fr 32%
+		&.two.softright
+			grid-template-columns: 1fr 40%
 	@media screen and (max-width: 1024px)
 		&.stacked
 			column-gap: 2rem
@@ -111,38 +169,16 @@ html, body
 			row-gap: 1rem
 		&.four, &.three, &.two, &.five
 			grid-template-columns: 1fr
-		&.four.stay2, &.three.stay2
+		&.four.stay2, &.three.stay2, &.two.stay2
 			grid-template-columns: 1fr 1fr
-
-.width100
-	width: 100%
-.width50
-	width: 50%
-	@media screen and (max-width: 1024px)
-		width: 100%
-.width60
-	width: 60%
-	@media screen and (max-width: 1024px)
-		width: 100%
-.width70
-	width: 70%
-	@media screen and (max-width: 1024px)
-		width: 100%
-.width80
-	width: 80%
-	@media screen and (max-width: 1024px)
-		width: 100%
-.width90
-	width: 90%
-	@media screen and (max-width: 1024px)
-		width: 100%
-.widthmax
-	width: max-content
-	@media screen and (max-width: 1024px)
-		width: 100%
-
-.height100
-	height: 100%
+		&.stay2.tightrows
+			column-gap: var(--gap-small)
+		&.two
+			grid-template-areas: "up" "down"
+			.up
+				grid-area: up
+			.down
+				grid-area: down
 
 .stdpad
 	@media screen and (min-width: 1201px)
@@ -158,178 +194,43 @@ html, body
 		padding-left: 16px
 		padding-right: 16px
 
-.cgap4
-	column-gap: 0.25rem
-.cgap8
-	column-gap: 0.5rem
-.cgap12
-	column-gap: 0.75rem
-.cgap16
-	column-gap: 1rem
-.cgap24
-	column-gap: 1.5rem
-.cgap32
-	column-gap: 2rem
-.cgap48
-	column-gap: 3rem
-.cgap64
-	column-gap: 4rem
-.rgap4
-	row-gap: 0.25rem
-.rgap8
-	row-gap: 0.5rem
-.rgap12
-	row-gap: 0.75rem
-.rgap16
-	row-gap: 1rem
-.rgap24
-	row-gap: 1.5rem
-.rgap32
-	row-gap: 2rem
-.rgap48
-	row-gap: 3rem
-.rgap64
-	row-gap: 4rem
+.narrowbox
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	padding-left: 1rem
+	padding-right: 1rem
+	@media screen and (min-width: 1025px)
+		width: 992px
+		padding-left: 1rem
+		padding-right: 1rem
+	@media screen and (min-width: 1201px)
+		width: 1152px
+		padding-left: 1.5rem
+		padding-right: 1.5rem
+	@media screen and (min-width: 1441px)
+		width: 1376px
+		padding-left: 2rem
+		padding-right: 2rem
+	@media screen and (min-width: 1601px)
+		padding-left: 0
+		padding-right: 0
 
-.ptop128
-	padding-top: 8rem
-.ptop104
-	padding-top: 6.5rem
-.ptop64
-	padding-top: 4rem
-.ptop32
-	padding-top: 2rem
-.ptop24
-	padding-top: 1.5rem
-.ptop16
-	padding-top: 1rem
-.ptop8
-	padding-top: 0.5rem
-.ptop4
-	padding-top: 0.25rem
-.pbot128
-	padding-bottom: 8rem
-.pbot104
-	padding-bottom: 6.5rem
-.pbot64
-	padding-bottom: 4rem
-.pbot32
-	padding-bottom: 2rem
-.pbot24
-	padding-bottom: 1.5rem
-.pbot16
-	padding-bottom: 1rem
-.pbot8
-	padding-bottom: 0.5rem
-.pbot4
-	padding-bottom: 0.25rem
-
-button
-	cursor: pointer
-	font-family: "Google Sans Flex", sans-serif
-	p
-		font-family: "Google Sans Flex", sans-serif
-	&.blank
-		display: flex
-		justify-content: center
-		align-items: center
-		padding: 0
-		margin: 0
-		border: none
-		background: none
-	&.taglabel
-		display: flex
-		justify-content: center
-		align-items: center
-		background: var(--primaryalt)
-		border: none
-		color: var(--background)
-		font-size: 15px
-		padding: 8px 16px
-		border-radius: 8px
-		&:hover
-			background: var(--themesub)
-	&.buttonheading
-		display: flex
-		justify-content: center
-		align-items: center
-		border: none
-		background: var(--primary)
-		color: var(--background)
-		font-size: 14px
-		font-weight: 500
-		padding: 4px 8px
-		transition: 0.1s
-		border-radius: 2px
-		text-transform: uppercase
-		font-family: 'Google Sans Flex', sans-serif
-		&:hover
-			background: var(--theme)
-		&.selected
-			background: var(--themesub)
-	&.button-main-line
-		background: white
-		border: 1px solid var(--themesub)
-		text-decoration: none
-		color: var(--themesub)
-		font-size: 13px
-		padding: 8px 16px
-		width: max-content
-		text-transform: uppercase
-		border-radius: 2px
-		transition: 0.02s
-		&:hover
-			background: var(--theme)
-			color: white
-	&.button-main
-		background: var(--theme)
-		border: none
-		text-decoration: none
-		color: var(--background)
-		font-size: 13px
-		padding: 8px 16px
-		width: max-content
-		text-transform: uppercase
-		border-radius: 2px
-		transition: 0.06s
-		&:hover
-			background: var(--themealt)
-
-.bordertop
-	border-top: 1px solid var(--grey-sm)
-
-.borderbot
-	border-bottom: 1px solid var(--grey-sm)
+.narrowsize
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	@media screen and (min-width: 1025px)
+		width: 992px
+	@media screen and (min-width: 1201px)
+		width: 1152px
+	@media screen and (min-width: 1441px)
+		width: 1376px
 
 //assorted---------------------------------------------------------------------------------------------------------------------------------
 
-.blogbox
-	background: var(--grey-xs)
-	padding: 1.2rem
-	border-radius: 8px
-	&:hover
-		box-shadow: 10px 10px 20px #f1f1f1
-
-.blogbox2
-	border: 1px solid var(--grey-sm)
-	border-radius: 4px
-	padding: 2rem
-	@media screen and (max-width: 1024px)
-		padding: 1rem
-
-img.blog-image
-	object-fit: cover
-	width: 100%
-	height: 240px
-
-.blog-container
-	img
-		object-fit: contain
-		@media screen and (min-width: 1025px)
-			max-height: 400px
-			width: 100%
-		@media screen and (max-width: 1024px)
-			width: 100%
+.radius
+	border-radius: 5px
 
 .box-1
 	border-bottom: 1px solid var(--grey-sm)
@@ -379,7 +280,7 @@ img.blog-image
 	display: flex
 	flex-direction: column
 	@media screen and (min-width: 1025px)
-		padding-top: 72px
+		padding-top: 80px
 		row-gap: 2.5rem
 		height: 100vh
 	@media screen and (max-width: 1024px)
@@ -387,157 +288,7 @@ img.blog-image
 		padding-bottom: 3rem
 		row-gap: 1.5rem
 
-.primary
-	position: relative
-	text-decoration: none
-	display: flex
-	justify-content: center
-	align-items: center
-	border-radius: 5px
-	background: var(--theme)
-	overflow: hidden
-	cursor: pointer
-	border: none
-	width: max-content
-	&::after
-		content: ""
-		width: 0%
-		height: 100%
-		background: var(--themealt)
-		position: absolute
-		transition: all 0.4s ease-in-out
-		right: 0
-	&:hover::after
-		right: auto
-		left: 0
-		width: 100%
-	span
-		text-align: center
-		text-decoration: none
-		width: 100%
-		padding: 0.5rem 1rem
-		color: var(--whitefix)
-		font-size: 0.9rem
-		z-index: 20
-		transition: all 0.3s ease-in-out
-	&:hover span
-		animation: scaleUp 0.3s ease-in-out
-
-.primary.black
-	border: 1px solid #9a9a9a
-	background: #474747
-	&::after
-		background: #9a9a9a
-	span
-		color: var(--whitefix)
-
-.primary.black.smaller
-	span
-		font-size: 0.75rem
-		padding: 0.5rem
-		text-transform: uppercase
-	&.active
-		background: var(--theme)
-		border: 1px solid var(--themealt)
-
-.primary.anveshi
-	background: var(--anveshi-color)
-	&::after
-		background: var(--anveshidark)
-	span
-		color: var(--whitefix)
-
-@keyframes scaleUp
-	0%
-		transform: scale(1)
-	50%
-		transform: scale(0.95)
-	100%
-		transform: scale(1)
-
-button.ftnbtn
-	font-size: 12px
-	background: var(--background)
-	border: 1px solid var(--theme)
-	color: var(--theme)
-	padding: 6px 12px
-	letter-spacing: 0.04em
-	text-transform: uppercase
-	border-radius: 8px
-	cursor: pointer
-	transition: all 0.08s
-	&:hover
-		background: var(--theme)
-		color: var(--background)
-	&.active
-		background: var(--themealt)
-		color: var(--background)
-	&.anveshi
-		border: 1px solid var(--anveshi-color)
-		color: var(--anveshi-color)
-		&:hover
-			background: var(--anveshi-color)
-			color: var(--whitefix)
-		&.active
-			background: var(--anveshidark)
-			color: var(--whitefix)
-
-a.ftnbtn
-	font-size: 12px
-	background: var(--background)
-	border: 1px solid var(--theme)
-	color: var(--theme)
-	padding: 6px 12px
-	text-decoration: none
-	letter-spacing: 0.04em
-	text-transform: uppercase
-	border-radius: 8px
-	cursor: pointer
-	transition: all 0.08s
-	&:hover
-		background: var(--theme)
-		color: var(--background)
-	&.active
-		background: var(--themealt)
-		color: var(--background)
-
-button.ftnbtn-b
-	font-size: 14px
-	background: var(--primaryalt)
-	border: 1px solid var(--primary)
-	color: var(--background)
-	padding: 6px 16px
-	letter-spacing: 0.02em
-	text-transform: uppercase
-	border-radius: 8px
-	cursor: pointer
-	transition: all 0.08s
-	&:hover
-		background: var(--themealt)
-		color: var(--background)
-	&.active
-		background: var(--theme)
-		border: 1px solid var(--theme)
-		color: var(--background)
-
-.label
-	background: var(--themealt)
-	width: max-content
-	display: flex
-	align-items: center
-	justify-content: center
-	padding: 5px 8px
-	border-radius: 4px
-	text-decoration: none
-	p, small
-		color: var(--background)
-	&.anveshi
-		background: var(--anveshi-color)
-	&.light
-		background: var(--theme)
-
 section.content-area
-	width: 100%
 	&.labber
 		img
 			border-radius: 8px
@@ -558,17 +309,216 @@ section.content-area
 				border-radius: 8px
 				border: none
 				background: none
-	@media screen and (min-width: 1025px)
-		width: 504px
-	@media screen and (min-width: 1201px)
-		width: 680px
-	@media screen and (min-width: 1441px)
-		width: 884px
-	@media screen and (min-width: 1921px)
-		width: 1400px
 
-button.blankbtn
-	background: none
-	border:  none
+.content-area
+	width: 100%
+	@media screen and (min-width: 1025px)
+		width: 900px
+		margin-left: auto
+		margin-right: auto
+
+h1.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
 	padding: 0
-	cursor: pointer
+	overflow: hidden
+	clip: rect(0, 0, 0, 0)
+	white-space: nowrap
+	border: 0
+	font-size: 12px
+
+.self-bottom
+	margin-top: auto
+
+.griddd
+	display: grid
+	gap: 2rem
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+
+// ── SHARED PAGE PATTERNS ───────────────────────────────────
+
+.article-header
+	display: flex
+	flex-direction: column
+	gap: var(--gap-text)
+	padding-bottom: 2rem
+	border-bottom: 1px solid rgba(0,0,0,0.06)
+
+.sep
+	margin: 0 4px
+	color: #DDD
+
+.section-block
+	display: flex
+	flex-direction: column
+	gap: var(--gap-text)
+	padding-top: var(--gap-std)
+	border-top: 1px solid rgba(0,0,0,0.06)
+
+.mini-grid
+	display: flex
+	flex-wrap: wrap
+	gap: 6px
+
+.meta-hint
+	font-size: 0.78rem
+	color: var(--text-ghost)
+
+.count-pill
+	font-size: 0.75rem
+	font-weight: 400
+	color: #FFF
+	background: var(--theme)
+	padding: 4px 12px
+	border-radius: 12px
+
+.divider-dot
+	color: #CCC
+	font-size: 1.1rem
+	line-height: 1
+
+// ── LIBRARY ────────────────────────────────────────────────
+
+.cat-nav
+	display: flex
+	flex-wrap: wrap
+	gap: 6px
+
+.nav-btn
+	font-size: 0.78rem
+	font-weight: 500
+	padding: 5px 14px
+	border-radius: 100px
+	border: 1px solid rgba(0,0,0,0.1)
+	background: transparent
+	color: #666
+	transition: all 0.15s ease
+	&:hover
+		border-color: var(--theme)
+		color: var(--theme)
+
+.books-grid
+	display: grid
+	gap: 1px
+	background: rgba(0,0,0,0.06)
+	border: 1px solid rgba(0,0,0,0.06)
+	border-radius: 10px
+	overflow: hidden
+	@media screen and (min-width: 1025px)
+		grid-template-columns: repeat(3, 1fr)
+	@media screen and (min-width: 631px) and (max-width: 1024px)
+		grid-template-columns: repeat(2, 1fr)
+
+.book-card
+	display: flex
+	flex-direction: column
+	gap: 6px
+	padding: 1.2rem 1.4rem
+	background: #FFFFFF
+	transition: background 0.15s ease
+	&:hover
+		background: #F9F8F6
+		.book-title
+			color: var(--theme)
+
+.book-title
+	font-size: clamp(0.9rem, 1.5vw, 1.05rem)
+	font-weight: 400
+	line-height: 1.3
+	letter-spacing: -0.02em
+	color: #111
+	transition: color 0.15s ease
+
+.book-author
+	font-size: 8px
+	font-weight: 700
+	letter-spacing: 0.12em
+	color: var(--text-ghost)
+
+.book-desc
+	font-size: 0.78rem
+	line-height: 1.6
+	color: #888
+	margin: 0
+
+// ── ACADEMY ────────────────────────────────────────────────
+
+.status-badge
+	font-size: 9px
+	font-weight: 700
+	letter-spacing: 0.1em
+	padding: 3px 9px
+	border-radius: 100px
+	&.concluded
+		border: 1px solid rgba(116,192,252,0.3)
+		background: rgba(116,192,252,0.09)
+		color: #4C9BE8
+	&.upcoming
+		border: 1px solid rgba(180,160,220,0.3)
+		background: rgba(180,160,220,0.08)
+		color: #9775C0
+
+.instructor-tag
+	font-size: 9px
+	font-weight: 600
+	letter-spacing: 0.1em
+	color: var(--text-ghost)
+
+.courses-list
+	display: flex
+	flex-direction: column
+	gap: var(--gap-elem)
+
+.card-type-c
+	background: #F9F8F6
+	border: 1px solid rgba(0,0,0,0.06)
+	transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.18s ease
+	padding: 1.5rem
+	@media screen and (max-width: 1024px)
+		padding: 1rem
+
+a.card-type-c:hover
+	border-color: rgba(0,0,0,0.1)
+	box-shadow: var(--shadow-card-hover)
+	transform: translateY(-2px)
+	.course-link
+		color: var(--theme)
+
+.image-type-c
+	img
+		object-fit: cover
+		width: 100%
+	@media screen and (min-width: 1025px)
+		img
+			height: 300px
+	@media screen and (max-width: 1024px)
+		img
+			height: 256px
+
+.course-body
+	display: flex
+	flex-direction: column
+	gap: var(--gap-text)
+
+.course-title
+	font-size: clamp(1.05rem, 2vw, 1.3rem)
+	font-weight: 400
+	line-height: 1.2
+	letter-spacing: -0.02em
+	color: #111
+	margin: 0
+
+.course-desc
+	font-size: 0.9rem
+	line-height: 1.7
+	color: #6B6B6B
+	margin: 0
+
+.course-link
+	font-size: 0.8rem
+	font-weight: 500
+	color: #999
+	margin-top: auto
+	transition: color 0.15s ease

@@ -1,76 +1,60 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import Head from '$lib/comps/headcomponent.svelte';
+	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
 
-	let sY: number;
-	export let data;
+	let sY = $state<number>(0);
+	let { data } = $props();
+
+	const jsonld = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': data.type === 'thinker' ? 'Thinker' : 'School of Thought',
+			headline: data.title,
+			description: data.description,
+			image: data.image,
+			publisher: { '@type': 'Organization', name: 'Bodha Research', url: 'https://www.bodharesearch.in' },
+			url: 'https://www.bodharesearch.in' + page.url.pathname
+		})
+	);
 </script>
 
 <svelte:window bind:scrollY={sY} />
 
-<Head
-	title={data.title}
-	metaDescription="The primary thinkers and schools of thought we follow."
-	metaImage="/images/bodhacover.png"
-	metaUrl={'https://www.bodharesearch.in' + page.url.pathname}
-/>
+<Head title={data.title} metaDescription={data.description} metaImage={data.image} metaUrl={'https://www.bodharesearch.in' + page.url.pathname} {jsonld} />
 
-<section class="content-area">
-	<div class="column pbot32">
-		<Crumb item1="INSPIRATION" item1Link="/inspiration" show2={true} item2={data.title} />
-		<h2 class="source-serif tight">{data.title}</h2>
-		<p class="sm grey ptop8 pbot16">{data.description}</p>
-		<div class="row cgap8 rgap8 ycenter">
-			{#each data.tags as tag}
-				<small class="label white tt-u">{tag.replaceAll('-', ' ')}</small>
-			{/each}
+<Container narrow={true} scaled={true}>
+	<div class="box std padded-ontop">
+		<Crumb item1="inspiration" showRow={true} item1Link="/inspiration" rgap={16} show2={true} item2={data.type} showT={true} title={data.title} showD={true} desc={data.description}>
+			<div class="row cgap8 rgap8 mwrap">
+				{#if data.tags?.length}
+					{#each data.tags as tag}
+						<a class="tag-pill tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+					{/each}
+				{/if}
+			</div>
+		</Crumb>
+		<div class="grid two midgaps">
+			<div class="classic-document box textbox down">
+				<data.content />
+			</div>
+			<div class="box imagebox up">
+				<img src={data.image} alt={data.title}/>
+			</div>
 		</div>
 	</div>
-	<div class="column rgap32">
-		<div class="parallax">
-			<img
-				class="key"
-				class:think={data.type === "thinker"}
-				src={data.image}
-				alt={data.title}
-				style="transform: translateY(-{sY / 3}px)"
-			/>
-		</div>
-		<article class="classic-document">
-			<svelte:component this={data.content} />
-		</article>
-	</div>
-</section>
+</Container>
 
 <style lang="sass">
 
-.parallax
+.imagebox img
+	object-fit: cover
 	width: 100%
+	height: 100%
+
+.imagebox
 	overflow: hidden
-	border-radius: 8px
-	height: 300px
-	@media screen and (min-width: 1025px)
-		height: 480px
 
-img.key
-	position: relative
-	top: 0
-	left: 0
-	object-fit: cover
-	width: 100%
-	height: 540px
-	@media screen and (min-width: 1025px)
-		height: 768px
-
-img.key.think
-	position: relative
-	top: -100px
-	left: 0
-	object-fit: cover
-	width: 100%
-	height: 540px
-	@media screen and (min-width: 1025px)
-		height: 868px
 
 </style>

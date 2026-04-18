@@ -1,0 +1,108 @@
+.blog-container
+	img
+		object-fit: contain
+		@media screen and (min-width: 1025px)
+			max-height: 400px
+			width: 100%
+		@media screen and (max-width: 1024px)
+			width: 100%
+
+.blog-container
+	p, li, pre, blockquote, em
+		font-family: 'EB Garamond', serif
+	h2, h3
+		font-family: 'Source Serif 4', serif
+		line-height: 1.2
+	a
+		text-decoration-color: var(--themesub)
+		color: inherit
+	img
+		object-fit: contain !important
+	@media screen and (min-width: 1025px)
+		img
+			height: 400px !important
+			margin-bottom: 16px
+		p, pre
+			font-size: 1.55rem
+			line-height: 1.7
+			margin-bottom: 2rem
+		ul, ol
+			padding-left: 1rem
+			margin-bottom: 2rem
+		li
+			font-size: 1.55rem
+			line-height: 1.7
+			margin-bottom: 0.6rem
+		blockquote
+			border-left: 4px solid var(--theme)
+			margin-left: 0
+			margin-right: 0
+			padding-left: 16px
+			font-style: italic
+			margin-top: 2rem
+			margin-bottom: 2rem
+			p
+				font-size: 1.5rem
+				line-height: 1.5
+			cite
+				font-size: 14px
+				color: var(--grey-std)
+		h5
+			font-size: 1.74rem
+			margin-top: 2.4rem
+			margin-bottom: 2.4rem
+		h2
+			font-size: 3rem
+			letter-spacing: -0.5px
+			margin-bottom: 1.5rem
+			margin-top: 4rem
+			line-height: 1.2
+		h3
+			font-size: 1.975rem
+			margin-top: 2.4rem
+			margin-bottom: 1rem
+	@media screen and (max-width: 1024px)
+		img
+			max-height: 400px !important
+			width: 100% 
+			margin-bottom: 16px
+		p, pre
+			font-size: 1.32rem
+			line-height: 1.55
+			margin-bottom: 1rem
+		ul, ol
+			padding-left: 1.2rem
+			margin-bottom: 1rem
+		li
+			font-size: 1.32rem
+			line-height: 1.55
+			line-height: 1rem
+		blockquote
+			border-left: 4px solid var(--theme)
+			margin-left: 0
+			margin-right: 0
+			padding-left: 16px
+			font-style: italic
+			margin-top: 2rem
+			margin-bottom: 1rem
+			padding: 0.8rem 0 0.4rem 0.8rem
+			p
+				font-size: 1.4rem
+				line-height: 1.5
+			cite
+				font-size: 14px
+				color: var(--grey-std)
+		h5
+			font-size: 1.45rem
+			margin-top: 2rem
+			margin-bottom: 2rem
+			line-height: 1.4
+		h2
+			font-size: 2rem
+			letter-spacing: -0.5px
+			margin-bottom: 1.6rem
+			margin-top: 4rem
+		h3
+			font-size: 1.7rem
+			margin-top: 2rem
+			margin-bottom: 1rem

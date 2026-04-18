@@ -18,7 +18,7 @@ function toBlogEntry(path: string, metadata: Record<string, unknown> | undefined
 
   return {
     date,
-    formattedDate: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+    formattedDate: date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
     meta: metadata,
     linkpath: path.slice(11, -3)
   } satisfies PulledEntry

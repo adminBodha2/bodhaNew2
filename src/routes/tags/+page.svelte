@@ -13,16 +13,30 @@
 <Head title="All Tags at Bodha" metaDescription="The best way to explore all content, learning, and discovery at Bodha." metaUrl="www.bodharesearch.in/tags" metaImage="/images/bodhacover.png"/>
 
 <Container narrow={true}>
-	<div class="box-t">
-		<div class="column borderbot pbot32">
-			<Crumb item1="TAGS" item1Link="/tags"/>
-			<h2 class="source-serif tight">All Tags at Bodha</h2>
-			<p class="grey sm">Use tags to discover and explore all content at our website - blog articles, learning paths, books, and more.</p>
-		</div>
+	<div class="box std padded-ontop">
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Tags" desc="The best way to explore all content, learning, and discovery at Bodha." showD={true}/>
 		<div class="row wrap rgap8 cgap8">
 			{#each tags as tag}
-				<a class="ftnbtn" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+				<a class="tag-item blank tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</div>
 	</div>
 </Container>
+
+<style lang="sass">
+
+.tag-item
+	font-size: 0.8rem
+	font-weight: 500
+	color: #555
+	padding: 6px 14px
+	border-radius: 100px
+	border: 1px solid rgba(0,0,0,0.1)
+	background: #FFFFFF
+	transition: all 0.12s ease
+	&:hover
+		border-color: var(--theme)
+		color: var(--theme)
+		background: #F9F8F6
+
+</style>

@@ -16,7 +16,7 @@
 	metaUrl={'https://www.bodharesearch.in' + page.url.pathname}
 />
 
-<Container narrow={true}>
+<Container narrow={true} scaled={true}>
 	<div class="box-t">
 		<div class="column borderbot pbot32">
 			<Crumb item1="BODHA OPEN LIBRARY" item1Link="/library"/>

@@ -1,23 +1,127 @@
-:root, *
-	--serif-item: 'Source Serif 4', serif
+:root
 	--whitefix: #FFFFFF
 	--darkfix: #080808
+	--stone: #F9F8F6
+	--typeRatio: 1.15
+	--typeRatioHeader: 1.5
+	--typeRatioSmaller: 1.1
+	--font-p: 1.1rem
+	--font-ps: 0.875rem
+	--font-sm: 11px
+	--font-pb: 1.22rem
+	--font-h6: calc(var(--font-p) * var(--typeRatio))
+	--font-h5: calc(var(--font-h6) * var(--typeRatio))
+	--font-h4: calc(var(--font-h5) * var(--typeRatio))
+	--font-h3: calc(var(--font-h4) * var(--typeRatio))
+	--font-h2: calc(var(--font-h3) * var(--typeRatio))
+	--font-h1: calc(var(--font-h2) * var(--typeRatio))
+	--font-ph1: calc(var(--font-h3) * var(--typeRatioHeader))
+	--font-ph2: calc(var(--font-h4) * var(--typeRatioHeader))
+	--font-ph3: calc(var(--font-h5) * var(--typeRatioHeader))
+	--font-ph4: calc(var(--font-h6) * var(--typeRatio))
+	--theme-border: 1px solid #e7e7e7
+	--serif-adjust: 1.25
+	--serif-adjust-blog: 1.1
+	--serif-adjust-classic: 1.175
+	--serif-adjust-high: 1.1
+	--gap-box: 2.4rem
+	--gap-elem: 1.5rem
+	--gap-text: 0.8rem
+	--gap-lg: 4rem
+	--gap-std: 2rem
+	--gap-small: 1rem
+	--gap-mini: 0.5rem
+	--pad-std: 3rem
+	--shAA: 0 6px 10px rgba(0, 0, 0, 0.06)
+	--shBB: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
+	--shCC: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
+	--sh1: 0 2px 4px rgba(0, 0, 0, 0.02)
+	--sh1in: inset 0 2px 4px rgba(0, 0, 0, 0.02)
+	--sh7: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
+	--sh7inset: inset 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
+	--sh8: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
+	--sh2: 0 1px 2px rgba(0, 0, 0, 0.04)
+	--sh3: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02)
+	--sh4: 0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02)
+	--sh5: 0 24px 48px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04)
+	--shHero: 0 40px 80px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.03)
+	--shGlow: 0 0 40px rgba(0, 0, 0, 0.03), 0 0 10px rgba(0, 0, 0, 0.01)
+	--sh6: 0 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px rgba(0, 0, 0, 0.04)
+	--sh60: 0 2px 0 rgba(0, 0, 0, 0), 0 4px 4px rgba(0, 0, 0, 0)
+	--shInset: inset 0 2px 4px rgba(0, 0, 0, 0.03)
+	--stroke-subtle: 1px solid rgba(0, 0, 0, 0.078)
+	--stroke-medium: 1px solid rgba(0, 0, 0, 0.08)
+	--stroke-focus: 1px solid rgba(0, 0, 0, 0.15)
+	--surf-card: #FFFFFF
+	--bg-app: #f5f5f5
+	--greytypeA: rgba(239, 238, 236, 0.5)
+	--greytypeB: #F4F3EE
+	--color-border: #e7e7e7
+	--color-white: #FFFFFF
+	--bottomline: 1px solid #e4e4e7
+	--c-back2: #F4F3EE
+	--c-back3: #EBEBE9
+	--c-back5: #EDECE7
+	--c-back4: #F2f2f2
+	--border-rest: 1px solid rgba(0, 0, 0, 0.04)
+	--border-hover: 1px solid rgba(0, 0, 0, 0.07)
+	--shadow-card: 0 1px 2px rgba(0, 0, 0, 0.02), 0 4px 6px rgba(0, 0, 0, 0.02),0 10px 15px rgba(0, 0, 0, 0.03)
+	--shadow-card-hover:  0 2px 4px rgba(0, 0, 0, 0.03), 0 8px 12px rgba(0, 0, 0, 0.04), 0 16px 24px rgba(0, 0, 0, 0.05)
+	--stamp: #F4F3EE
+	@media screen and (min-width: 1025px)
+		--typeRatio: 1.25
+		--typeRatioHeader: 1.33
+		--serif-adjust: 1.2
+		--serif-adjust-high: 1.2
+		--font-sm: 10px
+		--gap-elem: 1.5rem
+		--gap-text: 1rem
+		--serif-adjust-blog: 1.2
+		--gap-small: 1rem
+		--pad-std: 4rem
 
 .light
 	--primary: #080808
-	--primaryalt: #404040
+	--primaryalt: #5b5a5a
 	--background: #FFFFFF
-	--theme: #1971c2
-	--themealt: #073968
+	--theme: #1971c2   
+	--themealtold: #054370
+	--themealt: #014694
 	--themesub: #4dabf7
+	--themeborder: #EAEAEA
+	--themesurface: #F8FAFC
+	--themeslate: #1E293B
+	--this: #1661A7
+	--themeaccent:#065c55
+	--themeslate: #F8FAFC
+	--themepale: #CCFBF1
+	--thememore:#f1f5f9
+	--themebord: #CBD5E1
+	--themerust: #A34225
 	--grey-xxs: #fafafa
 	--grey-xs: #f7f7f7
 	--grey-sm: #e7e7e7
 	--grey-std: #bbbbbb
-	--grey-md: #a4a4a4
+	--text-ghost: var(--grey-std)
+	--grey-md: #8a8a8a
 	--grey-lg: #717171
 	--anveshi-color: #D3633A
 	--anveshidark: #9f401d
+	--themelightest:rgb(29, 140, 140)
+	--color-white: #FFFFFF
+	--color-surface: #f4f4f5
+	--color-surface-hover: #f8f8f8
+	--color-primary-text: #181818
+	--color-secondary-text: #52525b
+	--color-text-tertiary: #a1a1aa
+	--color-accent: #be7a54
+	--color-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.02), 0 1px 3px 1px rgba(0, 0, 0, 0.02)
+	--shadow1:  0 1px 2px 0 rgba(0, 0, 0, 0.02), 0 1px 3px 1px rgba(0, 0, 0, 0.02)
+	--shadow2:: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03)
+	--shadow3:  0 20px 25px -5px rgba(0, 0, 0, 0.03), 0 10px 10px -5px rgba(0, 0, 0, 0.01)
+	--shadow4: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.01)
+	--borderU: #e4e4e7
+	--borderZ: #d4d4d8
 
 .dark
 	--primary: #e0e0e0
@@ -26,11 +130,40 @@
 	--theme: #1971c2
 	--themealt: #4dabf7
 	--themesub: #4dabf7
+	--themeborder: #D1E3F3
 	--grey-xxs: #212121
 	--grey-xs: #232324
 	--grey-sm: #272727
 	--grey-std: #bbbbbb
+	--text-ghost: var(--grey-std)
 	--grey-md: #4d4d4d
 	--grey-lg: #787878
 	--anveshi-color: #e06a3f
 	--anveshidark: #9f401d
+
+
+.toffcolor
+	background: rgba(244, 243, 238, 0.37)
+
+.library-card
+	background: #FFF
+	border: 1px solid rgb(237, 236, 231)
+	padding: 1.5rem 1.2rem
+	border-radius: 4px
+	row-gap: 0.5rem
+	.library-card-text
+		row-gap: 0.5rem
+	.library-card-small-text
+		margin-top: 1rem
+
+.newslate
+	background: var(--color-white)
+	border: 1px solid var(--color-hairline)
+	border-radius: 5px
+	padding: 1.5rem
+
+:root
+	--primary-back: #FFFFFF
+
+.stonestreet
+	background: #F5F8F7

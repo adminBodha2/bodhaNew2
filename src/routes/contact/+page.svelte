@@ -17,7 +17,7 @@
 
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
-<Container>
+<Container narrow={true}>
 	<div class="box-t mmVH">
 		<p>Write to us at <span class="blue">contact@bodharesearch.in</span><br>
 			or, reach out on social media-
