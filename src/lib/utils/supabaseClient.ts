@@ -157,3 +157,12 @@ export async function kulluTemples(){
   if (error) throw new Error(error.message)
   return data
 }
+
+export async function badamiTemples(){
+  const { data, error } = await supabase
+  .from('db-badamitemples')
+  .select()
+  .order('id')
+  if (error) throw new Error(error.message)
+  return data
+}
