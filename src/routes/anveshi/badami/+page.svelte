@@ -266,14 +266,6 @@ We take our flights and go home.
 		border-color: var(--anveshi-color)
 		color: #FFFFFF
 
-.ch-section
-	display: flex
-	flex-direction: column
-	gap: var(--gap-std)
-	&.ch-hero-section
-		border-top: none
-		padding-top: 0
-
 .ch-itin-panel
 	background: #F5F4F2
 	border-radius: 12px
@@ -285,11 +277,6 @@ We take our flights and go home.
 	align-self: center
 	@media screen and (max-width: 1024px)
 		padding: 1rem
-
-.ch-day-nav
-	display: flex
-	gap: 8px
-	flex-wrap: wrap
 
 button.ch-day-btn
 	display: flex
@@ -330,14 +317,5 @@ button.ch-day-btn
 	@media screen and (min-width: 1025px)
 		width: 85%
 		justify-self: center
-
-.ch-day-date
-	color: var(--anveshi-color)
-
-.ch-day-text
-	font-size: 0.9rem
-	line-height: 1.75
-	color: var(--text-sub)
-	margin: 0
 
 </style>
