@@ -79,6 +79,7 @@ function handleItemClick() {
 				<div class="row xcenter mleft cgap16">
 					<a class="primary anveshi" href="https://forms.gle/SuCA3Jc1PuFJthUV7" target="_blank" rel="noreferrer"><span>Register Now</span></a>
 				</div>
+            </div>
 		</div>
 		<div class="ch-itin-panel width80">
 			<h2 class="title-small ta-c mleft">Itinerary</h2>
