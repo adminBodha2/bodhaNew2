@@ -74,9 +74,6 @@ function handleItemClick() {
 				<p>...to temples dedicated to kshetriya gods deep in jungles, Badami has it all. Come to Bodha Anveshi Badami Chapter to experience this all.
 				</p>
 			</div>
-			<div class="row xcenter ycenter mleft">
-				<a class="primary anveshi" href="https://docs.google.com/forms/d/e/1FAIpQLSfCVk0RSNNCwL_06qcsOmhWs4wQH_Z2OtJ_Pw0gmmo9kh7iMA/viewform" target="_blank" rel="noreferrer"><span>REGISTER NOW</span></a>
-			</div>
 		</div>
 		<div class="ch-itin-panel width80">
 			<h2 class="title-small ta-c mleft">Itinerary</h2>

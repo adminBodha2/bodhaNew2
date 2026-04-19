@@ -68,7 +68,7 @@
 			<p class="tight white ta-c pbot16">
 				Sacred journeys to unexplored kshetras of India.<br />Where, every outer journey becomes an inner journey.
 			</p>
-			<a class="primary anveshi" href="/anveshi/kullu"><span>OPEN NOW - KULLU CHAPTER</span></a>
+			<a class="primary anveshi" href="/anveshi/badami"><span>OPEN NOW - BADAMI CHAPTER</span></a>
 		</div>
 	</div>
 </div>
