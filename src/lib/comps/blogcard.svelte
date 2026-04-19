@@ -14,8 +14,8 @@
 		<img src={image} alt={title} />
 		<div class="card-body">
 			{#if date && date !== ' '}<p class="card-date">{date}</p>{/if}
-			<h3 class="blog-title source-serif">{title}</h3>
-			<p class="grey small-text">{excerpt}</p>
+			<h3 class="blog-title">{title}</h3>
+			<p class="grey small-text tight">{excerpt}</p>
 		</div>
 	</a>
 	<div class="row wrap xbetween rgap4 card-bottom">

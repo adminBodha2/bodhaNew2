@@ -78,7 +78,7 @@
 	color: var(--primary)
 	padding: 5px 9px
 	border-radius: 2px
-	transition: color 0.12s ease, background 0.12s ease
+	transition: color 0.06s ease, background 0.06s ease
 	&:hover
 		color: var(--whitefix)
 		background: var(--theme)

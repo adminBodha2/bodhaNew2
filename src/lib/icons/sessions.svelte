@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let size = 32;
-	export let fill = 'var(--primaryalt)';
+	export let fill = 'var(--theme)';
 </script>
 
 <svg height={size} viewBox="0 0 32 32" width={size} xmlns="http://www.w3.org/2000/svg">

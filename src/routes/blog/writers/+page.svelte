@@ -21,10 +21,10 @@
 
 	{#if writers && writers.length > 0}
 	<div class="box std">
-		<div class="writers-grid">
-			{#each writers as item}
-			<a class="writer-card blank" href="/blog/writers/{item.writer}">
-				<p class="source-serif">{item.writer}</p>
+		<div class="grid four">
+			{#each writers as item, i}
+			<a class="writer-card card-padded blank lining{i}" href="/blog/writers/{item.writer}">
+				<p>{item.writer}</p>
 				{#if item.count}
 				<p class="citation-big lgrey">{item.count} {item.count === 1 ? 'essay' : 'essays'}</p>
 				{/if}
@@ -37,6 +37,20 @@
 
 <style lang="sass">
 
+.grid.four
+	border: var(--stroke-subtle)
+	.writer-card
+		background: var(--stone)
+		transition: background 0.05s ease
+		&:hover
+			background: #FFF
+	@media screen and (min-width: 1025px)
+		.lining0, .lining1, .lining2
+			border-right: var(--stroke-subtle)
+	@media screen and (max-width: 1024px)
+		.lining0, .lining1, .lining2
+			border-bottom: var(--stroke-subtle)
+
 .writers-grid
 	display: grid
 	gap: 1px
@@ -48,18 +62,6 @@
 		grid-template-columns: repeat(3, 1fr)
 	@media screen and (min-width: 631px) and (max-width: 1024px)
 		grid-template-columns: repeat(2, 1fr)
-
-.writer-card
-	display: flex
-	flex-direction: column
-	gap: 4px
-	padding: 1.4rem
-	background: #FFFFFF
-	transition: background 0.15s ease
-	&:hover
-		background: #F9F8F6
-		.writer-name
-			color: var(--theme)
 
 .writer-name
 	font-size: clamp(1rem, 1.5vw, 1.15rem)

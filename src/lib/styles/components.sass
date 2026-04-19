@@ -241,9 +241,7 @@ button.ftnbtn-b
 	padding: 2px 5px
 	border-radius: 3px
 	text-decoration: none
-	color: #555555
-	p, small
-		color: #555555
+	font-size: 0.8rem
 	&.anveshi
 		background: rgba(211, 99, 58, 0.08)
 		border: 1px solid rgba(211, 99, 58, 0.2)
@@ -372,9 +370,8 @@ a.section-link
 .standard-grid
 	display: grid
 	gap: 1px
-	background: rgba(0,0,0,0.06)
+	background: #e7e7e7
 	border: 1px solid rgba(0,0,0,0.06)
-	border-radius: 5px
 	overflow: hidden
 	@media screen and (max-width: 1024px)
 		background: #FFF
@@ -382,25 +379,38 @@ a.section-link
 		background: var(--whitefix)
 
 .tag-pill, p.tag-pill, a.tag-pill, .scaledTypo p.tag-pill
-	font-size: 7.5px
+	font-size: 9px
 	font-weight: 500
-	letter-spacing: 0.1em
+	letter-spacing: 0.02em
 	color: #a1a1a1
 	padding: 2px 8px
-	border-radius: 100px
+	border-radius: 10px
 	border: 1px solid #a1a1a1
 	background: var(--color-surface)
 	transition: all 0.06s ease
+	width: max-content
 	&:hover
 		color: var(--theme)
 		border-color: var(--theme)
-	&.colored
+	&.accented
 		background: var(--themeaccent)
 		color: var(--whitefix)
+		border: 1px solid var(--themeaccent)
 	&.anveshi
 		background: var(--anveshi-color)
 		color: var(--whitefix)
 		border: none
+	&.themed
+		background: var(--theme)
+		color: var(--whitefix)
+		border: 1px solid var(--theme)
+		&:hover
+			background: var(--themealtold)
+	&.hollow
+		padding: 0
+		background: none
+		border: none
+		font-size: 9px
 
 .nuevocard
 	background: #ffffff
@@ -1100,28 +1110,57 @@ button.ch-temple-photo
 		background: #F9F8F6
 
 .number:nth-child(even)
-	background: #f9f9f9
+	background: #f5f5f5
 	&:hover
 		background: #F9F8F6
+
+.ncolor0, .ncolor3, .ncolor6, .ncolor9, .ncolor12, .ncolor15, .ncolor18
+	background: #f1f1f1
+	&:hover
+		background: var(--stone)
+		.card-title, .item-line, .header-type-p
+			color: var(--theme)
+
+.ncolor1, .ncolor4, .ncolor7, .ncolor10, .ncolor13, .ncolor16, .ncolor19
+	background: #f4f4f5
+	&:hover
+		background: var(--stone)
+		.card-title, .item-line, .header-type-p
+			color: var(--theme)
+
+.ncolor2, .ncolor5, .ncolor8, .ncolor11, .ncolor14, .ncolor17, .ncolor20
+	background: #F8FAFC
+	&:hover
+		background: var(--stone)
+		.card-title, .item-line, .header-type-p
+			color: var(--theme)
 
 .hero-sub
 	max-width: 66ch
 
 
 .filter-button
-	font-size: 0.78rem
-	font-weight: 500
+	font-size: 0.9rem
+	font-weight: 400
 	padding: 5px 14px
-	border-radius: 100px
-	border: 1px solid rgba(0,0,0,0.1)
-	background: transparent
-	color: #666
+	border-radius: 15px
+	border: 1px solid #CBD5E0
+	background: #E2E8F0
+	color: #718096
 	cursor: pointer
 	transition: all 0.15s ease
 	&:hover
-		border-color: var(--theme)
-		color: var(--theme)
+		background: var(--themealtold)
+		color: var(--whitefix)
+		border: 1px solid var(--themealtold)
+	&:active
+		transform: scale(1.05)
 	&.active
 		background: var(--theme)
 		border-color: var(--theme)
 		color: #FFF
+
+.card-padded
+	padding: 1rem
+	@media screen and (min-width: 1025px)
+		padding: 1.5rem

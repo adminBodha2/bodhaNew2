@@ -4,6 +4,8 @@
 	export let item1Link = ' '
 	export let show2 = false
 	export let item2 = ' '
+	export let item2linked = false
+	export let item2Link = ' '
 	export let showT = false
 	export let title = ' '
 	export let rgap = 0
@@ -13,17 +15,21 @@
 
 </script>
 
-<div class="column rgap{rgap}" class:borderbot={showT} class:pbot32={showT}>
+<div class="column rgap16 null{rgap}" class:borderbot={showT} class:pbot32={showT}>
 <div class="row ycenter xleft cgap8 rgap8 forcrumb">
 	<p class="citation-big lgrey tt-u"><a class="blank linkonhover" href={item1Link}>{item1}</a></p>
-	{#if show2}
+	{#if show2 || item2linked}
 		<p class="citation-big lgrey">></p>
+		{#if item2linked}
+		<p class="citation-big lgrey tt-u"><a class="blank linkonhover" href={item2Link}>{item2}</a></p>
+		{:else}
 		<p class="citation-big tt-u lgrey">{item2}</p>
+		{/if}
 	{/if}
 </div>
 <div class="box textbox">
 {#if showT}
-<h1 class="page-title source-serif tt-c">{title}</h1>
+<h1 class="page-title tt-c">{title}</h1>
 {/if}
 {#if showD}
 <p class="small-text grey width60">{desc}</p>

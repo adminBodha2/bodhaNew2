@@ -28,7 +28,7 @@
 				author={item.meta.author}
 				date={item.formattedDate}
 				words={item.meta.words}
-				numbering="number{i}"
+				numbering="ncolor{i}"
 			>
 				{#each item.meta.tags as tag}
 				<span class="tag-pill tt-u">{tag.replaceAll('-', ' ')}</span>

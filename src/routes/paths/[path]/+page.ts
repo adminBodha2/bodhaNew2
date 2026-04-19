@@ -1,14 +1,32 @@
+import paths from '$lib/data/paths.json';
+import nodes from '$lib/data/nodes.json';
 import { error } from '@sveltejs/kit';
-import libraryItems from '$lib/serving/library-items.json';
 
-export function load({ params }: { params: { path: string } }) {
-	const items = libraryItems.filter(item => item.topic === params.path);
+export function load({ params }) {
+	const pathId = params.path;
 
-	if (items.length === 0) {
-		throw error(404, { message: `No library items found for topic "${params.path}"` });
+	const pathData = paths.find((p) => p.id === pathId);
+	if (!pathData) {
+		throw error(404, 'Path not found');
 	}
 
-	const title = items[0].wikigroup;
+	// Build a quick lookup map for nodes (faster than repeated find)
+	const nodeMap = new Map(nodes.map((n) => [n.id, n]));
 
-	return { title, items };
+	// Attach full node data to each step
+	const stepsWithNodes = pathData.steps.map((step) => {
+		const node = nodeMap.get(step.nodeId);
+
+		return {
+			...step,
+			node // may be undefined if missing
+		};
+	});
+
+	return {
+		path: {
+			...pathData,
+			steps: stepsWithNodes
+		}
+	};
 }

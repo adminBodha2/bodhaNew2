@@ -1,11 +1,14 @@
 <script lang="ts">
-	import NodeCard from '$lib/nodeitems/NodeCard.svelte';
+	import { onMount } from 'svelte'
 	import { page } from '$app/state';
+	import { allQuestions } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
+	import Title from '$lib/comps/page-title.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 	let sY: number;
 	export let data;
+	let questions: any;
 
 	const jsonld = JSON.stringify({
 		'@context': 'https://schema.org',
@@ -15,6 +18,10 @@
 		image: data.icon,
 		publisher: { '@type': 'Organization', name: 'Bodha Research', url: 'https://www.bodharesearch.in' },
 		url: 'https://www.bodharesearch.in' + page.url.pathname,
+	});
+
+	onMount(async () => {
+		questions = await allQuestions();
 	});
 </script>
 
@@ -122,9 +129,35 @@
 	{/if}
 -->
 </div>
+<div class="box std padded bordertop">
+{#if questions && questions.length > 0}
+	<Title text="All Big Questions"/>
+	<div class="grid four standard-grid stay2">
+		{#each questions as item}
+			<a class="blank a-box" href={item.linkpath}>
+				<p class="para-text">{item.meta.title}</p>
+			</a>
+		{/each}
+	</div>
+{/if}
+</div>
 </Container>
 
 <style lang="sass">
+
+.a-box
+	padding: 1.5rem
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background: #FFF
+	&:hover
+		background: var(--stone)
+
+.standard-grid
+	@media screen and (max-width: 1024px)
+		background: #f1f1f1
+		gap: 1px
 
 .midgaps
 	img

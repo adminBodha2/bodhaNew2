@@ -3,6 +3,7 @@
 	import { fullBlog } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import BlogCard from '$lib/comps/blogcard.svelte';
 	import { servingExternal } from '$lib/serving/servingWiki';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
@@ -25,17 +26,14 @@
 
 <Container narrow={true} scaled={true}>
 <div class="box std padded-ontop">
-	<div class="box textbox borderbot pbot32">
-		<p class="eyebrow tt-u"><a class="linkonhover" href="/">Bodha</a></p>
-		<h1 class="hero-title source-serif">Blog</h1>
-		<p class="small-text grey">Essays on Hindu culture, history, civilisation, and the intellectual life of a society in renewal.</p>
+	<Crumb item1="Bodha" item1Link="/" showT={true} title="Blog" showD={true} desc={$metaDescription} showRow={true}>
 		<div class="row cgap8 rgap8 mwrap">
 			<button class="filter-button" class:active={!showEx} on:click={() => (showEx = false)}>Essays</button>
 			<button class="filter-button" class:active={showEx} on:click={() => (showEx = true)}>External Posts</button>
 			<a class="filter-button" href="/blog/writers">Writers</a>
-			<a class="filter-button" href="/blog/tags">Tags</a>
+			<a class="filter-button" href="/tags">Tags</a>
 		</div>
-	</div>
+	</Crumb>
 	<div class="box std">
 		{#if !showEx && posts && posts.length > 0}
 		<div class="standard-grid grid three">
@@ -48,10 +46,10 @@
 				author={item.meta.author}
 				date={item.formattedDate}
 				words={item.meta.words}
-				numbering="number{i}"
+				numbering="ncolor{i}"
 			>
 				{#each item.meta.tags as tag}
-				<span class="tag-pill tt-u">{tag.replaceAll('-', ' ')}</span>
+				<p class="tag-pill tt-u">{tag.replaceAll('-', ' ')}</p>
 				{/each}
 			</BlogCard>
 			{/each}
@@ -59,12 +57,11 @@
 
 		{:else if showEx}
 		<div class="standard-grid grid three">
-			{#each externalPosts as item}
-			<a class="ext-card blank" href={item.route} target="_blank" rel="noreferrer">
+			{#each externalPosts as item, i}
+			<a class="box blank ncolor{i+1}" href={item.route} target="_blank" rel="noreferrer">
 				<div class="ext-card-body">
-					<span class="ext-badge tt-u">External</span>
-					<h3 class="blog-title source-serif">{item.title}</h3>
-					<p class="ext-desc">{item.description}</p>
+					<h3 class="blog-title">{item.title}</h3>
+					<p class="small-text tight grey">{item.description}</p>
 				</div>
 				<div class="ext-card-foot">
 					{#each item.tags as tag}
@@ -105,17 +102,6 @@
 		background: var(--theme)
 		border-color: var(--theme)
 		color: #FFF
-
-// External cards
-.ext-card
-	display: flex
-	flex-direction: column
-	background: #FFFFFF
-	transition: background 0.15s ease
-	&:hover
-		background: #F9F8F6
-		.ext-title
-			color: var(--theme)
 
 .ext-card-body
 	display: flex

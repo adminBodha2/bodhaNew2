@@ -9,11 +9,11 @@
 	<div class="bob">
 		<Arrow size={12} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<p class="eyebrow tight thin name lgrey tt-u">
+	<h2 class="header-2 name lgrey tt-u">
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style="animation-delay: {i * 0.04}s">{char}</span>
 		{/each}
-	</p>
+	</h2>
 </div>
 
 <style lang="sass">

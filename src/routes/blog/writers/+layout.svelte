@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 	import { writersWithCountsAlphabetical } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
-
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 
 	let writers = $state<any>([]);
 
@@ -20,21 +20,22 @@
 
 <Container narrow={true} scaled={true}>
 	<div class="box std padded-ontop">
-		<div class="box textbox borderbot pbot32">
-			<p class="eyebrow tt-u"><a class="linkonhover" href="/blog">blog</a></p>
-			<h1 class="hero-title source-serif tt-c">{#if depth === 2}Writers{:else}{route.replaceAll('-', ' ')}{/if}</h1>
-			<p class="small-text grey">Meet the writers behind Bodha's essays on Hindu culture, history, and tradition.</p>
+		<div class="box rgap8 borderbot pbot32">
+			<Crumb item1="Bodha" item1Link="/" item2linked={true} item2="Blog" item2Link="/blog" />
+			<h1 class="page-title">
+				{#if depth === 2}Writers{:else}{route.replaceAll('-', ' ')}{/if}
+			</h1>
 			<div class="row cgap8 rgap8 mwrap">
 				<a class="filter-button" href="/blog">Blog</a>
 				{#if depth !== 2}
-				<a class="filter-button" href="/blog/writers">Writers</a>
+					<a class="filter-button" href="/blog/writers">Writers</a>
 				{/if}
-				<a class="filter-button" href="/blog/tags">Tags</a>
+				<a class="filter-button" href="/tags">Tags</a>
 			</div>
 		</div>
-	{@render children?.()}
-	</div>
 
+		{@render children?.()}
+	</div>
 </Container>
 
 <style lang="sass">

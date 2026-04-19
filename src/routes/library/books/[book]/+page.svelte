@@ -1,10 +1,20 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { onMount } from 'svelte'
+	import { selectedOpenLibrary } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Title from '$lib/comps/page-title.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 
+
 	export let data;
+	let relatedBooks:any
+	let sizing = 'medium'
+
+	function setSizing(index:string) {
+		sizing = index
+	}
 
 	const shelfMap: Record<string, { label: string; href: string }> = {
 		essentials: { label: 'Essentials', href: '/library/essentials' },
@@ -17,6 +27,12 @@
 	};
 
 	const shelf = shelfMap[data.type];
+
+	onMount(() => {
+		(async() => {
+			relatedBooks = await selectedOpenLibrary(data.type)
+		})();
+	})
 </script>
 
 <Head
@@ -28,20 +44,44 @@
 
 <Container narrow={true} scaled={true}>
 <div class="box std padded-ontop">
-	<Crumb rgap={8} item1="Library" item1Link="/library" show2={true} item2={data.type} showT={true} title={data.name} showD={true} desc={data.summary} showRow={true}>
-		<div class="box labelbox">
-			<p class="small-text tt-u w500">{data.author}</p>
+	<Crumb rgap={8} item1="Library" item1Link="/library" show2={true} item2={data.type} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 			<div class="row cgap8 rgap8 mwrap">
 				{#each data.tags as tag}
-<a class="tag-pill tt-u" href="/tags/{tag}">{tag}</a>
+					<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag}</a>
 				{/each}
 			</div>
-		</div>
 	</Crumb>
-	<div class="box std reader">
-		<iframe title={data.name} src={data.linkreal} allow="autoplay"></iframe>
+	<div class="box std reader {sizing}">
+		<div class="box textbox xcenter ta-c mleft sizing-tray">
+			<p class="citation grey">Set Reader Size</p>
+		<div class="row cgap8 rgap8 xcenter">
+			<button class="filter-button" class:active={sizing === 'large'} on:click={() => setSizing('large')}>
+				Large
+			</button>
+			<button class="filter-button" class:active={sizing === 'medium'} on:click={() => setSizing('medium')}>
+				Medium
+			</button>
+			<button class="filter-button" class:active={sizing === 'compact'} on:click={() => setSizing('compact')}>
+				Compact
+			</button>
+		</div>
+		</div>
+		<iframe loading="lazy" title={data.name} src={data.linkreal} allow="autoplay"></iframe>
 	</div>
 </div>
+{#if relatedBooks && relatedBooks.length > 0}
+	<div class="box std padded bordertop">
+		<Title text="Related Books"/>
+		<div class="grid four standard-grid stay2">
+			{#each relatedBooks as item, i}
+				<a class="blank box textbox card-padded ncolor{i}" href={item.linkfinal2}>
+					<p class="item-line tight">{item.name}</p>
+					<p class="small-text grey tight">{item.short}</p>
+				</a>
+			{/each}
+		</div>
+	</div>
+{/if}
 </Container>
 
 <style lang="sass">
@@ -87,18 +127,39 @@
 		color: var(--themealt)
 
 .reader
-	background: #FFF
+	background: var(--stone)
+	align-items: center
+	border: var(--stroke-subtle)
+	padding: 2rem
 	iframe
 		display: block
-		width: 100%
-		height: 72vh
-		min-height: 620px
-		border: 1px solid rgba(0,0,0,0.08)
-		border-radius: 8px
-		background: #FFFFFF
+		border-radius: 5px
+		border: 1px solid #e2e8f0
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05)
+	@media screen and (min-width: 1025px)
+		&.medium
+			iframe
+				width: 700px
+				height: 72vh
+				min-height: 620px
+		&.large
+			iframe
+				width: 900px
+				height: 90vh
+		&.compact
+			iframe
+				width: 560px
+				height: 70vh
 	@media screen and (max-width: 1024px)
+		padding: 1rem
 		iframe
-			height: 68vh
-			min-height: 540px
+			width: 100%
+		&.medium, &.large, &.compact
+			iframe
+				height: 68vh
+
+.sizing-tray
+	@media screen and (max-width: 1024px)
+		display: none
 
 </style>

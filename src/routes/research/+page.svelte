@@ -55,14 +55,14 @@
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities."/>
 	<div class="box std">
 		<Title text="Research Pillars"/>
-		<div class="grid three tight">
-			{#each areas as area}
-			<div class="area-card">
+		<div class="grid three areas-grid">
+			{#each areas as area, i}
+			<div class="area-card ac-{i}">
 				<div class="area-image">
 					<img src={area.image} alt={area.title} />
 				</div>
 				<div class="area-body">
-					<p class="card-title w500">{area.title}</p>
+					<h3 class="blog-title">{area.title}</h3>
 					<div class="area-links">
 						{#each area.items as item}
 						{#if item.href}
@@ -86,18 +86,11 @@
 <style lang="sass">
 
 .areas-grid
-	display: grid
-	gap: var(--gap-elem)
-	@media screen and (min-width: 1025px)
-		grid-template-columns: repeat(3, 1fr)
-	@media screen and (min-width: 631px) and (max-width: 1024px)
-		grid-template-columns: repeat(2, 1fr)
+	border: var(--stroke-subtle)
 
 .area-card
 	display: flex
 	flex-direction: column
-	border: 1px solid rgba(0,0,0,0.06)
-	border-radius: 12px
 	overflow: hidden
 	background: #FFFFFF
 	position: relative
@@ -113,10 +106,14 @@
 		opacity: 0.7
 	&:hover
 		transform: translateY(-2px)
-		border-color: rgba(25,113,194,0.18)
 		box-shadow: 0 12px 26px rgba(0,0,0,0.05), 0 3px 10px rgba(0,0,0,0.03)
-		.area-title
-			color: var(--theme)
+		background: var(--stone)
+
+.ac-0, .ac-1
+	@media screen and (min-width: 1025px)
+		border-right: var(--stroke-subtle)
+	@media screen and (max-width: 1024px)
+		border-bottom: var(--stroke-subtle)
 
 .area-image
 	img
@@ -147,21 +144,12 @@
 	font-size: 0.74rem
 	color: var(--text-ghost)
 
-.area-title
-	font-size: clamp(1.02rem, 1.6vw, 1.22rem)
-	font-weight: 400
-	letter-spacing: -0.02em
-	line-height: 1.2
-	color: #111
-	margin: 0
-	transition: color 0.15s ease
-
 .area-links
 	display: flex
 	flex-direction: column
 	gap: 0
 	padding-top: 0.2rem
-	border-top: 1px solid rgba(0,0,0,0.05)
+	border-top: var(--stroke-subtle)
 
 .area-link
 	display: flex
@@ -170,25 +158,28 @@
 	gap: 0.75rem
 	font-size: 1rem
 	line-height: 1.45
-	color: #444
 	padding: 0.72rem 0
-	border-bottom: 1px solid rgba(0,0,0,0.05)
+	border-bottom: var(--stroke-subtle)
 	transition: color 0.12s ease, transform 0.12s ease
 	&:hover
 		color: var(--theme)
 		.area-arrow
 			transform: translateX(2px)
+	&:last-child
+		border-bottom: none
 
 .area-arrow
 	font-size: 0.8rem
-	color: var(--text-ghost)
+	color: var(--grey-std)
 	transition: transform 0.12s ease, color 0.12s ease
 
 .area-link-dim
 	font-size: 1rem
 	line-height: 1.45
-	color: var(--text-ghost)
+	color: var(--grey-std)
 	padding: 0.72rem 0
-	border-bottom: 1px solid rgba(0,0,0,0.05)
+	border-bottom: var(--stroke-subtle)
+	&:last-child
+		border-bottom: none
 
 </style>

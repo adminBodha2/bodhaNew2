@@ -1,4 +1,5 @@
 <script lang="ts">
+	
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -15,7 +16,7 @@
 const categories = [
 		{ label: 'Essentials', href: '/library/categories/essentials', type: 'essentials', forLink: 'essentials', desc: 'Foundational readings for entering the civilisational and philosophical landscape of Bodha.' },
 		{ label: 'Aryan Issue', href: '/library/categories/aryan-issue', type: 'aryan-issue', forLink: 'aryanissue', desc: 'Texts on the Aryan debate, migration theory, archaeology, philology, and civilizational argument.' },
-		{ label: 'Darshanas', href: '/library/categories/darshanas', type: 'darshana', forLink: 'darshana', desc: 'Primary and secondary works on Indian philosophical systems, debates, and metaphysical frameworks.' },
+		{ label: 'Darshanas', href: '/library/categories/darshanas', type: 'darshanas', forLink: 'darshana', desc: 'Primary and secondary works on Indian philosophical systems, debates, and metaphysical frameworks.' },
 		{ label: 'Indian Knowledge Systems', href: '/library/categories/iks', type: 'iks', forLink: 'iks', desc: 'Works on organised traditions of knowledge, method, science, language, and pedagogy.' },
 		{ label: 'Scriptural', href: '/library/categories/scriptural', type: 'scriptural', forLink: 'scriptural', desc: 'Sources in shruti, smriti, puranic, and sacred-historical traditions.' },
 		{ label: 'Shatrubodha', href: '/library/categories/shatrubodha', type: 'shatrubodha', forLink: 'shatrubodha', desc: 'Texts dealing with critique, conflict, ideology, and civilisational self-understanding.' },
@@ -51,6 +52,8 @@ const categories = [
 		{ label: 'Sanskrit Dictionary', href: 'https://sanskritdictionary.com/', desc: 'A composite Sanskrit dictionary and word lookup site with meanings, associated words, and references, including a Sanskrit dhatus search companion.' },
 		{ label: 'Archive.org', href: 'https://archive.org/', desc: 'The original and undefeated repository for all kinds of texts. Most documents in our own library are sourced from this archive.' },
 	];
+
+
 </script>
 
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage} />
@@ -61,9 +64,9 @@ const categories = [
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Open Library" showD={true} desc="A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more."/>
 	<div class="box std">
 		<div class="grid standard-grid four stay2">
-			{#each categories as cat}
-			<a class="shelf-card box labelbox number" href={cat.href}>
-				<div class="shelf-top">
+			{#each categories as cat, i}
+			<a class="box card-padded labelbox ncolor{i}" href={cat.href}>
+				<div class="box shelf-main">
 					<p class="card-title">{cat.label}</p>
 					<p class="citation-big lgrey">{categoryCounts[cat.type]} texts</p>
 				</div>
@@ -76,8 +79,8 @@ const categories = [
 <div class="box std padded bordertop">
 	<Title text="Curated Reading Paths"/>
 	<div class="grid standard-grid four stay2">
-			{#each paths as path}
-			<a class="box labelbox card-path blank number" href={path.href}>
+			{#each paths as path, i}
+			<a class="box card-padded labelbox blank ncolor{i}" href={path.href}>
 				<p class="card-title tight">{path.label}</p>
 				<p class="path-desc">{path.desc}</p>
 			</a>
@@ -87,7 +90,7 @@ const categories = [
 
 <div class="box std padded bordertop">
 	<Title text="External Resources"/>
-	<div class="standard-grid grid two stay2">
+	<div class="standard-grid grid four stay2">
 			{#each externalResources as res}
 			<a class="resource-card blank number" href={res.href} target="_blank" rel="noreferrer">
 				<p class="item-line tight">{res.label} →</p>
@@ -107,7 +110,6 @@ const categories = [
 .shelves-grid
 	display: grid
 	gap: 1px
-	background: rgba(0,0,0,0.06)
 	border: 1px solid rgba(0,0,0,0.06)
 	border-radius: 10px
 	overflow: hidden

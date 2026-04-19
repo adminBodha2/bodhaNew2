@@ -68,14 +68,15 @@ $effect(() => {
 			<div class="grid four standard-grid">
 				{#each books as item, i}
 					{#if item.type === 'aryanissue'}
-					<a class="blank box number" href={item.linkfinal} target="_blank" rel="noreferrer">
-						<p class="item-line tight w500">{item.name}</p>
+					<a class="blank box textbox ncolor{i}" href={item.linkfinal} target="_blank" rel="noreferrer">
+						<p class="item-line tight">{item.name}</p>
 						<p class="citation-big tt-u lgrey">{item.author}</p>
 					</a>
 					{:else}
-					<a class="blank box number" href={item.linkfinal2}>
-						<p class="item-line tight w500">{item.name}</p>
-						<p class="citation-big tt-u lgrey">{item.author}</p>
+					<a class="blank box textbox ncolor{i}" href={item.linkfinal2}>
+						<p class="item-line tight">{item.name}</p>
+						<p class="small-text lgrey tight">{item.short}</p>
+					<p class="citation-big tt-u grey self-bottom">{item.author}</p>
 					</a>
 					{/if}
 				{/each}

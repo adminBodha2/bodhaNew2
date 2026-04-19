@@ -94,6 +94,15 @@ h1
 	&.source-serif
 		font-weight: 600
 		letter-spacing: -0.06rem
+	&.page-title
+		font-weight: 500
+		font-size: var(--typeH5)
+	@media screen and (max-width: 1024px)
+		&.source-serif
+			letter-spacing: -0.03rem
+		&.page-title
+			font-size: var(--typeH5)
+			letter-spacing: -0.03rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -112,6 +121,15 @@ h2
 	&.title-small
 		font-size: var(--typeBase)
 		font-weight: 500
+	&.header-2
+		font-size: 0.7rem
+		font-weight: 500
+	&.header-type-p
+		font-size: calc(var(--typeH1) * 0.8)
+		font-weight: 400
+	&.blog-title
+		font-size: var(--typeH3)
+		font-weight: 500
 
 //-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -126,7 +144,11 @@ h3
 		line-height: 1.25
 		letter-spacing: -0.02em
 		transition: color 0.15s ease
-h3.item-title, h3.blog-title
+	&.blog-title
+		font-size: var(--typeH1)
+		font-weight: 500
+
+h3.item-title
 	font-weight: 500
 
 .gateway-card, .vertical-card
@@ -151,7 +173,7 @@ h3.item-title, h3.blog-title
 	h3.item-title, h3.item-title.source-serif
 		font-size: var(--typeH3)
 		letter-spacing: -0.01rem
-	h3.blog-title, h3.blog-title.source-serif
+	h3.blog-title.source-serif
 		font-size: var(--typeH2)
 		letter-spacing: -0.01rem
 
@@ -160,7 +182,7 @@ h3.item-title, h3.blog-title
 	h3.item-title, h3.item-title.source-serif
 		font-size: var(--typeH3)
 		letter-spacing: -0.01rem
-	h3.blog-title, h3.blog-title.source-serif
+	h3.blog-title.source-serif
 		font-size: var(--typeH3)
 		letter-spacing: 0.02rem
 
@@ -254,19 +276,21 @@ p, pre, li
 	&.tight
 		line-height: 1.28
 	&.item-line
-		font-size: calc(var(--typeBase) * 0.8)
+		font-size: calc(var(--typeBase) * 0.85)
 	&.item-line.source-serif
 			font-weight: 600
 	&.citation
-		font-size: 8px
-		font-weight: 700
-		letter-spacing: 0.14em
+		font-size: 11px
 	&.small-text
-		font-size: 0.8rem
+		font-size: 0.775rem
 		line-height: 1.5
+		&.tight
+			line-height: 1.28
 	&.citation-big
 		font-size: 10px
 		font-weight: 600
+		&.thin
+			font-weight: 400
 	&.para-text
 		font-size: 1rem
 
@@ -277,7 +301,6 @@ p, pre, li
 			line-height: 1.5
 		&.card-text
 			line-height: 1.5
-			font-size: calc(var(--typeBase) * 1.05)
 			&.tight
 				line-height: 1.28
 		&.small-text
