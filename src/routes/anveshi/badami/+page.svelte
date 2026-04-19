@@ -74,6 +74,11 @@ function handleItemClick() {
 				<p>...to temples dedicated to kshetriya gods deep in jungles, Badami has it all. Come to Bodha Anveshi Badami Chapter to experience this all.
 				</p>
 			</div>
+            <div class="column xcenter rgap8 mleft ta-c ptop16">
+				<p class="w500 para-text">14 – 18 August 2026 &nbsp;·&nbsp; ₹41,999</p>
+				<div class="row xcenter mleft cgap16">
+					<a class="primary anveshi" href="https://forms.gle/SuCA3Jc1PuFJthUV7" target="_blank" rel="noreferrer"><span>Register Now</span></a>
+				</div>
 		</div>
 		<div class="ch-itin-panel width80">
 			<h2 class="title-small ta-c mleft">Itinerary</h2>
