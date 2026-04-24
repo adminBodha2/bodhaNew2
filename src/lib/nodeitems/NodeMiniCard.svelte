@@ -3,6 +3,7 @@
 	import { getContentHref } from '$lib/graph/routing';
 
 	export let node: Node;
+	export let showType = true
 
 	const typeStyle: Record<string, { color: string; bg: string; border: string }> = {
 		article:  { color: '#1971C2', bg: 'rgba(25,113,194,0.07)',  border: 'rgba(25,113,194,0.2)'  },
@@ -24,7 +25,9 @@
 	target={isExternal ? '_blank' : undefined}
 	rel={isExternal ? 'noreferrer' : undefined}
 	style="--tc: {ts.color}; --tbg: {ts.bg}; --tborder: {ts.border};"
->
+>	
+	{#if showType}
 	<p class="citation-big blue tt-u">{node.type}</p>
+	{/if}
 	<p class="w500 tight">{node.title}</p>
 </a>

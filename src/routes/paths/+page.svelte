@@ -28,7 +28,7 @@
 				<a class="blank labelbox outer card-padded" href="/paths/{path.id}">
 					<div class="labelbox main-text">
 						<p class="tag-text lgrey">{String(i + 1).padStart(2, '0')}{#if path.subtitle} - {path.subtitle}{/if}</p>
-						<h2 class="card-title">{path.title}</h2>
+						<h2 class="source-serif card-title">{path.title}</h2>
 						<p class="rem1 altprim">{path.description.slice(0, 160)}…</p>
 					</div>
 					<div class="card-footer row ycenter xbetween self-bottom">

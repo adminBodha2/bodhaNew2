@@ -1,9 +1,19 @@
 <script lang="ts">
 
 	import Container from '$lib/comps/container.svelte'
+	import Head from '$lib/comps/headcomponent.svelte'
 	import { page } from '$app/state';
 
+	const title = 'Bodha - Cultural Think Tank'
+	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.'
+	const metaUrl = 'https://www.bodharesearch.in'
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
+
 </script>
+
+<Head
+	{title} {metaDescription} {metaImage} {metaUrl}
+/>
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">

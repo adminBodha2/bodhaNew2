@@ -22,7 +22,7 @@
 </script>
 
 	<a class="blank labelbox" href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noreferrer' : undefined}>
-		<h3 class="blog-title">{node.title}</h3>
+		<p class="highlight-text tight source-serif bold">{node.title}</p>
 		{#if desc}
 			<p class="grey rem1">{desc}</p>
 		{/if}

@@ -4,12 +4,11 @@
 	import Parallax from '$lib/comps/parallaxfull.svelte'
 	import Title from '$lib/comps/page-title.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
-	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 
-	$metaTitle = 'Bodha Research';
-	$metaDescription = 'Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India\'s policy in Hindu cultural sensibilities.';
-	$metaUrl = 'https://www.bodharesearch.in/research';
-	$metaImage = '/images/key-research.webp';
+	const title = 'Bodha Research';
+	const metaDescription = 'Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India\'s policy in Hindu cultural sensibilities.';
+	const metaUrl = 'https://www.bodharesearch.in/research';
+	const metaImage = '/images/key-research.webp';
 
 	const areas = [
 		{
@@ -47,7 +46,7 @@
 	];
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage} />
+<Head {title} {metaDescription} {metaUrl} {metaImage} />
 
 <Parallax imageLink="/images/key-research.webp" isClass="is50"/>
 <Container narrow={true} scaled={true}>
@@ -62,7 +61,7 @@
 					<img src={area.image} alt={area.title} />
 				</div>
 				<div class="area-body">
-					<h2 class="card-title">{area.title}</h2>
+					<p class="card-title">{area.title}</p>
 					<div class="area-links">
 						{#each area.items as item}
 						{#if item.href}
