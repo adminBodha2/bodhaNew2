@@ -28,7 +28,7 @@
 	</div>
 	<div class="labelbox pbot8">
 		{#if showT}
-			<h1 class="page-title tt-c">{title}</h1>
+			<h1 class="page-title source-serif tt-c">{title}</h1>
 		{/if}
 		{#if showD}
 			<p class="small-text grey width50">{desc}</p>

@@ -7,9 +7,9 @@
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">
-		<div class="column">
-		<p class="status sm">{page.status} | {page.error?.message ?? ''}</p>
-		<p class="big pbot16 bold">{page.status === 404 ? 'Sorry, Page not found' : 'Something went wrong'}</p>
+		<div class="labelbox">
+		<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
+		<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>
 		<div class="row cgap16 rgap16 mwrap ycenter pbot32">
 			<button class="blank" on:click={() => history.back()}><p class="blue">← Back to Previous Page</p></button>
 		</div>
@@ -21,10 +21,12 @@
 <style lang="sass">
 
 img
-	width: 200px
-	border: 1px solid #000000
+	width: 400px
+	border: var(--border-dark)
 	border-radius: 8px
 	height: 100%
 	object-fit: contain
+	@media screen and (max-width: 1024px)
+		width: 100%
 
 </style>

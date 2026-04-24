@@ -167,3 +167,32 @@ export async function badamiTemples(){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+export async function chapterItinerary(slug:string){
+	const { data, error } = await supabase
+	.from('db-anveshiitineraries')
+	.select()
+	.eq('chapter',slug)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function chapterTemples(slug:string){
+	const { data, error } = await supabase
+	.from('db-anveshitemples')
+	.select()
+	.eq('chapter',slug)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function anveshiTestimonials(){
+	const { data, error } = await supabase
+	.from('db-testimonialsanveshi')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
+}

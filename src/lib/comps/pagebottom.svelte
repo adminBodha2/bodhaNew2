@@ -10,7 +10,9 @@
 		<div class="foot-top">
 			<div class="foot-brand">
 				<p class="white">Bodha</p>
-				<p class="lgrey small-text">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
+				<p class="lgrey small-text">A think tank and research group grounded in the wisdom of Hindu civilization.<br>
+					Site designed at Bodha Lab | <a class="linkedlight" target="_blank" rel="noreferrer" href="https://github.com/adminBodha2/bodhaNew2">Github</a>
+				</p>
 			</div>
 			<button
 				class="blank foot-scroll"

@@ -1,37 +1,36 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import autoAnimate from '@formkit/auto-animate';
-	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture, anveshiPast } from '$lib/utils/supabaseClient';
+	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture, anveshiPast, anveshiTestimonials } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
+	import Swipes from '$lib/comps/swipercomp.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Title from '$lib/comps/page-title.svelte';
-	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 	import Anveshilogo from '$lib/assets/anveshilogo.svelte';
-	import Close from '$lib/assets/close.svelte';
-	$metaTitle = 'Bodha - Anveshi';
-	$metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
-	$metaUrl = 'https://www.bodharesearch.in/anveshi';
-	$metaImage = '/images/key-anveshi.webp';
 
-	let currproj: any;
-	let futureproj: any;
-	let pastproj: any;
-	let sY: number;
-	let regionAnveshi: any;
-	let region: string = 'northern india';
-	let goTime: boolean;
-	$: goTime = sY >= 0;
-	let isRegion = Array(8).fill(false);
-	isRegion[0] = true;
-	let showText = false;
+	const title = 'Bodha - Anveshi';
+	const metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
+	const metaUrl = 'https://www.bodharesearch.in/anveshi';
+	const metaImage = 'https://www.bodharesearch.in/images/key-anveshi.webp';
 
-	function setRegion(newRegion: string) {
+	let currproj = $state<any[]>([])
+	let futureproj = $state<any[]>([])
+	let pastproj = $state<any[]>([])
+	let testis = $state<any[]>([])
+	let sY = $state(0)
+	let iW = $state(0)
+	let regionAnveshi = $state<any[]>([]);
+	let region = $state('northern india');
+	let goTime = $derived(sY >= 0);
+	let isRegion = $state(Array(8).fill(false));
+	isRegion[7] = true;
+	let showText = $state(false);
+
+	async function setRegion(newRegion: string) {
 		region = newRegion;
-		(async () => {
-			regionAnveshi = await selectedAnveshiFuture(region);
-		})();
+		regionAnveshi = await selectedAnveshiFuture(region);
 	}
 
 	function toggleText() {
@@ -47,19 +46,18 @@
 		}
 	}
 
-	onMount(() => {
-		(async () => {
-			currproj = await anveshiCurrent();
-			futureproj = await anveshiFuture();
-			regionAnveshi = await selectedAnveshiFuture(region);
-			pastproj = await anveshiPast();
-		})();
+	onMount(async () => {
+		currproj = await anveshiCurrent();
+		futureproj = await anveshiFuture();
+		regionAnveshi = await selectedAnveshiFuture(region);
+		pastproj = await anveshiPast();
+		testis = await anveshiTestimonials();
 	});
 </script>
 
-<svelte:window bind:scrollY={sY} />
+<svelte:window bind:scrollY={sY} bind:innerWidth={iW}/>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
+<Head {title} {metaDescription} {metaUrl} {metaImage} />
 
 <div class="column screener-wrap scaledTypo">
 	<div class="screener" style="transform: translateY({sY / 2}px)">
@@ -85,7 +83,7 @@
 			</p>
 			<p class="highlight-text bold">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p>
 			{#if !showText}
-				<button class="blank anv-readmore" on:click={toggleText}>
+				<button class="blank anv-readmore" onclick={toggleText}>
 					<span>Read more</span>
 					<span class="anv-readmore-arrow">→</span>
 				</button>
@@ -103,7 +101,7 @@
 						</div>
 					</div>
 				</div>
-					<button class="blank anv-readmore anv-readless" on:click={toggleText}>
+					<button class="blank anv-readmore anv-readless" onclick={toggleText}>
 						<span>Collapse</span>
 						<span class="anv-readmore-arrow">↑</span>
 					</button>
@@ -119,20 +117,14 @@
 					<a class="blank grid two anveshi" href="/anveshi{item.link}">
 						<div class="anv-current-image">
 							<img src={item.image} alt="{item.chapter} Chapter" />
-							{#if item.regopen}
-								<p class="tag-pill anveshi">OPEN NOW</p>
-							{/if}
 						</div>
-						<div class="anv-current-body">
-							<span class="anv-accent-line"></span>
-							<p class="card-title">{item.chapter} Chapter</p>
-							<div>
-							<p class="grey">{item.desc}</p>
-							<span class="course-link anveshi-o">View Chapter →</span>
-							</div>
-							<div class="self-bottom foot row ycenter mwrap cgap8 rgap8">
-							<p class="anveshi-o small-text bold">OPEN NOW</p>
+						<div class="textbox card-padded current-item whitestone">
 							<p class="tag-pill anveshi tt-u" style="width: max-content">{item.fromto}</p>
+							<h2 class="card-title source-serif">{item.chapter} Chapter</h2>
+							<p class="grey pbot8">{item.desc}</p>
+							<div class="self-bottom foot row ycenter xbetween mwrap cgap8 rgap8">
+							<p class="anveshi-o small-text bold">OPEN NOW</p>
+							<p class="anveshi-o small-text bold">→</p>
 							</div>
 						</div>
 					</a>
@@ -140,62 +132,94 @@
 		</div>
 	{/if}
 
+	{#if testis && testis.length > 0}
+		<div class="stdbox padded bordertop" id="testimonials">
+			<Title text="Testimonials"/>
+			<div class="grid two tight">
+				{#each testis as item}
+					<div class="box test-box card-padded">
+						<p class="source-serif thin italic">{item.content}</p>
+						<p class="grey rem1 ptop8">{item.person} | {item.chapter}</p>
+					</div>
+				{/each}
+			</div>
+		</div>
+	{/if}
+
 	<!-- ── FUTURE CHAPTERS ───────────────────────────────── -->
 	<div class="stdbox padded bordertop" id="future-chapters">
 		<Title text="future chapters"/>
 		<div class="row cgap8 rgap8 wrap">
-			<button class="nav-btn anveshi" class:active={isRegion[7]} on:click={() => toggleRegion(7)}>All</button>
+			<button class="nav-btn anveshi" class:active={isRegion[7]} onclick={() => toggleRegion(7)}>All</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[0]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(0);
 					setRegion('northern india');
 				}}>North</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[1]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(1);
 					setRegion('eastern india');
 				}}>East</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[2]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(2);
 					setRegion('western india');
 				}}>West</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[3]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(3);
 					setRegion('southern india');
 				}}>South</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[4]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(4);
 					setRegion('central india');
 				}}>Centre</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[5]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(5);
 					setRegion('himalayas');
 				}}>Himalayas</button>
 			<button
 				class="nav-btn anveshi"
 				class:active={isRegion[6]}
-				on:click={() => {
+				onclick={() => {
 					toggleRegion(6);
 					setRegion('international');
 				}}>International</button>
 		</div>
 		{#if futureproj && futureproj.length > 0 && isRegion[7]}
+			<Swipes slidesPerView={4} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 4,spaceBetween: 8}}}>
+				{#each futureproj as item}
+					<swiper-slide>
+						<div class="box labelbox all-item">
+							<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
+							<div class="labelbox card-future">
+								<p class="bold source-serif">{item.chapter}</p>
+								<p class="small-text grey">{item.shortdesc}</p>
+								{#if item.region}<p class="citation-big anveshi-o tt-u">{item.region}</p>{/if}
+							</div>
+							{#if item.regopen === true}
+							<a class="blank open-link" href="/anveshi{item.link}">OPEN NOW →</a>
+							{/if}
+						</div>
+					</swiper-slide>
+				{/each}
+			</Swipes>
+			<!--
 			<div class="white-grid grid stay2 four" use:autoAnimate>
 				{#each futureproj as item, i}
 					<div class="box labelbox all-item">
@@ -208,15 +232,19 @@
 					</div>
 				{/each}
 			</div>
+			-->
 		{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
 			<div class="white-grid grid stay2 four" use:autoAnimate>
 				{#each regionAnveshi as item, i}
 					<div class="box labelbox sub-item">
 						<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
 						<div class="labelbox card-future">
-							<p class="w500">{item.chapter}</p>
+							<p class="bold source-serif">{item.chapter}</p>
 							<p class="small-text grey">{item.shortdesc}</p>
 						</div>
+							{#if item.regopen === true}
+							<a class="blank open-link" href="/anveshi{item.link}">OPEN NOW →</a>
+							{/if}
 					</div>
 				{/each}
 			</div>
@@ -241,15 +269,37 @@
 	{/if}
 
 	<!-- ── FAQS ──────────────────────────────────────────── -->
-	<div class="box std padded bordertop" id="faqs">
+	<div class="stdbox padded bordertop" id="faqs">
 		<FAQ />
 	</div>
 </Container>
 
 <style lang="sass">
 
+.test-box
+	border: var(--border-main)
+
 .all-item, .sub-item
 	background: var(--color-white)
+	.open-link
+		font-size: 0.875rem
+		font-weight: 600
+		padding: 1rem
+		border-top: var(--border-main)
+		background: var(--color-alt-3)
+		&:hover
+			color: var(--color-anveshi)
+
+swiper-slide
+	height: auto
+	display: flex
+
+swiper-slide > *
+	width: 100%
+
+.all-item
+	border: var(--border-main)
+	height: 100%
 
 .card-future
 	padding: 0.5rem 1rem 1rem 1rem
@@ -276,14 +326,6 @@
 		background: rgba(0,0,0,0.7)
 
 // ── INTRO ─────────────────────────────────────────────────
-
-.anv-accent-line
-	display: block
-	width: 32px
-	height: 2px
-	background: var(--anveshi-color)
-	border-radius: 1px
-	margin-bottom: 0.25rem
 
 .anv-orange
 	color: var(--anveshi-color)
@@ -326,24 +368,18 @@
 		transition: transform 0.4s ease
 	&:hover img
 		transform: scale(1.03)
-	.tag-pill.anveshi
-		position: absolute
-		top: 12px
-		left: 12px
 
-.anv-current-body
-	display: flex
-	flex-direction: column
-	gap: 0.6rem
-	padding: 1.5rem
-	flex: 1
+.current-item
+	.self-bottom
+		border-top: var(--border-main)
+		padding-top: 1rem
 
 
 // ── FUTURE CHAPTERS ───────────────────────────────────────
 
 .anv-future-image
 	width: 100%
-	height: 160px
+	height: 200px
 	object-fit: cover
 
 // ── PAST CHAPTERS ─────────────────────────────────────────

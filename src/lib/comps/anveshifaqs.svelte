@@ -28,7 +28,7 @@
         {#each faqs as item, i}
           <button class="blank column ytop rgap4 ta-l xleft acco-box border{i}" class:openedbox={openIndex === i} use:autoAnimate on:click={() => openIndex = openIndex === i ? null : i}>
             <div class="row ycenter cgap16 width100 inside-acco radius">
-              <p class="w500">{item.question}</p>
+              <p>{item.question}</p>
               {#if iW > 1024}
               <ChevD fill="var(--anveshi-color)" rotated={openIndex === i}/>
               {/if}
@@ -46,7 +46,6 @@
 
 pre
 	font-family: var(--fontface-sans-flex)
-	font-size: 0.875rem
 	line-height: 1.5
 
 .acco-box

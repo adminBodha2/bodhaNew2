@@ -39,6 +39,7 @@
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0",
 		"flexsearch": "^0.8.212",
-		"svelte-embla": "^0.0.7"
+		"svelte-embla": "^0.0.7",
+		"swiper": "^12.1.3"
 	}
 }

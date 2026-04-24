@@ -1,5 +1,7 @@
 <script lang="ts">
 
+	import { onMount } from 'svelte';
+	import { registerSwiper } from '$lib/utils/swiper';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
@@ -23,6 +25,8 @@
 
 	injectSpeedInsights();
 	injectAnalytics();
+
+	onMount(registerSwiper);
 
 </script>
 

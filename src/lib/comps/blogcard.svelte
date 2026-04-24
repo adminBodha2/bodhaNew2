@@ -16,7 +16,7 @@
 		</div>
 		<div class="card-body">
 			{#if date && date !== ' '}<p class="tag-text lgrey">{date}</p>{/if}
-			<p class="card-title">{title}</p>
+			<p class="card-title source-serif">{title}</p>
 			<p class="grey small-text">{excerpt}</p>
 		</div>
 	</a>
@@ -38,15 +38,14 @@
 .blog-card
 	display: flex
 	flex-direction: column
-	transition: background 0.15s ease
+	transition: var(--transition1)
 	&:hover
 		img
 			transform: scale(1.05)
-		p.card-title
-			color: var(--color-theme)
-
-p.card-title
-	transition: all 0.22s cubic-bezier(0.145, 0.495, 0.955, 0.645)
+	&.slate
+		background: var(--color-white)
+		&:hover
+			background: var(--color-stone)
 
 .card-media
 	display: flex

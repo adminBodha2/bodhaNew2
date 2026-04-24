@@ -7,6 +7,9 @@
 body, html
 	font-family: var(--fontface-sans-flex)
 
+pre
+	font-family: var(--fontface-sans-flex)
+
 p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
 	margin: 0
 	color: var(--primary)
@@ -28,25 +31,25 @@ p.bold
 		--typeBase: 1.33rem
 		--typeBaseLow: 1.06rem
 		--typeScale: 1.25
-		--typeH1: calc(var(--typeBase) * var(--typeScale))
-		--typeH2: calc(var(--typeH1) * var(--typeScale))
-		--typeH3: calc(var(--typeH2) * var(--typeScale))
-		--typeH4: calc(var(--typeH3) * var(--typeScale))
-		--typeH5: calc(var(--typeH4) * var(--typeScale))
-		--typeH6: calc(var(--typeH5) * var(--typeScale))
-		--typePs: calc(var(--typeBase) * 0.875)
+		--typeH1: 1.66rem
+		--typeH2: 2.078rem
+		--typeH3: 2.597rem
+		--typeH4: 3.247rem
+		--typeH5: 4.059rem
+		--typeH6: 5.074rem
+		--typePs: 1.164rem
 	@media screen and (max-width: 1024px)
 		--typeBase: 1.25rem
 		--typeBaseLow: 1.06rem
 		--typeScale: 1.2
 		--typeScaleLow: 1.05
-		--typeH1: calc(var(--typeBase) * var(--typeScale))
-		--typeH2: calc(var(--typeH1) * var(--typeScaleLow))
-		--typeH3: calc(var(--typeH2) * var(--typeScale))
-		--typeH4: calc(var(--typeH3) * var(--typeScale))
-		--typeH5: calc(var(--typeH4) * var(--typeScale))
-		--typeH6: calc(var(--typeH5) * var(--typeScale))
-		--typePs: calc(var(--typeBase) * 0.875)
+		--typeH1: 1.5rem
+		--typeH2: 1.8rem
+		--typeH3: 2.16rem
+		--typeH4: 2.592rem
+		--typeH5: 3.110rem
+		--typeH6: 3.732rem
+		--typePs: 1.093rem
 
 .source-serif
 	font-family: 'Source Serif 4', serif
@@ -90,23 +93,14 @@ p.bold
 
 h1
 	line-height: 1.2
-	font-size: var(--typeH6)
+	font-size: clamp(3.110rem, 2rem + 3.5vw, 5.074rem)
+	letter-spacing: -0.1rem
 	&.thin
 		font-weight: 400
-	&.source-serif
-		font-weight: 700
-		letter-spacing: -0.12rem
-	&.page-title
-		font-weight: 600
+	&.page-title, &.page-title.source-serif
+		font-weight: 690
 		font-size: var(--typeH5)
-	&.post-title.source-serif
-		font-weight: 650
-		letter-spacing: -0.04rem
-	@media screen and (max-width: 1024px)
-		&.source-serif
-			letter-spacing: -0.06rem
-		&.post-title.source-serif
-			font-size: var(--typeH5)
+		letter-spacing: -0.03rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -114,29 +108,22 @@ h1
 h2
 	line-height: 1.12
 	font-size: var(--typeH2)
-	font-weight: 600
+	font-weight: 650
 	&.thin
 		font-weight: 400
 	&.card-title
-		font-size: var(--typeH2)
-		font-weight: 550
-	&.heading
-		font-size: calc(var(--typeH1) *0.8)
-	&.source-serif
-		font-weight: 500
-		letter-spacing: 0.01rem
+		font-size: var(--typeH3)
+	&.card-title.source-serif
+		letter-spacing: -0.04rem
 	&.title-small
 		font-size: var(--typeBase)
 		font-weight: 500
 	&.header-2
 		font-size: 0.7rem
 		font-weight: 500
-	&.header-type-p
-		font-size: calc(var(--typeH1) * 0.8)
-		font-weight: 400
-	&.blog-title
-		font-size: var(--typeH3)
-		font-weight: 500
+	@media screen and (max-width: 1024px)
+		&.card-title.source-serif
+			letter-spacing: -0.02rem
 
 //-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -262,13 +249,13 @@ h6
 
 p, pre, li
 	font-size: 1.2rem
-	line-height: 1.4
+	line-height: 1.5
 	letter-spacing: 0
 	font-weight: 350
 	&.tight
 		line-height: 1.28
 	&.highlight-text
-		font-size: calc(var(--typeH1) * 0.9)
+		font-size: calc(var(--typeH1) * 0.85)
 		line-height: 1.5
 		&.tight
 			line-height: 1.28
@@ -278,44 +265,28 @@ p, pre, li
 		font-size: 0.65rem
 		letter-spacing: 0.02rem
 	&.card-title
-		font-size: var(--typeH2)
-		font-weight: 550
+		font-size: clamp(2.16rem, 7rem - 2.5vw, 2.078rem)
+		font-weight: 650
 		line-height: 1.2
+		letter-spacing: -0.02rem
+		&.thin
+			font-weight: 400
+		&.loose
+			line-height: 1.4
 	&.rem1
 		font-size: 1rem
 	&.citation-big
 		font-size: 10px
 		font-weight: 600
-	&.item-line
-		font-size: calc(var(--typeBase) * 0.85)
-	&.item-line.source-serif
-			font-weight: 600
-	&.citation
-		font-size: 0.6875rem
-	&.para-text
-		font-size: 1rem
-	@media screen and (min-width: 1025px)
-		&.card-text
-			line-height: 1.5
-			&.tight
-				line-height: 1.28
-		&.source-serif.item-line
-			line-height: 1.2
-			font-size:  calc(var(--typeH2) * 1.1 )
-			letter-spacing: -0.01rem
+		&.thin
+			font-weight: 400
 	@media screen and (max-width: 1024px)
 		font-size: 1.1rem
-		&.small-text
-			font-size: 0.85rem
-		&.source-serif.item-line
-			line-height: 1.12
-			font-size:  calc(var(--typeH2) * 0.96 )
-			letter-spacing: -0.01rem
-		&.card-text
-			line-height: 1.4
-			font-size: calc(var(--typeBase) * 1.05)
-			&.tight
-				line-height: 1.28
+
+.text-container
+	p, pre, li
+		font-size: calc(var(--typeH1) * 0.85)
+		line-height: 1.5
 
 .desk, .mobile
 	.article-typography
@@ -412,11 +383,11 @@ pre
 .anveshi-o
 	color: var(--anveshi-color)
 .grey
-	color: var(--grey-lg)
+	color: var(--color-grey-3)
 .altprim
 	color: var(--primaryalt)
 .lgrey
-	color: #b7b7b7
+	color: var(--color-grey-1)
 .altcolor
 	color: var(--primaryalt)
 .heading.lgrey
