@@ -77,17 +77,17 @@
 	font-size: 12px
 	font-weight: 500
 	letter-spacing: 0.04em
-	color: var(--primary)
+	color: var(--color-primary)
 	padding: 5px 9px
 	border-radius: 2px
-	transition: color 0.06s ease, background 0.06s ease
+	transition: var(--transition2)
 	&:hover
-		color: var(--whitefix)
-		background: var(--theme)
+		color: var(--color-white)
+		background: var(--color-theme)
 	&.active
-		color: var(--theme)
+		color: var(--color-theme)
 		&:hover
-			color: var(--whitefix)
+			color: var(--color-white)
 
 .logoholder
 	transition: all 0.1s ease

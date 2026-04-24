@@ -2,33 +2,59 @@
 	import type { PageData } from './$types';
 	import { page } from '$app/state';
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
-	export let data: PageData;
+	let { data }: { data: PageData } = $props();
 
-	const grouped  = data.grouped;
-	const description = data.concept.description || `Texts, thinkers, and ideas connected to ${data.concept.title}.`;
-	const isAK = data.concept.slug.startsWith('ak-');
+	let grouped = $derived(data.grouped);
+	let description = $derived(data.concept.description || `Texts, thinkers, and ideas connected to ${data.concept.title}.`);
+	let isAK = $derived(data.concept.slug.startsWith('ak-'));
 
-	const title = data.concept.title + ' | Bodha Concepts'
-	const metaDescription = description
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
+	let title = $derived(data.concept.title + ' | Bodha Concepts');
+	let metaDescription = $derived(description);
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 
-	const sections = [
-		{ label: 'Articles',  nodes: grouped.articles  },
-		{ label: 'Books',     nodes: grouped.texts      },
-		{ label: 'Thinkers',  nodes: grouped.thinkers   },
-		{ label: 'Schools',   nodes: grouped.schools    },
-		{ label: 'Questions', nodes: grouped.questions  },
-	].filter(s => s.nodes.length > 0);
+	let sections = $derived([
+		{ label: 'Articles', nodes: grouped.articles },
+		{ label: 'Books', nodes: grouped.texts },
+		{ label: 'Thinkers', nodes: grouped.thinkers },
+		{ label: 'Schools', nodes: grouped.schools },
+		{ label: 'Questions', nodes: grouped.questions }
+	].filter((section) => section.nodes.length > 0));
 
-	$: totalContent = sections.reduce((s, g) => s + g.nodes.length, 0);
+	let totalContent = $derived(sections.reduce((sum, group) => sum + group.nodes.length, 0));
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: sections.flatMap((section: any) => section.nodes).map((node: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: node.title,
+				url: node.slug ? 'https://www.bodharesearch.in/' + node.slug : metaUrl
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">

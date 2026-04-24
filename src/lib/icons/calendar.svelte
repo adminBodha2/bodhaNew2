@@ -1,7 +1,7 @@
 <script lang="ts">
 
   export let size = 24
-  export let fill = "var(--theme)"
+  export let fill = "var(--color-theme)"
 
 </script>
 

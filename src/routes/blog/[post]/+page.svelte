@@ -1,22 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	const BASE = 'https://www.bodharesearch.in';
-	import { categoryPosts } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
-	import Title from '$lib/comps/page-title.svelte'
+	import Title from '$lib/comps/page-title.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 
-	let posts = $state<any>([]);
 	let { data } = $props();
 
+	let posts = $derived(data.posts ?? []);
 	let ref = $state<HTMLElement | null>(null);
 	let sY = $state(0);
+	let imageY = $derived(-(sY / 12));
 
-	const formattedDate = $derived(
+	let formattedDate = $derived(
 		new Date(data.date).toLocaleDateString('en-US', {
 			month: 'long',
 			day: 'numeric',
@@ -24,50 +23,31 @@
 		})
 	);
 
-	const firstAuthor = $derived(
-		Array.isArray(data.author) ? data.author[0] : data.author
-	);
+	let firstAuthor = $derived(Array.isArray(data.author) ? data.author[0] : data.author);
 
-	const title = data.title
-	const metaDescription = data.excerpt
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
-	const metaImage = data.image
+	let title = $derived(data.title);
+	let metaDescription = $derived(data.excerpt);
+	let metaUrl = $derived(BASE + page.url.pathname);
+	let metaImage = $derived(data.image);
 
-	const jsonld = $derived(
-		JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': 'Article',
-			headline: data.title,
-			description: data.excerpt,
-			image: data.image,
-			datePublished: data.date,
-			author: { '@type': 'Person', name: firstAuthor },
-			publisher: { '@type': 'Organization', name: 'Bodha Research', url: BASE },
-			url: BASE + page.url.pathname,
-		})
-	);
-
-	$effect(() => {
-		if (!data?.category) return;
-
-		(async () => {
-			posts = await categoryPosts(data.category);
-		})();
-	});
-
-
-	onMount(() => {
-		(async () => {
-			posts = await categoryPosts(data.category);
-		})();
-	});
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: data.title,
+		description: data.excerpt,
+		image: data.image,
+		datePublished: data.date,
+		author: { '@type': 'Person', name: firstAuthor },
+		publisher: { '@type': 'Organization', name: 'Bodha Research', url: BASE },
+		url: metaUrl
+	}));
 </script>
 
 <svelte:window bind:scrollY={sY}/>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} {jsonld} />
+<Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
-<Pageprogress --thispagebackground="var(--theme)" --thispageheight="3px" {ref} />
+<Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="3px" {ref} />
 <Container narrow={true} scaled={true}>
 <div class="blog-heading stdbox padded-ontop">
 	<div class="elembox blog-title-area xcenter mleft ta-c">
@@ -88,7 +68,7 @@
 		</div>
 	</div>
 	<div class="box blog-image-area xcenter">
-		<img src={data.image} alt={data.title} style="transform: translateY({-sY/12}px)"/>
+		<img src={data.image} alt={data.title} style:transform={`translateY(${imageY}px)`}/>
 	</div>
 	<div class="article-slate">
 	<article class="blog-article self-center" bind:this={ref}>
@@ -106,7 +86,7 @@
 		<div class="grid four white-grid">
 			{#each posts as item, i}
 				<a class="postcard blank labelbox card-padded" href={item.linkpath}>
-					<p class="highlight-text source-serif tight bold">{item.meta.title}</p>
+					<p class="highlight-text tight bold">{item.meta.title}</p>
 					<p class="small-text grey">{item.meta.excerpt}</p>
 					<div class="box foot self-bottom bordertop ptop8">
 					<p class="tag-text lgrey tt-u">{item.meta.author} | {item.meta.words} words</p>
@@ -159,12 +139,6 @@
 	@media screen and (max-width: 1024px)
 		display: none
 
-.breadcrumb
-	font-size: 10px
-	letter-spacing: 0.14em
-	font-weight: 600
-	color: #999
-
 .tag-row
 	display: flex
 	flex-wrap: wrap
@@ -184,38 +158,6 @@
 		background: #EEEDE9
 		color: #555
 
-.article-title
-	font-size: clamp(1.9rem, 4vw, 2.8rem)
-	font-weight: 400
-	line-height: 1.1
-	letter-spacing: -0.03em
-	color: #111
-	margin: 0
-
-.article-excerpt
-	font-size: 1rem
-	line-height: 1.75
-	color: #6B6B6B
-	margin: 0
-
-.author-row
-	display: flex
-	align-items: center
-	gap: 8px
-
-.author-name
-	font-size: 9px
-	font-weight: 700
-	letter-spacing: 0.14em
-	color: #555
-
-.author-sep
-	color: #DDD
-
-.author-words
-	font-size: 0.75rem
-	color: var(--text-ghost)
-
 .blog-article
 	width: 100%
 	@media screen and (min-width: 1025px)
@@ -228,56 +170,5 @@
 	justify-content: space-between
 	flex-wrap: wrap
 	gap: 1rem
-
-.back-link
-	font-size: 0.82rem
-	color: var(--text-ghost)
-	transition: color 0.12s ease
-	&:hover
-		color: var(--theme)
-
-.more-grid
-	display: grid
-	gap: 1px
-	background: rgba(0,0,0,0.06)
-	border: 1px solid rgba(0,0,0,0.06)
-	border-radius: 10px
-	overflow: hidden
-	@media screen and (min-width: 631px)
-		grid-template-columns: repeat(3, 1fr)
-
-.more-card
-	display: flex
-	flex-direction: column
-	gap: 0.5rem
-	padding: 1.2rem 1.4rem
-	background: #FFFFFF
-	transition: background 0.15s ease
-	&:hover
-		background: #F9F8F6
-		.more-title
-			color: var(--theme)
-
-.more-title
-	font-size: clamp(0.9rem, 1.5vw, 1.05rem)
-	font-weight: 400
-	line-height: 1.25
-	letter-spacing: -0.02em
-	color: #111
-	margin: 0
-	transition: color 0.15s ease
-
-.more-excerpt
-	font-size: 0.8rem
-	line-height: 1.6
-	color: #777
-	margin: 0
-
-.more-tags
-	display: flex
-	flex-wrap: wrap
-	gap: 4px
-	margin-top: auto
-	padding-top: 0.5rem
 
 </style>

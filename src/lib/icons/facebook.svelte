@@ -1,7 +1,7 @@
 <script lang="ts">
 
   export let size = '24'
-  export let color = 'var(--background)'
+  export let color = 'var(--color-back)'
 
 </script>
 
@@ -11,6 +11,6 @@
 
 svg
 	&:hover
-		fill: var(--theme)
+		fill: var(--color-theme)
 
 </style>

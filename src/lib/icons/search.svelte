@@ -3,11 +3,11 @@
 <style lang="sass">
 
 	svg
-		fill: var(--primary)
-		stroke: var(--primary)
+		fill: var(--color-primary)
+		stroke: var(--color-primary)
 		transform: scale(0.9)
 		&:hover
-			fill: var(--theme)
-			stroke: var(--theme)
+			fill: var(--color-theme)
+			stroke: var(--color-theme)
 	
 	</style>

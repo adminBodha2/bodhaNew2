@@ -1,15 +1,26 @@
 <script lang="ts">
 
-  let scroY:number
-  export let imageLink:string = ''
-  export let isClass:string = 'is100'
+	type Props = {
+		imageLink?: string;
+		isClass?: string;
+		alt?: string;
+	};
+
+	let scroY = $state(0);
+	let parallaxY = $derived(scroY / 2);
+
+	let {
+		imageLink = '',
+		isClass = 'is100',
+		alt = 'Page hero image'
+	}: Props = $props();
 
 </script>
 
 <svelte:window bind:scrollY={scroY}/>
 
 <div class="imager {isClass}">
-  <img src={imageLink} alt="parallax header" style="transform: translateY({scroY/2}px)"/>
+  <img src={imageLink} {alt} style:transform={`translateY(${parallaxY}px)`}/>
 </div>
 
 <style lang="sass">

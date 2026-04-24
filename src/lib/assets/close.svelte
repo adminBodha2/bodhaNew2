@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	export let bigger = false
-	export let fill = 'var(--primary)'
+	export let fill = 'var(--color-primary)'
 
 </script>
 

@@ -9,10 +9,47 @@
 	const metaUrl = 'https://www.bodharesearch.in/academy/courses';
 	const metaImage = 'https://www.bodharesearch.in/images/key-academy.webp';
 
+const jsonld = JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: title,
+	description: metaDescription,
+	url: metaUrl,
+	image: metaImage,
+	mainEntity: {
+		'@type': 'ItemList',
+		itemListElement: [
+			{
+				'@type': 'ListItem',
+				position: 1,
+				url: 'https://www.bodharesearch.in/academy/courses/introduction-to-shri-ram-swarup',
+				item: {
+					'@type': 'Course',
+					name: 'Introduction to Shri Ram Swarup',
+					description: 'An introduction to the works and thought of Shri Ram Swarup.',
+					provider: {
+						'@type': 'Organization',
+						name: 'Bodha',
+						url: 'https://www.bodharesearch.in'
+					}
+				}
+			}
+		]
+	}
+});
+
+
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
-
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="1536"
+	imHeight="1024"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 <Hidden title="Courses at Bodha"/>
@@ -61,7 +98,7 @@
 		@media screen and (min-width: 1025px)
 			padding: 1.5rem
 	.foot
-		border-top: 1px solid var(--color-border)
+		border-top: var(--border-main)
 		padding: 1rem
 		@media screen and (min-width: 1025px)
 			padding: 1rem 1.5rem

@@ -1,23 +1,44 @@
 <script lang="ts">
-
 	import type { PageData } from './$types';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Container from '$lib/comps/container.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
-	export let data: PageData;
+	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 
-	const levelColor: Record<string, string> = {
-		entry: '#5999D3',
-		intermediate: '#1971C2',
-		advanced: '#0D3B65'
-	};
+	let { data }: { data: PageData } = $props();
+
+	const title = 'Reading Paths | Bodha';
+	const metaDescription = 'Curated sequences through the Bodha knowledge base. Each path is a guided journey with editorial notes.';
+	const metaUrl = 'https://www.bodharesearch.in/paths';
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: data.paths.map((path: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: path.title,
+				description: path.description,
+				url: 'https://www.bodharesearch.in/paths/' + path.id
+			}))
+		}
+	}));
 </script>
 
 <Head
-	title="Reading Paths — Bodha"
-	metaDescription="Curated sequences through the Bodha knowledge base. Each path is a guided journey with editorial notes."
-	metaUrl="https://www.bodharesearch.in/path"
-	metaImage="/images/bodhacover.png"
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
 />
 
 <Container narrow={true} scaled={true}>
@@ -67,21 +88,12 @@
 				transform: translateX(4px)
 				opacity: 1
 
-// ── CARD TOP ───────────────────────────────────────────────
-
-.step-count
-	font-size: 0.72rem
-	font-weight: 500
-	letter-spacing: 0.04em
-	color: #ACACAC
-
-
 // ── CARD FOOTER ────────────────────────────────────────────
 
 .card-footer
 	margin-top: 1rem
 	padding-top: 1rem
-	border-top: var(--stroke-subtle)
+	border-top: var(--border-main)
 	@media screen and (min-width: 1025px)
 		margin-top: 2rem
 		padding-top: 1.25rem
@@ -96,15 +108,9 @@
 	background: #C5C2BB
 	flex-shrink: 0
 
-.step-more
-	font-size: 0.65rem
-	color: #BCBCBC
-	font-weight: 600
-	margin-left: 2px
-
 .arrow-icon
 	font-size: 1rem
-	color: var(--theme)
+	color: var(--color-theme)
 	transition: transform 0.2s ease, opacity 0.2s ease
 
 </style>

@@ -49,7 +49,7 @@
 	</div>
 
 	{#if relatedConcepts.length > 0}
-	<div class="section-block">
+	<div class="box">
 		<p class="eyebrow tt-u">Concepts — {relatedConcepts.length}</p>
 		<div class="mini-grid">
 			{#each relatedConcepts as node (node.id)}
@@ -60,7 +60,7 @@
 	{/if}
 
 	{#if relatedNodes.length > 0}
-	<div class="section-block">
+	<div class="box">
 		<p class="eyebrow tt-u">Related — {relatedNodes.length}</p>
 		<div class="mini-grid">
 			{#each relatedNodes as node (node.id)}
@@ -71,7 +71,7 @@
 	{/if}
 
 	{#if referencedBy.length > 0}
-	<div class="section-block">
+	<div class="box">
 		<p class="eyebrow tt-u">Referenced By — {referencedBy.length}</p>
 		<div class="mini-grid">
 			{#each referencedBy as node (node.id)}
@@ -116,17 +116,6 @@
 
 .hero-sub
 	max-width: 60ch
-
-// ── SECTIONS ───────────────────────────────────────────────
-
-.section-block
-	padding-top: 2rem
-	border-top: 1px solid rgba(0,0,0,0.06)
-	margin-top: 1rem
-	display: flex
-	flex-direction: column
-	gap: 0.75rem
-
 
 
 </style>

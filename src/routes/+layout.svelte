@@ -1,33 +1,32 @@
 <script lang="ts">
-
 	import { onMount } from 'svelte';
 	import { registerSwiper } from '$lib/utils/swiper';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import '$lib/styles/vars.sass';
-	import '$lib/styles/fontimports.sass'
+	import '$lib/styles/fontimports.sass';
 	import '$lib/styles/measures.sass';
 	import '$lib/styles/globals.sass';
-	import '$lib/styles/components.sass'
+	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/icons.css';
-	import { darkTheme, iW } from '$lib/utils/globalstores'
+	import { darkTheme, iW } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
-	import SearchModal from '$lib/comps/searchmodal.svelte'
-
+	import SearchModal from '$lib/comps/searchmodal.svelte';
 
 	let { children } = $props();
 	let sY = $state(0);
-	let width = $state(0)
-	$effect(() => { $iW = width < 1025 })
+	let width = $state(0);
+	$effect(() => {
+		$iW = width < 1025;
+	});
 
 	injectSpeedInsights();
 	injectAnalytics();
 
 	onMount(registerSwiper);
-
 </script>
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={width} />
@@ -47,23 +46,26 @@
 	</script>
 </svelte:head>
 
-<div class:light={!$darkTheme} class:dark={$darkTheme} class:mobile={$iW} class:desk={!$iW}>
-<header class="row ycenter">
-	<Header />
-</header>
-  <main>
-    {@render children?.()}
-  </main>
-<footer class="column">
-	<Bottom />
-</footer>
-<SearchModal/>
+<div class="app-box" class:light={!$darkTheme} class:dark={$darkTheme} class:mobile={$iW} class:desk={!$iW}>
+	<header class="row ycenter">
+		<Header />
+	</header>
+	<main>
+		{@render children?.()}
+	</main>
+	<footer class="column">
+		<Bottom />
+	</footer>
+	<SearchModal />
 </div>
 
 <style lang="sass">
 
 main
-	background: var(--background)
+	background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
+	background-size: 6rem 6rem
+	@media screen and (max-width: 1024px)
+		background-size: 2rem 2rem
 
 header
 	width: 100%
@@ -82,6 +84,6 @@ header
 
 footer
 	width: 100%
-	border-top: 1px solid var(--grey-sm)
+	border-top: 1px solid var(--color-grey-1)
 
 </style>

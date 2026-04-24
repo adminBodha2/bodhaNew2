@@ -1,24 +1,39 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { writersWithCountsAlphabetical } from '$lib/utils/localpulls';
-	import Container from '$lib/comps/container.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
-	let writers: any;
-	let showEx = false;
+	let { data } = $props();
 
-	const title = 'Writers — Bodha Blog';
+	let writers = $derived(data.writers ?? []);
+
+	const title = 'Writers | Bodha Blog';
 	const metaDescription = "Meet the writers behind Bodha's essays on Hindu culture, history, and tradition.";
 	const metaUrl = 'https://www.bodharesearch.in/blog/writers';
-	const metaImage = '/images/bodhacover.png';
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 
-	onMount(async () => {
-		writers = await writersWithCountsAlphabetical();
-	});
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: writers.map((item: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: item.writer,
+				url: 'https://www.bodharesearch.in/blog/writers/' + item.writer
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
+
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">
@@ -49,18 +64,18 @@
 <style lang="sass">
 
 .grid.four
-	border: var(--stroke-subtle)
+	border: var(--border-main)
 	.writer-card
-		background: var(--stone)
+		background: var(--color-stone)
 		transition: background 0.05s ease
 		&:hover
 			background: #FFF
 	@media screen and (min-width: 1025px)
 		.lining0, .lining1, .lining2
-			border-right: var(--stroke-subtle)
+			border-right: var(--border-main)
 	@media screen and (max-width: 1024px)
 		.lining0, .lining1, .lining2
-			border-bottom: var(--stroke-subtle)
+			border-bottom: var(--border-main)
 
 .writers-grid
 	display: grid

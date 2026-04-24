@@ -1,49 +1,52 @@
 <script lang="ts">
-
 	import { page } from '$app/state';
-	import { onMount } from 'svelte';
-	import { allSchools, allThinkers } from '$lib/utils/localpulls';
-	import '$lib/styles/lab.sass'
+	import '$lib/styles/lab.sass';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+
 	let { data } = $props();
 
 	let sY = $state(0);
-	let schools = $state<any[]>([]);
-	let thinkers = $state<any[]>([]);
+	let imageY = $derived(-(sY / 4));
 
-	const title = data.title + ' | Bodha - Inspiration';
-	const metaDescription = data.description;
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
-	const metaImage = data.image;
+	let schools = $derived(data.schools ?? []);
+	let thinkers = $derived(data.thinkers ?? []);
 
-	const jsonld = $derived(
-		JSON.stringify({
-			'@context': 'https://schema.org',
-			'@type': data.type === 'thinker' ? 'Thinker' : 'School of Thought',
-			headline: data.title,
-			description: data.description,
-			image: data.image,
-			publisher: {
-				'@type': 'Organization',
-				name: 'Bodha',
-				url: 'https://www.bodharesearch.in'
-			},
-			url: 'https://www.bodharesearch.in' + page.url.pathname
-		})
+	let title = $derived(data.title + ' | Bodha Inspiration');
+	let metaDescription = $derived(data.description);
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
+	let metaImage = $derived(
+		data.image?.startsWith('http')
+			? data.image
+			: 'https://www.bodharesearch.in' + data.image
 	);
 
-	onMount(async () => {
-		schools = await allSchools();
-		thinkers = await allThinkers();
-	});
-
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': data.type === 'thinker' ? 'Person' : 'CreativeWork',
+		name: data.title,
+		description: data.description,
+		image: metaImage,
+		url: metaUrl,
+		publisher: {
+			'@type': 'Organization',
+			name: 'Bodha',
+			url: 'https://www.bodharesearch.in'
+		}
+	}));
 </script>
 
 <svelte:window bind:scrollY={sY} />
 
-<Head {title} {metaDescription} {metaImage} {metaUrl} {jsonld} />
+<Head
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	ogType="article"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 <section class="stdbox padded-ontop">
@@ -56,7 +59,7 @@
 	</div>
 </Crumb>
 <section class="key-image">
-	<img src={data.image} alt={data.title} style="transform: translateY(-{sY/4}px)"/>
+	<img src={data.image} alt={data.title} style:transform={`translateY(${imageY}px)`}/>
 </section>
 <section class="content-section">
 	<div class="classic-document">

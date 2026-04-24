@@ -59,26 +59,17 @@
 			</div>
 			<div class="foot-actions">
 				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-					<Twitter color="var(--grey-lg)" />
+					<Twitter color="var(--color-grey-2)" />
 				</a>
 				<a class="blank foot-social" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-					<FB color="var(--grey-lg)" />
+					<FB color="var(--color-grey-2)" />
 				</a>
 				<a class="blank foot-social" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-					<Insta color="var(--grey-lg)" />
+					<Insta color="var(--color-grey-2)" />
 				</a>
 				<a class="blank foot-social" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-					<Linkedin color="var(--grey-lg)" />
+					<Linkedin color="var(--color-grey-2)" />
 				</a>
-				<!--
-				<button class="blankbtn foot-social" onclick={toggleTheme}>
-					{#if $darkTheme}
-					<Sun/>
-					{:else}
-					<Moon/>
-					{/if}
-				</button>
-				-->
 			</div>
 		</div>
 
@@ -86,6 +77,20 @@
 </div>
 
 <style lang="sass">
+
+.stdpad
+	@media screen and (min-width: 1201px)
+		padding-left: 80px
+		padding-right: 80px
+	@media screen and (min-width: 1025px) and (max-width: 1200px)
+		padding-left: 48px
+		padding-right: 48px
+	@media screen and (min-width: 631px) and (max-width: 1024px)
+		padding-left: 32px
+		padding-right: 32px
+	@media screen and (max-width: 630px)
+		padding-left: 16px
+		padding-right: 16px
 
 .foot-wrap
 	width: 100%
@@ -118,13 +123,6 @@
 	flex-direction: column
 	gap: 0.45rem
 
-.foot-tagline
-	font-size: 0.82rem
-	line-height: 1.65
-	color: #888
-	max-width: 38ch
-	margin: 0
-
 .foot-scroll
 	display: flex
 	flex-direction: column
@@ -133,7 +131,7 @@
 	padding: 10px 14px
 	border-radius: 8px
 	border: 1px solid rgba(0,0,0,0.08)
-	background: #FFFFFF
+	background: var(--color-white)
 	transition: all 0.15s ease
 	flex-shrink: 0
 	&:hover
@@ -155,7 +153,7 @@
 
 .foot-grid
 	display: grid
-	gap: var(--gap-std)
+	gap: 2rem
 	padding-bottom: 2.5rem
 	border-bottom: 1px solid rgba(0,0,0,0.08)
 	margin-bottom: 2rem
@@ -169,9 +167,6 @@
 	flex-direction: column
 	gap: 1rem
 
-.foot-col-label
-	color: #999
-
 .foot-links
 	display: flex
 	flex-direction: column
@@ -181,7 +176,7 @@
 	font-size: 0.88rem
 	transition: color 0.12s ease
 	&:hover
-		color: var(--theme)
+		color: var(--color-theme)
 
 // ── BOTTOM BAR ────────────────────────────────────────────
 

@@ -1,15 +1,30 @@
 <script lang="ts">
 
-	export let narrow = false
-	export let isTop = false
-	export let scaled = false
-	export let offcolor = false
-	export let toffcolor = false
+	import type { Snippet } from 'svelte';
+
+	type Props = {
+		narrow?: boolean;
+		isTop?: boolean;
+		scaled?: boolean;
+		offcolor?: boolean;
+		toffcolor?: boolean;
+		children?: Snippet;
+	};
+
+
+	let {
+		narrow = false,
+		isTop = false,
+		scaled = false,
+		offcolor = false,
+		toffcolor = false,
+		children
+	}: Props = $props();
 
 </script>
 
 <div class="pbot64 column" class:scaledTypo={scaled} class:top-cushion={isTop} class:widebox={!narrow} class:narrowbox={narrow} class:offcolor={offcolor} class:toffcolor={toffcolor}>
-  <slot></slot>
+  {@render children?.()}
 </div>
 
 <style lang="sass">

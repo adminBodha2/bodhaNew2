@@ -13,12 +13,6 @@ button
 		font-weight: 500
 		font-family: 'Google Sans Flex', sans-serif
 
-button.blankbtn
-	background: none
-	border:  none
-	padding: 0
-	cursor: pointer
-
 .self-center
 	@media screen and (min-width: 1025px)
 		margin-left: auto
@@ -31,16 +25,16 @@ button.blankbtn
 	justify-content: center
 	align-items: center
 	border-radius: 4px
-	background: #eaeaea
+	background: var(--color-alt-2)
 	overflow: hidden
 	cursor: pointer
-	border: 1px solid #d9d9d9
+	border: var(--border-main)
 	width: max-content
 	&::after
 		content: ""
 		width: 0%
 		height: 100%
-		background: var(--theme)
+		background: var(--color-theme)
 		position: absolute
 		transition: all 0.24s ease-in-out
 		right: 50%
@@ -53,7 +47,7 @@ button.blankbtn
 		text-decoration: none
 		width: 100%
 		padding: 0.7rem 1rem
-		color: var(--primaryalt)
+		color: var(--color-grey-4)
 		font-weight: 500
 		font-size: 0.9rem
 		text-transform: uppercase
@@ -61,7 +55,7 @@ button.blankbtn
 		transition: all 0.05s ease-in-out
 	&:hover span
 		animation: scaleUp 0.9s ease-in-out
-		color: #FFFFFF
+		color: var(--color-white)
 	@media screen and (min-width: 1025px)
 		font-size: 1rem
 
@@ -74,12 +68,12 @@ button.blankbtn
 		transform: scale(1)
 
 .primary.black
-	background: #474747
-	border: 1px solid #9a9a9a
+	background: var(--color-grey-4)
+	border: var(--border-dark)
 	&:hover
-		background: #5a5a5a
+		background: var(--color-grey-3)
 	span
-		color: var(--whitefix)
+		color: var(--color-white)
 
 .primary.black.smaller
 	span
@@ -87,139 +81,17 @@ button.blankbtn
 		padding: 0.5rem
 		text-transform: uppercase
 	&.active
-		background: var(--theme)
-		border: 1px solid var(--themealt)
+		background: var(--color-theme)
+		border: 1px solid var(--color-theme-2)
 
 .primary.anveshi
-	background: var(--anveshi-color)
+	background: var(--color-anveshi)
 	&::after
-		background: var(--anveshidark)
+		background: var(--color-anveshi)
 	&:hover
-		background: var(--anveshi-color)
+		background: var(--color-anveshi)
 	span
-		color: var(--whitefix)
-
-button.ftnbtn
-	font-size: 14px
-	background: var(--grey-md)
-	border: 1px solid var(--grey-xs)
-	color: #FFFFFF
-	padding: 8px 12px
-	letter-spacing: 0.04em
-	text-transform: uppercase
-	border-radius: 5px
-	cursor: pointer
-	transition: all 0.16s ease
-	&:hover
-		background: var(--grey-lg)
-		color: var(--background)
-		transform: scaleX(1.025)
-	&:active
-		transform: scale(1.1)
-	&.active
-		background: var(--themealtold)
-		color: var(--background)
-	&.anveshi
-		color: #FFFFFF
-		&:hover
-			background: var(--anveshi-color)
-			color: var(--whitefix)
-		&.active
-			background: var(--whitefix)
-			color: var(--anveshi-color)
-			border: 1px solid var(--anveshidark)
-			&:hover
-				background: var(--anveshi-color)
-				color: var(--whitefix)
-
-a.ftnbtn
-	font-size: 14px
-	background: #fafafa
-	font-weight: 500
-	border: 1px solid #b7b7b7
-	color: #a7a7a7
-	padding: 0.5rem 1rem
-	text-decoration: none
-	letter-spacing: 0.04em
-	text-transform: uppercase
-	border-radius: 4px
-	cursor: pointer
-	transition: all 0.08s
-	&:hover
-		background: var(--theme)
-		color: var(--background)
-	&.active
-		background: var(--themealt)
-		color: var(--background)
-
-button.ftnbtn-b
-	font-size: 14px
-	background: var(--primaryalt)
-	border: 1px solid var(--primary)
-	color: var(--background)
-	padding: 6px 16px
-	letter-spacing: 0.02em
-	text-transform: uppercase
-	border-radius: 8px
-	cursor: pointer
-	transition: all 0.08s
-	&:hover
-		background: var(--themealt)
-		color: var(--background)
-	&.active
-		background: var(--theme)
-		border: 1px solid var(--theme)
-		color: var(--background)
-
-.label
-	background: #f0f0f0
-	border: 1px solid #e0e0e0
-	width: max-content
-	display: flex
-	align-items: center
-	justify-content: center
-	padding: 2px 5px
-	border-radius: 3px
-	text-decoration: none
-	font-size: 0.8rem
-	&.anveshi
-		background: rgba(211, 99, 58, 0.08)
-		border: 1px solid rgba(211, 99, 58, 0.2)
-		color: var(--anveshi-color)
-		p, small
-			color: var(--anveshi-color)
-	&.light
-		background: rgba(25, 113, 194, 0.06)
-		border: 1px solid rgba(25, 113, 194, 0.15)
-		color: var(--theme)
-
-small.label
-	background: var(--theme)
-	color: white
-	font-size: 12px
-	text-transform: uppercase
-	font-weight: 500
-	letter-spacing: 0.01rem
-	margin-top: auto
-
-a.label
-	background: var(--theme)
-	border: 1px solid #676767
-	width: max-content 
-	display: flex
-	align-items: center
-	justify-content: center
-	padding: 2px 6px
-	border-radius: 3px
-	text-decoration: none
-	color: #FFFFFF
-	font-size: 12px
-	font-weight: 500
-	transition: all 0.08s ease
-	&:hover
-		background: var(--themealtold)
-		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.06), 3px 4px 6px rgba(0, 0, 0, 0.03)
-		transform: scale(1.02)
+		color: var(--color-white)
 
 //-----------------PAGE CONTAINERS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -227,7 +99,7 @@ a.label
 	display: flex
 	flex-direction: column
 	&.std
-		row-gap: var(--gap-box)
+		row-gap: 2.4rem
 
 .padded
 	padding-top: var(--pad-std)
@@ -262,75 +134,46 @@ a.label
 .textbox
 	row-gap: 1rem
 
-.desk
-	.box.viewHeight
-		height: 100vh
-	.box.viewHeight.atMin
-		min-height: 100vh
-
-.mobile
-	.box
-		&.viewHeight
-			height: 100%
-
 //-----------------PAGE SHELLS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.section-block
-	display: flex
-	flex-direction: column
-	gap: var(--gap-text)
-
-.section-link
-	color: var(--theme)
-	transition: color 0.12s ease
-	&:hover
-		color: var(--themealt)
-
-a.section-link
-	color: var(--theme)
-	font-size: 12px
-	&:hover
-		text-decoration: underline
 
 .standard-grid
 	display: grid
 	gap: 1px
-	background: #e7e7e7
-	border: 1px solid rgba(0,0,0,0.06)
+	background: var(--color-alt-2)
+	border: var(--border-dark)
 	overflow: hidden
 	@media screen and (max-width: 1024px)
-		background: #FFF
+		background: var(--color-white)
 	&.whiten
-		background: var(--whitefix)
+		background: var(--color-white)
 
 .tag-pill, p.tag-pill, a.tag-pill, .scaledTypo p.tag-pill
 	font-size: 9px
 	font-weight: 500
 	letter-spacing: 0.02em
-	color: #a1a1a1
-	padding: 2px 8px
-	border-radius: 10px
-	border: 1px solid #a1a1a1
-	background: var(--color-surface)
+	color: var(--color-alt-3)
+	padding: 4px 8px
+	border-radius: 6px
+	border: 1px solid var(--color-grey-1)
+	background: var(--color-grey-4)
 	transition: all 0.06s ease
 	width: max-content
 	&:hover
-		color: var(--theme)
-		border-color: var(--theme)
+		background: var(--color-theme-2)
 	&.accented
-		background: var(--themeaccent)
-		color: var(--whitefix)
-		border: 1px solid var(--themeaccent)
+		background: var(--color-theme-4)
+		color: var(--color-white)
+		border: 1px solid var(--color-theme-4)
 	&.anveshi
-		background: var(--anveshi-color)
-		color: var(--whitefix)
+		background: var(--color-anveshi)
+		color: var(--color-white)
 		border: none
 	&.themed
-		background: var(--theme)
-		color: var(--whitefix)
-		border: 1px solid var(--theme)
+		background: var(--color-theme)
+		color: var(--color-white)
+		border: 1px solid var(--color-theme)
 		&:hover
-			background: var(--themealtold)
+			background: var(--color-theme-3)
 			color: var(--color-white)
 	&.hollow
 		padding: 0
@@ -342,188 +185,6 @@ a.section-link
 			background: none
 			border: none
 
-.nuevocard
-	background: #ffffff
-	border: var(--border-rest)
-	border-radius: 5px
-	box-shadow: var(--shadow-rest)
-	transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.2s ease
-	&:hover
-		border-color: var(--border-hover)
-		box-shadow: var(--shadow-hover)
-		transform: translateY(-2px)
-
-button.page-btn
-	background: rgba(239, 238, 236, 0.4)
-	border-right: var(--stroke-focus)
-	border-top: none
-	border-bottom: none
-	border-left: none
-	color: var(--primaryalt)
-	font-weight: 500
-	transition: all 0.07s ease
-	font-size: 1.1rem
-	padding: 1rem 1.5rem
-	&:last-child
-		border-right: none
-	&:hover
-		background: var(--theme)
-		transform: scale(1.05)
-		border-right: 1px solid var(--theme)
-		color: #FFF
-	&:active
-		background: #ffffff
-		color: var(--theme)
-		box-shadow: none
-		transform: scale(1.1)
-	&.active
-		background: var(--themealtold)
-		color: #FFFFFF
-	@media screen and (max-width: 1024px)
-		border: var(--stroke-focus)
-		background: #FFF
-		border-radius: 3px
-		padding: 0.75rem
-		font-size: 1rem
-		border: var(--stroke-focus)
-		border-right: var(--stroke-focus)
-		&:hover
-			transform: scale(1)
-		&:last-child
-			border: var(--stroke-focus)
-
-.desk
-	.pagination
-		border-radius: 4px
-		overflow: hidden
-		width: max-content
-		border: var(--stroke-focus)
-		padding: 2px
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-
-.mobile
-	.pagination
-		padding: 4px
-		border: var(--stroke-medium)
-		width: 100%
-		gap: 4px
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-		background: #EDECE7
-
-.toffcolor
-	background: rgba(244, 243, 238, 0.37)
-
-.card-outer
-	background: #fafafa
-	border: 1px solid #e7e7e7
-	border-radius: 5px
-	img
-		object-fit: cover
-		width: 100%
-		height: 100%
-	&.box
-		.imagebox
-			overflow: hidden
-	&.row
-		.imagebox
-			width: 520px
-			border: 1px solid #f1f1f1
-		.textbox
-			width: calc(100% - 520px)
-			border-top: 1px solid #f1f1f1
-			border-right: 1px solid #f1f1f1
-			border-bottom: 1px solid #f1f1f1
-	.textbox
-		background: #FFFFFF
-		border-radius: 5px
-
-.mobile
-	.card-outer
-		border: none
-		padding: 0
-		.imagebox
-			border-radius: 5px 5px 0 0
-			height: 280px
-			overflow: hidden
-		.textbox
-			border-radius: 0 0 5px 5px
-		&.row.mcol
-			.imagebox
-				border: 1px solid #e7e7e7
-				width: 100%
-			.textbox
-				width: 100%
-				border-top: none
-				border-left: 1px solid #e7e7e7
-				border-right: 1px solid #e7e7e7
-				border-bottom: 1px solid #e7e7e7
-				padding: 1.5rem 1em
-	.card-outer.box
-		border: 1px solid #e7e7e7
-		padding: 6px
-		.imagebox
-			border-top: 1px solid #e1e1e1
-			border-left: 1px solid #e1e1e1
-			border-right: 1px solid #e1e1e1
-		.textbox
-			border-left: 1px solid #e1e1e1
-			border-right: 1px solid #e1e1e1
-			border-bottom: 1px solid #e1e1e1
-			padding: 1.5rem 1rem
-
-.desk
-	.card-outer.row
-		padding: 1rem
-		.imagebox
-			border-radius: 5px
-		.textbox
-			padding: 2rem
-	.card-outer.box
-		padding: 1.5rem
-		.imagebox
-			height: 320px
-			overflow: hidden
-			border-radius: 5px 5px 0 0 
-		.textbox
-			height: calc(100% - 320px)
-			padding: 1.5rem 2rem
-			border: 1px solid #e7e7e7
-
-a.card-outer
-	h3, h4
-		transition: all 0.15s ease
-		position: relative
-		&::after
-			content: " "
-			width: 0
-			height: 2px
-			bottom: 0
-			left: 0
-			background: var(--themealtold)
-			position: absolute
-			transition: all 0.3s ease
-	&:hover
-		h3, h4
-			&::after
-				width: 100%
-
-.desk
-	.result
-		background: #eaeaea
-		padding: 5px
-		border: 1px solid #e1e1e1
-		border-radius: 5px
-		transition: all 0.05s ease
-		box-shadow: var(--sh8)
-		&:hover
-			box-shadow: var(--sh1)
-		.textbox
-			background: #ffffff
-			border: 1px solid #d8d8d8
-			height: 100%
-			padding: 2rem
-			border-radius: 5px
-
 @keyframes sway
 	0%
 		transform: translateX(0) scale(1.1)
@@ -533,85 +194,61 @@ a.card-outer
 		transform: translateX(0) scale(1.1)
 
 button.conceptbuttons
-	background-color: #fafafa
-	border: var(--stroke-focus)
+	background-color: var(--color-alt-1)
+	border: var(--border-dark)
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12)
 	transition: all 0.2s ease
 	outline: none
-	color:  var(--primary)
+	color:  var(--color-primary)
 	column-gap: 4px
 	border-radius: 4px
 	padding: 3px 15px
 	svg
 		path
-			fill: var(--primary)
+			fill: var(--color-primary)
 	p
 		font-size: 1.05rem
 		font-weight: 520
 	&:hover
-		background-color:  #FFF
-		border-color: var(--theme)
+		background-color: var(--color-white)
+		border-color: var(--color-theme)
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18)
 		transform: translateY(-1px)
 		p
-			color: var(--theme)
+			color: var(--color-theme)
 		svg
 			path
-				fill: var(--theme)
+				fill: var(--color-theme)
 	&:focus-visible
 		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35)
 	&.active
-		background: var(--themealt)
+		background: var(--color-theme-2)
 		p
-			color: #FFF
+			color: var(--color-white)
 		svg
 			path
-				fill: #FFF
+				fill: var(--color-white)
 
 .number:nth-child(3n)
 	background: var(--color-alt-1)
 	&:hover
-		background: var(--stone)
+		background: var(--color-stone)
 
 .number:nth-child(3n + 1)
 	background: var(--color-stone-3)
 	&:hover
-		background: var(--stone)
+		background: var(--color-stone)
 
 .number:nth-child(3n + 2)
 	background: var(--color-alt-4)
 	&:hover
-		background: var(--stone)
-
-.ncolor0, .ncolor3, .ncolor6, .ncolor9, .ncolor12, .ncolor15, .ncolor18
-	background: #f1f1f1
-	&:hover
-		background: var(--stone)
-		.card-title, .item-line, .header-type-p
-			color: var(--theme)
-
-.ncolor1, .ncolor4, .ncolor7, .ncolor10, .ncolor13, .ncolor16, .ncolor19
-	background: #f4f4f5
-	&:hover
-		background: var(--stone)
-		.card-title, .item-line, .header-type-p
-			color: var(--theme)
-
-.ncolor2, .ncolor5, .ncolor8, .ncolor11, .ncolor14, .ncolor17, .ncolor20
-	background: #F8FAFC
-	&:hover
-		background: var(--stone)
-		.card-title, .item-line, .header-type-p
-			color: var(--theme)
+		background: var(--color-stone)
 
 .white-grid
 	background: var(--color-alt-2)
 	gap: 1px
 	border: 1px solid var(--color-alt-2)
 	border-radius: 4px
-
-.hero-sub
-	max-width: 66ch
 
 .filter-button
 	font-size: 0.9rem
@@ -624,20 +261,22 @@ button.conceptbuttons
 	cursor: pointer
 	transition: all 0.15s ease
 	&:hover
-		background: var(--themealtold)
-		color: var(--whitefix)
-		border: 1px solid var(--themealtold)
+		background: var(--color-theme-3)
+		color: var(--color-white)
+		border: 1px solid var(--color-theme-3)
 	&:active
 		transform: scale(1.05)
 	&.active
-		background: var(--theme)
-		border-color: var(--theme)
-		color: #FFF
+		background: var(--color-theme)
+		border-color: var(--color-theme)
+		color: var(--color-white)
 
 .card-padded
 	padding: 1rem
 	@media screen and (min-width: 1025px)
 		padding: 1.5rem
+		&.more
+			padding: 2rem
 
 .small-button
 	font-size: 0.8rem
@@ -661,7 +300,7 @@ button.conceptbuttons
 			color: var(--color-theme)
 
 button.small-button
-	font-weight: 500 !important
+	font-weight: 500
 
 .nav-btn
 	font-size: 0.78rem
@@ -679,9 +318,9 @@ button.small-button
 		background: var(--color-theme-6)
 		transform: scale(0.95)
 	&.active
-		background: var(--theme)
-		border-color: var(--theme)
-		color: #FFF
+		background: var(--color-theme)
+		border-color: var(--color-theme)
+		color: var(--color-white)
 	&.anveshi
 		&:hover
 			border-color: var(--color-anveshi)
@@ -708,13 +347,25 @@ button.small-button
 	padding: 6px 14px
 	border-radius: 100px
 	border: 1px solid var(--color-grey-1)
-	background: #FFFFFF
+	background: var(--color-white)
 	transition: all 0.12s ease
 	&:hover
-		border-color: var(--theme)
-		color: var(--theme)
-		background: #F9F8F6
+		border-color: var(--color-theme)
+		color: var(--color-theme)
+		background: var(--color-stone)
 	.tag-count
 		font-size: 0.7rem
-		color: var(--text-ghost)
+		color: var(--color-grey-2)
 		margin-left: 4px
+
+.popping
+	transition: transform 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030), box-shadow 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030), background 160ms ease
+	&:hover
+		transform: translateY(-2px)
+		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.12)
+		background: var(--color-stone)
+
+.flowing
+	transition: box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1)
+	&:hover
+		box-shadow: 0 16px 35px rgba(0,0,0,0.10)

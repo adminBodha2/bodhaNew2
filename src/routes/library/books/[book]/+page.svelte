@@ -1,20 +1,21 @@
 <script lang="ts">
+
 	import { page } from '$app/state';
-	import { onMount } from 'svelte'
-	import { selectedOpenLibrary } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Title from '$lib/comps/page-title.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 
 
-	export let data;
-	let relatedBooks:any
-	let sizing = 'medium'
+let { data } = $props();
+	let sizing = $state('medium');
+	let relatedBooks = $derived(data.relatedBooks ?? []);
 
 	function setSizing(index:string) {
 		sizing = index
 	}
+
+
 
 	const shelfMap: Record<string, { label: string; href: string }> = {
 		essentials: { label: 'Essentials', href: '/library/essentials' },
@@ -26,19 +27,38 @@
 		svayambodha: { label: 'Svayambodha', href: '/library/svayambodha' }
 	};
 
-	const title = data.name
-	const metaDescription = data.summary
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname
-	const metaImage = 'https://www.bodharesearch.in/images/key-bol.webp'
+	let title = $derived(data.name + ' | Bodha Open Library');
+	let metaDescription = $derived(data.summary);
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
+	const metaImage = 'https://www.bodharesearch.in/images/key-bol.webp';
 
-	onMount(() => {
-		(async() => {
-			relatedBooks = await selectedOpenLibrary(data.type)
-		})();
-	})
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Book',
+		name: data.name,
+		author: {
+			'@type': 'Person',
+			name: data.author
+		},
+		description: data.summary,
+		url: metaUrl,
+		image: metaImage,
+		keywords: data.tags?.join(', ')
+	}));
+
 </script>
 
-<Head {title} {metaDescription} {metaImage} {metaUrl}/>
+<Head
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	imWidth="1536"
+	imHeight="1024"
+	ogType="book"
+	{jsonld}
+/>
+
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">
@@ -53,13 +73,13 @@
 		<div class="box textbox xcenter ta-c mleft sizing-tray">
 			<p class="citation-big grey">Set Reader Size</p>
 		<div class="row cgap8 rgap8 xcenter">
-			<button class="nav-btn" class:active={sizing === 'large'} on:click={() => setSizing('large')}>
+			<button class="nav-btn" class:active={sizing === 'large'} onclick={() => setSizing('large')}>
 				Large
 			</button>
-			<button class="nav-btn" class:active={sizing === 'medium'} on:click={() => setSizing('medium')}>
+			<button class="nav-btn" class:active={sizing === 'medium'} onclick={() => setSizing('medium')}>
 				Medium
 			</button>
-			<button class="nav-btn" class:active={sizing === 'compact'} on:click={() => setSizing('compact')}>
+			<button class="nav-btn" class:active={sizing === 'compact'} onclick={() => setSizing('compact')}>
 				Compact
 			</button>
 		</div>
@@ -119,15 +139,13 @@
 .reader-link
 	font-size: 0.8rem
 	font-weight: 500
-	color: var(--theme)
+	color: var(--color-theme)
 	transition: color 0.12s ease
 	&:hover
-		color: var(--themealt)
+		color: var(--color-theme-2)
 
 .reader
-	background: var(--stone)
 	align-items: center
-	border: var(--stroke-subtle)
 	padding: 2rem
 	iframe
 		display: block

@@ -1,27 +1,48 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
-	import { allSchools, allThinkers } from '$lib/utils/localpulls';
-	import Title from '$lib/comps/page-title.svelte'
+	import Title from '$lib/comps/page-title.svelte';
 
-	let schools = $state<any>([]);
-	let thinkers = $state<any>([]);
+	let { data } = $props();
 
-	const title = 'Bodha — Inspiration';
-	const metaDescription = 'The thinkers and schools of thought that shape our method, our questions, and the longer continuum of inquiry we work within.';
+	let schools = $derived(data.schools ?? []);
+	let thinkers = $derived(data.thinkers ?? []);
+
+	const title = 'Inspiration | Bodha';
+	const metaDescription = 'The thinkers and schools of thought that shape our method, questions, and the longer continuum of inquiry we work within.';
 	const metaUrl = 'https://www.bodharesearch.in/inspiration';
 	const metaImage = 'https://www.bodharesearch.in/images/key-inspiration.webp';
 
-	onMount(async () => {
-		schools = await allSchools();
-		thinkers = await allThinkers();
-	});
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: [...schools, ...thinkers].map((item: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: item.meta.title,
+				url: 'https://www.bodharesearch.in' + item.linkpath
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaImage} {metaUrl}/>
+<Head
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	imWidth="1920"
+	imHeight="1080"
+	{jsonld}
+/>
 
 <Parallax imageLink="/images/key-inspiration.webp" isClass="is50" />
 <Container narrow={true} scaled={true}>

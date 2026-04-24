@@ -65,7 +65,7 @@
 		</div>
 		<div class="grid four tight">
 			{#each gateways as item}
-			<a class="box blank labelbox card-padded" href={item.href}>
+			<a class="box blank labelbox card-padded top-card popping" href={item.href}>
 				<div class="theme-line"></div>
 				<p class="tag-text w500 lgrey tt-u">{item.kicker}</p>
 				<h2 class="card-title source-serif">{item.title}</h2>
@@ -80,7 +80,7 @@
 	<Title text="verticals"/>
 	<div class="grid four tight">
 		{#each verticals as item}
-		<a class="elembox blank verticals" href={item.href}>
+		<a class="elembox blank verticals popping" href={item.href}>
 			<div class="imgbox"><img src={item.image} alt={item.title} /></div>
 			<div class="labelbox">
 				<div class="theme-line"></div>
@@ -148,12 +148,12 @@
 	</div>
 	<div class="standard-grid grid three video-grid">
 		{#each vids as item, i}
-		<a class="video-card blank number" href={item.link} target="_blank" rel="noreferrer">
+		<a class="video-card blank" href={item.link} target="_blank" rel="noreferrer">
 			<Youtuber youTubeId={item.videoid} />
 			<div class="box video-footer rgap8">
 				<p class="w500 tight">{item.name}</p>
 				<div class="theme-line"></div>
-				<p class="citation lgrey tt-u">{item.channel}</p>
+				<p class="citation-big lgrey tt-u">{item.channel}</p>
 			</div>
 		</a>
 		{/each}
@@ -177,20 +177,18 @@
 
 // ── GATEWAY CARDS ─────────────────────────────────────────
 
-.card-padded
+.top-card
 	border: var(--border-dark)
 	border-radius: 4px
-	transition: var(--transition1)
+	background: var(--color-back)
 	&:hover
-		box-shadow: var(--shadow1)
-		background: var(--color-stone)
 		.theme-line
 			transform: scaleX(1.5)
 
 .theme-line
 	height: 2px
 	width: 32px
-	background: var(--theme)
+	background: var(--color-theme)
 	transition: all 0.14s ease
 	transform-origin: left center
 
@@ -199,11 +197,9 @@
 .verticals
 	overflow: hidden
 	border: var(--border-dark)
-	transition: var(--transition1)
 	border-radius: 4px
+	background: var(--color-back)
 	&:hover
-		box-shadow: var(--shadow1)
-		background: var(--color-stone)
 		.theme-line
 			transform: scaleX(1.5)
 		img
@@ -235,11 +231,13 @@
 	padding: 1rem
 	border: 1px solid rgba(0,0,0,0.06)
 	border-radius: 4px
-	background: var(--stone)
+	background: var(--color-stone)
 	@media screen and (min-width: 1025px)
 		display: grid
 		grid-template-columns: 160px 1fr
 		align-items: start
+		.labelbox
+			padding: 1rem
 
 .publication-image
 	object-fit: cover
@@ -260,10 +258,11 @@
 
 .video-card
 	overflow: hidden
-	background: #FFFFFF
+	background: var(--color-white)
 	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
 	&:hover
 		transform: translateY(-2px)
+		background: var(--color-stone)
 		.theme-line
 			transform: scaleX(1.5)
 

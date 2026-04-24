@@ -39,7 +39,7 @@
 <div
 	class="scroll-progress"
 	style="width: {perCent *
-		100}%; background: var(--theme); height: 2px"
+		100}%; background: var(--color-theme); height: 2px"
 ></div>
 
 <style lang="sass">

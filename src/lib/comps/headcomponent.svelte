@@ -1,9 +1,24 @@
 <script lang="ts">
-	export let title: string;
-	export let metaDescription: string;
-	export let metaUrl: string;
-	export let metaImage: string;
-	export let jsonld: string = '';
+	type Props = {
+		title: string;
+		metaDescription: string;
+		metaUrl: string;
+		metaImage: string;
+		imWidth?: string;
+		imHeight?: string;
+		ogType?: string;
+		jsonld?: string;
+	};
+	let {
+		title,
+		metaDescription,
+		metaUrl,
+		metaImage,
+		imWidth = "1200",
+		imHeight = "675",
+		ogType = "website",
+		jsonld = ''
+	}: Props = $props();
 </script>
 
 <svelte:head>
@@ -14,11 +29,13 @@
 	<meta name="description" content={metaDescription} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
+	<meta property="og:type" content={ogType} />
+	<meta property="og:site_name" content="Bodha" />
 	<meta property="og:url" content={metaUrl} />
 	<meta property="og:image" content={metaImage} />
 	<meta property="og:image:alt" content="{title} hero image" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="675" />
+	<meta property="og:image:width" content={imWidth} />
+	<meta property="og:image:height" content={imHeight} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={metaDescription} />

@@ -1,8 +1,19 @@
 <script lang="ts">
+
 	import Arrow from '$lib/icons/arrow-right.svelte';
-	export let text = 'Title';
-	export let anveshi = false;
-	export let isCenter = false
+
+	type Props = {
+		text?: string;
+		anveshi?: boolean;
+		isCenter?: boolean;
+	}
+
+	let {
+		text = 'Title',
+		anveshi = false,
+		isCenter = false
+	}: Props = $props()
+
 </script>
 
 <div class="row ycenter xleft cgap16 trigger" class:xcenter={isCenter} class:mleft={isCenter}>

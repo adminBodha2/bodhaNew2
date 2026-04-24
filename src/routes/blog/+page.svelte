@@ -1,34 +1,73 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { fullBlog } from '$lib/utils/localpulls';
+
+	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
 	import { servingExternal } from '$lib/serving/servingWiki';
 
-	let posts: any;
-	let showEx = false;
+	type BlogPost = {
+		linkpath: string;
+		formattedDate?: string;
+		meta: {
+			title?: string;
+			image?: string;
+			excerpt?: string;
+			author?: string;
+			words?: string | number;
+			tags?: string[];
+		};
+	};
+	let { data }: { data: PageData } = $props();
+
+	let posts = $derived((data.posts ?? []) as BlogPost[]);
+	let showEx = $state(false);
+
 	const externalPosts = servingExternal();
 
-	const title = 'Bodha - Blog';
-	const metaDescription = 'Our blog featuring essays on Hindu culture, history, festivals, and more.';
+	const title = 'Blog | Bodha';
+	const metaDescription = 'Essays on Hindu culture, history, festivals, civilizational thought, and more.';
 	const metaUrl = 'https://www.bodharesearch.in/blog';
 	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 
-	onMount(async () => {
-		posts = await fullBlog();
-	});
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: posts.map((post: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: post.meta.title,
+				url: 'https://www.bodharesearch.in' + post.linkpath
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
+
 
 <Container narrow={true} scaled={true}>
 <div class="box std padded-ontop">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Blog" showD={true} desc={metaDescription} showRow={true}>
 		<div class="row cgap8 rgap8 mwrap">
-			<button class="nav-btn" class:active={!showEx} on:click={() => (showEx = false)}>Essays</button>
-			<button class="nav-btn" class:active={showEx} on:click={() => (showEx = true)}>External Posts</button>
+			<button class="nav-btn" class:active={!showEx} onclick={() => (showEx = false)}>Essays</button>
+			<button class="nav-btn" class:active={showEx} onclick={() => (showEx = true)}>External Posts</button>
 			<a class="nav-btn" href="/blog/writers">Writers</a>
 			<a class="nav-btn" href="/blog/tags">Tags</a>
 		</div>
@@ -44,7 +83,7 @@
 				excerpt={item.meta.excerpt}
 				author={item.meta.author}
 				date={item.formattedDate}
-				words={item.meta.words}
+				words={item.meta.words?.toString() ?? ''}
 				numbering="whitestone"
 			>
 				{#each item.meta.tags as tag}

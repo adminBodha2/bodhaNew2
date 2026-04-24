@@ -112,3 +112,86 @@ export const libExternal = [
 		{ label: 'Sanskrit Dictionary', href: 'https://sanskritdictionary.com/', desc: 'A composite Sanskrit dictionary and word lookup site with meanings, associated words, and references, including a Sanskrit dhatus search companion.' },
 		{ label: 'Archive.org', href: 'https://archive.org/', desc: 'The original and undefeated repository for all kinds of texts. Most documents in our own library are sourced from this archive.' },
 	];
+
+export const researchAreas = [
+		{
+			title: 'Institutional Design',
+			image: '/images/research-1.webp',
+			items: [
+				{ label: 'Hindu Models of Temple Management', href: '/research/hindu-models-of-temple-management' },
+				{ label: 'Structure of Hindu Charity', href: '/research/structure-of-hindu-charity' },
+				{ label: 'Hindu Frameworks of Education', href: '/research/hindu-frameworks-of-education' },
+				{ label: 'Interchanging Dynamics of Hindu Family', href: '/research/interchanging-dynamics-of-hindu-family' },
+				{ label: 'Temples of Madhya Pradesh', href: '/research/temples-of-madhya-pradesh' },
+			]
+		},
+		{
+			title: 'Policy and Strategic Affairs',
+			image: '/images/research-2.webp',
+			items: [
+				{ label: 'Battle of Dharma in North East', href: '/research/battle-for-dharma-north-east' },
+				{ label: 'A Year in a Hajong Village', href: '/research/year-in-hajong-village' },
+				{ label: 'Dangs: Anatomy of Religious Terror', href: '/research/dangs-anatomy-of-religious-terror' },
+				{ label: 'The Dharma-Dhamma Axis', href: null },
+				{ label: 'Kekadia: Impact of Conversion on Tribal Society', href: null },
+			]
+		},
+		{
+			title: 'Purva Paksha Project',
+			image: '/images/research-3.webp',
+			items: [
+				{ label: 'A Hindu View of the Enlightenment', href: '/research/hindu-response-to-enlightenment' },
+				{ label: 'Artist in the Art: Hindu View of Western Art', href: '/research/artist-in-art' },
+				{ label: 'India That Was: Glimpses of a Disappearing World', href: null },
+				{ label: 'Alternate Consciousness: Pagan Cultures', href: null },
+			]
+		},
+	];
+
+export const teamMembers = [
+		{
+			name: 'Pankaj Saxena',
+			role: 'Founder',
+			image: '/images/team/PS.webp',
+			bio: 'Pankaj is an author on Hindu temples, arts, literature, history and culture. His writing explains the beauty of Sanātana Dharma through stories about traditions, communities and culture. He has a deep interest in cultural anthropology, evolutionary biology and ecology, and has visited more than 1600 Hindu temples. He is the author of Svayambodha and Shatrubodha.',
+			links: [
+				{ label: 'Twitter', href: 'https://x.com/PankajSaxena84' },
+				{ label: 'Facebook', href: 'https://www.facebook.com/PankajSaxena84' },
+				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/pankajsaxena84/' },
+			]
+		},
+		{
+			name: 'Amritanshu Pandey',
+			role: 'Co-founder',
+			image: '/images/team/AP.webp',
+			bio: 'Amrit combines 14 years of professional experience rooted in product development and business leadership, with a lifetime of engagement with ancient Indian history. He writes on history, civilizational thinking and design, and is a research fellow at Sir Jadunath Sarkar Fellowship for Indian History (2025–26) at FIHCR. He is the author of Fractal Maṇḍala — A History of Ancient India.',
+			links: [
+				{ label: 'Twitter', href: 'https://x.com/saamaanyafreaky' },
+				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/amritanshu-pandey/' },
+			]
+		},
+		{
+			name: 'Akshay Jha',
+			role: 'Co-founder',
+			image: '/images/team/AJ.webp',
+			bio: 'Akshay is a researcher of Hindu institutions and philosophy, with a current focus on Hindu temple management. His interests lie in Hindu knowledge tradition, ethnographic approaches to temple management, and the intersection of tradition with contemporary society.',
+			links: [
+				{ label: 'Twitter', href: 'https://x.com/akshaystates' },
+				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/akshaykrjha/' },
+			]
+		},
+		{
+			name: 'Padmavathy Manavazhahan',
+			role: 'Manager, Content',
+			image: '/images/team/PM.webp',
+			bio: 'Padmavathy comes from a background of Advaita Vedānta, with professional experience in software entrepreneurship. Her work in this field is driven by a life-long reverence for Bhārata.',
+			links: []
+		},
+		{
+			name: 'Ankit Mishra',
+			role: 'Manager, Operations',
+			image: '/images/team/AM.webp',
+			bio: 'Ankit transitioned from engineering to the development sector after his interests in public policy. He has worked as a political consultant to several political parties and renowned leaders. He aims to integrate Indian Knowledge Systems in development sector and politics to rekindle the dharma and civilizational flame.',
+			links: []
+		},
+	];

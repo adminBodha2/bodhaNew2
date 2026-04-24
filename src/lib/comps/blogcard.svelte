@@ -9,7 +9,7 @@
 	export let numbering = ' '
 </script>
 
-<div class="blog-card {numbering}">
+<div class="blog-card {numbering} flowing">
 	<a class="card-media blank" href={link}>
 		<div class="image-box">
 			<img src={image} alt={title} />
@@ -38,7 +38,6 @@
 .blog-card
 	display: flex
 	flex-direction: column
-	transition: var(--transition1)
 	&:hover
 		img
 			transform: scale(1.05)
@@ -82,7 +81,7 @@ img
 
 .card-words
 	font-size: 0.72rem
-	color: var(--themeaccent)
+	color: var(--color-theme-4)
 
 
 </style>

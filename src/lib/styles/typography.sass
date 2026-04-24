@@ -12,7 +12,7 @@ pre
 
 p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
 	margin: 0
-	color: var(--primary)
+	color: var(--color-primary)
 
 .garamond
 	font-family: 'EB Garamond', serif
@@ -38,6 +38,8 @@ p.bold
 		--typeH5: 4.059rem
 		--typeH6: 5.074rem
 		--typePs: 1.164rem
+		--serif-adjust: 1.2
+		--serif-adjust-blog: 1.2
 	@media screen and (max-width: 1024px)
 		--typeBase: 1.25rem
 		--typeBaseLow: 1.06rem
@@ -50,6 +52,8 @@ p.bold
 		--typeH5: 3.110rem
 		--typeH6: 3.732rem
 		--typePs: 1.093rem
+		--serif-adjust: 1.25
+		--serif-adjust-blog: 1.1
 
 .source-serif
 	font-family: 'Source Serif 4', serif
@@ -72,7 +76,7 @@ p.bold
 			content: ' '
 			width: 10%
 			height: 2px
-			background: var(--theme)
+			background: var(--color-theme)
 			position: absolute
 			top: 0
 			left: 0
@@ -92,16 +96,20 @@ p.bold
 //-------------------------HEADER 1--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 h1
-	line-height: 1.2
+	line-height: 1.1
 	font-size: clamp(3.110rem, 2rem + 3.5vw, 5.074rem)
 	letter-spacing: -0.1rem
+	font-weight: 650
 	&.thin
 		font-weight: 400
 	&.page-title, &.page-title.source-serif
 		font-weight: 690
 		font-size: var(--typeH5)
 		letter-spacing: -0.05rem
-		line-height: 1.1
+	@media screen and (max-width: 1024px)
+		&.page-title, &.page-title.source-serif
+			font-size: var(--typeH4)
+			letter-spacing: -0.01rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,9 +124,6 @@ h2
 		font-size: var(--typeH3)
 	&.card-title.source-serif
 		letter-spacing: -0.04rem
-	&.title-small
-		font-size: var(--typeBase)
-		font-weight: 500
 	&.header-2
 		font-size: 0.7rem
 		font-weight: 500
@@ -134,95 +139,26 @@ h3
 	font-size: var(--typeH3)
 	&.thin
 		font-weight: 400
-	&.card-title.source-serif
-		font-weight: 400
-		line-height: 1.25
-		letter-spacing: -0.02em
-		transition: color 0.15s ease
-	&.blog-title
-		font-size: var(--typeH1)
-		font-weight: 500
-	&.item-title
-		font-weight: 600
-	@media screen and (min-width: 1025px)
-		&.source-serif.tight
-			line-height: 1.12
-		&.source-serif.blog-card-title
-			font-size: calc(var(--typeH2) * var(--serif-adjust))
-		&.item-title, &.item-title.source-serif
-			font-size: var(--typeH3)
-			letter-spacing: -0.01rem
-		&.blog-title.source-serif
-			font-size: var(--typeH2)
-			letter-spacing: -0.01rem
-	@media screen and (max-width: 1024px)
-		&.item-title, &.item-title.source-serif
-			font-size: var(--typeH3)
-			letter-spacing: -0.01rem	
-		&.blog-title.source-serif
-			font-size: var(--typeH3)
-			letter-spacing: 0.02rem
-
-.gateway-card, .vertical-card
-	&:hover
-		h3.item-title, h3.blog-title
-			color: var(--theme)
-.hover-card
-	&:hover
-		h3.item-title, h3.blog-title
-			color: var(--theme)
-.hover-card.anveshi
-	&:hover
-		h3.item-title, h3.blog-title
-			color: var(--anveshi-color)
 
 //-------------------------HEADER 4--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 h4
 	line-height: 1.2
+	font-size: var(--typeH2)
 	&.thin
 		font-weight: 400
 	&.tight
 		line-height: 1.12
-	@media screen and (min-width: 1025px)
-		font-size: var(--typeH2)
-		letter-spacing: -0.02rem
-		&.source-serif
-			font-size: calc(var(--typeH2) * var(--serif-adjust))
-			line-height: 1.4
-			letter-spacing: 0
-		&.source-serif.blog-card-title.tight
-			line-height: 1.2
-	@media screen and (max-width: 1024px)
-		font-size: var(--typeH2)
-		&.source-serif
-			font-size: calc(var(--typeH2) * var(--serif-adjust))
-			letter-spacing: -0.01rem
 
 //-------------------------HEADER 5--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 h5
 	font-size: var(--typeH2)
 	line-height: 1.28
-	font-weight: 650
 	&.tight
 		line-height: 1.12
 	&.thin
 		font-weight: 400
-	&.source-serif
-		font-size: var(--typeH1)
-		font-weight: 550
-	@media screen and (min-width: 1025px)
-		&.source-serif
-			font-size: calc(var(--typeH2) * var(--serif-adjust))
-			letter-spacing: 0
-		&.title-item
-			letter-spacing: -0.03rem
-	@media screen and (max-width: 1024px)
-		&.source-serif
-			font-size: calc(var(--typeH2) * var(--serif-adjust) * .95)
-			font-weight: 600
-			letter-spacing: -0.03rem
 
 //-------------------------HEADER 6--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -233,18 +169,6 @@ h6
 		line-height: 1.2
 	&.thin
 		font-weight: 400
-	&.source-serif
-		line-height: 1.45
-		font-weight: 400
-	@media screen and (min-width: 1025px)
-		font-size: var(--typeH1)
-		&.source-serif
-			font-size: calc(var(--typeH1) * var(--serif-adjust))
-			letter-spacing: -0.01rem
-	@media screen and (max-width: 1024px)
-		font-size: var(--typeH2)
-		&.source-serif
-			font-size: calc(var(--typeH1))
 
 //-------------------------P, PRE, LI--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -266,10 +190,10 @@ p, pre, li
 		font-size: 0.65rem
 		letter-spacing: 0.02rem
 	&.card-title
-		font-size: clamp(2.16rem, 7rem - 2.5vw, 2.078rem)
-		font-weight: 650
+		font-size: clamp(1.65rem, 2rem + 3.5vw, 1.8rem)
+		font-weight: 600
 		line-height: 1.2
-		letter-spacing: -0.02rem
+		letter-spacing: -0.01rem
 		&.thin
 			font-weight: 400
 		&.loose
@@ -291,22 +215,15 @@ p, pre, li
 		font-size: calc(var(--typeH1) * 0.85)
 		line-height: 1.5
 
-.desk, .mobile
-	.article-typography
-		p, pre, li
-			font-size: calc(var(--typeBase) * var(--serif-adjust-blog))
-			line-height: 1.6
-		p, pre
-			margin-bottom: 1.25rem
-
 .main-box
 	p, pre, li
 		margin-bottom: 1rem
 
 .classic-document
 	p, pre, li
-		line-height: 1.7
-		font-size: var(--typeBase)
+		line-height: 1.5
+		font-size: calc(var(--typeBase) * 1.2)
+		font-family: 'EB Garamond', serif
 	p, pre
 		margin-bottom: 1.25rem
 	li
@@ -325,23 +242,10 @@ p, pre, li
 		margin-top: 2.5rem
 	@media screen and (max-width: 1024px)
 		p, pre, li
-			line-height: 1.5
+			line-height: 1.4
 
 small
 	font-size: 11px
-
-p.eyebrow
-	font-size: 11px
-	color: var(--grey-std)
-	letter-spacing: 0.02rem
-	transition: all 0.06s ease
-	&:hover
-		letter-spacing: 0
-	&.anveshi-o
-		color: var(--anveshi-color)
-
-p.subtitle
-	font-size: 0.875rem
 
 a.small-text, .small-text
 	font-size: 0.75rem
@@ -382,40 +286,27 @@ pre
 .tt-c
 	text-transform: capitalize
 .white
-	color: var(--whitefix)
+	color: var(--color-white)
 .blue
-	color: var(--theme)
+	color: var(--color-theme)
 .blue-dark
-	color: var(--themealt)
+	color: var(--color-theme-2)
 .anveshi-o
-	color: var(--anveshi-color)
+	color: var(--color-anveshi)
 .grey
 	color: var(--color-grey-3)
 .altprim
-	color: var(--primaryalt)
+	color: var(--color-grey-4)
 .lgrey
 	color: var(--color-grey-1)
 .altcolor
-	color: var(--primaryalt)
+	color: var(--color-grey-4)
 .heading.lgrey
-	color: #d7d7d7
+	color: var(--color-grey-1)
 .w500
 	font-weight: 500
 
 //----LINKS AND BUTTONS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-a.heading.single
-	font-size: var(--typeBase)
-	border: 1px solid #e1e1e1
-	border-radius: 4px
-	width: max-content
-	padding: 0.65rem 1rem
-	background: linear-gradient(180deg,rgba(250, 250, 250, 1) 29%, rgba(254, 254, 254, 1) 100%)
-	cursor: pointer
-	box-shadow: var(--sh4)
-	&:hover
-		box-shadow: none
-		background: #FFF
 
 a
 	text-decoration: none
@@ -424,51 +315,17 @@ a
 	&.linker
 		&:hover
 			text-decoration: underline
-			text-decoration-color: var(--theme)
+			text-decoration-color: var(--color-theme)
 	&.linked
-		color: var(--themealtold)
+		color: var(--color-theme-3)
 		&:hover
-			color: var(--theme)
+			color: var(--color-theme)
 	&.linkonhover
 		color: inherit
 		&:hover
-			color: var(--theme)
+			color: var(--color-theme)
 	&.linkedlight
-		color: var(--theme)
-	&.buttonheading
-		text-decoration: none
-		background: var(--primary)
-		color: var(--background)
-		font-size: 14px
-		font-weight: 500
-		padding: 4px 8px
-		transition: 0.1s
-		&:hover
-			background: var(--theme)
-	&.button-main
-		background: var(--theme)
-		text-decoration: none
-		color: var(--background)
-		font-size: 13px
-		padding: 8px 16px
-		width: max-content
-		text-transform: uppercase
-		border-radius: 2px
-		transition: 0.06s
-		&:hover
-			background: var(--themealt)
-
-a.container
-	text-decoration: none
-	color: inherit
-
-
-.title-item
-	transition: transform 0.25s ease
-	position: relative
-	&:hover
-		transform: translateX(8px) translateY(-2px)
-		color: var(--themealt)
+		color: var(--color-theme)
 
 .classic-document
 	img
@@ -478,8 +335,8 @@ a.container
 		max-height: 540px
 		object-fit: contain
 		margin-right: auto
-		border: 1px solid #e7e7e7
+		border: var(--border-main)
 		padding: 1rem
-		background: var(--stone)
+		background: var(--color-stone)
 		border-radius: 6px
 		margin-bottom: 1rem

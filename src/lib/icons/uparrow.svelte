@@ -1,7 +1,7 @@
 <script lang="ts">
 
   export let size = 32
-  export let color = 'var(--themealt)'
+  export let color = 'var(--color-theme-2)'
 
 </script>
 

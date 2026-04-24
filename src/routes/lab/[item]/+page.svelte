@@ -1,37 +1,51 @@
 <script lang="ts">
-
 	import { page } from '$app/state';
-	import { onMount } from 'svelte';
-	import { fullLab } from '$lib/utils/localpulls';
 	import { formatYear, formatDOM, formatMonth } from '$lib/utils/localpulls.js';
-	import Container from '$lib/comps/container.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import '$lib/styles/lab.sass'
+	import '$lib/styles/lab.sass';
 
-	export let data;
-	let labitems:any
+	let { data } = $props();
 
-	let yOP: string, dOM: string, mOD: string;
-	$: if (page) {
-		yOP = formatYear(data.date);
-		dOM = formatDOM(data.date);
-		mOD = formatMonth(data.date);
-	}
+	let labitems = $derived(data.labitems ?? []);
 
-	const title = data.title
-	const metaDescription = data.excerpt
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname
-	const metaImage = 'https://www.bodharesearch.in/images/key-research.webp'
+	let yOP = $derived(formatYear(data.date));
+	let dOM = $derived(formatDOM(data.date));
+	let mOD = $derived(formatMonth(data.date));
 
-	onMount(() => {
-		(async() => {
-			labitems = await fullLab()
-		})();
-	})
+	let title = $derived(data.title);
+	let metaDescription = $derived(data.excerpt);
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
+	const metaImage = 'https://www.bodharesearch.in/images/key-research.webp';
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: data.title,
+		description: data.excerpt,
+		datePublished: data.date,
+		articleSection: data.category,
+		url: metaUrl,
+		image: metaImage,
+		publisher: {
+			'@type': 'Organization',
+			name: 'Bodha',
+			url: 'https://www.bodharesearch.in'
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaImage} {metaUrl}/>
+<Head
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	imWidth="1536"
+	imHeight="1024"
+	ogType="article"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 	<section class="stdbox padded-ontop">

@@ -32,11 +32,11 @@
 	padding: 6px 14px
 	border-radius: 100px
 	border: 1px solid rgba(0,0,0,0.1)
-	background: #FFFFFF
+	background: var(--color-white)
 	transition: all 0.12s ease
 	&:hover
-		border-color: var(--theme)
-		color: var(--theme)
+		border-color: var(--color-theme)
+		color: var(--color-theme)
 		background: #F9F8F6
 
 </style>

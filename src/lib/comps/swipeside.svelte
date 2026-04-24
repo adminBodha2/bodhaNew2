@@ -50,7 +50,7 @@ button.filterbutton
 		box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27)
 		transition: all 250ms
 	&:hover
-		color: #FFFFFF
+		color: var(--color-white)
 		box-shadow: 4px 4px 7px -3px rgba(0,0,0,0)
 		&::before
 			width: 100%

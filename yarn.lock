@@ -2,6 +2,109 @@
 # yarn lockfile v1
 
 
+"@embedpdf/core@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/core/-/core-2.14.1.tgz#617d20c91296701cb44059b753ad3d59c4847a65"
+  integrity sha512-L0lNn5WGnGDPaI1q2wnavVF6C6haRtvPGbMfqhZrjr7V+e0GExeoTO0VjK1DwH4IIBHOuD6nsQFYI89+nY/sJA==
+  dependencies:
+    "@embedpdf/engines" "2.14.1"
+    "@embedpdf/models" "2.14.1"
+
+"@embedpdf/engines@2.14.1", "@embedpdf/engines@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/engines/-/engines-2.14.1.tgz#25c7d201648a310de239a3a7f0bf4a393a1da0ab"
+  integrity sha512-k+HHuhj7dPKZC+8wUvMbpEUbNfi6F5r96Ky2XbNhBxiMQSWlVljBQVfZWcq9Jy3TLslwn5m2BbrvvHw+UVqe3w==
+  dependencies:
+    "@embedpdf/fonts-arabic" "1.0.0"
+    "@embedpdf/fonts-hebrew" "1.0.0"
+    "@embedpdf/fonts-jp" "1.0.0"
+    "@embedpdf/fonts-kr" "1.0.0"
+    "@embedpdf/fonts-latin" "1.0.0"
+    "@embedpdf/fonts-sc" "1.0.0"
+    "@embedpdf/fonts-tc" "1.0.0"
+    "@embedpdf/models" "2.14.1"
+    "@embedpdf/pdfium" "2.14.1"
+
+"@embedpdf/fonts-arabic@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-arabic/-/fonts-arabic-1.0.0.tgz#32cf6e9b13a73827800278db7ae832981f9764df"
+  integrity sha512-SnGvQb+LwPZQO2WjjvlmXrJZolJUfLYbLZQSaYUw1vrQyMyJKT4LewvJGG+hZ+Yz2fz7OMIQ+4Gc98mGODZtOg==
+
+"@embedpdf/fonts-hebrew@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-hebrew/-/fonts-hebrew-1.0.0.tgz#5ad24258c1606fa95dbb4ba5fa67757502c58edc"
+  integrity sha512-5HVAKGL7VqPeTxxADDrSqAFBxfmAXdP8fIqrPwJIKkqdK2643bOer8CqnnpO3/nPoFhkzxhttWMB9BGiqSW62w==
+
+"@embedpdf/fonts-jp@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-jp/-/fonts-jp-1.0.0.tgz#03c643bde1e0e556bfa1cf4bbb7eafbe555aa9ac"
+  integrity sha512-BY2tv/mcICUUKf+M/bizf3RU65PMqKClJ/e5o9mgMibxyML0OQvEDwYMRPODQkKgJKXCO3ScHmVvcmXp6kt+fA==
+
+"@embedpdf/fonts-kr@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-kr/-/fonts-kr-1.0.0.tgz#4652ae3b26a83c3c7e499f0b7b60375fb9bb1d46"
+  integrity sha512-bh88HXSvOBS581kgmihWY7Ijp9hBsvlmXogFG5LSNx9UBAobRcakZiFMGieRBc06hUSkpo7WhjaFM/z/SfQ8dQ==
+
+"@embedpdf/fonts-latin@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-latin/-/fonts-latin-1.0.0.tgz#b646560c2c147f0ccbf04ae26ef18c7822506240"
+  integrity sha512-LLYysdr8O6sRNzhmW3PbF3AeA8xnqvOi4XLFfIfNlW5uEZ+qsJdcfd78Q78sFJMhlaOAYFMziMMsnOzmx463rA==
+
+"@embedpdf/fonts-sc@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-sc/-/fonts-sc-1.0.0.tgz#a52a70b3cb36e9e49148f2055f51d0fa387f41bf"
+  integrity sha512-ETXl7XCwaQLSSvMO3EUDwMNqtL64kX2LlFxarTRi/NsIGGOIxUurGfKtrkmtnKHrWy1jAJSt6oxK2uJhvdvQIw==
+
+"@embedpdf/fonts-tc@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@embedpdf/fonts-tc/-/fonts-tc-1.0.0.tgz#21262bb512ede384c3fb84b952a6812b98e793f4"
+  integrity sha512-rGZJbVD6DYS5BbXdpEMnWkpVF0Knar+bsiyb2o3+YRx7O8eyFubEBQUSUInirQk69HA6fc3GhYCg7TyC/oD76Q==
+
+"@embedpdf/models@2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/models/-/models-2.14.1.tgz#7fab4dbe55156b420cde2b2474b399650f1032c1"
+  integrity sha512-jbuoXKv4jW8F1o8EzCmPIB5U/yVC5DWlWhxL9ZfvBiBgW2HIy68ydcu+AykqOG75eAvCfxqcvF2HzSDsV3+K0A==
+
+"@embedpdf/pdfium@2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/pdfium/-/pdfium-2.14.1.tgz#18a103fa05433bb9a9dceb5b091962fc27e78540"
+  integrity sha512-4FKhpeb7CYfkZ1k0WyDTq8i2FlIO5MaR0ywIDJ0goxOjenKkYOgHQ4747B5evxRzNEC2H5V3Rk6Dunf7TlIYBQ==
+
+"@embedpdf/plugin-document-manager@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-document-manager/-/plugin-document-manager-2.14.1.tgz#6d2249a4afc1e4d0ca6d787b852326cbbe6a59e7"
+  integrity sha512-Qdj6Xkmpyt0aLHCkqZbOsOK5xzwI4IjaV8C2ihPiggB/iPDhoyXPklJb3wXmJfxjTIl+aw+FZmmPkmr4IpYn7w==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
+"@embedpdf/plugin-render@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-render/-/plugin-render-2.14.1.tgz#be8a742f57de8e3ff35ce67e8aaf4400f9717efc"
+  integrity sha512-KRjeSZeQRrg6fuyUgSU43yE6bOrRredpEiAfPI/FUCGgniO9nokTHjnFYg5G3UtVteJdnzdnKwzBl5sY++NQkg==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
+"@embedpdf/plugin-scroll@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-scroll/-/plugin-scroll-2.14.1.tgz#bcccf6825653d40a7c68d1454059af805a12ae11"
+  integrity sha512-ppnP4t43EVNiXr2coEwybQ7BYucbUEpdTGlcEBm38DhLywgseVVySrcIMx7rHdM7ZylsW7uwS84hCFndTpPezg==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
+"@embedpdf/plugin-viewport@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-viewport/-/plugin-viewport-2.14.1.tgz#1bdbc7c4c6a4a5ba80c6f332acdaf86052c1e6dd"
+  integrity sha512-U45B46XoaAFxC3yKnVhBO8Z5Wa+ca17UW7esJC/yWneJ2dNfSnvRAR7309KKP/RpZfDmn/lfJDVOFGCDbR3hvw==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
+"@embedpdf/plugin-zoom@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-zoom/-/plugin-zoom-2.14.1.tgz#1a97be6e4ec15091975e0376d7511d8b2b2c3c01"
+  integrity sha512-rVah7XgrWiNe9kT7VGRhNp5mCImf3eMk4cGO9kXIidQWka+yFqBANJw6Rj+FJdtWqz6pamZNWXTDZ1jvQkMKZg==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
 "@emnapi/core@1.9.2":
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.9.2.tgz#3870265ecffc7352d01ead62d8d83d8358a2d034"
@@ -675,6 +778,13 @@
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.8.tgz"
   integrity sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==
 
+"@types/flexsearch@^0.7.42":
+  version "0.7.42"
+  resolved "https://registry.yarnpkg.com/@types/flexsearch/-/flexsearch-0.7.42.tgz#4c3a551f4c78db330a9a1d9e419eb8f100f80bbb"
+  integrity sha512-FdKaw3dPgcCvqU9w8SGgqx8PrxFF2EKySRhEj1nc45HNe/2cBLff3pF52C67hzeUbNhq49t7XRIIibBd41vcIg==
+  dependencies:
+    flexsearch "*"
+
 "@types/mdast@^4.0.4":
   version "4.0.4"
   resolved "https://registry.npmjs.org/@types/mdast/-/mdast-4.0.4.tgz"
@@ -961,7 +1071,7 @@ file-uri-to-path@1.0.0:
   resolved "https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz"
   integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
 
-flexsearch@^0.8.212:
+flexsearch@*, flexsearch@^0.8.212:
   version "0.8.212"
   resolved "https://registry.npmjs.org/flexsearch/-/flexsearch-0.8.212.tgz"
   integrity sha512-wSyJr1GUWoOOIISRu+X2IXiOcVfg9qqBRyCPRUdLMIGJqPzMo+jMRlvE83t14v1j0dRMEaBbER/adQjp6Du2pw==

@@ -1,46 +1,67 @@
 <script lang="ts">
-
-	import { onMount } from 'svelte'
-	import { chapterItinerary, chapterTemples } from '$lib/utils/supabaseClient'
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Swipes from '$lib/comps/swipercomp.svelte'
-	import Container from '$lib/comps/container.svelte'
-	import Parallax from '$lib/comps/parallaxfull.svelte'
-	import FAQ from '$lib/comps/anveshifaqs.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
-	import Title from '$lib/comps/page-title.svelte'
-	import Calendar from '$lib/icons/calendar.svelte'
-	import Session from '$lib/icons/sessions.svelte'
-	import Rupee from '$lib/icons/rupee.svelte'
-	import Location from '$lib/icons/location.svelte'
+	import Swipes from '$lib/comps/swipercomp.svelte';
+	import Container from '$lib/comps/container.svelte';
+	import Parallax from '$lib/comps/parallaxfull.svelte';
+	import FAQ from '$lib/comps/anveshifaqs.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import Title from '$lib/comps/page-title.svelte';
+	import Calendar from '$lib/icons/calendar.svelte';
+	import Session from '$lib/icons/sessions.svelte';
+	import Rupee from '$lib/icons/rupee.svelte';
+	import Location from '$lib/icons/location.svelte';
 
-	export let data
-	let itins:any
-	let temples:any
-	let selectedDay = 0
-	let iW:number
+	let { data } = $props();
 
-	const title = data.title + ' at Bodha Anveshi'
-	const metaDescription = data.description;
-	const metaUrl = 'https://www.bodharesearch.in/anveshi/' + data.slug;
-	const metaImage = data.image
+	let selectedDay = $state(0);
+	let iW = $state(0);
 
-	function selectDay(index:number){
-		selectedDay = index
+	let itins = $derived(data.itins ?? []);
+	let temples = $derived(data.templesList ?? []);
+
+	let title = $derived(data.title + ' | Bodha Anveshi');
+	let metaDescription = $derived(data.description);
+	let metaUrl = $derived('https://www.bodharesearch.in/anveshi/' + data.slug);
+	let metaImage = $derived(data.image);
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'TouristTrip',
+		name: data.title,
+		description: data.description,
+		image: data.image,
+		url: metaUrl,
+		provider: {
+			'@type': 'Organization',
+			name: 'Bodha',
+			url: 'https://www.bodharesearch.in'
+		},
+		itinerary: itins.map((item: any, index: number) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: item.label,
+			description: item.itinerary
+		}))
+	}));
+
+	function selectDay(index: number) {
+		selectedDay = index;
 	}
-
-	onMount(() => {
-		(async() => {
-			itins = await chapterItinerary(data.slug);
-			temples = await chapterTemples(data.slug);
-		})();
-	})
-
 </script>
+
 
 <svelte:window bind:innerWidth={iW}/>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="1920"
+	imHeight="1080"
+	{jsonld}
+/>
+
 
 <Parallax isClass="is50" imageLink={data.image} />
 <Container narrow={true} scaled={true}>

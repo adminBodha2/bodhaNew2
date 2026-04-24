@@ -1,70 +1,84 @@
 <script lang="ts">
 
-	import { onMount } from 'svelte'
 	import { page } from '$app/state';
-	import { allQuestions } from '$lib/utils/localpulls';
-	import '$lib/styles/lab.sass'
+	import '$lib/styles/lab.sass';
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
-	let sY: number;
-	export let data;
-	let questions: any;
+	let { data } = $props();
+	let sY = $state(0);
+	let imageY = $derived(-(sY / 4));
 
-	const title = data.title + ' | Big Questions at Bodha';
-	const metaDescription = data.description;
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
-	const metaImage = 'https://www.bodharesearch.in' + data.icon;
+	let title = $derived(data.title + ' | Big Questions at Bodha');
+	let metaDescription = $derived(data.description);
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
+	let metaImage = $derived('https://www.bodharesearch.in' + data.icon);
 
-	const jsonld = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Article',
-		headline: data.title,
-		description: data.description,
-		image: 'https://www.bodharesearch.in' + data.icon,
-		publisher: { '@type': 'Organization', name: 'Bodha', url: 'https://www.bodharesearch.in' },
-		url: 'https://www.bodharesearch.in' + page.url.pathname,
-	});
+	let jsonld = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Article',
+			headline: data.title,
+			description: data.description,
+			image: metaImage,
+			publisher: {
+				'@type': 'Organization',
+				name: 'Bodha',
+				url: 'https://www.bodharesearch.in'
+			},
+			url: metaUrl
+		})
+	);
 
-	onMount(async () => {
-		questions = await allQuestions();
-	});
 </script>
 
 <svelte:window bind:scrollY={sY} />
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} {jsonld}/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
 
 <Container narrow={true} scaled={true}>
-<section class="stdbox padded-ontop">
-	<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions" showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
-		{#if data.tags?.length}
-		<div class="row wrap cgap8 rgap8 ycenter">
-			{#each data.tags as tag}
-			<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
-			{/each}
-		</div>
-		{/if}
-	</Crumb>
-	<section class="key-image">
-		<img src={data.icon} alt={data.title} style="transform: translateY(-{sY/4}px)"/>
-	</section>
-	<section class="content-section">
-		<div class="classic-document">
-		<data.content />
-		</div>
-		<div class="box sidebar">
-			{#if questions && questions.length > 0}
-				<div class="projects">
-					{#each questions as item}
-						<a class="blank project-link" href={item.linkpath}>
-							<p class="rem1 grey">{item.meta.title}</p>
-						</a>
+	<section class="stdbox padded-ontop">
+		<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions" showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
+			{#if data.tags?.length}
+				<div class="row wrap cgap8 rgap8 ycenter">
+					{#each data.tags as tag}
+						<a class="tag-pill tt-u" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
 					{/each}
 				</div>
 			{/if}
-		</div>
+		</Crumb>
+		<section class="key-image">
+			<img src={data.icon} alt={data.title} style:transform={`translateY(${imageY}px)`} />
+		</section>
+		<section class="content-section">
+			<div class="classic-document">
+				<img class="icon" src={data.image} alt={data.title} />
+				<data.content />
+			</div>
+			<div class="box sidebar">
+				{#if data.questions?.length > 0}
+					<div class="projects">
+						{#each data.questions as item}
+							<a class="blank project-link" href={item.linkpath}>
+								<p class="rem1 grey">{item.meta.title}</p>
+							</a>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		</section>
 	</section>
-</section>
 </Container>
+
+<style lang="sass">
+
+img.icon
+	object-fit: cover
+	height: 56px
+	width: 56px
+	background: none
+	padding: 0
+	border: none
+
+</style>

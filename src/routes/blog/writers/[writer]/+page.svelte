@@ -1,26 +1,42 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { page } from '$app/state';
-	import { selectedWriter } from '$lib/utils/localpulls';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
 
-	let writerName = page.params.writer ?? '';
-	let posts: any;
+	let { data } = $props();
 
-	const title = 'Essays by ' + writerName;
-	const metaDescription = 'Read all essays by ' + writerName + ' at Bodha Blog';
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
+	let writerName = $derived(data.writerName);
+	let posts = $derived(data.posts ?? []);
+
+	let title = $derived('Essays by ' + writerName + ' | Bodha Blog');
+	let metaDescription = $derived('Read all essays by ' + writerName + ' at Bodha Blog.');
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
 	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 
-	onMount(async () => {
-		posts = await selectedWriter(writerName, 50);
-	});
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: posts.map((post: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: post.meta.title,
+				url: 'https://www.bodharesearch.in' + post.linkpath
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
+
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">

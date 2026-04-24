@@ -1,18 +1,21 @@
 <script lang="ts">
-
-	import Container from '$lib/comps/container.svelte'
-	import Head from '$lib/comps/headcomponent.svelte'
+	import Container from '$lib/comps/container.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
 	import { page } from '$app/state';
 
-	const title = 'Bodha - Cultural Think Tank'
-	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.'
-	const metaUrl = 'https://www.bodharesearch.in'
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
-
+	const title = 'Page Not Found | Bodha';
+	const metaDescription = 'The requested page could not be found on Bodha.';
+	const metaUrl = 'https://www.bodharesearch.in';
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 </script>
 
 <Head
-	{title} {metaDescription} {metaImage} {metaUrl}
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	imWidth="2560"
+	imHeight="1440"
 />
 
 <Container narrow={true} scaled={true}>
@@ -21,7 +24,7 @@
 		<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
 		<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>
 		<div class="row cgap16 rgap16 mwrap ycenter pbot32">
-			<button class="blank" on:click={() => history.back()}><p class="blue">← Back to Previous Page</p></button>
+			<button class="blank" onclick={() => history.back()}><p class="blue">← Back to Previous Page</p></button>
 		</div>
 		<img src="/images/error.gif" alt="error"/>
 		</div>

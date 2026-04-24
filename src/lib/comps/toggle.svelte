@@ -15,8 +15,8 @@
 	width: 40px
 	height: 20px
 	border-radius: 20px
-	background: var(--primaryalt)
-	border: 2px solid var(--primaryalt)
+	background: var(--color-grey-4)
+	border: 2px solid var(--color-grey-4)
 	align-items: center
 	padding-left: 2px
 	padding-right: 6px
@@ -26,21 +26,21 @@
 		width: 13px
 		height: 13px
 		border-radius: 6px
-		background: var(--background)
+		background: var(--color-back)
 		transition: background 0.12s cubic-bezier(0.455, 0.890, 0.260, 0.965), transform 0.12s cubic-bezier(0.455, 0.890, 0.260, 0.965)
 	&:hover
-		background: var(--theme)
-		border: 2px solid var(--theme)
+		background: var(--color-theme)
+		border: 2px solid var(--color-theme)
 
 .togglebox.toggled
-	background: var(--background)
+	background: var(--color-back)
 	padding-left: 6px
 	padding-right: 2px
-	border: 2px solid var(--grey-md)
+	border: 2px solid var(--color-grey-3)
 	.togglecircle
-		background: var(--primary)
+		background: var(--color-primary)
 		transform: translateX(16px)
 	.togglecircle
-		background:  var(--grey-md)
+		background:  var(--color-grey-3)
 
 </style>

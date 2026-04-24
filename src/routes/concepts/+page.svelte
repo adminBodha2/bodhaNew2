@@ -1,23 +1,48 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
-	export let data: PageData;
+	let { data }: { data: PageData } = $props();
 
-	const title = 'Explore Concepts and Ideas at Bodha'
-  	const metaDescription = 'Entry point for our knowledge base and wiki.'
-  	const metaUrl = 'https://www.bodharesearch.in/concepts'
-  	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
+	const title = 'Concepts and Ideas | Bodha';
+	const metaDescription = 'Entry point for Bodha’s knowledge base and wiki.';
+	const metaUrl = 'https://www.bodharesearch.in/concepts';
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 
-	// Separate Amarakosha varga concepts from regular concepts
-	$: akVargas   = data.concepts.filter((c: any) => c.slug.startsWith('ak-'));
-	$: regular    = data.concepts.filter((c: any) => !c.slug.startsWith('ak-') && c.count > 1);
-	$: totalCount = data.concepts.length;
+	let akVargas = $derived(data.concepts.filter((c: any) => c.slug.startsWith('ak-')));
+	let regular = $derived(data.concepts.filter((c: any) => !c.slug.startsWith('ak-') && c.count > 1));
+	let totalCount = $derived(data.concepts.length);
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: regular.map((concept: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: concept.title,
+				url: 'https://www.bodharesearch.in/concepts/' + concept.slug
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">

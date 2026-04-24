@@ -1,27 +1,47 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { allVideos } from '$lib/utils/supabaseClient';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
-	import Swipes from '$lib/comps/swipercomp.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import Swipes from '$lib/comps/swipercomp.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Youtuber from '$lib/comps/youtuber.svelte';
 	import Container from '$lib/comps/container.svelte';
 
-	let vids: any;
+	let { data } = $props();
 
-	const title = "Videos at Bodha"
-	const metaDescription = "Collected talks, podcasts, conference sessions, and more by members of our team."
-	const metaUrl = "https://www.bodharesearch.in/videos"
-	const metaImage = "https://www.bodharesearch.in/images/bodhacover.png"
+	let vids = $derived(data.vids ?? []);
 
-	onMount(() => {
-		(async () => {
-			vids = await allVideos();
-		})();
-	});
+	const title = 'Videos | Bodha';
+	const metaDescription = 'Collected talks, podcasts, conference sessions, and more by members of the Bodha team.';
+	const metaUrl = 'https://www.bodharesearch.in/videos';
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: vids.map((video: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: video.name,
+				url: video.link
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaImage} {metaUrl}/>
+<Head
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">

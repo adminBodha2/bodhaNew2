@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { allQuestions } from '$lib/utils/localpulls';
-	import Swipes from '$lib/comps/swipercomp.svelte';
 	import Container from '$lib/comps/container.svelte';
-	import Heading from '$lib/comps/page-header-one.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
@@ -13,118 +11,67 @@
 	const metaUrl = 'https://www.bodharesearch.in/big-questions';
 	const metaImage = 'https://www.bodharesearch.in/images/key-bigquestions.webp';
 
-	let questions: any;
+	let questions = $state<any[]>([]);
 
 	onMount(async () => {
 		questions = await allQuestions();
 	});
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" />
 
 <Parallax imageLink="/images/key-bigquestions.webp" isClass="is50" />
 <Container narrow={true} scaled={true}>
-	<Heading title="Big Questions" />
 	<div class="stdbox padded">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Big Questions" showD={true} desc={metaDescription} />
+		<div class="grid two tightrows reading-block">
+			<div class="textbox">
+				<p class="highlight-text">Hindu society today sits at the cusp of great change. Hindu consciousness is awakening across the nation and awareness of civilizational issues is rising. Established mentalities about Hindu society, dharma, and culture are being challenged, status quos are being quashed, and new paradigms are coming into force. An intellectual renaissance is underway.</p>
+				<p class="highlight-text">Bodha wants to aid the process by asking provocative questions about some of the most fundamental problems and open questions that Hindu society faces today. There are issues that are not settled, questions that are perennially asked by every Hindu generation, and novel dilemmas that we face today.</p>
+			</div>
+			<p class="highlight-text">
+				In our Big Question series, we will ask one significant question every year at Bodha, and go to great scholars, activists, thinkers, leaders and stakeholders of Hindu cultural renaissance. Their answers will be compiled and published as a book with an introduction about the question, and the problem that it addresses. By this, at Bodha, we intend to initiate great intellectual churn in
+				Hindu society, leading to narrative building which will aid the reestablishment of a correct Hindu worldview rooted in facts and history.
+			</p>
+		</div>
 		{#if questions && questions.length > 0}
-			<Swipes slidesPerView={1} spaceBetween={8} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 1, spaceBetween: 8 } }}>
-				{#each questions as item}
-					<swiper-slide>
-						<div class="column question-card">
-							<a class="blank row ycenter question-head mcol xleft" href={item.linkpath}>
-								<img class="q-icon blue" src={item.meta.image} alt={item.meta.title} />
-								<h2 class="card-title source-serif">{item.meta.id} — {item.meta.title}</h2>
-							</a>
-							<div class="grid two right question-grid">
-								<div class="box question-left down">
-									<div class="main-box">
-									<svelte:component this={item.content} />
-									<a class="linkedlight" href={item.linkpath}>Explore →</a>
-									</div>
-								</div>
-								<div class="box question-right up">
-									<div class="ycenter q-left-text labelbox">
-										<div class="row wrap cgap8">
-											{#each item.meta.tags as tag}
-												<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
-											{/each}
-										</div>
-										<p class="small-text grey">{item.meta.description}</p>
-									</div>
-									<img src={item.meta.icon} alt={item.meta.title} />
-								</div>
-							</div>
+			<div class="grid two white-grid of-questions">
+				{#each questions as item, i}
+					<a class="blank labelbox q-item card-padded more whitestone popping" href={item.linkpath}>
+						<div class="row ycenter width100 cgap8">
+							<img class="icon" src={item.meta.image} alt={item.meta.title} />
+							<p class="card-title w500">{i + 1} - {item.meta.title}</p>
 						</div>
-					</swiper-slide>
+						<div class="onhover">
+							<p class="grey small-text">{item.meta.description}</p>
+						</div>
+					</a>
 				{/each}
-			</Swipes>
+			</div>
 		{/if}
 	</div>
 </Container>
 
 <style lang="sass">
 
-swiper-slide
-	height: 100%
-	display: flex
-
-swiper-slide > *
-	width: 100%
-
-.question-card
-	overflow: hidden
-	background: #fff
-	border-radius: 4px
-	height: 100%
-
-.question-head
-	gap: 1rem
-	padding: 1.5rem
-	&:hover
-		h2
-			color: var(--theme)
-	@media screen and (max-width: 1024px)
-		padding: 0 0 1rem 0
-		gap: 0.5rem
-
-.question-grid
+.reading-block
+	background: var(--color-white)
 	border: var(--border-main)
+	padding: 1.2rem
+	@media screen and (min-width: 1025px)
+		padding: 2rem
 
-.q-icon
-	width: 40px
-	height: 40px
-	object-fit: contain
-	flex-shrink: 0
+.q-item img
+	width: 24px
+	height: 24px
+	object-fit: cover
 	filter: saturate(0) opacity(0.6)
-	&.blue
-		filter: saturate(1) opacity(1)
 	@media screen and (max-width: 1024px)
 		margin-right: auto
 
-.question-left
-	display: flex
-	flex-direction: column
-	padding: 1rem
-	@media screen and (min-width: 1025px)
-		padding: 2rem
-		border-right: var(--border-main)
-
-.q-left-text
-	padding: 1rem
-	height: calc(100% - 200px)
-	background: var(--color-stone)
-	@media screen and (min-width: 1025px)
-		padding: 2rem
-		height: calc(100% - 280px)
-
-.question-right
-	img
-		width: 100%
-		object-fit: cover
-		height: 200px
-	@media screen and (min-width: 1025px)
+.q-item
+	&:hover
 		img
-			height: 280px
+			filter: saturate(1) opacity(1)
 
 </style>

@@ -6,13 +6,42 @@
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
 
-	const title = 'Bodha - Contact Us';
-	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.';
+	const title = 'Contact | Bodha';
+	const metaDescription = 'Contact Bodha Research for queries, collaborations, website issues, and social media updates.';
 	const metaUrl = 'https://www.bodharesearch.in/contact';
 	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+
+	const jsonld = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'ContactPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'Organization',
+			name: 'Bodha',
+			url: 'https://www.bodharesearch.in',
+			email: 'contact@bodharesearch.in',
+			sameAs: [
+				'https://x.com/BodhaResearch',
+				'https://www.facebook.com/profile.php?id=61584291760187',
+				'https://www.instagram.com/bodharesearch',
+				'https://www.linkedin.com/company/bodha-research/'
+			]
+		}
+	});
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 	<div class="textbox padded-ontop">

@@ -1,32 +1,57 @@
 <script lang="ts">
-
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
-	export let data: PageData;
+	let { data }: { data: PageData } = $props();
 
-	const types = [
-		{ key: 'articles',  label: 'Articles',  nodes: data.articles  },
-		{ key: 'texts',     label: 'Books',     nodes: data.texts     },
-		{ key: 'thinkers',  label: 'Thinkers',  nodes: data.thinkers  },
-		{ key: 'schools',   label: 'Schools',   nodes: data.schools   },
-		{ key: 'questions', label: 'Questions', nodes: data.questions },
-	];
+	let types = $derived([
+		{ key: 'articles', label: 'Articles', nodes: data.articles },
+		{ key: 'texts', label: 'Books', nodes: data.texts },
+		{ key: 'thinkers', label: 'Thinkers', nodes: data.thinkers },
+		{ key: 'schools', label: 'Schools', nodes: data.schools },
+		{ key: 'questions', label: 'Questions', nodes: data.questions }
+	]);
 
-	let activeKey = 'articles';
-	$: active = types.find(t => t.key === activeKey)!;
-	$: total = types.reduce((s, t) => s + t.nodes.length, 0);
+	let activeKey = $state('articles');
+	let active = $derived(types.find((t) => t.key === activeKey)!);
+	let total = $derived(types.reduce((sum, type) => sum + type.nodes.length, 0));
 
-	const title = "Knowledge Explorer"
-	const metaDescription = "Explore articles, texts, thinkers, schools, and questions across the Bodha knowledge base."
-	const metaUrl = "https://www.bodharesearch.in/explorer"
-	const metaImage = "https://www.bodharesearch.in/images/bodhacover.png"
+	const title = 'Knowledge Explorer | Bodha';
+	const metaDescription = 'Explore articles, texts, thinkers, schools, and questions across the Bodha knowledge base.';
+	const metaUrl = 'https://www.bodharesearch.in/explorer';
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: types.flatMap((type) => type.nodes).map((node, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: node.title,
+				url: node.slug ? 'https://www.bodharesearch.in/' + node.slug : metaUrl
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">
@@ -36,7 +61,7 @@
 			<button
 				class="nav-btn"
 				class:active={activeKey === t.key}
-				on:click={() => activeKey = t.key}
+				onclick={() => activeKey = t.key}
 			>
 				{t.label} | {t.nodes.length}
 			</button>

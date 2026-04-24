@@ -122,7 +122,7 @@
 		align-items: flex-end
 
 .sm-panel
-	background: #FFFFFF
+	background: var(--color-white)
 	border: 1px solid rgba(0,0,0,0.07)
 	border-radius: 16px
 	box-shadow: 0 8px 32px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.06)
@@ -188,9 +188,9 @@
 	&::placeholder
 		color: var(--text-ghost)
 	&:focus
-		border-color: var(--theme)
+		border-color: var(--color-theme)
 		box-shadow: 0 0 0 3px rgba(var(--theme-rgb, 0,0,0), 0.06)
-		background: #FFFFFF
+		background: var(--color-white)
 
 .sm-loading
 	padding: 0.5rem 0
@@ -223,7 +223,7 @@
 		background: #F5F4F2
 
 .sm-result-cat
-	color: var(--theme)
+	color: var(--color-theme)
 	font-size: 9px
 
 .sm-result-title

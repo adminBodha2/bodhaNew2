@@ -1,21 +1,40 @@
 <script lang="ts">
-
 	import { page } from '$app/state';
-	import { selectedTag } from '$lib/utils/localpulls';
-	import Container from '$lib/comps/container.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
-	let route = page.params.tag ?? '';
 
-	const title = 'Tag - ' + route
-	const metaDescription = 'All essays tagged ' + route + ' at Bodha blog.'
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
+	let { data } = $props();
+
+	let route = $derived(data.route);
+	let posts = $derived(data.posts ?? []);
+
+	let title = $derived('Tag | ' + route);
+	let metaDescription = $derived('All essays tagged ' + route + ' at Bodha Blog.');
+	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
 	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
 
+	let jsonld = $derived(JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		name: title,
+		description: metaDescription,
+		url: metaUrl,
+		image: metaImage,
+		mainEntity: {
+			'@type': 'ItemList',
+			itemListElement: posts.map((post: any, index: number) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				name: post.meta.title,
+				url: 'https://www.bodharesearch.in' + post.linkpath
+			}))
+		}
+	}));
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">
@@ -26,10 +45,9 @@
 				<a class="nav-btn" href="/blog/tags">Tags</a>
 			</div>
 		</Crumb>
-	{#await selectedTag(route) then loaded}
-	{#if loaded && loaded.length > 0}
+	{#if posts.length > 0}
 		<div class="standard-grid grid three">
-			{#each loaded as item, i}
+			{#each posts as item, i}
 			<BlogCard
 				title={item.meta.title}
 				link={item.linkpath}
@@ -47,7 +65,5 @@
 			{/each}
 		</div>
 	{/if}
-	{/await}
-
 	</div>
 </Container>

@@ -101,29 +101,29 @@ img.blog-image
 		column-gap: 6px
 		row-gap: 6px
 	&.tight
-		column-gap: var(--gap-small)
-		row-gap: var(--gap-small)
+		column-gap: 1rem
+		row-gap: 1rem
 	&.midgaps
-		column-gap: var(--gap-std)
-		row-gap: var(--gap-std)
+		column-gap: 2rem
+		row-gap: 2rem
 	&.widegaps
-		column-gap: var(--gap-lg)
-		row-gap: var(--gap-lg)
+		column-gap: 4rem
+		row-gap: 4rem
 	&.tightcols
-		column-gap: var(--gap-small)
-		row-gap: var(--gap-std)
+		column-gap: 1rem
+		row-gap: 2rem
 	&.tightrows
-		column-gap: var(--gap-std)
-		row-gap: var(--gap-small)
+		column-gap: 2rem
+		row-gap: 1rem
 	&.midrows.widegaps
-		column-gap: var(--gap-lg)
-		row-gap: var(--gap-std)
+		column-gap: 4rem
+		row-gap: 2rem
 	&.tightrows.widecol
-		column-gap: var(--gap-lg)
-		row-gap: var(--gap-small)
+		column-gap: 4rem
+		row-gap: 1rem
 	&.tightrows.midgaps
-		column-gap: var(--gap-std)
-		row-gap: var(--gap-small)
+		column-gap: 2rem
+		row-gap: 1rem
 	&.ybottom
 		align-items: end
 	@media screen and (min-width: 1025px)
@@ -149,27 +149,13 @@ img.blog-image
 		&.four.stay2, &.three.stay2, &.two.stay2
 			grid-template-columns: 1fr 1fr
 		&.stay2.tightrows
-			column-gap: var(--gap-small)
+			column-gap: 1rem
 		&.two
 			grid-template-areas: "up" "down"
 			.up
 				grid-area: up
 			.down
 				grid-area: down
-
-.stdpad
-	@media screen and (min-width: 1201px)
-		padding-left: 80px
-		padding-right: 80px
-	@media screen and (min-width: 1025px) and (max-width: 1200px)
-		padding-left: 48px
-		padding-right: 48px
-	@media screen and (min-width: 631px) and (max-width: 1024px)
-		padding-left: 32px
-		padding-right: 32px
-	@media screen and (max-width: 630px)
-		padding-left: 16px
-		padding-right: 16px
 
 .narrowbox
 	width: 100%
@@ -230,71 +216,7 @@ h1.visually-hidden
 .self-top
 	margin-bottom: auto
 
-// ── SHARED PAGE PATTERNS ───────────────────────────────────
-
-.article-header
-	display: flex
-	flex-direction: column
-	gap: var(--gap-text)
-	padding-bottom: 2rem
-	border-bottom: 1px solid rgba(0,0,0,0.06)
-
-.sep
-	margin: 0 4px
-	color: #DDD
-
-.section-block
-	display: flex
-	flex-direction: column
-	gap: var(--gap-text)
-	padding-top: var(--gap-std)
-	border-top: 1px solid rgba(0,0,0,0.06)
-
-.mini-grid
-	display: flex
-	flex-wrap: wrap
-	gap: 6px
-
-.meta-hint
-	font-size: 0.78rem
-	color: var(--text-ghost)
-
-.count-pill
-	font-size: 0.75rem
-	font-weight: 400
-	color: #FFF
-	background: var(--theme)
-	padding: 4px 12px
-	border-radius: 12px
-
-.divider-dot
-	color: #CCC
-	font-size: 1.1rem
-	line-height: 1
-
-// ── LIBRARY ────────────────────────────────────────────────
-
-.nav-btn
-	font-size: 0.78rem
-	font-weight: 500
-	padding: 5px 14px
-	border-radius: 100px
-	border: 1px solid rgba(0,0,0,0.1)
-	background: transparent
-	color: #666
-	transition: all 0.15s ease
-	&:hover
-		border-color: var(--theme)
-		color: var(--theme)
-
 // ── ACADEMY ────────────────────────────────────────────────
-
-.card-type-c
-	transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.18s ease
-
-a.card-type-c:hover
-	box-shadow: var(--shadow-card-hover)
-	transform: translateY(-2px)
 
 .image-type-c
 	img

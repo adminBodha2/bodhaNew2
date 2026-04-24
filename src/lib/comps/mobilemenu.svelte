@@ -50,7 +50,7 @@
   left: 0
   width: 100vw
   height: calc(100dvh - 64px)
-  background: var(--background)
+  background: var(--color-back)
   z-index: 1000
   overflow-y: hidden
 
@@ -72,7 +72,7 @@
     background: rgba(0,0,0,0.04)
     color: var(--text-main)
   &.active
-    color: var(--theme)
+    color: var(--color-theme)
     background: rgba(0,0,0,0.03)
 
 </style>

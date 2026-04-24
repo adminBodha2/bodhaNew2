@@ -30,7 +30,7 @@
             <div class="row ycenter cgap16 width100 inside-acco radius">
               <p>{item.question}</p>
               {#if iW > 1024}
-              <ChevD fill="var(--anveshi-color)" rotated={openIndex === i}/>
+              <ChevD fill="var(--color-anveshi)" rotated={openIndex === i}/>
               {/if}
             </div>
             {#if openIndex === i}
@@ -54,13 +54,13 @@ pre
 	&:last-child
 		border-bottom: none
 	&:hover
-		background: var(--stone)
+		background: var(--color-stone)
 	&.openedbox
-		background: var(--stone)
+		background: var(--color-stone)
 		row-gap: 0.5rem
 		pre
-			background: #FFFFFF
-			border: var(--stroke-focus)
+			background: var(--color-white)
+			border: var(--border-dark)
 			padding: 1rem
 	@media screen and (min-width: 1025px)
 		padding: 1rem

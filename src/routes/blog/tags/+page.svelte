@@ -1,26 +1,23 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { tagsWithCounts, tagsWithCountsAlphabetical } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
-	let tags: any;
-	let tagsC: any;
-	let showCount = false;
+	let { data } = $props();
 
-	const title = 'Tags — Bodha Blog';
+	let tags = $derived(data.tags ?? []);
+	let tagsC = $derived(data.tagsC ?? []);
+	let showCount = $state(false);
+
+	const title = 'Tags | Bodha Blog';
 	const metaDescription = 'All content tags at the Bodha website.';
 	const metaUrl = 'https://www.bodharesearch.in/blog/tags';
 	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
-
-	onMount(async () => {
-		tags = await tagsWithCountsAlphabetical();
-		tagsC = await tagsWithCounts();
-	});
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} />
+
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
+
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">
@@ -28,7 +25,7 @@
 			<div class="row cgap8 rgap8 mwrap">
 				<a class="nav-btn" href="/blog">Blog</a>
 				<a class="nav-btn" href="/blog/writers">Writers</a>
-				<button class="nav-btn" on:click={() => (showCount = !showCount)}
+				<button class="nav-btn" onclick={() => (showCount = !showCount)}
 					>{#if showCount}Sort Alpabhetical{:else}Sort by Count{/if}</button>
 			</div>
 		</Crumb>

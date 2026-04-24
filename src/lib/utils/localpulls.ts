@@ -24,6 +24,19 @@ function toBlogEntry(path: string, metadata: Record<string, unknown> | undefined
   } satisfies PulledEntry
 }
 
+export type BlogPost = {
+	linkpath: string;
+	formattedDate: string;
+	meta: {
+		title: string;
+		image?: string;
+		excerpt?: string;
+		author?: string;
+		words?: string | number;
+		tags: string[];
+	};
+};
+
 export async function fullBlog() {
   const allfiles = import.meta.glob('/src/routes/blog/*.md')
   const filed = Object.entries(allfiles)

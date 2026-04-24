@@ -1,12 +1,11 @@
-export async function load({ params, fetch }: { params: { writer: string }, fetch: typeof globalThis.fetch }) {
-  const normalizedWriter = params.writer.replace(/%20|_/g, '').toLowerCase();
-  const response = await fetch(`/api/writers`);
-  const allWriters = await response.json();
+import { selectedWriter } from '$lib/utils/localpulls';
 
-  const posts = allWriters.filter((writerObj: { writer: string }) =>
-    writerObj.writer.replace(/ /g, '').toLowerCase() === normalizedWriter);
+export async function load({ params }: { params: { writer: string } }) {
+	const writerName = decodeURIComponent(params.writer);
+	const posts = await selectedWriter(writerName, 50);
 
-  return {
-    posts
-  }
+	return {
+		writerName,
+		posts
+	};
 }
