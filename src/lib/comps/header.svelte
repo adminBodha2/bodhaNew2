@@ -45,11 +45,13 @@
   </nav>
   {:else}
 	<div class="row ycenter cgap16">
+		<!--
 		{#if !$menuState}
 		<button class="blank" on:click={toggleSearch}>
 			<Search/>
 		</button>
 		{/if}
+		-->
 	  <button class="blank" on:click={toggleMenuState}>
 		{#if $menuState === true}
 		  <Close/>
@@ -60,7 +62,7 @@
 	</div>
   {/if}
 </div>
-{#if $menuState === true}
+{#if $menuState === true && iW < 1025}
 <Mobilemenu/>
 {/if}
 

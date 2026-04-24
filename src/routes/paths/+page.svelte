@@ -1,31 +1,46 @@
 <script lang="ts">
 
+	import type { PageData } from './$types';
+	import Head from '$lib/comps/headcomponent.svelte';
 	import Container from '$lib/comps/container.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
-	import Head from '$lib/comps/headcomponent.svelte'
-	import paths from '$lib/data/paths.json'
-	import { metaDescription, metaImage, metaTitle, metaUrl } from '$lib/utils/metastores'
+	export let data: PageData;
 
-	$metaTitle = "Reading Paths at Bodha"
-	$metaDescription = "Curation ways to explore the Indian civilizational consciousness."
-	$metaUrl = 'https://www.bodharesearch.in/paths';
-	$metaImage = '/images/key-research.webp'
-
+	const levelColor: Record<string, string> = {
+		entry: '#5999D3',
+		intermediate: '#1971C2',
+		advanced: '#0D3B65'
+	};
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage} />
+<Head
+	title="Reading Paths — Bodha"
+	metaDescription="Curated sequences through the Bodha knowledge base. Each path is a guided journey with editorial notes."
+	metaUrl="https://www.bodharesearch.in/path"
+	metaImage="/images/bodhacover.png"
+/>
 
 <Container narrow={true} scaled={true}>
-	<div class="box std padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Reading Paths"/>
-		<div class="standard-grid grid three">
-			{#each paths as path, i}
-				<a class="blank box rgap16 column a-box ncolor{i}" href="/paths/{path.id}">
-					<p class="citation tt-u self-top ptop8 pbot8 borderbot lgrey">{path.subtitle}</p>
-					<div class="box column rgap16 inside-a-box">
-					<p class="citation-big blue tt-u">Level - {path.level}</p>
-					<h2 class="header-type-p">{path.title}</h2>
-					<p class="small-text grey tight">{path.description}</p>
+	<div class="stdbox padded-ontop">
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Reading Paths" showD={true} desc="Curated sequences through the Bodha knowledge base. Each path is a guided journey with editorial notes."/>
+		<div class="grid two white-grid">
+			{#each data.paths as path, i}
+				<a class="blank labelbox outer card-padded" href="/paths/{path.id}">
+					<div class="labelbox main-text">
+						<p class="tag-text lgrey">{String(i + 1).padStart(2, '0')}{#if path.subtitle} - {path.subtitle}{/if}</p>
+						<h2 class="card-title">{path.title}</h2>
+						<p class="rem1 altprim">{path.description.slice(0, 160)}…</p>
+					</div>
+					<div class="card-footer row ycenter xbetween self-bottom">
+						<div class="box rgap4">
+							<p class="citation-big tt-u grey">{path.steps.length} phases</p>
+							<div class="footer-steps row ycenter cgap6">
+								{#each { length: Math.min(path.steps.length, 10) } as _, si}
+									<span class="step-dot" style="opacity: {1 - si * 0.13}"></span>
+								{/each}
+							</div>
+						</div>
+						<p class="arrow-icon tt-c small-text">{path.level} Level →</p>
 					</div>
 				</a>
 			{/each}
@@ -35,19 +50,61 @@
 
 <style lang="sass">
 
-.a-box
-	padding: 0 0 1.5rem 0
-	height: 100%
-	.inside-a-box
-		height: 100%
-	.box.column
-		padding: 0 1.5rem
-	.self-top
-		padding-left: 1.5rem
-		padding-right: 1.5rem
-		background: #FFF
-	&:hover
-		.self-top
-			background: var(--stone)
+// ── SINGLE CARD ────────────────────────────────────────────
+
+.white-grid
+	.labelbox.outer
+		background: var(--color-white)
+		transition: all 0.25s
+		.main-text
+			height: 100%
+		&:hover
+			transform: translateY(-2px)
+			box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 8px 10px rgba(0,0,0,0.04), 0 28px 48px rgba(0,0,0,0.07)
+			border-color: rgba(0,0,0,0.11)
+			background: var(--color-stone)
+			.arrow-icon
+				transform: translateX(4px)
+				opacity: 1
+
+// ── CARD TOP ───────────────────────────────────────────────
+
+.step-count
+	font-size: 0.72rem
+	font-weight: 500
+	letter-spacing: 0.04em
+	color: #ACACAC
+
+
+// ── CARD FOOTER ────────────────────────────────────────────
+
+.card-footer
+	margin-top: 1rem
+	padding-top: 1rem
+	border-top: var(--stroke-subtle)
+	@media screen and (min-width: 1025px)
+		margin-top: 2rem
+		padding-top: 1.25rem
+
+.footer-steps
+	gap: 4px
+
+.step-dot
+	width: 5px
+	height: 5px
+	border-radius: 50%
+	background: #C5C2BB
+	flex-shrink: 0
+
+.step-more
+	font-size: 0.65rem
+	color: #BCBCBC
+	font-weight: 600
+	margin-left: 2px
+
+.arrow-icon
+	font-size: 1rem
+	color: var(--theme)
+	transition: transform 0.2s ease, opacity 0.2s ease
 
 </style>

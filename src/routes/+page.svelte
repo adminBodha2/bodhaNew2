@@ -287,14 +287,6 @@
 
 // ── SECTION STRUCTURE ─────────────────────────────────────
 
-.home-section
-	display: flex
-	flex-direction: column
-	gap: var(--gap-std)
-	padding-top: var(--pad-std)
-	padding-bottom: var(--pad-std)
-	border-top: 1px solid var(--color-border)
-
 // ── VERTICALS ─────────────────────────────────────────────
 
 .verticals
@@ -358,19 +350,6 @@
 		height: 200px
 		margin-right: auto
 
-.publication-link
-	font-size: 0.78rem
-	font-weight: 500
-	color: #555
-	padding: 5px 12px
-	border-radius: 100px
-	border: 1px solid rgba(0,0,0,0.1)
-	background: #F5F4F2
-	transition: all 0.15s ease
-	&:hover
-		color: var(--theme)
-		border-color: rgba(25,113,194,0.28)
-		background: #FFFFFF
 
 // ── VIDEOS ────────────────────────────────────────────────
 
@@ -383,25 +362,11 @@
 	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
 	&:hover
 		transform: translateY(-2px)
-		.video-title
-			color: var(--theme)
 		.theme-line
 			transform: scaleX(1.5)
 
 .video-footer
 	padding: 1.1rem 1.2rem
 	border-top: 1px solid rgba(0,0,0,0.05)
-
-.video-accent
-	display: block
-	width: 28px
-	height: 2px
-	background: #222
-	border-radius: 1px
-	transition: width 0.2s ease
-
-.video-title
-	letter-spacing: -0.015em
-	transition: color 0.15s ease
 
 </style>

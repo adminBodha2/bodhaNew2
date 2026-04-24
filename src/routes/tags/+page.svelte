@@ -15,7 +15,7 @@
 <Container narrow={true}>
 	<div class="box std padded-ontop">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Tags" desc="The best way to explore all content, learning, and discovery at Bodha." showD={true}/>
-		<div class="row wrap rgap8 cgap8">
+		<div class="row wrap rgap16 cgap16">
 			{#each tags as tag}
 				<a class="tag-item blank tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}

@@ -1,7 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Title from '$lib/comps/page-title.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
 
 	export let data: PageData;
@@ -19,27 +21,24 @@
 <Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
 
 <Container narrow={true} scaled={true}>
-<div class="box-t">
-	<div class="hero">
-		<p class="eyebrow tt-u"><a class="linkonhover" href="/">Bodha Research</a></p>
-		<h1 class="hero-title source-serif">Concepts</h1>
-		<p class="hero-sub">Domains of thought across the knowledge system. Each concept connects texts, thinkers, and ideas.</p>
-		<div class="hero-meta row ycenter cgap12">
-			<span class="count-pill">{totalCount} concepts</span>
-			<span class="divider-dot">·</span>
-			<span class="meta-hint">Sorted by connections</span>
-		</div>
+<div class="stdbox padded-ontop">
+	<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="{totalCount} Concepts - Domains of thought across the knowledge system. Each concept connects texts, thinkers, and ideas."/>
+	<Title text="All Concepts"/>
+	<div class="row wrap cgap16 rgap16">
+		{#each regular as concept}
+			<a class="concept-pill blank" href="/concepts/{concept.slug}">
+				<span class="pill-title">{concept.title}</span>
+				<span class="pill-count">{concept.count}</span>
+			</a>
+		{/each}
 	</div>
-
+</div>
+<div class="stdbox padded bordertop">
+	<Title text="Amarakosha Domains"/>
 	{#if akVargas.length > 0}
-	<div class="section-block">
-		<div class="section-head">
-			<p class="eyebrow tt-u">Amarakośa Domains — {akVargas.length}</p>
-			<p class="section-desc">The 24 semantic domains of the Amarakośa, mapped to this knowledge system.</p>
-		</div>
 		<div class="ak-grid">
 			{#each akVargas as concept}
-				<a class="ak-card blank" href="/concept/{concept.slug}">
+				<a class="ak-card blank" href="/concepts/{concept.slug}">
 					<span class="ak-devanagari">{concept.meta?.devanagari ?? ''}</span>
 					<span class="ak-label">{concept.title.replace(/^.+ — /, '')}</span>
 					{#if concept.meta?.wordCount}
@@ -48,43 +47,11 @@
 				</a>
 			{/each}
 		</div>
-	</div>
 	{/if}
-
-	<div class="section-block">
-		<div class="section-head">
-			<p class="eyebrow tt-u">All Concepts — {regular.length}</p>
-		</div>
-		<div class="concept-grid">
-			{#each regular as concept}
-				<a class="concept-pill blank" href="/concept/{concept.slug}">
-					<span class="pill-title">{concept.title}</span>
-					<span class="pill-count">{concept.count}</span>
-				</a>
-			{/each}
-		</div>
-	</div>
-
 </div>
 </Container>
 
 <style lang="sass">
-
-.hero-sub
-	max-width: 56ch
-
-// ── SECTIONS ───────────────────────────────────────────────
-
-.section-head
-	display: flex
-	flex-direction: column
-	gap: 0.2rem
-
-.section-desc
-	font-size: 0.8rem
-	color: #ACACAC
-
-// ── AMARAKOSHA CARDS ───────────────────────────────────────
 
 .ak-grid
 	display: grid
@@ -122,13 +89,6 @@
 	font-size: 0.68rem
 	color: var(--text-ghost)
 	margin-top: 2px
-
-// ── CONCEPT PILLS ──────────────────────────────────────────
-
-.concept-grid
-	display: flex
-	flex-wrap: wrap
-	gap: 5px
 
 .concept-pill
 	display: inline-flex

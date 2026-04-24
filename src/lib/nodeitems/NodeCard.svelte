@@ -21,44 +21,10 @@
 	$: ts = typeStyle[node.type] ?? typeStyle.article;
 </script>
 
-<div class="node-card column ybetween scaledTypo">
-	{#if note}
-		<p class="small-text blue">{note}</p>
-	{/if}
-	<a class="blank column rgap24 ybetween heightmax" href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noreferrer' : undefined}>
-		<div class="box ptop24 rgap8">
-			<h2 class="card-title source-serif">{node.title}</h2>
-			{#if desc}
-				<p class="grey node-desc">{desc}</p>
-			{/if}
-		</div>
-		<div>
-			{#if node.meta?.author}<p class="small-text blue-dark w500 pbot8">{node.meta.author}</p>{/if}
-			<small class="type-label tt-u" style="color: {ts.color}; background: {ts.bg}; border-color: {ts.border};">{node.type}</small>
-		</div>
+	<a class="blank labelbox" href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noreferrer' : undefined}>
+		<h3 class="blog-title">{node.title}</h3>
+		{#if desc}
+			<p class="grey rem1">{desc}</p>
+		{/if}
+		<p class="tag-pill themed tt-u">{node.type}</p>
 	</a>
-</div>
-
-<style lang="sass">
-
-h2.card-title
-	color: #111
-	margin: 0
-	@media screen and (min-width: 1025px)
-		letter-spacing: -0.001em
-		border-top: var(--stroke-focus)
-		padding-top: 1.2rem
-
-.type-label
-	display: inline-flex
-	align-items: center
-	font-size: 9px
-	font-weight: 700
-	letter-spacing: 0.1em
-	padding: 3px 9px
-	border-radius: 100px
-	border: 1px solid
-	margin-top: auto
-	width: max-content
-
-</style>

@@ -47,7 +47,7 @@
 	<Crumb rgap={8} item1="Library" item1Link="/library" show2={true} item2={data.type} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 			<div class="row cgap8 rgap8 mwrap">
 				{#each data.tags as tag}
-					<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag}</a>
+					<a class="tag-pill themed tt-u" href="/concepts/{tag}">{tag.replaceAll('-',' ')}</a>
 				{/each}
 			</div>
 	</Crumb>

@@ -67,7 +67,7 @@ const categories = [
 			{#each categories as cat, i}
 			<a class="box card-padded labelbox ncolor{i}" href={cat.href}>
 				<div class="box shelf-main">
-					<p class="card-title">{cat.label}</p>
+					<p class="highlight-text w500 tight">{cat.label}</p>
 					<p class="citation-big lgrey">{categoryCounts[cat.type]} texts</p>
 				</div>
 				<p class="small-text tight grey">{cat.desc}</p>
@@ -76,18 +76,19 @@ const categories = [
 		</div>
 	</div>
 </div>
+<!--
 <div class="box std padded bordertop">
 	<Title text="Curated Reading Paths"/>
 	<div class="grid standard-grid four stay2">
 			{#each paths as path, i}
 			<a class="box card-padded labelbox blank ncolor{i}" href={path.href}>
-				<p class="card-title tight">{path.label}</p>
+				<p class="highlight-text w500 tight">{path.label}</p>
 				<p class="path-desc">{path.desc}</p>
 			</a>
 			{/each}
 	</div>
 </div>
-
+-->
 <div class="box std padded bordertop">
 	<Title text="External Resources"/>
 	<div class="standard-grid grid four stay2">

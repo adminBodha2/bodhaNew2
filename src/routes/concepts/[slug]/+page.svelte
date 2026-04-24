@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 
@@ -29,11 +30,22 @@
 />
 
 <Container narrow={true} scaled={true}>
-<div class="box-t">
-
-	<div class="page-hero">
-		<p class="eyebrow tt-u"><a class="linkonhover" href="/concept">← Concepts</a></p>
-
+<div class="stdbox padded-ontop">
+	<Crumb item1="Bodha" item1Link="/" show2={true} item2="Concepts" item2linked={true} item2Link="/concepts" showT={true} title={data.concept.title} showD={true} desc={description}/>
+	{#each sections as section}
+	<div class="mini-grid">
+		{#each section.nodes as node (node.id)}
+			<NodeMiniCard {node} />
+		{/each}
+	</div>
+	{/each}
+	{#if sections.length === 0 && (!data.relatedConcepts || data.relatedConcepts.length === 0)}
+	<div class="empty-state">
+		<p class="eyebrow tt-u">No connected content yet</p>
+	</div>
+	{/if}
+	<!--
+	<div class="amarakosha">
 		<div class="row ycenter cgap8">
 			{#if isAK}
 				<span class="ak-badge tt-u">Amarakośa Domain</span>
@@ -44,9 +56,6 @@
 				<span class="meta-hint">{totalContent} connected items</span>
 			{/if}
 		</div>
-
-		<h1 class="hero-title source-serif">{data.concept.title}</h1>
-
 		{#if isAK && data.concept.meta?.devanagari}
 			<div class="ak-meta row ycenter cgap12">
 				<span class="ak-devanagari">{data.concept.meta.devanagari}</span>
@@ -57,12 +66,8 @@
 				{/if}
 			</div>
 		{/if}
-
-		{#if description}
-			<p class="hero-sub">{description}</p>
-		{/if}
 	</div>
-
+	-->
 	{#if data.relatedConcepts && data.relatedConcepts.length > 0}
 	<div class="section-block">
 		<p class="eyebrow tt-u">Related Concepts — {data.relatedConcepts.length}</p>
@@ -73,53 +78,10 @@
 		</div>
 	</div>
 	{/if}
-
-	{#each sections as section}
-	<div class="section-block">
-		<p class="eyebrow tt-u">{section.label} — {section.nodes.length}</p>
-		<div class="mini-grid">
-			{#each section.nodes as node (node.id)}
-				<NodeMiniCard {node} />
-			{/each}
-		</div>
-	</div>
-	{/each}
-
-	{#if sections.length === 0 && (!data.relatedConcepts || data.relatedConcepts.length === 0)}
-	<div class="empty-state">
-		<p class="eyebrow tt-u">No connected content yet</p>
-	</div>
-	{/if}
-
 </div>
 </Container>
 
 <style lang="sass">
-
-.concept-badge
-	font-size: 9px
-	font-weight: 700
-	letter-spacing: 0.1em
-	padding: 3px 10px
-	border-radius: 100px
-	border: 1px solid rgba(116,192,252,0.3)
-	background: rgba(116,192,252,0.09)
-	color: #4C9BE8
-
-.ak-badge
-	font-size: 9px
-	font-weight: 700
-	letter-spacing: 0.1em
-	padding: 3px 10px
-	border-radius: 100px
-	border: 1px solid rgba(116,192,252,0.4)
-	background: rgba(116,192,252,0.12)
-	color: #1971C2
-
-.hero-sub
-	max-width: 60ch
-
-// ── AMARAKOSHA META ────────────────────────────────────────
 
 .ak-meta
 	flex-wrap: wrap

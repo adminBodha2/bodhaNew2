@@ -3,18 +3,14 @@
 	import Twitter from '$lib/icons/twitter.svelte';
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
-	import Sun from '$lib/icons/sun.svelte'
-	import Moon from '$lib/icons/moon.svelte'
-	import { darkTheme, toggleTheme } from '$lib/utils/globalstores'
 </script>
 
 <div class="foot-wrap">
 	<div class="foot-inner narrowbox stdpad">
-
 		<div class="foot-top">
 			<div class="foot-brand">
-				<p class="foot-nam">Bodha</p>
-				<p class="foot-tagline">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
+				<p class="white">Bodha</p>
+				<p class="lgrey small-text">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
 			</div>
 			<button
 				class="blank foot-scroll"
@@ -27,29 +23,29 @@
 
 		<div class="foot-grid">
 			<div class="foot-col">
-				<p class="eyebrow tt-u foot-col-label">Readings</p>
+				<p class="tag-text lgrey tt-u">Readings</p>
 				<div class="foot-links">
-					<a class="foot-link blank" href="/blog">Blog</a>
-					<a class="foot-link blank" href="/lab">Lab</a>
-					<a class="foot-link blank" href="/library">Open Library</a>
-					<a class="foot-link blank" href="/inspiration">Inspiration</a>
+					<a class="foot-link blank white" href="/blog">Blog</a>
+					<a class="foot-link blank white" href="/lab">Lab</a>
+					<a class="foot-link blank white" href="/library">Open Library</a>
+					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="eyebrow tt-u foot-col-label">Work</p>
+				<p class="tag-text lgrey tt-u">Work</p>
 				<div class="foot-links">
-					<a class="foot-link blank" href="/research">Research</a>
-					<a class="foot-link blank" href="/big-questions">Big Questions</a>
-					<a class="foot-link blank" href="/academy">Academy</a>
-					<a class="foot-link blank" href="/anveshi">Bodha Anveshi</a>
+					<a class="foot-link blank white" href="/research">Research</a>
+					<a class="foot-link blank white" href="/big-questions">Big Questions</a>
+					<a class="foot-link blank white" href="/academy">Academy</a>
+					<a class="foot-link blank white" href="/anveshi">Bodha Anveshi</a>
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="eyebrow tt-u foot-col-label">About</p>
+				<p class="tag-text lgrey tt-u">About</p>
 				<div class="foot-links">
-					<a class="foot-link blank" href="/team">Team</a>
-					<a class="foot-link blank" href="/contact">Contact</a>
-					<a class="foot-link blank" href="/path">Learning Paths</a>
+					<a class="foot-link blank white" href="/team">Team</a>
+					<a class="foot-link blank white" href="/contact">Contact</a>
+					<a class="foot-link blank white" href="/path">Learning Paths</a>
 				</div>
 			</div>
 		</div>
@@ -91,7 +87,7 @@
 
 .foot-wrap
 	width: 100%
-	background: #F5F4F2
+	background: linear-gradient(180deg,rgba(7, 57, 104, 1) 0%, rgba(7, 29, 48, 1) 27%, rgba(7, 14, 26, 1) 61%, rgba(10, 4, 4, 1) 100%)
 
 .foot-inner
 	display: flex
@@ -181,7 +177,6 @@
 
 .foot-link
 	font-size: 0.88rem
-	color: #555
 	transition: color 0.12s ease
 	&:hover
 		color: var(--theme)
