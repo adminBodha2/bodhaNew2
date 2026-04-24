@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import { onMount } from 'svelte'
 	import { page } from '$app/state';
 	import { allQuestions } from '$lib/utils/localpulls';
@@ -6,17 +7,23 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
+
 	let sY: number;
 	export let data;
 	let questions: any;
+
+	const title = data.title + ' | Big Questions at Bodha';
+	const metaDescription = data.description;
+	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
+	const metaImage = 'https://www.bodharesearch.in' + data.icon;
 
 	const jsonld = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'Article',
 		headline: data.title,
 		description: data.description,
-		image: data.icon,
-		publisher: { '@type': 'Organization', name: 'Bodha Research', url: 'https://www.bodharesearch.in' },
+		image: 'https://www.bodharesearch.in' + data.icon,
+		publisher: { '@type': 'Organization', name: 'Bodha', url: 'https://www.bodharesearch.in' },
 		url: 'https://www.bodharesearch.in' + page.url.pathname,
 	});
 
@@ -27,13 +34,7 @@
 
 <svelte:window bind:scrollY={sY} />
 
-<Head
-	title={data.title}
-	metaDescription={data.description}
-	metaImage={data.icon}
-	metaUrl={'https://www.bodharesearch.in' + page.url.pathname}
-	{jsonld}
-/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} {jsonld}/>
 
 <Container narrow={true} scaled={true}>
 <section class="stdbox padded-ontop">
@@ -41,7 +42,7 @@
 		{#if data.tags?.length}
 		<div class="row wrap cgap8 rgap8 ycenter">
 			{#each data.tags as tag}
-			<a class="tag-pill tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</div>
 		{/if}

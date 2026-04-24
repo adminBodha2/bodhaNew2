@@ -1,30 +1,39 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { writersWithCountsAlphabetical } from '$lib/utils/localpulls';
+	import Container from '$lib/comps/container.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
-	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 
 	let writers: any;
 	let showEx = false;
 
-	$metaTitle = 'Writers — Bodha Blog';
-	$metaDescription = "Meet the writers behind Bodha's essays on Hindu culture, history, and tradition.";
-	$metaUrl = 'https://www.bodharesearch.in/blog/writers';
-	$metaImage = '/images/bodhacover.png';
+	const title = 'Writers — Bodha Blog';
+	const metaDescription = "Meet the writers behind Bodha's essays on Hindu culture, history, and tradition.";
+	const metaUrl = 'https://www.bodharesearch.in/blog/writers';
+	const metaImage = '/images/bodhacover.png';
 
 	onMount(async () => {
 		writers = await writersWithCountsAlphabetical();
 	});
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage} />
+<Head {title} {metaDescription} {metaUrl} {metaImage} />
 
+<Container narrow={true} scaled={true}>
+	<div class="stdbox padded-ontop">
+		<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Blog" item2Link="/blog" showT={true} title="Writers" showRow={true}>
+		<div class="row cgap8 rgap8 mwrap">
+			<a class="nav-btn" href="/blog">Blog</a>
+			<a class="nav-btn" href="/blog/tags">Tags</a>
+		</div>
+		</Crumb>
 	{#if writers && writers.length > 0}
 	<div class="box std">
 		<div class="grid four">
 			{#each writers as item, i}
 			<a class="writer-card card-padded blank lining{i}" href="/blog/writers/{item.writer}">
-				<p>{item.writer}</p>
+				<p class="source-serif bold">{item.writer}</p>
 				{#if item.count}
 				<p class="tag-text tt-u grey">{item.count} {item.count === 1 ? 'essay' : 'essays'}</p>
 				{/if}
@@ -33,6 +42,8 @@
 		</div>
 	</div>
 	{/if}
+	</div>
+</Container>
 
 
 <style lang="sass">

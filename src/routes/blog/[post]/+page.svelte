@@ -28,19 +28,24 @@
 		Array.isArray(data.author) ? data.author[0] : data.author
 	);
 
-const jsonld = $derived(
-	JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Article',
-		headline: data.title,
-		description: data.excerpt,
-		image: data.image,
-		datePublished: data.date,
-		author: { '@type': 'Person', name: firstAuthor },
-		publisher: { '@type': 'Organization', name: 'Bodha Research', url: BASE },
-		url: BASE + page.url.pathname,
-	})
-);
+	const title = data.title
+	const metaDescription = data.excerpt
+	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
+	const metaImage = data.image
+
+	const jsonld = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Article',
+			headline: data.title,
+			description: data.excerpt,
+			image: data.image,
+			datePublished: data.date,
+			author: { '@type': 'Person', name: firstAuthor },
+			publisher: { '@type': 'Organization', name: 'Bodha Research', url: BASE },
+			url: BASE + page.url.pathname,
+		})
+	);
 
 	$effect(() => {
 		if (!data?.category) return;
@@ -60,16 +65,14 @@ const jsonld = $derived(
 
 <svelte:window bind:scrollY={sY}/>
 
-<Head title={data.title} metaDescription={data.excerpt} metaImage={data.image} metaUrl={BASE + page.url.pathname} {jsonld} />
-
+<Head {title} {metaDescription} {metaUrl} {metaImage} {jsonld} />
 
 <Pageprogress --thispagebackground="var(--theme)" --thispageheight="3px" {ref} />
-
 <Container narrow={true} scaled={true}>
 <div class="blog-heading stdbox padded-ontop">
 	<div class="elembox blog-title-area xcenter mleft ta-c">
 		<Crumb centered={true} item1="Bodha" item1Link="/" show2={true} item2="Blog" item2linked={true} item2Link="/blog"/>
-		<h1 class="post-title source-serif width80 self-center">{data.title}</h1>
+		<h1 class="page-title source-serif width80 self-center">{data.title}</h1>
 		<div class="textbox stone-box width60 self-center">
 		<p class="altprim">{data.excerpt}</p>
 		<div class="info row ycenter xcenter mleft">
@@ -79,7 +82,7 @@ const jsonld = $derived(
 		</div>
 		<div class="tag-row row self-center">
 			{#each data.tags as tag}
-			<a class="tag-pill themed tt-u blank" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			<a class="tag-pill themed tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</div>
 		</div>
@@ -103,7 +106,7 @@ const jsonld = $derived(
 		<div class="grid four white-grid">
 			{#each posts as item, i}
 				<a class="postcard blank labelbox card-padded" href={item.linkpath}>
-					<p class="highlight-text tight w500">{item.meta.title}</p>
+					<p class="highlight-text source-serif tight bold">{item.meta.title}</p>
 					<p class="small-text grey">{item.meta.excerpt}</p>
 					<div class="box foot self-bottom bordertop ptop8">
 					<p class="tag-text lgrey tt-u">{item.meta.author} | {item.meta.words} words</p>
@@ -131,12 +134,6 @@ const jsonld = $derived(
 	border-top: var(--border-main)
 	padding-top: 2rem
 	margin-top: 2rem
-
-.stone-box
-	@media screen and (min-width: 1025px)
-		padding: 2rem
-		background: var(--color-stone)
-		border: var(--border-main)
 
 .blog-image-area
 	overflow: hidden
@@ -222,7 +219,7 @@ const jsonld = $derived(
 .blog-article
 	width: 100%
 	@media screen and (min-width: 1025px)
-		width: 992px
+		width: 928px
 		padding: 2rem
 
 .share-row

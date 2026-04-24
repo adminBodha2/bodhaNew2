@@ -28,6 +28,7 @@
 			spaceBetween,
 			pagination,
 			breakpoints,
+			loop: true,
 			centeredSlides: false,
 			watchOverflow: true,
 			keyboard: {
@@ -70,6 +71,9 @@
 .nav-buttons, .buttons-and-rule
 	@media screen and (max-width: 1024px)
 		width: 100%
+
+.buttons-and-rule
+	margin-bottom: auto
 
 button.nav
 	background: var(--color-grey-3)
