@@ -71,8 +71,11 @@ function handleItemClick() {
 				<p>
 				Badami has everything: from rock-cut temples and caves to sacred lakes and ancient temples; from the very laboratory of Hindu temple architecture <br>- Aihole - to one of the most marvelous gems of Hindu temple architecture <br>- Pattadakalu - which has the most breathtaking variety of temples in evolution on one platform... 
 				</p>
+				<div>
 				<p>...to temples dedicated to kshetriya gods deep in jungles, Badami has it all. Come to Bodha Anveshi Badami Chapter to experience this all.
 				</p>
+				<p class="bold anveshi-o ptop16 pbot16">14 - 18 Aug 2026 | ₹42,999/-</p>
+				</div>
 			</div>
 			<div class="row xcenter ycenter">
 				<a class="primary anveshi" href="https://docs.google.com/forms/d/e/1FAIpQLSfCVk0RSNNCwL_06qcsOmhWs4wQH_Z2OtJ_Pw0gmmo9kh7iMA/viewform" target="_blank" rel="noreferrer"><span>REGISTER NOW</span></a>
