@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { page } from '$app/state';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
@@ -10,6 +11,11 @@
 	const grouped  = data.grouped;
 	const description = data.concept.description || `Texts, thinkers, and ideas connected to ${data.concept.title}.`;
 	const isAK = data.concept.slug.startsWith('ak-');
+
+	const title = data.concept.title + ' | Bodha Concepts'
+	const metaDescription = description
+	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
+	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
 
 	const sections = [
 		{ label: 'Articles',  nodes: grouped.articles  },
@@ -22,18 +28,13 @@
 	$: totalContent = sections.reduce((s, g) => s + g.nodes.length, 0);
 </script>
 
-<Head
-	title="{data.concept.title} — Bodha Concepts"
-	metaDescription={description}
-	metaUrl="https://www.bodharesearch.in/concept/{data.concept.slug}"
-	metaImage = "/images/bodhacover.png"
-/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} />
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">
 	<Crumb item1="Bodha" item1Link="/" show2={true} item2="Concepts" item2linked={true} item2Link="/concepts" showT={true} title={data.concept.title} showD={true} desc={description}/>
 	{#each sections as section}
-	<div class="mini-grid">
+	<div class="white-grid grid three">
 		{#each section.nodes as node (node.id)}
 			<NodeMiniCard {node} />
 		{/each}
@@ -67,7 +68,6 @@
 			</div>
 		{/if}
 	</div>
-	-->
 	{#if data.relatedConcepts && data.relatedConcepts.length > 0}
 	<div class="section-block">
 		<p class="eyebrow tt-u">Related Concepts — {data.relatedConcepts.length}</p>
@@ -78,6 +78,7 @@
 		</div>
 	</div>
 	{/if}
+	-->
 </div>
 </Container>
 

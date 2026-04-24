@@ -26,7 +26,10 @@
 		svayambodha: { label: 'Svayambodha', href: '/library/svayambodha' }
 	};
 
-	const shelf = shelfMap[data.type];
+	const title = data.name
+	const metaDescription = data.summary
+	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname
+	const metaImage = 'https://www.bodharesearch.in/images/key-bol.webp'
 
 	onMount(() => {
 		(async() => {
@@ -35,16 +38,11 @@
 	})
 </script>
 
-<Head
-	title={data.name}
-	metaDescription={data.summary ?? `Read ${data.name} at Bodha Open Library.`}
-	metaImage="/images/bodhacover.png"
-	metaUrl={'https://www.bodharesearch.in' + page.url.pathname}
-/>
+<Head {title} {metaDescription} {metaImage} {metaUrl}/>
 
 <Container narrow={true} scaled={true}>
-<div class="box std padded-ontop">
-	<Crumb rgap={8} item1="Library" item1Link="/library" show2={true} item2={data.type} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
+<div class="stdbox padded-ontop">
+	<Crumb centered={true} item1="Library" item1Link="/library" show2={true} item2={data.type} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 			<div class="row cgap8 rgap8 mwrap">
 				{#each data.tags as tag}
 					<a class="tag-pill themed tt-u" href="/concepts/{tag}">{tag.replaceAll('-',' ')}</a>
@@ -53,15 +51,15 @@
 	</Crumb>
 	<div class="box std reader {sizing}">
 		<div class="box textbox xcenter ta-c mleft sizing-tray">
-			<p class="citation grey">Set Reader Size</p>
+			<p class="citation-big grey">Set Reader Size</p>
 		<div class="row cgap8 rgap8 xcenter">
-			<button class="filter-button" class:active={sizing === 'large'} on:click={() => setSizing('large')}>
+			<button class="nav-btn" class:active={sizing === 'large'} on:click={() => setSizing('large')}>
 				Large
 			</button>
-			<button class="filter-button" class:active={sizing === 'medium'} on:click={() => setSizing('medium')}>
+			<button class="nav-btn" class:active={sizing === 'medium'} on:click={() => setSizing('medium')}>
 				Medium
 			</button>
-			<button class="filter-button" class:active={sizing === 'compact'} on:click={() => setSizing('compact')}>
+			<button class="nav-btn" class:active={sizing === 'compact'} on:click={() => setSizing('compact')}>
 				Compact
 			</button>
 		</div>
@@ -70,12 +68,12 @@
 	</div>
 </div>
 {#if relatedBooks && relatedBooks.length > 0}
-	<div class="box std padded bordertop">
+	<div class="stdbox padded bordertop">
 		<Title text="Related Books"/>
-		<div class="grid four standard-grid stay2">
+		<div class="grid four white-grid stay2">
 			{#each relatedBooks as item, i}
-				<a class="blank box textbox card-padded ncolor{i}" href={item.linkfinal2}>
-					<p class="item-line tight">{item.name}</p>
+				<a class="blank labelbox card-padded whitestone" href={item.linkfinal2}>
+					<p class="w500 tight">{item.name}</p>
 					<p class="small-text grey tight">{item.short}</p>
 				</a>
 			{/each}

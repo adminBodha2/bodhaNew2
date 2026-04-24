@@ -26,24 +26,15 @@
 			{/if}
 		{/if}
 	</div>
-	<div class="labelbox pbot8">
+	<div class="labelbox pbot8 mleft" class:ta-c={centered}>
 		{#if showT}
-			<h1 class="page-title source-serif tt-c">{title}</h1>
+			<h1 class="page-title source-serif tt-c tight">{title}</h1>
 		{/if}
 		{#if showD}
-			<p class="small-text grey width50">{desc}</p>
+			<p class="small-text grey" class:width50={!centered}>{desc}</p>
 		{/if}
 	</div>
 	{#if showRow}
 		<slot></slot>
 	{/if}
 </div>
-
-<style lang="sass">
-
-.textbox
-	h1
-		@media screen and (min-width: 1025px)
-			width: 95%
-
-</style>

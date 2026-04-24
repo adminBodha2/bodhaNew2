@@ -17,12 +17,8 @@
 />
 
 <Container narrow={true} scaled={true}>
-	<div class="box-t">
-		<div class="column borderbot pbot32">
-			<Crumb item1="BODHA OPEN LIBRARY" item1Link="/library"/>
-			<h2 class="source-serif tight pbot8">{data.title}</h2>
-			<p class="grey sm">{data.description}</p>
-		</div>
+	<div class="stdbox padded-ontop">
+		<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Open Library" item2Link="/library" showT={true} title={data.title} showD={true} desc={data.description}/>
 		<div class="classic-document">
 			<svelte:component this={data.content}/>
 		</div>

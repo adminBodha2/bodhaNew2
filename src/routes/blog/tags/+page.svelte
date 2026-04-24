@@ -61,22 +61,4 @@
 	flex-wrap: wrap
 	gap: 8px
 
-.tag-item
-	font-size: 0.8rem
-	font-weight: 500
-	padding: 6px 14px
-	border-radius: 100px
-	border: 1px solid var(--color-grey-1)
-	background: #FFFFFF
-	transition: all 0.12s ease
-	&:hover
-		border-color: var(--theme)
-		color: var(--theme)
-		background: #F9F8F6
-
-.tag-count
-	font-size: 0.7rem
-	color: var(--text-ghost)
-	margin-left: 4px
-
 </style>

@@ -7,19 +7,16 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import { metaTitle, metaDescription, metaImage, metaUrl } from '$lib/utils/metastores';
 	let { data } = $props();
 
 	let sY = $state(0);
 	let schools = $state<any[]>([]);
 	let thinkers = $state<any[]>([]);
 
-	$effect(() => {
-		$metaTitle = data.title + ' | Bodha - Inspiration';
-		$metaDescription = data.description;
-		$metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
-		$metaImage = data.image;
-	});
+	const title = data.title + ' | Bodha - Inspiration';
+	const metaDescription = data.description;
+	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
+	const metaImage = data.image;
 
 	const jsonld = $derived(
 		JSON.stringify({
@@ -46,7 +43,7 @@
 
 <svelte:window bind:scrollY={sY} />
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaImage={$metaImage} metaUrl={$metaUrl} {jsonld} />
+<Head {title} {metaDescription} {metaImage} {metaUrl} {jsonld} />
 
 <Container narrow={true} scaled={true}>
 <section class="stdbox padded-ontop">
@@ -54,7 +51,7 @@
 	<div class="row wrap cgap8 rgap8 ycenter">
 			<p class="citation-big altprim tt-u">{data.type}</p>
 		{#each data.tags as tag}
-			<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			<a class="tag-pill themed tt-u" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 		{/each}
 	</div>
 </Crumb>

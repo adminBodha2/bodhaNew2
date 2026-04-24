@@ -3,14 +3,13 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Title from '$lib/comps/page-title.svelte'
-	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores'
 
 	export let data: PageData;
-	$metaTitle = 'Explore Concepts and Ideas at Bodha'
-  $metaDescription = 'Entry point for our knowledge base and wiki.'
-  $metaUrl = 'https://www.bodharesearch.in/concept'
-  $metaImage = '/images/bodhacover.png'
+
+	const title = 'Explore Concepts and Ideas at Bodha'
+  	const metaDescription = 'Entry point for our knowledge base and wiki.'
+  	const metaUrl = 'https://www.bodharesearch.in/concepts'
+  	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
 
 	// Separate Amarakosha varga concepts from regular concepts
 	$: akVargas   = data.concepts.filter((c: any) => c.slug.startsWith('ak-'));
@@ -18,21 +17,21 @@
 	$: totalCount = data.concepts.length;
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
+<Head {title} {metaDescription} {metaUrl} {metaImage} />
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="{totalCount} Concepts - Domains of thought across the knowledge system. Each concept connects texts, thinkers, and ideas."/>
-	<Title text="All Concepts"/>
+	<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="{totalCount} Concepts - Domains of thought across the knowledge base. Each concept connects texts, thinkers, and ideas."/>
 	<div class="row wrap cgap16 rgap16">
 		{#each regular as concept}
-			<a class="concept-pill blank" href="/concepts/{concept.slug}">
-				<span class="pill-title">{concept.title}</span>
-				<span class="pill-count">{concept.count}</span>
+			<a class="tag-item tt-u blank" href="/concepts/{concept.slug}">
+				{concept.title}
+				<span class="tag-count">{concept.count}</span>
 			</a>
 		{/each}
 	</div>
 </div>
+<!--
 <div class="stdbox padded bordertop">
 	<Title text="Amarakosha Domains"/>
 	{#if akVargas.length > 0}
@@ -49,6 +48,7 @@
 		</div>
 	{/if}
 </div>
+-->
 </Container>
 
 <style lang="sass">
@@ -89,32 +89,5 @@
 	font-size: 0.68rem
 	color: var(--text-ghost)
 	margin-top: 2px
-
-.concept-pill
-	display: inline-flex
-	align-items: center
-	gap: 6px
-	padding: 4px 10px
-	border-radius: 100px
-	border: 1px solid rgba(0,0,0,0.09)
-	background: #F9F8F6
-	transition: all 0.15s ease
-	&:hover
-		border-color: rgba(25,113,194,0.3)
-		background: rgba(25,113,194,0.05)
-		.pill-title
-			color: var(--theme)
-
-.pill-title
-	font-size: 0.75rem
-	font-weight: 500
-	color: #444
-	line-height: 1
-
-.pill-count
-	font-size: 0.65rem
-	font-weight: 600
-	color: var(--text-ghost)
-	line-height: 1
 
 </style>

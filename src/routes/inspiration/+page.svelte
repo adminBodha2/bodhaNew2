@@ -6,15 +6,14 @@
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import { allSchools, allThinkers } from '$lib/utils/localpulls';
 	import Title from '$lib/comps/page-title.svelte'
-	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/utils/metastores';
 
 	let schools = $state<any>([]);
 	let thinkers = $state<any>([]);
 
-	$metaTitle = 'Bodha — Inspiration';
-	$metaDescription = 'The thinkers and schools of thought that shape our method, our questions, and the longer continuum of inquiry we work within.';
-	$metaUrl = 'https://www.bodharesearch.in/inspiration';
-	$metaImage = '/images/key-inspiration.webp';
+	const title = 'Bodha — Inspiration';
+	const metaDescription = 'The thinkers and schools of thought that shape our method, our questions, and the longer continuum of inquiry we work within.';
+	const metaUrl = 'https://www.bodharesearch.in/inspiration';
+	const metaImage = 'https://www.bodharesearch.in/images/key-inspiration.webp';
 
 	onMount(async () => {
 		schools = await allSchools();
@@ -22,7 +21,7 @@
 	});
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage} />
+<Head {title} {metaDescription} {metaImage} {metaUrl}/>
 
 <Parallax imageLink="/images/key-inspiration.webp" isClass="is50" />
 <Container narrow={true} scaled={true}>
@@ -45,7 +44,7 @@
 						<a class="inspiration-card blank" href={item.linkpath}>
 							<img class="card-image" src={item.meta.image} alt={item.meta.title} />
 							<div class="card-overlay">
-								<p class="white card-title">{item.meta.title}</p>
+								<p class="white w500">{item.meta.title}</p>
 							</div>
 						</a>
 					{/each}
@@ -60,7 +59,7 @@
 						<a class="inspiration-card blank" href={item.linkpath}>
 							<img class="card-image" src={item.meta.image} alt={item.meta.title} />
 							<div class="card-overlay">
-								<p class="card-title white">{item.meta.title}</p>
+								<p class="white w500">{item.meta.title}</p>
 							</div>
 						</a>
 					{/each}
@@ -104,12 +103,5 @@
 	transition: background 0.2s ease
 	&:hover
 		background: none
-
-.inspiration-card
-	.card-title
-		font-size: clamp(1rem, 1.6vw, 1.18rem)
-		line-height: 1.18
-		color: #FFFFFF
-		margin: 0
 
 </style>

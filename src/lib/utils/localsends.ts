@@ -78,3 +78,37 @@ export const publications = [
 		]
 	}
 ]
+
+export const libCategories = [
+		{ label: 'Essentials', href: '/library/categories/essentials', type: 'essentials', forLink: 'essentials', desc: 'Foundational readings for entering the civilisational and philosophical landscape of Bodha.' },
+		{ label: 'Aryan Issue', href: '/library/categories/aryan-issue', type: 'aryan-issue', forLink: 'aryanissue', desc: 'Texts on the Aryan debate, migration theory, archaeology, philology, and civilizational argument.' },
+		{ label: 'Darshanas', href: '/library/categories/darshanas', type: 'darshana', forLink: 'darshana', desc: 'Primary and secondary works on Indian philosophical systems, debates, and metaphysical frameworks.' },
+		{ label: 'Indian Knowledge Systems', href: '/library/categories/iks', type: 'iks', forLink: 'iks', desc: 'Works on organised traditions of knowledge, method, science, language, and pedagogy.' },
+		{ label: 'Scriptural', href: '/library/categories/scriptural', type: 'scriptural', forLink: 'scriptural', desc: 'Sources in shruti, smriti, puranic, and sacred-historical traditions.' },
+		{ label: 'Shatrubodha', href: '/library/categories/shatrubodha', type: 'shatrubodha', forLink: 'shatrubodha', desc: 'Texts dealing with critique, conflict, ideology, and civilisational self-understanding.' },
+		{ label: 'Svayambodha', href: '/library/categories/svayambodha', type: 'svayambodha', forLink: 'svayambodha', desc: 'Books oriented toward self-understanding, cultural continuity, and Hindu civilisational confidence.' }
+];
+
+
+export const libPaths = [
+		{ label: 'Arts, Performance, and Aesthetics', href: '/library/paths/arts-performance-and-aesthetics', desc: 'Sources on music, drama, performance, rasa, kala, and the theory and practice of artistic experience.' },
+		{ label: 'Darshanas and Philosophy', href: '/library/paths/darshana-and-philosophy', desc: 'Works on the major schools of Indian philosophy, including Nyaya, Vaisheshika, Sankhya, Yoga, Mimamsa, Vedanta, and Shaiva thought.' },
+		{ label: 'Dharma, Ethics, Law', href: '/library/paths/dharma-ethics-and-law', desc: 'Texts dealing with duty, moral order, legal reasoning, social norms, ritual obligations, and the dharmashastra tradition.' },
+		{ label: 'Hindu Overview', href: '/library/paths/hindu-overviews', desc: 'Broad introductory works that summarize Hindu tradition as a whole, including its beliefs, practices, worldview, and civilizational continuity.' },
+		{ label: 'History, Polity, and Society', href: '/library/paths/history-polity-and-society', desc: 'Works on political thought, governance, social structure, chronicles, institutions, and historical memory in Indian civilization.' },
+		{ label: 'Indian Knowledge Systems', href: '/library/paths/indian-knowledge-systems', desc: 'Texts on traditional systems of organized knowledge, including science, mathematics, technical disciplines, applied learning, and knowledge classification.' },
+		{ label: 'Indology and Civilizational Critique', href: '/library/paths/indology-and-civilizational-critique', desc: 'Modern critical works examining Indology, orientalism, academic method, and the ideological framing of Indian traditions and civilization.' },
+		{ label: 'Language, Logic, Sanskrit', href: '/library/paths/language-logic-and-sanskrit', desc: 'Works on Sanskrit language, grammar, semantics, lexicography, linguistic philosophy, and systems of logical reasoning.' },
+		{ label: 'Puranic and Itihasic Literature', href: '/library/paths/puranic-and-itihasa-literature', desc: 'Narrative and sacred-historical texts such as the Puranas, epics, and story literature preserving cosmology, myth, and sacred geography.' },
+		{ label: 'Vedic and Upanishadic Texts', href: '/library/paths/vedic-and-upanishadic-texts', desc: 'Sources centered on the Vedas, Rigvedic interpretation, and Upanishads, especially themes of revelation, ritual, self, brahman, and liberation.' },
+	];
+
+export const libExternal = [
+		{ label: 'GRETIL', href: 'https://gretil.sub.uni-goettingen.de/gretil.html', desc: 'The Göttingen Register of Electronic Texts in Indian Languages. Complete HTML, XML and text collections of the Vedas, Epics, Puranas, and various texts in Kavya, Darshanas, Shastras, and more.' },
+		{ label: 'Sanskrit Documents', href: 'https://sanskritdocuments.org/', desc: 'A comprehensive resource with Sanskrit documents, bookstore listings, Veda Pathashala, scanned books, and tools for learning Sanskrit.' },
+		{ label: 'Safire Repository', href: 'https://sanskrit.safire.com/Sanskrit.html', desc: 'A rich repository of PDFs for various texts, stotras, and Sanskrit learning tools.' },
+		{ label: 'Digital Corpus of Sanskrit', href: 'http://www.sanskrit-linguistics.org/dcs/index.php', desc: 'A Sandhi-split corpus of Sanskrit texts with full morphological and lexical analysis, designed for text-historical research in linguistics and philology.' },
+		{ label: 'Shodh Ganga', href: 'https://shodhganga.inflibnet.ac.in/', desc: 'A platform for Indian Ph.D. theses, accessible to the global scholarly community through open access.' },
+		{ label: 'Sanskrit Dictionary', href: 'https://sanskritdictionary.com/', desc: 'A composite Sanskrit dictionary and word lookup site with meanings, associated words, and references, including a Sanskrit dhatus search companion.' },
+		{ label: 'Archive.org', href: 'https://archive.org/', desc: 'The original and undefeated repository for all kinds of texts. Most documents in our own library are sourced from this archive.' },
+	];
