@@ -19,9 +19,8 @@
 <style lang="sass">
 
 .trigger
-	&:hover
-		.text-animation
-			animation: colorchange 4s infinite forwards
+	.text-animation
+		animation: colorchange 10s infinite forwards
 
 .name
 	.char-0, .char-1, .char-2, .char-3, .char-4, .char-5, .char-6, .char-7, .char-8, .char-9, .char-10, .char-11, .char-12, .char-13
@@ -40,18 +39,14 @@
 
 @keyframes colorchange
 	0%
-		color: var(--lgrey)
-	17%
-		color: var(--themealt)
-	34%
-		color: var(--theme)
+		color: var(--color-grey-2)
+	25%
+		color: var(--color-theme)
 	50%
-		color: var(--themesub)
-	68%
-		color: var(--theme)
-	84%
-		color: var(--themealt)
+		color: var(--color-theme-5)
+	75%
+		color: var(--color-theme)
 	100%
-		color: var(--lgrey)
+		color: var(--color-grey-2)
 
 </style>

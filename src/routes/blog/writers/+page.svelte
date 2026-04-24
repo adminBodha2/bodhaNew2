@@ -26,7 +26,7 @@
 			<a class="writer-card card-padded blank lining{i}" href="/blog/writers/{item.writer}">
 				<p>{item.writer}</p>
 				{#if item.count}
-				<p class="citation-big lgrey">{item.count} {item.count === 1 ? 'essay' : 'essays'}</p>
+				<p class="tag-text tt-u grey">{item.count} {item.count === 1 ? 'essay' : 'essays'}</p>
 				{/if}
 			</a>
 			{/each}

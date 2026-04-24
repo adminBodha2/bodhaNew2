@@ -17,10 +17,10 @@
 
 </script>
 
-<Container>
-	<div class="box-t">
+<Container narrow={true} scaled={true}>
+	<div class="stdbox padded-ontop">
 		{#if vids && vids.length > 0}
-		<div class="grid two stacked-2">
+		<div class="grid two tight">
 		  {#each vids as item}
 			<div class="column rgap16">
 			  <Youtuber youTubeId={item.videoid}/>

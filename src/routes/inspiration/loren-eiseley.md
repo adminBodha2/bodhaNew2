@@ -13,7 +13,7 @@ The philosopher of philosophers, Loren Eiseley was a scientist, an anthropologis
 
 Nature, evolution, cosmology and culture featured primarily in his works. He deeply loved Nature, and had a profound understanding of Culture. His method of understanding reality was Science and his method of expression was Literature.
 
-### Select Works
+## Select Works
 - The Immense Journey (1957) – Poetic reflections on evolution and human origins.
 - Darwin's Century (1958) – Intellectual history of evolutionary thought.
 - The Firmament of Time (1960) – Meditations on time, nature, and scientific wonder.

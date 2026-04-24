@@ -31,5 +31,5 @@
 	"editor.fontFamily": "\"Jet Brains Mono\", monospace",
 	"editor.fontSize": 14,
 	"prettier.tabWidth": 4,
-	"editor.tabSize": 2
+	"editor.tabSize": 4
 }

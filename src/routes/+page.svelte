@@ -139,20 +139,20 @@
 
 <Container narrow={true} scaled={true}>
 
-<div class="box std padded ycenter column" id="first">
+<div class="stdbox padded ycenter" id="first">
 	<div class="home-panel column">
-		<div class="grid two ybottom tightrows">
+		<div class="grid two softleft ybottom tightrows">
 			<div class="box textbox">
-				<p class="eyebrow tt-u">Bodha Research</p>
 				<h1 class="source-serif"><span class="blue">Bodha</span> is a think tank and research group,</h1>
 			</div>
-			<p class="grey">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+			<p class="altprim highlight-text">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 		</div>
-		<div class="grid four stay2 tightrows">
+		<div class="grid four stay2 tight">
 			{#each gateways as item}
-			<a class="gateway-card blank" href={item.href}>
-				<p class="citation lgrey tt-u">{item.kicker}</p>
-				<h3 class="source-serif item-title">{item.title}</h3>
+			<a class="box blank labelbox card-padded" href={item.href}>
+				<div class="theme-line"></div>
+				<p class="tag-text w500 lgrey tt-u">{item.kicker}</p>
+				<h2 class="card-title">{item.title}</h2>
 				<p class="small-text grey">{item.desc}</p>
 			</a>
 			{/each}
@@ -160,18 +160,16 @@
 	</div>
 </div>
 
-<div class="box std padded bordertop">
-	<div class="section-head">
-		<Title text="verticals"/>
-	</div>
-	<div class="grid two tight">
+<div class="stdbox padded bordertop">
+	<Title text="verticals"/>
+	<div class="grid two tight stay2">
 		{#each verticals as item}
-		<a class="vertical-card blank" href={item.href}>
-			<img src={item.image} alt={item.title} />
-			<div class="vertical-body">
-				<span class="vertical-accent"></span>
-				<p class="citation lgrey tt-u">{item.kicker}</p>
-				<h3 class="item-title source-serif">{item.title}</h3>
+		<a class="elembox blank verticals" href={item.href}>
+			<div class="imgbox"><img src={item.image} alt={item.title} /></div>
+			<div class="labelbox">
+				<div class="theme-line"></div>
+				<p class="tag-text lgrey tt-u">{item.kicker}</p>
+				<h2 class="card-title">{item.title}</h2>
 				<p class="small-text grey">{item.desc}</p>
 			</div>
 		</a>
@@ -180,12 +178,12 @@
 </div>
 
 {#if blogs.length > 0}
-<div class="box std padded bordertop">
-	<div class="row mcol xbetween-mleft mleft ycenter rgap8">
+<div class="stdbox padded bordertop">
+	<div class="row xbetween ycenter rgap16">
 		<Title text="essays and articles"/>
-		<a class="section-link blank" href="/blog">See All</a>
+		<a class="small-button row ycenter cgap4" href="/blog">See All <div class="button-text">→</div></a>
 	</div>
-	<div class="standard-grid grid three">
+	<div class="standard-grid grid three blog-grid">
 		{#each blogs as item, i}
 		<BlogCard
 			title={item.meta.title}
@@ -198,28 +196,27 @@
 			numbering = "number"
 		>
 			{#each item.meta.tags as tag}
-			<a class="tag-pill tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</BlogCard>
 		{/each}
 	</div>
+	<a class="linked" href="/blog"><p class="inherit">Read More →</p></a>
 </div>
 {/if}
 
-<div class="home-section">
-	<div class="section-head">
-		<Title text="publications"/>
-	</div>
-	<div class="grid two tight hover-grid">
+<div class="stdbox padded bordertop">
+	<Title text="publications"/>
+	<div class="grid two tight">
 		{#each publications as pub}
-		<div class="publication-card">
+		<div class="books">
 			<img class="publication-image" src={pub.image} alt={pub.title} />
 			<div class="box labelbox">
-				<h3 class="blog-title source-serif">{pub.title}</h3>
+				<h2 class="card-title">{pub.title}</h2>
 				<p class="small-text grey">{pub.desc}</p>
-				<div class="row mwrap cgap16 rgap8">
+				<div class="row mwrap cgap16 rgap8 ptop8">
 					{#each pub.links as link}
-					<a class="publication-link blank" href={link.href} target="_blank" rel="noreferrer">{link.label} →</a>
+					<a class="small-button row ycenter cgap8" href={link.href} target="_blank" rel="noreferrer">{link.label} <div class="button-text">→</div></a>
 					{/each}
 				</div>
 			</div>
@@ -229,18 +226,18 @@
 </div>
 
 {#if vids.length > 0}
-<div class="home-section">
-	<div class="row mcol xbetween-mleft mleft ycenter rgap8">
+<div class="stdbox padded bordertop">
+	<div class="row xbetween ycenter rgap16">
 		<Title text="recent videos"/>
-		<a class="section-link blank" href="/videos">See All Talks</a>
+		<a class="small-button row ycenter cgap8" href="/videos">See All <div class="button-text">→</div></a>
 	</div>
-	<div class="standard-grid grid four">
-		{#each vids as item}
+	<div class="standard-grid grid three video-grid">
+		{#each vids as item, i}
 		<a class="video-card blank number" href={item.link} target="_blank" rel="noreferrer">
 			<Youtuber youTubeId={item.videoid} />
 			<div class="box video-footer rgap8">
-				<p class="item-line tight">{item.name}</p>
-				<span class="video-accent self-bottom"></span>
+				<p class="w500 tight">{item.name}</p>
+				<div class="theme-line"></div>
 				<p class="citation lgrey tt-u">{item.channel}</p>
 			</div>
 		</a>
@@ -259,41 +256,34 @@
 	min-height: 100vh
 
 .home-panel
-	background: #FFFFFF
-	border: 1px solid rgba(0,0,0,0.07)
-	border-radius: 16px
-	row-gap: 4rem
+	background: var(--stone)
+	border: var(--border-dark)
+	row-gap: 3rem
 	padding: 4rem
-	box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 8px 24px rgba(0,0,0,0.04)
+	border-radius: 4px
 	@media screen and (max-width: 1024px)
-		padding: 1.5rem
+		padding: 1rem
 		row-gap: 2rem
 
 // ── GATEWAY CARDS ─────────────────────────────────────────
 
-.gateway-card
-	display: flex
-	flex-direction: column
-	gap: 0.75rem
-	padding: 1.4rem
-	background: #F5F4F2
-	border: 1px solid rgba(0,0,0,0.06)
-	border-radius: 10px
-	transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease
-	&::before
-		content: ''
-		display: block
-		width: 32px
-		height: 2px
-		background: #222
-		border-radius: 1px
-		transition: width 0.2s ease
+.card-padded
+	background: #FFFFFF
+	border: var(--border-main)
+	border-radius: 4px
+	transition: all 500ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
 	&:hover
-		background: #EEEDEB
-		border-color: rgba(0,0,0,0.1)
-		box-shadow: 0 2px 8px rgba(0,0,0,0.05)
-		&::before
-			width: 48px
+		border: var(--border-dark)
+		box-shadow: var(--shadow-1)
+		.theme-line
+			transform: scaleX(1.5)
+
+.theme-line
+	height: 2px
+	width: 32px
+	background: var(--theme)
+	transition: all 0.14s ease
+	transform-origin: left center
 
 // ── SECTION STRUCTURE ─────────────────────────────────────
 
@@ -307,61 +297,50 @@
 
 // ── VERTICALS ─────────────────────────────────────────────
 
-.vertical-card
-	display: flex
-	flex-direction: column
-	border: 1px solid rgba(0,0,0,0.07)
-	border-radius: 12px
+.verticals
 	overflow: hidden
-	background: #FFFFFF
-	box-shadow: 0 1px 3px rgba(0,0,0,0.03)
-	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease
-	padding: 1rem
+	border: var(--border-main)
+	background: var(--color-alt-4)
+	transition: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
+	border-radius: 4px
 	&:hover
 		transform: translateY(-2px)
 		border-color: rgba(0,0,0,0.1)
 		box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.03)
-		.vertical-accent
-			width: 48px
+		background: var(--color-back)
+		.theme-line
+			transform: scaleX(1.5)
+		img
+			transform: scale(1.05)
 	img
 		width: 100%
-		height: 320px
-		aspect-ratio: 16 / 9
+		height: 100%
 		object-fit: cover
-		display: block
-		border-radius: 5px
-		@media screen and (max-width: 1024px)
-			height: 240px
-
-.vertical-body
-	display: flex
-	flex-direction: column
-	gap: 0.6rem
-	padding: 1.25rem 1.4rem
-	border-top: 1px solid rgba(0,0,0,0.05)
-
-.vertical-accent
-	display: block
-	width: 28px
-	height: 2px
-	background: #222
-	border-radius: 1px
-	transition: width 0.2s ease
-	margin-bottom: 0.2rem
-
-.standard-grid
+		transition: all 500ms cubic-bezier(0.745, 0.150, 0.690, 0.470)
+	.labelbox
+		padding: 0 2rem 2rem 2rem
+	.imgbox
+		height: 320px
+		overflow: hidden
 	@media screen and (max-width: 1024px)
-		row-gap: 1rem
+		.imgbox
+			height: 200px
+		.labelbox
+			padding: 0 1rem 1.5rem 1rem
+
+.blog-grid
+	border-radius: 4px
+
 
 // ── PUBLICATIONS ──────────────────────────────────────────
 
-.publication-card
+.books
 	display: flex
 	flex-direction: column
 	gap: 1.25rem
 	padding: 1.5rem
 	border: 1px solid rgba(0,0,0,0.06)
-	border-radius: 5px
+	border-radius: 4px
 	background: var(--stone)
 	@media screen and (min-width: 1025px)
 		display: grid
@@ -395,6 +374,8 @@
 
 // ── VIDEOS ────────────────────────────────────────────────
 
+.video-grid
+	border-radius: 4px
 
 .video-card
 	overflow: hidden
@@ -403,9 +384,9 @@
 	&:hover
 		transform: translateY(-2px)
 		.video-title
-			color: var(--themeaccent)
-		.video-accent
-			width: 48px
+			color: var(--theme)
+		.theme-line
+			transform: scaleX(1.5)
 
 .video-footer
 	padding: 1.1rem 1.2rem

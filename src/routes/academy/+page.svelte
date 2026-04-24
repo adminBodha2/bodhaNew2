@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/comps/container.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -16,12 +16,12 @@
 <Parallax imageLink="/images/key-academy.webp" isClass="is50" />
 <Container narrow={true} scaled={true}>
 	<div class="box std padded">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Academy" showD={true} desc={$metaDescription}/>
-			<div class="box textbox width80 ">
-				<p>Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
-				<p>This is not possible without creating a line of scholars capable of carrying this work forward, to the next decade and beyond to the next generation.</p>
-				<p class="w500 blue-dark">That is the purpose of Bodha Academy.</p>
-			</div>
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Academy" showD={true} desc={$metaDescription} />
+		<div class="box textbox width80">
+			<p>Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
+			<p>This is not possible without creating a line of scholars capable of carrying this work forward, to the next decade and beyond to the next generation.</p>
+			<p class="w500 blue-dark">That is the purpose of Bodha Academy.</p>
+		</div>
 	</div>
 	<div class="box std padded bordertop">
 		<Title text="courses" />
@@ -34,11 +34,10 @@
 					<h3 class="blog-title">Introduction to Shri Ram Swarup</h3>
 					<p class="small-text grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
 				</div>
-<div class="row ycenter xbetween mwrap cgap8 rgap8 foot">
-				<p class="citation-big grey tt-u">Pankaj Saxena</p>
-						<p class="tag-pill themed tt-u">Concluded</p>
-</div>
-
+				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
+					<p class="citation-big grey tt-u">Pankaj Saxena</p>
+					<p class="tag-pill themed tt-u">Concluded</p>
+				</div>
 			</a>
 			<div class="card-type-c number">
 				<div class="image-type-c">
@@ -48,7 +47,7 @@
 					<h3 class="blog-title">Ancient Indian History</h3>
 					<p class="small-text grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
 				</div>
-				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot">
+				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
 					<p class="citation-big grey tt-u">Amritanshu Pandey</p>
 					<p class="tag-pill accented tt-u">Upcoming</p>
 				</div>
@@ -58,6 +57,10 @@
 </Container>
 
 <style lang="sass">
+
+.card-type-c
+	.foot
+		align-self: flex-end
 
 .standard-grid
 	.box.textbox

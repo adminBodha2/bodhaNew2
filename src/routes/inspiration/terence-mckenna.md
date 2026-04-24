@@ -15,7 +15,7 @@ He lamented the gradual lose of organic human cultures to the homogenizing effec
 
 Arguably his greatest work was in the field of consciousness itself, where as a psychedelico Terence probed and mapped the psychedelic experience far better than anyone else has - before or after him. But he was not without his blind spots, for despite spending years in Tibet and India he was not only dismissive of Dharmic traditions, he displayed an alarming ignorance as well. For such reasons we think of him as an “almost rishi.” Not a true rishi, but for his transcendent gaze and insights, almost one!
 
-### Select Works
+## Select Works
 - The Invisible Landscape (1975, with Dennis McKenna) – Early synthesis of shamanism, time, and consciousness.
 - Food of the Gods (1992) – Thesis on psychedelics' role in human evolution and culture.
 - The Archaic Revival (1992) – Essays on shamanism, technology, and the return to primal wisdom.

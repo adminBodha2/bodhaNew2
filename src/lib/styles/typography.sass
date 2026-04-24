@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+:root	
+	--fontface-sans: 'Google Sans', sans-serif
+	--fontface-sans-flex: 'Google Sans Flex', sans-serif
+	--fontface-serif: 'Source Serif 4', serif
+	--fontface-serif3: 'EB Garamond', serif
 
 body, html
 	font-family: var(--fontface-sans-flex)
@@ -10,46 +14,42 @@ p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
 .garamond
 	font-family: 'EB Garamond', serif
 
-.libre
-	font-family: 'Libre Caslon Text', serif
-
 .bold
-	font-weight: bold
+	font-weight: 600
 
-:root	
-	--fontface-sans: 'Google Sans', sans-serif
-	--fontface-sans-flex: 'Google Sans Flex', sans-serif
-	--fontface-serif: 'Source Serif 4', serif
-	--fontface-serif2: 'Libre Caslon Text', serif
-	--fontface-serif3: 'EB Garamond', serif
+p.bold
+	font-weight: 600
 
-.desk
-	--typeBase: 1.25rem
-	--typeBaseLow: 1.06rem
-	--typeScale: 1.25
-	--typeH1: calc(var(--typeBase) * var(--typeScale))
-	--typeH2: calc(var(--typeH1) * var(--typeScale))
-	--typeH3: calc(var(--typeH2) * var(--typeScale))
-	--typeH4: calc(var(--typeH3) * var(--typeScale))
-	--typeH5: calc(var(--typeH4) * var(--typeScale))
-	--typeH6: calc(var(--typeH5) * var(--typeScale))
-	--typePs: calc(var(--typeBase) * 0.875)
+.inherit
+	color: inherit
 
-.mobile
-	--typeBase: 1.2rem
-	--typeBaseLow: 1.06rem
-	--typeScale: 1.18
-	--typeScaleLow: 1.1
-	--typeH1: calc(var(--typeBase) * var(--typeScale))
-	--typeH2: calc(var(--typeH1) * var(--typeScale))
-	--typeH3: calc(var(--typeH2) * var(--typeScaleLow))
-	--typeH4: calc(var(--typeH3) * var(--typeScale))
-	--typeH5: calc(var(--typeH4) * var(--typeScaleLow))
-	--typeH6: calc(var(--typeH5) * var(--typeScale))
-	--typePs: calc(var(--typeBase) * 0.875)
+:root
+	@media screen and (min-width: 1025px)
+		--typeBase: 1.33rem
+		--typeBaseLow: 1.06rem
+		--typeScale: 1.25
+		--typeH1: calc(var(--typeBase) * var(--typeScale))
+		--typeH2: calc(var(--typeH1) * var(--typeScale))
+		--typeH3: calc(var(--typeH2) * var(--typeScale))
+		--typeH4: calc(var(--typeH3) * var(--typeScale))
+		--typeH5: calc(var(--typeH4) * var(--typeScale))
+		--typeH6: calc(var(--typeH5) * var(--typeScale))
+		--typePs: calc(var(--typeBase) * 0.875)
+	@media screen and (max-width: 1024px)
+		--typeBase: 1.25rem
+		--typeBaseLow: 1.06rem
+		--typeScale: 1.2
+		--typeScaleLow: 1.05
+		--typeH1: calc(var(--typeBase) * var(--typeScale))
+		--typeH2: calc(var(--typeH1) * var(--typeScaleLow))
+		--typeH3: calc(var(--typeH2) * var(--typeScale))
+		--typeH4: calc(var(--typeH3) * var(--typeScale))
+		--typeH5: calc(var(--typeH4) * var(--typeScale))
+		--typeH6: calc(var(--typeH5) * var(--typeScale))
+		--typePs: calc(var(--typeBase) * 0.875)
 
 .source-serif
-	font-family: var(--fontface-serif)	
+	font-family: 'Source Serif 4', serif
 
 .blog-article
 	p, pre, li
@@ -60,7 +60,6 @@ p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
 		@media screen and (max-width: 1024px)
 			font-size: calc(var(--typeBase) * 1.2)
 	h5
-		font-family: var(--fontface-sans-flex)
 		font-weight: 500
 		position: relative
 		padding-top: 1rem
@@ -76,43 +75,51 @@ p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
 			left: 0
 	h2
 		font-size: var(--typeH3)
-		font-family: var(--fontface-sans)
 		font-weight: 600
 		letter-spacing: -0.03rem
 		margin-top: 2rem
 		padding-top: 2rem
 		margin-bottom: 1.25rem
 		border-top: 1px solid #f1f1f1
+	h3
+		font-size: var(--typeH1)
+		margin-bottom: 1rem
+		margin-top: 2.5rem
 
 //-------------------------HEADER 1--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 h1
-	line-height: 1.12
+	line-height: 1.2
 	font-size: var(--typeH6)
 	&.thin
 		font-weight: 400
 	&.source-serif
-		font-weight: 600
-		letter-spacing: -0.06rem
+		font-weight: 700
+		letter-spacing: -0.12rem
 	&.page-title
-		font-weight: 500
+		font-weight: 600
 		font-size: var(--typeH5)
+	&.post-title.source-serif
+		font-weight: 650
+		letter-spacing: -0.04rem
 	@media screen and (max-width: 1024px)
 		&.source-serif
-			letter-spacing: -0.03rem
-		&.page-title
+			letter-spacing: -0.06rem
+		&.post-title.source-serif
 			font-size: var(--typeH5)
-			letter-spacing: -0.03rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 h2
 	line-height: 1.12
-	font-size: var(--typeH3)
-	letter-spacing: 0.03rem
+	font-size: var(--typeH2)
+	font-weight: 600
 	&.thin
 		font-weight: 400
+	&.card-title
+		font-size: var(--typeH2)
+		font-weight: 550
 	&.heading
 		font-size: calc(var(--typeH1) *0.8)
 	&.source-serif
@@ -147,44 +154,39 @@ h3
 	&.blog-title
 		font-size: var(--typeH1)
 		font-weight: 500
-
-h3.item-title
-	font-weight: 500
+	&.item-title
+		font-weight: 600
+	@media screen and (min-width: 1025px)
+		&.source-serif.tight
+			line-height: 1.12
+		&.source-serif.blog-card-title
+			font-size: calc(var(--typeH2) * var(--serif-adjust))
+		&.item-title, &.item-title.source-serif
+			font-size: var(--typeH3)
+			letter-spacing: -0.01rem
+		&.blog-title.source-serif
+			font-size: var(--typeH2)
+			letter-spacing: -0.01rem
+	@media screen and (max-width: 1024px)
+		&.item-title, &.item-title.source-serif
+			font-size: var(--typeH3)
+			letter-spacing: -0.01rem	
+		&.blog-title.source-serif
+			font-size: var(--typeH3)
+			letter-spacing: 0.02rem
 
 .gateway-card, .vertical-card
 	&:hover
 		h3.item-title, h3.blog-title
-			color: var(--themeaccent)
+			color: var(--theme)
 .hover-card
 	&:hover
 		h3.item-title, h3.blog-title
-			color: var(--themeaccent)
+			color: var(--theme)
 .hover-card.anveshi
 	&:hover
 		h3.item-title, h3.blog-title
 			color: var(--anveshi-color)
-
-.desk
-	h3.source-serif
-		&.tight
-			line-height: 1.12
-		&.blog-card-title
-			font-size: calc(var(--typeH2) * var(--serif-adjust))
-	h3.item-title, h3.item-title.source-serif
-		font-size: var(--typeH3)
-		letter-spacing: -0.01rem
-	h3.blog-title.source-serif
-		font-size: var(--typeH2)
-		letter-spacing: -0.01rem
-
-
-.mobile
-	h3.item-title, h3.item-title.source-serif
-		font-size: var(--typeH3)
-		letter-spacing: -0.01rem
-	h3.blog-title.source-serif
-		font-size: var(--typeH3)
-		letter-spacing: 0.02rem
 
 //-------------------------HEADER 4--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -194,24 +196,20 @@ h4
 		font-weight: 400
 	&.tight
 		line-height: 1.12
-
-.desk
-	h4
+	@media screen and (min-width: 1025px)
 		font-size: var(--typeH2)
 		letter-spacing: -0.02rem
-	h4.source-serif 
-		font-size: calc(var(--typeH2) * var(--serif-adjust))
-		line-height: 1.4
-		letter-spacing: 0
-	h4.source-serif.blog-card-title.tight
-		line-height: 1.2
-
-.mobile
-	h4.source-serif
-		font-size: calc(var(--typeH2) * var(--serif-adjust))
-		letter-spacing: -0.01rem
-	h4
+		&.source-serif
+			font-size: calc(var(--typeH2) * var(--serif-adjust))
+			line-height: 1.4
+			letter-spacing: 0
+		&.source-serif.blog-card-title.tight
+			line-height: 1.2
+	@media screen and (max-width: 1024px)
 		font-size: var(--typeH2)
+		&.source-serif
+			font-size: calc(var(--typeH2) * var(--serif-adjust))
+			letter-spacing: -0.01rem
 
 //-------------------------HEADER 5--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -226,19 +224,17 @@ h5
 	&.source-serif
 		font-size: var(--typeH1)
 		font-weight: 550
-
-.desk
-	h5.source-serif
-		font-size: calc(var(--typeH2) * var(--serif-adjust))
-		letter-spacing: 0
-	h5.title-item
-		letter-spacing: -0.03rem
-
-.mobile
-	h5.source-serif
-		font-size: calc(var(--typeH2) * var(--serif-adjust) * .95)
-		font-weight: 600
-		letter-spacing: -0.03rem
+	@media screen and (min-width: 1025px)
+		&.source-serif
+			font-size: calc(var(--typeH2) * var(--serif-adjust))
+			letter-spacing: 0
+		&.title-item
+			letter-spacing: -0.03rem
+	@media screen and (max-width: 1024px)
+		&.source-serif
+			font-size: calc(var(--typeH2) * var(--serif-adjust) * .95)
+			font-weight: 600
+			letter-spacing: -0.03rem
 
 //-------------------------HEADER 6--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -252,73 +248,63 @@ h6
 	&.source-serif
 		line-height: 1.45
 		font-weight: 400
-
-.desk
-	h6
+	@media screen and (min-width: 1025px)
 		font-size: var(--typeH1)
-	h6.source-serif
-		font-size: calc(var(--typeH1) * var(--serif-adjust))
-		letter-spacing: -0.01rem
-
-.mobile
-	h6
+		&.source-serif
+			font-size: calc(var(--typeH1) * var(--serif-adjust))
+			letter-spacing: -0.01rem
+	@media screen and (max-width: 1024px)
 		font-size: var(--typeH2)
-	h6.source-serif
-		font-size: calc(var(--typeH1))
+		&.source-serif
+			font-size: calc(var(--typeH1))
 
 //-------------------------P, PRE, LI--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 p, pre, li
-	font-size: var(--typeBase)
-	line-height: 1.5
+	font-size: 1.2rem
+	line-height: 1.4
 	letter-spacing: 0
 	font-weight: 350
 	&.tight
 		line-height: 1.28
+	&.highlight-text
+		font-size: calc(var(--typeH1) * 0.9)
+		line-height: 1.5
+	&.small-text
+		font-size: 0.875rem
+	&.tag-text
+		font-size: 0.65rem
+		letter-spacing: 0.02rem
+	&.card-title
+		font-size: var(--typeH2)
+		font-weight: 550
+		line-height: 1.2
+	&.rem1
+		font-size: 1rem
+	&.citation-big
+		font-size: 10px
+		font-weight: 600
 	&.item-line
 		font-size: calc(var(--typeBase) * 0.85)
 	&.item-line.source-serif
 			font-weight: 600
 	&.citation
-		font-size: 11px
-	&.small-text
-		font-size: 0.775rem
-		line-height: 1.5
-		&.tight
-			line-height: 1.28
-	&.citation-big
-		font-size: 10px
-		font-weight: 600
-		&.thin
-			font-weight: 400
+		font-size: 0.6875rem
 	&.para-text
 		font-size: 1rem
-
-.desk
-	p, pre, li
-		&.highlight-text
-			font-size: var(--typeH2)
-			line-height: 1.5
+	@media screen and (min-width: 1025px)
 		&.card-text
 			line-height: 1.5
 			&.tight
 				line-height: 1.28
-		&.small-text
-			font-size: 0.9rem
-			letter-spacing: 0.01rem
 		&.source-serif.item-line
 			line-height: 1.2
 			font-size:  calc(var(--typeH2) * 1.1 )
 			letter-spacing: -0.01rem
-
-
-.mobile
-	p, pre, li
-		&.highlight-text
-			line-height: 1.4
-		&.highlight-text.source-serif
-			line-height: 1.5
-			font-size: var(--typeH2)
+	@media screen and (max-width: 1024px)
+		font-size: 1.1rem
+		&.small-text
+			font-size: 0.85rem
 		&.source-serif.item-line
 			line-height: 1.12
 			font-size:  calc(var(--typeH2) * 0.96 )
@@ -337,24 +323,31 @@ p, pre, li
 		p, pre
 			margin-bottom: 1.25rem
 
-.desk, .mobile	
-	.classic-document
+.classic-document
+	p, pre, li
+		line-height: 1.7
+		font-size: var(--typeBase)
+	p, pre
+		margin-bottom: 1.25rem
+	li
+		margin-bottom: 0.5rem
+	ul, ol
+		margin-top: 0
+		margin-bottom: 1.25rem
+		padding-left: 1rem
+	h3
+		font-size: var(--typeH1)
+		font-weight: 600
+		margin-bottom: 1.25rem
+	h2
+		font-size: var(--typeH1)
+		margin-bottom: 1.25rem
+		margin-top: 2.5rem
+	@media screen and (max-width: 1024px)
 		p, pre, li
-			line-height: 1.6
-			font-size: 1.2rem
-		p, pre
-			margin-bottom: 1.25rem
-		ul, ol
-			margin-top: 0
-			margin-bottom: 1.25rem
-			padding-left: 1rem
-		h3
-			font-size: var(--typeH1)
-			font-weight: 600
-			maring-bottom: 1.25rem
+			line-height: 1.5
 
 small
-	font-family: var(--fontface-sans)
 	font-size: 11px
 
 p.eyebrow
@@ -419,7 +412,7 @@ pre
 .grey
 	color: var(--grey-lg)
 .altprim
-	color: #676767
+	color: var(--primaryalt)
 .lgrey
 	color: #b7b7b7
 .altcolor

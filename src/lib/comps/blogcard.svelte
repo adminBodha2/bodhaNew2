@@ -11,18 +11,20 @@
 
 <div class="blog-card {numbering}">
 	<a class="card-media blank" href={link}>
-		<img src={image} alt={title} />
+		<div class="image-box">
+			<img src={image} alt={title} />
+		</div>
 		<div class="card-body">
-			{#if date && date !== ' '}<p class="card-date">{date}</p>{/if}
-			<h3 class="blog-title">{title}</h3>
-			<p class="grey small-text tight">{excerpt}</p>
+			{#if date && date !== ' '}<p class="tag-text lgrey">{date}</p>{/if}
+			<p class="card-title">{title}</p>
+			<p class="grey small-text">{excerpt}</p>
 		</div>
 	</a>
-	<div class="row wrap xbetween rgap4 card-bottom">
+	<div class="column rgap8 card-bottom">
 		<div class="row wrap cgap4 rgap4 ycenter">
-			<a class="small-text altcolor blank tt-u" href="/blog/writers/{author}">{author}</a>
+			<a class="small-text grey blank tt-u" href="/blog/writers/{author}">{author}</a>
 			{#if words && words !== ' '}
-			<span class="small-text altcolor"> | {words} words</span>
+			<span class="small-text lgrey"> | {words} words</span>
 			{/if}
 		</div>
 		<div class="row wrap cgap4 rgap4">
@@ -38,8 +40,13 @@
 	flex-direction: column
 	transition: background 0.15s ease
 	&:hover
-		.blog-title
-			color: var(--themeaccent)
+		img
+			transform: scale(1.05)
+		p.card-title
+			color: var(--color-theme)
+
+p.card-title
+	transition: all 0.22s cubic-bezier(0.145, 0.495, 0.955, 0.645)
 
 .card-media
 	display: flex
@@ -48,11 +55,15 @@
 	
 img
 	width: 100%
-	aspect-ratio: 16 / 9
+	height: 100%
 	object-fit: cover
-	display: block
+	transition: all 0.22s cubic-bezier(0.145, 0.495, 0.955, 0.645)
+
+.image-box
+	overflow: hidden
+	height: 240px
 	@media screen and (max-width: 1024px)
-		height: 240px
+		height: 200px
 
 .card-body
 	display: flex
@@ -69,10 +80,6 @@ img
 .card-bottom
 	padding: 0.8rem 1.4rem
 	border-top: 1px solid rgba(0,0,0,0.06)
-
-a.altcolor
-	&:hover
-		color: var(--theme)
 
 .card-words
 	font-size: 0.72rem

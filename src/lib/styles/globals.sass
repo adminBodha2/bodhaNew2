@@ -13,10 +13,10 @@ html
 	border: 1px solid red
 
 .bordertop
-	border-top: 1px solid var(--grey-sm)
-
+	border-top: var(--border-main)
 .borderbot
-	border-bottom: 1px solid var(--grey-sm)
+	border-bottom: var(--border-main)
+
 img.blog-image
 	object-fit: cover
 	width: 100%
@@ -59,7 +59,7 @@ img.blog-image
 		&.xcenter.mleft
 			justify-content: flex-start
 
-.column
+.column, .stdbox, .labelbox, .textbox, .elembox
 	flex-direction: column
 	&.ycenter
 		justify-content: center
@@ -126,20 +126,6 @@ img.blog-image
 	&.ybottom
 		align-items: end
 	@media screen and (min-width: 1025px)
-		&.stacked
-			column-gap: 2rem
-			row-gap: 2rem
-		&.stacked-2
-			column-gap: 2rem
-			row-gap: 2.5rem
-		&.stacked-22
-			column-gap: 2rem
-			row-gap: 2rem
-		&.stacked16
-			gap: 1rem
-		&.stacked-4816
-			column-gap: 2rem
-			row-gap: 1rem
 		&.five
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 		&.four
@@ -150,23 +136,13 @@ img.blog-image
 			grid-template-columns: 1fr 1fr
 		&.two.left
 			grid-template-columns: 32% 1fr
+		&.two.softleft
+			grid-template-columns: 40% 1fr
 		&.two.right
 			grid-template-columns: 1fr 32%
 		&.two.softright
 			grid-template-columns: 1fr 40%
 	@media screen and (max-width: 1024px)
-		&.stacked
-			column-gap: 2rem
-			row-gap: 1rem
-		&.stacked-2
-			column-gap: 2rem
-			row-gap: 2rem
-		&.stacked-22
-			row-gap: 1.5rem
-		&.stacked16
-			gap: 1rem
-		&.stacked-4816
-			row-gap: 1rem
 		&.four, &.three, &.two, &.five
 			grid-template-columns: 1fr
 		&.four.stay2, &.three.stay2, &.two.stay2
@@ -213,8 +189,9 @@ img.blog-image
 		padding-left: 2rem
 		padding-right: 2rem
 	@media screen and (min-width: 1601px)
-		padding-left: 0
-		padding-right: 0
+		padding-left: 2rem
+		padding-right: 2rem
+		width: 1536px
 
 .narrowsize
 	width: 100%
@@ -226,96 +203,13 @@ img.blog-image
 		width: 1152px
 	@media screen and (min-width: 1441px)
 		width: 1376px
+	@media screen and (min-width: 1601px)
+		width: 1536px
 
 //assorted---------------------------------------------------------------------------------------------------------------------------------
 
 .radius
 	border-radius: 5px
-
-.box-1
-	border-bottom: 1px solid var(--grey-sm)
-
-.box-2
-	border-top: 1px solid var(--grey-sm)
-
-.box-1, .box-2, .box-3
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1025px)
-		padding-top: 4rem
-		padding-bottom: 4rem
-		row-gap: 2.5rem
-	@media screen and (max-width: 1024px)
-		padding-top: 3rem
-		padding-bottom: 3rem
-		row-gap: 2.4rem
-
-.box-t
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1025px)
-		padding-top: 8rem
-		row-gap: 2.5rem
-		&.andB
-			padding-bottom: 4rem
-	@media screen and (max-width: 1024px)
-		padding-top: 7rem
-		row-gap: 1.5rem
-		&.andB
-			padding-bottom: 3rem
-
-.box-nn
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1025px)
-		padding-top: 5rem
-		row-gap: 2.5rem
-		height: 100vh
-	@media screen and (max-width: 1024px)
-		padding-top: 3rem
-		padding-bottom: 3rem
-		row-gap: 1.5rem
-
-.box-nn-b
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1025px)
-		padding-top: 80px
-		row-gap: 2.5rem
-		height: 100vh
-	@media screen and (max-width: 1024px)
-		padding-top: 3rem
-		padding-bottom: 3rem
-		row-gap: 1.5rem
-
-section.content-area
-	&.labber
-		img
-			border-radius: 8px
-			max-width: 100%
-			height: auto
-			max-height: 540px
-			object-fit: contain
-			margin-right: auto
-			border: 1px solid var(--grey-sm)
-			padding: 1rem
-			background: var(--grey-xxs)
-			margin-bottom: 1rem
-	@media screen and (max-width: 1024px)
-		&.labber
-			img
-				width: 100%
-				padding: 0
-				border-radius: 8px
-				border: none
-				background: none
-
-.content-area
-	width: 100%
-	@media screen and (min-width: 1025px)
-		width: 900px
-		margin-left: auto
-		margin-right: auto
 
 h1.visually-hidden
 	position: absolute
@@ -334,11 +228,6 @@ h1.visually-hidden
 
 .self-top
 	margin-bottom: auto
-
-.griddd
-	display: grid
-	gap: 2rem
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
 
 // ── SHARED PAGE PATTERNS ───────────────────────────────────
 
@@ -384,11 +273,6 @@ h1.visually-hidden
 
 // ── LIBRARY ────────────────────────────────────────────────
 
-.cat-nav
-	display: flex
-	flex-wrap: wrap
-	gap: 6px
-
 .nav-btn
 	font-size: 0.78rem
 	font-weight: 500
@@ -402,77 +286,7 @@ h1.visually-hidden
 		border-color: var(--theme)
 		color: var(--theme)
 
-.books-grid
-	display: grid
-	gap: 1px
-	background: rgba(0,0,0,0.06)
-	border: 1px solid rgba(0,0,0,0.06)
-	border-radius: 10px
-	overflow: hidden
-	@media screen and (min-width: 1025px)
-		grid-template-columns: repeat(3, 1fr)
-	@media screen and (min-width: 631px) and (max-width: 1024px)
-		grid-template-columns: repeat(2, 1fr)
-
-.book-card
-	display: flex
-	flex-direction: column
-	gap: 6px
-	padding: 1.2rem 1.4rem
-	background: #FFFFFF
-	transition: background 0.15s ease
-	&:hover
-		background: #F9F8F6
-		.book-title
-			color: var(--theme)
-
-.book-title
-	font-size: clamp(0.9rem, 1.5vw, 1.05rem)
-	font-weight: 400
-	line-height: 1.3
-	letter-spacing: -0.02em
-	color: #111
-	transition: color 0.15s ease
-
-.book-author
-	font-size: 8px
-	font-weight: 700
-	letter-spacing: 0.12em
-	color: var(--text-ghost)
-
-.book-desc
-	font-size: 0.78rem
-	line-height: 1.6
-	color: #888
-	margin: 0
-
 // ── ACADEMY ────────────────────────────────────────────────
-
-.status-badge
-	font-size: 9px
-	font-weight: 700
-	letter-spacing: 0.1em
-	padding: 3px 9px
-	border-radius: 100px
-	&.concluded
-		border: 1px solid rgba(116,192,252,0.3)
-		background: rgba(116,192,252,0.09)
-		color: #4C9BE8
-	&.upcoming
-		border: 1px solid rgba(180,160,220,0.3)
-		background: rgba(180,160,220,0.08)
-		color: #9775C0
-
-.instructor-tag
-	font-size: 9px
-	font-weight: 600
-	letter-spacing: 0.1em
-	color: var(--text-ghost)
-
-.courses-list
-	display: flex
-	flex-direction: column
-	gap: var(--gap-elem)
 
 .card-type-c
 	transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.18s ease
@@ -491,29 +305,3 @@ a.card-type-c:hover
 	@media screen and (max-width: 1024px)
 		img
 			height: 256px
-
-.course-body
-	display: flex
-	flex-direction: column
-	gap: var(--gap-text)
-
-.course-title
-	font-size: clamp(1.05rem, 2vw, 1.3rem)
-	font-weight: 400
-	line-height: 1.2
-	letter-spacing: -0.02em
-	color: #111
-	margin: 0
-
-.course-desc
-	font-size: 0.9rem
-	line-height: 1.7
-	color: #6B6B6B
-	margin: 0
-
-.course-link
-	font-size: 0.8rem
-	font-weight: 500
-	color: #999
-	margin-top: auto
-	transition: color 0.15s ease

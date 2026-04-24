@@ -26,11 +26,11 @@
 				{#if depth === 2}Writers{:else}{route.replaceAll('-', ' ')}{/if}
 			</h1>
 			<div class="row cgap8 rgap8 mwrap">
-				<a class="filter-button" href="/blog">Blog</a>
+				<a class="nav-btn" href="/blog">Blog</a>
 				{#if depth !== 2}
-					<a class="filter-button" href="/blog/writers">Writers</a>
+					<a class="nav-btn" href="/blog/writers">Writers</a>
 				{/if}
-				<a class="filter-button" href="/tags">Tags</a>
+				<a class="nav-btn" href="/tags">Tags</a>
 			</div>
 		</div>
 

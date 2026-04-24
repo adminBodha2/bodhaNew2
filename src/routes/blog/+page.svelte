@@ -12,7 +12,7 @@
 	let showEx = false;
 	const externalPosts = servingExternal();
 
-	$metaTitle = 'Bodha — Blog';
+	$metaTitle = 'Bodha - Blog';
 	$metaDescription = 'Our blog featuring essays on Hindu culture, history, festivals, and more.';
 	$metaUrl = 'https://www.bodharesearch.in/blog';
 	$metaImage = '/images/bodhacover.png';
@@ -28,10 +28,10 @@
 <div class="box std padded-ontop">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Blog" showD={true} desc={$metaDescription} showRow={true}>
 		<div class="row cgap8 rgap8 mwrap">
-			<button class="filter-button" class:active={!showEx} on:click={() => (showEx = false)}>Essays</button>
-			<button class="filter-button" class:active={showEx} on:click={() => (showEx = true)}>External Posts</button>
-			<a class="filter-button" href="/blog/writers">Writers</a>
-			<a class="filter-button" href="/tags">Tags</a>
+			<button class="nav-btn" class:active={!showEx} on:click={() => (showEx = false)}>Essays</button>
+			<button class="nav-btn" class:active={showEx} on:click={() => (showEx = true)}>External Posts</button>
+			<a class="nav-btn" href="/blog/writers">Writers</a>
+			<a class="nav-btn" href="/tags">Tags</a>
 		</div>
 	</Crumb>
 	<div class="box std">
@@ -46,7 +46,7 @@
 				author={item.meta.author}
 				date={item.formattedDate}
 				words={item.meta.words}
-				numbering="ncolor{i}"
+				numbering="number"
 			>
 				{#each item.meta.tags as tag}
 				<p class="tag-pill tt-u">{tag.replaceAll('-', ' ')}</p>
@@ -56,11 +56,11 @@
 		</div>
 
 		{:else if showEx}
-		<div class="standard-grid grid three">
+		<div class="standard-grid grid four">
 			{#each externalPosts as item, i}
-			<a class="box blank ncolor{i+1}" href={item.route} target="_blank" rel="noreferrer">
+			<a class="box blank number" href={item.route} target="_blank" rel="noreferrer">
 				<div class="ext-card-body">
-					<h3 class="blog-title">{item.title}</h3>
+					<p class="highlight-text tight w500">{item.title}</p>
 					<p class="small-text tight grey">{item.description}</p>
 				</div>
 				<div class="ext-card-foot">
@@ -85,30 +85,13 @@
 	flex-wrap: wrap
 	gap: 6px
 
-.nav-btn
-	font-size: 0.78rem
-	font-weight: 500
-	padding: 5px 14px
-	border-radius: 100px
-	border: 1px solid rgba(0,0,0,0.1)
-	background: transparent
-	color: #666
-	cursor: pointer
-	transition: all 0.15s ease
-	&:hover
-		border-color: rgba(0,0,0,0.18)
-		color: #333
-	&.active
-		background: var(--theme)
-		border-color: var(--theme)
-		color: #FFF
-
 .ext-card-body
 	display: flex
 	flex-direction: column
 	gap: 0.6rem
 	padding: 1.2rem 1.4rem
 	flex: 1
+	background: var(--color-white)
 
 .ext-badge
 	font-size: 7.5px

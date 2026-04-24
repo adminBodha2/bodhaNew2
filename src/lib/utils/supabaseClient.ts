@@ -4,165 +4,166 @@ import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/stati
 export const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY)
 
 export async function openLibrary(){
-  const { data, error } = await supabase
-  .from('db-library')
-  .select()
-  .order('name')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-library')
+	.select()
+	.order('name')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function selectedOpenLibrary(type:string){
-  const { data, error } = await supabase
-  .from('db-library')
-  .select()
-  .eq('type', type)
-  .order('name')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-library')
+	.select()
+	.eq('type', type)
+	.order('name')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function sixVideos(){
-  const { data, error } = await supabase
-  .from('db-videos')
-  .select()
-  .eq('show', true)
-  .order('id', {ascending:false})
-  .limit(6)
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-videos')
+	.select()
+	.eq('show', true)
+	.order('id', {ascending:false})
+	.limit(6)
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function allVideos(){
-  const { data, error } = await supabase
-  .from('db-videos')
-  .select()
-  .eq('show', true)
-  .order('id', {ascending:false})
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-videos')
+	.select()
+	.eq('show', true)
+	.order('id', {ascending:false})
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function otherArticles(){
-  const { data, error } = await supabase
-  .from('db-articles')
-  .select()
-  .order('date', {ascending:false})
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-articles')
+	.select()
+	.order('date', {ascending:false})
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function otherPankaj(){
-  const { data, error } = await supabase
-  .from('db-articles')
-  .select()
-  .eq('author','Pankaj Saxena')
-  .order('date', {ascending:false})
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-articles')
+	.select()
+	.eq('author','Pankaj Saxena')
+	.order('date', {ascending:false})
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function otherAmrit(){
-  const { data, error } = await supabase
-  .from('db-articles')
-  .select()
-  .eq('author','Amritanshu Pandey')
-  .order('date', {ascending:false})
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-articles')
+	.select()
+	.eq('author','Amritanshu Pandey')
+	.order('date', {ascending:false})
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function bigQuestions(){
-  const { data, error } = await supabase
-  .from('db-questions')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-questions')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function anveshiChapters(){
-  const { data, error } = await supabase
-  .from('db-anveshichapters')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-anveshichapters')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function anveshiFaqs(){
-  const { data, error } = await supabase
-  .from('db-anveshifaqs')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-anveshifaqs')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function anveshiCurrent(){
-  const { data, error } = await supabase
-  .from('db-anveshichapters')
-  .select()
-  .eq('status','current')
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-anveshichapters')
+	.select()
+	.eq('status','current')
+	.limit(1)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function anveshiFuture(){
-  const { data, error } = await supabase
-  .from('db-anveshichapters')
-  .select()
-  .eq('status','upcoming')
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-anveshichapters')
+	.select()
+	.eq('status','upcoming')
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function selectedAnveshiFuture(region:string){
-  const { data, error } = await supabase
-  .from('db-anveshichapters')
-  .select()
-  .eq('status','upcoming')
-  .eq('region',region)
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-anveshichapters')
+	.select()
+	.eq('status','upcoming')
+	.eq('region',region)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function anveshiPast(){
-  const { data, error } = await supabase
-  .from('db-anveshichapters')
-  .select()
-  .eq('status','previous')
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-anveshichapters')
+	.select()
+	.eq('status','previous')
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function kannurTemples(){
-  const { data, error } = await supabase
-  .from('db-kannurtemples')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-kannurtemples')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function kulluTemples(){
-  const { data, error } = await supabase
-  .from('db-kullu')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-kullu')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }
 
 export async function badamiTemples(){
-  const { data, error } = await supabase
-  .from('db-badamitemples')
-  .select()
-  .order('id')
-  if (error) throw new Error(error.message)
-  return data
+	const { data, error } = await supabase
+	.from('db-badamitemples')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
 }

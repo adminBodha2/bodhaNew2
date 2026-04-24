@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { selectedWriter } from '$lib/utils/localpulls';
-	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
 

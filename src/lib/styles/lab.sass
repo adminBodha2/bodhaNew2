@@ -1,323 +1,94 @@
-// ============================================================
-// LAB SECTION — Dedicated Styles
-// src/lib/styles/lab.sass
-// ============================================================
-
-
-// ---- Layout ------------------------------------------------
-
-.lab-shell
+.projects
 	display: grid
-	width: 100%
-	height: 100%
+	grid-template-columns: 1fr 1fr
+	border: var(--stroke-subtle)
+	.project-link
+		padding: 1rem
+		border-bottom: var(--stroke-subtle)
+		transition: all 0.05s ease
+		&:last-child
+			border-bottom: none
+		&:nth-child(odd)
+			border-right: var(--stroke-subtle)
+			background: #fcfcfc
+		&:hover
+			background: var(--stone)
+			padding-right: 1.1rem
+			p
+				color: var(--theme)
 	@media screen and (min-width: 1025px)
-		grid-template-columns: 360px 1fr
-		grid-template-areas: "side main"
-		// Draws the sidebar divider line through the full shell height incl. bottom padding
-		background-image: linear-gradient(to right, transparent 360px, var(--grey-sm) 360px, var(--grey-sm) 361px, transparent 361px)
-	@media screen and (max-width: 1024px)
-		grid-template-columns: 1fr
-		grid-template-areas: "main" "side"
-		row-gap: 1rem
+		display: flex
+		flex-direction: column
+		text-align: right
+		border: none
+		.project-link
+			border-bottom: var(--stroke-subtle)
+			padding-bottom: 1rem
+			padding-top: 1rem
+			padding-right: 1rem
+			transition: all 0.05s ease
+			&:last-child
+				border-bottom: none
+				padding-bottom: none
+			&:hover
+				background: #FFF
+				padding-right: 1.1rem
+				p
+					color: var(--theme)
+			&:nth-child(odd)
+				border-right: none
+				background: none
+				&:hover
+					background: #FFF
+		&.projects-type2
+			display: grid
+			grid-template-columns: 1fr 1fr
+			.project-link
+				&:nth-child(odd)
+					border-right: var(--border-dark)
 
-
-// ---- Sidebar -----------------------------------------------
-
-.lab-side
-	grid-area: side
-	height: 100%
+.sidebar
 	@media screen and (min-width: 1025px)
-		padding-top: 8rem
-		padding-bottom: 2rem
+		background: var(--stone)
+		border-left: var(--stroke-subtle)
+		text-align: right
+		gap: 1rem
 	@media screen and (max-width: 1024px)
 		padding-top: 2rem
-		border-top: 1px solid var(--grey-sm)
+		gap: 2rem
+		border-top: 1px solid var(--color-border)
 
-.lab-main
-	grid-area: main
+.classic-document
 	@media screen and (min-width: 1025px)
-		padding-top: 8rem
-		padding-left: 104px
-		padding-bottom: 4rem
-	@media screen and (max-width: 1024px)
-		padding-top: 7rem
+		padding: 2rem 4rem 2rem 2rem
 
-.lab-side-inner
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1025px)
-		position: sticky
-		top: 8rem
-		height: calc(100vh - 10rem)
-		width: 100%
-		overflow-y: scroll
-		padding-right: 2rem
-	@media screen and (max-width: 1024px)
-		width: 100%
-		padding-bottom: 3rem
-
-.lab-side
-	::-webkit-scrollbar
-		width: 4px
-	::-webkit-scrollbar-track
-		background: var(--background)
-	&:hover
-		::-webkit-scrollbar-thumb
-			background: var(--theme)
-
-.lab-nav
-	display: flex
-	flex-direction: column
-
-p.lab-nav-item
-	font-size: 0.875rem
-	margin: 0
-	a
-		color:  inherit
-		text-decoration: none
-	&:hover
-		color: var(--theme)
-	@media screen and (max-width: 1024px)
-		font-size: 1rem
-
-.lab-nav-title
-	font-weight: 400
-	line-height: 1.4
-	letter-spacing: -0.1px
-	margin: 0
-	transition: color 0.1s, font-weight 0.1s
-	flex: 1
-	@media screen and (min-width: 1025px)
-		font-size: 13.5px
-	@media screen and (max-width: 1024px)
-		font-size: 15px
-
-// ---- Landing page ------------------------------------------
-
-.lab-landing
-	display: flex
-	flex-direction: column
-
-.lab-landing-eyebrow
-	font-size: 10px
-	font-weight: 700
-	text-transform: uppercase
-	color: var(--grey-md)
-	margin: 0 0 16px 0
-
-a.lab-landing-eyebrow
-	font-size: 11px
-	font-weight: 700
-	text-transform: uppercase
-	color: var(--grey-md)
-	margin: 0 0 16px 0
-	text-decoration: none
-	&:hover
-		color: var(--theme)
-
-.lab-landing-title
-	font-size: 45px
-	letter-spacing: -1.2px
-	line-height: 1.06
-	color: var(--primary)
-	margin: 0
-	@media screen and (max-width: 1024px)
-		font-size: 36px
-		letter-spacing: -0.6px
-
-.lab-landing-desc
-	font-size: 16px
-	color: var(--grey-md)
-	line-height: 1.7
-	margin: 14px 0 0 0
-	max-width: 440px
-
-.lab-landing-desc-wide
-	font-size: 16px
-	color: var(--grey-md)
-	line-height: 1.7
-	margin: 14px 0 0 0
-
-.lab-cards-wrap
-	background: transparent
-	margin-top: 3rem
-
-.lab-cards-grid
+.content-section
 	display: grid
-	gap: 0
-	border-bottom: none
+	grid-auto-flow: row
+	@media screen and (max-width: 1024px)
+		row-gap: 2rem
 	@media screen and (min-width: 1025px)
-		grid-template-columns: 1fr 1fr 1fr
-		border: 1px solid var(--grey-sm)
-	@media screen and (max-width: 1024px)
-		grid-template-columns: 1fr
-
-.lab-card
-	display: flex
-	flex-direction: column
-	border-bottom: 1px solid var(--grey-sm)
-	transition: background 0.11s
-	text-decoration: none
-	color: inherit
-	background: transparent
-	@media screen and (min-width: 1025px)
-		border-right: 1px solid var(--grey-sm)
-		&:nth-child(3n)
-			border-right: none
-	&.p32
-		padding: 2rem
-	&.p16
-		padding: 1rem
-	@media screen and (max-width: 1024px)
-		padding-bottom: 1.5rem
-		margin-bottom: 1.5rem
-		&:last-child
-			margin-bottom: 0
-
-.lab-card-excerpt
-	font-size: 13px
-	color: var(--grey-lg)
-	line-height: 1.5
-	display: -webkit-box
-	-webkit-line-clamp: 3
-	-webkit-box-orient: vertical
-	overflow: hidden
-	margin: 0
-
-
-// ---- Article view ------------------------------------------
-
-.lab-article
-	display: flex
-	flex-direction: column
-	@media screen and (max-width: 1024px)
-		border-bottom: 1px solid var(--grey-sm)
-		padding-bottom: 3rem
-
-.lab-article-body
-	img
-		display: block
-		max-width: 100%
-		height: auto
-		max-height: 540px
-		object-fit: contain
-		margin-right: auto
-		border: 1px solid var(--grey-lg)
-		padding: 1rem
-		background: var(--grey-sm)
-		border-radius: 6px
-		margin-bottom: 1rem
-	p
-		font-size: 18px
-		line-height: 1.75
-		margin: 0 0 20px 0
-	h2
-		font-size: 36px
-		font-weight: 700
-		letter-spacing: -0.5px
-		line-height: 1.2
-		margin: 3rem 0 1rem 0
-	h3
-		font-size: 24px
-		font-weight: 700
-		letter-spacing: -0.5px
-		line-height: 1.3
-		margin: 1.5rem 0 1rem 0
-	h4
-		font-size: 18px
-		font-weight: 600
-		letter-spacing: -0.2px
-		line-height: 1.4
-		color: var(--primary)
-		margin: 1.5rem 0 0.5rem 0
-	h5
-		margin: 0 0 1.5rem 0
-		padding-top: 0
-		padding-bottom: 0
-		padding-bottom: 0
-		font-size: 21px
-		line-height: 1.4
-	a
-		color: var(--theme)
-		text-decoration: none
-		text-underline-offset: 3px
-		transition: text-decoration-color 0.15s
-		&:hover
-			text-decoration-color: var(--theme)
-	em, i
-		font-style: italic
-		color: inherit
-	strong
-		font-weight: 650
-		color: var(--primary)
-	ul, ol
-		margin: 0 0 1.5rem 0
-		padding-left: 1.5rem
-	ul
-		list-style-type: disc
-	ol
-		list-style-type: decimal
-	li
-		font-size: 18px
-		line-height: 1.75
-		margin-bottom: 0
-	blockquote
-		margin: 0 0 1.5rem 0
-		padding: 0.5rem 0 0.25rem 1.5rem
-		border-left: 3px solid var(--themesub)
-		color: var(--primary)
-		font-style: italic
-		font-size: 21px
-		line-height: 1.75
-		p
-			margin-top: 0
-			margin-bottom: 0
-	cite
-		display: block
-		font-size: 13px
-		font-style: normal
-		color: var(--grey-md)
-		margin-top: 0.5rem
-	hr
-		border: none
-		border-top: 1px solid var(--grey-sm)
-		margin: 3rem 0
-	code
-		font-size: 13px
-		background: var(--grey-xs)
-		padding: 2px 6px
+		grid-template-columns: 1fr 420px
+		grid-template-areas: ". ."
+		border: var(--border-dark)
 		border-radius: 4px
-		color: var(--primary)
-	pre
-		background: var(--grey-xs)
-		border-radius: 6px
-		padding: 1.5rem
-		overflow-x: auto
-		margin: 0 0 1.5rem 0
-		code
-			background: none
-			padding: 0
-			font-size: 13px
-			line-height: 1.6
-	@media screen and (max-width: 1024px)
-		p, li
-			font-size: 16.7px
-			line-height: 1.65
-		h2
-			font-size: 29px
-			margin: 3rem 0 1rem 0
-		h3
-			font-size: 21px
-			margin: 1rem 0 1rem 0
-		h5
-			font-size: 18px
-			padding-top: 0
-			padding-bottom: 0
-			padding-bottom: 0
-			font-size: 21px
-			line-height: 1.4
-		ul, ol
-			margin-left: 0.5rem
-			padding-left: 0.75rem
-		blockquote
-			font-size: 16.7px
+		overflow: hidden
+
+.key-image
+	overflow: hidden
+	position: relative
+	height: 300px
+	@media screen and (min-width: 1025px)
+		height: 540px
+
+.key-image img
+	object-fit: cover
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	height: 500px
+	top: 0
+	@media screen and (min-width: 1025px)
+		height: 800px
+		top: 0

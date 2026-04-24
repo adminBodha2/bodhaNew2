@@ -13,7 +13,7 @@ One of the greatest philosophers to come out of India in 20th century, Shri Ram 
 
 He explained the different Yogic chitta bhumis from which dharmic sects originate on one hand and the monotheistic theologies on the other. He was a modern day rishi, who, in a span of very few books explained all our tradition while also doing a Purva Paksha on all our opponents. He is one thinker in our list who spans in almost all schools of thought that we take inspiration from and delivers even more. There is perhaps no other rshi of our times to whom we are more indebted to than Shri Ram Swarup.
 
-### Select Works
+## Select Works
 - Indictment (Changer's Club) – Early political polemic on contemporary India.
 - Mahatma Gandhi and His Assassin (1948) – Controversial analysis of Gandhi's assassination.
 - Let Us Fight the Communist Menace (1949) – Anti-communist tract for Asian audiences.

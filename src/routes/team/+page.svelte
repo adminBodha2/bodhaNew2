@@ -72,7 +72,7 @@
 				</div>
 				<div class="member-info">
 					<div class="member-head">
-						<p class="card-title tight w500">{member.name}</p>
+						<p class="card-title tight">{member.name}</p>
 						<p class="citation-big grey tt-u">{member.role}</p>
 					</div>
 					<p class="small-text grey">{member.bio}</p>
@@ -103,15 +103,17 @@
 	display: grid
 	gap: 1px
 	background: rgba(0,0,0,0.06)
-	border: 1px solid rgba(0,0,0,0.06)
 	border-radius: 10px
 	overflow: hidden
 	@media screen and (min-width: 1025px)
 		grid-template-columns: repeat(3, 1fr)
+		border: var(--border-main)
 	@media screen and (min-width: 631px) and (max-width: 1024px)
 		grid-template-columns: repeat(2, 1fr)
+		border: none
 	@media screen and (max-width: 630px)
 		grid-template-columns: 1fr
+		border: none
 
 .member-card
 	display: flex
@@ -122,6 +124,10 @@
 	transition: background 0.15s ease
 	&:hover
 		background: #F9F8F6
+	@media screen and (max-width: 1024px)
+		border-left: var(--border-main)
+		border-bottom: var(--border-main)
+		border-right: var(--border-main)
 
 .member-image
 	img

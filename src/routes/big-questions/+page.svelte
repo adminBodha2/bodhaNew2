@@ -35,7 +35,7 @@
 <Parallax imageLink="/images/key-bigquestions.webp" isClass="is50"/>
 <Container narrow={true} scaled={true}>
 <Heading title="Big Questions"/>
-<div class="box std padded">
+<div class="stdbox padded">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Big Questions" showD={true} desc={$metaDescription}/>
 	{#if questions && questions.length > 0 && ready}
 		<div class="box std" role="region" aria-label="Big Questions" on:touchstart={handleTouchStart} on:touchend={handleTouchEnd}>
@@ -52,7 +52,7 @@
 				<a class="blank row ytop question-head mcol" href={item.linkpath}>
 					<img class="q-icon" class:blue={$selectedTemple[i]} src={item.meta.image} alt={item.meta.title} />
 					<div class="column" style="gap: 4px">
-						<h2 class="blog-title">{item.meta.id} — {item.meta.title}</h2>
+						<h2 class="card-title">{item.meta.id} — {item.meta.title}</h2>
 						<!--
 						<a class="q-deeplink linkonhover" href="{item.linkpath}">Read in full →</a>
 						-->
@@ -66,7 +66,7 @@
 							<a class="tag-pill themed tt-u" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 							{/each}
 						</div>
-						<p class="small-text lgrey">{item.meta.description}</p>
+						<p class="small-text grey">{item.meta.description}</p>
 						</div>
 						<div class="q-image">
 							<img src={item.meta.icon} alt={item.meta.title} />
@@ -105,6 +105,7 @@
 .question-card
 	overflow: hidden
 	background: #fff
+	border-radius: 4px
 
 .question-head
 	gap: 1rem
@@ -138,13 +139,10 @@
 		padding: 1rem
 
 .q-image
-	padding: 1.5rem
 	img
 		width: 100%
 		object-fit: cover
 		height: 100%
-	@media screen and (max-width: 1024px)
-		padding: 1rem
 
 .question-right
 	padding: 1.4rem
@@ -152,6 +150,6 @@
 	@media screen and (min-width: 1025px)
 		border-left: var(--stroke-subtle)
 	@media screen and (max-width: 1024px)
-		padding: 2rem 1rem
+		padding: 1rem
 
 </style>

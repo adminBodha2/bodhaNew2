@@ -12,7 +12,7 @@ Great tragedy, besides much strife, results in great literature. The 20th centur
 
 But that is not why he inspires us at Bodha. Solzhenitsyn then went ahead and made a larger critique of totalitarian regimes, ideologies and societies, having deep insights into what goes into the creation of one. Not only that, he also made a deep critique of the material culture of the West and its pathologies in absence of any spiritual guide.
 
-### Select Works
+## Select Works
 - One Day in the Life of Ivan Denisovich (1962) – Novella exposing Soviet labor camps.
 - The First Circle (1968) – Novel of intellectuals imprisoned in a "sharashka" research prison.
 - Cancer Ward (1968) – Allegorical novel on illness, morality, and Soviet society.

@@ -13,7 +13,7 @@ One of the greatest cultural anthropologists of our time, he is the disciple of 
 
 He makes us realize how completely we have bought into the paradigm of the modern globalized world that we have lost even the means to understand the wisdom that these tribal cultures all around the world display. His work is also poignant since most of the cultures he talks about are on the verge of ethnocide upon their purchase into the modern world and lifestyle. He shows us what happens when a traditional culture dies.
 
-### Select Works
+## Select Works
 - The Serpent and the Rainbow (1985) – Investigation of Haitian Vodou and zombification.
 - Passage of Darkness (1988) – Ethnographic sequel on Haitian secret societies.
 - One River (1996) – Memoir blending Amazonian ethnobotany and personal journey.

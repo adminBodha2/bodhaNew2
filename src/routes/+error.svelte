@@ -5,8 +5,8 @@
 
 </script>
 
-<Container>
-	<div class="box-t mmVH">
+<Container narrow={true} scaled={true}>
+	<div class="stdbox padded-ontop">
 		<div class="column">
 		<p class="status sm">{page.status} | {page.error?.message ?? ''}</p>
 		<p class="big pbot16 bold">{page.status === 404 ? 'Sorry, Page not found' : 'Something went wrong'}</p>

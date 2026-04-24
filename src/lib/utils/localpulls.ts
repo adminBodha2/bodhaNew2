@@ -451,3 +451,9 @@ export async function allSchools() {
 	  });
 	return groupedPosts
   }
+
+
+export function replaceHyphen(thisTag:string){
+	const tag = thisTag.replaceAll('-', ' ')
+	return tag
+}

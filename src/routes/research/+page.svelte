@@ -51,27 +51,27 @@
 
 <Parallax imageLink="/images/key-research.webp" isClass="is50"/>
 <Container narrow={true} scaled={true}>
-<div class="box std padded">
+<div class="stdbox padded">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities."/>
-	<div class="box std">
+	<div class="stdbox">
 		<Title text="Research Pillars"/>
-		<div class="grid three areas-grid">
+		<div class="grid three areas-grid standard-grid">
 			{#each areas as area, i}
-			<div class="area-card ac-{i}">
+			<div class="box pillar number item{i}">
 				<div class="area-image">
 					<img src={area.image} alt={area.title} />
 				</div>
 				<div class="area-body">
-					<h3 class="blog-title">{area.title}</h3>
+					<h2 class="card-title">{area.title}</h2>
 					<div class="area-links">
 						{#each area.items as item}
 						{#if item.href}
-							<a class="area-link blank" href={item.href}>
-								<span>{item.label}</span>
-								<span class="area-arrow">↗</span>
+							<a class="area-link blank row xbetween width100" href={item.href}><p class="rem1">
+								{item.label}</p>
+								<div class="area-arrow"><p class="rem1">↗</p></div>
 							</a>
 						{:else}
-							<span class="area-link-dim">{item.label}</span>
+							<p class="area-link-dim rem1">{item.label}</p>
 						{/if}
 						{/each}
 					</div>
@@ -86,34 +86,20 @@
 <style lang="sass">
 
 .areas-grid
-	border: var(--stroke-subtle)
+	border: var(--border-dark)
+	border-radius: 4px
+	background: #FFF
 
-.area-card
-	display: flex
-	flex-direction: column
+.box.pillar
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275)
 	overflow: hidden
-	background: #FFFFFF
-	position: relative
-	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease
-	&::before
-		content: ''
-		position: absolute
-		top: 0
-		left: 1.35rem
-		right: 1.35rem
-		height: 2px
-		background: linear-gradient(90deg, transparent, rgba(25,113,194,0.65), transparent)
-		opacity: 0.7
 	&:hover
-		transform: translateY(-2px)
-		box-shadow: 0 12px 26px rgba(0,0,0,0.05), 0 3px 10px rgba(0,0,0,0.03)
-		background: var(--stone)
+		background: var(--color-white)
+		box-shadow: var(--shadow11)
 
-.ac-0, .ac-1
+.item0, .item1
 	@media screen and (min-width: 1025px)
-		border-right: var(--stroke-subtle)
-	@media screen and (max-width: 1024px)
-		border-bottom: var(--stroke-subtle)
+		border-right: var(--border-dark)
 
 .area-image
 	img
@@ -128,53 +114,30 @@
 	gap: 0.7rem
 	padding: 1.3rem 1.35rem
 
-.area-head
-	display: flex
-	align-items: center
-	justify-content: space-between
-	gap: 0.75rem
-	flex-wrap: wrap
-
-.area-kicker
-	font-size: 0.68rem
-	letter-spacing: 0.12em
-	color: #5bb98c
-
-.area-count
-	font-size: 0.74rem
-	color: var(--text-ghost)
-
-.area-links
-	display: flex
-	flex-direction: column
-	gap: 0
-	padding-top: 0.2rem
-	border-top: var(--stroke-subtle)
 
 .area-link
 	display: flex
 	align-items: center
 	justify-content: space-between
 	gap: 0.75rem
-	font-size: 1rem
-	line-height: 1.45
 	padding: 0.72rem 0
 	border-bottom: var(--stroke-subtle)
 	transition: color 0.12s ease, transform 0.12s ease
 	&:hover
-		color: var(--theme)
+		p
+			color: var(--theme)
 		.area-arrow
 			transform: translateX(2px)
 	&:last-child
 		border-bottom: none
 
 .area-arrow
-	font-size: 0.8rem
 	color: var(--grey-std)
 	transition: transform 0.12s ease, color 0.12s ease
+	p
+		color: var(--grey-std)
 
 .area-link-dim
-	font-size: 1rem
 	line-height: 1.45
 	color: var(--grey-std)
 	padding: 0.72rem 0

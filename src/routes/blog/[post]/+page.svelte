@@ -2,26 +2,27 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	const BASE = 'https://www.bodharesearch.in';
-	import '$lib/styles/blog.sass';
 	import { categoryPosts } from '$lib/utils/localpulls';
 	import Container from '$lib/comps/container.svelte';
-	import Parallax from '$lib/comps/parallaxfull.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
+	import Title from '$lib/comps/page-title.svelte'
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 
 	let posts = $state<any>([]);
 	let { data } = $props();
 
 	let ref = $state<HTMLElement | null>(null);
+	let sY = $state(0);
 
-const formattedDate = $derived(
-	new Date(data.date).toLocaleDateString('en-US', {
-		month: 'long',
-		day: 'numeric',
-		year: 'numeric'
-	})
-);
+	const formattedDate = $derived(
+		new Date(data.date).toLocaleDateString('en-US', {
+			month: 'long',
+			day: 'numeric',
+			year: 'numeric'
+		})
+	);
 
 	const firstAuthor = $derived(
 		Array.isArray(data.author) ? data.author[0] : data.author
@@ -57,68 +58,109 @@ const jsonld = $derived(
 	});
 </script>
 
+<svelte:window bind:scrollY={sY}/>
+
 <Head title={data.title} metaDescription={data.excerpt} metaImage={data.image} metaUrl={BASE + page.url.pathname} {jsonld} />
 
-<Parallax isClass="is100" imageLink={data.image} />
+
 <Pageprogress --thispagebackground="var(--theme)" --thispageheight="3px" {ref} />
 
 <Container narrow={true} scaled={true}>
-<div class="box std padded">
-
-	<div class="article-header">
-		<p class="breadcrumb tt-u">
-			<a class="linkonhover" href="/">Bodha</a>
-			<span class="sep">></span>
-			<a class="linkonhover" href="/blog">Blog</a>
-		</p>
-		<h1 class="page-title source-serif width80">{data.title}</h1>
-		<p class="small-text width60 grey">{data.excerpt}</p>
-		<div class="author-row">
-			<a class="author-name tt-u blank linkonhover" href="/blog/writers/{data.author}">{data.author}</a>
-			<span class="author-sep">·</span>
-			<span class="author-words">{data.words} words</span>
-			<span class="author-sep">·</span>
-			<span class="author-words">{formattedDate}</span>
+<div class="blog-heading stdbox padded-ontop">
+	<div class="elembox blog-title-area xcenter mleft ta-c">
+		<Crumb centered={true} item1="Bodha" item1Link="/" show2={true} item2="Blog" item2linked={true} item2Link="/blog"/>
+		<h1 class="post-title source-serif width80 self-center">{data.title}</h1>
+		<div class="textbox stone-box width60 self-center">
+		<p class="altprim">{data.excerpt}</p>
+		<div class="info row ycenter xcenter mleft">
+			<div class="line left-line"></div>
+			<p class="small-text"><a class="linked" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
+			<div class="line right-line"></div>
 		</div>
-		<div class="tag-row">
+		<div class="tag-row row self-center">
 			{#each data.tags as tag}
-			<a class="tag-pill colored tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			<a class="tag-pill themed tt-u blank" href="/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</div>
+		</div>
 	</div>
-
-	<article class="blog-article" bind:this={ref}>
+	<div class="box blog-image-area xcenter">
+		<img src={data.image} alt={data.title} style="transform: translateY({-sY/12}px)"/>
+	</div>
+	<div class="article-slate">
+	<article class="blog-article self-center" bind:this={ref}>
 		<data.content />
+		<div class="row share-row ycenter cgap16 xbetween">
+			<Social urlToShare={page.url.href} />
+			<a class="small-button" href="/blog">← Back to Blog</a>
+		</div>
 	</article>
-
-	<div class="share-row">
-		<Social urlToShare={page.url.href} />
-		<a class="back-link linkonhover" href="/blog">← Back to Blog</a>
 	</div>
-
+</div>
+<div class="stdbox padded bordertop">
 	{#if posts && posts.length > 0}
-	<div class="box std bordertop ptop32">
-		<p class="eyebrow tt-u">More in this category</p>
-		<div class="standard-grid grid three">
+		<Title text="More Like This"/>
+		<div class="grid four white-grid">
 			{#each posts as item, i}
-			<a class="more-card hover-card blank number{i}" href={item.linkpath}>
-				<h3 class="blog-title source-serif">{item.meta.title}</h3>
-				<p class="more-excerpt">{item.meta.excerpt}</p>
-				<div class="more-tags">
-					{#each item.meta.tags as tag}
-					<span class="tag-pill tt-u">{tag.replaceAll('-', ' ')}</span>
-					{/each}
-				</div>
-			</a>
+				<a class="postcard blank labelbox card-padded" href={item.linkpath}>
+					<p class="highlight-text tight w500">{item.meta.title}</p>
+					<p class="small-text grey">{item.meta.excerpt}</p>
+					<div class="box foot self-bottom bordertop ptop8">
+					<p class="tag-text lgrey tt-u">{item.meta.author} | {item.meta.words} words</p>
+					<div class="row of-info mwrap cgap8 rgap8">
+						{#each item.meta.tags as tag}
+							<p class="tag-pill hollow themed tt-u">{tag.replaceAll('-',' ')}</p>
+						{/each}
+					</div>
+					</div>
+				</a>
 			{/each}
 		</div>
-	</div>
 	{/if}
-
 </div>
 </Container>
 
 <style lang="sass">
+
+.postcard
+	background: var(--color-white)
+	&:hover
+		background: var(--color-stone)
+
+.share-row
+	border-top: var(--border-main)
+	padding-top: 2rem
+	margin-top: 2rem
+
+.stone-box
+	@media screen and (min-width: 1025px)
+		padding: 2rem
+		background: var(--color-stone)
+		border: var(--border-main)
+
+.blog-image-area
+	overflow: hidden
+	border-radius: 5px
+	position: relative
+	img
+		object-fit: cover
+		position: absolute
+		width: 100%
+	@media screen and (max-width: 1024px)
+		height: 200px
+		img
+			height: 630px
+	@media screen and (min-width: 1025px)
+		height: 540px
+		img
+			height: 630px
+
+.line
+	height: 1px
+	width: 20%
+	background: var(--color-grey-1)
+	@media screen and (max-width: 1024px)
+		display: none
 
 .breadcrumb
 	font-size: 10px
@@ -180,7 +222,8 @@ const jsonld = $derived(
 .blog-article
 	width: 100%
 	@media screen and (min-width: 1025px)
-		width: 900px
+		width: 992px
+		padding: 2rem
 
 .share-row
 	display: flex
