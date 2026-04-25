@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		<div class="grid four tight">
-			{#each gateways as item}
+			{#each gateways as item, i}
 			<a class="box blank labelbox card-padded top-card popping" href={item.href}>
 				<div class="theme-line"></div>
 				<p class="tag-text w500 lgrey tt-u">{item.kicker}</p>

@@ -84,10 +84,24 @@
   dependencies:
     "@embedpdf/models" "2.14.1"
 
+"@embedpdf/plugin-rotate@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-rotate/-/plugin-rotate-2.14.1.tgz#2a34a6acd2747778031e3b348b742afe12b4341c"
+  integrity sha512-ILu0Y6bXzLQg63cj9pAJ0ime5m5HVDOSBOyTT/Nb47hBfDLSbTWQuvAHZXwxPhGOjM5Pn6gHssKWZjW2WiXkBQ==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
 "@embedpdf/plugin-scroll@^2.14.1":
   version "2.14.1"
   resolved "https://registry.yarnpkg.com/@embedpdf/plugin-scroll/-/plugin-scroll-2.14.1.tgz#bcccf6825653d40a7c68d1454059af805a12ae11"
   integrity sha512-ppnP4t43EVNiXr2coEwybQ7BYucbUEpdTGlcEBm38DhLywgseVVySrcIMx7rHdM7ZylsW7uwS84hCFndTpPezg==
+  dependencies:
+    "@embedpdf/models" "2.14.1"
+
+"@embedpdf/plugin-spread@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@embedpdf/plugin-spread/-/plugin-spread-2.14.1.tgz#5203c759ed570dbdb1472d71eb789ebe2ce07bb2"
+  integrity sha512-MychoG54eYqjB+8/1/ArKYF+4eonULtBuGPqU72MO9t/Nadl8nNThaPrOW/eKQr3zQu1Af3KO7ng6tm6Umz4rA==
   dependencies:
     "@embedpdf/models" "2.14.1"
 

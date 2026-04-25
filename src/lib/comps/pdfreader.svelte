@@ -2,36 +2,24 @@
 	import { usePdfiumEngine } from '@embedpdf/engines/svelte';
 	import { EmbedPDF } from '@embedpdf/core/svelte';
 	import { createPluginRegistration } from '@embedpdf/core';
-
-	import {
-		DocumentManagerPluginPackage,
-		DocumentContent
-	} from '@embedpdf/plugin-document-manager/svelte';
-
-	import {
-		ViewportPluginPackage,
-		Viewport
-	} from '@embedpdf/plugin-viewport/svelte';
-
-	import {
-		ScrollPluginPackage,
-		Scroller,
-		ScrollStrategy,
-		useScroll,
-		type RenderPageProps
-	} from '@embedpdf/plugin-scroll/svelte';
-
-	import {
-		RenderPluginPackage,
-		RenderLayer
-	} from '@embedpdf/plugin-render/svelte';
-
-	import {
-		ZoomPluginPackage,
-		useZoom,
-		ZoomMode,
-		ZoomGestureWrapper
-	} from '@embedpdf/plugin-zoom/svelte';
+	import { SpreadPluginPackage, useSpread, SpreadMode } from '@embedpdf/plugin-spread/svelte';
+	import { RotatePluginPackage, useRotate, Rotate } from '@embedpdf/plugin-rotate/svelte';
+	import { DocumentManagerPluginPackage, DocumentContent } from '@embedpdf/plugin-document-manager/svelte';
+	import { ViewportPluginPackage, Viewport } from '@embedpdf/plugin-viewport/svelte';
+	import { ScrollPluginPackage, Scroller, ScrollStrategy, useScroll, type RenderPageProps } from '@embedpdf/plugin-scroll/svelte';
+	import { RenderPluginPackage, RenderLayer } from '@embedpdf/plugin-render/svelte';
+	import { ZoomPluginPackage, useZoom, ZoomMode, ZoomGestureWrapper } from '@embedpdf/plugin-zoom/svelte';
+	import Prev from '$lib/icons/pdf/prev.svelte'
+	import Next from '$lib/icons/pdf/next.svelte'
+	import Zoomin from '$lib/icons/pdf/zoomin.svelte'
+	import Zoomout from '$lib/icons/pdf/zoomout.svelte'
+	import Double from '$lib/icons/pdf/double.svelte'
+	import External from '$lib/icons/pdf/external.svelte'
+	import Focus from '$lib/icons/pdf/focus.svelte'
+	import Full from '$lib/icons/pdf/full.svelte'
+	import Horizontal from '$lib/icons/pdf/horizontal.svelte'
+	import Single from '$lib/icons/pdf/single.svelte'
+	import Vertical from '$lib/icons/pdf/vertical.svelte'
 
 	// props
 	let {
@@ -44,17 +32,24 @@
 		height?: string;
 	} = $props();
 
+	let scrollStrategy = $state(ScrollStrategy.Vertical);
+
+	function setStrategy(scroll: ReturnType<typeof useScroll>, strategy: ScrollStrategy) {
+		scrollStrategy = strategy;
+		scroll.provides?.setScrollStrategy(strategy);
+	}
+
 	// convert Google Drive → direct PDF
-function driveToPdfUrl(url: string) {
-	const fileMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
-	const idMatch = url.match(/[?&]id=([^&]+)/);
+	function driveToPdfUrl(url: string) {
+		const fileMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+		const idMatch = url.match(/[?&]id=([^&]+)/);
 
-	const id = fileMatch?.[1] || idMatch?.[1];
+		const id = fileMatch?.[1] || idMatch?.[1];
 
-	if (!id) return url;
+		if (!id) return url;
 
-	return `https://drive.google.com/uc?export=media&id=${id}`;
-}
+		return `https://drive.google.com/uc?export=media&id=${id}`;
+	}
 
 	const finalSrc = $derived(driveToPdfUrl(src));
 
@@ -71,56 +66,53 @@ function driveToPdfUrl(url: string) {
 		}),
 		createPluginRegistration(RenderPluginPackage),
 		createPluginRegistration(ZoomPluginPackage, {
-			defaultZoomLevel: ZoomMode.FitWidth,
+			defaultZoomLevel: ZoomMode.FitPage,
 			minZoom: 0.4,
 			maxZoom: 4
-		})
+		}),
+		createPluginRegistration(SpreadPluginPackage, {
+			defaultSpreadMode: SpreadMode.None
+		}),
+		createPluginRegistration(RotatePluginPackage)
 	]);
 
-$effect(() => {
-	console.log('PDF finalSrc:', finalSrc);
-});
+	$effect(() => {
+		console.log('PDF finalSrc:', finalSrc);
+	});
 </script>
 
 {#snippet Toolbar(docId: string)}
 	{@const scroll = useScroll(() => docId)}
 	{@const zoom = useZoom(() => docId)}
-
+	{@const spread = useSpread(() => docId)}
 	<div class="toolbar">
-		<button onclick={() => scroll.provides?.scrollToPreviousPage()}>
-			Prev
-		</button>
-
-		<span>
-			{scroll.state.currentPage} / {scroll.state.totalPages}
-		</span>
-
-		<button onclick={() => scroll.provides?.scrollToNextPage()}>
-			Next
-		</button>
-
-		<span class="divider"></span>
-
-		<button onclick={() => zoom.provides?.zoomOut()}>−</button>
-
-		<span>
-			{Math.round(zoom.state.currentZoomLevel * 100)}%
-		</span>
-
-		<button onclick={() => zoom.provides?.zoomIn()}>+</button>
-
-		<button onclick={() => zoom.provides?.requestZoom(ZoomMode.FitWidth)}>
-			Fit Width
-		</button>
-
-		<button onclick={() => zoom.provides?.requestZoom(ZoomMode.FitPage)}>
-			Fit Page
-		</button>
-
-		<a href={finalSrc} target="_blank">Open</a>
+		<div class="row ycenter cgap4 tray1">
+			<button class="pdf-btn" onclick={() => scroll.provides?.scrollToPreviousPage()}><Prev/></button>
+			<p class="tag-text">{scroll.state.currentPage} / {scroll.state.totalPages}</p>
+			<button class="pdf-btn" onclick={() => scroll.provides?.scrollToNextPage()}><Next/></button>
+		</div>
+		<div class="row ycenter cgap4 tray2">
+			<button class="pdf-btn" onclick={() => zoom.provides?.zoomOut()}><Zoomout/></button>
+			<p class="tag-text">{Math.round(zoom.state.currentZoomLevel * 100)}%</p>
+			<button class="pdf-btn" onclick={() => zoom.provides?.zoomIn()}><Zoomin/></button>
+		</div>
+		<div class="row ycenter cgap8 tray3">
+			<button class="pdf-btn" onclick={() => zoom.provides?.requestZoom(1)}><Focus/></button>
+			<button class="pdf-btn" onclick={() => spread.provides?.setSpreadMode(SpreadMode.None)}><Single/></button>
+			<button class="pdf-btn" onclick={() => spread.provides?.setSpreadMode(SpreadMode.Odd)}><Double/></button>
+			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Vertical)}><Vertical/></button>
+			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Horizontal)}><Horizontal/></button>
+			<button class="pdf-btn" onclick={() => document.querySelector('.reader')?.requestFullscreen()}><Full/></button>
+		<a class="pdf-btn" href={finalSrc} target="_blank" rel="noreferrer"><External/></a>
+		</div>
 	</div>
 {/snippet}
-
+{#snippet SetInitialZoom(docId: string)}
+	{@const zoom = useZoom(() => docId)}
+	{#if zoom.provides}
+		{@const _ = setTimeout(() => zoom.provides?.requestZoom(1), 0)}
+	{/if}
+{/snippet}
 <section class="reader" style={`height:${height}`}>
 	{#if engine.isLoading || !engine.engine}
 		<div class="loading">Loading engine…</div>
@@ -131,27 +123,20 @@ $effect(() => {
 			{#snippet children({ activeDocumentId })}
 				{#if activeDocumentId}
 					{@const docId = activeDocumentId}
-
 					<DocumentContent documentId={docId}>
 						{#snippet children(content)}
 							{#if content.isLoaded}
+								{@render SetInitialZoom(docId)}
+								<!-- 👈 ADD HERE -->
 								{@render Toolbar(docId)}
-
 								<div class="viewer">
 									{#snippet renderPage(page: RenderPageProps)}
-										<div
-											class="page"
-											style:width="{page.width}px"
-											style:height="{page.height}px"
-										>
-											<RenderLayer
-												documentId={docId}
-												pageIndex={page.pageIndex}
-											/>
+										<div class="page" style:width="{page.width}px" style:height="{page.height}px">
+											<RenderLayer documentId={docId} pageIndex={page.pageIndex} />
 										</div>
 									{/snippet}
 
-									<Viewport documentId={docId}>
+									<Viewport documentId={docId} class="viewport">
 										<ZoomGestureWrapper documentId={docId}>
 											<Scroller documentId={docId} {renderPage} />
 										</ZoomGestureWrapper>
@@ -169,46 +154,65 @@ $effect(() => {
 </section>
 
 <style lang="sass">
-	.reader
-		display: flex
-		flex-direction: column
-		border: 1px solid rgba(0,0,0,0.1)
-		border-radius: 16px
-		overflow: hidden
 
-	.toolbar
+.toolbar
+	border-bottom: var(--border-dark)
+	display: grid
+	grid-template-columns: repeat(2, 1-fr)
+	justify-content: space-evenly
+	background: var(--color-back)
+	.tray3
+		grid-column: span 2
+	@media screen and (min-width: 1025px)
 		display: flex
-		gap: 0.5rem
+		flex-direction: row
 		align-items: center
-		padding: 0.6rem
-		background: #fff
-		border-bottom: 1px solid rgba(0,0,0,0.1)
+		justify-content: center
+		padding-top: 0.5rem
+		padding-bottom: 0.5rem
 
-		button, a
-			padding: 0.35rem 0.6rem
-			border: 1px solid rgba(0,0,0,0.15)
-			border-radius: 999px
-			background: #fff
-			cursor: pointer
-			text-decoration: none
+.pdf-btn
+	background: none
+	border: none
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 8px
+	transform-origin: center center
+	&:hover
+		transform: scale(0.95)
 
-	.divider
-		width: 1px
-		height: 1.2rem
-		background: rgba(0,0,0,0.2)
+.reader
+	width: 100%
+	height: 82vh
+	min-height: 600px
+	display: flex
+	flex-direction: column
+	border: 1px solid rgba(0,0,0,0.1)
+	border-radius: 4px
+	overflow: hidden
 
-	.viewer
-		flex: 1
-		background: #eee
+.viewer
+	flex: 1
+	min-height: 0
+	width: 100%
+	background: var(--color-stone)
 
-	.page
-		margin: 0 auto
-		background: white
-		box-shadow: 0 8px 24px rgba(0,0,0,0.2)
+:global(.viewport)
+	width: 100%
+	height: 100%
+	overflow: auto
 
-	.loading
-		height: 100%
-		display: grid
-		place-items: center
-		color: #666
+.page
+	position: relative
+	margin: 0 auto
+	background: white
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2)
+
+.loading
+	height: 100%
+	display: grid
+	place-items: center
+	color: #666
+
 </style>
