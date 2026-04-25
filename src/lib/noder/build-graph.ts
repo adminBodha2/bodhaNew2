@@ -100,7 +100,8 @@ function isNodeType(type: string): type is NodeType {
     'lab',
     'external-article',
     'book',
-    'concept'
+    'concept',
+    'ak-varga'
   ].includes(type);
 }
 
@@ -135,7 +136,6 @@ for (const item of allItems) {
 
 for (const entry of allTags) {
   const tag = normalizeTag(entry.tag);
-
   addNode({
     id: `concept:${tag}`,
     type: 'concept',
@@ -147,6 +147,36 @@ for (const entry of allTags) {
       source: 'tag'
     }
   });
+}
+
+// Create concept nodes for parent tags too
+
+for (const entry of allTags) {
+  if (!entry.parent) continue;
+
+  const parentTag = normalizeTag(entry.parent);
+
+  addNode({
+    id: `concept:${parentTag}`,
+    type: 'concept',
+    title: titleFromSlug(parentTag),
+    slug: parentTag,
+    description: '',
+    tags: [],
+    meta: {
+      source: 'derived'
+    }
+  });
+}
+
+for (const entry of allTags) {
+  if (!entry.parent) continue;
+
+  const childId = getConceptId(entry.tag);
+  const parentId = getConceptId(entry.parent);
+
+  addEdge(parentId, childId, 'BROADER_THAN');
+  addEdge(childId, parentId, 'NARROWER_THAN');
 }
 
 // 3. Create missing concept nodes from item tags

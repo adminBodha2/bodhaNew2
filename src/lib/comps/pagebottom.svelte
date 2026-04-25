@@ -11,10 +11,10 @@
 	<div class="foot-inner narrowbox padded elembox">
 		<div class="foot-top">
 			<div class="foot-brand">
+				<Designed/>
 				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.<br>
 					Site designed at Bodha Lab | <a class="linkedlight" href="/docs/terms-and-conditions">Terms and Conditions</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds.</a>
 				</p>
-				<Designed/>
 			</div>
 			<button
 				class="blank foot-scroll"

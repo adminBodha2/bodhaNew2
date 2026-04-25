@@ -60,7 +60,7 @@
 	<header class="row ycenter">
 		<Header />
 	</header>
-	<main>
+	<main style="--scroll-y: {sY * 0.2}px">
 		{@render children?.()}
 	</main>
 	<footer class="column">
@@ -72,10 +72,20 @@
 <style lang="sass">
 
 main
-	background-image: linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px)
-	background-size: 5rem 5rem
+	background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
+	transition: background-size 0.5s ease
+	background-position: center var(--scroll-y)
 	@media screen and (max-width: 1024px)
 		background-size: 2rem 2rem
+	@media screen and (min-width: 1025px)
+		transition: background-position 0.1s linear
+		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
+
+@keyframes breathers
+	from
+		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
+	to
+		background-size: 4rem 4rem, 4rem 4rem, 1rem 1rem, 1rem 1rem
 
 header
 	width: 100%
@@ -86,7 +96,7 @@ header
 	border-bottom: 1px solid rgba(0,0,0,0.06)
 	justify-content: center
 	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.12)
-	transition: box-shadow 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030)
+	transition: box-shadow 300ms cubic-bezier(0.665, 0.010, 0.795, 0.655)
 	&:hover
 		box-shadow: 0 1px 0 rgba(0,0,0,0), 0 8px 20px rgba(0,0,0,0), 0 4px 4px rgba(0,0,0,0)
 	@media screen and (min-width: 1025px)

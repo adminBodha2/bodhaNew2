@@ -2,7 +2,6 @@
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 

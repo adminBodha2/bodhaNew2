@@ -49,3 +49,13 @@ export function getNodeBySlug(slug: string) {
 export function getNodeScore(nodeId: string) {
   return (edgesTo.get(nodeId) || []).length;
 }
+
+export function getNodeByRoute(route: string) {
+  return nodes.find((node) => node.meta.route === route);
+}
+
+export function getConceptsForNode(nodeId: string) {
+  return getOutgoing(nodeId)
+    .map((edge) => nodeById.get(edge.to))
+    .filter((node): node is GraphNode => !!node && node.type === 'concept');
+}

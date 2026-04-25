@@ -1,1943 +1,2590 @@
 [
  {
-   "tag": "4500-ybp"
+   "tag": "4500-ybp",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "abhinavagupta"
+   "tag": "abhinavagupta",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "academic-conventions"
+   "tag": "academic-conventions",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "academic-critique"
+   "tag": "academic-critique",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "academic-culture"
+   "tag": "academic-culture",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "academic-discourse"
+   "tag": "academic-discourse",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "academic-method"
+   "tag": "academic-method",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "action-and-knowledge"
+   "tag": "action-and-knowledge",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "administration"
+   "tag": "administration",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "advaita-vedanta"
+   "tag": "advaita-vedanta",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "aesthetic-education"
+   "tag": "aesthetic-education",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "aesthetic-experience"
+   "tag": "aesthetic-experience",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "aesthetics"
+   "tag": "aesthetics",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "afterlife"
+   "tag": "afterlife",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "agnihotra"
+   "tag": "agnihotra",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "ait-critique"
+   "tag": "ait-critique",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "ait-linguistics"
+   "tag": "ait-linguistics",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "amarakosha"
+   "tag": "amarakosha",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "anatolian-languages"
+   "tag": "anatolian-languages",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "ancient-agriculture"
+   "tag": "ancient-agriculture",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "ancient-dna"
+   "tag": "ancient-dna",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "ancient-dna-critique"
+   "tag": "ancient-dna-critique",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "ancient-geography"
+   "tag": "ancient-geography",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ancient-india"
+   "tag": "ancient-india",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ancient-indian-history"
+   "tag": "ancient-indian-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ancient-iran"
+   "tag": "ancient-iran",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ancient-religion"
+   "tag": "ancient-religion",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ancient-subsistence"
+   "tag": "ancient-subsistence",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "ancient-trade"
+   "tag": "ancient-trade",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ancient-urban-sites"
+   "tag": "ancient-urban-sites",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "animal-domestication"
+   "tag": "animal-domestication",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "anthology"
+   "tag": "anthology",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "antisemitism"
+   "tag": "antisemitism",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "anveshi"
+   "tag": "anveshi",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "aphorisms"
+   "tag": "aphorisms",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "applied-science"
+   "tag": "applied-science",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "archaeoastronomy"
+   "tag": "archaeoastronomy",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "archaeobotany"
+   "tag": "archaeobotany",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "archaeological-decipherment"
+   "tag": "archaeological-decipherment",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "archaeological-methodology"
+   "tag": "archaeological-methodology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "archaeological-stratigraphy"
+   "tag": "archaeological-stratigraphy",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "archaeological-synthesis"
+   "tag": "archaeological-synthesis",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "archaeometallurgy"
+   "tag": "archaeometallurgy",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "art-theory"
+   "tag": "art-theory",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "arts-classification"
+   "tag": "arts-classification",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "arya-dasa-conflict"
+   "tag": "arya-dasa-conflict",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "aryan-culture"
+   "tag": "aryan-culture",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "aryan-debate"
+   "tag": "aryan-debate",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "aryan-migration"
+   "tag": "aryan-migration",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "aryan-problem"
+   "tag": "aryan-problem",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "ashva"
+   "tag": "ashva",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "asian-prehistory"
+   "tag": "asian-prehistory",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "atman"
+   "tag": "atman",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "austroasiatic"
+   "tag": "austroasiatic",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "autobiographical-essay"
+   "tag": "autobiographical-essay",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "autochthonous-theory"
+   "tag": "autochthonous-theory",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "avatara-doctrine"
+   "tag": "avatara-doctrine",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ayodhya-history"
+   "tag": "ayodhya-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "battle-of-ten-kings"
+   "tag": "battle-of-ten-kings",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "bhagavad-gita"
+   "tag": "bhagavad-gita",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "bhakti-theology"
+   "tag": "bhakti-theology",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "bhartrhari"
+   "tag": "bhartrhari",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "bioarchaeology"
+   "tag": "bioarchaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "body-practices"
+   "tag": "body-practices",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "bone-tools"
+   "tag": "bone-tools",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "brahma-sutra"
+   "tag": "brahma-sutra",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "brahman"
+   "tag": "brahman",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "brahman-as-bliss"
+   "tag": "brahman-as-bliss",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "brahman-figure"
+   "tag": "brahman-figure",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "brahmasiddhi"
+   "tag": "brahmasiddhi",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "bronze-age-india"
+   "tag": "bronze-age-india",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "bronze-age-weapons"
+   "tag": "bronze-age-weapons",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "categories"
+   "tag": "categories",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "cattle-genomics"
+   "tag": "cattle-genomics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "cavalli-sforza"
+   "tag": "cavalli-sforza",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "central-asian-antecedents"
+   "tag": "central-asian-antecedents",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "chalcolithic-culture"
+   "tag": "chalcolithic-culture",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "chronicle"
+   "tag": "chronicle",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "civilizational-consciousness"
+   "tag": "civilizational-consciousness",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-crisis"
+   "tag": "civilizational-crisis",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-ethos"
+   "tag": "civilizational-ethos",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-future"
+   "tag": "civilizational-future",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-learning"
+   "tag": "civilizational-learning",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-recovery"
+   "tag": "civilizational-recovery",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-self-understanding"
+   "tag": "civilizational-self-understanding",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "civilizational-thought"
+   "tag": "civilizational-thought",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "classical-history"
+   "tag": "classical-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "climate-archaeology"
+   "tag": "climate-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "colonial-history"
+   "tag": "colonial-history",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "commentarial-study"
+   "tag": "commentarial-study",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "comparative-analysis"
+   "tag": "comparative-analysis",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "comparative-darshanas"
+   "tag": "comparative-darshanas",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "comparative-linguistics"
+   "tag": "comparative-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "comparative-reception"
+   "tag": "comparative-reception",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "comparative-religion"
+   "tag": "comparative-religion",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "consciousness"
+   "tag": "consciousness",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "contextual-reading"
+   "tag": "contextual-reading",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "continuity-and-change"
+   "tag": "continuity-and-change",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "cosmology"
+   "tag": "cosmology",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "courtly-culture"
+   "tag": "courtly-culture",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "creation-doctrine"
+   "tag": "creation-doctrine",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "critical-review"
+   "tag": "critical-review",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "criticism"
+   "tag": "criticism",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "cross-cultural-exchange"
+   "tag": "cross-cultural-exchange",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "cultural-education"
+   "tag": "cultural-education",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "cultural-heritage"
+   "tag": "cultural-heritage",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "cultural-history"
+   "tag": "cultural-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "cultural-memory"
+   "tag": "cultural-memory",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "cultural-renewal"
+   "tag": "cultural-renewal",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "cultural-skills"
+   "tag": "cultural-skills",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "cultural-synthesis"
+   "tag": "cultural-synthesis",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "culture"
+   "tag": "culture",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "cyclical-time"
+   "tag": "cyclical-time",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "dasharajna"
+   "tag": "dasharajna",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "death-dialogue"
+   "tag": "death-dialogue",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "debate-theory"
+   "tag": "debate-theory",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "decolonization"
+   "tag": "decolonization",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "demographic-history"
+   "tag": "demographic-history",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "design"
+   "tag": "design",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "devanagari-text"
+   "tag": "devanagari-text",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "devi"
+   "tag": "devi",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "devi-mahatmya"
+   "tag": "devi-mahatmya",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "devotional-practice"
+   "tag": "devotional-practice",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "devotional-worship"
+   "tag": "devotional-worship",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "dharma"
+   "tag": "dharma",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "dharmashastra"
+   "tag": "dharmashastra",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "disciplinary-map"
+   "tag": "disciplinary-map",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "doctrinal-diversity"
+   "tag": "doctrinal-diversity",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "doctrinal-essay"
+   "tag": "doctrinal-essay",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "doctrinal-outline"
+   "tag": "doctrinal-outline",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "doctrinal-summary"
+   "tag": "doctrinal-summary",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "doctrinal-survey"
+   "tag": "doctrinal-survey",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "doctrinal-synthesis"
+   "tag": "doctrinal-synthesis",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "dramatic-theory"
+   "tag": "dramatic-theory",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "dravidian-culture"
+   "tag": "dravidian-culture",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "dravidian-harappan"
+   "tag": "dravidian-harappan",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "dravidian-languages"
+   "tag": "dravidian-languages",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "dravidian-linguistics"
+   "tag": "dravidian-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "dravidian-script"
+   "tag": "dravidian-script",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "dualism"
+   "tag": "dualism",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "dynastic-history"
+   "tag": "dynastic-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "dynastic-lore"
+   "tag": "dynastic-lore",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "dynastic-memory"
+   "tag": "dynastic-memory",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "early-harappan"
+   "tag": "early-harappan",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "early-india"
+   "tag": "early-india",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "eastern-himalaya"
+   "tag": "eastern-himalaya",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ecology"
+   "tag": "ecology",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "education-history"
+   "tag": "education-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "eighteenth-century-india"
+   "tag": "eighteenth-century-india",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "electron-microscopy"
+   "tag": "electron-microscopy",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "embodiment"
+   "tag": "embodiment",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "encyclopedic-purana"
+   "tag": "encyclopedic-purana",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "epic-geography"
+   "tag": "epic-geography",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "epic-interpretation"
+   "tag": "epic-interpretation",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "epic-studies"
+   "tag": "epic-studies",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "epigraphic-studies"
+   "tag": "epigraphic-studies",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "epistemology"
+   "tag": "epistemology",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "ethics-textbook"
+   "tag": "ethics-textbook",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "ethnolinguistic-history"
+   "tag": "ethnolinguistic-history",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "eurasian-linguistics"
+   "tag": "eurasian-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "european-linguistics"
+   "tag": "european-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "evidence-evaluation"
+   "tag": "evidence-evaluation",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "expansion-models"
+   "tag": "expansion-models",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "festivals"
+   "tag": "festivals",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "fire-offering"
+   "tag": "fire-offering",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "five-sheaths"
+   "tag": "five-sheaths",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "flood-myth"
+   "tag": "flood-myth",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "formal-semantics"
+   "tag": "formal-semantics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "funerary-archaeology"
+   "tag": "funerary-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "funerary-rites"
+   "tag": "funerary-rites",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "gandhian-thought"
+   "tag": "gandhian-thought",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "ganga-himalaya"
+   "tag": "ganga-himalaya",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ganga-plain-agriculture"
+   "tag": "ganga-plain-agriculture",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "ganga-valley"
+   "tag": "ganga-valley",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "ganga-valley-archaeology"
+   "tag": "ganga-valley-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "genealogies"
+   "tag": "genealogies",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "genetic-debate"
+   "tag": "genetic-debate",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "genetic-diversity"
+   "tag": "genetic-diversity",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "genetic-evidence"
+   "tag": "genetic-evidence",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "genetic-interpretation"
+   "tag": "genetic-interpretation",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "genetic-linguistics"
+   "tag": "genetic-linguistics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "genetics-aryan-debate"
+   "tag": "genetics-aryan-debate",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "german-indology"
+   "tag": "german-indology",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "german-thought"
+   "tag": "german-thought",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "gond-genetics"
+   "tag": "gond-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "grammar-reference"
+   "tag": "grammar-reference",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "grammatical-semantics"
+   "tag": "grammatical-semantics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "haplogroup-r1a"
+   "tag": "haplogroup-r1a",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "harappan-burials"
+   "tag": "harappan-burials",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "harappan-chronology"
+   "tag": "harappan-chronology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "harappan-continuity"
+   "tag": "harappan-continuity",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "harappan-decline"
+   "tag": "harappan-decline",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "harappan-language"
+   "tag": "harappan-language",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "hatha-yoga"
+   "tag": "hatha-yoga",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "heidegger"
+   "tag": "heidegger",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "hermeneutics"
+   "tag": "hermeneutics",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "higher-knowledge"
+   "tag": "higher-knowledge",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "himalayan-linguistics"
+   "tag": "himalayan-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "himalayan-migration"
+   "tag": "himalayan-migration",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "hindu-institutions"
+   "tag": "hindu-institutions",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "hindu-renaissance"
+   "tag": "hindu-renaissance",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "hinduism"
+   "tag": "hinduism",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "hindukush-culture"
+   "tag": "hindukush-culture",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "hindutva-debate"
+   "tag": "hindutva-debate",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "historical-analysis"
+   "tag": "historical-analysis",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historical-consciousness"
+   "tag": "historical-consciousness",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historical-critical-method"
+   "tag": "historical-critical-method",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "historical-dating"
+   "tag": "historical-dating",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historical-geography"
+   "tag": "historical-geography",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historical-grammar"
+   "tag": "historical-grammar",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "historical-linguistics"
+   "tag": "historical-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "historical-memory"
+   "tag": "historical-memory",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historical-narratives"
+   "tag": "historical-narratives",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historical-survey"
+   "tag": "historical-survey",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "historiography"
+   "tag": "historiography",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "history"
+   "tag": "history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "history-of-philosophy"
+   "tag": "history-of-philosophy",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "homeland-theories"
+   "tag": "homeland-theories",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "horse-archaeology"
+   "tag": "horse-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "horticulture"
+   "tag": "horticulture",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "household-arts"
+   "tag": "household-arts",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "human-evolution"
+   "tag": "human-evolution",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "human-migration"
+   "tag": "human-migration",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "humanities-crisis"
+   "tag": "humanities-crisis",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "humanities-history"
+   "tag": "humanities-history",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "iconography"
+   "tag": "iconography",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ikshvaku-dynasty"
+   "tag": "ikshvaku-dynasty",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "illustrated-reference"
+   "tag": "illustrated-reference",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "indian-archaeology"
+   "tag": "indian-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indian-chronology"
+   "tag": "indian-chronology",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "indian-civilization"
+   "tag": "indian-civilization",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "indian-genetics"
+   "tag": "indian-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "indian-genomics"
+   "tag": "indian-genomics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "indian-historiography"
+   "tag": "indian-historiography",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "indian-knowledge-systems"
+   "tag": "indian-knowledge-systems",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "indian-population-genetics"
+   "tag": "indian-population-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "indian-prehistory"
+   "tag": "indian-prehistory",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indian-religious-history"
+   "tag": "indian-religious-history",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "indian-studies"
+   "tag": "indian-studies",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "indigenous-education"
+   "tag": "indigenous-education",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "indo-aryan-migration"
+   "tag": "indo-aryan-migration",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-continuity"
+   "tag": "indo-european-continuity",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-critique"
+   "tag": "indo-european-critique",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-debate"
+   "tag": "indo-european-debate",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-dispersal"
+   "tag": "indo-european-dispersal",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-genetics"
+   "tag": "indo-european-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "indo-european-linguistics"
+   "tag": "indo-european-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "indo-european-migration"
+   "tag": "indo-european-migration",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-mythology"
+   "tag": "indo-european-mythology",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-origins"
+   "tag": "indo-european-origins",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-studies"
+   "tag": "indo-european-studies",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-european-urheimat"
+   "tag": "indo-european-urheimat",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-greek-contact"
+   "tag": "indo-greek-contact",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "indo-iranian"
+   "tag": "indo-iranian",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "indo-iranian-divide"
+   "tag": "indo-iranian-divide",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-iranian-mythology"
+   "tag": "indo-iranian-mythology",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indo-uropean-branches"
+   "tag": "indo-uropean-branches",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indological-critique"
+   "tag": "indological-critique",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "indological-method"
+   "tag": "indological-method",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "indus-art"
+   "tag": "indus-art",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indus-chronology"
+   "tag": "indus-chronology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indus-decipherment"
+   "tag": "indus-decipherment",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indus-ganga-interaction"
+   "tag": "indus-ganga-interaction",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "indus-linguistics"
+   "tag": "indus-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "indus-script"
+   "tag": "indus-script",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "indus-seal-decipherment"
+   "tag": "indus-seal-decipherment",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "indus-seals"
+   "tag": "indus-seals",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indus-valley"
+   "tag": "indus-valley",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indus-valley-dating"
+   "tag": "indus-valley-dating",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "indus-valley-science"
+   "tag": "indus-valley-science",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "indus-valley-script"
+   "tag": "indus-valley-script",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "indus-vedic-continuity"
+   "tag": "indus-vedic-continuity",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "indus-vedic-timeline"
+   "tag": "indus-vedic-timeline",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "inference"
+   "tag": "inference",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "institutional-critique"
+   "tag": "institutional-critique",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "intellectual-biography"
+   "tag": "intellectual-biography",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "intellectual-freedom"
+   "tag": "intellectual-freedom",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "intellectual-history"
+   "tag": "intellectual-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "intellectual-sovereignty"
+   "tag": "intellectual-sovereignty",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "interdisciplinary-history"
+   "tag": "interdisciplinary-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "interdisciplinary-synthesis"
+   "tag": "interdisciplinary-synthesis",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "interpretation"
+   "tag": "interpretation",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "introductory-grammar"
+   "tag": "introductory-grammar",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "introductory-survey"
+   "tag": "introductory-survey",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "itihasa"
+   "tag": "itihasa",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "jewish-hindu-comparison"
+   "tag": "jewish-hindu-comparison",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "jurisprudence"
+   "tag": "jurisprudence",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "karika"
+   "tag": "karika",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "karma"
+   "tag": "karma",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "kashmir-history"
+   "tag": "kashmir-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "kashmir-shaivism"
+   "tag": "kashmir-shaivism",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "king-sudas"
+   "tag": "king-sudas",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "knowledge-classification"
+   "tag": "knowledge-classification",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "knowledge-means"
+   "tag": "knowledge-means",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "knowledge-politics"
+   "tag": "knowledge-politics",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "knowledge-representation"
+   "tag": "knowledge-representation",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "knowledge-systems-overview"
+   "tag": "knowledge-systems-overview",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "knowledge-theory"
+   "tag": "knowledge-theory",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "koenraad-elst"
+   "tag": "koenraad-elst",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "krishna-bhakti"
+   "tag": "krishna-bhakti",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "krishna-lineage"
+   "tag": "krishna-lineage",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "language"
+   "tag": "language",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-evolution"
+   "tag": "language-evolution",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-families"
+   "tag": "language-families",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-foundations"
+   "tag": "language-foundations",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-genetics"
+   "tag": "language-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "language-instruction"
+   "tag": "language-instruction",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-migration"
+   "tag": "language-migration",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-philosophy"
+   "tag": "language-philosophy",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-spread"
+   "tag": "language-spread",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-substrate"
+   "tag": "language-substrate",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "language-substrates"
+   "tag": "language-substrates",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "late-harappan"
+   "tag": "late-harappan",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "law-and-custom"
+   "tag": "law-and-custom",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "leadership"
+   "tag": "leadership",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "legal-procedure"
+   "tag": "legal-procedure",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "legal-tradition"
+   "tag": "legal-tradition",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "legitimacy"
+   "tag": "legitimacy",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "lexicon"
+   "tag": "lexicon",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "liberation"
+   "tag": "liberation",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "limits-of-cognition"
+   "tag": "limits-of-cognition",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "linga-symbolism"
+   "tag": "linga-symbolism",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "linguistic-epicenters"
+   "tag": "linguistic-epicenters",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "linguistic-ontology"
+   "tag": "linguistic-ontology",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "linguistic-parallels"
+   "tag": "linguistic-parallels",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "linguistic-reconstruction"
+   "tag": "linguistic-reconstruction",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "literary-history"
+   "tag": "literary-history",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "literary-unity"
+   "tag": "literary-unity",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "living-tradition"
+   "tag": "living-tradition",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "local-governance"
+   "tag": "local-governance",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "macrofamily-linguistics"
+   "tag": "macrofamily-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "mahabharata"
+   "tag": "mahabharata",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "mahabharata-appendix"
+   "tag": "mahabharata-appendix",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "mahabharata-method"
+   "tag": "mahabharata-method",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "mandukya-upanishad"
+   "tag": "mandukya-upanishad",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "mantra-theory"
+   "tag": "mantra-theory",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "manuscript-history"
+   "tag": "manuscript-history",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "marut-hymns"
+   "tag": "marut-hymns",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "mathematics"
+   "tag": "mathematics",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "meditation"
+   "tag": "meditation",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "mehrgarh"
+   "tag": "mehrgarh",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "mental-discipline"
+   "tag": "mental-discipline",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "metaphysics"
+   "tag": "metaphysics",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "methodology"
+   "tag": "methodology",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "methodology-critique"
+   "tag": "methodology-critique",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "migration-theories"
+   "tag": "migration-theories",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "mimamsa"
+   "tag": "mimamsa",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "mimamsa-basics"
+   "tag": "mimamsa-basics",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "mimamsa-sutra"
+   "tag": "mimamsa-sutra",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "mind"
+   "tag": "mind",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "modern-hinduism"
+   "tag": "modern-hinduism",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "modern-politics"
+   "tag": "modern-politics",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "modernity"
+   "tag": "modernity",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "moral-education"
+   "tag": "moral-education",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "moral-philosophy"
+   "tag": "moral-philosophy",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "morphology"
+   "tag": "morphology",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "multilingual-learning"
+   "tag": "multilingual-learning",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "munda-languages"
+   "tag": "munda-languages",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "musicology"
+   "tag": "musicology",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "mythic-genealogy"
+   "tag": "mythic-genealogy",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "mythic-narrative"
+   "tag": "mythic-narrative",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "narrative-literature"
+   "tag": "narrative-literature",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "narrative-structure"
+   "tag": "narrative-structure",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "natyashastra"
+   "tag": "natyashastra",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "navaratri"
+   "tag": "navaratri",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "navya-nyaya"
+   "tag": "navya-nyaya",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "negation"
+   "tag": "negation",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "neolithic-burials"
+   "tag": "neolithic-burials",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "neolithic-settlement"
+   "tag": "neolithic-settlement",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "newsletter"
+   "tag": "newsletter",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "non-dualism"
+   "tag": "non-dualism",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "normative-order"
+   "tag": "normative-order",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "north-east-india"
+   "tag": "north-east-india",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "northeast-india"
+   "tag": "northeast-india",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "nostratic-hypothesis"
+   "tag": "nostratic-hypothesis",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "nyaya"
+   "tag": "nyaya",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "nyaya-sutra"
+   "tag": "nyaya-sutra",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "nyaya-vaisheshika"
+   "tag": "nyaya-vaisheshika",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "om"
+   "tag": "om",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "ontology"
+   "tag": "ontology",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "opinions"
+   "tag": "opinions",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "oral-tradition"
+   "tag": "oral-tradition",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "orientalism"
+   "tag": "orientalism",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "out-of-india-theory"
+   "tag": "out-of-india-theory",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "paganism"
+   "tag": "paganism",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "palaeochannels"
+   "tag": "palaeochannels",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "paleoanthropology"
+   "tag": "paleoanthropology",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "paleocrops"
+   "tag": "paleocrops",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "paleogenomics"
+   "tag": "paleogenomics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "paleolinguistics"
+   "tag": "paleolinguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "paleolithic-india"
+   "tag": "paleolithic-india",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "paninian-sanskrit"
+   "tag": "paninian-sanskrit",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "paul-hacker"
+   "tag": "paul-hacker",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "performance-theory"
+   "tag": "performance-theory",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "performance-tradition"
+   "tag": "performance-tradition",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "philology"
+   "tag": "philology",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "philosophical-commentary"
+   "tag": "philosophical-commentary",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "philosophical-method"
+   "tag": "philosophical-method",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "philosophical-overview"
+   "tag": "philosophical-overview",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "philosophy-of-science"
+   "tag": "philosophy-of-science",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "pilgrimage"
+   "tag": "pilgrimage",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "pilgrimage-cycles"
+   "tag": "pilgrimage-cycles",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "pilgrimage-space"
+   "tag": "pilgrimage-space",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "plant-genetics"
+   "tag": "plant-genetics",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "plant-science"
+   "tag": "plant-science",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "poetic-vision"
+   "tag": "poetic-vision",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "poetics"
+   "tag": "poetics",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "political-ethics"
+   "tag": "political-ethics",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "political-strategy"
+   "tag": "political-strategy",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "political-structure"
+   "tag": "political-structure",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "population-admixture"
+   "tag": "population-admixture",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "population-history"
+   "tag": "population-history",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "population-linguistics"
+   "tag": "population-linguistics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "practical-knowledge"
+   "tag": "practical-knowledge",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "pramana-theory"
+   "tag": "pramana-theory",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "prana"
+   "tag": "prana",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "prehistoric-reconstruction"
+   "tag": "prehistoric-reconstruction",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "prehistoric-routes"
+   "tag": "prehistoric-routes",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "prehistoric-technology"
+   "tag": "prehistoric-technology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "prehistory"
+   "tag": "prehistory",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "programmatic-theses"
+   "tag": "programmatic-theses",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "proto-indo-european"
+   "tag": "proto-indo-european",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "public-argument"
+   "tag": "public-argument",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "puranic-chronology"
+   "tag": "puranic-chronology",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "puranic-narrative"
+   "tag": "puranic-narrative",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "puranic-worldview"
+   "tag": "puranic-worldview",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "purva-paksha"
+   "tag": "purva-paksha",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "question-dialogue"
+   "tag": "question-dialogue",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "race-theory"
+   "tag": "race-theory",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "radiocarbon-dating"
+   "tag": "radiocarbon-dating",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "raga"
+   "tag": "raga",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "rakhigarhi-dna"
+   "tag": "rakhigarhi-dna",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "rakhigarhi-excavations"
+   "tag": "rakhigarhi-excavations",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "rama"
+   "tag": "rama",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "ramayana-geography"
+   "tag": "ramayana-geography",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "rasa"
+   "tag": "rasa",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "realism"
+   "tag": "realism",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "rebus-method"
+   "tag": "rebus-method",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "regional-mahatmya"
+   "tag": "regional-mahatmya",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "religious-classification"
+   "tag": "religious-classification",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-conflict"
+   "tag": "religious-conflict",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "religious-foundations"
+   "tag": "religious-foundations",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-identity"
+   "tag": "religious-identity",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-instruction"
+   "tag": "religious-instruction",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-philosophy"
+   "tag": "religious-philosophy",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "religious-practice"
+   "tag": "religious-practice",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-reform"
+   "tag": "religious-reform",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-studies"
+   "tag": "religious-studies",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-tradition"
+   "tag": "religious-tradition",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-transformation"
+   "tag": "religious-transformation",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "religious-worldview"
+   "tag": "religious-worldview",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "remote-sensing"
+   "tag": "remote-sensing",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "renunciation"
+   "tag": "renunciation",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "report"
+   "tag": "report",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "research-methodology"
+   "tag": "research-methodology",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "resistance"
+   "tag": "resistance",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "revelation"
+   "tag": "revelation",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "review"
+   "tag": "review",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "rice-domestication"
+   "tag": "rice-domestication",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "rig-veda"
+   "tag": "rig-veda",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigveda"
+   "tag": "rigveda",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-battles"
+   "tag": "rigvedic-battles",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-deities"
+   "tag": "rigvedic-deities",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-etymology"
+   "tag": "rigvedic-etymology",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-geography"
+   "tag": "rigvedic-geography",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-goddesses"
+   "tag": "rigvedic-goddesses",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-history"
+   "tag": "rigvedic-history",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-horses"
+   "tag": "rigvedic-horses",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-hymns"
+   "tag": "rigvedic-hymns",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-names"
+   "tag": "rigvedic-names",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-poetry"
+   "tag": "rigvedic-poetry",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-sanskrit"
+   "tag": "rigvedic-sanskrit",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-terminology"
+   "tag": "rigvedic-terminology",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-terms"
+   "tag": "rigvedic-terms",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "rigvedic-tribes"
+   "tag": "rigvedic-tribes",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "ritual"
+   "tag": "ritual",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ritual-duty"
+   "tag": "ritual-duty",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "ritual-hermeneutics"
+   "tag": "ritual-hermeneutics",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "ritual-life"
+   "tag": "ritual-life",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ritual-observance"
+   "tag": "ritual-observance",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ritual-revival"
+   "tag": "ritual-revival",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "ritual-theory"
+   "tag": "ritual-theory",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "river-civilizations"
+   "tag": "river-civilizations",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "river-discovery"
+   "tag": "river-discovery",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sacred-geography"
+   "tag": "sacred-geography",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "sacred-knowledge"
+   "tag": "sacred-knowledge",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "sacred-places"
+   "tag": "sacred-places",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "sacred-speech"
+   "tag": "sacred-speech",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "samadhi"
+   "tag": "samadhi",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "sanauli-chariots"
+   "tag": "sanauli-chariots",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "sanauli-excavations"
+   "tag": "sanauli-excavations",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "sangam-era"
+   "tag": "sangam-era",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sangam-literature"
+   "tag": "sangam-literature",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "sankhya"
+   "tag": "sankhya",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "sanskrit"
+   "tag": "sanskrit",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "sanskrit-computation"
+   "tag": "sanskrit-computation",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "sanskrit-historiography"
+   "tag": "sanskrit-historiography",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sanskrit-pedagogy"
+   "tag": "sanskrit-pedagogy",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "sarasvati-debate"
+   "tag": "sarasvati-debate",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sarasvati-research"
+   "tag": "sarasvati-research",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sarasvati-river"
+   "tag": "sarasvati-river",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sarasvati-science"
+   "tag": "sarasvati-science",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sarasvati-to-ganga"
+   "tag": "sarasvati-to-ganga",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sarasvati-valley"
+   "tag": "sarasvati-valley",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "scholarly-biography"
+   "tag": "scholarly-biography",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "scholarly-critique"
+   "tag": "scholarly-critique",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "scientific-practice"
+   "tag": "scientific-practice",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "scriptural-exegesis"
+   "tag": "scriptural-exegesis",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "scriptural-structure"
+   "tag": "scriptural-structure",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "sectarian-theology"
+   "tag": "sectarian-theology",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "sectarian-traditions"
+   "tag": "sectarian-traditions",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "secularism"
+   "tag": "secularism",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "seer-tradition"
+   "tag": "seer-tradition",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "self-knowledge"
+   "tag": "self-knowledge",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "semantic-structure"
+   "tag": "semantic-structure",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "semantics"
+   "tag": "semantics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "shaiva-mythology"
+   "tag": "shaiva-mythology",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "shaiva-theology"
+   "tag": "shaiva-theology",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "shatrubodha"
+   "tag": "shatrubodha",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "sheldon-pollock"
+   "tag": "sheldon-pollock",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "sibri-cemetery"
+   "tag": "sibri-cemetery",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "sino-tibetan"
+   "tag": "sino-tibetan",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "sino-tibetan-origins"
+   "tag": "sino-tibetan-origins",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "sixty-four-arts"
+   "tag": "sixty-four-arts",
+   "parent": "arts-performance-and-aesthetics"
  },
  {
-   "tag": "skill-traditions"
+   "tag": "skill-traditions",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "social-custom"
+   "tag": "social-custom",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "social-institutions"
+   "tag": "social-institutions",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "social-order"
+   "tag": "social-order",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "social-philosophy"
+   "tag": "social-philosophy",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "solar-bull-symbolism"
+   "tag": "solar-bull-symbolism",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "soteriology"
+   "tag": "soteriology",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "source-criticism"
+   "tag": "source-criticism",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "sourcebook"
+   "tag": "sourcebook",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "sources-of-dharma"
+   "tag": "sources-of-dharma",
+   "parent": "dharma-ethics-and-law"
  },
  {
-   "tag": "south-asia-study"
+   "tag": "south-asia-study",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "south-asian-archaeology"
+   "tag": "south-asian-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "south-asian-dna"
+   "tag": "south-asian-dna",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "south-asian-genetics"
+   "tag": "south-asian-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "south-asian-history"
+   "tag": "south-asian-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "south-asian-skeletons"
+   "tag": "south-asian-skeletons",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "south-indian-archaeology"
+   "tag": "south-indian-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "southeast-asia-genetics"
+   "tag": "southeast-asia-genetics",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "sphota-theory"
+   "tag": "sphota-theory",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "spiritual-hermeneutics"
+   "tag": "spiritual-hermeneutics",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "spiritual-humanism"
+   "tag": "spiritual-humanism",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "spiritual-introduction"
+   "tag": "spiritual-introduction",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "statecraft"
+   "tag": "statecraft",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "states-of-consciousness"
+   "tag": "states-of-consciousness",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "steppe-ancestry"
+   "tag": "steppe-ancestry",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "steppe-migration"
+   "tag": "steppe-migration",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "storm-deities"
+   "tag": "storm-deities",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "story-cycle"
+   "tag": "story-cycle",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "sub-commentary"
+   "tag": "sub-commentary",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "substrate-languages"
+   "tag": "substrate-languages",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "svayambodha"
+   "tag": "svayambodha",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "symbolic-exegesis"
+   "tag": "symbolic-exegesis",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "symbolism"
+   "tag": "symbolism",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "syntax"
+   "tag": "syntax",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "systematic-synthesis"
+   "tag": "systematic-synthesis",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "talageri-hock-debate"
+   "tag": "talageri-hock-debate",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "tamil-history"
+   "tag": "tamil-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "tamil-kingdoms"
+   "tag": "tamil-kingdoms",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "tarkasamgraha"
+   "tag": "tarkasamgraha",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "tarkasangraha"
+   "tag": "tarkasangraha",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "tat-tvam-asi"
+   "tag": "tat-tvam-asi",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "tattva-theory"
+   "tag": "tattva-theory",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "technology-critique"
+   "tag": "technology-critique",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "technology-history"
+   "tag": "technology-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "temple"
+   "tag": "temple",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "temple-destruction"
+   "tag": "temple-destruction",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "temple-lore"
+   "tag": "temple-lore",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "textual-argument"
+   "tag": "textual-argument",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "textual-criticism"
+   "tag": "textual-criticism",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "textual-interpretation"
+   "tag": "textual-interpretation",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "textual-reinterpretation"
+   "tag": "textual-reinterpretation",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "textual-transmission"
+   "tag": "textual-transmission",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "theological-polemics"
+   "tag": "theological-polemics",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "thinkers"
+   "tag": "thinkers",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "tibeto-burman"
+   "tag": "tibeto-burman",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "time"
+   "tag": "time",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "tocharian"
+   "tag": "tocharian",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "trade-corridors"
+   "tag": "trade-corridors",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "tradition"
+   "tag": "tradition",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "tradition-and-modernity"
+   "tag": "tradition-and-modernity",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "traditional-exegesis"
+   "tag": "traditional-exegesis",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "traditionalism"
+   "tag": "traditionalism",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "translation"
+   "tag": "translation",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "tribal-history"
+   "tag": "tribal-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "truth-theory"
+   "tag": "truth-theory",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "update"
+   "tag": "update",
+   "parent": "indology-and-civilizational-critique"
  },
  {
-   "tag": "vaisheshika"
+   "tag": "vaisheshika",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "vaishnava-devotion"
+   "tag": "vaishnava-devotion",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "vaishnava-doctrine"
+   "tag": "vaishnava-doctrine",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "vaishnava-theology"
+   "tag": "vaishnava-theology",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "vamana-myth"
+   "tag": "vamana-myth",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "vamsavalis"
+   "tag": "vamsavalis",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "varaha-avatar"
+   "tag": "varaha-avatar",
+   "parent": "puranic-and-itihasic-literature"
  },
  {
-   "tag": "varsagira-battle"
+   "tag": "varsagira-battle",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedanta"
+   "tag": "vedanta",
+   "parent": "darshanas-and-philosophy"
  },
  {
-   "tag": "vedic-archaeology"
+   "tag": "vedic-archaeology",
+   "parent": "archaeology-and-material-culture"
  },
  {
-   "tag": "vedic-aryans"
+   "tag": "vedic-aryans",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "vedic-astronomy"
+   "tag": "vedic-astronomy",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "vedic-asura"
+   "tag": "vedic-asura",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-chronology"
+   "tag": "vedic-chronology",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-continuity"
+   "tag": "vedic-continuity",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "vedic-culture"
+   "tag": "vedic-culture",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-dravidian-links"
+   "tag": "vedic-dravidian-links",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "vedic-education"
+   "tag": "vedic-education",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "vedic-etymology"
+   "tag": "vedic-etymology",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "vedic-geography"
+   "tag": "vedic-geography",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-harappan-continuity"
+   "tag": "vedic-harappan-continuity",
+   "parent": "indo-european-and-aryan-debate"
  },
  {
-   "tag": "vedic-history"
+   "tag": "vedic-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-hydrology"
+   "tag": "vedic-hydrology",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-iconography"
+   "tag": "vedic-iconography",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-injunction"
+   "tag": "vedic-injunction",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-interpretation"
+   "tag": "vedic-interpretation",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-lineages"
+   "tag": "vedic-lineages",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-linguistics"
+   "tag": "vedic-linguistics",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "vedic-origins"
+   "tag": "vedic-origins",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-overview"
+   "tag": "vedic-overview",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-periodization"
+   "tag": "vedic-periodization",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-politics"
+   "tag": "vedic-politics",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-religion"
+   "tag": "vedic-religion",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-rishis"
+   "tag": "vedic-rishis",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-rivers"
+   "tag": "vedic-rivers",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-sanskrit"
+   "tag": "vedic-sanskrit",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "vedic-society"
+   "tag": "vedic-society",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-sociology"
+   "tag": "vedic-sociology",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-spirituality"
+   "tag": "vedic-spirituality",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-storm-gods"
+   "tag": "vedic-storm-gods",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-symbolism"
+   "tag": "vedic-symbolism",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-texts"
+   "tag": "vedic-texts",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-theology"
+   "tag": "vedic-theology",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-tribal-history"
+   "tag": "vedic-tribal-history",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vedic-warfare"
+   "tag": "vedic-warfare",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "vedic-wisdom"
+   "tag": "vedic-wisdom",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "verbal-cognition"
+   "tag": "verbal-cognition",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "village-institutions"
+   "tag": "village-institutions",
+   "parent": "history-polity-and-society"
  },
  {
-   "tag": "vishnu"
+   "tag": "vishnu",
+   "parent": "hinduism-overview"
  },
  {
-   "tag": "vocabulary-learning"
+   "tag": "vocabulary-learning",
+   "parent": "language-logic-and-sanskrit"
  },
  {
-   "tag": "vrikshayurveda"
+   "tag": "vrikshayurveda",
+   "parent": "indian-knowledge-systems"
  },
  {
-   "tag": "women-in-vedic-texts"
+   "tag": "women-in-vedic-texts",
+   "parent": "vedic-and-upanishadic-texts"
  },
  {
-   "tag": "y-dna"
+   "tag": "y-dna",
+   "parent": "genetics-and-prehistory"
  },
  {
-   "tag": "yoga-commentary"
+   "tag": "yoga-commentary",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "yoga-sutra"
+   "tag": "yoga-sutra",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "yogic-discipline"
+   "tag": "yogic-discipline",
+   "parent": "yoga-and-contemplative-practice"
  },
  {
-   "tag": "zooarchaeology"
+   "tag": "zooarchaeology",
+   "parent": "archaeology-and-material-culture"
  }
 ]

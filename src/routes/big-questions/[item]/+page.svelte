@@ -51,6 +51,17 @@
 			<div class="classic-document">
 				<img class="icon" src={data.image} alt={data.title} />
 				<data.content />
+				{#if data.concepts.length}
+					  <div class="grid three tight">
+    {#each data.concepts as concept (concept.id)}
+      <p>
+        <a href={`/concepts/${concept.slug}`}>
+          {concept.title}
+        </a>
+      </p>
+    {/each}
+  </div>
+				{/if}
 			</div>
 			<div class="box sidebar">
 				{#if data.questions?.length > 0}

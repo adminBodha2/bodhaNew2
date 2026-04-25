@@ -57,10 +57,9 @@
 		</div>
 	</div>
 </div>
-
-<div class="stdbox padded bordertop" id="bodha verticals">
+<div class="stdbox padded" id="bodha verticals">
 	<Title text="verticals"/>
-	<div class="grid four tight">
+	<div class="grid two tight">
 		{#each verticals as item}
 		<a class="elembox blank verticals" href={item.href}>
 			<div class="imgbox"><img src={item.image} alt={item.title} /></div>
@@ -76,7 +75,7 @@
 </div>
 
 {#if blogs.length > 0}
-<div class="stdbox padded bordertop" id="blog posts">
+<div class="stdbox padded bordertop sideline" id="blog posts">
 	<div class="row xbetween ycenter rgap16">
 		<Title text="essays and articles"/>
 		<a class="small-button row ycenter cgap4" href="/blog">See All <div class="button-text">→</div></a>
@@ -102,7 +101,7 @@
 </div>
 {/if}
 
-<div class="stdbox padded bordertop" id="publications">
+<div class="stdbox padded bordertop sideline" id="publications">
 	<Title text="publications"/>
 	<div class="grid two tight">
 		{#each publications as pub}
@@ -178,10 +177,10 @@
 // ── VERTICALS ─────────────────────────────────────────────
 
 .verticals
-	overflow: hidden
 	border-radius: 4px
-	background: var(--color-alt-1)
-	border: 1px solid var(--color-white)
+	background: rgba(255,255,255,0.2)
+	backdrop-filter: blur(2px)
+	border: 2px solid var(--color-white)
 	transition: all 150ms cubic-bezier(0.215, 0.610, 0.355, 1.000)
 	box-shadow: 0 1px 0 rgba(255, 255, 255, .9), 0 8px 18px rgba(15, 23, 42, .1), inset 0 -1px 1px rgba(0, 0, 0, .05)
 	&:hover
@@ -200,7 +199,7 @@
 	.labelbox
 		padding: 0 1.5rem 1.5rem 1.5rem
 	.imgbox
-		height: 200px
+		height: 320px
 		overflow: hidden
 	@media screen and (max-width: 1024px)
 		.labelbox

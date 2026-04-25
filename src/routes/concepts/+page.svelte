@@ -7,14 +7,32 @@
 
 	let { data }: { data: PageData } = $props();
 
+	function conceptHref(slug: string) {
+		return `/concepts/${slug}`;
+	}
+
 	const title = 'Concepts and Ideas | Bodha';
 	const metaDescription = 'Entry point for Bodha’s knowledge base and wiki.';
 	const metaUrl = absoluteUrl('/concepts');
 	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let akVargas = $derived(data.concepts.filter((c: any) => c.slug.startsWith('ak-')));
-	let regular = $derived(data.concepts.filter((c: any) => !c.slug.startsWith('ak-') && c.count > 1));
-	let totalCount = $derived(data.concepts.length);
+	let allConcepts = $derived([...data.topLevelConcepts, ...Object.values(data.conceptChildren).flat()]);
+
+let query = $state('');
+function matches(concept: any, q: string) {
+  const s = q.toLowerCase();
+  return (
+    concept.title.toLowerCase().includes(s) ||
+    concept.slug.toLowerCase().includes(s)
+  );
+}
+let filteredTopLevel = $derived(
+  data.topLevelConcepts.filter((c) => matches(c, query))
+);
+
+let filteredAll = $derived(
+  data.allConcepts.filter((c) => matches(c, query))
+);
 
 	let jsonld = $derived(
 		stringifyJsonLd(
@@ -23,94 +41,46 @@
 				description: metaDescription,
 				url: metaUrl,
 				image: metaImage,
-				items: regular.map((concept: any) => ({
+				items: allConcepts.map((concept: any) => ({
 					name: concept.title,
 					url: `/concepts/${concept.slug}`
-			}))
+				}))
 			})
 		)
 	);
 </script>
 
-<Head
-	{title}
-	{metaDescription}
-	{metaUrl}
-	{metaImage}
-	imWidth="2560"
-	imHeight="1440"
-	{jsonld}
-/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container narrow={true} scaled={true}>
-<div class="stdbox padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="{totalCount} Concepts - Domains of thought across the knowledge base. Each concept connects texts, thinkers, and ideas."/>
-	<div class="row wrap cgap16 rgap16">
-		{#each data.concepts as concept (concept.id)}
-  <p>
-    <a href={`/concept/${concept.slug}`}>{concept.title} ({concept.count})</a>
-    <span>({concept.count})</span>
-  </p>
-		{/each}
-	</div>
-</div>
-<!--
-<div class="stdbox padded bordertop">
-	<Title text="Amarakosha Domains"/>
-	{#if akVargas.length > 0}
-		<div class="ak-grid">
-			{#each akVargas as concept}
-				<a class="ak-card blank" href="/concepts/{concept.slug}">
-					<span class="ak-devanagari">{concept.meta?.devanagari ?? ''}</span>
-					<span class="ak-label">{concept.title.replace(/^.+ — /, '')}</span>
-					{#if concept.meta?.wordCount}
-						<span class="ak-count">{concept.meta.wordCount} words</span>
-					{/if}
+	<div class="stdbox padded-ontop">
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="Concepts - Domains of thought across the knowledge base. Each concept connects texts, thinkers, and ideas." />
+		<div class="sea">
+			<input
+  bind:value={query}
+  placeholder="Search concepts..."
+/>
+		</div>
+		<div class="box">
+			{#each filteredTopLevel as concept (concept.id)}
+				{@const children = data.conceptChildren[concept.id] || []}
+				<p class="highlight-text"><a href={conceptHref(concept.slug)}>{concept.title}</a><span>({concept.count})</span></p>
+				{#if children.length}
+					<div class="row wrap cgap8 rgap8">
+						{#each children as child (child.id)}
+							<p><a href={conceptHref(child.slug)}>{child.title}</a><span>({child.count})</span></p>
+						{/each}
+					</div>
+				{/if}
+			{/each}
+		</div>
+		<div class="row wrap cgap8 rgap8">
+			{#each filteredAll as concept (concept.id)}
+				<a class="blank row" href={`/concepts/${concept.slug}`}>
+					<p>{concept.title}</p>
+					<p>({concept.count})</p>
 				</a>
 			{/each}
 		</div>
-	{/if}
-</div>
--->
+	</div>
 </Container>
-
-<style lang="sass">
-
-.ak-grid
-	display: grid
-	gap: 6px
-	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
-
-.ak-card
-	display: flex
-	flex-direction: column
-	gap: 2px
-	padding: 0.7rem 0.9rem
-	border-radius: 8px
-	border: 1px solid rgba(116,192,252,0.25)
-	background: rgba(116,192,252,0.06)
-	box-shadow: var(--sh2)
-	transition: box-shadow 0.15s ease, transform 0.15s ease
-	&:hover
-		box-shadow: 0 2px 8px rgba(116,192,252,0.2), 0 4px 12px rgba(0,0,0,0.04)
-		transform: translateY(-1px)
-
-.ak-devanagari
-	font-size: 0.75rem
-	color: #74C0FC
-	font-family: var(--fontface-serif)
-	opacity: 0.8
-	line-height: 1.3
-
-.ak-label
-	font-size: 0.78rem
-	font-weight: 500
-	color: #222
-	line-height: 1.3
-
-.ak-count
-	font-size: 0.68rem
-	color: var(--text-ghost)
-	margin-top: 2px
-
-</style>
