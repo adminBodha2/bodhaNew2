@@ -63,7 +63,7 @@
 	<Title text="verticals"/>
 	<div class="grid four tight">
 		{#each verticals as item}
-		<a class="elembox blank verticals popping" href={item.href}>
+		<a class="elembox blank verticals" href={item.href}>
 			<div class="imgbox"><img src={item.image} alt={item.title} /></div>
 			<div class="labelbox">
 				<div class="theme-line"></div>
@@ -95,7 +95,7 @@
 			numbering = "slate"
 		>
 			{#each item.meta.tags as tag}
-			<a class="tag-pill themed tt-u" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+			<a class="tag-pill accented tt-u" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</BlogCard>
 		{/each}
@@ -182,8 +182,13 @@
 	overflow: hidden
 	border-radius: 4px
 	background: var(--color-alt-1)
-	border: var(--border-main)
+	border: 1px solid var(--color-white)
+	transition: all 150ms cubic-bezier(0.215, 0.610, 0.355, 1.000)
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .9), 0 8px 18px rgba(15, 23, 42, .1), inset 0 -1px 1px rgba(0, 0, 0, .05)
 	&:hover
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0), 0 8px 18px rgba(15, 23, 42, 0), inset 0 -1px 1px rgba(0, 0, 0, 0)
+		border: var(--border-main)
+		background: var(--color-back)
 		.theme-line
 			transform: scaleX(1.5)
 		img

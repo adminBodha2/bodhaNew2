@@ -157,17 +157,19 @@ button
 	letter-spacing: 0.02em
 	color: var(--color-alt-3)
 	padding: 4px 8px
-	border-radius: 6px
+	border-radius: 3px
 	border: 1px solid var(--color-grey-1)
 	background: var(--color-grey-4)
 	transition: all 0.06s ease
 	width: max-content
+	transform-origin: center center
 	&:hover
 		background: var(--color-theme-2)
+		transform: scale(1.05)
 	&.accented
-		background: var(--color-theme-4)
+		background: var(--color-theme-2)
 		color: var(--color-white)
-		border: 1px solid var(--color-theme-4)
+		border: 1px solid var(--color-theme-2)
 	&.anveshi
 		background: var(--color-anveshi)
 		color: var(--color-white)

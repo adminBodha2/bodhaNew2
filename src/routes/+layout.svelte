@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { dev } from '$app/environment';
 	import { registerSwiper } from '$lib/utils/swiper';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
@@ -25,7 +26,7 @@
 	});
 
 	injectSpeedInsights();
-	injectAnalytics();
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
   function handleKeydown(e: KeyboardEvent) {
     // Cmd+K (Mac) or Ctrl+K (Windows/Linux)

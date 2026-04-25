@@ -48,6 +48,6 @@
 	min-height: 100vh
 
 .offcolor
-	background: #f7f7f7
+	background: #FcFcFc
 
 </style>
