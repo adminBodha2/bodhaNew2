@@ -4,6 +4,7 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, withContext } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -15,26 +16,24 @@
 
 	let title = $derived(data.title + ' | Bodha Inspiration');
 	let metaDescription = $derived(data.description);
-	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
-	let metaImage = $derived(
-		data.image?.startsWith('http')
-			? data.image
-			: 'https://www.bodharesearch.in' + data.image
-	);
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	let metaImage = $derived(absoluteImage(data.image));
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': data.type === 'thinker' ? 'Person' : 'CreativeWork',
-		name: data.title,
-		description: data.description,
-		image: metaImage,
-		url: metaUrl,
-		publisher: {
-			'@type': 'Organization',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in'
-		}
-	}));
+	let jsonld = $derived(
+		stringifyJsonLd(
+			withContext(data.type === 'thinker' ? 'Person' : 'CreativeWork', {
+				name: data.title,
+				description: data.description,
+				image: metaImage,
+				url: metaUrl,
+				publisher: {
+					'@type': 'Organization',
+					name: 'Bodha',
+					url: absoluteUrl('/')
+				}
+			})
+		)
+	);
 </script>
 
 <svelte:window bind:scrollY={sY} />

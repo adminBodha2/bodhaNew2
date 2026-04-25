@@ -3,40 +3,28 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Hidden from '$lib/comps/page-header-one.svelte'
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	const title = 'Bodha Courses';
 	const metaDescription = 'Online courses covering the most important Indian thinkers and schools of thought, from an Indic point of view.';
-	const metaUrl = 'https://www.bodharesearch.in/academy/courses';
-	const metaImage = 'https://www.bodharesearch.in/images/key-academy.webp';
+	const metaUrl = absoluteUrl('/academy/courses');
+	const metaImage = absoluteImage('/images/key-academy.webp');
 
-const jsonld = JSON.stringify({
-	'@context': 'https://schema.org',
-	'@type': 'CollectionPage',
-	name: title,
-	description: metaDescription,
-	url: metaUrl,
-	image: metaImage,
-	mainEntity: {
-		'@type': 'ItemList',
-		itemListElement: [
-			{
-				'@type': 'ListItem',
-				position: 1,
-				url: 'https://www.bodharesearch.in/academy/courses/introduction-to-shri-ram-swarup',
-				item: {
-					'@type': 'Course',
+	const jsonld = stringifyJsonLd(
+		collectionPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			items: [
+				{
 					name: 'Introduction to Shri Ram Swarup',
 					description: 'An introduction to the works and thought of Shri Ram Swarup.',
-					provider: {
-						'@type': 'Organization',
-						name: 'Bodha',
-						url: 'https://www.bodharesearch.in'
-					}
+					url: '/academy/courses/introduction-to-shri-ram-swarup'
 				}
-			}
-		]
-	}
-});
+			]
+		})
+	);
 
 
 </script>

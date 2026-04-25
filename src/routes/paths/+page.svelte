@@ -3,32 +3,30 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
 
 	const title = 'Reading Paths | Bodha';
 	const metaDescription = 'Curated sequences through the Bodha knowledge base. Each path is a guided journey with editorial notes.';
-	const metaUrl = 'https://www.bodharesearch.in/paths';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/paths');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: data.paths.map((path: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: path.title,
-				description: path.description,
-				url: 'https://www.bodharesearch.in/paths/' + path.id
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: data.paths.map((path: any) => ({
+					name: path.title,
+					description: path.description,
+					url: `/paths/${path.id}`
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

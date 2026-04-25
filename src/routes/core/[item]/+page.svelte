@@ -1,19 +1,27 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 
-	import { page } from '$app/state'
-	import Container from '$lib/comps/container.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
-	import Head from '$lib/comps/headcomponent.svelte'
+	let { data } = $props();
 
-	export let data
-	const title = data.title
-	const metaDescription = data.description
-	const metaUrl = 'https://www.bodharesearch.in' + page.url.pathname;
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
-
+	let title = $derived(data.title);
+	let metaDescription = $derived(data.description);
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	const metaImage = absoluteImage('/images/bodhacover.png');
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage}/>
+
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+/>
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">

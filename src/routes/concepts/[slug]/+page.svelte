@@ -5,6 +5,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
 
@@ -14,8 +15,8 @@
 
 	let title = $derived(data.concept.title + ' | Bodha Concepts');
 	let metaDescription = $derived(description);
-	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
 	let sections = $derived([
 		{ label: 'Articles', nodes: grouped.articles },
@@ -27,23 +28,20 @@
 
 	let totalContent = $derived(sections.reduce((sum, group) => sum + group.nodes.length, 0));
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: sections.flatMap((section: any) => section.nodes).map((node: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: node.title,
-				url: node.slug ? 'https://www.bodharesearch.in/' + node.slug : metaUrl
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: sections.flatMap((section: any) => section.nodes).map((node: any) => ({
+					name: node.title,
+					url: node.slug ? `/${node.slug}` : metaUrl
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

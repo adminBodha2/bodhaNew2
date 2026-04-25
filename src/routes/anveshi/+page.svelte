@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
 	import autoAnimate from '@formkit/auto-animate';
-	import { anveshiCurrent, anveshiFuture, selectedAnveshiFuture, anveshiPast, anveshiTestimonials } from '$lib/utils/supabaseClient';
 	import Container from '$lib/comps/container.svelte';
 	import Swipes from '$lib/comps/swipercomp.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -9,52 +8,56 @@
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Anveshilogo from '$lib/assets/anveshilogo.svelte';
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd, webPageJsonLd } from '$lib/utils/seo';
+
+	let { data }: { data: PageData } = $props();
 
 	const title = 'Anveshi | Bodha';
 	const metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
-	const metaUrl = 'https://www.bodharesearch.in/anveshi';
-	const metaImage = 'https://www.bodharesearch.in/images/key-anveshi.webp';
+	const metaUrl = absoluteUrl('/anveshi');
+	const metaImage = absoluteImage('/images/key-anveshi.webp');
 
-	const jsonld = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'WebPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		isPartOf: {
-			'@type': 'WebSite',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in'
+	const jsonld = stringifyJsonLd([
+		{
+			...webPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage
+			}),
+			about: {
+				'@type': 'TouristTrip',
+				name: 'Anveshi',
+				description: metaDescription
+			}
 		},
-		about: {
-			'@type': 'TouristTrip',
+		touristTripJsonLd({
 			name: 'Anveshi',
 			description: metaDescription,
-			provider: {
-				'@type': 'Organization',
-				name: 'Bodha',
-				url: 'https://www.bodharesearch.in'
-			}
-		}
-	});
+			url: metaUrl,
+			image: metaImage
+		})
+	]);
 
-	let currproj = $state<any[]>([]);
-	let futureproj = $state<any[]>([]);
-	let pastproj = $state<any[]>([]);
-	let testis = $state<any[]>([]);
+	let currproj = $derived(data.currproj ?? []);
+	let futureproj = $derived(data.futureproj ?? []);
+	let pastproj = $derived(data.pastproj ?? []);
+	let testis = $derived(data.testis ?? []);
+
 	let sY = $state(0);
 	let iW = $state(0);
-	let regionAnveshi = $state<any[]>([]);
 	let region = $state('northern india');
 	let goTime = $derived(sY >= 0);
 	let screenerY = $derived(sY / 2);
 	let isRegion = $state([false, false, false, false, false, false, false, true]);
 	let showText = $state(false);
 
-	async function setRegion(newRegion: string) {
+	let regionAnveshi = $derived(
+		futureproj.filter((item: any) => item.region?.toLowerCase() === region)
+	);
+
+	function setRegion(newRegion: string) {
 		region = newRegion;
-		regionAnveshi = await selectedAnveshiFuture(region);
 	}
 
 	function toggleText() {
@@ -70,14 +73,6 @@
 			}
 		}
 	}
-
-	onMount(async () => {
-		currproj = await anveshiCurrent();
-		futureproj = await anveshiFuture();
-		regionAnveshi = await selectedAnveshiFuture(region);
-		pastproj = await anveshiPast();
-		testis = await anveshiTestimonials();
-	});
 </script>
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={iW} />

@@ -7,15 +7,24 @@
 	import Parallax from '$lib/comps/parallaxfull.svelte'
 	import Title from '$lib/comps/page-title.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	const title = 'Research | Bodha';
 	const metaDescription = 'Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India\'s policy in Hindu cultural sensibilities.';
-	const metaUrl = 'https://www.bodharesearch.in/research';
-	const metaImage = 'https://www.bodharesearch.in/images/key-research.webp';
+	const metaUrl = absoluteUrl('/research');
+	const metaImage = absoluteImage('/images/key-research.webp');
+	const jsonld = stringifyJsonLd(
+		webPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage
+		})
+	);
 
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024"/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld}/>
 
 <Parallax imageLink="/images/key-research.webp" isClass="is50"/>
 <Container narrow={true} scaled={true}>

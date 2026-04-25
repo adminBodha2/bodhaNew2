@@ -5,23 +5,25 @@
 	import Twitter from '$lib/icons/twitter.svelte';
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	const title = 'Contact | Bodha';
 	const metaDescription = 'Contact Bodha Research for queries, collaborations, website issues, and social media updates.';
-	const metaUrl = 'https://www.bodharesearch.in/contact';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/contact');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	const jsonld = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'ContactPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
+	const jsonld = stringifyJsonLd({
+		...webPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			type: 'ContactPage'
+		}),
 		mainEntity: {
 			'@type': 'Organization',
 			name: 'Bodha',
-			url: 'https://www.bodharesearch.in',
+			url: absoluteUrl('/'),
 			email: 'contact@bodharesearch.in',
 			sameAs: [
 				'https://x.com/BodhaResearch',

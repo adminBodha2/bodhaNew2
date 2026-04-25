@@ -4,6 +4,7 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { libCategories } from '$lib/utils/localsends';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -11,28 +12,23 @@
 	let books = $derived(data.books ?? []);
 	let title = $derived(category.label + ' | Bodha Open Library');
 	let metaDescription = $derived(category.desc);
-	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
-	const metaImage = 'https://www.bodharesearch.in/images/key-bol.webp';
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	const metaImage = absoluteImage('/images/key-bol.webp');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: books.map((book: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: book.name,
-				url: book.linkfinal2
-					? 'https://www.bodharesearch.in' + book.linkfinal2
-					: book.linkfinal
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: books.map((book: any) => ({
+					name: book.name,
+					url: book.linkfinal2 ?? book.linkfinal
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 

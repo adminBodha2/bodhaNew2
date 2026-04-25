@@ -7,6 +7,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import { getContentHref } from '$lib/graph/routing';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
 
@@ -26,8 +27,8 @@
 
 	let title = $derived(data.path.title + ' | Bodha Learning Paths');
 	let metaDescription = $derived(data.path.description);
-	let metaUrl = $derived('https://www.bodharesearch.in/paths/' + data.path.id);
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	let metaUrl = $derived(absoluteUrl('/paths/' + data.path.id));
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
 	let pageUrl = $derived(metaUrl);
 	let shareText = $derived(encodeURIComponent(`${data.path.title} - a learning path on Bodha Research`));
@@ -41,24 +42,21 @@
 		{ label: 'Email', href: () => `mailto:?subject=${shareText}&body=${pageUrl}`, icon: 'email' }
 	];
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: data.path.title,
-		description: data.path.description,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: data.steps.map((step: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: step.node?.title ?? step.nodeId,
-				description: step.note,
-				url: step.node ? 'https://www.bodharesearch.in' + getContentHref(step.node) : metaUrl
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: data.path.title,
+				description: data.path.description,
+				url: metaUrl,
+				image: metaImage,
+				items: data.steps.map((step: any) => ({
+					name: step.node?.title ?? step.nodeId,
+					description: step.note,
+					url: step.node ? getContentHref(step.node) : metaUrl
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

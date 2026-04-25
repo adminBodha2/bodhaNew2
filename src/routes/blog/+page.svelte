@@ -6,6 +6,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
 	import { servingExternal } from '$lib/serving/servingWiki';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	type BlogPost = {
 		linkpath: string;
@@ -28,26 +29,24 @@
 
 	const title = 'Blog | Bodha';
 	const metaDescription = 'Essays on Hindu culture, history, festivals, civilizational thought, and more.';
-	const metaUrl = 'https://www.bodharesearch.in/blog';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/blog');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: posts.map((post: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: post.meta.title,
-				url: 'https://www.bodharesearch.in' + post.linkpath
-			}))
-		}
-	}));
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: posts.map((post: any) => ({
+					name: post.meta.title,
+					url: post.linkpath,
+					description: post.meta.excerpt
+				}))
+			})
+		)
+	);
 </script>
 
 

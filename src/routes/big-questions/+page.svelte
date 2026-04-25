@@ -1,24 +1,39 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { allQuestions } from '$lib/utils/localpulls';
+	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+
+	let { data }: { data: PageData } = $props();
+
+	let questions = $derived(data.questions ?? []);
 
 	const title = 'Bodha — Big Questions';
 	const metaDescription = 'Hindu consciousness is awakening across the nation. Bodha aids this process by asking provocative questions about the most fundamental problems and open questions that Hindu society faces today — issues that are not settled, perennially asked by every Hindu generation, and novel dilemmas of our time.';
-	const metaUrl = 'https://www.bodharesearch.in/big-questions';
-	const metaImage = 'https://www.bodharesearch.in/images/key-bigquestions.webp';
+	const metaUrl = absoluteUrl('/big-questions');
+	const metaImage = absoluteImage('/images/key-bigquestions.webp');
 
-	let questions = $state<any[]>([]);
-
-	onMount(async () => {
-		questions = await allQuestions();
-	});
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: questions.map((question) => ({
+					name: question.meta.title,
+					description: question.meta.description,
+					url: question.linkpath
+				}))
+			})
+		)
+	);
 </script>
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" />
+
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
 <Parallax imageLink="/images/key-bigquestions.webp" isClass="is50" />
 <Container narrow={true} scaled={true}>

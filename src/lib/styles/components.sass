@@ -126,7 +126,7 @@ button
 	flex-direction: column
 
 .stdbox
-	row-gap: 3rem
+	row-gap: 2rem
 .labelbox
 	row-gap: 0.5rem
 .elembox
@@ -288,6 +288,7 @@ button.conceptbuttons
 	text-decoration: none
 	color: var(--color-grey-4)
 	transition: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
+	width: max-content
 	.button-text
 		transition: all 0.12s
 		transform-origin: left center
@@ -298,6 +299,8 @@ button.conceptbuttons
 		.button-text
 			transform: scaleX(1.2)
 			color: var(--color-theme)
+	&.themed
+		background: var(--color-theme-5)
 
 button.small-button
 	font-weight: 500

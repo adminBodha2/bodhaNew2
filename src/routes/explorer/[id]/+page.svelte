@@ -4,38 +4,56 @@
 	import Container from '$lib/comps/container.svelte';
 	import NodeMiniCard from '$lib/nodeitems/NodeMiniCard.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Debugger from '$lib/comps/debugger.svelte';
-	import { metaDescription, metaTitle, metaImage, metaUrl } from '$lib/utils/metastores';
+	import { absoluteImage, absoluteUrl, webPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
-	export let data: PageData;
-	$metaTitle="{data.node.title} — Bodha"
-	$metaDescription=data.node.description
-	$metaUrl="https://www.bodharesearch.in/node/{data.node.id}"
-	$metaImage='/images/bodhacover.png'
+	let { data }: { data: PageData } = $props();
 
-	const relatedConcepts: Node[] = data.related.concepts;
-	const relatedNodes: Node[] = data.related.related;
-	const referencedBy: Node[] = data.referencedBy;
+	let relatedConcepts: Node[] = $derived(data.related.concepts);
+	let relatedNodes: Node[] = $derived(data.related.related);
+	let referencedBy: Node[] = $derived(data.referencedBy);
 
 	const typeStyle: Record<string, { color: string; bg: string; border: string }> = {
-		article:  { color: '#1971C2', bg: 'rgba(25,113,194,0.07)',  border: 'rgba(25,113,194,0.2)'  },
-		thinker:  { color: '#1864AB', bg: 'rgba(24,100,171,0.07)',  border: 'rgba(24,100,171,0.2)'  },
-		school:   { color: '#0D3B65', bg: 'rgba(13,59,101,0.07)',   border: 'rgba(13,59,101,0.2)'   },
-		text:     { color: '#5999D3', bg: 'rgba(89,153,211,0.09)',  border: 'rgba(89,153,211,0.25)' },
-		question: { color: '#4C9BE8', bg: 'rgba(76,155,232,0.07)',  border: 'rgba(76,155,232,0.2)'  },
-		concept:  { color: '#74C0FC', bg: 'rgba(116,192,252,0.09)', border: 'rgba(116,192,252,0.3)' },
+		article: { color: '#1971C2', bg: 'rgba(25,113,194,0.07)', border: 'rgba(25,113,194,0.2)' },
+		thinker: { color: '#1864AB', bg: 'rgba(24,100,171,0.07)', border: 'rgba(24,100,171,0.2)' },
+		school: { color: '#0D3B65', bg: 'rgba(13,59,101,0.07)', border: 'rgba(13,59,101,0.2)' },
+		text: { color: '#5999D3', bg: 'rgba(89,153,211,0.09)', border: 'rgba(89,153,211,0.25)' },
+		question: { color: '#4C9BE8', bg: 'rgba(76,155,232,0.07)', border: 'rgba(76,155,232,0.2)' },
+		concept: { color: '#74C0FC', bg: 'rgba(116,192,252,0.09)', border: 'rgba(116,192,252,0.3)' }
 	};
-	$: ts = typeStyle[data.node.type] ?? typeStyle.article;
+
+	let ts = $derived(typeStyle[data.node.type] ?? typeStyle.article);
+
+	let title = $derived(data.node.title + ' | Bodha');
+	let metaDescription = $derived(data.node.description ?? 'Explore this node in the Bodha knowledge graph.');
+	let metaUrl = $derived(absoluteUrl('/explorer/' + data.node.id));
+	const metaImage = absoluteImage('/images/bodhacover.png');
+
+	let jsonld = $derived(
+		stringifyJsonLd(
+			webPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage
+			})
+		)
+	);
 </script>
 
-<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container narrow={true} scaled={true}>
 <div class="box padded-ontop only">
-	<Debugger {data} label="Page Data" />
-<Debugger value={data.relatedGrouped} label="Related Grouped" />
 	<div class="page-hero">
-		<p class="eyebrow tt-u"><a class="linkonhover" href="/node">← Library</a></p>
+		<p class="eyebrow tt-u"><a class="linkonhover" href="/explorer">← Library</a></p>
 		<div class="row ycenter cgap10">
 			<span class="type-badge tt-u" style="color:{ts.color}; background:{ts.bg}; border-color:{ts.border};">{data.node.type}</span>
 			{#if data.node.meta?.author}

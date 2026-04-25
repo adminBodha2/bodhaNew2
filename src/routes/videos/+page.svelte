@@ -4,6 +4,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Youtuber from '$lib/comps/youtuber.svelte';
 	import Container from '$lib/comps/container.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -11,26 +12,23 @@
 
 	const title = 'Videos | Bodha';
 	const metaDescription = 'Collected talks, podcasts, conference sessions, and more by members of the Bodha team.';
-	const metaUrl = 'https://www.bodharesearch.in/videos';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/videos');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: vids.map((video: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: video.name,
-				url: video.link
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: vids.map((video: any) => ({
+					name: video.name,
+					url: video.link
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

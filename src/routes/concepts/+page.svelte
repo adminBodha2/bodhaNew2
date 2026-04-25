@@ -3,35 +3,33 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
 
 	const title = 'Concepts and Ideas | Bodha';
 	const metaDescription = 'Entry point for Bodha’s knowledge base and wiki.';
-	const metaUrl = 'https://www.bodharesearch.in/concepts';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/concepts');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
 	let akVargas = $derived(data.concepts.filter((c: any) => c.slug.startsWith('ak-')));
 	let regular = $derived(data.concepts.filter((c: any) => !c.slug.startsWith('ak-') && c.count > 1));
 	let totalCount = $derived(data.concepts.length);
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: regular.map((concept: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: concept.title,
-				url: 'https://www.bodharesearch.in/concepts/' + concept.slug
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: regular.map((concept: any) => ({
+					name: concept.title,
+					url: `/concepts/${concept.slug}`
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

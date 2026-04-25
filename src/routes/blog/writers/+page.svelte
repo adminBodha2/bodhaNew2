@@ -2,6 +2,7 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -9,26 +10,23 @@
 
 	const title = 'Writers | Bodha Blog';
 	const metaDescription = "Meet the writers behind Bodha's essays on Hindu culture, history, and tradition.";
-	const metaUrl = 'https://www.bodharesearch.in/blog/writers';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/blog/writers');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: writers.map((item: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: item.writer,
-				url: 'https://www.bodharesearch.in/blog/writers/' + item.writer
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: writers.map((item: any) => ({
+					name: item.writer,
+					url: `/blog/writers/${item.writer}`
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 

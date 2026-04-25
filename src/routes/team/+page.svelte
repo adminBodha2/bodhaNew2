@@ -4,28 +4,30 @@
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	const title = 'Team | Bodha';
 	const metaDescription = 'Meet the founders and team behind Bodha Research.';
-	const metaUrl = 'https://www.bodharesearch.in/team';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/team');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	const jsonld = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'AboutPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
+	const jsonld = stringifyJsonLd({
+		...webPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			type: 'AboutPage'
+		}),
 		mainEntity: {
 			'@type': 'Organization',
 			name: 'Bodha',
-			url: 'https://www.bodharesearch.in',
+			url: absoluteUrl('/'),
 			member: teamMembers.map((member) => ({
 				'@type': 'Person',
 				name: member.name,
 				jobTitle: member.role,
-				image: 'https://www.bodharesearch.in' + member.image,
+				image: absoluteImage(member.image),
 				description: member.bio,
 				sameAs: member.links.map((link) => link.href)
 			}))

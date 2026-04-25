@@ -5,6 +5,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Title from '$lib/comps/page-title.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, bookJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 
 let { data } = $props();
@@ -29,22 +30,21 @@ let { data } = $props();
 
 	let title = $derived(data.name + ' | Bodha Open Library');
 	let metaDescription = $derived(data.summary);
-	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
-	const metaImage = 'https://www.bodharesearch.in/images/key-bol.webp';
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	const metaImage = absoluteImage('/images/key-bol.webp');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Book',
-		name: data.name,
-		author: {
-			'@type': 'Person',
-			name: data.author
-		},
-		description: data.summary,
-		url: metaUrl,
-		image: metaImage,
-		keywords: data.tags?.join(', ')
-	}));
+	let jsonld = $derived(
+		stringifyJsonLd(
+			bookJsonLd({
+				name: data.name,
+				author: data.author,
+				description: data.summary,
+				url: metaUrl,
+				image: metaImage,
+				keywords: data.tags
+			})
+		)
+	);
 
 </script>
 

@@ -8,39 +8,27 @@
 	import Sessions from '$lib/icons/sessions.svelte';
 	import Time from '$lib/icons/time.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
+	import { absoluteImage, absoluteUrl, courseJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	const title = 'Introduction to Shri Ram Swarup | Bodha Courses';
 	const metaDescription = 'Online course on the works and thoughts of Shri Ram Swarup.';
-	const metaUrl = 'https://www.bodharesearch.in/academy/courses/introduction-to-shri-ram-swarup';
-	const metaImage = 'https://www.bodharesearch.in/images/intro-to-srs.webp';
+	const metaUrl = absoluteUrl('/academy/courses/introduction-to-shri-ram-swarup');
+	const metaImage = absoluteImage('/images/intro-to-srs.webp');
 
 	const tabs = ['Overview', 'Audience', 'Takeaways', 'Facilitator', 'Sessions'];
 	let active = $state(0);
 
-	const jsonld = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Course',
+	const jsonld = stringifyJsonLd(
+		courseJsonLd({
 		name: 'Introduction to Shri Ram Swarup',
 		description: metaDescription,
 		url: metaUrl,
 		image: metaImage,
-		provider: {
-			'@type': 'Organization',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in'
-		},
-		instructor: {
-			'@type': 'Person',
-			name: 'Pankaj Saxena'
-		},
-		offers: {
-			'@type': 'Offer',
+			instructor: 'Pankaj Saxena',
 			price: '2499',
-			priceCurrency: 'INR',
-			availability: 'https://schema.org/SoldOut',
-			url: metaUrl
-		}
-	});
+			availability: 'https://schema.org/SoldOut'
+		})
+	);
 </script>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1200" imHeight="630" {jsonld} />

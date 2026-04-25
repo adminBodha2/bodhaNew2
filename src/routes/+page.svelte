@@ -1,48 +1,31 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+	import {
+		DEFAULT_IMAGE,
+		SITE_URL,
+		organizationJsonLd,
+		stringifyJsonLd,
+		websiteJsonLd
+	} from '$lib/utils/seo';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
-	import Parallax from '$lib/comps/parallaxfull.svelte'
+	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Youtuber from '$lib/comps/youtuber.svelte';
-	import Title from '$lib/comps/page-title.svelte'
-	import { limitBlog } from '$lib/utils/localpulls';
-	import { sixVideos } from '$lib/utils/supabaseClient';
-	import { gateways, verticals, publications } from '$lib/utils/localsends'
+	import Title from '$lib/comps/page-title.svelte';
+	import { gateways, verticals, publications } from '$lib/utils/localsends';
 
-	let vids = $state<any[]>([])
-	let blogs = $state<any[]>([])
+	let { data }: { data: PageData } = $props();
 
-	const title = 'Bodha - Cultural Think Tank'
-	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.'
-	const metaUrl = 'https://www.bodharesearch.in'
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png'
+	let blogs = $derived(data.blogs ?? []);
+	let vids = $derived(data.vids ?? []);
 
-	const jsonld = JSON.stringify([
-		{
-			'@context': 'https://schema.org',
-			'@type': 'Organization',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in',
-			logo: 'https://www.bodharesearch.in/images/bodhacover.png',
-			sameAs: [
-				'https://x.com/BodhaResearch',
-				'https://www.instagram.com/bodharesearch',
-				'https://www.linkedin.com/company/bodha-research/'
-			]
-		},
-		{
-			'@context': 'https://schema.org',
-			'@type': 'WebSite',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in'
-		}
-	]);
+	const title = 'Bodha - Cultural Think Tank';
+	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.';
+	const metaUrl = SITE_URL;
+	const metaImage = DEFAULT_IMAGE;
 
-	onMount(async () => {
-		vids = await sixVideos();
-		blogs = await limitBlog();
-	});
+	const jsonld = stringifyJsonLd([organizationJsonLd(), websiteJsonLd()]);
 </script>
 
 <Head

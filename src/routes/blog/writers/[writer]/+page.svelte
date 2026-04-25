@@ -4,6 +4,7 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import BlogCard from '$lib/comps/blogcard.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -12,26 +13,23 @@
 
 	let title = $derived('Essays by ' + writerName + ' | Bodha Blog');
 	let metaDescription = $derived('Read all essays by ' + writerName + ' at Bodha Blog.');
-	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: posts.map((post: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: post.meta.title,
-				url: 'https://www.bodharesearch.in' + post.linkpath
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: posts.map((post: any) => ({
+					name: post.meta.title,
+					url: post.linkpath
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 

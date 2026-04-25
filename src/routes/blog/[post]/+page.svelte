@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	const BASE = 'https://www.bodharesearch.in';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
+	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -27,20 +27,22 @@
 
 	let title = $derived(data.title);
 	let metaDescription = $derived(data.excerpt);
-	let metaUrl = $derived(BASE + page.url.pathname);
-	let metaImage = $derived(data.image);
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	let metaImage = $derived(absoluteImage(data.image));
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Article',
-		headline: data.title,
-		description: data.excerpt,
-		image: data.image,
-		datePublished: data.date,
-		author: { '@type': 'Person', name: firstAuthor },
-		publisher: { '@type': 'Organization', name: 'Bodha Research', url: BASE },
-		url: metaUrl
-	}));
+	let jsonld = $derived(
+		stringifyJsonLd(
+			articleJsonLd({
+				headline: data.title,
+				description: data.excerpt,
+				url: metaUrl,
+				image: metaImage,
+				datePublished: data.date,
+				author: data.author,
+				section: data.category
+			})
+		)
+	);
 </script>
 
 <svelte:window bind:scrollY={sY}/>

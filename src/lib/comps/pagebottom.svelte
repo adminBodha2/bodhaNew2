@@ -5,7 +5,7 @@
 	import Linkedin from '$lib/icons/linkedin.svelte';
 </script>
 
-<div class="foot-wrap">
+<div class="foot-wrap stdbox padded">
 	<div class="foot-inner narrowbox stdpad">
 		<div class="foot-top">
 			<div class="foot-brand">

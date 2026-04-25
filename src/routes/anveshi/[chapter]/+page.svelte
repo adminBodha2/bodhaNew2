@@ -10,6 +10,7 @@
 	import Session from '$lib/icons/sessions.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Location from '$lib/icons/location.svelte';
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -21,28 +22,23 @@
 
 	let title = $derived(data.title + ' | Bodha Anveshi');
 	let metaDescription = $derived(data.description);
-	let metaUrl = $derived('https://www.bodharesearch.in/anveshi/' + data.slug);
-	let metaImage = $derived(data.image);
+	let metaUrl = $derived(absoluteUrl('/anveshi/' + data.slug));
+	let metaImage = $derived(absoluteImage(data.image));
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'TouristTrip',
-		name: data.title,
-		description: data.description,
-		image: data.image,
-		url: metaUrl,
-		provider: {
-			'@type': 'Organization',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in'
-		},
-		itinerary: itins.map((item: any, index: number) => ({
-			'@type': 'ListItem',
-			position: index + 1,
-			name: item.label,
-			description: item.itinerary
-		}))
-	}));
+	let jsonld = $derived(
+		stringifyJsonLd(
+			touristTripJsonLd({
+				name: data.title,
+				description: data.description,
+				image: metaImage,
+				url: metaUrl,
+				itinerary: itins.map((item: any) => ({
+					name: item.label,
+					description: item.itinerary
+				}))
+			})
+		)
+	);
 
 	function selectDay(index: number) {
 		selectedDay = index;

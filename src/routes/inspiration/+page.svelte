@@ -4,6 +4,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -12,26 +13,23 @@
 
 	const title = 'Inspiration | Bodha';
 	const metaDescription = 'The thinkers and schools of thought that shape our method, questions, and the longer continuum of inquiry we work within.';
-	const metaUrl = 'https://www.bodharesearch.in/inspiration';
-	const metaImage = 'https://www.bodharesearch.in/images/key-inspiration.webp';
+	const metaUrl = absoluteUrl('/inspiration');
+	const metaImage = absoluteImage('/images/key-inspiration.webp');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: [...schools, ...thinkers].map((item: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: item.meta.title,
-				url: 'https://www.bodharesearch.in' + item.linkpath
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: [...schools, ...thinkers].map((item: any) => ({
+					name: item.meta.title,
+					url: item.linkpath
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

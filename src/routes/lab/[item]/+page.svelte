@@ -5,6 +5,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import '$lib/styles/lab.sass';
+	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -16,24 +17,21 @@
 
 	let title = $derived(data.title);
 	let metaDescription = $derived(data.excerpt);
-	let metaUrl = $derived('https://www.bodharesearch.in' + page.url.pathname);
-	const metaImage = 'https://www.bodharesearch.in/images/key-research.webp';
+	let metaUrl = $derived(absoluteUrl(page.url.pathname));
+	const metaImage = absoluteImage('/images/key-research.webp');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'Article',
-		headline: data.title,
-		description: data.excerpt,
-		datePublished: data.date,
-		articleSection: data.category,
-		url: metaUrl,
-		image: metaImage,
-		publisher: {
-			'@type': 'Organization',
-			name: 'Bodha',
-			url: 'https://www.bodharesearch.in'
-		}
-	}));
+	let jsonld = $derived(
+		stringifyJsonLd(
+			articleJsonLd({
+				headline: data.title,
+				description: data.excerpt,
+				datePublished: data.date,
+				section: data.category,
+				url: metaUrl,
+				image: metaImage
+			})
+		)
+	);
 </script>
 
 <Head

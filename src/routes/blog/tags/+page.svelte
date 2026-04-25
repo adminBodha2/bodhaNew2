@@ -2,6 +2,7 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -11,12 +12,27 @@
 
 	const title = 'Tags | Bodha Blog';
 	const metaDescription = 'All content tags at the Bodha website.';
-	const metaUrl = 'https://www.bodharesearch.in/blog/tags';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/blog/tags');
+	const metaImage = absoluteImage('/images/bodhacover.png');
+
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: tags.map((tag) => ({
+					name: tag.tag,
+					url: `/blog/tags/${tag.tag}`
+				}))
+			})
+		)
+	);
 </script>
 
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 
 <Container narrow={true} scaled={true}>

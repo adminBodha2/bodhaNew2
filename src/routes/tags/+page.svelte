@@ -4,13 +4,30 @@
 	import Container from '$lib/comps/container.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte'
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	type TagName = keyof typeof tagData;
 	const tags = Object.keys(tagData) as TagName[];
+	const title = 'All Tags at Bodha';
+	const metaDescription = 'The best way to explore all content, learning, and discovery at Bodha.';
+	const metaUrl = absoluteUrl('/tags');
+	const metaImage = absoluteImage('/images/bodhacover.png');
+	const jsonld = stringifyJsonLd(
+		collectionPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			items: tags.map((tag) => ({
+				name: tag.replaceAll('-', ' '),
+				url: `/tags/${tag}`
+			}))
+		})
+	);
 
 </script>
 
-<Head title="All Tags at Bodha" metaDescription="The best way to explore all content, learning, and discovery at Bodha." metaUrl="www.bodharesearch.in/tags" metaImage="/images/bodhacover.png"/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} {jsonld}/>
 
 <Container narrow={true}>
 	<div class="box std padded-ontop">

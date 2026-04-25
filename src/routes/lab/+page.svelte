@@ -2,6 +2,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
@@ -9,26 +10,23 @@
 
 	const title = 'Lab | Bodha';
 	const metaDescription = 'Working notes, ongoing inquiries, opinions, and deep research published as they develop.';
-	const metaUrl = 'https://www.bodharesearch.in/lab';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = absoluteUrl('/lab');
+	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let jsonld = $derived(JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: labItems.map((item: any, index: number) => ({
-				'@type': 'ListItem',
-				position: index + 1,
-				name: item.meta.title,
-				url: 'https://www.bodharesearch.in' + item.linkpath
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: labItems.map((item: any) => ({
+					name: item.meta.title,
+					url: item.linkpath
 			}))
-		}
-	}));
+			})
+		)
+	);
 </script>
 
 <Head

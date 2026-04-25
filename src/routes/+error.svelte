@@ -2,11 +2,12 @@
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { page } from '$app/state';
+	import { DEFAULT_IMAGE, SITE_URL } from '$lib/utils/seo';
 
 	const title = 'Page Not Found | Bodha';
 	const metaDescription = 'The requested page could not be found on Bodha.';
-	const metaUrl = 'https://www.bodharesearch.in';
-	const metaImage = 'https://www.bodharesearch.in/images/bodhacover.png';
+	const metaUrl = SITE_URL;
+	const metaImage = DEFAULT_IMAGE;
 </script>
 
 <Head

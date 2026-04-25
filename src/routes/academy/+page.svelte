@@ -1,15 +1,17 @@
 <svelte:options runes={true} />
 <script lang="ts">
+
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
+	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 
 	const title = 'Academy | Bodha';
 	const metaDescription = 'Training scholars in Indic research methodology and anthropology. Introducing the highest Hindu ideas and traditions to the next generation.';
-	const metaUrl = 'https://www.bodharesearch.in/academy';
-	const metaImage = 'https://www.bodharesearch.in/images/key-academy.webp';
+	const metaUrl = absoluteUrl('/academy');
+	const metaImage = absoluteImage('/images/key-academy.webp');
 
 </script>
 

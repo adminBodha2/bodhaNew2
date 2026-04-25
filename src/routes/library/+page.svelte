@@ -8,31 +8,27 @@
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import { libCategories, libPaths, libExternal } from '$lib/utils/localsends';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	const title = 'Open Library | Bodha';
 	const metaDescription = 'A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more.';
-	const metaUrl = 'https://www.bodharesearch.in/library';
-	const metaImage = 'https://www.bodharesearch.in/images/key-bol.webp';
+	const metaUrl = absoluteUrl('/library');
+	const metaImage = absoluteImage('/images/key-bol.webp');
 
 	const categoryCounts = Object.fromEntries(libCategories.map((category) => [category.type, libraryItems.filter((item) => item.type === category.type).length]));
 
-	const jsonld = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'CollectionPage',
-		name: title,
-		description: metaDescription,
-		url: metaUrl,
-		image: metaImage,
-		mainEntity: {
-			'@type': 'ItemList',
-			itemListElement: libCategories.map((category, index) => ({
-				'@type': 'ListItem',
-				position: index + 1,
+	const jsonld = stringifyJsonLd(
+		collectionPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			items: libCategories.map((category) => ({
 				name: category.label,
-				url: `https://www.bodharesearch.in${category.href}`
+				url: category.href
 			}))
-		}
-	});
+		})
+	);
 </script>
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
