@@ -41,7 +41,6 @@
 		<div class="grid two tightrows reading-block">
 			<p class="highlight-text">Bodha Open Library is a collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more. Find your next reading by browsing the categories, or select one of our curated reading paths.</p>
 			<p class="highlight-text">All texts in the library are sourced from the public domain. If any text violates copyright, please write to us at <span class="blue">sitemaster@bodharesearch.in</span>. All works compiled under 'Aryan Issue' are externally hosted/published papers, and links will open in a new tab.</p>
-			<button onclick={toggleSearch}>Search</button>
 		</div>
 	</div>
 	<div class="stdbox padded bordertop">
