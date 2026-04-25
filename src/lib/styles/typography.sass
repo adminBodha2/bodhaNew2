@@ -6,6 +6,7 @@
 
 body, html
 	font-family: var(--fontface-sans-flex)
+	color: var(--color-primary)
 
 pre
 	font-family: var(--fontface-sans-flex)
@@ -119,7 +120,7 @@ h1
 		letter-spacing: -0.05rem
 	@media screen and (max-width: 1024px)
 		&.page-title, &.page-title.source-serif
-			font-size: var(--typeH4)
+			font-size: var(--typeH3)
 			letter-spacing: -0.01rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -234,9 +235,11 @@ p, pre, li
 
 .classic-document
 	p, pre, li
-		line-height: 1.5
-		font-size: calc(var(--typeBase) * 1.2)
-		font-family: 'EB Garamond', serif
+		line-height: 1.6
+		font-size: calc(var(--typeBase) * 1.1)
+		font-family: 'Newsreader', serif
+		letter-spacing: 0
+		font-weight: 400
 	p, pre
 		margin-bottom: 1.25rem
 	li
@@ -255,7 +258,7 @@ p, pre, li
 		margin-top: 2.5rem
 	@media screen and (max-width: 1024px)
 		p, pre, li
-			line-height: 1.4
+			line-height: 1.5
 
 small
 	font-size: 11px

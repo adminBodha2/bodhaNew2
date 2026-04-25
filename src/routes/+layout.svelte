@@ -76,7 +76,8 @@ main
 	transition: background-size 0.5s ease
 	background-position: center var(--scroll-y)
 	@media screen and (max-width: 1024px)
-		background-size: 2rem 2rem
+		background-size: 3rem 3rem, 3rem 3rem
+		background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)
 	@media screen and (min-width: 1025px)
 		transition: background-position 0.1s linear
 		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem

@@ -13,7 +13,7 @@
 			<div class="foot-brand">
 				<Designed/>
 				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.<br>
-					Site designed at Bodha Lab | <a class="linkedlight" href="/docs/terms-and-conditions">Terms and Conditions</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds.</a>
+				Site designed at Bodha Lab
 				</p>
 			</div>
 			<button
@@ -62,7 +62,7 @@
 		</div>
 		<div class="foot-bottom">
 			<div class="foot-legal">
-				<small>© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/contact">Contact</a></small>
+				<small>© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/docs/terms-and-conditions">T&C</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds</a></small>
 				<small>Svayambodha Centre For Culture Studies Foundation</small>
 			</div>
 			<div class="foot-actions">

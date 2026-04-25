@@ -42,7 +42,7 @@
 			width: 100%
 	@media screen and (max-width: 1024px)
 		&.is100, &.is50
-			height: 40vh
+			height: 32vh
 			margin-top: 64px
 		img
 			object-fit: cover
