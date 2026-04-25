@@ -1,6 +1,6 @@
 <script lang="ts">
 
-  export let size = '24'
+  export let size = '20'
   export let color = 'var(--color-back)'
 
 </script>

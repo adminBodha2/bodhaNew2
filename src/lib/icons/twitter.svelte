@@ -9,8 +9,8 @@
 
 <style lang="sass">
 
-	svg
-		&:hover
-			fill: var(--color-theme)
+svg
+	&:hover
+		fill: var(--color-theme)
 	
-	</style>
+</style>

@@ -3,16 +3,18 @@
 	import Twitter from '$lib/icons/twitter.svelte';
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
+	import Github from '$lib/icons/github.svelte'
+	import Designed from '$lib/icons/designed.svelte'
 </script>
 
 <div class="foot-wrap stdbox padded">
-	<div class="foot-inner narrowbox stdpad">
+	<div class="foot-inner narrowbox padded elembox">
 		<div class="foot-top">
 			<div class="foot-brand">
-				<p class="white">Bodha</p>
-				<p class="lgrey small-text">A think tank and research group grounded in the wisdom of Hindu civilization.<br>
-					Site designed at Bodha Lab | <a class="linkedlight" target="_blank" rel="noreferrer" href="https://github.com/adminBodha2/bodhaNew2">Github</a>
+				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.<br>
+					Site designed at Bodha Lab
 				</p>
+				<Designed/>
 			</div>
 			<button
 				class="blank foot-scroll"
@@ -22,36 +24,42 @@
 				<span class="foot-scroll-label tt-u">Top</span>
 			</button>
 		</div>
-
 		<div class="foot-grid">
+			<div class="foot-col">
+				<p class="tag-text lgrey tt-u">Research</p>
+				<div class="foot-links">
+					<a class="foot-link blank grey" href="/research">Projects</a>
+					<a class="foot-link blank grey" href="/big-questions">Big Questions</a>
+					<a class="foot-link blank grey" href="/academy">Courses</a>
+					<a class="foot-link blank grey" href="/lab">Lab</a>
+				</div>
+			</div>
+			<div class="foot-col">
+				<p class="tag-text lgrey tt-u">Culture</p>
+				<div class="foot-links">
+					<a class="foot-link blank grey" href="/anveshi">Anveshi</a>
+					<a class="foot-link blank grey" href="/paths">Reading Paths</a>
+					<a class="foot-link blank grey" href="/concepts">Concepts</a>
+					<a class="foot-link blank grey" href="/temples">Temples</a>
+				</div>
+			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">Readings</p>
 				<div class="foot-links">
-					<a class="foot-link blank white" href="/blog">Blog</a>
-					<a class="foot-link blank white" href="/lab">Lab</a>
-					<a class="foot-link blank white" href="/library">Open Library</a>
-					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
+					<a class="foot-link blank grey" href="/blog">Blog</a>
+					<a class="foot-link blank grey" href="/library">Open Library</a>
+					<a class="foot-link blank grey" href="/inspiration">Inspiration</a>
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">Work</p>
+				<p class="tag-text lgrey tt-u">Bodha</p>
 				<div class="foot-links">
-					<a class="foot-link blank white" href="/research">Research</a>
-					<a class="foot-link blank white" href="/big-questions">Big Questions</a>
-					<a class="foot-link blank white" href="/academy">Academy</a>
-					<a class="foot-link blank white" href="/anveshi">Bodha Anveshi</a>
-				</div>
-			</div>
-			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">About</p>
-				<div class="foot-links">
-					<a class="foot-link blank white" href="/team">Team</a>
-					<a class="foot-link blank white" href="/contact">Contact</a>
-					<a class="foot-link blank white" href="/path">Learning Paths</a>
+					<a class="foot-link blank grey" href="/about">About</a>
+					<a class="foot-link blank grey" href="/contact">Contact</a>
+					<a class="foot-link blank grey" href="/videos">Videos</a>
 				</div>
 			</div>
 		</div>
-
 		<div class="foot-bottom">
 			<div class="foot-legal">
 				<small>© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/contact">Contact</a></small>
@@ -59,53 +67,31 @@
 			</div>
 			<div class="foot-actions">
 				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-					<Twitter color="var(--color-grey-2)" />
+					<Twitter color="var(--color-white)" />
 				</a>
 				<a class="blank foot-social" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-					<FB color="var(--color-grey-2)" />
+					<FB color="var(--color-white)" />
 				</a>
 				<a class="blank foot-social" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-					<Insta color="var(--color-grey-2)" />
+					<Insta color="var(--color-white)" />
 				</a>
 				<a class="blank foot-social" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-					<Linkedin color="var(--color-grey-2)" />
+					<Linkedin color="var(--color-white)" />
+				</a>
+				<a class="blank foot-social" href="https://github.com/adminBodha2/bodhaNew2" rel="noreferrer" target="_blank">
+					<Github color="var(--color-white)"/>
 				</a>
 			</div>
 		</div>
-
 	</div>
 </div>
 
 <style lang="sass">
 
-.stdpad
-	@media screen and (min-width: 1201px)
-		padding-left: 80px
-		padding-right: 80px
-	@media screen and (min-width: 1025px) and (max-width: 1200px)
-		padding-left: 48px
-		padding-right: 48px
-	@media screen and (min-width: 631px) and (max-width: 1024px)
-		padding-left: 32px
-		padding-right: 32px
-	@media screen and (max-width: 630px)
-		padding-left: 16px
-		padding-right: 16px
-
 .foot-wrap
 	width: 100%
-	background: linear-gradient(180deg,rgba(7, 57, 104, 1) 0%, rgba(7, 29, 48, 1) 27%, rgba(7, 14, 26, 1) 61%, rgba(10, 4, 4, 1) 100%)
-
-.foot-inner
-	display: flex
-	flex-direction: column
-	gap: 0
-	@media screen and (min-width: 1025px)
-		padding-top: 4rem
-		padding-bottom: 3rem
-	@media screen and (max-width: 1024px)
-		padding-top: 3rem
-		padding-bottom: 2.5rem
+	background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 84%, rgba(0, 0, 0, 1) 100%)
+	box-shadow: inset 0 12px 24px -12px rgba(0, 0, 0, 0.85)
 
 // ── TOP ROW ───────────────────────────────────────────────
 
@@ -114,9 +100,14 @@
 	align-items: flex-start
 	justify-content: space-between
 	gap: 1.5rem
-	padding-bottom: 2.5rem
-	border-bottom: 1px solid rgba(0,0,0,0.08)
-	margin-bottom: 2.5rem
+	@media screen and (max-width: 1024px)
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-areas: "." "foot-brand"
+		.foot-brand
+			grid-area: foot-brand
+		button
+			width: max-content
 
 .foot-brand
 	display: flex
@@ -130,37 +121,41 @@
 	gap: 4px
 	padding: 10px 14px
 	border-radius: 8px
-	border: 1px solid rgba(0,0,0,0.08)
-	background: var(--color-white)
 	transition: all 0.15s ease
-	flex-shrink: 0
+	backdrop-filter: blur(12px) saturate(1.2)
+	background: linear-gradient(180deg, rgba(255, 255, 255, .76), rgba(243, 243, 243, .64))
+	border: 1px solid rgba(255, 255, 255, .98)
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .9), 0 8px 18px rgba(15, 23, 42, .1), inset 0 -1px 1px rgba(0, 0, 0, .05)
+	transform-origin: center center
 	&:hover
-		border-color: rgba(0,0,0,0.15)
-		box-shadow: 0 2px 8px rgba(0,0,0,0.05)
+		background: linear-gradient(180deg, rgba(243, 243, 243, .64), rgba(255, 255, 255, .76))
+		transform: scale(0.95)
 
 .foot-scroll-arrow
 	font-size: 1rem
-	color: #444
+	color: var(--color-theme-2)
 	line-height: 1
 
 .foot-scroll-label
 	font-size: 8px
 	font-weight: 700
 	letter-spacing: 0.1em
-	color: #999
+	color: var(--color-theme-2)
 
 // ── LINK GRID ─────────────────────────────────────────────
 
 .foot-grid
 	display: grid
-	gap: 2rem
-	padding-bottom: 2.5rem
-	border-bottom: 1px solid rgba(0,0,0,0.08)
-	margin-bottom: 2rem
+	padding-bottom: 4rem
+	padding-top: 4rem
+	border-bottom: 1px solid rgba(255,255,255,0.1)
+	border-top: 1px solid rgba(255,255,255,0.1)
 	@media screen and (min-width: 1025px)
-		grid-template-columns: repeat(3, 1fr)
+		grid-template-columns: repeat(4, 1fr)
+		gap: 2rem
 	@media screen and (max-width: 1024px)
 		grid-template-columns: repeat(2, 1fr)
+		gap: 2rem 4rem
 
 .foot-col
 	display: flex
@@ -173,7 +168,7 @@
 	gap: 0.6rem
 
 .foot-link
-	font-size: 0.88rem
+	font-size: 1rem
 	transition: color 0.12s ease
 	&:hover
 		color: var(--color-theme)
@@ -186,6 +181,9 @@
 	justify-content: space-between
 	gap: 1rem
 	flex-wrap: wrap
+	@media screen and (max-width: 1024px)
+		flex-direction: column
+		align-items: flex-start
 
 .foot-legal
 	display: flex
@@ -199,11 +197,5 @@
 	display: flex
 	align-items: center
 	gap: 12px
-
-.foot-social
-	opacity: 0.6
-	transition: opacity 0.12s ease
-	&:hover
-		opacity: 1
 
 </style>

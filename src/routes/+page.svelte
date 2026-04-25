@@ -180,9 +180,9 @@
 
 .verticals
 	overflow: hidden
-	border: var(--border-dark)
 	border-radius: 4px
-	background: var(--color-back)
+	background: var(--color-alt-1)
+	border: var(--border-main)
 	&:hover
 		.theme-line
 			transform: scaleX(1.5)
