@@ -1,13 +1,24 @@
 import type { PageLoad } from './$types';
 import { nodes } from '$lib/graph';
-import type { Node } from '$lib/types/graph';
 
 export const load: PageLoad = () => {
-	return {
-		articles: nodes.filter((n: Node) => n.type === 'article'),
-		texts: nodes.filter((n: Node) => n.type === 'text'),
-		thinkers: nodes.filter((n: Node) => n.type === 'thinker'),
-		schools: nodes.filter((n: Node) => n.type === 'school'),
-		questions: nodes.filter((n: Node) => n.type === 'question')
-	};
+const contentNodes = nodes.filter(
+  (n) => n.type !== 'concept' && n.type !== 'ak-varga'
+);
+const akVargas = nodes.filter((n) => n.type === 'ak-varga');
+  const grouped = {
+    blogs: contentNodes.filter((n) => n.type === 'blog'),
+    books: contentNodes.filter((n) => n.type === 'book'),
+    questions: contentNodes.filter((n) => n.type === 'question'),
+    projects: contentNodes.filter((n) => n.type === 'project'),
+    thinkers: contentNodes.filter((n) => n.type === 'thinker'),
+    schools: contentNodes.filter((n) => n.type === 'school'),
+    labs: contentNodes.filter((n) => n.type === 'lab'),
+    externalArticles: contentNodes.filter((n) => n.type === 'external-article'),
+	akVargas
+  };
+
+  return {
+    grouped
+  };
 };

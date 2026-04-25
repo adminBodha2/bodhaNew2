@@ -1,19 +1,16 @@
 import type { PageLoad } from './$types';
 import { nodes, getIncoming } from '$lib/graph';
-import type { Node } from '$lib/types/graph';
 
 export const load: PageLoad = () => {
-  const concepts = nodes.filter((n: Node) => n.type === 'concept');
-
-  // rank by number of connections
-  const ranked = concepts
-    .map((c: Node) => ({
-      ...c,
-      count: getIncoming(c.id).length
+  const concepts = nodes
+    .filter((n) => n.type === 'concept')
+    .map((concept) => ({
+      ...concept,
+      count: getIncoming(concept.id).length
     }))
-    .sort((a, b) => b.count - a.count)
+    .sort((a, b) => b.count - a.count || a.title.localeCompare(b.title));
 
   return {
-    concepts: ranked
+    concepts
   };
 };

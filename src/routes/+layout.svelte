@@ -73,7 +73,7 @@
 
 main
 	background-image: linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px)
-	background-size: 6rem 6rem
+	background-size: 5rem 5rem
 	@media screen and (max-width: 1024px)
 		background-size: 2rem 2rem
 

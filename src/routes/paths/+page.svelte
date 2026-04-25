@@ -42,12 +42,12 @@
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Reading Paths" showD={true} desc="Curated sequences through the Bodha knowledge base. Each path is a guided journey with editorial notes."/>
-		<div class="grid two white-grid">
+		<div class="grid three ultra">
 			{#each data.paths as path, i}
 				<a class="blank labelbox outer card-padded" href="/paths/{path.id}">
 					<div class="labelbox main-text">
 						<p class="tag-text lgrey">{String(i + 1).padStart(2, '0')}{#if path.subtitle} - {path.subtitle}{/if}</p>
-						<h2 class="source-serif card-title">{path.title}</h2>
+						<p class="source-serif card-title">{path.title}</p>
 						<p class="rem1 altprim">{path.description.slice(0, 160)}…</p>
 					</div>
 					<div class="card-footer row ycenter xbetween self-bottom">
@@ -69,22 +69,18 @@
 
 <style lang="sass">
 
-// ── SINGLE CARD ────────────────────────────────────────────
-
-.white-grid
-	.labelbox.outer
-		background: var(--color-white)
-		transition: all 0.25s
-		.main-text
-			height: 100%
-		&:hover
-			transform: translateY(-2px)
-			box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 8px 10px rgba(0,0,0,0.04), 0 28px 48px rgba(0,0,0,0.07)
-			border-color: rgba(0,0,0,0.11)
-			background: var(--color-stone)
-			.arrow-icon
-				transform: translateX(4px)
-				opacity: 1
+.labelbox.outer
+	backdrop-filter: blur(18px) saturate(1.25)
+	background: linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(243, 243, 243, .58))
+	border: 1px solid rgba(255, 255, 255, .76)
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .92), 0 8px 12px rgba(15, 23, 42, .12), inset 0 1px 0 rgba(255, 255, 255, .82), inset 0 -1px 2px rgba(0, 0, 0, .04)
+	transition: all 0.25s
+	.main-text
+		height: 100%
+	&:hover
+		.arrow-icon
+			transform: translateX(4px)
+			opacity: 1
 
 // ── CARD FOOTER ────────────────────────────────────────────
 

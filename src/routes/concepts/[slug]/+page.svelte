@@ -9,6 +9,10 @@
 
 	let { data }: { data: PageData } = $props();
 
+  function nodeHref(node: { id: string }) {
+    return `/explorer/${encodeURIComponent(node.id)}`;
+  }
+
 	let grouped = $derived(data.grouped);
 	let description = $derived(data.concept.description || `Texts, thinkers, and ideas connected to ${data.concept.title}.`);
 	let isAK = $derived(data.concept.slug.startsWith('ak-'));
@@ -18,16 +22,6 @@
 	let metaUrl = $derived(absoluteUrl(page.url.pathname));
 	const metaImage = absoluteImage('/images/bodhacover.png');
 
-	let sections = $derived([
-		{ label: 'Articles', nodes: grouped.articles },
-		{ label: 'Books', nodes: grouped.texts },
-		{ label: 'Thinkers', nodes: grouped.thinkers },
-		{ label: 'Schools', nodes: grouped.schools },
-		{ label: 'Questions', nodes: grouped.questions }
-	].filter((section) => section.nodes.length > 0));
-
-	let totalContent = $derived(sections.reduce((sum, group) => sum + group.nodes.length, 0));
-
 	let jsonld = $derived(
 		stringifyJsonLd(
 			collectionPageJsonLd({
@@ -35,10 +29,10 @@
 				description: metaDescription,
 				url: metaUrl,
 				image: metaImage,
-				items: sections.flatMap((section: any) => section.nodes).map((node: any) => ({
-					name: node.title,
-					url: node.slug ? `/${node.slug}` : metaUrl
-			}))
+				items: Object.values(data.grouped).flat().map((node) => ({
+          			name: node.title,
+          			url: node.slug ? `/${node.slug}` : metaUrl
+        		}))
 			})
 		)
 	);
@@ -57,17 +51,61 @@
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">
 	<Crumb item1="Bodha" item1Link="/" show2={true} item2="Concepts" item2linked={true} item2Link="/concepts" showT={true} title={data.concept.title} showD={true} desc={description}/>
-	{#each sections as section}
-	<div class="white-grid grid three">
-		{#each section.nodes as node (node.id)}
-			<NodeMiniCard {node} />
-		{/each}
-	</div>
-	{/each}
-	{#if sections.length === 0 && (!data.relatedConcepts || data.relatedConcepts.length === 0)}
-	<div class="empty-state">
-		<p class="eyebrow tt-u">No connected content yet</p>
-	</div>
+	{#if data.grouped.blogs.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.blogs as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.books.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.books as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.questions.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.questions as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.projects.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.projects as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.thinkers.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.thinkers as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.schools.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.schools as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.labs.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.labs as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
+	{/if}
+	{#if data.grouped.externalArticles.length}
+		<div class="grid three white-grid">
+  			{#each data.grouped.externalArticles as node (node.id)}
+  			  <p><a href={nodeHref(node)}>{node.title}</a></p>
+  			{/each}
+		</div>
 	{/if}
 	<!--
 	<div class="amarakosha">

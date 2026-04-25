@@ -8,17 +8,9 @@
 
 	let { data }: { data: PageData } = $props();
 
-	let types = $derived([
-		{ key: 'articles', label: 'Articles', nodes: data.articles },
-		{ key: 'texts', label: 'Books', nodes: data.texts },
-		{ key: 'thinkers', label: 'Thinkers', nodes: data.thinkers },
-		{ key: 'schools', label: 'Schools', nodes: data.schools },
-		{ key: 'questions', label: 'Questions', nodes: data.questions }
-	]);
-
-	let activeKey = $state('articles');
-	let active = $derived(types.find((t) => t.key === activeKey)!);
-	let total = $derived(types.reduce((sum, type) => sum + type.nodes.length, 0));
+  function hrefFor(node: { id: string }) {
+    return `/explorer/${encodeURIComponent(node.id)}`;
+  }
 
 	const title = 'Knowledge Explorer | Bodha';
 	const metaDescription = 'Explore articles, texts, thinkers, schools, and questions across the Bodha knowledge base.';
@@ -32,10 +24,10 @@
 				description: metaDescription,
 				url: metaUrl,
 				image: metaImage,
-				items: types.flatMap((type) => type.nodes).map((node) => ({
-					name: node.title,
-					url: node.slug ? `/${node.slug}` : metaUrl
-			}))
+				items: Object.values(data.grouped).flat().map((node) => ({
+          			name: node.title,
+          			url: node.slug ? `/${node.slug}` : metaUrl
+        		}))
 			})
 		)
 	);
@@ -53,23 +45,62 @@
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Knowledge Explorer" showD={true} desc="Explore articles, texts, thinkers, schools, and questions across the Bodha knowledge base. {total} nodes | {types.length} types" showRow={true}>
-		<div class="row ycenter cgap8 mwrap rgap8">
-		{#each types as t}
-			<button
-				class="nav-btn"
-				class:active={activeKey === t.key}
-				onclick={() => activeKey = t.key}
-			>
-				{t.label} | {t.nodes.length}
-			</button>
-		{/each}
-		</div>
-	</Crumb>
+	<Crumb item1="Bodha" item1Link="/" showT={true} title="Knowledge Explorer" showD={true} desc="Explore articles, texts, thinkers, schools, and questions across the Bodha knowledge base."/>
+	{#if data.grouped.blogs.length}
 	<div class="grid white-grid four">
-		{#each active.nodes as node (node.id)}
-			<NodeMiniCard {node} showType={false} />
-		{/each}
+	 	{#each data.grouped.blogs as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
 	</div>
+	{/if}
+	{#if data.grouped.books.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.books as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
+	{#if data.grouped.questions.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.questions as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
+	{#if data.grouped.projects.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.projects as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
+	{#if data.grouped.thinkers.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.thinkers as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
+	{#if data.grouped.schools.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.schools as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
+	{#if data.grouped.labs.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.labs as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
+	{#if data.grouped.externalArticles.length}
+	<div class="grid white-grid four">
+	 	{#each data.grouped.externalArticles as node (node.id)}
+    	<p><a href={hrefFor(node)}>{node.title}</a></p>
+  		{/each}
+	</div>
+	{/if}
 </div>
 </Container>

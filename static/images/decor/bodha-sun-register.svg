@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
-  <circle cx="130" cy="130" r="48" fill="#F59E0B" opacity=".16"/>
-  <circle cx="130" cy="130" r="70" stroke="#F59E0B" stroke-width="2" opacity=".65"/>
-  <circle cx="130" cy="130" r="102" stroke="#0B0D19" stroke-width="1" opacity=".14"/>
-  <path d="M130 20v42M130 198v42M20 130h42M198 130h42M52 52l30 30M178 178l30 30M208 52l-30 30M82 178l-30 30" stroke="#0B82D8" stroke-width="1.5" opacity=".45"/>
-  <path d="M105 130c10-18 40-18 50 0-10 18-40 18-50 0Z" stroke="#0B0D19" stroke-width="1.5" opacity=".3"/>
-  <circle cx="130" cy="130" r="5" fill="#0B82D8" opacity=".65"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" fill="none">
+  <path d="M180 52c71 0 128 57 128 128s-57 128-128 128S52 251 52 180 109 52 180 52Z" fill="#000" opacity=".035"/>
+  <path d="M180 98c45 0 82 37 82 82s-37 82-82 82-82-37-82-82 37-82 82-82Z" fill="#000" opacity=".055"/>
+  <path d="M180 136c24 0 44 20 44 44s-20 44-44 44-44-20-44-44 20-44 44-44Z" fill="#000" opacity=".09"/>
+  <path d="M122 180c14-24 43-38 58-38s44 14 58 38c-14 24-43 38-58 38s-44-14-58-38Z" fill="#000" opacity=".11"/>
+  <path d="M180 30v62M180 268v62M30 180h62M268 180h62" stroke="#000" stroke-width="10" stroke-linecap="round" opacity=".055"/>
+  <path d="M74 74l44 44M242 242l44 44M286 74l-44 44M118 242l-44 44" stroke="#000" stroke-width="8" stroke-linecap="round" opacity=".05"/>
 </svg>

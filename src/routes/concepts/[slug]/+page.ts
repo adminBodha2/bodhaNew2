@@ -1,41 +1,57 @@
 import type { PageLoad } from './$types';
-import { getNodeBySlug, getIncoming, getOutgoing, nodeById } from '$lib/graph';
-import { groupByType } from '$lib/graph/group';
-import type { Node } from '$lib/types/graph';
+import { error } from '@sveltejs/kit';
+import { nodes, getIncoming, nodeById } from '$lib/graph';
+import type { GraphNode } from '$lib/noder/graph';
+import { getNodeScore } from '$lib/graph';
 
 export const load: PageLoad = ({ params }) => {
-  const concept = getNodeBySlug(params.slug);
+  const concept = nodes.find(
+    (node) => node.type === 'concept' && node.slug === params.slug
+  );
 
-  if (!concept) throw new Error('Concept not found');
-
-  const incoming = getIncoming(concept.id);
-  const outgoing = getOutgoing(concept.id);
-
-  const contentMap = new Map<string, Node>();
-  const relatedConceptMap = new Map<string, Node>();
-
-  // incoming → content nodes that tag this concept
-  for (const edge of incoming) {
-    const n = nodeById.get(edge.from);
-    if (!n) continue;
-    if (n.type === 'concept') {
-      relatedConceptMap.set(n.id, n);
-    } else {
-      contentMap.set(n.id, n);
-    }
+  if (!concept) {
+    throw error(404, 'Concept not found');
   }
 
-  // outgoing → related concepts (e.g. RELATED_TO edges to AK vargas)
-  for (const edge of outgoing) {
-    if (edge.type === 'RELATED_TO') {
-      const n = nodeById.get(edge.to);
-      if (n && n.type === 'concept') relatedConceptMap.set(n.id, n);
-    }
-  }
+const map = new Map<string, GraphNode>();
+const akVargaMap = new Map<string, GraphNode>();
 
-  return {
-    concept,
-    grouped: groupByType(Array.from(contentMap.values())),
-    relatedConcepts: Array.from(relatedConceptMap.values())
+for (const edge of getIncoming(concept.id)) {
+  const source = nodeById.get(edge.from);
+  if (!source) continue;
+
+  if (source.type === 'concept') continue;
+
+  if (source.type === 'ak-varga') {
+    akVargaMap.set(source.id, source);
+  } else {
+    map.set(source.id, source);
+  }
+}
+
+const relatedNodes = Array.from(map.values())
+  .map(n => ({ node: n, score: getNodeScore(n.id) }))
+  .sort((a, b) => b.score - a.score)
+  .map(x => x.node);
+
+const akVargas = Array.from(akVargaMap.values())
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+  const grouped = {
+    blogs: relatedNodes.filter((n) => n.type === 'blog'),
+    books: relatedNodes.filter((n) => n.type === 'book'),
+    questions: relatedNodes.filter((n) => n.type === 'question'),
+    projects: relatedNodes.filter((n) => n.type === 'project'),
+    thinkers: relatedNodes.filter((n) => n.type === 'thinker'),
+    schools: relatedNodes.filter((n) => n.type === 'school'),
+    labs: relatedNodes.filter((n) => n.type === 'lab'),
+    externalArticles: relatedNodes.filter((n) => n.type === 'external-article')
   };
+
+return {
+  concept,
+  grouped,
+  akVargas,
+  count: relatedNodes.length
+};
 };

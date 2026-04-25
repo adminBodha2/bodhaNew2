@@ -35,7 +35,6 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100"/>
 
 <Container narrow={true} scaled={true}>
-
 <div class="stdbox padded ycenter" id="first">
 	<div class="home-panel column">
 		<div class="grid two softleft ybottom tightrows">
@@ -112,7 +111,7 @@
 			<div class="box labelbox">
 				<p class="card-title source-serif">{pub.title}</p>
 				<p class="small-text grey">{pub.desc}</p>
-				<div class="row mwrap cgap16 rgap8 ptop8">
+				<div class="row wrap cgap16 rgap8 ptop8">
 					{#each pub.links as link}
 					<a class="small-button row ycenter cgap8" href={link.href} target="_blank" rel="noreferrer">{link.label} <div class="button-text">→</div></a>
 					{/each}

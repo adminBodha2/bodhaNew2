@@ -46,11 +46,11 @@
 <div class="stdbox padded-ontop">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="{totalCount} Concepts - Domains of thought across the knowledge base. Each concept connects texts, thinkers, and ideas."/>
 	<div class="row wrap cgap16 rgap16">
-		{#each regular as concept}
-			<a class="tag-item tt-u blank" href="/concepts/{concept.slug}">
-				{concept.title}
-				<span class="tag-count">{concept.count}</span>
-			</a>
+		{#each data.concepts as concept (concept.id)}
+  <p>
+    <a href={`/concept/${concept.slug}`}>{concept.title} ({concept.count})</a>
+    <span>({concept.count})</span>
+  </p>
 		{/each}
 	</div>
 </div>
