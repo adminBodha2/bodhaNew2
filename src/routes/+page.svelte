@@ -165,6 +165,7 @@
 	border-radius: 4px
 	background: var(--color-back)
 	&:hover
+		background: var(--color-stone)
 		.theme-line
 			transform: scaleX(1.5)
 

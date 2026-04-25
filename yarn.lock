@@ -1087,7 +1087,7 @@ file-uri-to-path@1.0.0:
 
 flexsearch@*, flexsearch@^0.8.212:
   version "0.8.212"
-  resolved "https://registry.npmjs.org/flexsearch/-/flexsearch-0.8.212.tgz"
+  resolved "https://registry.yarnpkg.com/flexsearch/-/flexsearch-0.8.212.tgz#b9509af778a991b938292e36fe0809a4ece4b940"
   integrity sha512-wSyJr1GUWoOOIISRu+X2IXiOcVfg9qqBRyCPRUdLMIGJqPzMo+jMRlvE83t14v1j0dRMEaBbER/adQjp6Du2pw==
 
 fsevents@~2.3.3:

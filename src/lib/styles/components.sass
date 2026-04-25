@@ -9,6 +9,10 @@ button
 		margin: 0
 		border: none
 		background: none
+		&:hover
+			svg.search-svg
+				fill: var(--color-theme)
+				stroke: var(--color-theme)
 	&.nav-btn
 		font-weight: 500
 		font-family: 'Google Sans Flex', sans-serif
@@ -366,7 +370,6 @@ button.small-button
 	&:hover
 		transform: translateY(-2px)
 		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.12)
-		background: var(--color-stone)
 
 .flowing
 	transition: box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1)

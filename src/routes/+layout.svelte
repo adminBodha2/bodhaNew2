@@ -10,8 +10,9 @@
 	import '$lib/styles/globals.sass';
 	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
+	import '$lib/styles/glass.sass'
 	import '$lib/styles/icons.css';
-	import { darkTheme, iW } from '$lib/utils/globalstores';
+	import { darkTheme, iW, searchState } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
@@ -26,10 +27,18 @@
 	injectSpeedInsights();
 	injectAnalytics();
 
+  function handleKeydown(e: KeyboardEvent) {
+    // Cmd+K (Mac) or Ctrl+K (Windows/Linux)
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      $searchState = !$searchState;
+    }
+  }
+
 	onMount(registerSwiper);
 </script>
 
-<svelte:window bind:scrollY={sY} bind:innerWidth={width} />
+<svelte:window bind:scrollY={sY} bind:innerWidth={width} onkeydown={handleKeydown}/>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
@@ -62,7 +71,7 @@
 <style lang="sass">
 
 main
-	background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
+	background-image: linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px)
 	background-size: 6rem 6rem
 	@media screen and (max-width: 1024px)
 		background-size: 2rem 2rem

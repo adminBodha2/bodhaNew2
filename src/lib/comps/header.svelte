@@ -42,17 +42,16 @@
 	<a class="nav-link blank tt-u" class:active={firstSubroute === '/blog'} href="/blog">Blog</a>
 	<a class="nav-link blank tt-u" class:active={firstSubroute === '/inspiration'} href="/inspiration">Inspiration</a>
 	<a class="nav-link blank tt-u" class:active={firstSubroute === '/team'} href="/team">Team</a>
+	<button class="blank" onclick={toggleSearch}><Search/></button>
   </nav>
   {:else}
 	<div class="row ycenter cgap16">
-		<!--
 		{#if !$menuState}
-		<button class="blank" on:click={toggleSearch}>
+		<button class="blank" onclick={toggleSearch}>
 			<Search/>
 		</button>
 		{/if}
-		-->
-	  <button class="blank" on:click={toggleMenuState}>
+	  <button class="blank" onclick={toggleMenuState}>
 		{#if $menuState === true}
 		  <Close/>
 		{:else}
@@ -71,7 +70,13 @@
 .tray
 	column-gap: 4px
 	@media screen and (min-width: 1201px)
+		column-gap: 8px
+		button.blank
+			margin-left: 8px
+	@media screen and (min-width: 1025px) and (max-width: 1200px)
 		column-gap: 6px
+		button.blank
+			margin-left: 6px
 
 .nav-link
 	font-size: 12px

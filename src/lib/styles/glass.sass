@@ -1,0 +1,211 @@
+// =============================================================
+// projectGlass — Glass theme (pure SASS / indented syntax)
+// Use with the SASS indented loader, file extension .sass
+// =============================================================
+
+// -------------------------------------------------------------
+// Tokens
+// -------------------------------------------------------------
+
+// Outer "track" (used by buttons that sit on a recessed track)
+$glass-track-fill:          #EEEEEE
+$glass-track-inner-shadow:  inset 0 1.5px 2.5px rgba(0, 0, 0, 0.042)
+
+// Inner pill / surface base
+$glass-inner-top:           #FFFFFF
+$glass-inner-bottom:        #F5F5F5
+$glass-inner-stroke:        #FFFFFF
+$glass-inner-stroke-w:      1.75px
+
+// Drop + bevel shadow stack
+$glass-shadow-1:            0 1px 0 0 rgba(225, 225, 225, 0.62)
+$glass-shadow-2:            0 1px 1px 0 rgba(0, 0, 0, 0.145)
+$glass-shadow-inset:        inset 0 2.5px 6px -2px rgba(179, 179, 179, 0.46)
+
+// Bright-card recipe (the brighter "really glass, not grey" version)
+$glass-card-grad:           linear-gradient(180deg, #FFFFFF 0%, #FBFBFB 55%, #F4F4F4 100%)
+$glass-card-grad-hover:     linear-gradient(180deg, #FFFFFF 0%, #FCFCFC 55%, #F6F6F6 100%)
+
+// Radii
+$glass-radius-pill:         999px
+$glass-radius-card:         16px
+$glass-radius-input:        14px
+
+// Type
+$glass-font:                "Google Sans Flex", "Roboto Flex", "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+$glass-serif:               "Source Serif 4", "Source Serif Pro", Georgia, serif
+
+// Brand
+$brand-blue:                #1971c2
+$brand-orange:              #e85a1e
+$ink:                       #0e0e0e
+$ink-2:                     #4a4a4a
+$ink-3:                     #8a8a8a
+$hair:                      rgba(0, 0, 0, 0.06)
+
+
+// -------------------------------------------------------------
+// Mixins (reusable shadow stacks)
+// -------------------------------------------------------------
+
+=glass-shadows
+	box-shadow: $glass-shadow-1, $glass-shadow-2, $glass-shadow-inset
+
+=glass-shadows-hover
+	box-shadow: 0 1.75px 0 0 rgba(225, 225, 225, 0.75), 0 2.5px 5px 0 rgba(0, 0, 0, 0.13), inset 0 2.5px 6px -2px rgba(179, 179, 179, 0.46)
+
+=glass-shadows-pressed
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6)
+
+=glass-card-shadows
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.035), 0 1px 0 0 rgba(225, 225, 225, 0.55), 0 6px 14px -6px rgba(0, 0, 0, 0.10), 0 1.5px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 5px 10px -4px rgba(195, 195, 195, 0.42)
+
+=glass-card-shadows-hover
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 0 0 rgba(225, 225, 225, 0.7), 0 10px 20px -8px rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 5px 10px -4px rgba(195, 195, 195, 0.42)
+
+=glass-focus-ring
+	outline: none
+	box-shadow: $glass-track-inner-shadow, 0 0 0 3px rgba(25, 113, 194, 0.28)
+
+
+// -------------------------------------------------------------
+// Primary button — track + inner pill ("Get Started")
+// -------------------------------------------------------------
+
+.gbtn
+	appearance: none
+	border: 0
+	background: $glass-track-fill
+	box-shadow: $glass-track-inner-shadow
+	border-radius: $glass-radius-pill
+	padding: 6px 22px 6px 6px
+	display: inline-flex
+	align-items: center
+	gap: 16px
+	cursor: pointer
+	font-family: $glass-font
+	color: $ink
+	transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease
+	.inner
+		background: linear-gradient(180deg, $glass-inner-top 0%, $glass-inner-bottom 100%)
+		border: $glass-inner-stroke-w solid $glass-inner-stroke
+		border-radius: $glass-radius-pill
+		padding: 14px 30px
+		font-size: 19px
+		font-weight: 600
+		letter-spacing: -0.005em
+		+glass-shadows
+		transition: inherit
+	.arrow
+		width: 22px
+		height: 22px
+		display: grid
+		place-items: center
+		color: #000
+	&:hover .inner
+		background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%)
+		+glass-shadows-hover
+		transform: translateY(-0.5px)
+	&:active .inner
+		background: linear-gradient(180deg, #F1F1F1 0%, #EAEAEA 100%)
+		+glass-shadows-pressed
+		transform: translateY(0.5px)
+	&:focus-visible
+		+glass-focus-ring
+
+// Ghost variant (no track)
+.gbtn--ghost
+	background: transparent
+	box-shadow: none
+	padding: 0
+	.inner
+		padding: 12px 22px
+		font-size: 16px
+
+// -------------------------------------------------------------
+// Icon-only button
+// -------------------------------------------------------------
+
+.gicon
+	appearance: none
+	border: $glass-inner-stroke-w solid $glass-inner-stroke
+	width: 44px
+	height: 44px
+	border-radius: 999px
+	background: linear-gradient(180deg, $glass-inner-top 0%, $glass-inner-bottom 100%)
+	+glass-shadows
+	display: grid
+	place-items: center
+	cursor: pointer
+	color: #000
+	transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease
+	&:hover
+		transform: translateY(-0.5px)
+	&:active
+		background: linear-gradient(180deg, #F1F1F1 0%, #EAEAEA 100%)
+		+glass-shadows-pressed
+		transform: translateY(0.5px)
+	&:focus-visible
+		outline: none
+		box-shadow: $glass-shadow-1, $glass-shadow-2, $glass-shadow-inset, 0 0 0 3px rgba(25, 113, 194, 0.28)
+
+// -------------------------------------------------------------
+// Card — bright "real glass" recipe
+// -------------------------------------------------------------
+
+.glass-card
+	background: linear-gradient(180deg, #FFFFFF 0%, #FBFBFB 55%, #F4F4F4 100%)
+	border: 1.5px solid #FFFFFF
+	border-radius: 16px
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.035), 0 1px 0 0 rgba(225, 225, 225, 0.55), 0 6px 14px -6px rgba(0, 0, 0, 0.10), 0 1.5px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 5px 10px -4px rgba(195, 195, 195, 0.42)
+	transition: transform 200ms ease, box-shadow 200ms ease
+	&:hover
+		transform: translateY(-1px)
+		box-shadow: 0 1.75px 0 0 rgba(225, 225, 225, 0.75), 0 2.5px 5px 0 rgba(0, 0, 0, 0.13), inset 0 2.5px 6px -2px rgba(179, 179, 179, 0.46)
+
+// -------------------------------------------------------------
+// Pills — white default + filled accent variants
+// -------------------------------------------------------------
+
+.glass-pill
+	display: inline-flex
+	align-items: center
+	gap: 8px
+	padding: 6px 12px
+	font-family: $glass-font
+	font-size: 10.5px
+	font-weight: 600
+	letter-spacing: 0.10em
+	text-transform: uppercase
+	color: $brand-blue
+	background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 60%, #F1F1F1 100%)
+	border: 1.25px solid #FFFFFF
+	border-radius: 999px
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 0 0 rgba(225, 225, 225, 0.55), 0 1.5px 2px 0 rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 2.5px 5px -2px rgba(195, 195, 195, 0.40)
+	.dot
+		width: 6px
+		height: 6px
+		border-radius: 999px
+		background: #16a34a
+		box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.15)
+
+.glass-pill--blue
+	color: #FFFFFF
+	background: linear-gradient(180deg, #2a8ad9 0%, #1971c2 100%)
+	border: 1px solid rgba(255, 255, 255, 0.35)
+	box-shadow: 0 1px 0 0 rgba(225, 225, 225, 0.4), 0 1px 1px 0 rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.35)
+
+.glass-pill--orange
+	color: #FFFFFF
+	background: linear-gradient(180deg, #f47242 0%, #e85a1e 100%)
+	border: 1px solid rgba(255, 255, 255, 0.35)
+	box-shadow: 0 1px 0 0 rgba(225, 225, 225, 0.4), 0 1px 1px 0 rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.35)
+
+
+// -------------------------------------------------------------
+// Pressed / inset state (e.g. selected "Big Question" card)
+// -------------------------------------------------------------
+
+.glass-pressed
+	background: linear-gradient(180deg, #F4F4F4 0%, #FAFAFA 100%)
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), inset 0 2px 4px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6)
