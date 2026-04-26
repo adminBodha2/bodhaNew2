@@ -7,7 +7,8 @@
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Youtuber from '$lib/comps/youtuber.svelte';
 	import Title from '$lib/comps/page-title.svelte';
-	import { gateways, verticals, publications } from '$lib/utils/localsends';
+	import { verticals, publications } from '$lib/utils/localsends';
+	import Navigator from '$lib/comps/navigator.svelte'
 
 	let { data }: { data: PageData } = $props();
 
@@ -27,11 +28,11 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
 <Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop ycenter" id="first">
+	<div class="stdbox padded ycenter" id="first">
 		<div class="home-panel box textbox">
-				<div class="box textbox">
+				<div class="box elembox">
 					<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
-					<p class="altprim card-title loose thin">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+					<p class="card-title loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 				</div>
 		<div class="grid four mid2 tight">
 			{#each verticals as item}
@@ -51,16 +52,32 @@
 		<div class="stdbox padded bordertop sideline" id="blog posts">
 			<div class="row xbetween ycenter rgap16">
 				<Title text="essays and articles" />
-				<a class="small-button row ycenter cgap4" href="/blog"
-					>See All <div class="button-text">→</div></a>
+				<Navigator text="See All" link="/blog"/>
 			</div>
-			<div class="white-grid grid three blog-grid">
+			<div class="grid three mid2 tight">
 				{#each blogs as item, i}
-					<BlogCard title={item.meta.title} link={item.linkpath} image={item.meta.image} excerpt={item.meta.excerpt} author={item.meta.author} date={item.formattedDate} words={item.meta.words} numbering="slate">
-						{#each item.meta.tags as tag}
-							<a class="tag-pill accented tt-u" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
-						{/each}
-					</BlogCard>
+					<div class="post-card box">
+						<div class="row post-metadata ycenter">
+							{#if item.meta.tags && item.meta.tags.length > 0}
+								<div class="row wrap all-tags">
+									{#each item.meta.tags as tag}
+										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
+									{/each}
+								</div>
+							{/if}
+							<p class="citation-big tt-u grey" style="margin-left: 4px">{item.meta.words} words</p>
+						</div>
+						<a class="blank imgbox" href={item.linkpath}>
+							<img src={item.meta.image} alt={item.meta.title}/>
+						</a>
+						<a class="blank textbox title-desc" href={item.linkpath}>
+							<p class="source-serif card-title tight">{item.meta.title}</p>
+							<p class="small-text grey">{item.meta.excerpt}</p>
+						</a>
+						<div class="foot box">
+							<p class="tag-text tt-u w500">{item.formattedDate} | {item.meta.author}</p>
+						</div>
+					</div>
 				{/each}
 			</div>
 		</div>
@@ -87,7 +104,6 @@
 			{/each}
 		</div>
 	</div>
-
 	{#if vids.length > 0}
 		<div class="stdbox padded bordertop">
 			<div class="row xbetween ycenter rgap16">
@@ -113,18 +129,66 @@
 
 <style lang="sass">
 
+.post-card
+	position: relative
+	overflow: hidden
+	border-radius: 4px
+	border: 1px solid rgba(255,255,255,0.9)
+	background: linear-gradient(145deg, rgba(255,255,255,0.74), rgba(255,255,255,0.42))
+	backdrop-filter: blur(12px) saturate(1.25)
+	-webkit-backdrop-filter: blur(12px) saturate(1.25)
+	box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0.05)
+	transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms cubic-bezier(0.16, 1, 0.3, 1), background 240ms cubic-bezier(0.16, 1, 0.3, 1)
+	&::before
+		content: ''
+		position: absolute
+		inset: 0
+		pointer-events: none
+		background: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.28) 22%, rgba(255,255,255,0) 48%)
+		opacity: 0.75
+		z-index: 1
+	&:hover
+		background: linear-gradient(145deg, rgba(255,255,255,0.84), rgba(255,255,255,0.52))
+		border-color: rgba(255,255,255,1)
+		box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 -1px 0 rgba(0,0,0,0.04) inset, 0 18px 50px rgba(15,23,42,0.08), 0 6px 18px rgba(15,23,42,0.05)
+	.title-desc
+		padding: 0 2rem 2rem 2rem
+	.post-metadata
+		padding: 2rem 2rem 0 2rem
+	.foot
+		margin-top: auto
+		padding: 2rem 2rem 1rem 2rem
+	@media screen and (max-width: 1024px)
+		.title-desc
+			padding: 0 1.25rem 1.25rem 1.25rem
+		.post-metadata
+			padding: 1.25rem 1.25rem 0 1.25rem
+		.foot
+			padding: 1.25rem 1.25rem 1rem 1.25rem
+
+.imgbox
+	height: 320px
+	padding: 1rem 2rem
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+	@media screen and (max-width: 1024px)
+		padding: 1rem 1.25rem
+		height: 280px
+
 #first
 	min-height: 100vh
 
 .home-panel
 	row-gap: 3rem
 	border-radius: 4px
+	padding-top: 4rem
 	@media screen and (max-width: 1024px)
 		padding: 0
 		row-gap: 2rem
 
 // ── GATEWAY CARDS ─────────────────────────────────────────
-
 
 .theme-line
 	height: 2px
@@ -141,14 +205,18 @@
 	backdrop-filter: blur(10px) saturate(120%)
 	-webkit-backdrop-filter: blur(10px) saturate(120%)
 	border: 1px solid rgba(255,255,255,0.35)
-	transition: all 200ms cubic-bezier(0.22, 1, 0.36, 1)
+	transition: all 160ms cubic-bezier(0.22, 1, 0.36, 1)
 	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.15)
+	position: relative
 	&:hover
-		box-shadow: 0 4px 4px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.15)
+		box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.15)
 		border: 1px solid rgba(255,255,255,0.1)
 		background: rgba(255,255,255,0.32)
 		img
 			filter: saturate(1)
+		&::after
+			width: 100%
+			left: 0
 	img
 		width: 100%
 		height: 100%
@@ -159,16 +227,22 @@
 		padding: 0 1.5rem 2rem 1.5rem
 	.imgbox
 		height: 420px
-		padding: 1rem 1rem 0 1rem
+		padding: 0.5rem 0.5rem 0 0.5rem
 		overflow: hidden
+	&::after
+		position: absolute
+		right: 0
+		bottom: -1px
+		content: " "
+		width: 0
+		height: 2px
+		background: var(--color-theme)
+		transition: width 200ms ease
 	@media screen and (max-width: 1024px)
 		.imgbox
 			height: 280px
 		.labelbox
 			padding: 0 1rem 1.5rem 1rem
-
-.blog-grid
-	border-radius: 4px
 
 
 // ── PUBLICATIONS ──────────────────────────────────────────

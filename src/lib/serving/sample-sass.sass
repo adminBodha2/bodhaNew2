@@ -1,0 +1,60 @@
+html, body
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+
+html, body
+	scroll-behaviour: smooth
+
+*, :root
+	box-sizing: border-box
+
+.bdr
+	border: 1px solid red
+
+.bordertop
+	border-top: var(--border-main)
+.borderbot
+	border-bottom: var(--border-main)
+
+img.blog-image
+	object-fit: cover
+	width: 100%
+	height: 240px
+
+.row, .column
+	display: flex
+
+.row
+	flex-direction: row
+	&.wrapper
+		flex-wrap: wrap
+	&.xbetween
+		justify-content: space-between
+	&.xleft
+		justify-content: flex-start
+	&.xright
+		justify-content: flex-end
+		@media screen and (max-width: 1024px)
+			&.mleft
+				justify-content: flex-start
+	&.xcenter
+		justify-content: center
+	&.ycenter
+		align-items: center
+	&.ytop
+		align-items: flex-start
+	&.wrap
+		flex-wrap: wrap
+	@media screen and (min-width: 1025px)
+		&.xbetween-mleft
+			justify-content: space-between
+	@media screen and (max-width: 1024px)
+		&.mwrap
+			flex-wrap: wrap
+		&.mcol
+			flex-direction: column
+			&.mleft.ycenter
+				align-items: flex-start
+		&.xcenter.mleft
+			justify-content: flex-start

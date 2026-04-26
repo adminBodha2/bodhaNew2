@@ -3,12 +3,8 @@ html, body
 	padding: 0
 	margin: 0
 
-html
+html, body
 	scroll-behaviour: smooth
-	scrollbar-width: thin
-	-webkit-scrollbar-width: thin
-	scrollbar-color: gray transparent
-	-webkit-scrollbar-color: gray transparent
 
 *, :root
 	box-sizing: border-box
@@ -148,6 +144,8 @@ img.blog-image
 		&.two.softright
 			grid-template-columns: 1fr 40%
 	@media screen and (min-width: 1025px) and (max-width: 1200px)
+		&.three.mid2
+			grid-template-columns: 1fr 1fr
 		&.four.mid2
 			grid-template-columns: 1fr 1fr
 	@media screen and (max-width: 1024px)
@@ -183,7 +181,7 @@ img.blog-image
 		padding-left: 1rem
 		padding-right: 1rem
 	@media screen and (min-width: 1601px)
-		width: 1568px
+		width: 1472px
 		padding-left: 1rem
 		padding-right: 1rem
 
@@ -198,7 +196,7 @@ img.blog-image
 	@media screen and (min-width: 1441px)
 		width: 1408px
 	@media screen and (min-width: 1601px)
-		width: 1568px
+		width: 1472px
 
 //assorted---------------------------------------------------------------------------------------------------------------------------------
 

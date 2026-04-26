@@ -45,7 +45,7 @@
 <style lang="sass">
 
 pre
-	font-family: var(--fontface-sans-flex)
+	font-family: var(--fontface-sans)
 	line-height: 1.5
 
 .acco-box

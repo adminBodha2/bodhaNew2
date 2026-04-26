@@ -10,7 +10,7 @@
 </script>
 
 <div class="blog-card {numbering} flowing">
-	<a class="card-media blank" href={link}>
+	<a class="card-media blank img-title-desc" href={link}>
 		<div class="image-box">
 			<img src={image} alt={title} />
 		</div>
@@ -20,7 +20,7 @@
 			<p class="grey small-text">{excerpt}</p>
 		</div>
 	</a>
-	<div class="column rgap8 card-bottom">
+	<div class="column rgap8 card-bottom post-metadata">
 		<div class="row wrap cgap4 rgap4 ycenter">
 			<a class="small-text grey blank tt-u" href="/blog/writers/{author}">{author}</a>
 			{#if words && words !== ' '}

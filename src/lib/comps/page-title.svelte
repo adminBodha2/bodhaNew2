@@ -16,11 +16,11 @@
 
 </script>
 
-<div class="row ycenter xleft cgap16 trigger" class:xcenter={isCenter} class:mleft={isCenter}>
+<div class="row ycenter xleft cgap8 trigger" class:xcenter={isCenter} class:mleft={isCenter}>
 	<div class="bob">
-		<Arrow size={12} color={anveshi ? '#D3633A' : undefined} />
+		<Arrow size={24} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="header-2 name lgrey tt-u">
+	<h2 class="header-2 name tt-u">
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style="animation-delay: {i * 0.04}s">{char}</span>
 		{/each}

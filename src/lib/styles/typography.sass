@@ -5,11 +5,11 @@
 	--fontface-serif3: 'EB Garamond', serif
 
 body, html
-	font-family: var(--fontface-sans-flex)
+	font-family: var(--fontface-sans)
 	color: var(--color-primary)
 
 pre
-	font-family: var(--fontface-sans-flex)
+	font-family: var(--fontface-sans)
 
 p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
 	margin: 0
@@ -125,7 +125,6 @@ h1
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 h2
 	line-height: 1.12
 	font-size: var(--typeH2)
@@ -137,11 +136,13 @@ h2
 	&.card-title.source-serif
 		letter-spacing: -0.04rem
 	&.header-2
-		font-size: 0.7rem
-		font-weight: 500
+		font-size: var(--typeH2)
+		font-weight: 400
 	@media screen and (max-width: 1024px)
 		&.card-title.source-serif
 			letter-spacing: -0.02rem
+		&.header-2
+			font-size: var(--typeH1)
 
 //-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -197,19 +198,19 @@ p, pre, li
 		&.tight
 			line-height: 1.28
 	&.small-text
-		font-size: 0.875rem
+		font-size: 0.95rem
 	&.tag-text
 		font-size: 0.65rem
 		letter-spacing: 0.02rem
 	&.card-title
-		font-size: 1.8rem
-		font-weight: 650
+		font-size: calc(var(--typeH2) * 0.95)
+		font-weight: 630
 		line-height: 1.2
 		letter-spacing: -0.01rem
 		&.thin
 			font-weight: 400
 		&.loose
-			line-height: 1.4
+			line-height: 1.5
 		&.w500
 			font-weight: 500
 	&.rem1
@@ -222,7 +223,7 @@ p, pre, li
 	@media screen and (max-width: 1024px)
 		font-size: 1.1rem
 		&.card-title
-			font-size: 1.55rem
+			font-size: calc(var(--typeH2) * 0.95)
 
 .text-container
 	p, pre, li
