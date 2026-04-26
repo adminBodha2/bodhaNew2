@@ -5,6 +5,10 @@ html, body
 
 html
 	scroll-behaviour: smooth
+	scrollbar-width: thin
+	-webkit-scrollbar-width: thin
+	scrollbar-color: gray transparent
+	-webkit-scrollbar-color: gray transparent
 
 *, :root
 	box-sizing: border-box
@@ -143,6 +147,9 @@ img.blog-image
 			grid-template-columns: 1fr 32%
 		&.two.softright
 			grid-template-columns: 1fr 40%
+	@media screen and (min-width: 1025px) and (max-width: 1200px)
+		&.four.mid2
+			grid-template-columns: 1fr 1fr
 	@media screen and (max-width: 1024px)
 		&.four, &.three, &.two, &.five
 			grid-template-columns: 1fr
@@ -168,17 +175,17 @@ img.blog-image
 		padding-left: 1rem
 		padding-right: 1rem
 	@media screen and (min-width: 1201px)
-		width: 1152px
-		padding-left: 1.5rem
-		padding-right: 1.5rem
+		width: 1168px
+		padding-left: 1rem
+		padding-right: 1rem
 	@media screen and (min-width: 1441px)
-		width: 1376px
-		padding-left: 2rem
-		padding-right: 2rem
+		width: 1408px
+		padding-left: 1rem
+		padding-right: 1rem
 	@media screen and (min-width: 1601px)
-		padding-left: 2rem
-		padding-right: 2rem
-		width: 1536px
+		width: 1568px
+		padding-left: 1rem
+		padding-right: 1rem
 
 .narrowsize
 	width: 100%
@@ -187,11 +194,11 @@ img.blog-image
 	@media screen and (min-width: 1025px)
 		width: 992px
 	@media screen and (min-width: 1201px)
-		width: 1152px
+		width: 1168px
 	@media screen and (min-width: 1441px)
-		width: 1376px
+		width: 1408px
 	@media screen and (min-width: 1601px)
-		width: 1536px
+		width: 1568px
 
 //assorted---------------------------------------------------------------------------------------------------------------------------------
 

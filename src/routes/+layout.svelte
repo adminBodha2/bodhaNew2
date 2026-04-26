@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/state'
 	import { dev } from '$app/environment';
 	import { registerSwiper } from '$lib/utils/swiper';
+	import { fly } from 'svelte/transition'
+	import { quintIn, quintOut } from 'svelte/easing'  
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
@@ -60,9 +63,11 @@
 	<header class="row ycenter">
 		<Header />
 	</header>
-	<main style="--scroll-y: {sY * 0.2}px">
+	{#key page.url.pathname}
+	<main style="--scroll-y: {sY * 0.2}px" out:fly={{ duration: 350, y: -120, easing: quintIn}} in:fly={{ duration: 300, delay: 280, y: 120, easing: quintOut }}>
 		{@render children?.()}
 	</main>
+	{/key}
 	<footer class="column">
 		<Bottom />
 	</footer>
@@ -72,15 +77,16 @@
 <style lang="sass">
 
 main
-	background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
+	background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
 	transition: background-size 0.5s ease
 	background-position: center var(--scroll-y)
+	will-change: transform, opacity
 	@media screen and (max-width: 1024px)
 		background-size: 3rem 3rem, 3rem 3rem
 		background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)
 	@media screen and (min-width: 1025px)
 		transition: background-position 0.1s linear
-		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
+		background-size: 5rem 5rem, 5rem 5rem, 2.5rem 2.5rem, 2.5rem 2.5rem
 
 @keyframes breathers
 	from
@@ -94,10 +100,10 @@ header
 	background: #FFFFFE
 	top: 0
 	z-index: 999
-	border-bottom: 1px solid rgba(0,0,0,0.06)
+	border-bottom: var(--border-dark)
 	justify-content: center
-	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.12)
-	transition: box-shadow 300ms cubic-bezier(0.665, 0.010, 0.795, 0.655)
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.07)
+	transition: box-shadow 100ms cubic-bezier(0.665, 0.010, 0.795, 0.655)
 	&:hover
 		box-shadow: 0 1px 0 rgba(0,0,0,0), 0 8px 20px rgba(0,0,0,0), 0 4px 4px rgba(0,0,0,0)
 	@media screen and (min-width: 1025px)

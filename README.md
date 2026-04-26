@@ -17,7 +17,7 @@ This public repository hosts the codebase for our website, shared for anyone loo
 - Styling: custom SASS
 - Package manager: Yarn
 - Hosting: Vercel, pulling from Github
-- Other: Supabase for db management
+- Other: Supabase for db management, Cloudflare R3 storage for Bodha Open Library files
 - MDSVex for markdown support
 
 ## Repository Structure
@@ -49,6 +49,7 @@ bodharesearch.in/
 - Node.js (v18 or higher recommended)
 - Yarn (`npm install -g yarn`)
 - A .env file with `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+- If you don't want to use Supabase, remove all code that imports from src/lib/utils/supabaseClient, then delete that file.
 
 ```bash
 # Clone the repo

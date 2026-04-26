@@ -30,7 +30,7 @@ export const verticals = [
 		title: 'Research',
 		href: '/research',
 		image: '/images/key-research.webp',
-		desc: 'Focused field research on institutions, policy, culture, and the lived structure of Hindu civilization.',
+		desc: 'Focused research on institutions, policy, culture, and the lived structure of Hindu civilization.',
 		kicker: 'research'
 	},
 	{
