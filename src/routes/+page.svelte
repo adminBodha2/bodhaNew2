@@ -31,8 +31,8 @@
 	<div class="stdbox padded ycenter" id="first">
 		<div class="home-panel box textbox">
 				<div class="box elembox">
-					<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
-					<p class="card-title loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+					<h1 class="source-serif width50"><span class="blue">Bodha</span> is a think tank and research group,</h1>
+					<p class="highlight-text loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 				</div>
 		<div class="grid four mid2 tight">
 			{#each verticals as item}
@@ -104,12 +104,12 @@
 			{/each}
 		</div>
 	</div>
+
 	{#if vids.length > 0}
 		<div class="stdbox padded bordertop">
 			<div class="row xbetween ycenter rgap16">
 				<Title text="recent videos" />
-				<a class="small-button row ycenter cgap8" href="/videos"
-					>See All <div class="button-text">→</div></a>
+				<Navigator text="See All" link="/videos"/>
 			</div>
 			<div class="standard-grid grid three video-grid">
 				{#each vids as item, i}
@@ -252,13 +252,15 @@
 	flex-direction: column
 	gap: 1.25rem
 	padding: 1rem
-	border: 1px solid rgba(0,0,0,0.06)
+	border: 1px solid #FFFFFF
 	border-radius: 4px
-	background: var(--color-stone)
+	background: rgba(255,255,255,0.7)
+	backdrop-filter: blur(20px) saturate(150%)
 	@media screen and (min-width: 1025px)
 		display: grid
 		grid-template-columns: 160px 1fr
 		align-items: start
+		box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -4px 20px rgba(255,255,255,0.15)
 		.labelbox
 			padding: 1rem
 
@@ -269,6 +271,7 @@
 	@media screen and (min-width: 1025px)
 		height: 256px
 		width: 100%
+		box-shadow: 0 4px 4px rgba(15, 23, 42, 0.08), 0 -2px 2px rgba(255,255,255,0.2), inset 0 -4px 20px rgba(255,255,255,0.15)
 	@media screen and (max-width: 1024px)
 		height: 200px
 		margin-right: auto

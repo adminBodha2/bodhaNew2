@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { page } from '$app/state'
+	import { onNavigate } from '$app/navigation';
 	import { dev } from '$app/environment';
 	import { registerSwiper } from '$lib/utils/swiper';
-	import { fly } from 'svelte/transition'
-	import { quintIn, quintOut } from 'svelte/easing'  
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
@@ -14,7 +12,7 @@
 	import '$lib/styles/globals.sass';
 	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
-	import '$lib/styles/glass.sass'
+	import '$lib/styles/glass.sass';
 	import '$lib/styles/icons.css';
 	import { darkTheme, iW, searchState } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
@@ -31,18 +29,32 @@
 	injectSpeedInsights();
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
-  function handleKeydown(e: KeyboardEvent) {
-    // Cmd+K (Mac) or Ctrl+K (Windows/Linux)
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-      e.preventDefault();
-      $searchState = !$searchState;
-    }
-  }
+	function handleKeydown(e: KeyboardEvent) {
+		// Cmd+K (Mac) or Ctrl+K (Windows/Linux)
+		if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+			e.preventDefault();
+			$searchState = !$searchState;
+		}
+	}
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		if (navigation.from?.url.pathname === navigation.to?.url.pathname) return;
+		if (window.scrollY > 120) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve(undefined);
+				await navigation.complete;
+			});
+		});
+	});
 
 	onMount(registerSwiper);
 </script>
 
-<svelte:window bind:scrollY={sY} bind:innerWidth={width} onkeydown={handleKeydown}/>
+<svelte:window bind:scrollY={sY} bind:innerWidth={width} onkeydown={handleKeydown} />
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
@@ -63,11 +75,9 @@
 	<header class="row ycenter">
 		<Header />
 	</header>
-	{#key page.url.pathname}
-	<main style="--scroll-y: {sY * 0.2}px" out:fly={{ duration: 350, y: -120, easing: quintIn}} in:fly={{ duration: 300, delay: 280, y: 120, easing: quintOut }}>
+	<main>
 		{@render children?.()}
 	</main>
-	{/key}
 	<footer class="column">
 		<Bottom />
 	</footer>
@@ -79,14 +89,41 @@
 main
 	background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
 	transition: background-size 0.5s ease
-	background-position: center var(--scroll-y)
-	will-change: transform, opacity
+	background-position: center center
+	view-transition-name: page
 	@media screen and (max-width: 1024px)
 		background-size: 3rem 3rem, 3rem 3rem
 		background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
 	@media screen and (min-width: 1025px)
 		transition: background-position 0.1s linear
 		background-size: 5rem 5rem, 5rem 5rem, 2.5rem 2.5rem, 2.5rem 2.5rem
+
+:global(::view-transition-old(page))
+	animation: page-out 300ms var(--cz-easeInQuad) both
+
+:global(::view-transition-new(page))
+	animation: page-in 500ms var(--cz-easeOutQuad) 270ms both
+
+@media (prefers-reduced-motion: reduce)
+	:global(::view-transition-old(page)),
+	:global(::view-transition-new(page))
+		animation: none
+
+@keyframes page-out
+	from
+		opacity: 1
+		transform: translateY(0) scale(1)
+	to
+		opacity: 0
+		transform: translateY(-50px) scale(0.995)
+
+@keyframes page-in
+	from
+		opacity: 0
+		transform: translateY(50px) scale(0.995)
+	to
+		opacity: 1
+		transform: translateY(0) scale(1)
 
 @keyframes breathers
 	from
@@ -97,13 +134,15 @@ main
 header
 	width: 100%
 	position: sticky
-	background: #FFFFFE
+	background: rgba(255,255,255,0.77)
+	backdrop-filter: blur(20px)
 	top: 0
 	z-index: 999
 	border-bottom: var(--border-dark)
 	justify-content: center
 	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.07)
 	transition: box-shadow 100ms cubic-bezier(0.665, 0.010, 0.795, 0.655)
+	view-transition-name: header
 	&:hover
 		box-shadow: 0 1px 0 rgba(0,0,0,0), 0 8px 20px rgba(0,0,0,0), 0 4px 4px rgba(0,0,0,0)
 	@media screen and (min-width: 1025px)

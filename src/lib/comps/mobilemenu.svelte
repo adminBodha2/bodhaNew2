@@ -1,14 +1,28 @@
 <script lang="ts">
+	import { page } from '$app/state'
   import { fly } from 'svelte/transition'
   import { cubicOut } from 'svelte/easing'
-  import { toggleMenuState } from '$lib/utils/globalstores'
-  import { page } from '$app/stores'
+  import { toggleMenuState, menuState } from '$lib/utils/globalstores'
 
-  let firstSubroute = '/'
-  $: {
-    const parts = $page.url.pathname.split('/').filter(Boolean)
-    firstSubroute = parts.length > 0 ? '/' + parts[0] : '/'
-  }
+
+let firstSubroute = $derived.by(() => {
+	const parts = page.url.pathname.split('/').filter(Boolean);
+	return parts.length > 0 ? '/' + parts[0] : '/';
+});
+
+
+	$effect(() => {
+		if ($menuState) {
+			document.body.style.overflow = 'hidden';
+		} else if (!$menuState) {
+			document.body.style.overflow = '';
+		}
+	});
+
+	function handleClose() {
+		$menuState = false;
+		document.body.style.overflow = '';
+	}
 
   const links = [
     { href: '/research',       label: 'Research' },
@@ -34,7 +48,7 @@
     	  class="mm-link blank tt-u"
     	  class:active={firstSubroute === link.href}
     	  href={link.href}
-    	  on:click={toggleMenuState}
+    	  onclick={handleClose}
     	>
     	  {link.label}
     	</a>

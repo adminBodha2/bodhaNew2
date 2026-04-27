@@ -30,7 +30,7 @@ a.cssbuttons-io-button
 	background: var(--color-theme-2)
 	color: white
 	font-family: "Google Sans", sans-serif
-	padding: 6px
+	padding: 2px
 	padding-left: 16px
 	font-size: 0.8rem
 	font-weight: 500
@@ -40,7 +40,7 @@ a.cssbuttons-io-button
 	align-items: center
 	overflow: hidden
 	position: relative
-	padding-right: 48px
+	padding-right: 36px
 	cursor: pointer
 	height: 26px
 	.icon
@@ -50,10 +50,10 @@ a.cssbuttons-io-button
 		display: flex
 		align-items: center
 		justify-content: center
-		height: 18px
-		width: 18px
+		height: 21px
+		width: 21px
 		border-radius: 4px
-		right: 4px
+		right: 2px
 		transition: all 0.26s var(--cz-easeInOutExpo)
 		svg
 			width: 14px
@@ -61,7 +61,7 @@ a.cssbuttons-io-button
 			color: var(--color-theme-2)
 	&:hover
 		.icon
-			width: calc(100% - 8px)
+			width: calc(100% - 4px)
 			svg
 				transform: translateX(0.1em)
 	&:active
