@@ -7,15 +7,10 @@
 	import Designed from '$lib/icons/designed.svelte'
 </script>
 
-<div class="foot-wrap stdbox padded">
-	<div class="foot-inner narrowbox padded elembox">
+<div class="foot-wrap stdbox">
+	<div class="foot-wide-lines"></div>
+	<div class="foot-inner narrowsize box">
 		<div class="foot-top">
-			<div class="foot-brand">
-				<Designed/>
-				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.<br>
-				Site designed at Bodha Lab
-				</p>
-			</div>
 			<button
 				class="blank foot-scroll"
 				onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -24,46 +19,51 @@
 				<span class="foot-scroll-label tt-u">Top</span>
 			</button>
 		</div>
-		<div class="foot-grid">
+		<div class="footer-grid">
+			<div class="foot-brand">
+				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
+				<p class="lgrey small-text">Site designed at Bodha Lab</p>
+				<Designed/>
+			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">Research</p>
 				<div class="foot-links">
-					<a class="foot-link blank grey" href="/research">Projects</a>
-					<a class="foot-link blank grey" href="/big-questions">Big Questions</a>
-					<a class="foot-link blank grey" href="/academy">Courses</a>
-					<a class="foot-link blank grey" href="/lab">Lab</a>
+					<a class="foot-link blank white" href="/research">Projects</a>
+					<a class="foot-link blank white" href="/big-questions">Big Questions</a>
+					<a class="foot-link blank white" href="/academy">Courses</a>
+					<a class="foot-link blank white" href="/lab">Lab</a>
 				</div>
 			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">Culture</p>
 				<div class="foot-links">
-					<a class="foot-link blank grey" href="/anveshi">Anveshi</a>
-					<a class="foot-link blank grey" href="/paths">Reading Paths</a>
-					<a class="foot-link blank grey" href="/concepts">Concepts</a>
-					<a class="foot-link blank grey" href="/temples">Temples</a>
+					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
+					<a class="foot-link blank white" href="/paths">Reading Paths</a>
+					<a class="foot-link blank white" href="/concepts">Concepts</a>
+					<a class="foot-link blank white" href="/temples">Temples</a>
 				</div>
 			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">Readings</p>
 				<div class="foot-links">
-					<a class="foot-link blank grey" href="/blog">Blog</a>
-					<a class="foot-link blank grey" href="/library">Open Library</a>
-					<a class="foot-link blank grey" href="/inspiration">Inspiration</a>
+					<a class="foot-link blank white" href="/blog">Blog</a>
+					<a class="foot-link blank white" href="/library">Open Library</a>
+					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
 				</div>
 			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">Bodha</p>
 				<div class="foot-links">
-					<a class="foot-link blank grey" href="/about">About</a>
-					<a class="foot-link blank grey" href="/contact">Contact</a>
-					<a class="foot-link blank grey" href="/videos">Videos</a>
+					<a class="foot-link blank white" href="/about">About</a>
+					<a class="foot-link blank white" href="/contact">Contact</a>
+					<a class="foot-link blank white" href="/videos">Videos</a>
 				</div>
 			</div>
 		</div>
 		<div class="foot-bottom">
 			<div class="foot-legal">
-				<small>© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/docs/terms-and-conditions">T&C</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds</a></small>
-				<small>Svayambodha Centre For Culture Studies Foundation</small>
+				<small class="lgrey">© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/docs/terms-and-conditions">T&C</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds</a></small>
+				<small class="lgrey">Svayambodha Centre For Culture Studies Foundation</small>
 			</div>
 			<div class="foot-actions">
 				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
@@ -88,10 +88,78 @@
 
 <style lang="sass">
 
+.footer-grid
+	display: grid
+	grid-template-columns: repeat(6, minmax(120px, 1fr))
+	@media screen and (max-width: 1024px)
+		grid-template-columns: 1fr 1fr
+		row-gap: 2rem
+
+.foot-brand
+	grid-column: span 2
+
+.foot-wide-lines
+	position: absolute
+	inset: 0
+	pointer-events: none
+	z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 92%
+		height: 1px
+		background: rgba(255,255,255,.12)
+
 .foot-wrap
 	width: 100%
+	position: relative
+	overflow: hidden
 	background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 84%, rgba(0, 0, 0, 1) 100%)
 	box-shadow: inset 0 12px 24px -12px rgba(0, 0, 0, 0.85)
+	&::before
+		content: ''
+		position: absolute
+		inset: 0
+		pointer-events: none
+		background: repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 7px), radial-gradient(circle at 50% 0%, rgba(255,255,255,.06), transparent 38%)
+		opacity: .55
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		height: 1px
+		background: rgba(255,255,255,.12)
+		pointer-events: none
+	@media screen and (max-width: 1024px)
+		height: calc(100vh - 64px)
+		padding-left: 2rem
+		padding-right: 2rem
+		&::after
+			top: 2rem
+	@media screen and (min-width: 1025px)
+		height: calc(100vh - 80px)
+		padding-top: 6rem
+		&::after
+			top: 6rem
+
+.foot-inner
+	z-index: 2
+	border-right: 1px solid rgba(255,255,255,0.1)
+	border-left: 1px solid rgba(255,255,255,0.1)
+	height: 100%
+	overflow: hidden
+	padding: 2rem
+	row-gap: 6rem
+	@media screen and (max-width: 1024px)
+		padding-top: 4rem
+		padding-left: 1rem
+		padding-right: 1rem
+		width: 100%
+		height: 100%
+		row-gap: 4rem
 
 // ── TOP ROW ───────────────────────────────────────────────
 
@@ -100,12 +168,10 @@
 	align-items: flex-start
 	justify-content: space-between
 	gap: 1.5rem
+	border-bottom: 0
 	@media screen and (max-width: 1024px)
 		display: grid
 		grid-template-columns: 1fr
-		grid-template-areas: "." "foot-brand"
-		.foot-brand
-			grid-area: foot-brand
 		button
 			width: max-content
 
@@ -144,23 +210,13 @@
 
 // ── LINK GRID ─────────────────────────────────────────────
 
-.foot-grid
-	display: grid
-	padding-bottom: 4rem
-	padding-top: 4rem
-	border-bottom: 1px solid rgba(255,255,255,0.1)
-	border-top: 1px solid rgba(255,255,255,0.1)
-	@media screen and (min-width: 1025px)
-		grid-template-columns: repeat(4, 1fr)
-		gap: 2rem
-	@media screen and (max-width: 1024px)
-		grid-template-columns: repeat(2, 1fr)
-		gap: 2rem 4rem
-
 .foot-col
 	display: flex
 	flex-direction: column
 	gap: 1rem
+	@media screen and (min-width: 1025px)
+		align-items: flex-end
+		text-align: right
 
 .foot-links
 	display: flex
@@ -181,9 +237,13 @@
 	justify-content: space-between
 	gap: 1rem
 	flex-wrap: wrap
+	margin-top: auto
+	margin-bottom: 6rem
 	@media screen and (max-width: 1024px)
 		flex-direction: column
 		align-items: flex-start
+		margin-top: auto
+		margin-bottom: 4rem
 
 .foot-legal
 	display: flex
