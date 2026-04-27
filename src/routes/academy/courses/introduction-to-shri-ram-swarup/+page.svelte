@@ -84,7 +84,7 @@
 				<button class="tray-btn" class:active={active === i} onclick={() => (active = i)}>{tab}</button>
 			{/each}
 		</div>
-		<div class="tab-panel" use:autoAnimate>
+		<div class="tab-panel" use:autoAnimate={{ easing: 'ease-in-out' }}>
 			{#if active === 0}
 				<div class="grid two tightrows widecol intro-deets">
 					<p class="highlight-text">

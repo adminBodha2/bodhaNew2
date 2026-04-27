@@ -17,6 +17,10 @@
 	let selectedDay = $state(0);
 	let iW = $state(0);
 
+	function selectDay(index: number) {
+		selectedDay = index;
+	}
+
 	let itins = $derived(data.itins ?? []);
 	let temples = $derived(data.templesList ?? []);
 
@@ -39,10 +43,6 @@
 			})
 		)
 	);
-
-	function selectDay(index: number) {
-		selectedDay = index;
-	}
 </script>
 
 
@@ -62,11 +62,12 @@
 <Parallax isClass="is50" imageLink={data.image} />
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" show2={true} item2="Anveshi" item2linked={true} item2Link="/anveshi" showT={true} title={data.title} showD={true} desc={data.description}/>
-		<div class="text-container elembox">
+		<Crumb item1="Bodha" item1Link="/" show2={true} item2="Anveshi" item2linked={true} item2Link="/anveshi" showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
 			<p class="tag-pill anveshi">OPEN NOW!</p>
 			{/if}
+		</Crumb>
+		<div class="text-container elembox">
 			<div class="grid two tightrows">
 			<data.content/>
 			</div>
@@ -124,7 +125,7 @@
 					{#each itins as item, i}
 					{#if selectedDay === i}
 					<img src="https://www.bodharesearch.in/images/anveshi/day-{i+1}.png" alt="icon" class="icon"/>
-					<pre class="highlight-text">{item.itinerary}</pre>
+					<pre class="hi">{item.itinerary}</pre>
 					{/if}
 					{/each}
 				</div>

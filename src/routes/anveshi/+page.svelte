@@ -307,6 +307,9 @@
 
 <style lang="sass">
 
+#testimonials
+	min-height: 80vh
+
 .testi
 	border: var(--border-main)
 	height: 100%

@@ -33,7 +33,7 @@
 				spaceBetween: 8
 			}
 		}
-	} = $props<Props>();
+	}: Props = $props();
 
 	let swiperEl = $state<any>(); // acceptable, but you can tighten later
 	let iW = $state(0);
@@ -108,37 +108,30 @@
 			cancelled = true;
 		};
 	});
-
-	$effect(() => {
-		if (!initialized || !swiperEl?.swiper) return;
-
-		Object.assign(swiperEl, swiperOptions());
-		swiperEl.swiper.update();
-	});
 </script>
 
 <svelte:window bind:innerWidth={iW} />
 
 <div class="swiper-row" class:marquee>
-	<div class="swiper-frame" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
+	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
 			{@render children?.()}
 		</swiper-container>
 	</div>
 	<div class="labelbox buttons-and-rule">
-	<div class="nav-buttons row ycenter xcenter cgap8 mleft">
-	<button class="nav prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
-		<svg viewBox="0 0 24 24" height=24 width=24 fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z"/></svg>
-	</button>
-	<button class="nav next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
-		<svg viewBox="0 0 24 24" height=24 width=24 fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z"/></svg>
-	</button>
-	</div>
-	{#if iW <= 1024}
-	<p class="tag-text grey">Use buttons to navigate, or swipe left/right.</p>
-	{:else}
-	<p class="tag-text grey">Use buttons or arrow keys to navigate, or drag left/right.</p>
-	{/if}
+		<div class="nav-buttons row ycenter xcenter cgap8 mleft">
+			<button class="nav prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
+				<svg viewBox="0 0 24 24" height="24" width="24" fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
+			</button>
+			<button class="nav next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
+				<svg viewBox="0 0 24 24" height="24" width="24" fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
+			</button>
+		</div>
+		{#if iW <= 1024}
+			<p class="tag-text grey">Use buttons to navigate, or swipe left/right.</p>
+		{:else}
+			<p class="tag-text grey">Use buttons or arrow keys to navigate, or drag left/right.</p>
+		{/if}
 	</div>
 </div>
 

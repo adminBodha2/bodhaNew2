@@ -34,7 +34,7 @@
               {/if}
             </div>
             {#if openIndex === i}
-              <pre class="rem1 altprim">{item.answer}</pre>
+              <pre class="altprim">{item.answer}</pre>
             {/if}
           </button>
         {/each}
