@@ -50,17 +50,24 @@
 			</p>
 		</div>
 		{#if questions && questions.length > 0}
-			<div class="grid two white-grid of-questions">
+			<div class="grid  three tight of-questions">
 				{#each questions as item, i}
-					<a class="blank labelbox q-item card-padded more whitestone popping" href={item.linkpath}>
-						<div class="row ycenter width100 cgap8">
-							<img class="icon" src={item.meta.image} alt={item.meta.title} />
-							<p class="card-title w500">{i + 1} - {item.meta.title}</p>
-						</div>
-						<div class="onhover">
+					<div class="blank labelbox q-item">
+						<a class="q-imager blank" href={item.linkpath}>
+							<img src={item.meta.icon} alt={item.meta.title}/>
+						</a>
+						<a class="onhover labelbox blank" href={item.linkpath}>
+							<p class="card-title tight">{item.meta.title}</p>
 							<p class="grey small-text">{item.meta.description}</p>
-						</div>
-					</a>
+						</a>
+							{#if item.meta.tags}
+								<div class="row wrap meta">
+									{#each item.meta.tags as tag}
+										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
+									{/each}
+								</div>
+							{/if}
+					</div>
 				{/each}
 			</div>
 		{/if}
@@ -71,22 +78,42 @@
 
 .reading-block
 	background: var(--color-white)
-	border: var(--border-main)
-	padding: 1.2rem
-	@media screen and (min-width: 1025px)
-		padding: 2rem
-
-.q-item img
-	width: 24px
-	height: 24px
-	object-fit: cover
-	filter: saturate(0) opacity(0.6)
-	@media screen and (max-width: 1024px)
-		margin-right: auto
 
 .q-item
+	position: relative
+	overflow: hidden
+	border-radius: 4px
+	border: 1px solid rgba(255,255,255,0.9)
+	background: linear-gradient(145deg, rgba(255,255,255,0.74), rgba(255,255,255,0.42))
+	backdrop-filter: blur(12px) saturate(1.25)
+	-webkit-backdrop-filter: blur(12px) saturate(1.25)
+	box-shadow: 0 4px 6px rgba(255,255,255,0.3) inset, 0 2px 4px rgba(0,0,0,0.2) inset, 4px 4px 8px rgba(15,23,42,0.1), 0 6px 18px rgba(15,23,42,0.05)
+	transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1)
 	&:hover
+		box-shadow: 0 0px 0px rgba(255,255,255,0), 0 1px 2px rgba(0,0,0,0.1), 2px 2px 4px rgba(15,23,42,0.1), 0 4px 9px rgba(15,23,42,0.03)
+		.q-imager
+			img
+				filter: grayscale(0.4)
+	.q-imager
+		height: 240px
+		padding: 0.5rem
 		img
-			filter: saturate(1) opacity(1)
+			filter: grayscale(1)
+			object-fit: cover
+			width: 100%
+			height: 100%
+			transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1)
+	.onhover
+		padding: 0 1rem 0.25rem 1rem
+	.meta
+		padding: 0.25rem 1rem 1rem 1rem
+	@media screen and (min-width: 1025px)
+		.q-imager
+			padding: 1rem
+			height: 320px
+		.onhover
+			padding: 0 1.5rem 0.25rem 1.5rem
+		.meta
+			padding: 0.25rem 1.5rem 1.5rem 1.5rem
 
 </style>

@@ -130,7 +130,7 @@ main
 header
 	width: 100%
 	position: sticky
-	background: rgba(255,255,255,0.47)
+	background: rgba(255,255,255,0.67)
 	backdrop-filter: blur(10px) saturate(1.25)
 	-webkit-backdrop-filter: blur(10px) saturate(1.25)
 	top: 0
