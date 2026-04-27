@@ -39,8 +39,6 @@
 				<p class="tag-text lgrey tt-u">Culture</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
-					<a class="foot-link blank white" href="/paths">Reading Paths</a>
-					<a class="foot-link blank white" href="/concepts">Concepts</a>
 					<a class="foot-link blank white" href="/temples">Temples</a>
 				</div>
 			</div>

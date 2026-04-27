@@ -35,7 +35,7 @@
 		<div class="stdbox padded" id="contents">
 			<div class="grid issues ultra">
 				{#each data.issues as item (item.issue)}
-					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 210, easing: sineOut}}>
+					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 410, easing: sineOut}}>
 						<button class="blank row xbetween thisdoes" onclick={() => toggleIssue(item.issue)}>
 							<p class="rem1 bold tt-u">{item.volumeIssue} | {item.issueMonth}</p>
 							{#if openIssue === item.issue}
@@ -43,7 +43,7 @@
 							{/if}
 						</button>
 						{#if openIssue === item.issue}
-						<div class="textbox contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 530, axis: 'y', easing: sineIn}}>
+						<div class="textbox contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 390, axis: 'y', easing: sineIn}}>
 						<p class="grey">{item.description}</p>
 						<div class="grid two metaitem midgaps tightrows">
 								{#each item.items as iss}
@@ -72,6 +72,9 @@ a.golink
 	transform-origin: center center
 	&:hover
 		background: var(--color-theme-2)
+
+.each-issue
+	overflow: hidden
 
 .each-issue.openeditem
 	a.golink
