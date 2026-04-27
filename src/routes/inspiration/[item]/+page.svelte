@@ -1,15 +1,26 @@
 <script lang="ts">
+
 	import { page } from '$app/state';
-	import '$lib/styles/lab.sass';
+	import type { PageData } from './$types';
+	import '$lib/styles/lab2.sass';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, withContext } from '$lib/utils/seo';
+	import { WaterRipple } from "$lib/motion-core";
+	import Liner from '$lib/icons/anim-line.svelte'
 
-	let { data } = $props();
+	interface Props {
+	    data: PageData;
+	    brushSize?: number;
+	}
+
+let { 
+    data, 
+    brushSize = 100, 
+}: Props = $props();
 
 	let sY = $state(0);
-	let imageY = $derived(-(sY / 4));
 
 	let schools = $derived(data.schools ?? []);
 	let thinkers = $derived(data.thinkers ?? []);
@@ -47,41 +58,46 @@
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-<section class="stdbox padded-ontop">
-<Crumb item1="Bodha" item1Link="/" showT={true} title={data.title} desc={data.description} showD={true} showRow={true}>
-	<div class="row wrap cgap8 rgap8 ycenter">
-			<p class="citation-big altprim tt-u">{data.type}</p>
-		{#each data.tags as tag}
-			<a class="tag-pill themed tt-u" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
-		{/each}
-	</div>
-</Crumb>
 <section class="key-image">
-	<img src={data.image} alt={data.title} style:transform={`translateY(${imageY}px)`}/>
+	<WaterRipple src={data.image} class="ripple-motion" {brushSize}/>
 </section>
-<section class="content-section">
-	<div class="classic-document">
-	<data.content />
-	</div>
-	<div class="box sidebar">
-		{#if schools && schools.length > 0 && thinkers && thinkers.length > 0}
-			<div class="projects projects-type2">
-				{#each schools as item}
-				<a class="blank project-link" href={item.linkpath}>
-					<p class="rem1 grey tight">{item.meta.title}</p>
-					<p class="tag-text blue">{item.meta.type}</p>
-				</a>
-				{/each}
-				{#each thinkers as item}
-				<a class="blank project-link" href={item.linkpath}>
-					<p class="rem1 grey tight">{item.meta.title}</p>
-					<p class="tag-text blue">{item.meta.type}</p>
-				</a>
-				{/each}
+<Container narrow={true} scaled={true}>
+	<section class="documents-grid">
+		<div class="box sidearea">
+				<div class="labelbox all-items">
+				{#if schools && schools.length > 0}
+					{#each schools as item}
+					<a class="blank project-link whitestone" href={item.linkpath}>
+						<p class="tight grey">{item.meta.title}</p>
+					</a>
+					{/each}
+				{/if}
+				{#if thinkers && thinkers.length > 0}
+					{#each thinkers as item}
+					<a class="blank project-link whitestone" href={item.linkpath}>
+						<p class="tight grey">{item.meta.title}</p>
+					</a>
+					{/each}
+				{/if}
+				</div>
+		</div>
+		<div class="box mainarea">
+			<div class="textbox borderbot">
+				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
+				<h1 class="doc-title source-serif">{data.title}</h1>
+				<p class="rem1 grey">{data.description}</p>
+				{#if data.tags && data.tags.length > 0}
+					<div class="row wrap">
+						{#each data.tags as tag}
+							<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
+						{/each}
+					</div>
+				{/if}
 			</div>
-		{/if}
-	</div>
-</section>
-</section>
+			<div class="classic-document ptop32 pbot32">
+				<data.content />
+				<Liner/>
+			</div>
+		</div>
+	</section>
 </Container>

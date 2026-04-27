@@ -2,7 +2,7 @@
 
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
-	import '$lib/styles/lab.sass';
+	import '$lib/styles/lab2.sass';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -43,64 +43,41 @@ let {
 <svelte:window bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
-
+<section class="key-image">
+	<WaterRipple src={data.icon} class="ripple-motion" {brushSize}/>
+</section>
 <Container narrow={true} scaled={true}>
-	<section class="key-image">
-		<WaterRipple src={data.icon} class="ripple-motion" {brushSize}/>
-	</section>
-	<section class="stdbox padded">
-		<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions" showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
-			{#if data.tags?.length}
-				<div class="row wrap cgap8 rgap8 ycenter">
-					{#each data.tags as tag}
-						<a class="tag-pill tt-u" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
+	<section class="documents-grid">
+		<div class="box sidearea">
+			{#if data.questions?.length > 0}
+				<div class="labelbox all-items">
+					{#each data.questions as item}
+					{#if item.meta.title !== data.title}
+					<a class="blank project-link whitestone" href={item.linkpath}>
+						<p class="tight grey">{item.meta.title}</p>
+					</a>
+					{/if}
 					{/each}
 				</div>
 			{/if}
-		</Crumb>
-		<section class="content-section">
-			<div class="classic-document">
-				<data.content />
-				<Liner/>
-			</div>
-			<div class="box sidebar">
-				{#if data.questions?.length > 0}
-					<div class="grid white-grid">
-					{#each data.questions as item}
-					{#if item.meta.title !== data.title}
-					<a class="blank project-link card-padded whitestone" href={item.linkpath}>
-						<p class="tight rem1">{item.meta.title}</p>
-					</a>
-					{/if}
-				{/each}
+		</div>
+		<div class="box mainarea">
+			<div class="textbox borderbot">
+				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
+				<h1 class="doc-title source-serif">{data.title}</h1>
+				<p class="rem1 grey">{data.description}</p>
+				{#if data.tags && data.tags.length > 0}
+					<div class="row wrap">
+						{#each data.tags as tag}
+							<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
+						{/each}
 					</div>
 				{/if}
 			</div>
-		</section>
+			<div class="classic-document ptop32 pbot32">
+				<data.content />
+				<Liner/>
+			</div>
+		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-
-.sidebar
-	.white-grid
-		border-top: none
-		border-bottom: none
-		border-right: none
-
-.key-image
-	height: 300px
-	margin-top: 80px
-	@media screen and (min-width: 1025px)
-		height: 640px
-		margin-top: 88px
-
-img.icon
-	object-fit: cover
-	height: 56px
-	width: 56px
-	background: none
-	padding: 0
-	border: none
-
-</style>

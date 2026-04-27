@@ -1,15 +1,27 @@
 <script lang="ts">
 
 	import { page } from '$app/state';
+	import type { PageData } from './$types';
 	import '$lib/styles/lab.sass'
 	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+	import { WaterRipple } from "$lib/motion-core";
+	import Liner from '$lib/icons/anim-line.svelte'
+
+	interface Props {
+	    data: PageData;
+	    brushSize?: number;
+	}
 	
-	let { data } = $props();
+let { 
+    data, 
+    brushSize = 100, 
+}: Props = $props();
+
 	let sY = $state(0);
-	let imageY = $derived(-(sY / 4));
+
 
 	let title = $derived(data.title + ' | Research Project at Bodha');
 	let metaDescription = $derived(data.description);
@@ -32,53 +44,39 @@
 <svelte:window bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" ogType="article" {jsonld} />
-
-<Container narrow={true} scaled={true}>
-<section class="stdbox padded-ontop">
-<Crumb item1="Research" item1Link="/research" showT={true} title={data.title} desc={data.description} showD={true} showRow={true}>
-	<div class="row wrap cgap8 rgap8 ycenter">
-		{#each data.tags as tag}
-			<a class="tag-pill tt-u" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
-		{/each}
-	</div>
-</Crumb>
 <section class="key-image">
-	<img src={data.image} alt={data.title} style:transform={`translateY(${imageY}px)`}/>
+	<WaterRipple src={data.image} class="ripple-motion" {brushSize}/>
 </section>
-<section class="content-section">
-	<div class="classic-document">
-	<data.content />
-	</div>
-	<div class="box sidebar">
-		{#if data.research?.length > 0}
-			<div class="projects">
-				{#each data.research as item}
-				<a class="blank project-link" href={item.linkpath}>
-					<p class="rem1 grey">{item.meta.title}</p>
-				</a>
-				{/each}
+<Container narrow={true} scaled={true}>
+	<section class="documents-grid">
+		<div class="box sidearea">
+				<div class="labelbox all-items">
+				{#if data.research && data.research.length > 0}
+					{#each data.research as item}
+					<a class="blank project-link whitestone" href={item.linkpath}>
+						<p class="tight grey">{item.meta.title}</p>
+					</a>
+					{/each}
+				{/if}
+				</div>
+		</div>
+		<div class="box mainarea">
+			<div class="textbox borderbot">
+				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
+				<h1 class="doc-title source-serif">{data.title}</h1>
+				<p class="rem1 grey">{data.description}</p>
+				{#if data.tags && data.tags.length > 0}
+					<div class="row wrap">
+						{#each data.tags as tag}
+							<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
+						{/each}
+					</div>
+				{/if}
 			</div>
-		{/if}
-	</div>
-</section>
-</section>
+			<div class="classic-document ptop32 pbot32">
+				<data.content />
+				<Liner/>
+			</div>
+		</div>
+	</section>
 </Container>
-
-<style lang="sass">
-
-a.std-pill
-	position: relative
-	font-size: 0.75rem
-	font-weight: 500
-	letter-spacing: 0.02rem
-	color: var(--color-grey-2)
-	&::after
-		content: ' '
-		height: 1px
-		width: 100%
-		background: var(--color-theme)
-		position: absolute
-		left: 0
-		bottom: -4px
-
-</style>

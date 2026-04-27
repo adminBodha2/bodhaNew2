@@ -97,7 +97,7 @@
 	&:hover
 		transform: scale(0.98)
 	&:active
-		transform: scale(1.1)
+		transform: scale(1.02)
 
 .logoholder
 	@media screen and (min-width: 1025px)
