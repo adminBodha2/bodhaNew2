@@ -59,8 +59,8 @@
 	}: Props = $props();
 </script>
 
-<div class={cn("carrier", className)} {...rest}>
-	<div class="carrier-inner">
+<div class={cn("intgrid", className)} {...rest}>
+	<div class="inside-intgrid">
 		<Scene
 			{baseImage}
 			{revealImage}
@@ -75,18 +75,18 @@
 
 <style lang="sass">
 
-.carrier-inner
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	z-index: 0
-
-.carrier
+.intgrid
 	position: relative
 	height: 100%
 	width: 100%
 	overflow: hidden
+
+.inside-intgrid
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 0
 
 </style>

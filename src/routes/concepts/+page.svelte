@@ -18,22 +18,28 @@
 
 	let allConcepts = $derived([...data.topLevelConcepts, ...Object.values(data.conceptChildren).flat()]);
 
-let query = $state('');
-function matches(concept: any, q: string) {
-  const s = q.toLowerCase();
-  return (
-    concept.title.toLowerCase().includes(s) ||
-    concept.slug.toLowerCase().includes(s)
-  );
+	let query = $state('');
+	function matches(concept: any, q: string) {
+  		const s = q.toLowerCase();
+  		return (
+    		concept.title.toLowerCase().includes(s) ||
+    		concept.slug.toLowerCase().includes(s)
+  		);
+	}
+
+	let filteredTopLevel = $derived(
+  		data.topLevelConcepts.filter((c) => matches(c, query))
+	);
+
+	let filteredAll = $derived(
+	  data.allConcepts.filter((c) => matches(c, query))
+	);
+
+let openIndex = $state<number | null>(null)
+
+function toggleItem(index: number) {
+	openIndex = openIndex === index ? null : index
 }
-let filteredTopLevel = $derived(
-  data.topLevelConcepts.filter((c) => matches(c, query))
-);
-
-let filteredAll = $derived(
-  data.allConcepts.filter((c) => matches(c, query))
-);
-
 	let jsonld = $derived(
 		stringifyJsonLd(
 			collectionPageJsonLd({
@@ -56,19 +62,18 @@ let filteredAll = $derived(
 	<div class="stdbox padded-ontop">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="Concepts - Domains of thought across the knowledge base. Each concept connects texts, thinkers, and ideas." />
 		<div class="sea">
-			<input
-  bind:value={query}
-  placeholder="Search concepts..."
-/>
+			<input bind:value={query} placeholder="Search concepts..."/>
 		</div>
 		<div class="box">
-			{#each filteredTopLevel as concept (concept.id)}
+			{#each filteredTopLevel as concept, i (concept.id)}
 				{@const children = data.conceptChildren[concept.id] || []}
-				<p class="highlight-text"><a href={conceptHref(concept.slug)}>{concept.title}</a><span>({concept.count})</span></p>
-				{#if children.length}
+				{#if concept.title !== "Tags"}
+				<button class="blank box xleft" onclick={() => toggleItem(i)}><p class="highlight-text">{concept.title}</p></button>
+				{/if}
+				{#if children.length && openIndex === i}
 					<div class="row wrap cgap8 rgap8">
 						{#each children as child (child.id)}
-							<p><a href={conceptHref(child.slug)}>{child.title}</a><span>({child.count})</span></p>
+							<p><a href={conceptHref(child.slug)}>{child.title}</a></p>
 						{/each}
 					</div>
 				{/if}

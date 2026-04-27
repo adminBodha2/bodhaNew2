@@ -327,9 +327,27 @@
 	});
 </script>
 
+
+>
+
 <canvas
 	bind:this={canvas}
-	class="absolute inset-0 block h-full w-full"
+	class="ripple-canvas"
 	style="width:100%;height:100%;"
 	aria-hidden="true"
 ></canvas>
+
+<style lang="sass">
+
+.ripple-canvas
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: block
+	height: 100%
+	width: 100%
+
+</style>
+
