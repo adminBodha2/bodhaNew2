@@ -83,16 +83,8 @@
 <style lang="sass">
 
 main
-	background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
 	transition: background-size 0.5s ease
-	background-position: center center
 	view-transition-name: page
-	@media screen and (max-width: 1024px)
-		background-size: 3rem 3rem, 3rem 3rem
-		background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
-	@media screen and (min-width: 1025px)
-		transition: background-position 0.1s linear
-		background-size: 5rem 5rem, 5rem 5rem, 2.5rem 2.5rem, 2.5rem 2.5rem
 
 :global(::view-transition-old(page))
 	animation: page-out 300ms var(--cz-easeInQuad) both

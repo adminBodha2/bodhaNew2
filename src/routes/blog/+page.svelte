@@ -21,7 +21,6 @@
 		};
 	};
 	let { data }: { data: PageData } = $props();
-
 	let posts = $derived((data.posts ?? []) as BlogPost[]);
 	let showEx = $state(false);
 

@@ -1,0 +1,149 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+	import { Spring } from 'svelte/motion';
+	import Container from '$lib/comps/container.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import { flip } from 'svelte/animate';
+	import autoAnimate from '@formkit/auto-animate';
+	import { slide, fade } from 'svelte/transition';
+	import { quintOut, sineIn, sineOut } from 'svelte/easing';
+
+	let { data }: { data: PageData } = $props();
+	let openIssue = $state<number | null>(null);
+	let scroY = $state(0);
+	let parallaxY = $derived(scroY / 6);
+	const spring = new Spring(0);
+	function toggleIssue(issue: number) {
+		openIssue = openIssue === issue ? null : issue;
+	}
+</script>
+
+<svelte:window bind:scrollY={scroY} />
+
+
+<div id="intro">xx
+	<section class="page-hero">
+		<div class="in-screen box narrowbox" style:transform={`translateY(${parallaxY}px)`}>
+			<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Bodha Open Library" item2Link="/library" showT={true} title="Indian Journal of Archaeology" />
+			<p class="altprim rem1 width50">
+				The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016. "Full access, no subscriptions, and no limitations." This totals to around 41 issues so far, spread over 11 volumes all available on their <a class="linked" target="_blank" rel="noreferrer" href="https://ijarch.com/">website.</a>
+				Here at Bodha Open Library, we've sifted through each issue, sorted and classified the articles, and present the archive in easy to navigate, explore-friendly forms.
+			</p>
+		</div>
+	</section>
+	<Container narrow={true} scaled={true}>
+		<div class="stdbox padded" id="contents">
+			<div class="grid issues ultra">
+				{#each data.issues as item (item.issue)}
+					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 210, easing: sineOut}}>
+						<button class="blank row xbetween thisdoes" onclick={() => toggleIssue(item.issue)}>
+							<p class="rem1 bold tt-u">{item.volumeIssue} | {item.issueMonth}</p>
+							{#if openIssue === item.issue}
+								<a class="golink bold tt-u" href={item.path} target="_blank" rel="noreferrer">READ ISSUE</a>
+							{/if}
+						</button>
+						{#if openIssue === item.issue}
+						<div class="textbox contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 530, axis: 'y', easing: sineIn}}>
+						<p class="grey">{item.description}</p>
+						<div class="grid two metaitem midgaps tightrows">
+								{#each item.items as iss}
+									<div class="box">
+										<p class="w500 tight">{iss.title}</p>
+										<p class="citation-big grey tt-u">{iss.authorsText}</p>
+									</div>
+								{/each}
+						</div>
+						</div>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		</div>
+	</Container>
+</div>
+
+<style lang="sass">
+
+a.golink
+	background: var(--color-theme)
+	color: #fff
+	padding: 4px 8px
+	font-size: 0.9rem	
+	transform-origin: center center
+	&:hover
+		background: var(--color-theme-2)
+
+.each-issue.openeditem
+	a.golink
+		animation: flicker 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate-reverse
+
+@keyframes flicker
+	0%
+		transform: scale(1)
+	34%
+		transform: scale(1.02)
+	65%
+		transform: scale(0.98)
+	100%
+		transform: scale(1)
+
+.grid.issues
+	grid-template-columns: 1fr 1fr
+	background: none
+	border: none
+	.contingent
+		padding: 1rem
+	@media screen and (min-width: 1025px)
+		grid-template-columns: repeat(3, 1fr)
+	@media screen and (min-width: 1201px)
+		grid-template-columns: repeat(4, 1fr)
+		.contingent
+			padding: 1.5rem
+			.metaitem
+				border-top: var(--border-main)
+				padding-top: 1rem
+
+button.blank.row.xbetween
+	padding: 1rem
+	width: 100%
+	border-bottom: var(--border-main)
+	background: var(--color-stone)
+	transition: all 220ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1)
+
+.each-issue.openeditem
+	background: var(--color-back)
+	border: 1px solid #FFFFFF
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
+	grid-column: span 2
+	@media screen and (min-width: 1025px)
+		grid-column: span 3
+	@media screen and (min-width: 1201px)
+		grid-column: span 4
+
+#intro
+	min-height: 100vh
+	background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
+	background-position: center center
+	@media screen and (max-width: 1024px)
+		background-size: 3rem 3rem, 3rem 3rem
+		background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
+	@media screen and (min-width: 1025px)
+		transition: background-position 0.1s linear
+		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
+
+.page-hero
+	height: 100vh
+	width: 100vw
+	background-size: cover
+	background-position: center center
+	background-image: url('/images/wiki-hero.webp')
+	overflow: hidden
+	box-shadow: inset 0 -10px 24px -12px rgba(0, 0, 0, 0.95)
+	.in-screen
+		margin-top: 7rem
+	@media screen and (min-width: 1025px)
+		.in-screen
+			margin-top: 12rem
+
+</style>

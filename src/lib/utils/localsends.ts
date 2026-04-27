@@ -86,7 +86,7 @@ export const libCategories = [
 		{ label: 'Indian Knowledge Systems', href: '/library/categories/iks', type: 'iks', forLink: 'iks', desc: 'Works on organised traditions of knowledge, method, science, language, and pedagogy.' },
 		{ label: 'Scriptural', href: '/library/categories/scriptural', type: 'scriptural', forLink: 'scriptural', desc: 'Sources in shruti, smriti, puranic, and sacred-historical traditions.' },
 		{ label: 'Shatrubodha', href: '/library/categories/shatrubodha', type: 'shatrubodha', forLink: 'shatrubodha', desc: 'Texts dealing with critique, conflict, ideology, and civilisational self-understanding.' },
-		{ label: 'Svayambodha', href: '/library/categories/svayambodha', type: 'svayambodha', forLink: 'svayambodha', desc: 'Books oriented toward self-understanding, cultural continuity, and Hindu civilisational confidence.' }
+		{ label: 'Svayambodha', href: '/library/categories/svayambodha', type: 'svayambodha', forLink: 'svayambodha', desc: 'Books oriented toward self-understanding, cultural continuity, and Hindu civilisational confidence.' },
 ];
 
 
