@@ -32,5 +32,6 @@
 	"prettier.tabWidth": 4,
 	"editor.tabSize": 4,
 	"markdown.preview.fontFamily": "\"Google Sans Flex\", sans-serif",
-	"editor.fontFamily": "\"Google Sans Flex\", sans-serif"
+	"editor.fontFamily": "\"Google Sans Flex\", sans-serif",
+	"editor.formatOnPaste": true
 }

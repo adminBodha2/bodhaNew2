@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { onNavigate } from '$app/navigation';
 	import { dev } from '$app/environment';
-	import { registerSwiper } from '$lib/utils/swiper';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
@@ -50,8 +48,6 @@
 			});
 		});
 	});
-
-	onMount(registerSwiper);
 </script>
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={width} onkeydown={handleKeydown} />

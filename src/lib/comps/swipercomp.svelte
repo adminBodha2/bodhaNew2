@@ -1,10 +1,28 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { registerSwiper } from '$lib/utils/swiper';
+
+	type SwiperOptionObject = Record<string, unknown>;
+
+	type Props = {
+		children?: import('svelte').Snippet;
+		slidesPerView?: number;
+		spaceBetween?: number;
+		pagination?: boolean | SwiperOptionObject;
+		autoplay?: boolean;
+		speed?: number;
+		marquee?: boolean;
+		breakpoints?: Record<number, SwiperOptionObject>;
+	};
 
 	let {
 		children,
 		slidesPerView = 4,
 		spaceBetween = 8,
 		pagination = true,
+		autoplay = false,
+		speed = 300,
+		marquee = false,
 		breakpoints = {
 			0: {
 				slidesPerView: 1,
@@ -15,18 +33,26 @@
 				spaceBetween: 8
 			}
 		}
-	} = $props();
+	} = $props<Props>();
 
 	let swiperEl = $state<any>(); // acceptable, but you can tighten later
-	let iW = $state(0)
+	let iW = $state(0);
+	let initialized = $state(false);
 
-	$effect(() => {
-		if (!swiperEl) return;
-
-		Object.assign(swiperEl, {
+	function swiperOptions() {
+		return {
 			slidesPerView,
 			spaceBetween,
 			pagination,
+			autoplay: marquee
+				? {
+						delay: 1,
+						disableOnInteraction: false,
+						waitForTransition: false
+					}
+				: autoplay,
+			speed,
+			freeMode: marquee ? { enabled: true, momentum: false } : false,
 			breakpoints,
 			loop: true,
 			centeredSlides: false,
@@ -35,16 +61,66 @@
 				enabled: true,
 				onlyInViewport: true
 			}
-		});
+		};
+	}
 
-		swiperEl.initialize();
+	function pauseMarquee(e: PointerEvent) {
+		if (!marquee || e.pointerType !== 'mouse') return;
+
+		const swiper = swiperEl?.swiper;
+		if (!swiper?.autoplay) return;
+
+		const currentTranslate = swiper.getTranslate();
+		swiper.setTransition(0);
+		swiper.setTranslate(currentTranslate);
+		swiper.autoplay.stop();
+	}
+
+	function resumeMarquee(e: PointerEvent) {
+		if (!marquee || e.pointerType !== 'mouse') return;
+
+		const swiper = swiperEl?.swiper;
+		if (!swiper?.autoplay) return;
+
+		swiper.params.speed = speed;
+		swiper.setTransition(speed);
+		swiper.autoplay.start();
+		swiper.slideNext(speed, true, true);
+	}
+
+	onMount(() => {
+		let cancelled = false;
+
+		async function initSwiper() {
+			registerSwiper();
+			await customElements.whenDefined('swiper-container');
+
+			if (cancelled || !swiperEl || initialized) return;
+
+			Object.assign(swiperEl, swiperOptions());
+			swiperEl.initialize();
+			initialized = true;
+		}
+
+		initSwiper();
+
+		return () => {
+			cancelled = true;
+		};
+	});
+
+	$effect(() => {
+		if (!initialized || !swiperEl?.swiper) return;
+
+		Object.assign(swiperEl, swiperOptions());
+		swiperEl.swiper.update();
 	});
 </script>
 
-<svelte:window bind:innerWidth={iW}/>
+<svelte:window bind:innerWidth={iW} />
 
-<div class="swiper-row">
-	<div class="swiper-frame">
+<div class="swiper-row" class:marquee>
+	<div class="swiper-frame" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
 			{@render children?.()}
 		</swiper-container>
@@ -105,5 +181,9 @@ button.nav
 swiper-container
 	width: 100%
 	display: block
+
+.marquee
+	swiper-container::part(wrapper)
+		transition-timing-function: linear !important
 
 </style>

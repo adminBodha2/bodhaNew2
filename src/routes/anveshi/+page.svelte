@@ -9,6 +9,7 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import Anveshilogo from '$lib/assets/anveshilogo.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd, webPageJsonLd } from '$lib/utils/seo';
+	import Quote from '$lib/icons/quote.svelte'
 
 	let { data }: { data: PageData } = $props();
 
@@ -55,18 +56,14 @@
 	let regionAnveshi = $derived(
 		futureproj.filter((item: any) => item.region?.toLowerCase() === region)
 	);
-
 	function setRegion(newRegion: string) {
 		region = newRegion;
 	}
-
 	function toggleText() {
 		showText = !showText;
 	}
-
 	function toggleRegion(index: number) {
 		isRegion[index] = !isRegion[index];
-
 		for (let i = 0; i < isRegion.length; i++) {
 			if (i !== index && isRegion[i] === true) {
 				isRegion[i] = false;
@@ -144,8 +141,8 @@
 					<div class="anv-current-image">
 						<img src={item.image} alt="{item.chapter} Chapter" />
 					</div>
-					<div class="textbox card-padded current-item whitestone">
-						<p class="tag-pill anveshi tt-u" style="width: max-content">{item.fromto}</p>
+					<div class="textbox current-item">
+						<p class="small-text w500 tt-u" style="width: max-content">{item.fromto}</p>
 						<h2 class="card-title source-serif">{item.chapter} Chapter</h2>
 						<p class="grey pbot8">{item.desc}</p>
 						<div class="self-bottom foot row ycenter xbetween mwrap cgap8 rgap8">
@@ -161,18 +158,29 @@
 	{#if testis && testis.length > 0}
 		<div class="stdbox padded bordertop" id="testimonials">
 			<Title text="Testimonials" />
-			<div class="grid two tight">
-				{#each testis as item}
-					<div class="box test-box card-padded">
-						<p class="source-serif thin italic">{item.content}</p>
-						<p class="grey rem1 ptop8">{item.person} | {item.chapter}</p>
-					</div>
-				{/each}
+			<div class="testi-grid">
+				<Swipes
+					slidesPerView={3}
+					spaceBetween={8}
+					pagination={false}
+					speed={9000}
+					marquee={true}
+					breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 3, spaceBetween: 8 } }}
+				>
+					{#each testis as item}
+						<swiper-slide>
+							<div class="box labelbox card-padded testi">
+								<Quote />
+								<p class="source-serif thin italic highlight-text">{item.content}</p>
+								<p class="grey rem1 ptop8">{item.person} | {item.chapter}</p>
+							</div>
+						</swiper-slide>
+					{/each}
+				</Swipes>
 			</div>
 		</div>
 	{/if}
 
-	<!-- ── FUTURE CHAPTERS ───────────────────────────────── -->
 	<div class="stdbox padded bordertop" id="future-chapters">
 		<Title text="future chapters" />
 		<div class="row cgap8 rgap8 wrap">
@@ -277,7 +285,6 @@
 		{/if}
 	</div>
 
-	<!-- ── PAST CHAPTERS ─────────────────────────────────── -->
 	{#if pastproj && pastproj.length > 0}
 		<div class="stdbox padded bordertop" id="past-chapters">
 			<Title text="past chapters" />
@@ -293,8 +300,6 @@
 			</div>
 		</div>
 	{/if}
-
-	<!-- ── FAQS ──────────────────────────────────────────── -->
 	<div class="stdbox padded bordertop" id="faqs">
 		<FAQ />
 	</div>
@@ -302,9 +307,25 @@
 
 <style lang="sass">
 
-.test-box
+.testi
 	border: var(--border-main)
-	background: var(--color-white)
+	height: 100%
+
+.grid.two.anveshi
+	padding: 1.25rem
+	border-radius: 4px
+	border: 1px solid rgba(255,255,255,0.9)
+	background: linear-gradient(145deg, rgba(255,255,255,0.74), rgba(255,255,255,0.82))
+	backdrop-filter: blur(12px) saturate(1.25)
+	-webkit-backdrop-filter: blur(12px) saturate(1.25)
+	box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0.05)
+	@media screen and (max-width: 1024px)
+		padding: 0.5rem
+
+.current-item
+	padding: 1.25rem
+	@media screen and (max-width: 1024px)
+		padding: 1rem 0.5rem
 
 .all-item, .sub-item
 	background: var(--color-white)
@@ -316,6 +337,11 @@
 		background: var(--color-alt-3)
 		&:hover
 			color: var(--color-anveshi)
+			font-wieght: 400
+
+.sub-item
+		width: %
+		height: %
 
 swiper-slide
 	height: auto
@@ -385,9 +411,9 @@ swiper-slide > *
 .anv-current-image
 	position: relative
 	overflow: hidden
-	height: 320px
+	height: 400px
 	@media screen and (max-width: 1024px)
-		height: 200px
+		height: 280px
 	img
 		width: 100%
 		height: 100%
@@ -426,9 +452,9 @@ swiper-slide > *
 		transform: scale(1.04)
 
 .past-grid-items
-	padding-bottom: 0.5rem
+	padding-bottom: 1rem
 	background: var(--color-white)
 	p
-		padding-left: 0.5rem
+		padding-left: 1rem
 
 </style>
