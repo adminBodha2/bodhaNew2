@@ -5,6 +5,7 @@
 	import Linkedin from '$lib/icons/linkedin.svelte';
 	import Github from '$lib/icons/github.svelte'
 	import Designed from '$lib/icons/designed.svelte'
+	import '$lib/styles/graphing.sass'
 </script>
 
 <div class="foot-wrap stdbox">
@@ -166,7 +167,7 @@
 .foot-top
 	display: flex
 	align-items: flex-start
-	justify-content: space-between
+	justify-content: flex-end
 	gap: 1.5rem
 	border-bottom: 0
 	@media screen and (max-width: 1024px)
@@ -188,8 +189,8 @@
 	padding: 10px 14px
 	border-radius: 8px
 	transition: all 0.15s ease
-	backdrop-filter: blur(12px) saturate(1.2)
-	background: linear-gradient(180deg, rgba(255, 255, 255, .76), rgba(243, 243, 243, .64))
+	backdrop-filter: blur(12px) saturate(1.5)
+	background: linear-gradient(180deg, rgba(255, 255, 255, .46), rgba(243, 243, 243, .84))
 	border: 1px solid rgba(255, 255, 255, .98)
 	box-shadow: 0 1px 0 rgba(255, 255, 255, .9), 0 8px 18px rgba(15, 23, 42, .1), inset 0 -1px 1px rgba(0, 0, 0, .05)
 	transform-origin: center center

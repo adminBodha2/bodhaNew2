@@ -30,7 +30,7 @@
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded whole-page">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities."/>
-	<div class="grid two reading-block tightrows">
+	<div class="grid two widecol tightrows">
 		<p class="highlight-text">A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles. Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.</p>
 		<p class="highlight-text">Our goal is to make experimental methodology central to policy recommendations so that policy in future India is conducive to India’s culture and also practical and capable of competing with global forces. A key component of this is cultural furtherance in education and education policy, giving us a clear mandate to develop work in service of the Indian Knowledge Systems, through case-studies, curriculum development, and more.</p>
 	</div>
@@ -68,10 +68,6 @@
 
 .reading-block
 	background: var(--color-white)
-	border: var(--border-main)
-	padding: 1.2rem
-	@media screen and (min-width: 1025px)
-		padding: 2rem
 
 .box.pillar
 	transition: all 0.13s cubic-bezier(0.175, 0.885, 0.320, 1.275)

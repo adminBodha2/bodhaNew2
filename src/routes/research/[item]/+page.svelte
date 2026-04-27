@@ -2,7 +2,7 @@
 
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
-	import '$lib/styles/lab.sass'
+	import '$lib/styles/lab2.sass'
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
