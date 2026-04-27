@@ -20,7 +20,7 @@
 <Parallax imageLink="/images/key-academy.webp" isClass="is50" />
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Academy"/>
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Academy" showD={true} desc={metaDescription}/>
 		<div class="grid two tightrows reading-block">
 			<p class="highlight-text">Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
 			<div class="textbox">
@@ -65,11 +65,7 @@
 <style lang="sass">
 
 .reading-block
-	background: var(--color-white)
-	border: var(--border-main)
-	padding: 1.2rem
-	@media screen and (min-width: 1025px)
-		padding: 2rem
+	background: var(--color-back)
 
 .course-item
 	background: var(--color-white)

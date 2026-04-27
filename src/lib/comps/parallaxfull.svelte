@@ -35,6 +35,7 @@
 			height: 70vh
 		&.is50
 			height: 70vh
+			margin-top: 80px
 		img
 			object-fit: cover
 			object-position: center center

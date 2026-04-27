@@ -130,7 +130,7 @@ button
 	flex-direction: column
 
 .stdbox
-	row-gap: 2rem
+	row-gap: 2.5rem
 .labelbox
 	row-gap: 0.5rem
 .elembox
@@ -307,6 +307,15 @@ button.conceptbuttons
 			color: var(--color-theme)
 	&.themed
 		background: var(--color-theme-5)
+	&.hollow
+		padding: 0
+		background: none
+		border: none
+		font-size: 1rem
+		color: var(--color-primary)
+		font-weight: 700
+		&:hover
+			color: var(--color-theme)
 
 button.small-button
 	font-weight: 500

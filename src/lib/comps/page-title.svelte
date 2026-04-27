@@ -20,7 +20,7 @@
 	<div class="bob">
 		<Arrow size={24} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="header-2 name tt-u">
+	<h2 class="source-serif header-2 name">
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style="animation-delay: {i * 0.04}s">{char}</span>
 		{/each}
