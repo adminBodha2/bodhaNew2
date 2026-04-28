@@ -23,23 +23,23 @@
 		<div class="footer-grid">
 			<div class="foot-brand">
 				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="lgrey small-text">Site designed at Bodha Lab</p>
+				<p class="lgrey small-text">Site designed at Bodha Lab. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
 				<Designed/>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">Research</p>
+				<p class="tag-text lgrey tt-u">pillars</p>
 				<div class="foot-links">
-					<a class="foot-link blank white" href="/research">Projects</a>
+					<a class="foot-link blank white" href="/research">Research</a>
+					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
 					<a class="foot-link blank white" href="/big-questions">Big Questions</a>
-					<a class="foot-link blank white" href="/academy">Courses</a>
-					<a class="foot-link blank white" href="/lab">Lab</a>
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">Culture</p>
+				<p class="tag-text lgrey tt-u">learning</p>
 				<div class="foot-links">
-					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
-					<a class="foot-link blank white" href="/temples">Temples</a>
+					<a class="foot-link blank white" href="/academy">Academy</a>
+					<a class="foot-link blank white" href="/ontology">Ontology</a>
+					<a class="foot-link blank white" href="/concepts">Concepts</a>
 				</div>
 			</div>
 			<div class="foot-col">
@@ -47,15 +47,15 @@
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/blog">Blog</a>
 					<a class="foot-link blank white" href="/library">Open Library</a>
-					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
+					<a class="foot-link blank white" href="/explorer">Explorer</a>
 				</div>
 			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">Bodha</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/about">About</a>
-					<a class="foot-link blank white" href="/contact">Contact</a>
-					<a class="foot-link blank white" href="/videos">Videos</a>
+					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
+					<a class="foot-link blank white" href="/lab">Lab</a>
 				</div>
 			</div>
 		</div>
@@ -89,13 +89,21 @@
 
 .footer-grid
 	display: grid
-	grid-template-columns: repeat(6, minmax(120px, 1fr))
+	grid-template-columns: repeat(7, minmax(120px, 1fr))
+	.foot-brand
+		grid-column: span 3
+	column-gap: 2rem
 	@media screen and (max-width: 1024px)
 		grid-template-columns: 1fr 1fr
-		row-gap: 2rem
+		.foot-col
+			grid-column: span 1
+		.foot-brand
+			grid-column: span 2
+		row-gap: 3rem
+		column-gap: 2rem
 
 .foot-brand
-	grid-column: span 2
+	grid-column: span 3
 
 .foot-wide-lines
 	position: absolute
@@ -225,7 +233,7 @@
 	gap: 0.6rem
 
 .foot-link
-	font-size: 1rem
+	font-size: 1.1rem
 	transition: color 0.12s ease
 	&:hover
 		color: var(--color-theme)

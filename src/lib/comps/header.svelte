@@ -31,10 +31,10 @@
 	{#if iW >= 1025}
 		<nav class="row ycenter tray">
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/research'} href="/research">Research</a>
+			<a class="nav-link blank tt-u" class:active={firstSubroute === '/anveshi'} href="/anveshi">Anveshi</a>
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/big-questions'} href="/big-questions">Big Questions</a>
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/academy'} href="/academy">Academy</a>
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/library'} href="/library">Library</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/anveshi'} href="/anveshi">Anveshi</a>
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/blog'} href="/blog">Blog</a>
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/inspiration'} href="/inspiration">Inspiration</a>
 			<a class="nav-link blank tt-u" class:active={firstSubroute === '/team'} href="/team">Team</a>
