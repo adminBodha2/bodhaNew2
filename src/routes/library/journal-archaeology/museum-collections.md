@@ -29,3 +29,6 @@ Museum and private collection catalogues are a major documentary engine of the I
 3. Object typology accumulates across issues: Repeated catalogues allow comparison of weights, motifs, scripts, iconography, and manufacturing features across institutions.
 4. Lucknow is the largest museum hub: State Museum Lucknow is central for antiquities, terracotta, numismatics, Buddhist sculpture, paintings, and biodiversity studies.
 5. Museum collections bridge topics: The same institution may matter simultaneously for numismatics, epigraphy-and-inscriptions, art-iconography-and-sculpture, and copper-hoards.
+
+
+## Related Articles

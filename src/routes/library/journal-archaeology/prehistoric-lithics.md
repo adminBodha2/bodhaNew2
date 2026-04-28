@@ -28,3 +28,6 @@ Prehistoric lithic studies in the IJA document Palaeolithic, Mesolithic, microli
 3. Lithic studies overlap with rock art: Tapka, Chitrakoot, and Sonbhadra-region work show microliths and painted shelters as parts of a shared prehistoric landscape.
 4. Harappan stone craft is specialized: Kanmer drill bits and Khambhat bead production show that lithic technology remains crucial even in Bronze Age urban contexts.
 5. Cognitive archaeology appears explicitly: The Manipur paper uses lithic form and production to discuss early hominid cognition, broadening the corpus beyond typology.
+
+
+## Related Articles

@@ -34,3 +34,5 @@ Medieval monuments - forts, mosques, tombs, gardens, bridges, baolis, and palace
 4. Mughal gardens (Vol 1, No. 4 and Vol 7, No. 2): Two studies on Mughal gardens - general symbolic/climatic analysis and a specific study of Pinjore - establish how Mughal garden design incorporated both Persian chahar-bagh geometry and Indian climate-adaptive features.
 5. Timurid–Safavid roots of Mughal architecture (Vol 9, No. 2): Systematic study traces how Babur and Humayun imported Timurid architectural traditions from Central Asia, modified by Safavid influences from Persia, to create the Mughal synthesis.
 6. Sufi influence on Kashmir architecture (Vol 10, No. 2): The study documents the shift from stone Hindu-Buddhist temple construction to wooden mosque construction in Kashmir after the 14th century, driven by Sufi missionary activity.
+
+## Related Articles

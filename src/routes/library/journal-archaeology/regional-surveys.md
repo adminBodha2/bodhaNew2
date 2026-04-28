@@ -29,3 +29,6 @@ Regional surveys and gazetteers form one of the strongest documentary strands in
 3. OCP mapping depends on survey: Aligarh-Hathras and Barood Khera data are central to linking copper-hoards with ochre-colour-pottery sites in the Upper Ganga plain.
 4. Sacred landscapes overlap archaeological ones: Chitrakoot, Kamarupa, Hajo, Nalanda, and Kashmir surveys show that sacred geography preserves older settlement memory, pilgrimage routes, and temple clusters.
 5. Northeastern archaeology is increasingly prominent: Assam, Manipur, Nagaland, and Tripura articles broaden the corpus from monument and object catalogues toward migration, oral tradition, craft knowledge, sacred stones, and cultural landscapes.
+
+
+## Related Articles

@@ -34,3 +34,6 @@ The Indus Valley Civilization, including its Mature, Late, and post-urban phases
 5. Rakhigarhi catchment (Vol 4, No. 4): Systematic survey reveals Mesolithic, Harappan, and PGW sites in the 10 km hinterland of the metropolis, providing a picture of long-term landscape occupation.
 6. Erlitou comparison (Vol 5, No. 1): A comparative study of Harappa and the Chinese Bronze Age city Erlitou highlights contrasting economic and political models: Harappa shows a more decentralised exchange economy than Erlitou's state-controlled Bronze Age urbanism.
 7. Gandharan connections: Articles on Gandharan art (Vol 6, No. 1) trace how Harappan/Indus artistic motifs persist into and interact with the Gandharan tradition of northwestern India.
+
+
+## Related Articles

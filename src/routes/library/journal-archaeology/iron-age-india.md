@@ -29,3 +29,5 @@ Iron Age India appears in the IJA through megalithic burials, Painted Grey Ware 
 3. Megaliths are socially dense evidence: Burial goods, memorial stones, horse ornaments, and cist construction show rank, craft, and ritual beyond settlement debris alone.
 4. Metallurgy is regional: Manipur iron smelting adds an eastern Indian craft tradition to the corpus, complementing better-known north and central Indian evidence.
 5. Early historic urbanisation grows from Iron Age bases: Nindaur, Eran, Radhanagar, and Alamgirpur show how fortified, ritual, and urban features emerge from earlier settlement frameworks.
+
+## Related Articles
