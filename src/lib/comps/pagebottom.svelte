@@ -66,19 +66,19 @@
 			</div>
 			<div class="foot-actions">
 				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-					<Twitter color="var(--color-white)" />
+					<Twitter color="var(--color-back)" />
 				</a>
 				<a class="blank foot-social" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-					<FB color="var(--color-white)" />
+					<FB color="var(--color-back)" />
 				</a>
 				<a class="blank foot-social" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-					<Insta color="var(--color-white)" />
+					<Insta color="var(--color-back)" />
 				</a>
 				<a class="blank foot-social" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-					<Linkedin color="var(--color-white)" />
+					<Linkedin color="var(--color-back)" />
 				</a>
 				<a class="blank foot-social" href="https://github.com/adminBodha2/bodhaNew2" rel="noreferrer" target="_blank">
-					<Github color="var(--color-white)"/>
+					<Github color="var(--color-back)"/>
 				</a>
 			</div>
 		</div>

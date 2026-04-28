@@ -121,10 +121,10 @@
 	<div class="labelbox buttons-and-rule">
 		<div class="nav-buttons row ycenter xcenter cgap8 mleft">
 			<button class="nav prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
-				<svg viewBox="0 0 24 24" height="24" width="24" fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
+				<svg viewBox="0 0 24 24" height="24" width="24" fill="var(--color-back)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
 			</button>
 			<button class="nav next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
-				<svg viewBox="0 0 24 24" height="24" width="24" fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
+				<svg viewBox="0 0 24 24" height="24" width="24" fill="var(--color-back)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
 			</button>
 		</div>
 		{#if iW <= 1024}

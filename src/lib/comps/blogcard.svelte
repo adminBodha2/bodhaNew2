@@ -42,7 +42,7 @@
 		img
 			transform: scale(1.05)
 	&.slate
-		background: var(--color-white)
+		background: var(--color-back)
 		&:hover
 			background: var(--color-stone)
 

@@ -59,7 +59,7 @@ pre
 		background: var(--color-stone)
 		row-gap: 0.5rem
 		pre
-			background: var(--color-white)
+			background: var(--color-back)
 			border: var(--border-dark)
 			padding: 1rem
 	@media screen and (min-width: 1025px)

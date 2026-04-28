@@ -163,8 +163,6 @@
 					slidesPerView={3}
 					spaceBetween={8}
 					pagination={false}
-					speed={9000}
-					marquee={true}
 					breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 3, spaceBetween: 8 } }}
 				>
 					{#each testis as item}

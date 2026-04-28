@@ -737,6 +737,7 @@
 	aria-hidden="true"
 ></canvas>
 
+
 <style lang="sass">
 
 .ripple-canvas

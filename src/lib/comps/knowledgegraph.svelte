@@ -127,6 +127,9 @@
 		};
 	});
 
+const baseImage = "/images/demos/night.png";
+	const revealImage = "/images/demos/day.png";
+
 	let selectedNode = $derived(selectedId ? indexes.pointById.get(selectedId) : undefined);
 	let visibleGraph = $derived(buildVisibleGraph(activeType, query, selectedId));
 	let visibleCounts = $derived({
@@ -383,7 +386,7 @@
 		display: grid
 		gap: 18px
 		margin-bottom: 32px
-		color: var(--color-white)
+		color: var(--color-back)
 
 	.graph-shell
 		position: relative
@@ -418,7 +421,7 @@
 			width: 100%
 			border: 1px solid rgba(7,7,7,0.12)
 			border-radius: 6px
-			background: var(--color-white)
+			background: var(--color-back)
 			padding: 12px 13px
 			color: var(--color-black)
 			font: inherit
@@ -448,7 +451,7 @@
 			&.active
 				background: var(--color-black)
 				border-color: var(--color-black)
-				color: var(--color-white)
+				color: var(--color-back)
 
 	.graph-stage
 		position: relative
@@ -511,18 +514,18 @@
 		margin-top: 16px
 		a,
 		button
-			border: 1px solid var(--color-black)
+			border: 1px solid var(--color-primary)
 			border-radius: 6px
-			background: var(--color-black)
-			color: var(--color-white)
+			background: var(--color-primary)
+			color: var(--color-back)
 			padding: 9px 12px
 			font-size: 0.84rem
 			font-weight: 750
 			text-decoration: none
 			cursor: pointer
 		button
-			background: var(--color-white)
-			color: var(--color-black)
+			background: var(--color-back)
+			color: var(--color-primary)
 
 	.top-list
 		display: grid
@@ -580,9 +583,9 @@
 		width: max-content
 		border: 1px solid rgba(7,7,7,0.13)
 		border-radius: 6px
-		background: var(--color-white)
+		background: var(--color-back)
 		padding: 9px 12px
-		color: var(--color-black)
+		color: var(--color-primary)
 		font-size: 0.82rem
 		font-weight: 750
 		cursor: pointer
@@ -604,7 +607,7 @@
 	.tray-btn
 		grid-column: span 1
 		background: #FFFFFF
-		border: 1px solid var(--color-white)
+		border: 1px solid var(--color-back)
 		padding: 12px 20px
 		font-size: 1rem
 		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
@@ -621,14 +624,14 @@
 		&.active
 			background: linear-gradient(158.19deg, #1971C2 10.95%, #0C365C 85.73%)
 			border: 1px solid var(--color-theme)
-			color: var(--color-white)
+			color: var(--color-back)
 	@media screen and (min-width: 1025px)
 		display: flex
 		flex-direction: row
 		width: max-content
 		.tray-btn
-			background: var(--color-white)
-			border: 1px solid var(--color-white)
+			background: var(--color-back)
+			border: 1px solid var(--color-back)
 			padding: 12px 20px
 			font-size: 1rem
 			box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)

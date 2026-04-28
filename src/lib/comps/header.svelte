@@ -84,12 +84,12 @@
 	border-radius: 2px
 	transition: var(--transition2)
 	&:hover
-		color: var(--color-white)
+		color: var(--color-back)
 		background: var(--color-theme)
 	&.active
 		color: var(--color-theme)
 		&:hover
-			color: var(--color-white)
+			color: var(--color-back)
 
 .logoholder
 	transition: all 0.1s ease
