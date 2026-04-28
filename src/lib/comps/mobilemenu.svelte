@@ -37,18 +37,6 @@
 	];
 </script>
 
-<dialog bind:this={dialogRef} onclose={toggleMenuState} class="mm-dialog">
-	{#if $menuState}
-		<div class="mm-backdrop" transition:fade={{ duration: 200 }} onclick={toggleMenuState} aria-hidden="true"></div>
-	{/if}
-	<nav class="mm-content" in:fly={{ x: 54, duration: 220, easing: cubicOut, opacity: 1 }} out:fly={{ x: 54, duration: 180, easing: expoIn }} aria-label="Mobile navigation">
-		<div class="mm-inner box xright ta-r">
-			{#each links as link}
-				<a class="mm-link blank tt-u" class:active={firstSubroute === link.href} href={link.href} onclick={toggleMenuState}>{link.label}</a>
-			{/each}
-		</div>
-	</nav>
-</dialog>
 <nav class="mm-wrap" in:fly={{ x: 54, duration: 220, easing: cubicOut, opacity: 1 }} out:fly={{ x: 54, duration: 180, easing: expoOut }} aria-label="Mobile navigation">
 	<div class="mm-inner box xright ta-r">
 		{#each links as link}
