@@ -83,9 +83,7 @@
 		{ label: 'Schools', value: 'school' },
 		{ label: 'Books', value: 'book' }
 	];
-	const legendFilters = filterTypes.filter(
-		(filter): filter is { label: string; value: NodeType } => filter.value !== 'all'
-	);
+	const legendFilters = filterTypes.filter((filter): filter is { label: string; value: NodeType } => filter.value !== 'all');
 
 	let graphEl: HTMLDivElement;
 	let graph: ForceGraphInstance | undefined;
@@ -148,9 +146,7 @@
 			if (type !== 'all' && node.type !== type) return false;
 			if (!normalizedSearch) return true;
 
-			return `${node.title} ${node.description} ${node.tags?.join(' ') ?? ''}`
-				.toLowerCase()
-				.includes(normalizedSearch);
+			return `${node.title} ${node.description} ${node.tags?.join(' ') ?? ''}`.toLowerCase().includes(normalizedSearch);
 		});
 		const seedIds = new Set(filtered.map((node) => node.id));
 		const visibleIds = new Set(seedIds);
@@ -218,7 +214,7 @@
 		const isSelected = selectedId === node.id;
 		const isHovered = hoveredId === node.id;
 		const isNeighbor = selectedNode?.neighbors.has(node.id);
-		const radius = Math.max(4.5, Math.min(15, 4 + Math.sqrt(node.degree + 1) * 1.15));
+		const radius = Math.max(8, Math.min(24, 8 + Math.sqrt(node.degree + 1) * 1.15));
 		const label = node.title.length > 34 ? `${node.title.slice(0, 31)}...` : node.title;
 
 		context.beginPath();
@@ -320,36 +316,23 @@
 </script>
 
 <section class="knowledge-map" aria-label="Interactive knowledge graph">
-	<div class="map-copy">
-		<div>
-			<h2 class="source-serif">Bodha Knowledge Map</h2>
-			<p>
-				Trace how essays, questions, thinkers, schools, books, and concepts pull on each other.
-				Select a node to follow its nearby constellation.
-			</p>
-		</div>
-		<div class="map-stats" aria-label="Graph statistics">
-			<span>{nodes.length} nodes</span>
-			<span>{edges.length} links</span>
-			<span>{visibleCounts.nodes} in view</span>
-		</div>
+	<div class="row cgap8" aria-label="Graph statistics">
+		<button class="nav-btn">{nodes.length} nodes</button>
+		<button class="nav-btn">{edges.length} links</button>
+		<button class="nav-btn">{visibleCounts.nodes} in view</button>
 	</div>
-
 	<div class="graph-shell">
 		<div class="graph-toolbar">
 			<label class="search-control">
-				<span>Search</span>
+				<p class="rem1 grey">Search</p>
 				<input bind:value={query} type="search" placeholder="Try dharma, temple, history..." />
 			</label>
-			<div class="type-filters" aria-label="Filter graph by type">
+			<div class="section-tray">
 				{#each filterTypes as filter}
-					<button class:active={activeType === filter.value} onclick={() => (activeType = filter.value)}>
-						{filter.label}
-					</button>
+					<button class="tray-btn item" class:active={activeType === filter.value} onclick={() => (activeType = filter.value)}>{filter.label}</button>
 				{/each}
 			</div>
 		</div>
-
 		<div class="graph-stage">
 			<div class="graph-canvas" bind:this={graphEl}></div>
 			<aside class="node-panel">
@@ -369,12 +352,12 @@
 						<button onclick={() => (selectedId = null)}>Clear</button>
 					</div>
 				{:else}
-					<p class="node-type">start here</p>
-					<h3>Choose a node</h3>
-					<p>Click any point in the map to reveal its title, tags, and immediate relations.</p>
+					<p class="citation-big tt-u blue">start here</p>
+					<p class="w500 highlight-text">Choose a node</p>
+					<p class="small-text grey">Click any point in the map to reveal its title, tags, and immediate relations.</p>
 					<div class="top-list">
 						{#each topNodes as node}
-							<button onclick={() => selectNode(node)}>
+							<button class="top-list-button" onclick={() => selectNode(node)}>
 								<span>{node.title}</span>
 								<small>{node.degree} links</small>
 							</button>
@@ -383,7 +366,6 @@
 				{/if}
 			</aside>
 		</div>
-
 		<div class="graph-footer">
 			<div class="legend">
 				{#each legendFilters as filter}
@@ -396,42 +378,12 @@
 </section>
 
 <style lang="sass">
+
 	.knowledge-map
 		display: grid
 		gap: 18px
 		margin-bottom: 32px
-
-	.map-copy
-		display: grid
-		gap: 16px
-		align-items: end
-		h2
-			margin: 0
-			font-size: clamp(2.1rem, 5vw, 4.4rem)
-			line-height: 0.95
-			letter-spacing: 0
-		p
-			max-width: 720px
-			margin: 12px 0 0
-			color: var(--color-grey-4)
-			font-size: 1.02rem
-			line-height: 1.55
-		@media screen and (min-width: 900px)
-			grid-template-columns: 1fr auto
-
-	.map-stats
-		display: flex
-		flex-wrap: wrap
-		gap: 8px
-		span
-			border: var(--border-dark)
-			background: var(--color-white)
-			border-radius: 999px
-			padding: 8px 12px
-			color: var(--color-grey-4)
-			font-size: 0.8rem
-			text-transform: uppercase
-			letter-spacing: 0.06em
+		color: var(--color-white)
 
 	.graph-shell
 		position: relative
@@ -440,7 +392,7 @@
 		border-radius: 8px
 		background-color: var(--color-stone-3)
 		background-image: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(248,247,244,0.86)), radial-gradient(circle at 18% 18%, rgba(211,99,58,0.14), transparent 28%), radial-gradient(circle at 82% 12%, rgba(25,113,194,0.14), transparent 30%)
-		box-shadow: var(--shadow3)
+		box-shadow: var(--shadow6)
 
 	.graph-toolbar
 		display: grid
@@ -522,16 +474,6 @@
 		box-shadow: var(--shadow9)
 		backdrop-filter: blur(18px)
 		padding: 18px
-		h3
-			margin: 0
-			font-size: 1.28rem
-			line-height: 1.12
-			letter-spacing: 0
-		p
-			margin: 10px 0 0
-			color: var(--color-grey-4)
-			font-size: 0.92rem
-			line-height: 1.45
 		@media screen and (max-width: 720px)
 			position: relative
 			inset: auto
@@ -591,16 +533,15 @@
 			align-items: center
 			justify-content: space-between
 			gap: 12px
-			border: 1px solid rgba(7,7,7,0.09)
-			border-radius: 6px
-			background: rgba(249,248,246,0.8)
+			border: var(--border-main)
+			border-radius: 2px
+			background: var(--color-know-2)
 			padding: 9px
 			text-align: left
 			cursor: pointer
 			span
 				color: var(--color-black)
-				font-size: 0.83rem
-				font-weight: 650
+				font-size: 0.9rem
 				line-height: 1.2
 			small
 				flex: 0 0 auto
@@ -651,4 +592,53 @@
 			min-height: auto
 		.graph-canvas
 			height: 520px
+
+.section-tray
+	display: grid
+	grid-template-columns: 1fr 1fr
+	border: var(--border-dark)
+	background: var(--color-grey-1)
+	gap: 1px
+	border-radius: 5px
+	overflow: visible
+	.tray-btn
+		grid-column: span 1
+		background: #FFFFFF
+		border: 1px solid var(--color-white)
+		padding: 12px 20px
+		font-size: 1rem
+		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
+		&:first-child
+			border-radius: 5px 5px 0 0
+		&:last-child
+			border-radius: 0 0 5px 0
+		&:nth-last-child(2)
+			border-radius: 0 0 0 5px
+		&:hover
+			background: var(--color-theme-5)
+			border: 1px solid var(--color-theme-5)
+			box-shadow: none
+		&.active
+			background: linear-gradient(158.19deg, #1971C2 10.95%, #0C365C 85.73%)
+			border: 1px solid var(--color-theme)
+			color: var(--color-white)
+	@media screen and (min-width: 1025px)
+		display: flex
+		flex-direction: row
+		width: max-content
+		.tray-btn
+			background: var(--color-white)
+			border: 1px solid var(--color-white)
+			padding: 12px 20px
+			font-size: 1rem
+			box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
+			&:first-child
+				border-radius: 5px 0 0 5px
+			&:last-child
+				border-radius: 0 5px 5px 0
+			&:nth-last-child(2)
+				border-radius: 0
+			&:active
+				transform: scale(1.05)
+
 </style>

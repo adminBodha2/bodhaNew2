@@ -8,6 +8,7 @@
 		scaled?: boolean;
 		offcolor?: boolean;
 		toffcolor?: boolean;
+		maxH?:boolean;
 		children?: Snippet;
 	};
 
@@ -18,12 +19,13 @@
 		scaled = false,
 		offcolor = false,
 		toffcolor = false,
+		maxH = false,
 		children
 	}: Props = $props();
 
 </script>
 
-<div class="pbot64 column" class:scaledTypo={scaled} class:top-cushion={isTop} class:widebox={!narrow} class:narrowbox={narrow} class:offcolor={offcolor} class:toffcolor={toffcolor}>
+<div class="pbot64 column" class:maxH={maxH} class:scaledTypo={scaled} class:top-cushion={isTop} class:widebox={!narrow} class:narrowbox={narrow} class:offcolor={offcolor} class:toffcolor={toffcolor}>
   {@render children?.()}
 </div>
 
@@ -46,6 +48,9 @@
 
 .pbot64.column.narrowbox
 	min-height: 100vh
+
+.pbot64.column.narrowbox.maxH
+	height: 100%
 
 .offcolor
 	background: #FcFcFc

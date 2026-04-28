@@ -5,8 +5,6 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import KnowledgeGraph from '$lib/comps/knowledgegraph.svelte';
-	import { fly } from 'svelte/transition'
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -51,12 +49,14 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 
 <Container narrow={true} scaled={true}>
 <div class="stdbox padded-ontop thisbox">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything."/>
-	<KnowledgeGraph nodes={data.graph.nodes} edges={data.graph.edges} />
+	<div class="explorer-heading">
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything."/>
+	</div>
 		<div class="section-tray">
 			{#each tabs as tab, i}
 				<button class="tray-btn item" class:active={active === i} onclick={() => (active = i)}>{tab}</button>
 			{/each}
+				<a class="tray-btn item" href="/explorer/graph">View Graph</a>
 		</div>
 	<div class="grid white-grid four thisgrid" use:autoAnimate>
 		{#if active === 0}

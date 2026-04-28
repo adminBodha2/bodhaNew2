@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import { nodes } from '$lib/graph';
+import { edges, nodes } from '$lib/graph';
 
 export const load: PageLoad = () => {
 const contentNodes = nodes.filter(
@@ -20,5 +20,9 @@ const akVargas = nodes.filter((n) => n.type === 'ak-varga');
 
   return {
     grouped,
+    graph: {
+      nodes,
+      edges
+    }
   };
 };
