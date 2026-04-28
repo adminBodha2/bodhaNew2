@@ -58,7 +58,7 @@ It is easy to see why these impulses will not arise in a metaphysics where the o
 
 ##### In such a metaphysics accelerationism appears naive, absurd even. And teleology is given the kind of breathing space that can produce a whole, rounded and profound understanding of humanity - the puruśārtha
 
-We do not live only once - we are born again and again, and the consequence of deed is accumulated over lifetimes as karma. The events of history are only materially understood through their reconstructed actuality, and in reality they are but the reflections of more cosmic, paratemporal events. **The Mahābhārata and Rāmāyaṇa are made real not because they "really" happened. They are real because the divine really manifests in them. They are real precisely because they speak of things belonging to the eternal, the Sat (सत्).**
+We do not live only once - we are born again and again, and the consequence of deed is accumulated over lifetimes as karma. The events of history are only materially understood through their reconstructed actuality, and in reality they are but the reflections of more cosmic, paratemporal events. The Mahābhārata and Rāmāyaṇa are made real not because they "really" happened. They are real because the divine really manifests in them. They are real precisely because they speak of things belonging to the eternal, the Sat (सत्).
 
 This difference in a single-life metaphysics and a multiple-life metaphysics explains Hinduism's divergence from the modern -isms: capitalism, communism, atheism, scientism, rationalism, materialism, etc.
 

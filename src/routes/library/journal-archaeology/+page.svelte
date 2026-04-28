@@ -4,11 +4,12 @@
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { flip } from 'svelte/animate';
-	import autoAnimate from '@formkit/auto-animate';
+	import Title from '$lib/comps/page-title.svelte'
 	import { slide, fade } from 'svelte/transition';
 	import { quintOut, sineIn, sineOut } from 'svelte/easing';
 
 	let { data }: { data: PageData } = $props();
+	let groups = $derived(data.groups ?? []);
 	let openIssue = $state<number | null>(null);
 	let scroY = $state(0);
 	let parallaxY = $derived(scroY / 6);
@@ -33,6 +34,18 @@
 	</section>
 	<Container narrow={true} scaled={true}>
 		<div class="stdbox padded" id="contents">
+			<Title text="Themes"/>
+			{#if groups && groups.length > 0}
+				<div class="three grid white-grid">
+					{#each groups as item}
+						<a class="blank card-padded whitestone" href={item.linkpath}>
+							<p class="highlight-text">{item.meta.title}</p>
+						</a>
+					{/each}
+				</div>
+			{/if}
+		</div>
+		<div class="stdbox padded bordertop">
 			<div class="grid issues ultra">
 				{#each data.issues as item (item.issue)}
 					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 410, easing: sineOut}}>
@@ -106,12 +119,15 @@ a.golink
 				border-top: var(--border-main)
 				padding-top: 1rem
 
+.contingent
+	background: var(--color-back)
+
 button.blank.row.xbetween
 	padding: 1rem
 	width: 100%
 	border-bottom: var(--border-main)
 	background: var(--color-stone)
-	transition: all 220ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
+	transition: all 220ms ease
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.1)
 
 .each-issue.openeditem

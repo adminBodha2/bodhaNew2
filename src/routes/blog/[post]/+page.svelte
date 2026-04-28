@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -7,8 +8,24 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+	import { InteractiveGrid } from "$lib/motion-core";
+	import type { ComponentProps } from "svelte"
 
-	let { data } = $props();
+	interface Props {
+	    data: PageData;
+	    grid?: number;
+		mouseSize?: number,
+		strength?:number,
+		relaxation?:number
+	}
+
+	let {
+		data,
+		grid = 24,
+		mouseSize = 0.15,
+		strength = 0.6,
+		relaxation = 0.8,
+	}: Props = $props();
 
 	let posts = $derived(data.posts ?? []);
 	let ref = $state<HTMLElement | null>(null);
@@ -70,7 +87,7 @@
 		</div>
 	</div>
 	<div class="box blog-image-area xcenter">
-		<img src={data.image} alt={data.title} style:transform={`translateY(${imageY}px)`}/>
+		<InteractiveGrid image={metaImage} class="ripple-motion" {grid} {mouseSize} {strength} {relaxation}/>
 	</div>
 	<div class="article-slate">
 	<article class="blog-article self-center" bind:this={ref}>
@@ -120,19 +137,10 @@
 .blog-image-area
 	overflow: hidden
 	border-radius: 5px
-	position: relative
-	img
-		object-fit: cover
-		position: absolute
-		width: 100%
 	@media screen and (max-width: 1024px)
-		height: 200px
-		img
-			height: 630px
+		height: 360px
 	@media screen and (min-width: 1025px)
-		height: 540px
-		img
-			height: 630px
+		height: 800px
 
 .line
 	height: 1px
@@ -163,7 +171,7 @@
 .blog-article
 	width: 100%
 	@media screen and (min-width: 1025px)
-		width: 928px
+		width: 944px
 		padding: 2rem
 
 .share-row

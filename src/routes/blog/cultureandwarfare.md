@@ -39,17 +39,15 @@ There is rarely anything more exquisite in life than good literature, good art a
 
 Many are not able to comprehend how a single person can write on temples and culture, and simultaneously also elaborate on the horrors, barbarity, and violence which lie at the core of Islam and Christianity..  
 
-**In this however, there is no contradiction.**
+In this however, there is no contradiction.  
+This balance is exactly how life is.
+Fire and rain.
 
-**This balance is exactly how life is.**
+Always.
 
-**Fire and rain.**
+At the same time.
 
-**Always.**
-
-**At the same time.**
-
-**And it is the contrast between them that makes life enjoyable.**
+And it is the contrast between them that makes life enjoyable.
 
 ##### It is this balance between the two which makes life dharmic
 
@@ -61,13 +59,13 @@ Which brings us to a curious and concerning condition -
 
 ## The Saruman Syndrome
 
-In The Lord of the Rings, a good wizard named Saruman studies the ways of the Other, the evil king Sauron. Unfortunately, Saruman becomes so fascinated with the other side that _he eventually becomes one of them_. **This is the Saruman Syndrome**.  
+In The Lord of the Rings, a good wizard named Saruman studies the ways of the Other, the evil king Sauron. Unfortunately, Saruman becomes so fascinated with the other side that *he eventually becomes one of them*. This is the Saruman Syndrome. 
 
 ##### Saruman had utmost Śatrubodha, but no Svayambodha- and thus he turned into the enemy
 
 The Saruman Syndrome is this tendency to become the enemy by studying him so closely, but doing this without any foundational base in one’s own identity - without Svayambodha.  
 
-**This is why Svayambodha is also necessary.**
+This is why Svayambodha is also necessary.
 
 Svayambodha is the pole star, the sacred center of dharma, which always keeps guiding us as to our identity - who we are, what home is, and what the universal and eternal isl, from which we should never deviate.  
 

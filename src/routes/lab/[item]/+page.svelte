@@ -1,11 +1,13 @@
 <script lang="ts">
+
 	import { page } from '$app/state';
 	import { formatYear, formatDOM, formatMonth } from '$lib/utils/localpulls.js';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import '$lib/styles/lab.sass';
+	import '$lib/styles/lab2.sass';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+	import Liner from '$lib/icons/anim-line.svelte'
 
 	let { data } = $props();
 
@@ -46,35 +48,30 @@
 />
 
 <Container narrow={true} scaled={true}>
-	<section class="stdbox padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title={data.title} desc={data.excerpt} showD={true}/>
-	</section>
-	<section class="content-section">
-		<div class="classic-document">
-{#key page.url.pathname}
-	<data.content />
-{/key}
-		</div>
-		<div class="box sidebar">
+	<section class="documents-grid">
+		<div class="box sidearea">
 			{#if labitems && labitems.length > 0}
-				<div class="projects projects-t">
+				<div class="labelbox all-items">
 					{#each labitems as item}
-						<a class="blank project-link" href={item.linkpath}>
-							<p class="rem1 grey tight">{item.meta.title}</p>
-						</a>
+						{#if item.meta.title !== data.title}
+							<a class="blank project-link whitestone" href={item.linkpath}>
+								<p class="tight grey">{item.meta.title}</p>
+							</a>
+						{/if}
 					{/each}
 				</div>
 			{/if}
 		</div>
+		<div class="box mainarea">
+			<div class="textbox borderbot">
+				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
+				<h1 class="doc-title source-serif">{data.title}</h1>
+				<p class="rem1 grey">{data.excerpt}</p>
+			</div>
+			<div class="classic-document ptop32 pbot32 thislab">
+				<data.content />
+				<Liner/>
+			</div>
+		</div>
 	</section>
 </Container>
-
-
-<style lang="sass">
-
-.projects.projects-t
-	@media screen and (min-width: 1025px)
-		position: sticky
-		top: 80px
-
-</style>
