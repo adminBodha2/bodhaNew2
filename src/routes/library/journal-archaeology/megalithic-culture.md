@@ -7,22 +7,10 @@ tags:
   - rock-art
   - regional-surveys
   - pottery-and-ceramics
+id: 11mc
 ---
 
 Megalithic traditions appear across a wide geographic sweep in the IJA corpus, from Kerala, Vidarbha, and Sri Lanka in the south and centre, to Jharkhand, Bihar, Odisha, and northeast India further north and east. Coverage spans formal burial megalith surveys, living megalithic traditions among Munda and Mizo communities, petroglyphs on megalithic capstones, and the Iron Age associations of southern megaliths.
-
-## Articles
-
-- Vol 2, No. 1 - Head-gear and face ornaments of a horse from the Megalithic Burials of the Vidarbha Region of Maharashtra - Gajanan L. Katade
-- Vol 2, No. 4 - A Study of Megalithic Monuments in Murhu Block of Khunti District, Jharkhand - Himanshu Shekhar & P.P. Joglekar
-- Vol 3, No. 3 - A Preliminary Petrological Analysis on Cist Burial Site at Anuradhapura District of Sri Lanka - Dhanushka Kumara Jayaratne
-- Vol 4, No. 1 - A Preliminary Observation on Living Megalithic Tradition Found Among the Munda Community, Bonaigarh Subdivision, District-Sundergarh Odisha - Subodha Mendaly
-- Vol 4, No. 4 - Paintings of megalithic people near chandragiri fort in Tirumala Hill Region - Dr. T. Babji Reddy
-- Vol 5, No. 2 - Sakas: A Burial Site in Kaimur Range, Sasaram (Rohtas), Bihar - Vikas Kumar Singh, Manisha Singh et al.
-- Vol 7, No. 1 - Locating the Megalithic Burial Sites of Sulthan Bathery Taluk, Wayanad district, Kerala - Hasanath K.P.
-- Vol 7, No. 1 - Menhirs and Petroglyphs of Vangchhia - Dr. Sujeet Nayan & Moirangthem Jackson Singh
-- Vol 7, No. 2 - Megalithic Sites found in the Adhaura Region, Kaimur, Bihar: A Preliminary Survey Report - Brij Mohan
-- Vol 8, No. 1 - Rock Structures in Himalayan Highlands and their Possible Comparison with Megaliths: An Ethnographic Analysis - Kajal Devi & Tirtharaj Bhoi
 
 ## Key Sites
 

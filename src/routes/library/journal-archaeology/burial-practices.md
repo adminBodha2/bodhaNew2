@@ -7,21 +7,10 @@ tags:
   - vedic-archaeology
   - rock-art
   - excavation-reports
+id: 03bp
 ---
 
 Burial practices - inhumation in pits, cist burials, megalithic burials, urn burials, chariot burials, and hero-stone memorials - are documented across multiple papers in the IJA, covering the period from Chalcolithic through medieval India. The corpus is geographically diverse, with burials reported from Uttar Pradesh, Bihar, Maharashtra, Odisha, Sri Lanka, Kerala, and Jammu and Kashmir.
-
-## Articles
-
-- Vol 2, No. 1 - Head-gear and face ornaments of a horse from the Megalithic Burials of the Vidarbha Region of Maharashtra - Gajanan L. Katade
-- Vol 2, No. 4 - A Study of Megalithic Monuments in Murhu Block of Khunti District, Jharkhand - Himanshu Shekhar & P.P. Joglekar
-- Vol 3, No. 2 - A note on Chariot Burials found at Sinauli district Baghpat U.P. - Vijay Kumar
-- Vol 3, No. 3 - A Preliminary Petrological Analysis on Cist Burial Site at Anuradhapura District of Sri Lanka - Dhanushka Kumara Jayaratne
-- Vol 5, No. 2 - Sakas: A Burial Site in Kaimur Range, Sasaram (Rohtas), Bihar - Vikas Kumar Singh, Manisha Singh et al.
-- Vol 7, No. 1 - Locating the Megalithic Burial Sites of Sulthan Bathery Taluk, Wayanad district, Kerala - Hasanath K.P.
-- Vol 7, No. 2 - Megalithic Sites found in the Adhaura Region, Kaimur, Bihar: A Preliminary Survey Report - Brij Mohan
-- Vol 8, No. 3 - Typology and Iconography of Memorial Stelae from Lolab valley in District Kupwara, Jammu and Kashmir - Irfan Qayoom Shah, Ajmal Shah & Vrushab Mahesh
-- Vol 9, No. 1 - Hero Stones of Kalahandi: A Preliminary Study - Raj Kumar Rate & Dr. Shilpa Goel
 
 ## Key Sites
 

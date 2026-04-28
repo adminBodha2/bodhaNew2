@@ -7,32 +7,10 @@ tags:
   - medieval-monuments
   - excavation-reports
   - gandhari-culture
+id: 20ta
 ---
 
 Temple architecture is a major recurring theme in the IJA, addressed through architectural surveys, iconographic studies, sculpture catalogues, and textual analysis. Coverage encompasses North Indian Nagara temples, South Indian Dravida temples, Kashmiri temple architecture, Jain temples of central India, brick temples, wooden temples, and the evolution of architectural elements such as pillars and toranas.
-
-## Articles
-
-- Vol 1, No. 1 - Nilkaṇṭha Temple Kāliñjara - Vijay Kumar
-- Vol 1, No. 2 - Temple remains from District Chitrakut - Rajendra Yadav
-- Vol 1, No. 3 - Architecture of Temples at Jageshwara - Ajay Srivastava & Niharika
-- Vol 1, No. 4 - Jain temples of Deogarh, Lalitpur, U.P., Part-1 - Vijay Kumar
-- Vol 2, No. 1 - Jain temples of Deogarh, Lalitpur, U.P., Part-2 - Vijay Kumar
-- Vol 3, No. 1 - Ancient Literature of North Indian Architecture - Amar Singh
-- Vol 3, No. 4 - Ancient Hindu Temple Architecture of South Kashmir from 7th Century A.D. to 13th century A.D. - Arif Ahmad Dar & Dr. Sandeep Kumar Pandey
-- Vol 4, No. 1 - Study of Sculptures on Kardameśvara Temple of Varanasi - Prof. Maruti Nandan Prasad Tiwari
-- Vol 4, No. 4 - A Unique Wooden Siva Temple in Varanasi: Example of Living Cultural Relations between India and Nepal - M.N.P. Tiwari & Shanti Swaroop Sinha
-- Vol 6, No. 2 - Evolution of Pillars in North Indian Temples - Amar Singh
-- Vol 7, No. 3 - Unique features of Ancient Hindu temple architecture of Kashmir - Arif Ahmad Dar
-- Vol 8, No. 4 - Decorative Art in the Temples of Central India - Amar Singh
-- Vol 9, No. 3 - Decorated Ceilings of Osian Temples in Rajasthan - Amar Singh
-- Vol 10, No. 1 - Past and Present Architectural and Cultural Setting of Trilochan-Nath Mahadera Temple - Ankush Sharma, Dr. Ashwani Kumar et al.
-- Vol 10, No. 1 - Brahmanical and Buddhist Tradition of Panchayatana puja - Dr. Amar Singh
-- Vol 10, No. 3 - Brick Temples in the Middle Ganga Plains - Dr. Amar Singh
-- Vol 10, No. 3 - Vedagiriswarar Temple at Thirukazhukundram: A Chronicle of Sacred Space and Dynastic Patronage - H. Selva Kumar
-- Vol 10, No. 2 - Documentation of Lesser Known Shiva Temple of Village Jamuniya District Katni, Madhya Pradesh - Shivam Dubey & Tamanna Mishra
-- Vol 9, No. 3 - A Study on Rasamancha of Bishnupur, Bankura, West Bengal - Sanghamaitra Sinha et al.
-- Vol 11, No. 1 - Torana Art and Architecture - Dr. Amar Singh
 
 ## Key Sites
 

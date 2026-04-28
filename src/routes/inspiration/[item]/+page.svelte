@@ -68,14 +68,14 @@ let {
 				{#if schools && schools.length > 0}
 					{#each schools as item}
 					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="tight grey">{item.meta.title}</p>
+						<p class="rem1 tight grey">{item.meta.title}</p>
 					</a>
 					{/each}
 				{/if}
 				{#if thinkers && thinkers.length > 0}
 					{#each thinkers as item}
 					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="tight grey">{item.meta.title}</p>
+						<p class="rem1 tight grey">{item.meta.title}</p>
 					</a>
 					{/each}
 				{/if}

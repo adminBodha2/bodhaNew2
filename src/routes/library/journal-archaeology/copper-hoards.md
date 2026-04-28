@@ -8,37 +8,10 @@ tags:
   - vedic-archaeology
   - excavation-reports
   - regional-surveys
+id: 04ch
 ---
 
 The Indian Journal of Archaeology has given more sustained attention to the copper hoard phenomenon than to any other single topic in the corpus. Across volumes 1–10 (2016–2025), the journal has published a series of detailed catalogues, field reports, and interpretive studies establishing the typology, geographical distribution, chronology, and cultural meaning of copper hoard objects found primarily across the Upper Gangetic Plain, Haryana, and western Uttar Pradesh, tying them consistently to the Ochre Colour Pottery (OCP) horizon.
-
-## Articles
-
-- Vol 1, No. 1 - Copper Hoard Antiquities in Kailash Deep Shikhar Sangrahalaya Meerut, Uttar Pradesh - Satish Jain
-- Vol 1, No. 1 - Copper Hoard Antiquities in Shahjad Rai Research Institute Baraut, Bagpat, Uttar Pradesh - Amit Jain
-- Vol 1, No. 3 - Exploration of Barood Khera [OCP with burnished ware] - S. Husam Haider
-- Vol 2, No. 4 - Archaeological Gazetteer of Aligarh & Hathras Districts with special reference to OCP & Other Proto-Historic Cultures - Vijay Kumar
-- Vol 4, No. 3 - Copper Hoard Antiquities in Shahjad Rai Research Institute, Baraut district Baghpat U.P. India – Part II - Amit Jain
-- Vol 5, No. 1 - Copper Hoard Weapons & Implements kept at State Museum Lucknow - Anand Kumar Singh
-- Vol 6, No. 1 - Copper Hoard Antiquities kept in Shahjad Rai Research Institute, Baraut District Baghpat U.P. - Amit Jain
-- Vol 6, No. 2 - OCP potteries from different villages of the Districts Aligarh & Hathras U.P. - Vijay Kumar & Husham Haider
-- Vol 7, No. 1 - Copper Hoard Weapons, Tools & Ornaments kept in Haryana State Archaeological Museum, Gurukul Jhajjar - Vijay Kumar & Acharya Virjanand Daivkarni
-- Vol 7, No. 1 - Copper Hoard Weapons, Tools & Ornaments kept in Shahjad Rai Research Institute, Baraut district Baghpat U.P. - Vijay Kumar & Amit Rai Jain
-- Vol 7, No. 2 - Preliminary Report on Discovery of Copper Hoard, Ganeshpura, Dist. Mainpuri, (U.P) - Raj Kumar Patel, Niraj Kumar Verma & Aakanksha Roychowdhury
-- Vol 7, No. 2 - New Copper hoard acquired by Shahjad Rai Research Institute & Personal Collection of Atul Mishra, Chandausi - Vijay Kumar, Amit Rai Jain & Atul Mishra
-- Vol 7, No. 2 - OCP Settlement Pattern, Copper Hoard Weapons & Military Organization of the village and Interpretation of Anthropomorphic Figures - Vijay Kumar
-- Vol 7, No. 4 - Carbon Dates of Copper Hoard Weapons found from Nigohi Area, District Shahjahanpur U.P. India - Ravi Bhushan, Sanjay KS Gahlaud, Vijay Kumar & Amit Rai Jain
-- Vol 7, No. 4 - Copper Hoard Artefacts Kept at Rohilkhand Museum Bareilly U.P. - Vijay Kumar & Vijay Bahadur Yadav
-- Vol 7, No. 4 - Copper Hoard Artefacts Kept at Shahjad Rai Research Institute, Baraut - Vijay Kumar & Amit Rai Jain
-- Vol 7, No. 4 - Copper Hoard Artefacts kept at Indian Veterinary Research Institute, Bareilly U.P. - Vijay Kumar
-- Vol 8, No. 1 - Copper Hoard found from Nigohi district Shahjahanpur U.P. India - Vijay Kumar & Amit Rai Jain
-- Vol 8, No. 1 - Garuda, the Bird like Anthropomorphs of Copper Hoard of OCP - Vijay Kumar
-- Vol 8, No. 2 - Identification of Horned deity on Harpoon belonging to OCP Culture, Found from Nigohi - Vijay Kumar
-- Vol 8, No. 3 - Some Observations on Nigohi Copper Hoard & Artistic Expressions of OCP Culture - Vijay Kumar
-- Vol 8, No. 3 - Catalogue of Copper Hoard Discovered from Madarpur, Bajpur and Ganeshpura in Uttar Pradesh - Aakanksha Roychowdhury & Jitendra Singh
-- Vol 9, No. 3 - Copper Hoard Weapons and Tools kept in Shahjad Rai Research Institute, Baraut - Vijay Kumar & Amit Rai Jain
-- Vol 10, No. 2 - Hoard of Bangles Associated with OCP Culture/Copper Hoard Culture - Vijay Kumar & Amit Rai Jain
-- Vol 10, No. 3 - Identification of Ring Currency of OCP Culture - Vijay Kumar, Amit Rai Jain, D.V. Sharma & V.N. Prabhakar
 
 ## Key Sites
 

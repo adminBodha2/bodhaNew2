@@ -9,20 +9,10 @@ tags:
   - iron-age-india
   - excavation-reports
   - regional-surveys
+id: 14ocp
 ---
 
 Ochre Colour Pottery (OCP) is a Bronze Age ceramic tradition of the Upper Gangetic Plain and adjacent areas, dating broadly to the late third to early second millennium B.C., and constituting one of the most discussed archaeological cultures in the IJA corpus. The journal's sustained focus on OCP addresses its geographical extent, its diagnostic pottery types, its relationship to copper hoard weapons, and its significance for understanding the transition from Chalcolithic to early Iron Age cultures of the Indo-Gangetic heartland.
-
-## Articles
-
-- Vol 1, No. 1 - Copper Hoard Antiquities in Kailash Deep Shikhar Sangrahalaya Meerut [OCP–copper hoard co-occurrence] - Satish Jain
-- Vol 1, No. 3 - Exploration of Barood Khera [burnished OCP at Aligarh] - S. Husam Haider
-- Vol 2, No. 4 - Archaeological Gazetteer of Aligarh & Hathras Districts with special reference to OCP & Other Proto-Historic Cultures - Vijay Kumar
-- Vol 6, No. 2 - OCP potteries from different villages of the Districts Aligarh & Hathras U.P. [drawings of OCP sherds] - Vijay Kumar & Husham Haider
-- Vol 7, No. 2 - OCP Settlement Pattern, Copper Hoard Weapons & Military Organization of the village and Interpretation of Anthropomorphic Figures - Vijay Kumar
-- Vol 8, No. 3 - Some Observations on Nigohi Copper Hoard & Artistic Expressions of OCP Culture - Vijay Kumar
-- Vol 10, No. 2 - Hoard of Bangles Associated with OCP Culture/Copper Hoard Culture - Vijay Kumar & Amit Rai Jain
-- Vol 10, No. 3 - Identification of Ring Currency of OCP Culture - Vijay Kumar, Amit Rai Jain, D.V. Sharma & V.N. Prabhakar
 
 ## Key Sites
 

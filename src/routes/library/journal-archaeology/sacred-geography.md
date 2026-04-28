@@ -8,34 +8,10 @@ tags:
   - medieval-monuments
   - regional-surveys
   - vedic-archaeology
+id: 19sg
 ---
 
 Sacred geography in the IJA links archaeology with pilgrimage, textual memory, ritual landscapes, temple clusters, water bodies, rock art locations, and living community traditions. The theme is especially strong in studies of Chitrakoot, Kalinjar, Naimisharanya, Nalanda, Kamarupa, Kashmir, Hajo, Varanasi, and Assam-Manipur cultural landscapes.
-
-## Articles
-
-- Vol 1, No. 1 - Nilkaṇṭha Temple Kāliñjara - Vijay Kumar
-- Vol 1, No. 2 - Excavations at Naimisharanya - D.P. Tewari
-- Vol 1, No. 2 - Searching footprints of Buddha: Nalanda - G.K. Lama
-- Vol 1, No. 2 - Temple remains from District Chitrakut - Rajendra Yadav
-- Vol 2, No. 2 - Rock Paintings of Chitrakoot - Vijay Kumar
-- Vol 2, No. 2 - Water Bodies of Rajasthan - Krishan Pal Singh Deora
-- Vol 3, No. 1 - Archaeological Landscape at Ihala Kalawellā Ulpatha, Sri Lanka - Dhanushka Kumara Jayaratne
-- Vol 4, No. 4 - Unique Wooden Siva Temple in Varanasi - M.N.P. Tiwari & Shanti Swaroop Sinha
-- Vol 5, No. 2 - Goddess Santeri and female deities in Goa - Cibele Aldrovandi
-- Vol 6, No. 4 - Cultural Landscape of Early Assam - Nilkamal Singha & Oinam Ranjit Singh
-- Vol 7, No. 3 - Locating Sacred Geography of Kalika Puran and Yogini Tantra in Kamarupa - Nilkamal Singha & Deepak Kumar
-- Vol 7, No. 3 - Ram Janki Temple Kalinjar Fort & Antiquities around the Shrine - Vijay Kumar
-- Vol 7, No. 4 - Imagery of Ganesha on Rocks of Kamrup District - Chabina Hassan & Nilkamal Singha
-- Vol 8, No. 4 - Retrograde Historical and Archaeological Re-tracking of Nath-Yogis of Kamrup - Nilkamal Singha & Susmita Bhuyan
-- Vol 9, No. 2 - Sun Worship in the Sutlej Valley - Nisha Kumari
-- Vol 10, No. 1 - Archaeology at Prāgbodhi Mountain / Dungeshwari Hill - Amit Ranjan
-- Vol 10, No. 1 - Past and Present Architectural and Cultural Setting of Trilochan-Nath Mahadera Temple - Ankush Sharma et al.
-- Vol 10, No. 2 - Architectural Evolution and Religious Syncretism in Kashmir - Farhat Yasmeen
-- Vol 10, No. 3 - Vedagiriswarar Temple at Thirukazhukundram - H. Selva Kumar
-- Vol 10, No. 4 - The Role of Rivers in the Civilizational Process of Ancient Manipur - Oinam Ranjita Devi & Hidam Ajit Meetei
-- Vol 11, No. 1 - Sacred Transformation in Ancient and Early Medieval Kashmir - Irfan Bashir & Abdul Rashid Lone
-- Vol 11, No. 1 - Heritage Management and Community Participation: Pancha Tirtha Temples in Hajo - Pankhi Sarma et al.
 
 ## Key Landscapes
 

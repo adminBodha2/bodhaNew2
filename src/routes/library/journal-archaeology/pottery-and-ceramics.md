@@ -7,22 +7,10 @@ tags:
   - iron-age-india
   - excavation-reports
   - gandhari-culture
+id: 15pc
 ---
 
 Pottery is the most abundant class of material recovered from nearly every excavation in the corpus and is addressed both through dedicated ceramic studies and incidentally in excavation reports. The IJA's ceramic coverage encompasses the full sequence from Neolithic handmade wares through OCP, Chalcolithic, Black-and-Red Ware, NBPW, PGW, and medieval ceramics, with dedicated studies on specific assemblages from major excavations.
-
-## Articles
-
-- Vol 2, No. 2 - Excavation at Eran: Study of Pottery [Chalcolithic Central India] - U.V. Singh
-- Vol 3, No. 2 - Stone Drill bits from Kanmer, Gujarat [Harappan ceramic context] - Dr. Rajesh Kumar Meena
-- Vol 4, No. 1 - Report on Ceramic Assemblages of Ganeshwar, Sikar, Rajasthan - Ravindra N. Singh, A.K. Pandey, D.P. Singh & Aftab Alam
-- Vol 6, No. 2 - OCP potteries from different villages of the Districts Aligarh & Hathras U.P. - Vijay Kumar & Husham Haider
-- Vol 6, No. 2 - Cereal Grains and Grain Pulses: reassessing the archaeo-botany at Alamgirpur [Harappan and PGW ceramic context] - J. Bates, C.A. Petrie et al.
-- Vol 7, No. 3 - Typology and Chronology of Pottery in the Tel River Valley Region: A Case Study of Budhigarh Excavation, District-Kalahandi, Odisha - Sakir Hussain & Baba Mishra
-- Vol 7, No. 3 - Study of the Potters of Kuhibahal village, District-Subarnapur, Odisha - Bandita Biswal & Shisira Bania
-- Vol 8, No. 2 - Excavations at Alamgirpur: Ceramic Assemblages - Ravindra Nath Singh
-- Vol 9, No. 4 - FT-IR Spectroscopic Analysis of Neolithic Pottery from Kashmir Valley - Dr. Abdul Adil Paray
-- Vol 10, No. 4 - Typo-Technological analysis of Pottery of Sundar River Valley, Odisha - Kshyeera Sagara Rana
 
 ## Key Pottery Traditions in the Corpus
 

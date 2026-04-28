@@ -7,26 +7,10 @@ tags:
   - sacred-geography
   - burial-practices
   - vedic-archaeology
+id: 18ra
 ---
 
 Rock art - cave paintings, petroglyphs, cupules, and engravings - is a significant topic in the IJA corpus, with studies covering sites across Uttar Pradesh, Madhya Pradesh, Odisha, Karnataka, Andhra Pradesh, the Tirumala hills, Iran, and Mizoram. The journal has published one major encyclopaedic survey (rock paintings of Chitrakoot, Vol 2, No. 2) along with a series of site-specific reports.
-
-## Articles
-
-- Vol 2, No. 2 - Rock Paintings of Chitrakoot, Uttar Pradesh [major survey] - Vijay Kumar
-- Vol 3, No. 1 - The Rock-Shelters of Likhichhaj: An Analysis - Sujata Gautam
-- Vol 3, No. 1 - Honnenahalli: A Note on a Recently Discovered Cupule site in South Karnataka - Akash Srinivas
-- Vol 4, No. 2 - Cupules found in the Excavated Site at Rithi Ranjana, Soaner Taluk, Nagpur, Maharashtra - Nikhildas. N
-- Vol 4, No. 3 - Recently Explored Prehistoric Rock Shelters of Bargarh Odisha, India - Chudamani Rana & Subrata Kumar Acharya
-- Vol 4, No. 4 - Study and Analysis of Tiran Petroglyphs, Isfahan Province, Iran - Masoomeh Taheri Dehkordi & Alamdar Alian
-- Vol 4, No. 4 - Paintings of megalithic people near chandragiri fort in Tirumala Hill Region - Dr. T. Babji Reddy
-- Vol 7, No. 1 - Menhirs and Petroglyphs of Vangchhia - Dr. Sujeet Nayan & Moirangthem Jackson Singh
-- Vol 7, No. 3 - Locating Sacred Geography of Kalika Puran and Yogini Tantra in context to Kamarupa (Assam) [rock-cut Ganesha] - Dr. Nilkamal Singha & Dr. Deepak Kumar
-- Vol 7, No. 4 - Imagery of Ganesha on Rocks of Kamrup District, Assam - Dr. Chabina Hassan & Dr. Nilkamal Singha
-- Vol 7, No. 4 - An Archaeological Study of Rock Carvings and Ruined Castle of District Kargil, Jammu - Mohammad Hussain
-- Vol 9, No. 2 - A Preliminary Discovery of Rock Art & Archaeological sites in Gurh Tehsil of Rewa District, Madhya Pradesh - Manish Sen et al.
-- Vol 9, No. 3 - An Ethno-archaeological Investigation of the Mandana Art: A living tradition of Chambal basin - Dilip Kumar Kushwaha & Pooja
-- Vol 11, No. 1 - Tapka: A Newly Discovered Rock Art Site in Sonbhadra Region, Uttar Pradesh - Manisha Singh et al.
 
 ## Key Sites
 

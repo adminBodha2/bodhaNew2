@@ -49,7 +49,7 @@
 				<a class="card-padded labelbox whitestone" href={cat.href}>
 					<div class="box shelf-main">
 						<p class="highlight-text w500 tight">{cat.label}</p>
-						<p class="tag-text grey">{categoryCounts[cat.type]} texts</p>
+						<p class="tag-text grey">{#if cat.type === 'arch'}41 issues{:else}{categoryCounts[cat.type]} texts{/if}</p>
 					</div>
 					<p class="small-text tight altprim">{cat.desc}</p>
 				</a>

@@ -9,30 +9,10 @@ tags:
   - burial-practices
   - regional-surveys
   - vedic-archaeology
+id: 06er
 ---
 
 The IJA has published a substantial number of excavation reports, ranging from preliminary season reports to comprehensive multi-period site analyses. Sites excavated span the Neolithic through the early medieval period, with a concentration in Uttar Pradesh, Odisha, and Bihar. Several international excavations (Sri Lanka, Iran) are also included.
-
-## Articles
-
-- Vol 1, No. 2 - Excavations at Hetapatti 2011, Exploration and analysis - J.N. Pal
-- Vol 1, No. 2 - Excavations at Naimisharanya [NBP to historical levels] - D.P. Tewari
-- Vol 1, No. 2 - Searching footprints of Buddha: Archaeological Investigations at Nalanda - Dr. G.K. Lama
-- Vol 1, No. 3 - Excavations at Agiabir [District Mirzapur] - Ashok Kumar Singh
-- Vol 1, No. 3 - Excavations at Basadila Tilatar [wooden well, Gorakhpur] - Vipula Dubey & Shitala Prasad Singh
-- Vol 1, No. 4 - Excavation at Khanak, Bhiwani [Indus site in Tosham Hills] - R.N. Singh
-- Vol 1, No. 4 - Excavations at Siyapur - Simina Margareta Stanc & D.P. Tewari
-- Vol 2, No. 4 - Subulia: A Late Chalcolithic Settlement in the Middle Mahanadi Valley, Odisha - Pradeep K. Behera & Sakir Hussain
-- Vol 2, No. 2 - Excavation at Eran: Study of Pottery [Chalcolithic] - U.V. Singh
-- Vol 3, No. 2 - Stone Drill bits from Kanmer, Gujarat - A unique Harappan Site in Kachchh - Dr. Rajesh Kumar Meena
-- Vol 6, No. 4 - Living in the Hinterland: Survey and Excavations at Masudpur 2018-2019 - R.N. Singh, C.A. Petrie et al.
-- Vol 7, No. 3 - Excavations at Gambhirwa Tola district Anuppur Madhya Pradesh - Alok Shrotriya et al.
-- Vol 8, No. 1 - Radhanagar: An Early Historic Urban Settlement of Odisha, India - Sunil Kumar Patnaik & Sarita Nayak
-- Vol 8, No. 2 - Excavations at Alamgirpur: Ceramic Assemblages - Ravindra Nath Singh
-- Vol 8, No. 3 - Report of Excavation at Parabhadi (Sukhuapada) Tehsil Darpana, District Jajpur, Odisha (2022-2023) - Dr. Dibishada Brajasundar Garnayak et al.
-- Vol 8, No. 4 - Nindaur, Recent Excavated Site in Kaimur Region: Understanding its Archaeology and Strategic Location - Vikas Kumar Singh et al.
-- Vol 9, No. 2 - Recent Archaeological Investigations of Patan, Dist. Durg, Chhattisgarh (Special Reference to Excavations at Tarighat and Jamraon) - Atula Kumar Pradhan
-- Vol 10, No. 4 - Preliminary Report on the Excavation of the Early Historical Site Barpali Asurgarh, Odisha - Dr. Atula Kumar Pradhan et al.
 
 ## Key Sites by Period
 

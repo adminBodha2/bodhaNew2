@@ -9,22 +9,10 @@ tags:
   - iron-age-india
   - regional-surveys
   - excavation-reports
+id: 08ivc
 ---
 
 The Indus Valley Civilization, including its Mature, Late, and post-urban phases, appears across a range of articles in the IJA corpus, addressed through site excavations, settlement-pattern surveys, archaeobotany, faunal analysis, and typological comparisons. The journal's coverage concentrates especially on the peripheral zones of the Harappan world - the Yamuna-Gangetic transition, the Thar Desert margin, the Kachchh, and the Haryana heartland - and on the question of how Harappan material culture interfaces with OCP and PGW horizons.
-
-## Articles
-
-- Vol 1, No. 4 - Excavation at Khanak, Bhiwani [Indus site in Tosham Hills, Haryana] - R.N. Singh
-- Vol 1, No. 4 - Introduction of millets in peripheral zone of Indus civilization - Anil Pokhariya
-- Vol 2, No. 1 - Faunal Remains from Sampolia Khera (Masudpur I), Haryana - P.P. Joglekar, Ravindra N. Singh & C.A. Petrie
-- Vol 3, No. 2 - Stone Drill bits from Kanmer, Gujarat - A unique Harappan Site in Kachchh - Dr. Rajesh Kumar Meena
-- Vol 3, No. 3 - Harappan Settlement Pattern on the Desert Margin with Special Reference to Hanumangarh District - Dr. Vikas Pawar, Dr. R.N. Singh & Dr. Cameron Petrie
-- Vol 4, No. 4 - Understanding Rakhigarhi and Surroundings: An Archaeology of Hissar District, Haryana - Amit Ranjan & Ravindra Nath Singh
-- Vol 5, No. 1 - Comparing Economy of Bronze Age Erlitou, China & Harappa, Pakistan: An Archaeological Observation - Qian Wang & Anil K. Pokharia
-- Vol 6, No. 2 - Cereal Grains and Grain Pulses: reassessing the archaeo-botany of the Indus Civilization and Painted Grey Ware period occupation at Alamgirpur, District Meerut U.P. - J. Bates, C.A. Petrie et al.
-- Vol 8, No. 2 - Excavations at Alamgirpur: Ceramic Assemblages [Mature Harappan to Late Harappan and PGW sequence] - Ravindra Nath Singh
-- Vol 6, No. 4 - Living in the Hinterland: Survey and Excavations at Masudpur 2018-2019 - R.N. Singh, C.A. Petrie et al.
 
 ## Key Sites
 

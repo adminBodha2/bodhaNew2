@@ -7,34 +7,10 @@ tags:
   - numismatics
   - sacred-geography
   - excavation-reports
+id: 05ei
 ---
 
 Epigraphic studies in the IJA range from detailed publication of new inscriptions to comprehensive catalogues of inscriptions at individual sites and in museum collections. Languages covered include Sanskrit, Prakrit, Tamil, Telugu, Kannada, Oriya, Marathi, Persian, and Arabic. Topics include land grants, religious foundation records, dynastic records, donative labels, votive inscriptions, temple inscriptions, and royal proclamations.
-
-## Articles
-
-- Vol 1, No. 1 - New Kāliñjar Inscriptions - Vijay Kumar, Alok Ranjan & Krishna Murti
-- Vol 1, No. 3 - Kaimur Inscriptions [Mundeshwari temple, Bhabhua, Bihar] - Sthanam Krishnamurthy & Sachin Kumar Tiwary
-- Vol 2, No. 1 - Maḍaī Stone Slab Inscription of Gāṅgeyadeva, Kalacuri Year 781 - D.P. Dubey & Ashish K. Dubey
-- Vol 2, No. 4 - Narasimhapatana Trilingual Inscription - S.K. Acharya, G.S. Khwaja & M.V.R. Verma
-- Vol 3, No. 3 - Newly discovered inscriptions in Bihar and Madhya Pradesh - Dr. Alok Ranjan
-- Vol 3, No. 4 - Newly discovered Inscriptions of Kannauj - Dr. Alok Ranjan
-- Vol 3, No. 4 - Women's World in the Chola Period's Through Epigraphy - Dr. S. Chandni Bi
-- Vol 5, No. 2 - Water Bodies and a Waterless Tract in Imperial Gupta Epigraphs - Prashant Srivastava, Sushil Chand & Abhay Pratap Singh Rajawat
-- Vol 5, No. 2 - Stone Inscription from Sekara Village - Aditya Kumar Singireddy
-- Vol 5, No. 2 - A Copper-Plate of Pradyumna Śāha - Dr. Alok Ranjan
-- Vol 5, No. 3 - An Inscribed Brass Plate of the Time of Sultan Abul Hasan of Golkonda - S.K. Acharya, M.R. Varma & Md. Tarique Rasool
-- Vol 6, No. 2 - Inscriptions of the Kalinjar Fort, Kalinjar District Banda Uttar Pradesh [comprehensive catalogue] - Vijay Kumar & Alok Ranjan
-- Vol 6, No. 4 - A Locational Study on Wāyā Ulpatha (Viyaulpatha) Pillar Inscription in Anuradhapura District of Sri Lanka - Dhanushka Kumara Jayaratne
-- Vol 7, No. 4 - A Newly Discovered Copper Plate Grant of Mahārāja Bhānu of the Time of King Ruśavarāja, Year 9 - Subrata Kumar Acharya & Sasanka Sekhar Panda
-- Vol 7, No. 4 - Inscriptions from the Temples of Taḻegāon Ḍhamḍhere, Pune District, Maharashtra - Dr. S. Krishnamurthy & Dr. Vilas P. Wahane
-- Vol 8, No. 2 - Cultural study of some Perso-Arabic seals of Jalaluddin Muhammad Akbar (1556-1605 AD) - Muntazir Ali
-- Vol 8, No. 2 - Two Persian Epigraphs of Saif Khan from Bahadurgarh Fort, Patiala District Punjab - Muntazir Ali
-- Vol 8, No. 4 - Revisiting Past of Wardha through the Pass of Persian Epigraphs - Md. Tarique Rasool
-- Vol 10, No. 1 - Two Mahishāsuramarddinī Sealings in the Collection of the Nalanda Archaeological Museum - Prashant Srivastva
-- Vol 10, No. 2 - Examination of Buddhist inscriptions in the light of its archaeological context from Sītāgārha (2019-20), District Hazaribagh, Jharkhand - Dr. Rajendra Dihuri & Dr. S. Krishnamurthy
-- Vol 7, No. 3 - Optical Character Recognition for Indian Historical Stone Inscription Images - Gururaj Mukarambi
-- Vol 11, No. 1 - Translation of Manuscript Describing the Reigns of Early Sultanate Period titled "Ahad Nama Salāṭīn-i-Ghorī wa Khilji" - Vijay Kumar
 
 ## Key Sites
 

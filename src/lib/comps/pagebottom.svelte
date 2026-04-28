@@ -195,6 +195,8 @@
 	&:hover
 		background: linear-gradient(180deg, rgba(243, 243, 243, .64), rgba(255, 255, 255, .76))
 		transform: scale(0.95)
+	@media screen and (max-width: 1024px)
+		margin-left: auto
 
 .foot-scroll-arrow
 	font-size: 1rem

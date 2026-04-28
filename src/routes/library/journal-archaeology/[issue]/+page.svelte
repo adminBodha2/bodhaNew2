@@ -15,11 +15,11 @@
 	<section class="documents-grid">
 		<div class="box sidearea">
 			{#if data.groups?.length > 0}
-				<div class="labelbox all-items">
+				<div class="box all-items">
 					{#each data.groups as item}
 					{#if item.meta.title !== data.title}
 					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="tight grey">{item.meta.title}</p>
+						<p class="rem1 tight grey">{item.meta.title}</p>
 					</a>
 					{/if}
 					{/each}
@@ -31,16 +31,29 @@
 				<Crumb item1="Bodha" item1Link="/" show2={true} item2="Indian Journal of Archaeology" item2linked={true} item2Link="/library/journal-archaeology"/>
 				<h1 class="doc-title source-serif">{data.title}</h1>
 			</div>
-				<article class="wiki-body">
-					<data.content />
-				</article>
+			<article class="wiki-body">
+				<data.content />
+			</article>
+			<div class="grid two white-grid">
+				{#each data.relatedArticles as item}
+					<div class="box card-padded whitestone">
+						<p class="citation-big lgrey tt-u">{item.pubref}</p>
+						<p class="tight ptop4 pbot4">{item.title}</p>
+						<p class="rem1 grey tight pbot8">{item.authors}</p>
+						<a class="linked w500 tt-u" href={item.link} target="_blank" rel="noreferrer">SEE JOURNAL→</a>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</section>
 </Container>
 
 <style lang="sass">
 
+
+
 .mainarea
+	padding-bottom: 2rem
 	.textbox.borderbot
 		margin-top: 2rem
 

@@ -54,7 +54,7 @@ let {
 					{#each data.questions as item}
 					{#if item.meta.title !== data.title}
 					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="tight grey">{item.meta.title}</p>
+						<p class="tight grey rem1">{item.meta.title}</p>
 					</a>
 					{/if}
 					{/each}

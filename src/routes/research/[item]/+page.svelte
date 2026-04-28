@@ -54,7 +54,7 @@ let {
 				{#if data.research && data.research.length > 0}
 					{#each data.research as item}
 					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="tight grey">{item.meta.title}</p>
+						<p class="tight grey rem1">{item.meta.title}</p>
 					</a>
 					{/each}
 				{/if}
