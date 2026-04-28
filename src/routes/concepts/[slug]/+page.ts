@@ -7,7 +7,52 @@ import {
   nodeById,
   getNodeScore
 } from '$lib/graph';
-import type { GraphNode } from '$lib/noder/graph';
+import type { GraphNode, NodeType } from '$lib/noder/graph';
+
+const contentTypes = new Set<NodeType>([
+  'blog',
+  'question',
+  'project',
+  'thinker',
+  'school',
+  'lab',
+  'external-article',
+  'book'
+]);
+
+type RelatedNode = {
+  node: GraphNode;
+  href: string;
+  isExternal: boolean;
+  matchedConcepts: GraphNode[];
+};
+
+function nodeHref(node: GraphNode) {
+  return node.meta.route || `/explorer/${encodeURIComponent(node.id)}`;
+}
+
+function getChildConcepts(conceptId: string) {
+  return getOutgoing(conceptId)
+    .filter((edge) => edge.type === 'BROADER_THAN')
+    .map((edge) => nodeById.get(edge.to))
+    .filter((node): node is GraphNode => !!node && node.type === 'concept');
+}
+
+function collectConceptTree(concept: GraphNode) {
+  const conceptMap = new Map<string, GraphNode>();
+  const visit = (node: GraphNode) => {
+    if (conceptMap.has(node.id)) return;
+    conceptMap.set(node.id, node);
+
+    for (const child of getChildConcepts(node.id)) {
+      visit(child);
+    }
+  };
+
+  visit(concept);
+
+  return Array.from(conceptMap.values()).sort((a, b) => a.title.localeCompare(b.title));
+}
 
 export const load: PageLoad = ({ params }) => {
   const concept = nodes.find(
@@ -19,9 +64,8 @@ export const load: PageLoad = ({ params }) => {
   }
 
   const parentMap = new Map<string, GraphNode>();
-  const childMap = new Map<string, GraphNode>();
 
-  // parent / child concepts
+  // parent concepts
   for (const edge of getOutgoing(concept.id)) {
     const target = nodeById.get(edge.to);
     if (!target) continue;
@@ -29,36 +73,50 @@ export const load: PageLoad = ({ params }) => {
     if (edge.type === 'NARROWER_THAN' && target.type === 'concept') {
       parentMap.set(target.id, target);
     }
-
-    if (edge.type === 'BROADER_THAN' && target.type === 'concept') {
-      childMap.set(target.id, target);
-    }
   }
 
-  const contentMap = new Map<string, GraphNode>();
+  const conceptTree = collectConceptTree(concept);
+  const contentMap = new Map<string, RelatedNode>();
   const akVargaMap = new Map<string, GraphNode>();
-  // content and Amarakosha vargas connected to this concept
-  for (const edge of getIncoming(concept.id)) {
-    const source = nodeById.get(edge.from);
-    if (!source) continue;
-    if (source.type === 'concept') continue;
 
-    if (source.type === 'ak-varga') {
-      akVargaMap.set(source.id, source);
-    } else {
-      contentMap.set(source.id, source);
+  for (const treeConcept of conceptTree) {
+    for (const edge of getIncoming(treeConcept.id)) {
+      const source = nodeById.get(edge.from);
+      if (!source) continue;
+
+      if (source.type === 'ak-varga') {
+        akVargaMap.set(source.id, source);
+        continue;
+      }
+
+      if (!contentTypes.has(source.type)) continue;
+
+      const current = contentMap.get(source.id);
+      if (current) {
+        current.matchedConcepts.push(treeConcept);
+      } else {
+        contentMap.set(source.id, {
+          node: source,
+          href: nodeHref(source),
+          isExternal: nodeHref(source).startsWith('http'),
+          matchedConcepts: [treeConcept]
+        });
+      }
     }
   }
 
   const relatedNodes = Array.from(contentMap.values())
-    .map((n) => ({ node: n, score: getNodeScore(n.id) }))
+    .map((item) => ({ item, score: getNodeScore(item.node.id) }))
     .sort((a, b) => b.score - a.score)
-    .map((x) => x.node);
+    .map((x) => ({
+      ...x.item,
+      matchedConcepts: x.item.matchedConcepts.sort((a, b) => a.title.localeCompare(b.title))
+    }));
 
 const relatedConceptMap = new Map<string, GraphNode>();
 
 for (const relatedNode of relatedNodes) {
-  for (const edge of getOutgoing(relatedNode.id)) {
+  for (const edge of getOutgoing(relatedNode.node.id)) {
     const target = nodeById.get(edge.to);
     if (!target) continue;
 
@@ -78,21 +136,22 @@ const relatedConcepts = Array.from(relatedConceptMap.values())
   );
 
   const grouped = {
-    blogs: relatedNodes.filter((n) => n.type === 'blog'),
-    books: relatedNodes.filter((n) => n.type === 'book'),
-    questions: relatedNodes.filter((n) => n.type === 'question'),
-    projects: relatedNodes.filter((n) => n.type === 'project'),
-    thinkers: relatedNodes.filter((n) => n.type === 'thinker'),
-    schools: relatedNodes.filter((n) => n.type === 'school'),
-    labs: relatedNodes.filter((n) => n.type === 'lab'),
-    externalArticles: relatedNodes.filter((n) => n.type === 'external-article')
+    blogs: relatedNodes.filter((item) => item.node.type === 'blog'),
+    books: relatedNodes.filter((item) => item.node.type === 'book'),
+    questions: relatedNodes.filter((item) => item.node.type === 'question'),
+    projects: relatedNodes.filter((item) => item.node.type === 'project'),
+    thinkers: relatedNodes.filter((item) => item.node.type === 'thinker'),
+    schools: relatedNodes.filter((item) => item.node.type === 'school'),
+    labs: relatedNodes.filter((item) => item.node.type === 'lab'),
+    externalArticles: relatedNodes.filter((item) => item.node.type === 'external-article')
   };
 
   return {
     concept,
     parents: Array.from(parentMap.values()),
-    children: Array.from(childMap.values()),
+    conceptTree: conceptTree.filter((item) => item.id !== concept.id),
     grouped,
+    relatedNodes,
     akVargas,
 	relatedConcepts,
     count: relatedNodes.length,

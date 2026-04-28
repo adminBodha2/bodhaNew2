@@ -107,25 +107,3 @@ let {
 		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-	.research-path
-		border-top: var(--border-main)
-		display: flex
-		flex-direction: column
-		row-gap: 1rem
-
-	.node-grid
-		display: grid
-		grid-template-columns: 1fr
-		gap: 1px
-		background: var(--color-grey-1)
-		border: var(--border-main)
-
-	.node-card
-		min-height: 100%
-
-	@media screen and (min-width: 720px)
-		.node-grid
-			grid-template-columns: repeat(2, minmax(0, 1fr))
-</style>

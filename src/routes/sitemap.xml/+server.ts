@@ -1,4 +1,5 @@
 import { tagsWithCountsAlphabetical, writersWithCountsAlphabetical } from '$lib/utils/localpulls';
+import { getAkVargas } from '$lib/ontology';
 import tagData from '$lib/serving/tag-index.json';
 
 const BASE = 'https://www.bodharesearch.in';
@@ -10,6 +11,7 @@ const STATIC_ROUTES = [
 	{ path: '/academy',       priority: '0.8', changefreq: 'monthly' },
 	{ path: '/inspiration',   priority: '0.8', changefreq: 'monthly' },
 	{ path: '/big-questions', priority: '0.8', changefreq: 'monthly' },
+	{ path: '/ontology',      priority: '0.7', changefreq: 'monthly' },
 	{ path: '/library',       priority: '0.7', changefreq: 'monthly' },
 	{ path: '/team',          priority: '0.6', changefreq: 'yearly'  },
 	{ path: '/videos',        priority: '0.6', changefreq: 'monthly' },
@@ -34,6 +36,7 @@ export async function GET() {
 	const siteTagPaths   = Object.keys(tagData).map(tag => `/tags/${tag}`);
 	const blogTagPaths   = blogTags.map(t => `/blog/tags/${t.tag}`);
 	const writerPaths    = writers.map(w => `/blog/writers/${encodeURIComponent(w.writer)}`);
+	const ontologyPaths  = getAkVargas().map(varga => `/ontology/${varga.slug}`);
 
 	const urls = [
 		...STATIC_ROUTES.map(r => ({ ...r })),
@@ -41,6 +44,7 @@ export async function GET() {
 		...researchPaths.map(p   => ({ path: p, priority: '0.8', changefreq: 'monthly' })),
 		...bqPaths.map(p         => ({ path: p, priority: '0.7', changefreq: 'monthly' })),
 		...inspirationPaths.map(p=> ({ path: p, priority: '0.7', changefreq: 'monthly' })),
+		...ontologyPaths.map(p  => ({ path: p, priority: '0.6', changefreq: 'monthly' })),
 		...blogTagPaths.map(p    => ({ path: p, priority: '0.5', changefreq: 'weekly'  })),
 		...writerPaths.map(p     => ({ path: p, priority: '0.5', changefreq: 'monthly' })),
 		...siteTagPaths.map(p    => ({ path: p, priority: '0.5', changefreq: 'weekly'  })),
