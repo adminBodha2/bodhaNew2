@@ -7,13 +7,11 @@
     "description": "What is the unchanging core of Sanatana Dharma — an idea, an institution, a worldview, or a value system? Bodha's most foundational research question.",
     "questionNodeId": "question:core-of-sanatana-dharma",
     "steps": [
-      { "nodeId": "question:core-of-sanatana-dharma", "note": "Start here — the Big Question itself" },
-      { "nodeId": "article:dharmikagene", "note": "Dharma as civilizational DNA" },
-      { "nodeId": "article:four-aphorisms", "note": "Caturasūtra — the most compact articulation of the Dhārmika frame" },
-      { "nodeId": "article:difference-between-us", "note": "Metaphysical root: one-life vs. multiple-life cosmologies" },
-      { "nodeId": "book:logic-language-and-reality", "note": "Bimal Krishna Matilal on logic, language and reality in Indian thought" },
-      { "nodeId": "thinker:ms-hiriyanna", "note": "Hiriyanna’s systematic survey of Hindu philosophy" },
-      { "nodeId": "concept:sanatana-dharma", "note": "Core concept node — all related edges" }
+      { "nodeId": "blog:dharmikagene", "note": "Dharma as civilizational DNA" },
+      { "nodeId": "blog:four-aphorisms", "note": "Caturasūtra — the most compact articulation of the Dhārmika frame" },
+      { "nodeId": "blog:difference-between-us", "note": "Metaphysical root: one-life vs. multiple-life cosmologies" },
+      { "nodeId": "book:bol-logic-language-and-reality", "note": "Bimal Krishna Matilal on logic, language and reality in Indian thought" },
+      { "nodeId": "thinker:ms-hiriyanna", "note": "Hiriyanna’s systematic survey of Hindu philosophy" }
     ]
   },
   {
@@ -24,11 +22,9 @@
     "description": "Inspired by the Śaunaka praśna — what is the one idea, institution, or action whose presence would ensure the survival of Sanatana Dharma?",
     "questionNodeId": "question:will-save-sanatana-dharma",
     "steps": [
-      { "nodeId": "question:will-save-sanatana-dharma", "note": "The Big Question" },
-      { "nodeId": "article:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Bodha on the nature of Hindu organizations" },
-      { "nodeId": "article:svayambodha-shatrubodha", "note": "The two-wheel framework as survival mechanism" },
+      { "nodeId": "blog:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Bodha on the nature of Hindu organizations" },
+      { "nodeId": "blog:svayambodha-shatrubodha", "note": "The two-wheel framework as survival mechanism" },
       { "nodeId": "school:dharampal-svayambodha-school", "note": "Dharampal School as a candidate for generative institution" },
-      { "nodeId": "article:hindu-institution-generate", "note": "Directly related Big Question on generative institutions" },
       { "nodeId": "thinker:dharampal", "note": "Dharampal’s archival recovery as a model of civilizational rescue" }
     ]
   },
@@ -40,11 +36,10 @@
     "description": "What does Indian identity mean in light of Partition, the Muslim question, and conflicting nationalist visions from Gandhi to Savarkar to Nehru?",
     "questionNodeId": "question:being-indian",
     "steps": [
-      { "nodeId": "question:being-indian", "note": "The Big Question" },
-      { "nodeId": "book:how-i-became-a-hindu", "note": "Sita Ram Goel on civilizational self-understanding" },
-      { "nodeId": "article:we-the-hindus-what-the-cab-means-for-hindu-civilization", "note": "Civilizational reading of post-Partition identity" },
-      { "nodeId": "article:man-who-turned-down-the-skull-cap-how-india-sees-narendra-modi", "note": "Symbolic politics and civilizational self-respect" },
-      { "nodeId": "article:svayambodha-shatrubodha", "note": "Svayambodha as the foundation of any coherent Indian identity" }
+      { "nodeId": "book:bol-how-i-became-a-hindu", "note": "Sita Ram Goel on civilizational self-understanding" },
+      { "nodeId": "external-article:we-the-hindus-what-the-cab-means-for-hindu-civilization", "note": "Civilizational reading of post-Partition identity" },
+      { "nodeId": "external-article:man-turned-skull-cap-india-sees-narendra-modi", "note": "Symbolic politics and civilizational self-respect" },
+      { "nodeId": "blog:svayambodha-shatrubodha", "note": "Svayambodha as the foundation of any coherent Indian identity" }
     ]
   },
   {
@@ -55,10 +50,9 @@
     "description": "Which single Hindu institution — the Hindu state, the gurukula, or the temple — could regenerate all others if everything else were lost?",
     "questionNodeId": "question:hindu-institution-generate",
     "steps": [
-      { "nodeId": "question:hindu-institution-generate", "note": "The Big Question" },
-      { "nodeId": "article:story-of-a-priest", "note": "Living temple as generative institution" },
-      { "nodeId": "article:many-meanings-of-the-hindu-temple", "note": "Temple as multi-functional civilizational node" },
-      { "nodeId": "article:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Why fragmentation is a feature, not a bug" },
+      { "nodeId": "external-article:the-story-of-a-priest", "note": "Living temple as generative institution" },
+      { "nodeId": "external-article:many-meanings-hindu-temple", "note": "Temple as multi-functional civilizational node" },
+      { "nodeId": "blog:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Why fragmentation is a feature, not a bug" },
       { "nodeId": "school:dharampal-svayambodha-school", "note": "Education/gurukula model" }
     ]
   },
@@ -70,11 +64,10 @@
     "description": "Sita Ram Goel's 1981 warning revisited — a rigorous examination of the forces most likely to destroy Hindu society.",
     "questionNodeId": "question:what-will-destroy",
     "steps": [
-      { "nodeId": "question:what-will-destroy", "note": "The Big Question" },
-      { "nodeId": "book:how-i-became-a-hindu", "note": "Sita Ram Goel’s foundational diagnosis" },
-      { "nodeId": "book:hindu-temples-vol-1", "note": "Historical memory of destruction" },
-      { "nodeId": "article:unfinished-agendas-of-radical-islam-the-global-gameplan", "note": "Demographic and ideological threats" },
-      { "nodeId": "article:hindu-liberals-the-slave-soldiers-of-islamism", "note": "Internal enablers" }
+      { "nodeId": "book:bol-how-i-became-a-hindu", "note": "Sita Ram Goel’s foundational diagnosis" },
+      { "nodeId": "book:bol-hindu-temples-vol-1", "note": "Historical memory of destruction" },
+      { "nodeId": "external-article:unfinished-agendas-of-radical-islam-the-global-gameplan", "note": "Demographic and ideological threats" },
+      { "nodeId": "external-article:hindu-liberals-the-slave-soldiers-of-islamism", "note": "Internal enablers" }
     ]
   },
   {
@@ -85,11 +78,9 @@
     "description": "Is modernity — with its secularism, rights-framework, and assault on varṇāśrama dharma — compatible with Hindu values, or structurally hostile?",
     "questionNodeId": "question:modernity-and-hindu-values",
     "steps": [
-      { "nodeId": "question:modernity-and-hindu-values", "note": "The Big Question" },
-      { "nodeId": "article:hindu-response-to-enlightenment", "note": "Hindu counter-reading of Enlightenment" },
-      { "nodeId": "book:heidegger-and-the-inquiry-into-technology", "note": "Technology and modernity critique" },
-      { "nodeId": "article:grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche", "note": "Modern psyche’s loss of the sacred" },
-      { "nodeId": "article:artificialintelligence", "note": "AI as civilizational event" }
+      { "nodeId": "book:bol-heidegger-and-the-inquiry-into-technology", "note": "Technology and modernity critique" },
+      { "nodeId": "external-article:grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche", "note": "Modern psyche’s loss of the sacred" },
+      { "nodeId": "blog:artificialintelligence", "note": "AI as civilizational event" }
     ]
   },
   {
@@ -100,10 +91,9 @@
     "description": "What do Hindus practice with deep śraddhā but cannot prove — karma phala siddhānta, reincarnation, mantra efficacy — and what is the right epistemic posture?",
     "questionNodeId": "question:practice-but-not-proven",
     "steps": [
-      { "nodeId": "question:practice-but-not-proven", "note": "The Big Question" },
-      { "nodeId": "article:difference-between-us", "note": "Metaphysical foundations" },
-      { "nodeId": "article:artificialintelligencetwo", "note": "Dhārmika framework for consciousness and AI" },
-      { "nodeId": "article:hindu-view-of-the-simulation-hypothesis", "note": "Māyā and simulation hypothesis" }
+      { "nodeId": "blog:difference-between-us", "note": "Metaphysical foundations" },
+      { "nodeId": "blog:artificialintelligencetwo", "note": "Dhārmika framework for consciousness and AI" },
+      { "nodeId": "external-article:a-hindu-view-of-the-simulation-hypothesis", "note": "Māyā and simulation hypothesis" }
     ]
   },
   {
@@ -114,9 +104,8 @@
     "description": "Does India's constitution — built on rights rather than duties, and arguably biased against Hindus — need to be replaced with a second republic rooted in Dhārmika values?",
     "questionNodeId": "question:new-indian-republic",
     "steps": [
-      { "nodeId": "question:new-indian-republic", "note": "The Big Question" },
-      { "nodeId": "article:we-the-hindus-what-the-cab-means-for-hindu-civilization", "note": "Civilizational reading of recent constitutional assertions" },
-      { "nodeId": "book:hindu-studies-in-a-secular-academy", "note": "Secular academic categories vs. Dhārmika frame" }
+      { "nodeId": "external-article:we-the-hindus-what-the-cab-means-for-hindu-civilization", "note": "Civilizational reading of recent constitutional assertions" },
+      { "nodeId": "book:bol-hindu-studies-in-a-secular-academy", "note": "Secular academic categories vs. Dhārmika frame" }
     ]
   },
   {
@@ -127,11 +116,10 @@
     "description": "What idea must die for Hindu renaissance to happen — caste, secularism, modernity, sarva-dharma-samabhāva, or the very category of religion applied to dharma?",
     "questionNodeId": "question:hindu-renaissance",
     "steps": [
-      { "nodeId": "question:hindu-renaissance", "note": "The Big Question" },
-      { "nodeId": "article:hinduisminblindspot1", "note": "Hinduism in blind spot — Part 1" },
-      { "nodeId": "article:hinduisminblindspot2", "note": "Part 2 — recovery conditions" },
-      { "nodeId": "article:decolonizationapersonalfootprint", "note": "Decolonization as daily practice" },
-      { "nodeId": "article:svayambodha-shatrubodha", "note": "The two-wheel framework as renaissance engine" }
+      { "nodeId": "blog:hinduisminblindspot1", "note": "Hinduism in blind spot — Part 1" },
+      { "nodeId": "blog:hinduisminblindspot2", "note": "Part 2 — recovery conditions" },
+      { "nodeId": "blog:decolonizationapersonalfootprint", "note": "Decolonization as daily practice" },
+      { "nodeId": "blog:svayambodha-shatrubodha", "note": "The two-wheel framework as renaissance engine" }
     ]
   },
   {
@@ -142,10 +130,9 @@
     "description": "Can Hindus unite without flattening the diversity that defines India? A civilizational question about whether unity and diversity are complementary or in fundamental tension.",
     "questionNodeId": "question:hindu-unity-and-diversity",
     "steps": [
-      { "nodeId": "question:hindu-unity-and-diversity", "note": "The Big Question" },
-      { "nodeId": "article:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Why Hindu organizational diversity is a feature" },
-      { "nodeId": "article:fractalmandalaone", "note": "Fractal Maṇḍala as model of unity-in-diversity" },
-      { "nodeId": "article:fractalmandalatwo", "note": "Part 2 — civilizational coherence at every scale" }
+      { "nodeId": "blog:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Why Hindu organizational diversity is a feature" },
+      { "nodeId": "blog:fractalmandalaone", "note": "Fractal Maṇḍala as model of unity-in-diversity" },
+      { "nodeId": "blog:fractalmandalatwo", "note": "Part 2 — civilizational coherence at every scale" }
     ]
   }
 ]

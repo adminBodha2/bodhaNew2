@@ -76,8 +76,56 @@ let {
 			</div>
 			<div class="classic-document ptop32 pbot32">
 				<data.content />
-				<Liner/>
 			</div>
+			{#if data.linkedNodes?.length > 0}
+				<section class="stdbox padded bordertop">
+					<h2 class="source-serif">Related Readings</h2>
+					<div class="grid two white-grid">
+						{#each data.linkedNodes as item (item.nodeId)}
+							<a
+								class="blank labelbox whitestone card-padded"
+								href={item.href}
+								target={item.isExternal ? '_blank' : undefined}
+								rel={item.isExternal ? 'noreferrer' : undefined}
+							>
+							<div class="labelbox">
+								<p class="w500 tight">{item.node.title}</p>
+								{#if item.node.description}
+									<p class="small-text grey tight">{item.node.description}</p>
+								{/if}
+							</div>
+							<div class="row wrap cgap8 rgap4 self-bottom">
+									{#each item.node.tags as tag}
+										<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-',' ')}</p>
+									{/each}
+							</div>
+							</a>
+						{/each}
+					</div>
+				</section>
+			{/if}
 		</div>
 	</section>
 </Container>
+
+<style lang="sass">
+	.research-path
+		border-top: var(--border-main)
+		display: flex
+		flex-direction: column
+		row-gap: 1rem
+
+	.node-grid
+		display: grid
+		grid-template-columns: 1fr
+		gap: 1px
+		background: var(--color-grey-1)
+		border: var(--border-main)
+
+	.node-card
+		min-height: 100%
+
+	@media screen and (min-width: 720px)
+		.node-grid
+			grid-template-columns: repeat(2, minmax(0, 1fr))
+</style>
