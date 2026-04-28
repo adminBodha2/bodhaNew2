@@ -130,7 +130,7 @@ export const researchAreas = [
 			title: 'Policy and Strategic Affairs',
 			image: '/images/research-2.webp',
 			items: [
-				{ label: 'Battle of Dharma in North East', href: '/research/battle-for-dharma-north-east' },
+				{ label: 'The Battle for Dharma in North East', href: '/research/battle-for-dharma-north-east' },
 				{ label: 'A Year in a Hajong Village', href: '/research/year-in-hajong-village' },
 				{ label: 'Dangs: Anatomy of Religious Terror', href: '/research/dangs-anatomy-of-religious-terror' },
 				{ label: 'The Dharma-Dhamma Axis', href: null },
