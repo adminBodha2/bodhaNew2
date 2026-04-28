@@ -57,7 +57,7 @@
 							<img src={item.meta.icon} alt={item.meta.title}/>
 						</a>
 						<a class="onhover labelbox blank" href={item.linkpath}>
-							<p class="card-title tight">{item.meta.title}</p>
+							<h2 class="source-serif">{item.meta.title}</h2>
 							<p class="grey small-text">{item.meta.description}</p>
 						</a>
 							{#if item.meta.tags}

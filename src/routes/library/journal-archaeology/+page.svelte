@@ -1,19 +1,17 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { Spring } from 'svelte/motion';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { flip } from 'svelte/animate';
 	import Title from '$lib/comps/page-title.svelte'
-	import { slide, fade } from 'svelte/transition';
-	import { quintOut, sineIn, sineOut } from 'svelte/easing';
+	import { slide } from 'svelte/transition';
+	import { sineIn, sineOut } from 'svelte/easing';
 
 	let { data }: { data: PageData } = $props();
 	let groups = $derived(data.groups ?? []);
 	let openIssue = $state<number | null>(null);
 	let scroY = $state(0);
 	let parallaxY = $derived(scroY / 6);
-	const spring = new Spring(0);
 	function toggleIssue(issue: number) {
 		openIssue = openIssue === issue ? null : issue;
 	}
@@ -22,7 +20,7 @@
 <svelte:window bind:scrollY={scroY} />
 
 
-<div id="intro">xx
+<div id="intro">
 	<section class="page-hero">
 		<div class="in-screen box narrowbox" style:transform={`translateY(${parallaxY}px)`}>
 			<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Bodha Open Library" item2Link="/library" showT={true} title="Indian Journal of Archaeology" />
@@ -48,7 +46,7 @@
 		<div class="stdbox padded bordertop">
 			<div class="grid issues ultra">
 				{#each data.issues as item (item.issue)}
-					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 410, easing: sineOut}}>
+					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 350, easing: sineOut}}>
 						<button class="blank row xbetween thisdoes" onclick={() => toggleIssue(item.issue)}>
 							<p class="rem1 bold tt-u">{item.volumeIssue} | {item.issueMonth}</p>
 							{#if openIssue === item.issue}
@@ -56,7 +54,7 @@
 							{/if}
 						</button>
 						{#if openIssue === item.issue}
-						<div class="textbox contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 390, axis: 'y', easing: sineIn}}>
+						<div class="textbox contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 270, axis: 'y', easing: sineIn}}>
 						<p class="grey">{item.description}</p>
 						<div class="grid two metaitem midgaps tightrows">
 								{#each item.items as iss}
@@ -122,12 +120,11 @@ a.golink
 .contingent
 	background: var(--color-back)
 
-button.blank.row.xbetween
+button.blank.row.xbetween.thisdoes
 	padding: 1rem
 	width: 100%
 	border-bottom: var(--border-main)
 	background: var(--color-stone)
-	transition: all 220ms ease
 	box-shadow: 1px 1px 2px rgba(0,0,0,0.1)
 
 .each-issue.openeditem
@@ -142,7 +139,8 @@ button.blank.row.xbetween
 
 #intro
 	min-height: 100vh
-	background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
+	z-index: 0
+	background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
 	background-position: center center
 	@media screen and (max-width: 1024px)
 		background-size: 3rem 3rem, 3rem 3rem
