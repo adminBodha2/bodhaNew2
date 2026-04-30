@@ -88,7 +88,7 @@
 	gap: 1rem
 	transition: background 0.15s ease
 	&:hover
-		background: #F9F8F6
+		background: var(--color-stone)
 	@media screen and (max-width: 1024px)
 		border-left: var(--border-main)
 		border-bottom: var(--border-main)

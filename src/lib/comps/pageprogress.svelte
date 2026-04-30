@@ -56,8 +56,8 @@
 	&.header-hidden
 		top: 0px
 	@media screen and (max-width: 1024px)
-		top: 63px
+		top: 64px
 		&.header-hidden
-			top: 0px
+			top: 64px
 
 </style>

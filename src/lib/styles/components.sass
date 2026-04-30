@@ -32,7 +32,7 @@ button
 	background: var(--color-alt-2)
 	overflow: hidden
 	cursor: pointer
-	border: var(--border-main)
+	border: 1px solid #d7d7d7
 	width: max-content
 	&::after
 		content: ""
@@ -51,7 +51,7 @@ button
 		text-decoration: none
 		width: 100%
 		padding: 0.7rem 1rem
-		color: var(--color-grey-4)
+		color: #FFFFFF
 		font-weight: 500
 		font-size: 0.9rem
 		text-transform: uppercase
@@ -59,7 +59,7 @@ button
 		transition: all 0.05s ease-in-out
 	&:hover span
 		animation: scaleUp 0.9s ease-in-out
-		color: var(--color-back)
+		color: #FFFFFF
 	@media screen and (min-width: 1025px)
 		font-size: 1rem
 
@@ -95,7 +95,7 @@ button
 	&:hover
 		background: var(--color-anveshi-2)
 	span
-		color: var(--color-back)
+		color: #FFFFFF
 
 //-----------------PAGE CONTAINERS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -300,7 +300,7 @@ button.conceptbuttons
 	padding: 0.25rem 0.875rem
 	border-radius: 20px
 	border: var(--border-dark)
-	background: var(--color-alt-1)
+	background: var(--color-alt-2)
 	text-decoration: none
 	color: var(--color-grey-4)
 	transition: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
@@ -336,6 +336,7 @@ button.small-button
 	padding: 5px 14px
 	border-radius: 100px
 	border: var(--border-dark)
+	color: var(--color-primary)
 	background: var(--color-back)
 	cursor: pointer
 	transition: all 0.15s cubic-bezier(0.055, 0.795, 0.000, 0.995)

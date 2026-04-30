@@ -1,0 +1,167 @@
+[
+  {
+    "id": "artist-in-art",
+    "title": "The Artist in Art",
+    "subtitle": "Project Pathway #1",
+    "level": "advanced",
+    "description": "A pathway into Hindu aesthetics, art criticism, and the reversal of the colonial critical gaze.",
+    "projectNodeId": "project:artist-in-art",
+    "steps": [
+      { "nodeId": "thinker:kapila-vatsyayana", "note": "Kapila Vatsyayana on Indian art as an integrated knowledge system" },
+      { "nodeId": "blog:artandmeaningmaking", "note": "Bodha essay on art, meaning and consciousness" },
+      { "nodeId": "book:bol-art-experience", "note": "Aesthetic experience and art theory" },
+      { "nodeId": "book:bol-indian-concept-of-performance", "note": "Performance as embodied aesthetic knowledge" },
+      { "nodeId": "book:bol-on-natyashastra", "note": "Classical theory of drama, rasa and performance" }
+    ]
+  },
+  {
+    "id": "battle-for-dharma-north-east",
+    "title": "The Battle for Dharma in North-East",
+    "subtitle": "Project Pathway #2",
+    "level": "advanced",
+    "description": "A pathway into Northeast India, conversion pressure, demographic change, and civilizational security.",
+    "projectNodeId": "project:battle-for-dharma-north-east",
+    "steps": [
+      { "nodeId": "blog:battleagainsthindusinmanipur", "note": "Manipur as a live case of conversion, conflict and civilizational misreading" },
+      { "nodeId": "question:what-will-destroy", "note": "The larger civilizational question of forces that can destroy Hindu society" },
+      { "nodeId": "question:will-save-sanatana-dharma", "note": "The survival frame that underlies strategic work" },
+      { "nodeId": "book:glimpses_of_the_ethnolinguistic_prehistory_of_northeastern_india", "note": "Ethnolinguistic background to Northeast India" },
+      { "nodeId": "school:voice-of-india-shatrubodha-school", "note": "The shatrubodha school for hostile ideology analysis" }
+    ]
+  },
+  {
+    "id": "dangs-anatomy-of-religious-terror",
+    "title": "Dangs - Anatomy of Religious Terror",
+    "subtitle": "Project Pathway #3",
+    "level": "advanced",
+    "description": "A pathway into forced conversion, tribal communities, missionary networks, and shatrubodha.",
+    "projectNodeId": "project:dangs-anatomy-of-religious-terror",
+    "steps": [
+      { "nodeId": "school:voice-of-india-shatrubodha-school", "note": "Analytical school for hostile civilizational forces" },
+      { "nodeId": "thinker:ram-swarup", "note": "Ram Swarup's comparative critique of missionary ideologies" },
+      { "nodeId": "external-article:unfinished-agendas-of-radical-islam-the-global-gameplan", "note": "A model for reading ideology as long-range strategy" },
+      { "nodeId": "external-article:the-hindu-samizdat-how-hindus-respond-to-censorship-and-bias", "note": "Hindu responses to hostile media and knowledge environments" },
+      { "nodeId": "question:what-will-destroy", "note": "Civilizational diagnosis of destructive forces" }
+    ]
+  },
+  {
+    "id": "dharmic-design",
+    "title": "Dharmic Design",
+    "subtitle": "Project Pathway #4",
+    "level": "advanced",
+    "description": "A pathway into sacred design, Hindu aesthetics, architecture, and purva paksha of modern design assumptions.",
+    "projectNodeId": "project:dharmic-design",
+    "steps": [
+      { "nodeId": "lab:dharma-as-design", "note": "Bodha lab note on dharma and design thinking" },
+      { "nodeId": "thinker:kapila-vatsyayana", "note": "Hindu arts and knowledge systems as one field" },
+      { "nodeId": "blog:artandmeaningmaking", "note": "Meaning-making as the ground of aesthetic work" },
+      { "nodeId": "external-article:many-meanings-hindu-temple", "note": "Temple form as symbolic and theological design" },
+      { "nodeId": "thinker:sk-rama-rao", "note": "Iconography and temple architecture as cosmological logic" }
+    ]
+  },
+  {
+    "id": "hindu-frameworks-of-education",
+    "title": "Hindu Frameworks of Education",
+    "subtitle": "Project Pathway #5",
+    "level": "advanced",
+    "description": "A pathway into indigenous education, Indian Knowledge Systems, and surviving Hindu institutions of learning.",
+    "projectNodeId": "project:hindu-frameworks-of-education",
+    "steps": [
+      { "nodeId": "book:bol-the-beautiful-tree", "note": "Dharampal's archival account of indigenous Indian education" },
+      { "nodeId": "school:dharampal-svayambodha-school", "note": "Svayambodha as an educational and civilizational method" },
+      { "nodeId": "thinker:dharampal", "note": "Dharampal's recovery of Indian institutional memory" },
+      { "nodeId": "external-article:continuous-comprehensive-cumulative-knowledge-tradition-india", "note": "India's knowledge tradition as cumulative civilizational practice" },
+      { "nodeId": "external-article:teaching-research-rot-set", "note": "Diagnosis of modern teaching and research failure" }
+    ]
+  },
+  {
+    "id": "hindu-models-of-temple-management",
+    "title": "Hindu Models of Temple Management",
+    "subtitle": "Project Pathway #6",
+    "level": "advanced",
+    "description": "A pathway into temples as Hindu institutions, civilizational administration, and indigenous management.",
+    "projectNodeId": "project:hindu-models-of-temple-management",
+    "steps": [
+      { "nodeId": "external-article:the-story-of-a-priest", "note": "The living priestly community behind a heritage temple" },
+      { "nodeId": "external-article:many-meanings-hindu-temple", "note": "Temple as layered civilizational form" },
+      { "nodeId": "external-article:on-what-is-a-hindu-temple", "note": "Dr. R. Nagaswamy on the essential nature of the temple" },
+      { "nodeId": "blog:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Hindu organizations and institutional priorities" },
+      { "nodeId": "question:hindu-institution-generate", "note": "The temple as candidate generative institution" }
+    ]
+  },
+  {
+    "id": "hindu-response-to-enlightenment",
+    "title": "Hindu Response to Enlightenment",
+    "subtitle": "Project Pathway #7",
+    "level": "advanced",
+    "description": "A pathway into modernity, Enlightenment rationalism, purva paksha, and Hindu philosophical response.",
+    "projectNodeId": "project:hindu-response-to-enlightenment",
+    "steps": [
+      { "nodeId": "question:modernity-and-hindu-values", "note": "The central question of modernity and Hindu values" },
+      { "nodeId": "book:bol-heidegger-and-the-inquiry-into-technology", "note": "Heideggerian critique of technology and modernity" },
+      { "nodeId": "external-article:grasping-for-the-beyond-on-a-critical-schism-in-the-modern-psyche", "note": "The modern psyche's loss of the sacred" },
+      { "nodeId": "thinker:ivan-illich", "note": "Institutional critique from within the West" },
+      { "nodeId": "thinker:nassim-nicholas-taleb", "note": "Modernity, fragility and epistemic humility" }
+    ]
+  },
+  {
+    "id": "interchanging-dynamics-of-hindu-family",
+    "title": "Interchanging Dynamics of the Hindu Family",
+    "subtitle": "Project Pathway #8",
+    "level": "advanced",
+    "description": "A pathway into Hindu social institutions, family, tradition, and civilizational continuity.",
+    "projectNodeId": "project:interchanging-dynamics-of-hindu-family",
+    "steps": [
+      { "nodeId": "blog:problemofculturetransmission", "note": "The family as a site of cultural transmission" },
+      { "nodeId": "blog:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Hindu organizational nature and social scale" },
+      { "nodeId": "question:hindu-unity-and-diversity", "note": "Unity, diversity and Hindu social cohesion" },
+      { "nodeId": "question:hindu-institution-generate", "note": "The search for generative Hindu institutions" },
+      { "nodeId": "book:bol-history-of-dharmashastras-vol-2-part-1", "note": "Dharmashastra background for ritual life and social custom" }
+    ]
+  },
+  {
+    "id": "structure-of-hindu-charity",
+    "title": "Structure of Hindu Charity",
+    "subtitle": "Project Pathway #9",
+    "level": "advanced",
+    "description": "A pathway into Hindu philanthropy, social welfare, civilizational institutions, and local self-organization.",
+    "projectNodeId": "project:structure-of-hindu-charity",
+    "steps": [
+      { "nodeId": "blog:bodha-pyramid-of-priorities-nature-of-hindu-orgs", "note": "Hindu organizations and their social logic" },
+      { "nodeId": "question:hindu-institution-generate", "note": "Institutions capable of generating wider Hindu life" },
+      { "nodeId": "book:bol-panchayat-raj-and-indias-polity", "note": "Local governance and village institutions" },
+      { "nodeId": "book:bol-lokopakara", "note": "Practical knowledge and household arts as social welfare substrate" },
+      { "nodeId": "external-article:the-story-of-a-priest", "note": "Temple-linked community service as living practice" }
+    ]
+  },
+  {
+    "id": "temples-of-madhya-pradesh",
+    "title": "Temples of Madhya Pradesh",
+    "subtitle": "Project Pathway #10",
+    "level": "advanced",
+    "description": "A pathway into temple architecture, sacred geography, historical memory, and surviving sacred sites.",
+    "projectNodeId": "project:temples-of-madhya-pradesh",
+    "steps": [
+      { "nodeId": "external-article:ancient-temples-modern-dacoits-architectural-workshop-gurjara-pratiharas", "note": "Temple clusters as architectural workshops" },
+      { "nodeId": "external-article:how-old-is-the-hindu-temple", "note": "Textual, sculptural and archaeological evidence for temple antiquity" },
+      { "nodeId": "external-article:on-what-is-a-hindu-temple", "note": "The essential nature of the Hindu temple" },
+      { "nodeId": "external-article:dharmic-circuits-i", "note": "Sacred pathways and temple circuits" },
+      { "nodeId": "book:bol-hindu-temples-vol-1", "note": "Historical memory of Hindu temple destruction" }
+    ]
+  },
+  {
+    "id": "year-in-hajong-village",
+    "title": "A Year in Hajong Village",
+    "subtitle": "Project Pathway #11",
+    "level": "advanced",
+    "description": "A pathway into the Hajong community, tribal history, Northeast India, and religious-cultural survival.",
+    "projectNodeId": "project:year-in-hajong-village",
+    "steps": [
+      { "nodeId": "book:glimpses_of_the_ethnolinguistic_prehistory_of_northeastern_india", "note": "Ethnolinguistic prehistory of Northeast India" },
+      { "nodeId": "blog:battleagainsthindusinmanipur", "note": "A related Northeast case of conversion and identity conflict" },
+      { "nodeId": "question:will-save-sanatana-dharma", "note": "The survival question behind cultural preservation" },
+      { "nodeId": "question:hindu-unity-and-diversity", "note": "Indian diversity and Hindu unity in lived communities" },
+      { "nodeId": "school:voice-of-india-shatrubodha-school", "note": "Analytical frame for conversion and civilizational pressure" }
+    ]
+  }
+]

@@ -55,8 +55,7 @@
 	left: 0
 	width: 100vw
 	height: calc(100dvh - 64px)
-	background: rgba(255, 255, 255, 0.95)
-	backdrop-filter: blur(20px)
+	background: var(--color-back)
 	z-index: 1000
 	overflow-y: hidden
 	transition: all 220ms ease
@@ -71,13 +70,12 @@
 	display: block
 	font-size: 2rem
 	letter-spacing: -0.01em
-	color: var(--text-sub)
+	color: var(--color-primary)
 	padding: 0.95rem 0.75rem
 	border-radius: 8px
 	transition: background 0.12s ease, color 0.12s ease
 	&:hover
 		background: rgba(0,0,0,0.04)
-		color: var(--text-main)
 	&.active
 		color: var(--color-theme)
 		background: rgba(0,0,0,0.03)

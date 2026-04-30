@@ -259,6 +259,7 @@
 		.tray-btn
 			background: var(--color-back)
 			border: 1px solid var(--color-back)
+			color: var(--color-primary)
 			padding: 12px 20px
 			font-size: 1rem
 			box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
@@ -270,6 +271,8 @@
 				border-radius: 0
 			&:active
 				transform: scale(1.05)
+			&:hover
+				color: var(--color-back)
 
 #course-header
 	@media screen and (min-width: 1025px)
@@ -312,7 +315,7 @@
 	padding: 1.5rem
 
 .stats-row
-	background: rgba(255,255,255,0.3)
+	background: var(--color-alt-2)
 	backdrop-filter: blur(10x) saturate(1.5)
 	box-shadow: -3px 1px 2px rgba(0,0,0,0.03), inset 0 4px 10px rgba(0,0,0,0.03), 0 4px 4px rgba(0,0,0,0.07)
 	margin-top: 1rem

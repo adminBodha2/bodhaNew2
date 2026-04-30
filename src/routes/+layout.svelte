@@ -28,13 +28,21 @@
 	injectSpeedInsights();
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
-	function handleKeydown(e: KeyboardEvent) {
-		// Cmd+K (Mac) or Ctrl+K (Windows/Linux)
-		if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-			e.preventDefault();
-			$searchState = !$searchState;
-		}
-	}
+function handleKeydown(e: KeyboardEvent) {
+    const isMod = e.metaKey || e.ctrlKey;
+
+    // Cmd+K -> Search
+    if (isMod && e.key === 'k') {
+        e.preventDefault();
+        $searchState = !$searchState;
+    }
+
+    // Cmd+Z -> Theme
+    if (isMod && e.key === 'z') {
+        e.preventDefault();
+        $darkTheme = !$darkTheme;
+    }
+}
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -145,7 +153,7 @@ header
 		height: 64px
 		margin-bottom: -64px
 		&.reader-hidden
-			top: -64px
+			top: 0
 
 footer
 	width: 100%

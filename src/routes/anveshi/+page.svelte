@@ -323,12 +323,9 @@
 
 .grid.two.anveshi
 	padding: 1.25rem
+	border: var(--border-dark)
 	border-radius: 4px
-	border: 1px solid rgba(255,255,255,0.9)
-	background: linear-gradient(145deg, rgba(255,255,255,0.74), rgba(255,255,255,0.82))
-	backdrop-filter: blur(12px) saturate(1.25)
-	-webkit-backdrop-filter: blur(12px) saturate(1.25)
-	box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0.05)
+	box-shadow: 0 6px 18px rgba(15,23,42,0.05)
 	@media screen and (max-width: 1024px)
 		padding: 0.5rem
 
@@ -344,6 +341,7 @@
 		font-weight: 600
 		padding: 1rem
 		border-top: var(--border-main)
+		color: var(--color-primary)
 		background: var(--color-alt-3)
 		&:hover
 			color: var(--color-anveshi)
@@ -413,10 +411,6 @@ swiper-slide > *
 	margin-top: 0.25rem
 
 // ── CURRENT CHAPTERS ──────────────────────────────────────
-
-.grid.anveshi
-	border: var(--border-dark)
-	border-radius: 4px
 
 .anv-current-image
 	position: relative

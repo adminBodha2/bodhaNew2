@@ -50,7 +50,7 @@ pre
 
 .acco-box
 	padding: 1rem
-	border-bottom: 1px solid #e7e7e7
+	border-bottom: 1px solid var(--color-alt-2)
 	&:last-child
 		border-bottom: none
 	&:hover
@@ -70,6 +70,6 @@ pre
 				padding: 1rem
 
 .border0, .border2, .border4, .border6, .border8, .border10, .border12
-	border-right: 1px solid #e7e7e7
+	border-right: 1px solid var(--color-alt-2)
 
 </style>

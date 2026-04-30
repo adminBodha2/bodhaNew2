@@ -52,7 +52,7 @@
 		{#if questions && questions.length > 0}
 			<div class="grid  three tight of-questions">
 				{#each questions as item, i}
-					<div class="blank labelbox q-item">
+					<div class="blank labelbox q-item glass-inset">
 						<a class="q-imager blank" href={item.linkpath}>
 							<img src={item.meta.icon} alt={item.meta.title}/>
 						</a>
@@ -80,17 +80,8 @@
 	background: var(--color-back)
 
 .q-item
-	position: relative
-	overflow: hidden
 	border-radius: 4px
-	border: 1px solid rgba(255,255,255,0.9)
-	background: linear-gradient(145deg, rgba(255,255,255,0.74), rgba(255,255,255,0.42))
-	backdrop-filter: blur(12px) saturate(1.25)
-	-webkit-backdrop-filter: blur(12px) saturate(1.25)
-	box-shadow: 0 4px 6px rgba(255,255,255,0.3) inset, 0 2px 4px rgba(0,0,0,0.2) inset, 4px 4px 8px rgba(15,23,42,0.1), 0 6px 18px rgba(15,23,42,0.05)
-	transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1)
 	&:hover
-		box-shadow: 0 0px 0px rgba(255,255,255,0), 0 1px 2px rgba(0,0,0,0.1), 2px 2px 4px rgba(15,23,42,0.1), 0 4px 9px rgba(15,23,42,0.03)
 		.q-imager
 			img
 				filter: grayscale(0.4)

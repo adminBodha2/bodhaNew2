@@ -479,7 +479,6 @@
 		position: relative
 		width: 100%
 		overflow: hidden
-		border-radius: 12px
 		background: #050505
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16)
 

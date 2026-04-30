@@ -35,7 +35,7 @@
 				</div>
 		<div class="grid four mid2 tight">
 			{#each verticals as item, i}
-				<a class="elembox blank verticals anim-flyIn" href={item.href}>
+				<a class="elembox blank verticals glass-1" href={item.href}>
 					<div class="imgbox"><img src={item.image} alt={item.title} /></div>
 					<div class="labelbox">
 						<h2 class="card-title source-serif">{item.title}</h2>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="grid three mid2 tight">
 				{#each blogs as item, i}
-					<div class="post-card box">
+					<div class="post-card box glass-2">
 						<div class="row post-metadata ycenter">
 							{#if item.meta.tags && item.meta.tags.length > 0}
 								<div class="row wrap all-tags">
@@ -86,7 +86,7 @@
 		<Title text="publications" />
 		<div class="grid two tight">
 			{#each publications as pub}
-				<div class="books">
+				<div class="books glass-books">
 					<img class="publication-image" src={pub.image} alt={pub.title} />
 					<div class="box labelbox">
 						<p class="card-title source-serif">{pub.title}</p>
@@ -129,27 +129,7 @@
 <style lang="sass">
 
 .post-card
-	position: relative
-	overflow: hidden
 	border-radius: 4px
-	border: 1px solid rgba(255,255,255,0.9)
-	background: linear-gradient(145deg, rgba(255,255,255,0.74), rgba(255,255,255,0.42))
-	backdrop-filter: blur(12px) saturate(1.25)
-	-webkit-backdrop-filter: blur(12px) saturate(1.25)
-	box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0.05)
-	transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms cubic-bezier(0.16, 1, 0.3, 1), background 240ms cubic-bezier(0.16, 1, 0.3, 1)
-	&::before
-		content: ''
-		position: absolute
-		inset: 0
-		pointer-events: none
-		background: linear-gradient(120deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.28) 22%, rgba(255,255,255,0) 48%)
-		opacity: 0.75
-		z-index: 1
-	&:hover
-		background: linear-gradient(145deg, rgba(255,255,255,0.84), rgba(255,255,255,0.52))
-		border-color: rgba(255,255,255,1)
-		box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 -1px 0 rgba(0,0,0,0.04) inset, 0 18px 50px rgba(15,23,42,0.08), 0 6px 18px rgba(15,23,42,0.05)
 	.title-desc
 		padding: 0 2rem 2rem 2rem
 	.post-metadata
@@ -200,17 +180,8 @@
 
 .verticals
 	border-radius: 4px
-	background: var(--theme-back-o50)
-	backdrop-filter: blur(10px) saturate(120%)
-	-webkit-backdrop-filter: blur(10px) saturate(120%)
-	border: 1px solid var(--theme-back-o35)
-	transition: all 160ms cubic-bezier(0.22, 1, 0.36, 1)
-	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.15)
 	position: relative
 	&:hover
-		box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.15)
-		border: 1px solid rgba(255,255,255,0.1)
-		background: rgba(255,255,255,0.32)
 		img
 			filter: saturate(1)
 		&::after
@@ -251,15 +222,12 @@
 	flex-direction: column
 	gap: 1.25rem
 	padding: 1rem
-	border: 1px solid #FFFFFF
 	border-radius: 4px
-	background: rgba(255,255,255,0.7)
-	backdrop-filter: blur(20px) saturate(150%)
+	background: var(--color-back)
 	@media screen and (min-width: 1025px)
 		display: grid
 		grid-template-columns: 160px 1fr
 		align-items: start
-		box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -4px 20px rgba(255,255,255,0.15)
 		.labelbox
 			padding: 1rem
 
@@ -277,9 +245,6 @@
 
 
 // ── VIDEOS ────────────────────────────────────────────────
-
-.video-grid
-	border-radius: 4px
 
 .video-card
 	overflow: hidden

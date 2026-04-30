@@ -62,7 +62,7 @@ let {
 		</div>
 		<div class="box mainarea">
 			<div class="textbox borderbot">
-				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
+				<Crumb rgap={16} item1="Research" item1Link="/research"/>
 				<h1 class="doc-title source-serif">{data.title}</h1>
 				<p class="rem1 grey">{data.description}</p>
 				{#if data.tags && data.tags.length > 0}
@@ -77,6 +77,33 @@ let {
 				<data.content />
 				<Liner/>
 			</div>
+			{#if data.linkedNodes?.length > 0}
+				<section class="stdbox padded bordertop">
+					<h2 class="source-serif">Related Readings</h2>
+					<div class="grid two white-grid">
+						{#each data.linkedNodes as item (item.nodeId)}
+							<a
+								class="blank labelbox whitestone card-padded"
+								href={item.href}
+								target={item.isExternal ? '_blank' : undefined}
+								rel={item.isExternal ? 'noreferrer' : undefined}
+							>
+							<div class="labelbox">
+								<p class="w500 tight">{item.node.title}</p>
+								{#if item.node.description}
+									<p class="small-text grey tight">{item.node.description}</p>
+								{/if}
+							</div>
+							<div class="row wrap cgap8 rgap4 self-bottom">
+									{#each item.node.tags as tag}
+										<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-',' ')}</p>
+									{/each}
+							</div>
+							</a>
+						{/each}
+					</div>
+				</section>
+			{/if}
 		</div>
 	</section>
 </Container>

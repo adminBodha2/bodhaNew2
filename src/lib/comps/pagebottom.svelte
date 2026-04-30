@@ -25,10 +25,11 @@
 		</div>
 		<div class="footer-grid">
 			<div class="foot-brand">
-				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="lgrey small-text">Site designed at Bodha Lab. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
+				<p class="light-footer small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
+				<p class="light-footer small-text">Site designed at Bodha Lab. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
 				<div class="row ycenter cgap8">
 				<Designed/>
+				<!--
 				<button class="blank" onclick={toggleTheme}>
 					{#if $darkTheme}
 						<Sun/>
@@ -36,10 +37,11 @@
 						<Moon/>
 					{/if}
 				</button>
+				-->
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">pillars</p>
+				<p class="tag-text light-footer tt-u">pillars</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/research">Research</a>
 					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
@@ -47,7 +49,7 @@
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">learning</p>
+				<p class="tag-text light-footer tt-u">learning</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/academy">Academy</a>
 					<a class="foot-link blank white" href="/ontology">Ontology</a>
@@ -55,7 +57,7 @@
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">Readings</p>
+				<p class="tag-text light-footer tt-u">Readings</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/blog">Blog</a>
 					<a class="foot-link blank white" href="/library">Open Library</a>
@@ -63,7 +65,7 @@
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text lgrey tt-u">Bodha</p>
+				<p class="tag-text light-footer tt-u">Bodha</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/about">About</a>
 					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
@@ -98,6 +100,9 @@
 </div>
 
 <style lang="sass">
+
+p.light-footer
+	color: #a7a7a7
 
 .footer-grid
 	display: grid
