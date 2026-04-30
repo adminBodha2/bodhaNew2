@@ -13,7 +13,7 @@
 	import '$lib/styles/animations.sass'
 	import '$lib/styles/glass.sass';
 	import '$lib/styles/icons.css';
-	import { darkTheme, iW, searchState, readerChromeHidden } from '$lib/utils/globalstores';
+	import { darkTheme, iW, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
@@ -40,7 +40,7 @@ function handleKeydown(e: KeyboardEvent) {
     // Cmd+Z -> Theme
     if (isMod && e.key === 'z') {
         e.preventDefault();
-        $darkTheme = !$darkTheme;
+        toggleTheme();
     }
 }
 
