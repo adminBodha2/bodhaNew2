@@ -36,12 +36,11 @@
 
 <Container narrow={true} scaled={true}>
 	<section class="documents-grid ontology-page">
-		<div class="box sidearea">
+		<div class="box sidearea nopad">
 			<div class="labelbox all-items">
 				{#each data.allVargas as item}
 					<a class="blank project-link whitestone" class:active={item.slug === data.ontology.varga.slug} href={`/ontology/${item.slug}`}>
 						<p class="tight grey rem1">{item.title}</p>
-						<p class="small-text grey tight">{item.count} nodes</p>
 					</a>
 				{/each}
 			</div>
@@ -49,32 +48,25 @@
 
 		<div class="box mainarea">
 			<div class="textbox borderbot">
-				<Crumb rgap={16} item1="Ontology" item1Link="/ontology" />
-				<p class="small-text grey tt-u">{data.ontology.varga.slug.replace('ak-', '')}</p>
-				<h1 class="doc-title source-serif">{data.ontology.varga.title}</h1>
-				<p class="rem1 grey">{data.ontology.varga.description}</p>
+				<Crumb rgap={16} item1="Ontology" item1Link="/ontology" showT={true} title={data.ontology.varga.title} showD={true} desc={data.ontology.varga.description} showRow={true}>
 				<div class="row wrap cgap8 rgap8">
 					{#each countEntries as [type, count]}
 						<p class="tag-pill tt-u">{type.replaceAll('-', ' ')}: {count}</p>
 					{/each}
 				</div>
+				</Crumb>
 			</div>
-
-			<div class="ontology-section">
-				<div class="textbox">
-					<p class="small-text grey tt-u">Matched Concepts</p>
+				<div class="box ptop16">
+					<p class="tag-text grey tt-u">Matched Concepts</p>
 					<div class="row wrap cgap8 rgap8">
 						{#each data.ontology.concepts as concept (concept.id)}
 							<a class="tag-pill tt-u blank" href={`/concepts/${concept.slug}`}>{concept.title}</a>
 						{/each}
 					</div>
 				</div>
-			</div>
-
 			<div class="ontology-section">
-				<div class="textbox">
-					<p class="small-text grey tt-u">Related Nodes</p>
-					<h2 class="source-serif">Classified under this varga</h2>
+				<div class="box">
+					<p class="tag-text grey tt-u">Related Nodes</p>
 				</div>
 				<div class="node-grid">
 					{#each data.ontology.content as item (item.node.id)}
@@ -88,8 +80,8 @@
 								<p class="tag-pill tt-u">{item.node.type.replaceAll('-', ' ')}</p>
 								<p class="tag-pill tt-u">{Math.round(item.classification.confidence * 100)}%</p>
 							</div>
-							<p class="rem1 w500 tight">{item.node.title}</p>
-							<p class="small-text grey tight">{item.classification.reason}</p>
+							<p class="w500 tight">{item.node.title}</p>
+							<p class="small-text blue tight">{item.classification.reason}</p>
 							{#if item.node.description}
 								<p class="small-text grey tight">{item.node.description}</p>
 							{/if}
@@ -102,6 +94,12 @@
 </Container>
 
 <style lang="sass">
+
+	.all-items
+		@media screen and (min-width: 1025px)
+			overflow-y: scroll
+			height: calc(100vh - 144px)
+
 	.ontology-page
 		margin-top: 80px
 

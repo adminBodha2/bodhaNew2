@@ -52,18 +52,18 @@
 		<div class="varga-grid">
 			{#each data.ontology as item (item.varga.id)}
 				<a class="blank labelbox whitestone card-padded varga-card" href={`/ontology/${item.varga.slug}`}>
-					<div class="row wrap ycenter cgap8 rgap8">
-						<p class="tag-pill tt-u">{item.varga.slug.replace('ak-', '')}</p>
-						<p class="tag-pill tt-u">{item.varga.tags.length} concepts</p>
-						<p class="tag-pill tt-u">{item.content.length} nodes</p>
-					</div>
-					<h2 class="source-serif tight">{item.varga.title}</h2>
+					<p class="w500 tight">{item.varga.title}</p>
 					<p class="small-text grey tight">{item.varga.description}</p>
 					{#if item.concepts.length > 0}
 						<p class="small-text grey tight">
 							{item.concepts.slice(0, 4).map((concept) => concept.title).join(', ')}
 						</p>
 					{/if}
+					<div class="row wrap ycenter cgap8 rgap8 self-bottom">
+						<p class="tag-pill tt-u">{item.varga.slug.replace('ak-', '')}</p>
+						<p class="tag-pill tt-u">{item.varga.tags.length} concepts</p>
+						<p class="tag-pill tt-u">{item.content.length} nodes</p>
+					</div>
 				</a>
 			{/each}
 		</div>
