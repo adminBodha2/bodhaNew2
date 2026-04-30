@@ -33,5 +33,6 @@
 	"editor.tabSize": 4,
 	"markdown.preview.fontFamily": "\"Google Sans Flex\", sans-serif",
 	"editor.fontFamily": "\"Google Sans Flex\", sans-serif",
-	"editor.formatOnPaste": true
+	"editor.formatOnPaste": true,
+	"editor.rename.enablePreview": false
 }

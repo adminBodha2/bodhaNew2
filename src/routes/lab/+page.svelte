@@ -50,7 +50,7 @@
 					<p class="citation-big lgrey tt-u">{item.formattedDate}</p>
 				</div>
 				<p class="tight w500">{item.meta.title}</p>
-				<p class="small-text grey tight">{item.meta.excerpt}</p>
+				<p class="descriptor-text grey tight">{item.meta.excerpt}</p>
 					<p class="tag-pill tt-u">{item.meta.category}</p>
 			</a>
 			{/each}

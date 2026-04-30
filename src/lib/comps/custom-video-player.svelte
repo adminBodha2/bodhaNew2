@@ -479,8 +479,7 @@
 		position: relative
 		width: 100%
 		overflow: hidden
-		background: #050505
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16)
+		background: var(--color-back)
 
 	.custom-video-player__poster,
 	.custom-video-player__frame

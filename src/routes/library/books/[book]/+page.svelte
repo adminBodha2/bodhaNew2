@@ -51,7 +51,7 @@
 				{#each relatedBooks as item, i}
 					<a class="blank labelbox card-padded whitestone" href={item.linkfinal2}>
 						<p class="w500 tight">{item.name}</p>
-						<p class="small-text grey tight">{item.short}</p>
+						<p class="descriptor-text grey tight">{item.short}</p>
 					</a>
 				{/each}
 			</div>

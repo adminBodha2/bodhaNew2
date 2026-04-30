@@ -130,44 +130,39 @@ p.bold
 
 h1
 	line-height: 1.1
-	font-size: clamp(3.110rem, 2rem + 3.5vw, 5.074rem)
-	letter-spacing: -0.15rem
+	font-size: var(--typeH3)
+	letter-spacing: -0.05rem
 	font-weight: 690
 	&.thin
 		font-weight: 400
-	&.page-title, &.page-title.source-serif
-		font-weight: 690
-		font-size: var(--typeH5)
-		letter-spacing: -0.05rem
+	&.page-title
+		font-size: var(--typeH3)
 	&.doc-title
 		font-size: var(--typeH4)
-	@media screen and (max-width: 1024px)
-		letter-spacing: -0.1rem
-		&.page-title, &.page-title.source-serif
+	@media screen and (min-width: 1025px)
+		letter-spacing: -0.14rem
+		font-size: var(--typeH6)
+		&.page-title
 			font-size: var(--typeH4)
-			letter-spacing: -0.01rem
+			letter-spacing: -0.08rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 h2
 	line-height: 1.12
 	font-size: var(--typeH2)
-	font-weight: 650
+	font-weight: 680
+	letter-spacing: -0.02rem
 	&.thin
 		font-weight: 400
 	&.card-title
-		font-size: var(--typeH3)
-	&.card-title.source-serif
-		letter-spacing: -0.06rem
-	&.header-2
-		font-size: var(--typeH3)
-		font-weight: 680
+		font-size: var(--typeH2)
+	@media screen and (min-width: 1025px)
 		letter-spacing: -0.03rem
-	@media screen and (max-width: 1024px)
-		&.card-title.source-serif
-			letter-spacing: -0.02rem
-		&.header-2
+		font-size: var(--typeH2)
+		&.card-title
 			font-size: var(--typeH3)
+
 
 //-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -211,27 +206,25 @@ h6
 //-------------------------P, PRE, LI--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 p, pre, li
-	font-size: 1.2rem
-	line-height: 1.5
+	font-size: 1.1rem
+	line-height: 1.4
 	letter-spacing: 0
-	font-weight: 350
 	&.tight
-		line-height: 1.28
-	&.highlight-text
-		font-size: calc(var(--typeH1) * 0.9)
-		line-height: 1.5
-		&.tight
-			line-height: 1.28
-	&.small-text
+		line-height: 1.2
+	&.paragraph-text
+		font-size: calc(var(--typeBase))
+	&.descriptor-text
 		font-size: 0.95rem
 	&.tag-text
-		font-size: 0.65rem
+		font-size: 0.6rem
+		font-family: 'Google Sans Flex', sans-serif
+		font-weight: 450
 		letter-spacing: 0.02rem
 	&.card-title
-		font-size: calc(var(--typeH2) * 0.95)
-		font-weight: 630
+		font-size: var(--typeH1)
+		font-weight: 650
 		line-height: 1.2
-		letter-spacing: -0.04rem
+		letter-spacing: -0.02rem
 		&.thin
 			font-weight: 400
 		&.loose
@@ -245,11 +238,14 @@ p, pre, li
 		font-weight: 600
 		&.thin
 			font-weight: 400
-	@media screen and (max-width: 1024px)
-		font-size: 1.1rem
+	@media screen and (min-width: 1025px)
+		font-size: 1.2rem
+		line-height: 1.5
 		&.card-title
-			font-size: calc(var(--typeH2) * 0.95)
-			letter-spacing: -0.02rem
+			font-size: calc(var(--typeH1) * 1.2)
+		&.tag-text
+			font-size: 0.65rem
+
 
 .text-container
 	p, pre, li
@@ -290,7 +286,7 @@ p, pre, li
 small
 	font-size: 11px
 
-a.small-text, .small-text
+a.descriptor-text, .descriptor-text
 	font-size: 0.75rem
 
 pre

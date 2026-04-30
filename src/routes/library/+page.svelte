@@ -39,8 +39,8 @@
 	<div class="stdbox padded">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Open Library" showD={true} desc="A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more." />
 		<div class="grid two tightrows reading-block">
-			<p class="highlight-text">Bodha Open Library is a collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more. Find your next reading by browsing the categories, or select one of our curated reading paths.</p>
-			<p class="highlight-text">All texts in the library are sourced from the public domain. If any text violates copyright, please write to us at <span class="blue">sitemaster@bodharesearch.in</span>. All works compiled under 'Aryan Issue' are externally hosted/published papers, and links will open in a new tab.</p>
+			<p class="paragraph-text">Bodha Open Library is a collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more. Find your next reading by browsing the categories, or select one of our curated reading paths.</p>
+			<p class="paragraph-text">All texts in the library are sourced from the public domain. If any text violates copyright, please write to us at <span class="blue">sitemaster@bodharesearch.in</span>. All works compiled under 'Aryan Issue' are externally hosted/published papers, and links will open in a new tab.</p>
 		</div>
 	</div>
 	<div class="stdbox padded bordertop">
@@ -48,10 +48,10 @@
 			{#each libCategories as cat, i}
 				<a class="card-padded labelbox whitestone" href={cat.href}>
 					<div class="box shelf-main">
-						<p class="highlight-text w500 tight">{cat.label}</p>
+						<p class="paragraph-text w500 tight">{cat.label}</p>
 						<p class="tag-text grey">{#if cat.type === 'arch'}41 issues{:else}{categoryCounts[cat.type]} texts{/if}</p>
 					</div>
-					<p class="small-text tight altprim">{cat.desc}</p>
+					<p class="descriptor-text tight altprim">{cat.desc}</p>
 				</a>
 			{/each}
 		</div>
@@ -61,8 +61,8 @@
 		<div class="grid white-grid four">
 			{#each libPaths as path, i}
 				<a class="card-padded labelbox blank whitestone" href={path.href}>
-					<p class="highlight-text w500 tight">{path.label}</p>
-					<p class="small-text grey tight">{path.desc}</p>
+					<p class="paragraph-text w500 tight">{path.label}</p>
+					<p class="descriptor-text grey tight">{path.desc}</p>
 				</a>
 			{/each}
 		</div>
@@ -74,7 +74,7 @@
 			{#each libExternal as res}
 				<a class="resource-card blank whitestone" href={res.href} target="_blank" rel="noreferrer">
 					<p class="item-line tight">{res.label} →</p>
-					<p class="small-text grey tight">{res.desc}</p>
+					<p class="descriptor-text grey tight">{res.desc}</p>
 				</a>
 			{/each}
 		</div>

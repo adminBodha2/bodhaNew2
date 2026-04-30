@@ -79,22 +79,22 @@
 		<div class="grid four stay2 widthmax info-row">
 			<div class="box dates card-padded">
 				<Calendar fill="var(--color-anveshi)"/>
-				<p class="small-text w500 ptop8">{data.dates}</p>
+				<p class="descriptor-text w500 ptop8">{data.dates}</p>
 				<p class="tag-text grey tt-u">Dates</p>
 			</div>
 			<div class="box price card-padded">
 				<Rupee fill="var(--color-anveshi)"/>
-				<p class="small-text w500 ptop8">{data.price}</p>
+				<p class="descriptor-text w500 ptop8">{data.price}</p>
 				<p class="tag-text grey tt-u">Price</p>
 			</div>
 			<div class="box duration card-padded">
 				<Session fill="var(--color-anveshi)"/>
-				<p class="small-text w500 ptop8">{data.duration}</p>
+				<p class="descriptor-text w500 ptop8">{data.duration}</p>
 				<p class="tag-text grey tt-u">Duration</p>
 			</div>
 			<div class="box temples card-padded">
 				<Location fill="var(--color-anveshi)"/>
-				<p class="small-text w500 ptop8">{data.temples}</p>
+				<p class="descriptor-text w500 ptop8">{data.temples}</p>
 				<p class="tag-text grey tt-u">Temples</p>
 			</div>
 		</div>
@@ -137,7 +137,7 @@
 					<p class="citation-big tt-u lgrey">{item.daylabel}</p>
 					<p class="rem1 w500">{item.label}</p>
 					{#if selectedDay === i}
-					<pre class="highlight-text ptop8">{item.itinerary}</pre>
+					<pre class="paragraph-text ptop8">{item.itinerary}</pre>
 					{/if}
 				</button>
 			{/each}

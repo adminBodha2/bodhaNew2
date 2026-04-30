@@ -118,7 +118,7 @@
 		<p class="altprim">{data.excerpt}</p>
 		<div class="info row ycenter xcenter mleft">
 			<div class="line left-line"></div>
-			<p class="small-text"><a class="linked" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
+			<p class="descriptor-text"><a class="linked" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
 			<div class="line right-line"></div>
 		</div>
 		<div class="tag-row row self-center">
@@ -147,8 +147,8 @@
 		<div class="grid four white-grid">
 			{#each posts as item, i}
 				<a class="postcard blank labelbox card-padded" href={item.linkpath}>
-					<p class="highlight-text tight bold">{item.meta.title}</p>
-					<p class="small-text grey">{item.meta.excerpt}</p>
+					<p class="paragraph-text tight bold">{item.meta.title}</p>
+					<p class="descriptor-text grey">{item.meta.excerpt}</p>
 					<div class="box foot self-bottom bordertop ptop8">
 					<p class="tag-text lgrey tt-u">{item.meta.author} | {item.meta.words} words</p>
 					<div class="row of-info mwrap cgap8 rgap8">

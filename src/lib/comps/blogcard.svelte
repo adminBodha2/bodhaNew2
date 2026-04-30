@@ -17,14 +17,14 @@
 		<div class="card-body">
 			{#if date && date !== ' '}<p class="tag-text lgrey">{date}</p>{/if}
 			<p class="card-title source-serif">{title}</p>
-			<p class="grey small-text">{excerpt}</p>
+			<p class="grey descriptor-text">{excerpt}</p>
 		</div>
 	</a>
 	<div class="column rgap8 card-bottom post-metadata">
 		<div class="row wrap cgap4 rgap4 ycenter">
-			<a class="small-text grey blank tt-u" href="/blog/writers/{author}">{author}</a>
+			<a class="descriptor-text grey blank tt-u" href="/blog/writers/{author}">{author}</a>
 			{#if words && words !== ' '}
-			<span class="small-text lgrey"> | {words} words</span>
+			<span class="descriptor-text lgrey"> | {words} words</span>
 			{/if}
 		</div>
 		<div class="row wrap cgap4 rgap4">

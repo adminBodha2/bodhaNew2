@@ -91,7 +91,7 @@ let {
 							<div class="labelbox">
 								<p class="w500 tight">{item.node.title}</p>
 								{#if item.node.description}
-									<p class="small-text grey tight">{item.node.description}</p>
+									<p class="descriptor-text grey tight">{item.node.description}</p>
 								{/if}
 							</div>
 							<div class="row wrap cgap8 rgap4 self-bottom">

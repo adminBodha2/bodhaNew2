@@ -81,9 +81,9 @@
 								<p class="tag-pill tt-u">{Math.round(item.classification.confidence * 100)}%</p>
 							</div>
 							<p class="w500 tight">{item.node.title}</p>
-							<p class="small-text blue tight">{item.classification.reason}</p>
+							<p class="descriptor-text blue tight">{item.classification.reason}</p>
 							{#if item.node.description}
-								<p class="small-text grey tight">{item.node.description}</p>
+								<p class="descriptor-text grey tight">{item.node.description}</p>
 							{/if}
 						</a>
 					{/each}

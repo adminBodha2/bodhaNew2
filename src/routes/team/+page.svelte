@@ -61,7 +61,7 @@
 						<p class="card-title tight">{member.name}</p>
 						<p class="citation-big grey tt-u">{member.role}</p>
 					</div>
-					<p class="small-text grey">{member.bio}</p>
+					<p class="descriptor-text grey">{member.bio}</p>
 					{#if member.links.length > 0}
 					<div class="member-links">
 						{#each member.links as link, i}

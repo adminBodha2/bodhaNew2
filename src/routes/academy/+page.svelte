@@ -22,10 +22,10 @@
 	<div class="stdbox padded">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Academy" showD={true} desc={metaDescription}/>
 		<div class="grid two tightrows reading-block">
-			<p class="highlight-text">Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
+			<p class="paragraph-text">Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
 			<div class="textbox">
-				<p class="highlight-text">This is not possible without creating a line of scholars capable of carrying this work forward, to the next decade and beyond to the next generation.</p>
-				<p class="bold highlight-text">That is the purpose of Bodha Academy.</p>
+				<p class="paragraph-text">This is not possible without creating a line of scholars capable of carrying this work forward, to the next decade and beyond to the next generation.</p>
+				<p class="bold paragraph-text">That is the purpose of Bodha Academy.</p>
 			</div>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 				</div>
 				<div class="box textbox">
 					<h2 class="card-title source-serif">Introduction to Shri Ram Swarup</h2>
-					<p class="small-text grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
+					<p class="descriptor-text grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
 				</div>
 				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
 					<p class="citation-big grey tt-u">Pankaj Saxena</p>
@@ -51,7 +51,7 @@
 				</div>
 				<div class="box textbox">
 					<h2 class="card-title source-serif">Ancient Indian History</h2>
-					<p class="small-text grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
+					<p class="descriptor-text grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
 				</div>
 				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
 					<p class="citation-big grey tt-u">Amritanshu Pandey</p>

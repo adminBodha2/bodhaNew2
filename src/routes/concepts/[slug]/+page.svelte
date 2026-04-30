@@ -57,11 +57,11 @@
 	<div class="stdbox padded-ontop">
 			<div class="labelbox">
 				<Crumb item1="Bodha" item1Link="/" show2={true} item2="Concepts" item2linked={true} item2Link="/concepts" showT={true} title={data.concept.title}/>
-				<p class="small-text grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes. All subdomains listed here:</p>
+				<p class="descriptor-text grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes. All subdomains listed here:</p>
 			{#if data.conceptTree.length > 0}
 			<div class="row wrap collage ptop16">
 				{#each data.conceptTree.slice(0, 60)  as concept, i (concept.id)}
-					<p class="small-text hollow tt-u opac">{concept.title}</p>
+					<p class="descriptor-text hollow tt-u opac">{concept.title}</p>
 				{/each}
 			</div>
 			{/if}
@@ -84,9 +84,9 @@
 							rel={item.isExternal ? 'noreferrer' : undefined}
 							in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
 						>
-							<p class="highlight-text w500 tight">{item.node.title}</p>
+							<p class="paragraph-text w500 tight">{item.node.title}</p>
 							{#if item.node.description}
-								<p class="small-text grey tight">{item.node.description}</p>
+								<p class="descriptor-text grey tight">{item.node.description}</p>
 							{/if}
 							<div class="row wrap ycenter self-bottom">
 								{#each item.matchedConcepts as concept (concept.id)}

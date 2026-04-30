@@ -39,12 +39,12 @@
 			<Crumb item1="Bodha" item1Link="/" showT={true} title="Ontology" showD={true} desc={metaDescription} />
 			<div class="stats-grid">
 				<div class="labelbox whitestone card-padded">
-					<p class="small-text grey tt-u">Vargas</p>
-					<p class="highlight-text tight">{data.ontology.length}</p>
+					<p class="descriptor-text grey tt-u">Vargas</p>
+					<p class="paragraph-text tight">{data.ontology.length}</p>
 				</div>
 				<div class="labelbox whitestone card-padded">
-					<p class="small-text grey tt-u">Classified Links</p>
-					<p class="highlight-text tight">{totalNodes}</p>
+					<p class="descriptor-text grey tt-u">Classified Links</p>
+					<p class="paragraph-text tight">{totalNodes}</p>
 				</div>
 			</div>
 		</div>
@@ -53,9 +53,9 @@
 			{#each data.ontology as item (item.varga.id)}
 				<a class="blank labelbox whitestone card-padded varga-card" href={`/ontology/${item.varga.slug}`}>
 					<p class="w500 tight">{item.varga.title}</p>
-					<p class="small-text grey tight">{item.varga.description}</p>
+					<p class="descriptor-text grey tight">{item.varga.description}</p>
 					{#if item.concepts.length > 0}
-						<p class="small-text grey tight">
+						<p class="descriptor-text grey tight">
 							{item.concepts.slice(0, 4).map((concept) => concept.title).join(', ')}
 						</p>
 					{/if}

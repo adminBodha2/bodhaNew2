@@ -25,8 +25,8 @@
 		</div>
 		<div class="footer-grid">
 			<div class="foot-brand">
-				<p class="light-footer small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="light-footer small-text">Site designed at Bodha Lab. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
+				<p class="light-footer descriptor-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
+				<p class="light-footer descriptor-text">Site designed at Bodha Lab. <br><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
 				<div class="row ycenter cgap8">
 				<Designed/>
 				<!--
@@ -116,7 +116,7 @@ p.light-footer
 			grid-column: span 1
 		.foot-brand
 			grid-column: span 2
-		row-gap: 3rem
+		row-gap: 2rem
 		column-gap: 2rem
 
 .foot-brand
@@ -159,8 +159,8 @@ p.light-footer
 		pointer-events: none
 	@media screen and (max-width: 1024px)
 		height: calc(100vh - 64px)
-		padding-left: 2rem
-		padding-right: 2rem
+		padding-left: 1rem
+		padding-right: 1rem
 		&::after
 			top: 2rem
 	@media screen and (min-width: 1025px)
@@ -183,7 +183,7 @@ p.light-footer
 		padding-right: 1rem
 		width: 100%
 		height: 100%
-		row-gap: 4rem
+		row-gap: 2rem
 
 // ── TOP ROW ───────────────────────────────────────────────
 

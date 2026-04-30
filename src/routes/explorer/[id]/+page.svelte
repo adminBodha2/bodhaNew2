@@ -65,7 +65,7 @@
 					</div>
 				{/if}
 {#if data.akVargas.length}
-  <p class="small-text">Amarakosha Categories</p>
+  <p class="descriptor-text">Amarakosha Categories</p>
   <div class="grid three tight">
     {#each data.akVargas as node (node.id)}
       <p><a href={nodeHref(node)}>{node.title}</a></p>
@@ -78,7 +78,7 @@
 							<p>
 								<a href={nodeHref(node)}>{node.title}</a>
 								{#if node.type === 'ak-varga'}
-									<span class="small-text grey">(Amarakosha)</span>
+									<span class="descriptor-text grey">(Amarakosha)</span>
 								{/if}
 							</p>
 						{/each}

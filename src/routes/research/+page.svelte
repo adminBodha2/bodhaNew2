@@ -1,13 +1,16 @@
 <svelte:options runes={true} />
 <script lang="ts">
 
-	import { researchAreas } from '$lib/utils/localsends'
+	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte'
 	import Title from '$lib/comps/page-title.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
+
+	let { data }: { data: PageData } = $props();
+	let researchAreas = $derived(data.researchAreas ?? []);
 
 	const title = 'Research | Bodha';
 	const metaDescription = 'Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India\'s policy in Hindu cultural sensibilities.';
@@ -31,8 +34,8 @@
 <div class="stdbox padded whole-page">
 	<Crumb item1="Bodha" item1Link="/" showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities."/>
 	<div class="grid two widecol tightrows">
-		<p class="highlight-text">A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles. Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.</p>
-		<p class="highlight-text">Our goal is to make experimental methodology central to policy recommendations so that policy in future India is conducive to India’s culture and also practical and capable of competing with global forces. A key component of this is cultural furtherance in education and education policy, giving us a clear mandate to develop work in service of the Indian Knowledge Systems, through case-studies, curriculum development, and more.</p>
+		<p class="paragraph-text">A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles. Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.</p>
+		<p class="paragraph-text">Our goal is to make experimental methodology central to policy recommendations so that policy in future India is conducive to India’s culture and also practical and capable of competing with global forces. A key component of this is cultural furtherance in education and education policy, giving us a clear mandate to develop work in service of the Indian Knowledge Systems, through case-studies, curriculum development, and more.</p>
 	</div>
 </div>
 	<div class="stdbox padded bordertop">
@@ -48,12 +51,12 @@
 					<div class="area-links">
 						{#each area.items as item}
 						{#if item.href}
-							<a class="area-link blank row xbetween width100" href={item.href}><p class="rem1">
+							<a class="area-link blank row xbetween width100" href={item.href}><p class="rem">
 								{item.label}</p>
 								<div class="area-arrow"><p class="rem1">↗</p></div>
 							</a>
 						{:else}
-							<p class="area-link-dim rem1">{item.label}</p>
+							<p class="area-link-dim">{item.label}</p>
 						{/if}
 						{/each}
 					</div>
@@ -94,8 +97,7 @@
 	display: flex
 	flex-direction: column
 	gap: 0.7rem
-	padding: 1.3rem 1.35rem
-
+	padding: 1rem
 
 .area-link
 	display: flex

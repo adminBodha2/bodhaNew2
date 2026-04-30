@@ -67,7 +67,7 @@
 					{:else}
 						<a class="blank labelbox whitestone card-padded" href={item.linkfinal2}>
 							<p class="w500 tight">{item.name}</p>
-							<p class="small-text grey tight">{item.short}</p>
+							<p class="descriptor-text grey tight">{item.short}</p>
 							<p class="citation-big tt-u lgrey self-bottom">{item.author}</p>
 						</a>
 					{/if}

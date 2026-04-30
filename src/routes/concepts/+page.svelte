@@ -36,7 +36,7 @@
 			<div class="grid three white-grid">
 					{#each data.topLevelConcepts as concept (concept.id)}
 						<a class="blank labelbox whitestone card-padded" href={`/concepts/${concept.slug}`}>
-							<p class="highlight-text w500 tight">{concept.title}</p>
+							<p class="paragraph-text w500 tight">{concept.title}</p>
 							<div class="row wrap ycenter">
 								<p class="tag-pill tt-u">{concept.count} nodes</p>
 								{#if concept.childCount > 0}

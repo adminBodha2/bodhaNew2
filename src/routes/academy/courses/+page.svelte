@@ -50,7 +50,7 @@
 				</div>
 				<div class="box textbox">
 					<p class="card-title source-serif">Introduction to Shri Ram Swarup</p>
-					<p class="small-text grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
+					<p class="descriptor-text grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
 				</div>
 				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
 					<p class="citation-big grey tt-u">Pankaj Saxena</p>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="box textbox">
 					<p class="card-title source-serif">Ancient Indian History</p>
-					<p class="small-text grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
+					<p class="descriptor-text grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
 				</div>
 				<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
 					<p class="citation-big grey tt-u">Amritanshu Pandey</p>

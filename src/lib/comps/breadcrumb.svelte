@@ -66,7 +66,7 @@
 		{/if}
 
 		{#if showD}
-			<p class="small-text grey" class:width50={!centered}>{desc}</p>
+			<p class="descriptor-text grey" class:width50={!centered}>{desc}</p>
 		{/if}
 	</div>
 

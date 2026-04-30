@@ -356,8 +356,8 @@ const baseImage = "/images/demos/night.png";
 					</div>
 				{:else}
 					<p class="citation-big tt-u blue">start here</p>
-					<p class="w500 highlight-text">Choose a node</p>
-					<p class="small-text grey">Click any point in the map to reveal its title, tags, and immediate relations.</p>
+					<p class="w500 paragraph-text">Choose a node</p>
+					<p class="descriptor-text grey">Click any point in the map to reveal its title, tags, and immediate relations.</p>
 					<div class="top-list">
 						{#each topNodes as node}
 							<button class="top-list-button" onclick={() => selectNode(node)}>
@@ -411,12 +411,6 @@ const baseImage = "/images/demos/night.png";
 	.search-control
 		display: grid
 		gap: 6px
-		span
-			color: var(--color-grey-4)
-			font-size: 0.76rem
-			font-weight: 700
-			text-transform: uppercase
-			letter-spacing: 0.08em
 		input
 			width: 100%
 			border: 1px solid rgba(7,7,7,0.12)
@@ -430,28 +424,6 @@ const baseImage = "/images/demos/night.png";
 			&:focus
 				border-color: var(--color-theme)
 				box-shadow: 0 0 0 3px rgba(25,113,194,0.12)
-
-	.type-filters
-		display: flex
-		flex-wrap: wrap
-		gap: 7px
-		button
-			border: 1px solid rgba(7,7,7,0.1)
-			border-radius: 999px
-			background: rgba(255,255,255,0.78)
-			padding: 9px 12px
-			color: var(--color-grey-4)
-			font-size: 0.82rem
-			font-weight: 650
-			cursor: pointer
-			transition: var(--transition3)
-			&:hover
-				border-color: rgba(25,113,194,0.36)
-				color: var(--color-theme-2)
-			&.active
-				background: var(--color-black)
-				border-color: var(--color-black)
-				color: var(--color-back)
 
 	.graph-stage
 		position: relative

@@ -47,11 +47,11 @@
 	<div class="stdbox padded">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title="Inspiration" showD={true} desc="Thinkers and schools of thought that continue to shape our method, our questions, and the intellectual company we keep."/>
 		<div class="box">
-			<p class="highlight-text source-serif italic">"The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge."</p>
-			<p class="small-text lgrey tt-u" style="margin-top: 4px">Sri Aurobindo</p>
+			<p class="paragraph-text source-serif italic">"The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge."</p>
+			<p class="descriptor-text lgrey tt-u" style="margin-top: 4px">Sri Aurobindo</p>
 			<div class="grid two tightrows ptop32">
-				<p class="highlight-text">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world.</p>
-				<p class="highlight-text">We do not treat these figures and schools as authorities to be followed uncritically, but as companions in inquiry. Some agree, some sharply disagree, and that tension is part of what keeps the page alive.</p>
+				<p class="paragraph-text">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world.</p>
+				<p class="paragraph-text">We do not treat these figures and schools as authorities to be followed uncritically, but as companions in inquiry. Some agree, some sharply disagree, and that tension is part of what keeps the page alive.</p>
 			</div>
 		</div>
 	</div>

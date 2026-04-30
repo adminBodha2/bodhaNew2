@@ -4,6 +4,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Youtuber from '$lib/comps/youtuber.svelte';
 	import Container from '$lib/comps/container.svelte';
+	import VideoPlayer from '$lib/comps/custom-video-player.svelte'
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
@@ -43,17 +44,18 @@
 
 <Container narrow={true} scaled={true}>
 	<div class="stdbox padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title={title} showD={true} desc={metaDescription}/>
+		<Crumb item1="Bodha" item1Link="/" showT={true} title="Videos" showD={true} desc={metaDescription}/>
 		{#if vids && vids.length > 0}
 		<Swipes slidesPerView={3} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 3,spaceBetween: 8}}}>
 			{#each vids as item}
 				<swiper-slide>
-					<div class="column rgap16">
-						<Youtuber youTubeId={item.videoid} />
-						<div class="column rgap8">
-							<p class="w500 tight"><a class="blank linker" href={item.link} target="_blank" rel="noreferrer">{item.name}</a></p>
-							<p class="small-text grey">{item.channel}</p>
-						</div>
+					<div class="video-card blank">
+						<VideoPlayer videoId={item.videoid} title={item.name} loop />
+						<a class="box video-footer rgap8" href={item.link} target="_blank" rel="noreferrer">
+							<p class="w500 tight">{item.name}</p>
+							<div class="theme-line"></div>
+							<p class="citation-big lgrey tt-u">{item.channel}</p>
+						</a>
 					</div>
 				</swiper-slide>
 			{/each}
@@ -61,3 +63,21 @@
 		{/if}
 	</div>
 </Container>
+
+<style lang="sass">
+
+.video-card
+	overflow: hidden
+	background: var(--color-back)
+	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
+	&:hover
+		transform: translateY(-2px)
+		background: var(--color-stone)
+		.theme-line
+			transform: scaleX(1.5)
+
+.video-footer
+	padding: 1.1rem 1.2rem
+	border-top: 1px solid rgba(0,0,0,0.05)
+
+</style>

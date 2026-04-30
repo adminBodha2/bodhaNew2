@@ -37,7 +37,7 @@
 				<div class="three grid white-grid">
 					{#each groups as item}
 						<a class="blank card-padded whitestone" href={item.linkpath}>
-							<p class="highlight-text">{item.meta.title}</p>
+							<p class="paragraph-text">{item.meta.title}</p>
 						</a>
 					{/each}
 				</div>

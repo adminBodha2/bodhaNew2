@@ -63,7 +63,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.blogs as node, i (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -77,7 +77,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.externalArticles as node, i (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)} target="_blank" rel="noreferrer">
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -91,7 +91,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.books as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -105,7 +105,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.questions as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -119,7 +119,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.projects as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -133,7 +133,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.thinkers as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -147,7 +147,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.schools as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -161,7 +161,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	 	{#each data.grouped.labs as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
     	<p class="tight">{node.title}</p>
-		<p class="small-text grey tight">{node.description}</p>
+		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}

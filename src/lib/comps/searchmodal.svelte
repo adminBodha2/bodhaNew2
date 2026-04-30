@@ -98,12 +98,12 @@
 								{#if r.type === 'aryan-issue'}
 								<a class="result-item" href={r.linkfinal} onclick={() => ($searchState = false)} target="_blank" rel="noreferrer">
 									<p class="w500 tight">{@html r.name}</p>
-									<p class="small-text grey">{@html r.author}</p>
+									<p class="descriptor-text grey">{@html r.author}</p>
 								</a>
 								{:else}
 								<a class="result-item" href={r.linkfinal} onclick={() => ($searchState = false)}>
 									<p class="w500 tight">{@html r.name}</p>
-									<p class="small-text grey">{@html r.author}</p>
+									<p class="descriptor-text grey">{@html r.author}</p>
 								</a>
 								{/if}
 							</article>
@@ -114,7 +114,7 @@
 							<article>
 								<a class="result-item" href={r.linkfinal} onclick={() => ($searchState = false)}>
 									<p class="w500 tight">{@html r.name}</p>
-									<p class="small-text grey">{@html r.author}</p>
+									<p class="descriptor-text grey">{@html r.author}</p>
 								</a>
 							</article>
 						{/each}

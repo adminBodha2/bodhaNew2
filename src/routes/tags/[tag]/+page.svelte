@@ -68,7 +68,7 @@
 							{:else}
 								<p class="w500 tight"><a class="blank linker" href={article.route}>{article.title}</a></p>
 							{/if}
-							<p class="grey small-text">{article.description}</p>
+							<p class="grey descriptor-text">{article.description}</p>
 						</div>
 		
 				{:else if selectedKind === 'all'}
@@ -78,7 +78,7 @@
 							{:else}
 								<p class="w500 tight"><a class="blank linker" href={article.route}>{article.title}</a></p>
 							{/if}
-							<p class="grey small-text">{article.description}</p>
+							<p class="grey descriptor-text">{article.description}</p>
 							<p class="citation-big blue tt-u">{article.kind}</p>
 						</div>
 				{/if}
