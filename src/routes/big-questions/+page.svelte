@@ -77,7 +77,7 @@
 <style lang="sass">
 
 .reading-block
-	background: var(--color-white)
+	background: var(--color-back)
 
 .q-item
 	position: relative

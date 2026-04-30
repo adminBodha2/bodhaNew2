@@ -77,7 +77,7 @@
 <style lang="sass">
 
 .course-item
-	background: var(--color-white)
+	background: var(--color-back)
 	transition: var(--transition1)
 	&:hover
 		background: var(--color-stone)

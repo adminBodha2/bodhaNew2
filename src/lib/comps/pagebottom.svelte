@@ -5,6 +5,9 @@
 	import Linkedin from '$lib/icons/linkedin.svelte';
 	import Github from '$lib/icons/github.svelte'
 	import Designed from '$lib/icons/designed.svelte'
+	import Sun from '$lib/icons/sun.svelte'
+	import Moon from '$lib/icons/moon.svelte'
+	import { darkTheme, toggleTheme } from '$lib/utils/globalstores'
 	import '$lib/styles/graphing.sass'
 </script>
 
@@ -24,7 +27,16 @@
 			<div class="foot-brand">
 				<p class="lgrey small-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
 				<p class="lgrey small-text">Site designed at Bodha Lab. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
+				<div class="row ycenter cgap8">
 				<Designed/>
+				<button class="blank" onclick={toggleTheme}>
+					{#if $darkTheme}
+						<Sun/>
+					{:else}
+						<Moon/>
+					{/if}
+				</button>
+				</div>
 			</div>
 			<div class="foot-col">
 				<p class="tag-text lgrey tt-u">pillars</p>
@@ -66,19 +78,19 @@
 			</div>
 			<div class="foot-actions">
 				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-					<Twitter color="var(--color-back)" />
+					<Twitter color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-					<FB color="var(--color-back)" />
+					<FB color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-					<Insta color="var(--color-back)" />
+					<Insta color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-					<Linkedin color="var(--color-back)" />
+					<Linkedin color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://github.com/adminBodha2/bodhaNew2" rel="noreferrer" target="_blank">
-					<Github color="var(--color-back)"/>
+					<Github color="#FFFFFF"/>
 				</a>
 			</div>
 		</div>
@@ -264,6 +276,7 @@
 
 .foot-actions
 	display: flex
+	flex-direction: row
 	align-items: center
 	gap: 12px
 

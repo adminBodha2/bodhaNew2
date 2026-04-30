@@ -288,12 +288,21 @@
 			<Title text="past chapters" />
 			<div class="white-grid grid four stay2">
 				{#each pastproj as item, i}
+					{#if item.pageactive === true}
+					<a class="box labelbox past-grid-items blank" href="/anveshi{item.link}">
+						<div class="anv-past-image-wrap">
+							<img class="anv-past-image" src={item.gallery} alt={item.chapter}/>
+						</div>
+						<p class="rem1 w500">{item.chapter}</p>
+					</a>
+					{:else}
 					<div class="box labelbox past-grid-items">
 						<div class="anv-past-image-wrap">
 							<img class="anv-past-image" src={item.gallery} alt={item.chapter} />
 						</div>
 						<p class="rem1 w500">{item.chapter}</p>
 					</div>
+					{/if}
 				{/each}
 			</div>
 		</div>
@@ -329,7 +338,7 @@
 		padding: 1rem 0.5rem
 
 .all-item, .sub-item
-	background: var(--color-white)
+	background: var(--color-back)
 	.open-link
 		font-size: 0.875rem
 		font-weight: 600
@@ -454,7 +463,7 @@ swiper-slide > *
 
 .past-grid-items
 	padding-bottom: 1rem
-	background: var(--color-white)
+	background: var(--color-back)
 	p
 		padding-left: 1rem
 

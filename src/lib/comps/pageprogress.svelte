@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, onDestroy, afterUpdate } from 'svelte';
 	import { elementSizeStore } from '$lib/utils/elementSizeStore';
+	import { readerChromeHidden } from '$lib/utils/globalstores';
 	import { tweened } from 'svelte/motion';
 	let scrollPercent: any;
 	const progress = tweened(0);
@@ -38,6 +39,7 @@
 
 <div
 	class="scroll-progress"
+	class:header-hidden={$readerChromeHidden}
 	style="width: {perCent *
 		100}%; background: var(--color-theme); height: 2px"
 ></div>
@@ -50,7 +52,12 @@
 	top: 80px
 	left: 0
 	z-index: 500
+	transition: top 450ms cubic-bezier(0.000, 0.000, 0.580, 1.000)
+	&.header-hidden
+		top: 0px
 	@media screen and (max-width: 1024px)
 		top: 63px
+		&.header-hidden
+			top: 0px
 
 </style>

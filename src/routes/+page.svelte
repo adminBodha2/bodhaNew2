@@ -3,12 +3,11 @@
 	import { DEFAULT_IMAGE, SITE_URL, organizationJsonLd, stringifyJsonLd, websiteJsonLd } from '$lib/utils/seo';
 	import Container from '$lib/comps/container.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import BlogCard from '$lib/comps/blogcard.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
-	import Youtuber from '$lib/comps/youtuber.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import { verticals, publications } from '$lib/utils/localsends';
 	import Navigator from '$lib/comps/navigator.svelte'
+	import VideoPlayer from '$lib/comps/custom-video-player.svelte'
 
 	let { data }: { data: PageData } = $props();
 
@@ -35,8 +34,8 @@
 					<p class="highlight-text loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 				</div>
 		<div class="grid four mid2 tight">
-			{#each verticals as item}
-				<a class="elembox blank verticals" href={item.href}>
+			{#each verticals as item, i}
+				<a class="elembox blank verticals anim-flyIn" href={item.href}>
 					<div class="imgbox"><img src={item.image} alt={item.title} /></div>
 					<div class="labelbox">
 						<h2 class="card-title source-serif">{item.title}</h2>
@@ -113,14 +112,14 @@
 			</div>
 			<div class="standard-grid grid three video-grid">
 				{#each vids as item, i}
-					<a class="video-card blank" href={item.link} target="_blank" rel="noreferrer">
-						<Youtuber youTubeId={item.videoid} />
-						<div class="box video-footer rgap8">
+					<div class="video-card blank">
+						<VideoPlayer videoId={item.videoid} title={item.name} loop />
+						<a class="box video-footer rgap8" href={item.link} target="_blank" rel="noreferrer">
 							<p class="w500 tight">{item.name}</p>
 							<div class="theme-line"></div>
 							<p class="citation-big lgrey tt-u">{item.channel}</p>
-						</div>
-					</a>
+						</a>
+					</div>
 				{/each}
 			</div>
 		</div>
@@ -201,10 +200,10 @@
 
 .verticals
 	border-radius: 4px
-	background: rgba(255,255,255,0.5)
+	background: var(--theme-back-o50)
 	backdrop-filter: blur(10px) saturate(120%)
 	-webkit-backdrop-filter: blur(10px) saturate(120%)
-	border: 1px solid rgba(255,255,255,0.35)
+	border: 1px solid var(--theme-back-o35)
 	transition: all 160ms cubic-bezier(0.22, 1, 0.36, 1)
 	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.15)
 	position: relative
@@ -284,7 +283,7 @@
 
 .video-card
 	overflow: hidden
-	background: var(--color-white)
+	background: var(--color-back)
 	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
 	&:hover
 		transform: translateY(-2px)

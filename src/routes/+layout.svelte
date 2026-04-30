@@ -10,9 +10,10 @@
 	import '$lib/styles/globals.sass';
 	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
+	import '$lib/styles/animations.sass'
 	import '$lib/styles/glass.sass';
 	import '$lib/styles/icons.css';
-	import { darkTheme, iW, searchState } from '$lib/utils/globalstores';
+	import { darkTheme, iW, searchState, readerChromeHidden } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
@@ -68,7 +69,7 @@
 </svelte:head>
 
 <div class="app-box" class:light={!$darkTheme} class:dark={$darkTheme} class:mobile={$iW} class:desk={!$iW}>
-	<header class="row ycenter">
+	<header class="row ycenter" class:reader-hidden={$readerChromeHidden}>
 		<Header />
 	</header>
 	<main>
@@ -85,6 +86,7 @@
 main
 	transition: background-size 0.5s ease
 	view-transition-name: page
+	background: var(--color-back)
 
 :global(::view-transition-old(page))
 	animation: page-out 300ms var(--cz-easeInQuad) both
@@ -122,24 +124,28 @@ main
 header
 	width: 100%
 	position: sticky
-	background: rgba(255,255,255,0.67)
+	background: var(--header-back)
 	backdrop-filter: blur(15px) saturate(1.25)
 	--webkit-backdrop-filter: blur(15px) saturate(1.25)
 	top: 0
 	z-index: 999
-	border-bottom: 1px solid rgba(255,255,255,0.38)
+	border-bottom: var(--header-border)
 	justify-content: center
-	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.07)
-	transition: box-shadow 100ms cubic-bezier(0.665, 0.010, 0.795, 0.655)
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.07)
+	transition: box-shadow 100ms cubic-bezier(0.665, 0.010, 0.795, 0.655), top 310ms cubic-bezier(0.000, 0.000, 0.580, 1.000)
 	view-transition-name: header
 	&:hover
 		box-shadow: 0 1px 0 rgba(0,0,0,0), 0 8px 20px rgba(0,0,0,0), 0 4px 4px rgba(0,0,0,0)
 	@media screen and (min-width: 1025px)
 		height: 80px
 		margin-bottom: -80px
+		&.reader-hidden
+			top: -80px
 	@media screen and (max-width: 1024px)
 		height: 64px
 		margin-bottom: -64px
+		&.reader-hidden
+			top: -64px
 
 footer
 	width: 100%

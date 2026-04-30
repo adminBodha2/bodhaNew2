@@ -126,7 +126,7 @@ p.bold
 h1
 	line-height: 1.1
 	font-size: clamp(3.110rem, 2rem + 3.5vw, 5.074rem)
-	letter-spacing: -0.1rem
+	letter-spacing: -0.15rem
 	font-weight: 690
 	&.thin
 		font-weight: 400
@@ -137,6 +137,7 @@ h1
 	&.doc-title
 		font-size: var(--typeH4)
 	@media screen and (max-width: 1024px)
+		letter-spacing: -0.1rem
 		&.page-title, &.page-title.source-serif
 			font-size: var(--typeH4)
 			letter-spacing: -0.01rem
@@ -152,11 +153,11 @@ h2
 	&.card-title
 		font-size: var(--typeH3)
 	&.card-title.source-serif
-		letter-spacing: -0.04rem
+		letter-spacing: -0.06rem
 	&.header-2
 		font-size: var(--typeH3)
 		font-weight: 680
-		letter-spacing: -0.01rem
+		letter-spacing: -0.03rem
 	@media screen and (max-width: 1024px)
 		&.card-title.source-serif
 			letter-spacing: -0.02rem
@@ -225,7 +226,7 @@ p, pre, li
 		font-size: calc(var(--typeH2) * 0.95)
 		font-weight: 630
 		line-height: 1.2
-		letter-spacing: -0.01rem
+		letter-spacing: -0.04rem
 		&.thin
 			font-weight: 400
 		&.loose
@@ -243,6 +244,7 @@ p, pre, li
 		font-size: 1.1rem
 		&.card-title
 			font-size: calc(var(--typeH2) * 0.95)
+			letter-spacing: -0.02rem
 
 .text-container
 	p, pre, li
@@ -322,7 +324,7 @@ pre
 .tt-c
 	text-transform: capitalize
 .white
-	color: var(--color-white)
+	color: #FFFFFF
 .blue
 	color: var(--color-theme)
 .blue-dark

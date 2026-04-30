@@ -49,7 +49,7 @@
 	padding: 6px 14px
 	border-radius: 100px
 	border: 1px solid rgba(0,0,0,0.1)
-	background: var(--color-white)
+	background: var(--color-back)
 	transition: all 0.12s ease
 	&:hover
 		border-color: var(--color-theme)

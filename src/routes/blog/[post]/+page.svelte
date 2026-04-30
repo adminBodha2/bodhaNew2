@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { onDestroy } from 'svelte';
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
@@ -9,7 +10,13 @@
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import { InteractiveGrid } from "$lib/motion-core";
-	import type { ComponentProps } from "svelte"
+	import { mouseStore } from '$lib/utils/mousestore'
+	import { readerChromeHidden } from '$lib/utils/globalstores';
+
+	const position = mouseStore();
+	const readerModeStart = 900;
+	const revealOnScrollUp = 450;
+	const revealPointerZone = 120;
 
 	interface Props {
 	    data: PageData;
@@ -21,7 +28,7 @@
 
 	let {
 		data,
-		grid = 24,
+		grid = 64,
 		mouseSize = 0.15,
 		strength = 0.6,
 		relaxation = 0.8,
@@ -30,7 +37,10 @@
 	let posts = $derived(data.posts ?? []);
 	let ref = $state<HTMLElement | null>(null);
 	let sY = $state(0);
-	let imageY = $derived(-(sY / 12));
+	let lastScrollY = $state(0);
+	let upwardScrollDistance = $state(0);
+	let isReaderChromeHidden = $state(false);
+	let mouseViewportY = $derived($position.y - sY);
 
 	let formattedDate = $derived(
 		new Date(data.date).toLocaleDateString('en-US', {
@@ -60,6 +70,38 @@
 			})
 		)
 	);
+
+	function setReaderChromeHidden(hidden: boolean) {
+		if (isReaderChromeHidden === hidden) return;
+
+		isReaderChromeHidden = hidden;
+		readerChromeHidden.set(hidden);
+	}
+
+	$effect(() => {
+		const delta = sY - lastScrollY;
+		const pointerNearTop = mouseViewportY >= 0 && mouseViewportY <= revealPointerZone;
+
+		if (sY < readerModeStart || pointerNearTop) {
+			upwardScrollDistance = 0;
+			setReaderChromeHidden(false);
+		} else if (delta < 0) {
+			upwardScrollDistance += Math.abs(delta);
+
+			if (upwardScrollDistance >= revealOnScrollUp) {
+				setReaderChromeHidden(false);
+			}
+		} else if (delta > 0) {
+			upwardScrollDistance = 0;
+			setReaderChromeHidden(true);
+		}
+
+		lastScrollY = sY;
+	});
+
+	onDestroy(() => {
+		readerChromeHidden.set(false);
+	});
 </script>
 
 <svelte:window bind:scrollY={sY}/>
@@ -70,7 +112,7 @@
 <Container narrow={true} scaled={true}>
 <div class="blog-heading stdbox padded-ontop">
 	<div class="elembox blog-title-area xcenter mleft ta-c">
-		<Crumb centered={true} item1="Bodha" item1Link="/" show2={true} item2="Blog" item2linked={true} item2Link="/blog"/>
+		<Crumb centered={true} item1="Bodha" item1Link="/" show2={true} item2="Blog" item2linked={true} item2Link="/blog" showRow={true}/>
 		<h1 class="page-title source-serif width80 self-center">{data.title}</h1>
 		<div class="textbox stone-box width60 self-center">
 		<p class="altprim">{data.excerpt}</p>
@@ -125,7 +167,7 @@
 <style lang="sass">
 
 .postcard
-	background: var(--color-white)
+	background: var(--color-back)
 	&:hover
 		background: var(--color-stone)
 

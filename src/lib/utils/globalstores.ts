@@ -18,6 +18,8 @@ export function toggleSearch() {
 	searchState.update((mode) => !mode);
 }
 
+export const readerChromeHidden = writable(false);
+
 export const libraryMenu = writable(false)
 export function toggleLibraryMenu(){
 	libraryMenu.update((mode) => !mode);

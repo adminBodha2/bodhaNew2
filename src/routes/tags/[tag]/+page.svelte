@@ -90,7 +90,7 @@
 <style lang="sass">
 
 .labelbox.card-padded
-	background: var(--color-white)
+	background: var(--color-back)
 
 .padded-ontop
 	min-height: calc(100vh - 160px)

@@ -1,0 +1,25 @@
+.anim-fader
+	animation: fadeIn 1000ms
+	animation-timeline: view()
+
+@keyframes fadeIn
+	0%
+		opacity: 0
+	60%
+		opacity: 1
+	100%
+		opacity: 1
+
+.anim-flyIn
+	animation: flyIn 600ms
+	animation-timeline: view()
+
+@keyframes flyIn
+	0%
+		opacity: 0
+		transform: translateY(180px)
+	60%
+		opacity: 1
+	100%
+		opacity: 1
+		transform: translateY(0)

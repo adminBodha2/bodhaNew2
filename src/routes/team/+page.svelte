@@ -83,7 +83,7 @@
 .member-card
 	display: flex
 	flex-direction: column
-	background: var(--color-white)
+	background: var(--color-back)
 	padding: 1.6rem
 	gap: 1rem
 	transition: background 0.15s ease

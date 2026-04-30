@@ -88,7 +88,7 @@
 	flex-direction: column
 	gap: 0.4rem
 	padding: 1.2rem 1.4rem
-	background: var(--color-white)
+	background: var(--color-back)
 	transition: background 0.15s ease
 
 </style>

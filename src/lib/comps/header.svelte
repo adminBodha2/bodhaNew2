@@ -102,12 +102,12 @@
 .logoholder
 	@media screen and (min-width: 1025px)
 		img.rotator
-			height: 56px
-			width: 56px
+			height: 48px
+			width: 48px
 		img.rest
-			height: 38.5px
+			height: 33px
 			width: 100%
-			margin-left: -47px
+			margin-left: -40.5px
 	@media screen and (max-width: 1024px)
 		img.rotator
 			height: 40px

@@ -232,8 +232,8 @@
 	border-radius: 5px
 	overflow: visible
 	.tray-btn
-		background: var(--color-white)
-		border: 1px solid var(--color-white)
+		background: var(--color-back)
+		border: 1px solid var(--color-back)
 		padding: 12px 20px
 		font-size: 1rem
 		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
@@ -251,14 +251,14 @@
 		&.active
 			background: var(--color-theme)
 			border: 1px solid var(--color-theme)
-			color: var(--color-white)
+			color: var(--color-back)
 	@media screen and (min-width: 1025px)
 		display: flex
 		flex-direction: row
 		width: max-content
 		.tray-btn
-			background: var(--color-white)
-			border: 1px solid var(--color-white)
+			background: var(--color-back)
+			border: 1px solid var(--color-back)
 			padding: 12px 20px
 			font-size: 1rem
 			box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
