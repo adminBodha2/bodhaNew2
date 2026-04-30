@@ -7,8 +7,8 @@
 		alt?: string;
 	};
 
+	let wrapperElement = $state<HTMLDivElement>();
 	let imageElement = $state<HTMLImageElement>();
-	let inRange = false;
 	let frameId = 0;
 	let reduceMotion = false;
 
@@ -18,20 +18,28 @@
 		alt = 'Page hero image'
 	}: Props = $props();
 
+	function isWrapperNearViewport() {
+		if (!wrapperElement) return false;
+
+		const rect = wrapperElement.getBoundingClientRect();
+		const margin = window.innerHeight * 1.2;
+		return rect.bottom >= -margin && rect.top <= window.innerHeight + margin;
+	}
+
 	function renderParallax() {
 		frameId = 0;
-		if (!imageElement || reduceMotion || !inRange) return;
+		if (!imageElement || reduceMotion || !isWrapperNearViewport()) return;
 
 		imageElement.style.transform = `translateY(${window.scrollY / 2}px)`;
 	}
 
 	function scheduleParallax() {
-		if (frameId || reduceMotion || !inRange) return;
+		if (frameId || reduceMotion) return;
 		frameId = requestAnimationFrame(renderParallax);
 	}
 
 	onMount(() => {
-		if (!imageElement) return;
+		if (!wrapperElement || !imageElement) return;
 
 		const image = imageElement;
 		const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -48,22 +56,12 @@
 			scheduleParallax();
 		};
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				inRange = entries.some((entry) => entry.isIntersecting);
-				if (inRange) scheduleParallax();
-			},
-			{ rootMargin: '120% 0px' }
-		);
-
-		observer.observe(image);
 		updateMotionPreference();
 		window.addEventListener('scroll', scheduleParallax, { passive: true });
 		window.addEventListener('resize', scheduleParallax);
 		mediaQuery.addEventListener('change', updateMotionPreference);
 
 		return () => {
-			observer.disconnect();
 			window.removeEventListener('scroll', scheduleParallax);
 			window.removeEventListener('resize', scheduleParallax);
 			mediaQuery.removeEventListener('change', updateMotionPreference);
@@ -72,7 +70,7 @@
 	});
 </script>
 
-<div class="imager {isClass}">
+<div bind:this={wrapperElement} class="imager {isClass}">
   <img bind:this={imageElement} src={imageLink} {alt}/>
 </div>
 
@@ -92,7 +90,7 @@
 			height: 70vh
 		&.is50
 			height: 70vh
-			margin-top: 80px
+			margin-top: 72px
 		img
 			object-fit: cover
 			object-position: center center

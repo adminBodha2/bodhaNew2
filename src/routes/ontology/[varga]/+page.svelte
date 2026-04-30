@@ -101,7 +101,7 @@
 			height: calc(100vh - 144px)
 
 	.ontology-page
-		margin-top: 80px
+		margin-top: 72px
 
 	a.project-link.active
 		p

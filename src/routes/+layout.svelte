@@ -133,22 +133,17 @@ header
 	width: 100%
 	position: sticky
 	background: var(--header-back)
-	backdrop-filter: blur(15px) saturate(1.25)
-	--webkit-backdrop-filter: blur(15px) saturate(1.25)
 	top: 0
 	z-index: 999
-	border-bottom: var(--header-border)
+	border-bottom: var(--border-main)
 	justify-content: center
-	box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.07)
-	transition: box-shadow 100ms cubic-bezier(0.665, 0.010, 0.795, 0.655), top 310ms cubic-bezier(0.000, 0.000, 0.580, 1.000)
+	transition: top 310ms cubic-bezier(0.000, 0.000, 0.580, 1.000)
 	view-transition-name: header
-	&:hover
-		box-shadow: 0 1px 0 rgba(0,0,0,0), 0 8px 20px rgba(0,0,0,0), 0 4px 4px rgba(0,0,0,0)
 	@media screen and (min-width: 1025px)
-		height: 80px
-		margin-bottom: -80px
+		height: 72px
+		margin-bottom: -72px
 		&.reader-hidden
-			top: -80px
+			top: -72px
 	@media screen and (max-width: 1024px)
 		height: 64px
 		margin-bottom: -64px

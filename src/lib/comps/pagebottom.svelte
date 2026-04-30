@@ -164,7 +164,7 @@ p.light-footer
 		&::after
 			top: 2rem
 	@media screen and (min-width: 1025px)
-		height: calc(100vh - 80px)
+		height: calc(100vh - 72px)
 		padding-top: 6rem
 		&::after
 			top: 6rem

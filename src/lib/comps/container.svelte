@@ -32,7 +32,7 @@
 <style lang="sass">
 
 .pbot64.column.widebox
-	min-height: calc(100vh - 80px)
+	min-height: calc(100vh - 72px)
 	padding-left: 12px
 	padding-right: 12px
 	&.top-cushion
