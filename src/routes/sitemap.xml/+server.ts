@@ -1,4 +1,4 @@
-import { tagsWithCountsAlphabetical, writersWithCountsAlphabetical } from '$lib/utils/localpulls';
+import { blogContentPaths, tagsWithCountsAlphabetical, writersWithCountsAlphabetical } from '$lib/utils/localpulls';
 import { getAkVargas } from '$lib/ontology';
 import tagData from '$lib/serving/tag-index.json';
 
@@ -23,7 +23,7 @@ function pathsFrom(glob: Record<string, unknown>): string[] {
 }
 
 export async function GET() {
-	const blogPaths       = pathsFrom(import.meta.glob('/src/routes/blog/*.md'));
+	const blogPaths       = blogContentPaths();
 	const bqPaths         = pathsFrom(import.meta.glob('/src/routes/big-questions/*.md'));
 	const inspirationPaths= pathsFrom(import.meta.glob('/src/routes/inspiration/*.md'));
 	const researchPaths   = pathsFrom(import.meta.glob('/src/routes/research/*.md'));

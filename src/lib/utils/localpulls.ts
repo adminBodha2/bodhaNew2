@@ -1,11 +1,32 @@
 type PulledEntry = {
   date: Date
   formattedDate: string
-  meta: Record<string, unknown>
+  meta: Record<string, any>
   linkpath: string
 }
 
-function toBlogEntry(path: string, metadata: Record<string, unknown> | undefined) {
+type MarkdownModule = {
+	metadata?: Record<string, any>
+}
+
+type BlogDateFormat = 'long' | 'short' | 'medium'
+
+const blogFiles = import.meta.glob('/src/routes/blog/*.md') as Record<string, () => Promise<MarkdownModule>>
+let blogEntries: Promise<PulledEntry[]> | undefined
+
+function formatBlogDate(date: Date, format: BlogDateFormat = 'long') {
+	if (format === 'short') {
+		return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+	}
+
+	if (format === 'medium') {
+		return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+	}
+
+	return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+}
+
+function toBlogEntry(path: string, metadata: Record<string, any> | undefined) {
   if (!metadata?.date) {
     return null
   }
@@ -18,10 +39,57 @@ function toBlogEntry(path: string, metadata: Record<string, unknown> | undefined
 
   return {
     date,
-    formattedDate: date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
+    formattedDate: formatBlogDate(date),
     meta: metadata,
     linkpath: path.slice(11, -3)
   } satisfies PulledEntry
+}
+
+async function loadBlogEntries() {
+	blogEntries ??= Promise.all(
+		Object.entries(blogFiles).map(async ([path, resolver]) => {
+			const { metadata } = await resolver()
+			return toBlogEntry(path, metadata)
+		})
+	).then((entries) =>
+		entries
+			.filter((entry): entry is PulledEntry => entry !== null)
+			.sort((a, b) => b.date.getTime() - a.date.getTime())
+	)
+
+	return blogEntries
+}
+
+function withDateFormat(entry: PulledEntry, format: BlogDateFormat) {
+	return {
+		...entry,
+		formattedDate: formatBlogDate(entry.date, format)
+	}
+}
+
+function stringList(value: unknown) {
+	if (Array.isArray(value)) {
+		return value.map((item) => String(item).trim()).filter(Boolean)
+	}
+
+	if (typeof value === 'string') {
+		const trimmed = value.trim()
+		return trimmed ? [trimmed] : []
+	}
+
+	return []
+}
+
+function countsFor(entries: PulledEntry[], field: string) {
+	const counts = new Map<string, number>()
+
+	for (const entry of entries) {
+		for (const item of stringList(entry.meta[field])) {
+			counts.set(item, (counts.get(item) ?? 0) + 1)
+		}
+	}
+
+	return [...counts.entries()].map(([item, count]) => ({ item, count }))
 }
 
 export type BlogPost = {
@@ -38,235 +106,71 @@ export type BlogPost = {
 };
 
 export async function fullBlog() {
-  const allfiles = import.meta.glob('/src/routes/blog/*.md')
-  const filed = Object.entries(allfiles)
-  const eachfiled = await Promise.all(
-    filed.map(async ([path, resolver]) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      const { metadata } = await resolver()
-      return toBlogEntry(path, metadata)
-    })
-  )
+  return loadBlogEntries()
+}
 
-  return eachfiled
-    .filter((entry): entry is PulledEntry => entry !== null)
-    .sort((a, b) => b.date.getTime() - a.date.getTime())
+export function blogContentPaths() {
+	return Object.keys(blogFiles).map((path) => path.slice(11, -3))
 }
 
 export async function writersWithCountsAlphabetical() {
-  const posts = import.meta.glob('/src/routes/blog/*.md');
-  const allfiles = { ...posts };
-  const filed = Object.entries(allfiles);
-  const writerCounts = new Map(); // Create a map to store tag counts
-  await Promise.all(
-    filed.map(async ([, resolver]) => {
-      // @ts-expect-error//why
-      const { metadata } = await resolver();
-      const writers = metadata.author || [];
-
-      writers.forEach((writer: string) => {
-        if (writerCounts.has(writer)) {
-          writerCounts.set(writer, writerCounts.get(writer) + 1); // Increment the count
-        } else {
-          writerCounts.set(writer, 1); // Initialize the count to 1
-        }
-      });
-    })
-  );
-  const distinctWriters = [...writerCounts.keys()]
-  const writersWithCounts = distinctWriters.map((writer) => ({
-    writer,
-    count: writerCounts.get(writer),
-  }));
-  return writersWithCounts.sort((a, b) => a.writer.localeCompare(b.writer));
+  const entries = await loadBlogEntries()
+  return countsFor(entries, 'author')
+    .map(({ item, count }) => ({ writer: item, count }))
+    .sort((a, b) => a.writer.localeCompare(b.writer));
 }
 
 export async function selectedWriter(writer: string, limit:number) {
-  const posts = import.meta.glob('/src/routes/blog/*.md')
-  const allfiles = { ...posts };
-  const filed = Object.entries(allfiles)
-  const eachfiled = await Promise.all(
-    filed.map(async ([path, resolver]) => {
-      // @ts-expect-error//why
-      const { metadata } = await resolver()
-      const pathitem = path.slice(11, -3)
-      const defaultDate = "2023-07-07"
-      const date = metadata.date ? new Date(metadata.date as string) : new Date(defaultDate);
-      const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-      return {
-        meta: metadata,
-        linkpath: pathitem,
-        date,
-        formattedDate
-      };
-    })
-  )
-  const validPosts = eachfiled.filter((post): post is NonNullable<typeof post> => post !== null);
-  const groupedPosts = validPosts
-    .filter(post => post.meta.author && post.meta.author.includes(writer))
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
-  return groupedPosts.slice(0,limit)
+  const entries = await loadBlogEntries()
+  return entries
+    .filter(post => stringList(post.meta.author).includes(writer))
+    .map((post) => withDateFormat(post, 'medium'))
+    .slice(0,limit)
 }
 
 export async function tagsWithCountsAlphabetical() {
-  const posts = import.meta.glob('/src/routes/blog/*.md');
-  const allfiles = { ...posts };
-  const filed = Object.entries(allfiles);
-  const tagCounts = new Map(); // Create a map to store tag counts
-
-  await Promise.all(
-    filed.map(async ([, resolver]) => {
-      // @ts-expect-error//why
-      const { metadata } = await resolver();
-      const tags = metadata.tags || [];
-
-      tags.forEach((tag: string) => {
-        if (tagCounts.has(tag)) {
-          tagCounts.set(tag, tagCounts.get(tag) + 1); // Increment the count
-        } else {
-          tagCounts.set(tag, 1); // Initialize the count to 1
-        }
-      });
-    })
-  );
-
-  const distinctTags = [...tagCounts.keys()]
-  const tagsWithCounts = distinctTags.map((tag) => ({
-    tag,
-    count: tagCounts.get(tag)
-  }));
-  return tagsWithCounts.sort((a, b) => a.tag.localeCompare(b.tag));
+  const entries = await loadBlogEntries()
+  return countsFor(entries, 'tags')
+    .map(({ item, count }) => ({ tag: item, count }))
+    .sort((a, b) => a.tag.localeCompare(b.tag));
 }
 
 export async function tagsWithCounts() {
-  const posts = import.meta.glob('/src/routes/blog/*.md');
-  const allfiles = { ...posts };
-  const filed = Object.entries(allfiles);
-  const tagCounts = new Map(); // Create a map to store tag counts
-
-  await Promise.all(
-    filed.map(async ([, resolver]) => {
-      // @ts-expect-error//why
-      const { metadata } = await resolver();
-      const tags = metadata.tags || [];
-
-      tags.forEach((tag: string) => {
-        if (tagCounts.has(tag)) {
-          tagCounts.set(tag, tagCounts.get(tag) + 1); // Increment the count
-        } else {
-          tagCounts.set(tag, 1); // Initialize the count to 1
-        }
-      });
-    })
-  );
-
-  const distinctTags = [...tagCounts.keys()]
-  const tagsWithCounts = distinctTags.map((tag) => ({
-    tag,
-    count: tagCounts.get(tag)
-  }));
-  return tagsWithCounts.sort((a, b) => b.count - a.count);
+  const entries = await loadBlogEntries()
+  return countsFor(entries, 'tags')
+    .map(({ item, count }) => ({ tag: item, count }))
+    .sort((a, b) => b.count - a.count);
 }
 
 export async function selectedTag(tag: string) {
-  const posts = import.meta.glob('/src/routes/blog/*.md')
-  const allfiles = { ...posts };
-  const filed = Object.entries(allfiles)
-  const eachfiled = await Promise.all(
-    filed.map(async ([path, resolver]) => {
-      // @ts-expect-error//why
-      const { metadata } = await resolver()
-      const pathitem = path.slice(11, -3)
-      const defaultDate = "2023-07-07"
-      const date = metadata.date ? new Date(metadata.date as string) : new Date(defaultDate);
-      const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-      return {
-        meta: metadata,
-        linkpath: pathitem,
-        date,
-        formattedDate,
-      };
-    })
-  )
-  const validPosts = eachfiled.filter((post): post is NonNullable<typeof post> => post !== null);
-  const groupedPosts = validPosts
-    .filter(post => post.meta.tags && post.meta.tags.includes(tag))
-    .sort((a, b) => b.date.getTime() - a.date.getTime());
-  return groupedPosts
+  const entries = await loadBlogEntries()
+  return entries
+    .filter(post => stringList(post.meta.tags).includes(tag))
+    .map((post) => withDateFormat(post, 'medium'))
 }
 
 export async function categoryPosts(category?: string) {
-  const allfiles = import.meta.glob('/src/routes/blog/*.md')
-  const filed = Object.entries(allfiles)
-  const eachfiled = await Promise.all(
-    filed.map(async ([path, resolver]) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      const { metadata } = await resolver()
-      const pathitem = path.slice(11, -3)
-      const date = new Date(metadata.date as string);
-      const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      return {
-        date,
-        formattedDate,
-        meta: metadata,
-        linkpath: pathitem
-      };
-    })
-  )
-
-  // remove nulls / invalid date entries
-  const filteredNonNull = eachfiled.filter(entry => entry && entry.date instanceof Date && !isNaN(entry.date.getTime()));
-
-  // if a category was provided, filter by it (supports meta.category as string or string[])
-  const filteredByCategory = category
-    ? filteredNonNull.filter(entry => {
-        const cat = entry!.meta?.category;
-        if (!cat) return false;
-        if (Array.isArray(cat)) {
-          return cat.some((c: string) => String(c).trim().toLowerCase() === category.trim().toLowerCase())
-        }
-        return String(cat).trim().toLowerCase() === category.trim().toLowerCase();
-      })
-    : filteredNonNull;
+  const entries = await loadBlogEntries()
+  const categoryKey = category?.trim().toLowerCase()
+  const filteredByCategory = categoryKey
+    ? entries.filter(entry => stringList(entry.meta.category).some((item) => item.toLowerCase() === categoryKey))
+    : entries;
 
   // sort by date desc and return only the latest 6
   return filteredByCategory
-    .sort((a, b) => b.date.getTime() - a.date.getTime())
+    .map((post) => withDateFormat(post, 'short'))
     .slice(0, 6);
 }
 
 export async function writerPosts(writer?: string) {
-  const allfiles = import.meta.glob('/src/routes/blog/*.md')
-  const filed = Object.entries(allfiles)
-  const eachfiled = await Promise.all(
-    filed.map(async ([path, resolver]) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      const { metadata } = await resolver()
-      return toBlogEntry(path, metadata)
-    })
-  )
-
-  // remove nulls / invalid date entries
-  const filteredNonNull = eachfiled.filter((entry): entry is PulledEntry => entry !== null);
-
-  // if a category was provided, filter by it (supports meta.category as string or string[])
-  const filteredByWriter = writer
-    ? filteredNonNull.filter(entry => {
-        const cat = entry!.meta?.category;
-        if (!cat) return false;
-        if (Array.isArray(cat)) {
-          return cat.some((c: string) => String(c).trim().toLowerCase() === writer.trim().toLowerCase())
-        }
-        return String(cat).trim().toLowerCase() === writer.trim().toLowerCase();
-      })
-    : filteredNonNull;
+  const entries = await loadBlogEntries()
+  const writerKey = writer?.trim().toLowerCase()
+  const filteredByWriter = writerKey
+    ? entries.filter(entry => stringList(entry.meta.category).some((item) => item.toLowerCase() === writerKey))
+    : entries;
 
   // sort by date desc and return only the latest 6
   return filteredByWriter
-    .sort((a, b) => b.date.getTime() - a.date.getTime())
     .slice(0, 6);
 }
 
@@ -318,33 +222,10 @@ export function formatMonth(dateString: string): string {
 };
 
 export async function limitBlog() {
-  const allfiles = import.meta.glob('/src/routes/blog/*.md')
-  const filed = Object.entries(allfiles)
-
-  const eachfiled = await Promise.all(
-    filed.map(async ([path, resolver]) => {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      const { metadata } = await resolver()
-      const pathitem = path.slice(11, -3)
-
-      const date = new Date(metadata.date as string)
-      const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-
-      return {
-        date,
-        formattedDate,
-        meta: metadata,
-        linkpath: pathitem
-      }
-    })
-  )
-
-  const filtered = eachfiled.filter(Boolean)
-
-  const sorted = filtered.sort((a, b) => b.date.getTime() - a.date.getTime())
-
-  return sorted.slice(0, 6)   // 🔥 Only first 3 posts
+  const entries = await loadBlogEntries()
+  return entries
+    .map((post) => withDateFormat(post, 'short'))
+    .slice(0, 6)
 }
 
 export async function limitLab() {

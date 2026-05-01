@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import libraryItems from '$lib/serving/library-items.json';
+import { fullBlog } from '$lib/utils/localpulls';
 import type { SearchResult } from '$lib/search/lib-blog-search';
 
 type LibraryRaw = {
@@ -9,13 +10,6 @@ type LibraryRaw = {
   type: string;
   linkreal: string;
   linkfinal: string;
-};
-
-type PostFrontmatter = {
-  title?: string;
-  author?: string | string[];
-  category?: string;
-  image?: string;
 };
 
 export const prerender = true;
@@ -31,27 +25,22 @@ export async function GET() {
     linkfinal: b.linkfinal
   }));
 
-  const files = import.meta.glob('/src/routes/blog/*.md', { eager: true }) as Record<
-    string,
-    { metadata?: PostFrontmatter }
-  >;
-
-const posts: SearchResult[] = Object.entries(files)
-  .map(([path, mod]): SearchResult | null => {
-    const meta = mod.metadata;
+  const blogPosts = await fullBlog();
+  const posts: SearchResult[] = blogPosts
+  .map((post): SearchResult | null => {
+    const meta = post.meta;
     if (!meta?.title) return null;
-    const slug = path.slice('/src/routes/blog/'.length, -'.md'.length);
     const author = Array.isArray(meta.author)
       ? meta.author.join(', ')
       : (meta.author ?? '');
     return {
-      id: `post:${slug}`,
+      id: `post:${post.linkpath.replace('/blog/', '')}`,
       kind: 'post',
       name: meta.title,
       author,
       type: meta.category ?? 'post',
       linkreal: meta.image ?? '',
-      linkfinal: `/blog/${slug}`
+      linkfinal: post.linkpath
     };
   })
   .filter((p): p is SearchResult => p !== null);
