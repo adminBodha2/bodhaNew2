@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
 	import '$lib/styles/lab2.sass';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, withContext } from '$lib/utils/seo';
@@ -58,18 +58,19 @@ let {
 	{jsonld}
 />
 
+
+<Container>
 <section class="key-image">
 	<WaterRipple src={data.image} class="ripple-motion" {brushSize}/>
 </section>
-<Container narrow={true} scaled={true}>
 	<section class="documents-grid">
 		<div class="box sidearea">
-				<div class="labelbox all-items">
+				<div class="all-items">
 				{#if schools && schools.length > 0}
 					{#each schools as item}
-					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="rem1 tight grey">{item.meta.title}</p>
-					</a>
+						<a class="project-link sidebar-text" href={item.linkpath}>
+							{item.meta.title}
+						</a>
 					{/each}
 				{/if}
 				{#if thinkers && thinkers.length > 0}
@@ -82,10 +83,10 @@ let {
 				</div>
 		</div>
 		<div class="box mainarea">
-			<div class="textbox borderbot">
+			<div class="labelbox borderbot title-area">
 				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
-				<h1 class="doc-title source-serif">{data.title}</h1>
-				<p class="rem1 grey">{data.description}</p>
+				<h1 class="doc-title source-serif pbot8">{data.title}</h1>
+				<p class="descriptor-text grey pbot8">{data.description}</p>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap">
 						{#each data.tags as tag}
@@ -96,7 +97,6 @@ let {
 			</div>
 			<div class="classic-document ptop32 pbot32">
 				<data.content />
-				<Liner/>
 			</div>
 		</div>
 	</section>

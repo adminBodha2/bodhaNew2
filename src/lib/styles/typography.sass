@@ -137,14 +137,19 @@ h1
 		font-weight: 400
 	&.page-title
 		font-size: var(--typeH3)
+		letter-spacing: -0.02rem
 	&.doc-title
-		font-size: var(--typeH4)
+		font-size: var(--typeH3)
+		letter-spacing: -0.02rem
 	@media screen and (min-width: 1025px)
 		letter-spacing: -0.14rem
 		font-size: var(--typeH6)
 		&.page-title
 			font-size: var(--typeH4)
-			letter-spacing: -0.08rem
+			letter-spacing: -0.06rem
+		&.doc-title
+			font-size: var(--typeH4)
+			letter-spacing: -0.06rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -246,6 +251,11 @@ p, pre, li
 		&.tag-text
 			font-size: 0.65rem
 
+.sidebar-text
+	font-size: 1.125rem
+	line-height: 1.2
+	@media screen and (min-width: 1025px)
+		font-size: 1rem
 
 .text-container
 	p, pre, li
@@ -259,10 +269,9 @@ p, pre, li
 .classic-document
 	p, pre, li
 		line-height: 1.6
-		font-size: calc(var(--typeBase) * 1.1)
-		font-family: 'Newsreader', serif
 		letter-spacing: 0
 		font-weight: 400
+		font-size: var(--typeBase)
 	p, pre
 		margin-bottom: 1.25rem
 	li
@@ -273,15 +282,12 @@ p, pre, li
 		padding-left: 1rem
 	h3
 		font-size: var(--typeH1)
-		font-weight: 600
 		margin-bottom: 1.25rem
+		margin-top: 2.5rem
 	h2
 		font-size: var(--typeH1)
 		margin-bottom: 1.25rem
 		margin-top: 2.5rem
-	@media screen and (max-width: 1024px)
-		p, pre, li
-			line-height: 1.5
 
 small
 	font-size: 11px

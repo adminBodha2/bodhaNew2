@@ -1,7 +1,7 @@
 ---
 title: Hindu School of History
 type: purva paksha of western institutions
-image: /images/research/6.webp
+image: /images/research/11.webp
 description: A project to develop a historiographical approach that interprets the past through a dharmic lens for civilizations, continuity, time, and epistemological frameworks.
 tags:
   - civilizational consciousness
@@ -12,4 +12,4 @@ The study of history is never a neutral accumulation of facts alone. Every major
 
 In the Indian context, the need for a serious re-examination of historiographical method is especially urgent. Much of Indian history has been written through frameworks inherited from colonial scholarship, European periodization, Marxist materialism, nationalist reaction, or postcolonial critique. These approaches have often fragmented India’s civilizational continuity, marginalized indigenous categories of thought, and treated living traditions as secondary to external theoretical models.
 
-With inspiration from thinker such as Shri KM Munshi and Shri Ram Swarup, this research examines whether a distinct “Hindu School of History” can be developed as a rigorous, self-aware, and academically responsible historiographical framework. Such a school would ask whether concepts such as dharma, itihasa, purana, yuga, karma, samskara, civilizational continuity, pilgrimage networks, temple geography, oral memory, and textual tradition can serve as legitimate categories for historical interpretation.
+With inspiration from thinkers such as Shri KM Munshi and Shri Ram Swarup, this research examines whether a distinct “Hindu School of History” can be developed as a rigorous, self-aware, and academically responsible historiographical framework. Such a school would ask whether concepts such as dharma, itihasa, purana, yuga, karma, samskara, civilizational continuity, pilgrimage networks, temple geography, oral memory, and textual tradition can serve as legitimate categories for historical interpretation.

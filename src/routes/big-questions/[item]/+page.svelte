@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
 	import '$lib/styles/lab2.sass';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -43,29 +43,29 @@ let {
 <svelte:window bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
+<Container>
 <section class="key-image">
 	<WaterRipple src={data.icon} class="ripple-motion" {brushSize}/>
 </section>
-<Container narrow={true} scaled={true}>
 	<section class="documents-grid">
 		<div class="box sidearea">
 			{#if data.questions?.length > 0}
-				<div class="labelbox all-items">
+				<div class="all-items">
 					{#each data.questions as item}
 					{#if item.meta.title !== data.title}
-					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="tight grey rem1">{item.meta.title}</p>
-					</a>
+						<a class="project-link sidebar-text" href={item.linkpath}>
+							{item.meta.title}
+						</a>
 					{/if}
 					{/each}
 				</div>
 			{/if}
 		</div>
 		<div class="box mainarea">
-			<div class="textbox borderbot">
+			<div class="labelbox borderbot title-area">
 				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
-				<h1 class="doc-title source-serif">{data.title}</h1>
-				<p class="rem1 grey">{data.description}</p>
+				<h1 class="doc-title source-serif pbot8">{data.title}</h1>
+				<p class="descriptor-text grey pbot8">{data.description}</p>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap">
 						{#each data.tags as tag}
@@ -78,18 +78,19 @@ let {
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
-				<section class="stdbox padded bordertop">
-					<h2 class="source-serif">Related Readings</h2>
+				<section class="box rgap32 ptop32 pbot32 bordertop">
+					<p class="card-title">Related Readings</p>
 					<div class="grid two white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}
 							<a
-								class="blank labelbox whitestone card-padded"
+								class="blank textbox whitestone card-padded"
 								href={item.href}
 								target={item.isExternal ? '_blank' : undefined}
 								rel={item.isExternal ? 'noreferrer' : undefined}
 							>
 							<div class="labelbox">
-								<p class="w500 tight">{item.node.title}</p>
+								<p class="tag-text lgrey tt-u">{item.node.type}</p>
+								<p class="paragraph-text w500 tight">{item.node.title}</p>
 								{#if item.node.description}
 									<p class="descriptor-text grey tight">{item.node.description}</p>
 								{/if}

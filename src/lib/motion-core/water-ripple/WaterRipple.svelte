@@ -45,10 +45,6 @@
 	right: 0
 	bottom: 0
 	z-index: 0
-	img
-		object-fit: cover
-		height: 100%
-		width: 100%
 
 .ripple-inner
 	position: relative
