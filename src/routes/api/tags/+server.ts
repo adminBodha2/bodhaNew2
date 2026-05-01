@@ -1,4 +1,4 @@
-import { tagsWithCountsAlphabetical } from '$lib/utils/localpulls'
+import { tagsWithCountsAlphabetical } from '$lib/utils/blogpulls'
 import { json } from '@sveltejs/kit';
 
 export const GET = async () => {

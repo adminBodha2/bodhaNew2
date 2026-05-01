@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import { fullBlog, tagsWithCounts, writersWithCountsAlphabetical } from '$lib/utils/localpulls';
+import { fullBlog, tagsWithCounts, writersWithCountsAlphabetical } from '$lib/utils/blogpulls';
 import { servingExternal } from '$lib/serving/servingWiki';
 
 export const load: PageLoad = async () => {

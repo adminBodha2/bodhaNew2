@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import libraryItems from '$lib/serving/library-items.json';
-import { fullBlog } from '$lib/utils/localpulls';
+import { fullBlog } from '$lib/utils/blogpulls';
 import type { SearchResult } from '$lib/search/lib-blog-search';
 
 type LibraryRaw = {

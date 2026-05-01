@@ -1,4 +1,4 @@
-import { selectedTag } from '$lib/utils/localpulls';
+import { selectedTag } from '$lib/utils/blogpulls';
 
 export async function load({ params }: { params: { tag: string } }) {
 	const route = params.tag;

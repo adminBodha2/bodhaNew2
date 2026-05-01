@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { fullBlog } from '$lib/utils/localpulls';
+import { fullBlog } from '$lib/utils/blogpulls';
 import wikiData from '$lib/serving/wiki-main.json';
 import libraryItemsData from '$lib/serving/library-items.json';
 

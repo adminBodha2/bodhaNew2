@@ -1,4 +1,4 @@
-import { categoryPosts } from '$lib/utils/localpulls';
+import { categoryPosts } from '$lib/utils/blogpulls';
 
 export async function load({ params }: { params: { post: string } }) {
 	const post = await import(`../${params.post}.md`);

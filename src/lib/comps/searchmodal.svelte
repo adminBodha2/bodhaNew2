@@ -1,7 +1,6 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte';
-	import SearchWorker from '$lib/search/lib-blog-search-worker?worker';
 	import { searchState, toggleSearch } from '$lib/utils/globalstores'; // your existing writable<boolean>
 	import type { SearchResult, SearchKind } from '$lib/search/lib-blog-search';
 	import Close from '$lib/icons/close.svelte';
@@ -13,20 +12,33 @@
 	let filter = $state<SearchKind | 'all'>('all');
 	let results = $state<SearchResult[]>([]);
 	let errorMsg = $state<string | null>(null);
-	let worker: Worker;
+	let worker: Worker | undefined;
 
 	const MIN_QUERY_LENGTH = 3;
 
 	onMount(() => {
-		worker = new SearchWorker();
-		worker.addEventListener('message', (e: MessageEvent) => {
-			const { type, payload } = e.data;
-			if (type === 'ready') status = 'ready';
-			if (type === 'results') results = payload.results;
-			if (type === 'error') errorMsg = payload.message;
-		});
-		worker.postMessage({ type: 'load' });
-		return () => worker.terminate();
+		let cancelled = false;
+
+		async function startWorker() {
+			const SearchWorker = (await import('$lib/search/lib-blog-search-worker?worker')).default;
+			if (cancelled) return;
+
+			worker = new SearchWorker();
+			worker.addEventListener('message', (e: MessageEvent) => {
+				const { type, payload } = e.data;
+				if (type === 'ready') status = 'ready';
+				if (type === 'results') results = payload.results;
+				if (type === 'error') errorMsg = payload.message;
+			});
+			worker.postMessage({ type: 'load' });
+		}
+
+		startWorker();
+
+		return () => {
+			cancelled = true;
+			worker?.terminate();
+		};
 	});
 
 	// open/close in response to the global store
@@ -50,7 +62,7 @@
 			results = [];
 			return;
 		}
-		worker.postMessage({
+		worker?.postMessage({
 			type: 'search',
 			payload: { searchTerm: q, kind: filter === 'all' ? undefined : filter }
 		});

@@ -1,4 +1,4 @@
-import { blogContentPaths, tagsWithCountsAlphabetical, writersWithCountsAlphabetical } from '$lib/utils/localpulls';
+import { blogContentPaths, tagsWithCountsAlphabetical, writersWithCountsAlphabetical } from '$lib/utils/blogpulls';
 import { getAkVargas } from '$lib/ontology';
 import tagData from '$lib/serving/tag-index.json';
 

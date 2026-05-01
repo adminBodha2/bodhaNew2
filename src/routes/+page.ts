@@ -1,4 +1,4 @@
-import { limitBlog } from '$lib/utils/localpulls';
+import { limitBlog } from '$lib/utils/blogpulls';
 import { sixVideos } from '$lib/utils/supabaseClient';
 
 export async function load() {

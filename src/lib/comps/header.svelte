@@ -7,14 +7,13 @@
 	import { menuState, toggleMenuState, toggleSearch, darkTheme } from '$lib/utils/globalstores';
 	import { navLinks } from '$lib/utils/localsends'
 
-	let iW: number;
-	let scro: number;
-	let firstSubroute = '/';
+	let iW = $state(0);
+	let scro = $state(0);
 
-	$: {
+	let firstSubroute = $derived.by(() => {
 		const parts = page.url.pathname.split('/').filter(Boolean);
-		firstSubroute = parts.length > 0 ? '/' + parts[0] : '/';
-	}
+		return parts.length > 0 ? '/' + parts[0] : '/';
+	});
 </script>
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={scro} />
