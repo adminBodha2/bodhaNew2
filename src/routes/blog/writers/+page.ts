@@ -1,8 +1,7 @@
-import { writersWithCountsAlphabetical } from '$lib/utils/localpulls';
+import { allWriters } from '$lib/utils/localsends';
 
 export async function load() {
-	const writers = await writersWithCountsAlphabetical();
-
+	const writers = allWriters
 	return {
 		writers
 	};

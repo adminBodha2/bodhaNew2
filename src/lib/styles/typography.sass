@@ -217,7 +217,7 @@ p, pre, li
 	&.tight
 		line-height: 1.2
 	&.paragraph-text
-		font-size: calc(var(--typeBase))
+		font-size: calc(var(--typeBase) * 0.95)
 	&.descriptor-text
 		font-size: 0.95rem
 	&.tag-text
@@ -246,10 +246,21 @@ p, pre, li
 	@media screen and (min-width: 1025px)
 		font-size: 1.2rem
 		line-height: 1.5
+		&.paragraph-text
+			font-size: calc(var(--typeBase))
 		&.card-title
-			font-size: calc(var(--typeH1) * 1.2)
+			font-size: var(--typeH1)
 		&.tag-text
 			font-size: 0.65rem
+
+a.tag-text
+	font-size: 0.6rem
+	font-family: 'Google Sans Flex', sans-serif
+	font-weight: 450
+	letter-spacing: 0.02rem
+	@media screen and (min-width: 1025px)
+		font-size: 0.65rem
+
 
 .sidebar-text
 	font-size: 1.125rem

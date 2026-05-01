@@ -4,7 +4,7 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - civilizational consciousness
+  - civilizational-consciousness
   - sanskrit
 date: 2026-04-28
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog/build-civilization.webp

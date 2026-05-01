@@ -7,21 +7,23 @@
 	import BlogMenu from '$lib/icons/blog-menu.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
-	type Writer = {
-		writer: string;
-		link: string;
-		image: string;
+	type ExternalPost = {
+		title: string;
+		description: string;
+		route: string;
+		tags: string[];
+		platform: string;
 	};
 
 	let { data }: { data: PageData } = $props();
 	let mobileMenuOpen = $state(false);
 	let firstMenuItem: HTMLButtonElement | undefined = $state();
 
-	let writers = $derived((data.writers ?? []) as Writer[]);
+	let externalPosts = $derived((data.externalPosts ?? []) as ExternalPost[]);
 
-	const title = 'Writers | Bodha';
-	const metaDescription = 'Browse posts at Bodha by writer.';
-	const metaUrl = absoluteUrl('/blog/writers');
+	const title = 'External Posts | Bodha';
+	const metaDescription = 'Selected external essays, interviews, and references from the Bodha reading ecosystem.';
+	const metaUrl = absoluteUrl('/blog/external-posts');
 	const metaImage = absoluteImage('/images/bodhacover.png');
 
 	let jsonld = $derived(
@@ -31,10 +33,10 @@
 					description: metaDescription,
 					url: metaUrl,
 					image: metaImage,
-					items: writers.map((post) => ({
-						name: post.writer ?? 'Writer',
-						url: post.link,
-						image: post.image ?? ''
+					items: externalPosts.map((post) => ({
+						name: post.title ?? 'External post',
+						url: post.route,
+						description: post.description ?? ''
 					}))
 				})
 		)
@@ -72,12 +74,12 @@
 />
 
 <Container>
-	<Heading title="Writers | Bodha Blog"/>
+	<Heading title="Blog | Bodha"/>
 	<div class="textbox blog-wrapper">
 		<div class="row cgap8 rgap8 mwrap xleft selection-row ycenter">
-			<p class="tag-text tt-u" style="margin-right: 1rem; font-weight: bold">Writers</p>
+			<p class="tag-text tt-u" style="margin-right: 1rem; font-weight: bold">External Posts</p>
 			<a class="small-button tt-u" href="/blog">Blog Main</a>
-			<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
+			<a class="small-button tt-u" href="/blog/writers">Writers</a>
 			<a class="small-button tt-u" href="/blog/tags">Tags</a>
 		</div>
 		<div class="mobile-selection-menu">
@@ -106,13 +108,13 @@
 						role="menuitem"
 						onclick={closeMobileMenu}
 					>
-						<span>Writers</span>
+						<span>External Posts</span>
 					</button>
 					<a class="mobile-menu-item" role="menuitem" href="/blog" onclick={closeMobileMenu}>
 						<span>Blog Main</span>
 					</a>
-					<a class="mobile-menu-item" role="menuitem" href="/blog/external-posts" onclick={closeMobileMenu}>
-						<span>External Posts</span>
+					<a class="mobile-menu-item" role="menuitem" href="/blog/writers" onclick={closeMobileMenu}>
+						<span>Writers</span>
 					</a>
 					<a class="mobile-menu-item" role="menuitem" href="/blog/tags" onclick={closeMobileMenu}>
 						<span>Tags</span>
@@ -120,11 +122,19 @@
 				</div>
 			{/if}
 		</div>
-		<div class="grid four white-grid">
-			{#each writers as post}
-				<a class="blank whitestone card-padded" href={post.link}>
-					<img class="avatar" src={post.image} alt={post.writer}/>
-					<p class="paragraph-text tight bold">{post.writer}</p>
+		<div class="grid three white-grid">
+			{#each externalPosts as post}
+				<a class="blank labelbox whitestone card-padded" href={post.route} target="_blank" rel="noreferrer">
+					<p class="tag-text blue tt-u">{post.platform}</p>
+					<p class="paragraph-text tight bold">{post.title}</p>
+					<p class="descriptor-text grey tight">{post.description}</p> 
+					<div class="row wrap self-bottom">
+						{#each post.tags as tag}
+							{#if tag !== ""}
+							<p class="tag-pill tt-u">{tag.replaceAll('-',' ')}</p>
+							{/if}
+						{/each}
+					</div>
 				</a>
 			{/each}
 		</div>
@@ -241,21 +251,5 @@
 		display: none
 	.mobile-selection-menu
 		display: block
-
-.whitestone.card-padded
-	display: flex
-	flex-direction: row
-	align-items: center
-	img
-		object-fit: cover
-		width: 64px
-		height: 64px
-		border-radius: 40px
-	p
-		width: calc(100% - 64px)
-		padding-left: 1rem
-	@media screen and (min-width: 1025px)
-		p
-			width: calc(100% - 80px)
 
 </style>

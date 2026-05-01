@@ -5,6 +5,7 @@
 	import Close from '$lib/icons/close.svelte';
 	import Mobilemenu from '$lib/comps/mobilemenu.svelte';
 	import { menuState, toggleMenuState, toggleSearch, darkTheme } from '$lib/utils/globalstores';
+	import { navLinks } from '$lib/utils/localsends'
 
 	let iW: number;
 	let scro: number;
@@ -28,16 +29,11 @@
 				<img class="rest" src="/images/rest.png" alt="rest" />
 			{/if}
 		</a>
-	{#if iW >= 1025}
+	{#if iW > 1024}
 		<nav class="row ycenter tray">
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/research'} href="/research">Research</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/anveshi'} href="/anveshi">Anveshi</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/big-questions'} href="/big-questions">Big Questions</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/academy'} href="/academy">Academy</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/library'} href="/library">Library</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/blog'} href="/blog">Blog</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/inspiration'} href="/inspiration">Inspiration</a>
-			<a class="nav-link blank tt-u" class:active={firstSubroute === '/team'} href="/team">Team</a>
+			{#each navLinks as link}
+				<a class="nav-link blank tt-u" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
+			{/each}
 			<button class="blank" onclick={toggleSearch}><Search /></button>
 		</nav>
 	{:else}

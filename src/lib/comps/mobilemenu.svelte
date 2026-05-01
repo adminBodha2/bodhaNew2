@@ -3,6 +3,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { cubicOut, expoOut, expoIn } from 'svelte/easing';
 	import { toggleMenuState, menuState } from '$lib/utils/globalstores';
+	import { navLinks } from '$lib/utils/localsends'
 
 	let dialogRef = $state<HTMLDialogElement>();
 
@@ -23,25 +24,13 @@
 		const parts = page.url.pathname.split('/').filter(Boolean);
 		return parts.length > 0 ? '/' + parts[0] : '/';
 	});
-
-	const links = [
-		{ href: '/research', label: 'Research' },
-		{ href: '/big-questions', label: 'Big Questions' },
-		{ href: '/academy', label: 'Academy' },
-		{ href: '/anveshi', label: 'Anveshi' },
-		{ href: '/library', label: 'Library' },
-		{ href: '/blog', label: 'Blog' },
-		{ href: '/inspiration', label: 'Inspiration' },
-		{ href: '/lab', label: 'Lab' },
-		{ href: '/team', label: 'Team' }
-	];
 </script>
 
 <nav class="mm-wrap" in:fly={{ x: 54, duration: 220, easing: cubicOut, opacity: 1 }} out:fly={{ x: 54, duration: 180, easing: expoOut }} aria-label="Mobile navigation">
 	<div class="mm-inner box xright ta-r">
-		{#each links as link}
-			<a class="mm-link blank tt-u" class:active={firstSubroute === link.href} href={link.href} onclick={toggleMenuState}>
-				{link.label}
+		{#each navLinks as link}
+			<a class="mm-link blank tt-u" class:active={firstSubroute === link.link} href={link.link} onclick={toggleMenuState}>
+				{link.title}
 			</a>
 		{/each}
 	</div>

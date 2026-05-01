@@ -114,6 +114,41 @@ export const libExternal = [
 		{ label: 'Archive.org', href: 'https://archive.org/', desc: 'The original and undefeated repository for all kinds of texts. Most documents in our own library are sourced from this archive.' },
 	];
 
+export const navLinks = [
+	{
+		title: 'Research',
+		link: '/research',
+	},
+	{
+		title: 'Anveshi',
+		link: '/anveshi',
+	},
+	{
+		title: 'Big Questions',
+		link: '/big-questions',
+	},
+	{
+		title: 'Academy',
+		link: '/academy',
+	},
+	{
+		title: 'Library',
+		link: '/library',
+	},
+	{
+		title: 'Blog',
+		link: '/blog',
+	},
+	{
+		title: 'Inspiration',
+		link: '/inspiration',
+	},
+	{
+		title: 'Team',
+		link: '/team',
+	}
+]
+
 export const researchAreas = [
 		{
 			title: 'Institutional Design',
@@ -196,3 +231,26 @@ export const teamMembers = [
 			links: []
 		},
 	];
+
+export const allWriters = [
+	{
+		writer: 'Akshay Jha',
+		link: '/blog/writers/Akshay%20Jha',
+		image: '/images/team/AJ.webp',
+	},
+	{
+		writer: 'Amritanshu Pandey',
+		link: '/blog/writers/Amritanshu%20Pandey',
+		image: '/images/team/AP.webp',
+	},
+	{
+		writer: 'Padmavathy Manavazhahan',
+		link: '/blog/writers/Padmavathy%20Manavazhahan',
+		image: '/images/team/PM.webp',
+	},
+	{
+		writer: 'Pankaj Saxena',
+		link: '/blog/writers/Pankaj%20Saxena',
+		image: '/images/team/PS.webp',
+	}
+]
