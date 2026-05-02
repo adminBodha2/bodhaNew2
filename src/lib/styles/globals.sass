@@ -128,6 +128,8 @@ img.fit-image
 	&.ybottom
 		align-items: end
 	@media screen and (min-width: 1025px)
+		&.fitted-four
+			grid-template-columns: repeat(4, 1fr)
 		&.five
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 		&.four
@@ -150,6 +152,8 @@ img.fit-image
 		&.four.mid2
 			grid-template-columns: 1fr 1fr
 	@media screen and (max-width: 1024px)
+		&.fitted-four
+			grid-template-columns: 1fr
 		&.four, &.three, &.two, &.five
 			grid-template-columns: 1fr
 		&.four.stay2, &.three.stay2, &.two.stay2

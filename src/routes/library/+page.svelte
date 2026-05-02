@@ -137,7 +137,7 @@
 							{#if item.link === "In Copyright" || item.link === null}
 							<p class="tag-text tt-u w500 themed">IN COPYRIGHT</p>
 							{:else}
-							<a class="tag-text tt-u linked" href={item.link}><b>See Text →</b></a>
+							<a class="tag-text tt-u linked" href={item.link} target="_blank" rel="noreferrer"><b>See Text →</b></a>
 							{/if}
 						</div>
 					{/each}

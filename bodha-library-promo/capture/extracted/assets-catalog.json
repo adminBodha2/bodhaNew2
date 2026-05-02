@@ -1,0 +1,342 @@
+[
+  {
+    "url": "https://www.bodharesearch.in/images/rotator.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "rotator",
+    "description": "rotator",
+    "sectionClasses": "row ycenter svelte-12qhfyh",
+    "aboveFold": true
+  },
+  {
+    "url": "https://www.bodharesearch.in/images/rest.png",
+    "type": "Image",
+    "contexts": [
+      "img[src]"
+    ],
+    "notes": "rest",
+    "description": "rest",
+    "sectionClasses": "row ycenter svelte-12qhfyh",
+    "aboveFold": true
+  },
+  {
+    "url": "https://www.bodharesearch.in/images/key-bol.webp",
+    "type": "Image",
+    "contexts": [
+      "img[src]",
+      "meta[og:image]",
+      "meta[twitter:image]"
+    ],
+    "notes": "Page hero image",
+    "description": "Page hero image",
+    "nearestHeading": "Bodha Open Library",
+    "sectionClasses": "svelte-12qhfyh",
+    "aboveFold": true
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/assets/favicon.DTxN2n8q.svg",
+    "type": "Icon",
+    "contexts": [
+      "link[rel=\"icon\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/nodes/0.B5tHAOvK.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/CR32R5lI.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/DItT5Qb4.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/DyHRDYry.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/BV-T_JHg.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/CLk4mp2J.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/DNkY4RWo.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/FiHz659r.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/B8btvOsV.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/C-obk9uV.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/ZA_JNS3u.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/BnwqdHP3.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/a7tlzfgd.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/Ceb5Ccmm.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/CIlDbc21.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/nodes/1.BQJPRand.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/D6xLYkDy.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/CW_oH3sP.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/C2s-Apxm.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/nodes/32.JbzVl2hR.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/6ef1nsUc.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/mpx3DrgY.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/DFUV55Gd.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/ScEBqPlc.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/BC4gfTF9.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/XffLfPmU.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/_app/immutable/chunks/D0A5ya_E.js",
+    "type": "Other",
+    "contexts": [
+      "link[rel=\"preload\"]"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/SourceSerif4.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/SourceSerif4-Italic.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/EBGaramond.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/EBGaramond-Italic.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/Newsreader.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/Newsreader-Italic.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/GoogleSans.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/GoogleSans-Italic.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/fonts/GoogleSansFlex.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  },
+  {
+    "url": "https://www.bodharesearch.in/remixicon.woff2",
+    "type": "Font",
+    "contexts": [
+      "css url()"
+    ],
+    "notes": null
+  }
+]

@@ -12,6 +12,7 @@
 
 	let blogs = $derived(data.blogs ?? []);
 	let vids = $derived(data.vids ?? []);
+	let latestItems = $derived(data.latestItems??[]);
 
 	const title = 'Bodha - Cultural Think Tank';
 	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.';
@@ -46,6 +47,21 @@
 		</div>
 	</div>
 
+<!--------latest---------------------------------------------------------------------->
+	{#if latestItems}
+	<div class="stdbox padded bordertop" id="latest">
+		<Title text="Latest at Bodha"/>
+		<div class="grid fitted-four tight">
+			{#each latestItems as item}
+				<a class="blank labelbox card-padded and-bordered" href={item.link}>
+					<p class="card-title tight source-serif a-hover">{item.title}</p>
+					<p class="descriptor-text grey tight borderbot pbot8">{item.description}</p>
+					<p class="tag-pill tt-u self-bottom">{item.badge}</p>
+				</a>
+			{/each}
+		</div>
+	</div>
+	{/if}
 
 <!------------blog articles------------------------------------------------------------>
 

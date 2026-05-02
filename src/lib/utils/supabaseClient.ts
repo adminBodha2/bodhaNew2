@@ -207,3 +207,14 @@ export async function bharata1000(group:string){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function latest(){
+	const { data, error } = await supabase
+	.from('db-latest')
+	.select()
+	.neq('show', false)
+	.order('id', {ascending:false})
+	.limit(4)
+	if (error) throw new Error(error.message)
+	return data	
+}
