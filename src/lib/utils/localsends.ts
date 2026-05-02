@@ -259,3 +259,11 @@ export const allWriters = [
 		image: '/images/team/PS.webp',
 	}
 ]
+
+export const academyScholars = [
+	{
+		name: 'Arjun Singh Thakur',
+		photo: '/images/scholars/arjun-thakur.webp',
+		description: 'Arjun Singh Thakur is a scholar specializing in Sanskrit Sahitya and Indian Knowledge Systems (IKS). He has studied Sanskrit Literature from Central Sanskrit University and earned Acharya (M.A.) degree. He has qualified UGC-NET in Sanskrit Traditional Subjects and Indian Knowledge Systems (IKS). He has worked at Centre for Indic Studies at Indus University, Ahmedabad where he was recognized for his expertise in researching, promoting and disseminating Indian Knowledge Systems (IKS) including ancient wisdom in philosophy, history, and multidisciplinary Indic traditions. Known for his ability to bridge traditional knowledge with contemporary contexts, he possesses proficiency in Hindi, English, and Sanskrit. He has interests in studying Hindu Darshanas, Dharmashastras and Indic Arts and Aesthetics traditions.'
+	}
+]

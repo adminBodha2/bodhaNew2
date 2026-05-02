@@ -1,6 +1,7 @@
 <svelte:options runes={true} />
 <script lang="ts">
 
+	import type { PageData } from './$types'
 	import Container from '$lib/comps/container.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -8,6 +9,14 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 
+	type Scholar = {
+		name?:string;
+		photo?:string;
+		description?:string
+	}
+
+	let { data }: { data: PageData } = $props();
+	let posts = $derived((data.scholars ?? []) as Scholar[]);
 	const title = 'Academy | Bodha';
 	const metaDescription = 'Training scholars in Indic research methodology and anthropology. Introducing the highest Hindu ideas and traditions to the next generation.';
 	const metaUrl = absoluteUrl('/academy');
@@ -60,9 +69,38 @@
 			</div>
 		</div>
 	</div>
+	<div class="stdbox padded bordertop">
+		<Title text="Academy Scholars"/>
+		<div class="grid two tight right">
+			{#each posts as item}
+				<div class="grid two left scholar-card">
+					<div class="up">
+						<img src={item.photo} alt={item.name}/> 
+					</div>
+					<div class="labelbox down card-padded">
+						<p class="paragraph-text bold tight">{item.name}</p>
+						<p class="descriptor-text grey">{item.description}</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
 </Container>
 
 <style lang="sass">
+
+.scholar-card
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+	@media screen and (max-width: 1024px)
+		.up
+			padding: 0.5rem
+		img
+			height: 128px
+			width: 128px
+			border-radius: 128px
 
 .reading-block
 	background: var(--color-back)
