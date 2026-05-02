@@ -6,6 +6,7 @@
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
+	let bookItems = $derived(data.books??[]);
 
 	let title = $derived('Library Path | ' + data.title);
 	let metaDescription = $derived(data.description);
@@ -41,7 +42,17 @@
 	<div class="stdbox padded-ontop">
 		<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Open Library" item2Link="/library" showT={true} title={data.title} showD={true} desc={data.description}/>
 		<div class="grid four midgaps">
-			<data.content />
+			{#each bookItems as item}
+				<a class="blank box labelbox" href={item.link}>
+					<p class="w500 a-hover tight">{item.text}</p>
+					<p class="descriptor-text grey">{item.description}</p>
+					{#if item.author && item.author !== ""}
+					<div class="self-bottom bordertop ptop8">
+						<p class="tag-text tt-u">{item.author}</p>
+					</div>
+					{/if}
+				</a>
+			{/each}
 		</div>
 	</div>
 </Container>

@@ -262,18 +262,22 @@ button.conceptbuttons
 
 .filter-button
 	font-size: 0.9rem
-	font-weight: 400
-	padding: 5px 14px
-	border-radius: 15px
-	border: 1px solid #CBD5E0
-	background: #E2E8F0
-	color: #718096
+	font-family: 'Google Sans Flex', sans-serif
+	text-transform: uppercase
+	font-weight: 450
+	padding: 8px 20px
+	border-radius: 3px
+	border: var(--border-dark)
+	background: var(--color-theme-7)
+	color: var(--color-grey-4)
 	cursor: pointer
-	transition: all 0.15s ease
+	transition: all 0.25s var(--cz-easeOutExpo)
 	&:hover
-		background: var(--color-theme-3)
+		background: var(--color-theme-2)
 		color: var(--color-back)
-		border: 1px solid var(--color-theme-3)
+		border: 1px solid var(--color-theme-2)
+		box-shadow: 2px 4px 6px rgba(0,0,0,0.3)
+		transform: translateY(-2px)
 	&:active
 		transform: scale(1.05)
 	&.active
@@ -477,6 +481,17 @@ button.conceptbuttons
 		text-transform: uppercase
 		text-align: left
 		padding: 0.75rem 0.5rem
+		font-weight: 450
+		border-bottom: var(--border-dark)
+	button.dropped-link
+		font-size: 1rem
+		text-transform: capitalize
+		text-align: left
+		padding: 0.75rem 0.5rem
+		border-top: none
+		border-left: none
+		border-right: none
+		background: none
 		font-weight: 450
 		border-bottom: var(--border-dark)
 

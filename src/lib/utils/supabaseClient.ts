@@ -196,3 +196,14 @@ export async function anveshiTestimonials(){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+
+export async function bharata1000(group:string){
+	const { data, error } = await supabase
+	.from('db-bharata1000')
+	.select()
+	.eq('section', group)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data	
+}

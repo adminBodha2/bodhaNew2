@@ -93,14 +93,14 @@ export const libCategories = [
 
 export const libPaths = [
 		{ label: 'Arts, Performance, and Aesthetics', href: '/library/paths/arts-performance-and-aesthetics', desc: 'Sources on music, drama, performance, rasa, kala, and the theory and practice of artistic experience.' },
-		{ label: 'Darshanas and Philosophy', href: '/library/paths/darshana-and-philosophy', desc: 'Works on the major schools of Indian philosophy, including Nyaya, Vaisheshika, Sankhya, Yoga, Mimamsa, Vedanta, and Shaiva thought.' },
+		{ label: 'Darshanas and Philosophy', href: '/library/paths/darshanas-and-philosophy', desc: 'Works on the major schools of Indian philosophy, including Nyaya, Vaisheshika, Sankhya, Yoga, Mimamsa, Vedanta, and Shaiva thought.' },
 		{ label: 'Dharma, Ethics, Law', href: '/library/paths/dharma-ethics-and-law', desc: 'Texts dealing with duty, moral order, legal reasoning, social norms, ritual obligations, and the dharmashastra tradition.' },
-		{ label: 'Hindu Overview', href: '/library/paths/hindu-overviews', desc: 'Broad introductory works that summarize Hindu tradition as a whole, including its beliefs, practices, worldview, and civilizational continuity.' },
+		{ label: 'Hinduism Overview', href: '/library/paths/hinduism-overview', desc: 'Broad introductory works that summarize Hindu tradition as a whole, including its beliefs, practices, worldview, and civilizational continuity.' },
 		{ label: 'History, Polity, and Society', href: '/library/paths/history-polity-and-society', desc: 'Works on political thought, governance, social structure, chronicles, institutions, and historical memory in Indian civilization.' },
 		{ label: 'Indian Knowledge Systems', href: '/library/paths/indian-knowledge-systems', desc: 'Texts on traditional systems of organized knowledge, including science, mathematics, technical disciplines, applied learning, and knowledge classification.' },
 		{ label: 'Indology and Civilizational Critique', href: '/library/paths/indology-and-civilizational-critique', desc: 'Modern critical works examining Indology, orientalism, academic method, and the ideological framing of Indian traditions and civilization.' },
 		{ label: 'Language, Logic, Sanskrit', href: '/library/paths/language-logic-and-sanskrit', desc: 'Works on Sanskrit language, grammar, semantics, lexicography, linguistic philosophy, and systems of logical reasoning.' },
-		{ label: 'Puranic and Itihasic Literature', href: '/library/paths/puranic-and-itihasa-literature', desc: 'Narrative and sacred-historical texts such as the Puranas, epics, and story literature preserving cosmology, myth, and sacred geography.' },
+		{ label: 'Puranic and Itihasic Literature', href: '/library/paths/puranic-and-itihasic-literature', desc: 'Narrative and sacred-historical texts such as the Puranas, epics, and story literature preserving cosmology, myth, and sacred geography.' },
 		{ label: 'Vedic and Upanishadic Texts', href: '/library/paths/vedic-and-upanishadic-texts', desc: 'Sources centered on the Vedas, Rigvedic interpretation, and Upanishads, especially themes of revelation, ritual, self, brahman, and liberation.' },
 	];
 
