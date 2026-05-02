@@ -81,7 +81,7 @@ export const publications = [
 
 export const libCategories = [
 		{ label: 'Essentials', href: '/library/categories/essentials', type: 'essentials', forLink: 'essentials', desc: 'Foundational readings for entering the civilisational and philosophical landscape of Bodha.' },
-		{ label: 'Aryan Issue', href: '/library/categories/aryan-issue', type: 'aryan-issue', forLink: 'aryanissue', desc: 'Texts on the Aryan debate, migration theory, archaeology, philology, and civilizational argument.' },
+		{ label: 'Aryan Issue', href: '/library/categories/aryan-issue', type: 'aryan-issue', forLink: 'aryan-issue', desc: 'Texts on the Aryan debate, migration theory, archaeology, philology, and civilizational argument.' },
 		{ label: 'Darshanas', href: '/library/categories/darshanas', type: 'darshana', forLink: 'darshana', desc: 'Primary and secondary works on Indian philosophical systems, debates, and metaphysical frameworks.' },
 		{ label: 'Indian Knowledge Systems', href: '/library/categories/iks', type: 'iks', forLink: 'iks', desc: 'Works on organised traditions of knowledge, method, science, language, and pedagogy.' },
 		{ label: 'Scriptural', href: '/library/categories/scriptural', type: 'scriptural', forLink: 'scriptural', desc: 'Sources in shruti, smriti, puranic, and sacred-historical traditions.' },

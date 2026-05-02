@@ -62,14 +62,16 @@
 					<a class="foot-link blank white" href="/blog">Blog</a>
 					<a class="foot-link blank white" href="/library">Open Library</a>
 					<a class="foot-link blank white" href="/explorer">Explorer</a>
+					<a class="foot-link blank white" href="/newsletter">Newsletter</a>
 				</div>
 			</div>
 			<div class="foot-col">
-				<p class="tag-text light-footer tt-u">Bodha</p>
+				<p class="tag-text light-footer tt-u">Other</p>
 				<div class="foot-links">
 					<a class="foot-link blank white" href="/about">About</a>
 					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
 					<a class="foot-link blank white" href="/lab">Lab</a>
+					<a class="foot-link blank white" href="/aryavarta">Aryavarta</a>
 				</div>
 			</div>
 		</div>

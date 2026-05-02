@@ -40,7 +40,7 @@
 				{/each}
 			</div>
 		</Crumb>
-		<div class="box std reader">
+		<div class="box std pdf-reader">
 			<PDFReader src={data.linkcloud} title={data.name} height="82vh" />
 		</div>
 	</div>
@@ -58,13 +58,3 @@
 		</div>
 	{/if}
 </Container>
-
-<style lang="sass">
-
-.reader
-	align-items: center
-	padding: 2rem
-	@media screen and (max-width: 1024px)
-		padding: 0
-
-</style>

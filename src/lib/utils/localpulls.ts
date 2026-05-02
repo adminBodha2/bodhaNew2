@@ -190,3 +190,40 @@ export function replaceHyphen(thisTag:string){
 	  .sort((a, b) => a.meta.title.localeCompare(b.meta.title));
 	return groupedPosts
   }
+
+
+export async function newsletter(){
+	const posts = import.meta.glob('/src/routes/newsletter/*.md')
+	const allfiles = { ...posts };
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async ([path, resolver]) => {
+			// @ts-expect-error//why
+			const { metadata } = await resolver()
+			const pathitem = path.slice(11, -3)
+			return {
+				meta: metadata,
+				linkpath: pathitem
+			};
+		})	
+	)
+	return eachfiled
+}
+
+export async function scrollsofA(){
+	const posts = import.meta.glob('/src/routes/aryavarta/*.md')
+	const allfiles = { ...posts };
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async ([path,resolver]) => {
+			//@ts-expect-error//why
+			const { metadata } = await resolver()
+			const pathitem = path.slice(11, -3)
+			return {
+				meta: metadata,
+				linkpath: pathitem,
+			};
+		})
+	)
+	return eachfiled.sort((a, b) => b.meta.id - a.meta.id);
+}

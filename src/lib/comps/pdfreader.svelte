@@ -39,25 +39,13 @@
 		scroll.provides?.setScrollStrategy(strategy);
 	}
 
-	// convert Google Drive → direct PDF
-	function driveToPdfUrl(url: string) {
-		const fileMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
-		const idMatch = url.match(/[?&]id=([^&]+)/);
-
-		const id = fileMatch?.[1] || idMatch?.[1];
-
-		if (!id) return url;
-
-		return `https://drive.google.com/uc?export=media&id=${id}`;
-	}
-
-	const finalSrc = $derived(driveToPdfUrl(src));
+	const pdfUrl = $derived(src);
 
 	const engine = usePdfiumEngine();
 
 	const plugins = $derived([
 		createPluginRegistration(DocumentManagerPluginPackage, {
-			initialDocuments: [{ url: finalSrc }]
+			initialDocuments: [{ url: pdfUrl }]
 		}),
 		createPluginRegistration(ViewportPluginPackage),
 		createPluginRegistration(ScrollPluginPackage, {
@@ -76,9 +64,6 @@
 		createPluginRegistration(RotatePluginPackage)
 	]);
 
-	$effect(() => {
-		console.log('PDF finalSrc:', finalSrc);
-	});
 </script>
 
 {#snippet Toolbar(docId: string)}
@@ -103,7 +88,7 @@
 			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Vertical)}><Vertical/></button>
 			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Horizontal)}><Horizontal/></button>
 			<button class="pdf-btn" onclick={() => document.querySelector('.reader')?.requestFullscreen()}><Full/></button>
-		<a class="pdf-btn" href={finalSrc} target="_blank" rel="noreferrer"><External/></a>
+		<a class="pdf-btn" href={pdfUrl} target="_blank" rel="noreferrer"><External/></a>
 		</div>
 	</div>
 {/snippet}
