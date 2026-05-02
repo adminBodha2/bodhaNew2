@@ -276,7 +276,7 @@
 
 #course-header
 	@media screen and (min-width: 1025px)
-		height: 100vh
+		min-height: 100vh
 		padding-top: 5rem
 		padding-bottom: 5rem
 

@@ -49,6 +49,16 @@
 				Hindu society, leading to narrative building which will aid the reestablishment of a correct Hindu worldview rooted in facts and history.
 			</p>
 		</div>
+		<div class="stdbox bordertop ptop32">
+			<div class="labelbox card-padded and-bordered">
+			<p class="bold badger">The Big Question in 2026</p>
+			<div class="questionbox row mcol rgap8 cgap8">
+				<img class="icon" src="/images/bgicons/diversity.png" alt="big-question icon"/>
+				<p class="headline">Is Hindu Unity Compatible With Indian Diversity?</p>
+			</div>
+			<p class="paragraph-text ptop8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
+			</div>
+		</div>
 		{#if questions && questions.length > 0}
 			<div class="grid  three tight of-questions">
 				{#each questions as item, i}
@@ -75,6 +85,25 @@
 </Container>
 
 <style lang="sass">
+
+img.icon
+	object-fit: contain
+	width: 32px
+	height: 32px
+
+.badger
+	background: var(--color-know-2)
+	width: max-content
+	padding: 0.5rem 1rem
+	border: var(--border-dark)
+
+.questionbox
+	background: var(--color-know)
+	padding: 1rem
+	border: 1px solid #d7d7d7
+	p
+		font-weight: bold
+		font-size: 1.33rem
 
 .reading-block
 	background: var(--color-back)
