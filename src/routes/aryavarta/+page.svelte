@@ -54,6 +54,7 @@
 	img
 		object-fit: cover
 		width: 100%
+		height: 200px
 		@media screen and (min-width: 1025px)
 			height: 280px
 
