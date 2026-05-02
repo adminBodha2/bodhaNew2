@@ -64,7 +64,7 @@
 			<p class="paragraph-text">All texts in the library are sourced from the public domain. If any text violates copyright, please write to us at <span class="blue">sitemaster@bodharesearch.in</span>. All works compiled under 'Aryan Issue' are externally hosted/published papers, and links will open in a new tab.</p>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox padded bordertop" id="categories">
 		<div class="grid white-grid four">
 			{#each libCategories as cat, i}
 				<a class="card-padded labelbox whitestone" href={cat.href}>
@@ -79,7 +79,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox padded bordertop" id="reading-paths">
 		<Title text="Curated Reading Paths" />
 		<div class="grid white-grid four">
 			{#each libPaths as path, i}
@@ -90,7 +90,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox padded bordertop" id="bharata1000">
 		<div class="textbox">
 			<Title text="Bharata1000" />
 			<div class="grid two tightrows">
@@ -144,7 +144,7 @@
 				</div>
 			{/if}
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox padded bordertop" id="other-resources">
 		<Title text="External Resources" />
 		<div class="white-grid grid four">
 			{#each libExternal as res}
