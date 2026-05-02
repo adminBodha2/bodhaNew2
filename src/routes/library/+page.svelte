@@ -134,7 +134,7 @@
 							{/if}
 							</div>
 							<p class="descriptor-text grey tight">{item.description}</p>
-							{#if item.link === "In Copyright"}
+							{#if item.link === "In Copyright" || item.link === null}
 							<p class="tag-text tt-u w500 themed">IN COPYRIGHT</p>
 							{:else}
 							<a class="tag-text tt-u linked" href={item.link}><b>See Text →</b></a>
