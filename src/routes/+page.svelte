@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { DEFAULT_IMAGE, SITE_URL, organizationJsonLd, stringifyJsonLd, websiteJsonLd } from '$lib/utils/seo';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -26,8 +26,8 @@
 
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded ycenter" id="first">
+<Container>
+	<div class="stdbox stdpad ycenter" id="first">
 		<div class="home-panel box">
 			<div class="box elembox">
 				<h1 class="source-serif width50"><span class="blue">Bodha</span> is a think tank and research group,</h1>
@@ -49,7 +49,7 @@
 
 <!--------latest---------------------------------------------------------------------->
 	{#if latestItems}
-	<div class="stdbox padded bordertop" id="latest">
+	<div class="stdbox stdpad bordertop" id="latest">
 		<Title text="Latest at Bodha"/>
 		<div class="grid fitted-four tight">
 			{#each latestItems as item}
@@ -66,7 +66,7 @@
 <!------------blog articles------------------------------------------------------------>
 
 	{#if blogs.length > 0}
-		<div class="stdbox padded bordertop sideline" id="blog posts">
+		<div class="stdbox stdpad bordertop sideline" id="blog posts">
 			<div class="row xbetween ycenter rgap16 mcol mleft">
 				<Title text="essays and articles" />
 				<a class="small-button themed" href="/blog">See All</a>
@@ -101,7 +101,7 @@
 
 <!------------publications------------------------------------------------------------>
 
-	<div class="stdbox padded bordertop sideline" id="publications">
+	<div class="stdbox stdpad bordertop sideline" id="publications">
 		<Title text="publications" />
 		<div class="grid two tight">
 			{#each publications as pub}
@@ -126,7 +126,7 @@
 <!-----------videos------------------------------------------------------------>
 
 	{#if vids.length > 0}
-		<div class="stdbox padded bordertop">
+		<div class="stdbox stdpad bordertop">
 			<div class="row xbetween ycenter rgap16 mcol mleft">
 				<Title text="recent videos" />
 				<a class="small-button themed" href="/videos">All Videos</a>

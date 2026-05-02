@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { page } from '$app/state';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
@@ -42,9 +42,9 @@ let metaDescription = $derived(descriptions[data.item] ?? `${data.title} at Bodh
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title={data.title}/>
+<Container>
+	<div class="stdbox stdpad header-margin is-last">
+	<Crumb showT={true} title={data.title}/>
 	<article class="site-docs width70">
 		<data.content/>
 	</article>

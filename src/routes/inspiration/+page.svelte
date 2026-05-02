@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
@@ -43,19 +43,19 @@
 />
 
 <Parallax imageLink="/images/key-inspiration.webp" isClass="is50" />
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Inspiration" showD={true} desc="Thinkers and schools of thought that continue to shape our method, our questions, and the intellectual company we keep."/>
+<Container>
+	<div class="stdbox stdpad is-first">
+		<Crumb showT={true} title="Inspiration" showD={true} desc="Thinkers and schools of thought that continue to shape our method, our questions, and the intellectual company we keep."/>
 		<div class="box">
 			<p class="paragraph-text source-serif italic">"The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge."</p>
 			<p class="descriptor-text lgrey tt-u" style="margin-top: 4px">Sri Aurobindo</p>
-			<div class="grid two tightrows ptop32">
+			<div class="grid two tightrows ptop32 pbot32">
 				<p class="paragraph-text">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world.</p>
 				<p class="paragraph-text">We do not treat these figures and schools as authorities to be followed uncritically, but as companions in inquiry. Some agree, some sharply disagree, and that tension is part of what keeps the page alive.</p>
 			</div>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad bordertop">
 		{#if schools.length > 0}
 		<Title text="Schools of Thought"/>
 		<div class="grid four ultra stay2">
@@ -71,7 +71,7 @@
 		{/if}
 	</div>
 		{#if thinkers.length > 0}
-			<div class="stdbox padded bordertop">
+			<div class="stdbox stdpad is-last bordertop">
 			<Title text="Thinkers"/>
 				<div class="grid four ultra stay2">
 					{#each thinkers as item}

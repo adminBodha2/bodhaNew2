@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { teamMembers } from '$lib/utils/localsends';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
@@ -46,10 +46,9 @@
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-<div class="box std padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization."/>
-
+<Container>
+<div class="stdbox stdpad header-margin is-last">
+	<Crumb showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization."/>
 		<div class="grid three standard-grid">
 			{#each teamMembers as member}
 			<div class="member-card">
@@ -74,7 +73,6 @@
 			</div>
 			{/each}
 		</div>
-
 </div>
 </Container>
 

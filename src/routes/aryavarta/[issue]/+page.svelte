@@ -35,8 +35,8 @@
 <section class="key-image">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
 </section>
-	<div class="box padded">
-		<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Scrolls of Aryavarta" item2Link="/aryavarta" showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
+	<div class="box stdpad is-first is-last">
+		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
 			<div class="box">
 				<p class="descriptor-text grey">Vol. {data.volume}, Issue {data.issue} | {data.date}</p>
 			</div>

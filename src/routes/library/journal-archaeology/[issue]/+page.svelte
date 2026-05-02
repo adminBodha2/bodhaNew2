@@ -2,7 +2,7 @@
 
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import '$lib/styles/lab2.sass';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -11,30 +11,29 @@
 
 </script>
 
-<Container narrow={true} scaled={true}>
+<Container>
 	<section class="documents-grid">
 		<div class="box sidearea">
 			{#if data.groups?.length > 0}
-				<div class="box all-items">
+				<div class="all-items">
 					{#each data.groups as item}
 					{#if item.meta.title !== data.title}
-					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="rem1 tight grey">{item.meta.title}</p>
+					<a class="project-link sidebar-text" href={item.linkpath}>
+						{item.meta.title}
 					</a>
 					{/if}
 					{/each}
 				</div>
 			{/if}
 		</div>
-		<div class="box mainarea">
-			<div class="textbox borderbot">
-				<Crumb item1="Bodha" item1Link="/" show2={true} item2="Indian Journal of Archaeology" item2linked={true} item2Link="/library/journal-archaeology"/>
-				<h1 class="doc-title source-serif">{data.title}</h1>
+		<div class="stdbox mainarea stdpad is-last header-margin">
+			<div class="labelbox title-area">
+				<Crumb showT={true} title={data.title}/>
 			</div>
-			<article class="wiki-body">
+			<div class="classic-document">
 				<data.content />
-			</article>
-			<div class="grid two white-grid">
+			</div>
+			<div class="grid two white-grid" style="margin-top: -1rem">
 				{#each data.relatedArticles as item}
 					<div class="box card-padded whitestone">
 						<p class="citation-big lgrey tt-u">{item.pubref}</p>
@@ -50,14 +49,7 @@
 
 <style lang="sass">
 
-
-
 .mainarea
 	padding-bottom: 2rem
-	.textbox.borderbot
-		margin-top: 2rem
-
-.wiki-body
-	padding-top: 2rem
 
 </style>

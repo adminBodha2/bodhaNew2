@@ -3590,7 +3590,7 @@
     "id": "book:bol-cry-hindutva-how-rhetoric-trumps-intellect",
     "type": "book",
     "title": "Cry Hindutva How Rhetoric Trumps Intellect",
-    "slug": "bol-cry-hindutva-how-rhetoric-trumps-intellect",
+    "slug": "cry-hindutva-how-rhetoric-trumps-intellect",
     "description": "Critical intervention on contemporary Hindutva rhetoric and the costs of replacing scholarship with slogans.",
     "tags": [
       "hindutva-debate",
@@ -3601,7 +3601,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Cry%20Hindutva%20How%20Rhetoric%20Trumps%20Intellect.pdf",
+      "route": "/library/books/cry-hindutva-how-rhetoric-trumps-intellect",
       "source": "item"
     },
     "system": {
@@ -3613,7 +3613,7 @@
     "id": "book:bol-german-indology-aryanism-and-anti-semitism",
     "type": "book",
     "title": "German Indology Aryanism and Anti Semitism",
-    "slug": "bol-german-indology-aryanism-and-anti-semitism",
+    "slug": "german-indology-aryanism-and-anti-semitism",
     "description": "Study of German Indology and its entanglement with racial theory, Aryanism, and anti-Semitism.",
     "tags": [
       "german-indology",
@@ -3624,7 +3624,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20German%20Indology%20Aryanism%20and%20Anti%20Semitism.pdf",
+      "route": "/library/books/german-indology-aryanism-and-anti-semitism",
       "source": "item"
     },
     "system": {
@@ -3636,7 +3636,7 @@
     "id": "book:bol-greeks-in-india",
     "type": "book",
     "title": "Greeks in India",
-    "slug": "bol-greeks-in-india",
+    "slug": "greeks-in-india",
     "description": "Historical study of Greek presence in India and the cultural exchanges that followed.",
     "tags": [
       "indo-greek-contact",
@@ -3647,7 +3647,7 @@
       "author": [
         "Demettios Vasilliades"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Greeks%20in%20India.pdf",
+      "route": "/library/books/greeks-in-india",
       "source": "item"
     },
     "system": {
@@ -3659,7 +3659,7 @@
     "id": "book:bol-heidegger-and-the-inquiry-into-technology",
     "type": "book",
     "title": "Heidegger and the Inquiry into Technology",
-    "slug": "bol-heidegger-and-the-inquiry-into-technology",
+    "slug": "heidegger-and-the-inquiry-into-technology",
     "description": "Essay using Heidegger to interrogate technology, modernity, and civilizational critique.",
     "tags": [
       "heidegger",
@@ -3670,7 +3670,7 @@
       "author": [
         "Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Heidegger%20and%20the%20Inquiry%20into%20Technology.pdf",
+      "route": "/library/books/heidegger-and-the-inquiry-into-technology",
       "source": "item"
     },
     "system": {
@@ -3682,7 +3682,7 @@
     "id": "book:bol-hindu-studies-in-a-secular-academy",
     "type": "book",
     "title": "Hindu Studies in a Secular Academy",
-    "slug": "bol-hindu-studies-in-a-secular-academy",
+    "slug": "hindu-studies-in-a-secular-academy",
     "description": "Reflection on the institutional framing of Hindu studies and the limits of secular academic categories.",
     "tags": [
       "academic-method",
@@ -3693,7 +3693,7 @@
       "author": [
         "Vishwa Adluri"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindu%20Studies%20in%20a%20Secular%20Academy.pdf",
+      "route": "/library/books/hindu-studies-in-a-secular-academy",
       "source": "item"
     },
     "system": {
@@ -3705,7 +3705,7 @@
     "id": "book:bol-hindu-temples-vol-1",
     "type": "book",
     "title": "Hindu Temples Vol 1",
-    "slug": "bol-hindu-temples-vol-1",
+    "slug": "hindu-temples-vol-1",
     "description": "Documentation and interpretation of the destruction, transformation, and historical memory of Hindu temples.",
     "tags": [
       "temple-destruction",
@@ -3716,7 +3716,7 @@
       "author": [
         "Sita Ram Goel"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindu%20Temples%20Vol%201.pdf",
+      "route": "/library/books/hindu-temples-vol-1",
       "source": "item"
     },
     "system": {
@@ -3728,7 +3728,7 @@
     "id": "book:bol-hindu-temples-vol-2",
     "type": "book",
     "title": "Hindu Temples Vol 2",
-    "slug": "bol-hindu-temples-vol-2",
+    "slug": "hindu-temples-vol-2",
     "description": "Continuation of the documentary record on Hindu temples, iconoclasm, and historical memory.",
     "tags": [
       "temple-destruction",
@@ -3739,7 +3739,7 @@
       "author": [
         "Sita Ram Goel"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindu%20Temples%20Vol%202.pdf",
+      "route": "/library/books/hindu-temples-vol-2",
       "source": "item"
     },
     "system": {
@@ -3751,7 +3751,7 @@
     "id": "book:bol-how-i-became-a-hindu",
     "type": "book",
     "title": "How I Became a Hindu",
-    "slug": "bol-how-i-became-a-hindu",
+    "slug": "how-i-became-a-hindu",
     "description": "Personal and polemical reflection on religious identity, conviction, and civilizational self-understanding.",
     "tags": [
       "religious-identity",
@@ -3762,7 +3762,7 @@
       "author": [
         "Sita Ram Goel"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20How%20I%20Became%20a%20Hindu.pdf",
+      "route": "/library/books/how-i-became-a-hindu",
       "source": "item"
     },
     "system": {
@@ -3774,7 +3774,7 @@
     "id": "book:bol-jews-and-hindus-in-indology",
     "type": "book",
     "title": "Jews and Hindus in Indology",
-    "slug": "bol-jews-and-hindus-in-indology",
+    "slug": "jews-and-hindus-in-indology",
     "description": "Comparative study of how Jewish and Hindu traditions have been handled within modern Indology.",
     "tags": [
       "comparative-reception",
@@ -3785,7 +3785,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Jews%20and%20Hindus%20in%20Indology.pdf",
+      "route": "/library/books/jews-and-hindus-in-indology",
       "source": "item"
     },
     "system": {
@@ -3797,7 +3797,7 @@
     "id": "book:bol-methods-and-context-rethinking-religion",
     "type": "book",
     "title": "Methods and Context Rethinking Religion",
-    "slug": "bol-methods-and-context-rethinking-religion",
+    "slug": "methods-and-context-rethinking-religion",
     "description": "Methodological critique of dominant religious-studies frameworks and their application to India.",
     "tags": [
       "methodology",
@@ -3808,7 +3808,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Methods%20and%20Context%20Rethinking%20Religion.pdf",
+      "route": "/library/books/methods-and-context-rethinking-religion",
       "source": "item"
     },
     "system": {
@@ -3820,7 +3820,7 @@
     "id": "book:bol-paradigm-lost-the-application-of-the-historical-critical-method-to-the-bhagavadgita",
     "type": "book",
     "title": "Paradigm Lost the Application of the Historical Critical Method to the Bhagavadgita",
-    "slug": "bol-paradigm-lost-the-application-of-the-historical-critical-method-to-the-bhagavadgita",
+    "slug": "paradigm-lost-the-application-of-the-historical-critical-method-to-the-bhagavadgita",
     "description": "Critique of applying historical-critical methods reductively to the Bhagavad Gita.",
     "tags": [
       "historical-critical-method",
@@ -3831,7 +3831,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Paradigm%20Lost%20the%20Application%20of%20the%20Historical%20Critical%20Method%20to%20the%20Bhagavadgita.pdf",
+      "route": "/library/books/paradigm-lost-the-application-of-the-historical-critical-method-to-the-bhagavadgita",
       "source": "item"
     },
     "system": {
@@ -3843,7 +3843,7 @@
     "id": "book:bol-philosophy-and-criticism",
     "type": "book",
     "title": "Philosophy and Criticism",
-    "slug": "bol-philosophy-and-criticism",
+    "slug": "philosophy-and-criticism",
     "description": "Essay on the relation between philosophical interpretation and critical academic method.",
     "tags": [
       "philosophical-method",
@@ -3854,7 +3854,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Philosophy%20and%20Criticism.pdf",
+      "route": "/library/books/philosophy-and-criticism",
       "source": "item"
     },
     "system": {
@@ -3866,7 +3866,7 @@
     "id": "book:bol-poetic-immortality-to-salvation",
     "type": "book",
     "title": "Poetic Immortality to Salvation",
-    "slug": "bol-poetic-immortality-to-salvation",
+    "slug": "poetic-immortality-to-salvation",
     "description": "Study tracing shifts from heroic-poetic ideals toward soteriological concerns in Sanskrit traditions.",
     "tags": [
       "soteriology",
@@ -3877,7 +3877,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Poetic%20Immortality%20to%20Salvation.pdf",
+      "route": "/library/books/poetic-immortality-to-salvation",
       "source": "item"
     },
     "system": {
@@ -3889,7 +3889,7 @@
     "id": "book:bol-pride-and-prejudice-orientalism-and-germany",
     "type": "book",
     "title": "Pride and Prejudice Orientalism and Germany",
-    "slug": "bol-pride-and-prejudice-orientalism-and-germany",
+    "slug": "pride-and-prejudice-orientalism-and-germany",
     "description": "Study of German orientalism and the ideological lenses shaping Indological interpretation.",
     "tags": [
       "orientalism",
@@ -3900,7 +3900,7 @@
       "author": [
         "Vishwa Adluri"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Pride%20and%20Prejudice%20Orientalism%20and%20Germany.pdf",
+      "route": "/library/books/pride-and-prejudice-orientalism-and-germany",
       "source": "item"
     },
     "system": {
@@ -3912,7 +3912,7 @@
     "id": "book:bol-the-banality-of-indology",
     "type": "book",
     "title": "The Banality of Indology",
-    "slug": "bol-the-banality-of-indology",
+    "slug": "the-banality-of-indology",
     "description": "Sharp critique of routinized assumptions and methodological shallowness in Indological scholarship.",
     "tags": [
       "indological-critique",
@@ -3923,7 +3923,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Banality%20of%20Indology.pdf",
+      "route": "/library/books/the-banality-of-indology",
       "source": "item"
     },
     "system": {
@@ -3935,7 +3935,7 @@
     "id": "book:bol-the-nay-science",
     "type": "book",
     "title": "The Nay Science",
-    "slug": "bol-the-nay-science",
+    "slug": "the-nay-science",
     "description": "Provocative reflection on scholarship, critique, and the ideological posture of academic knowledge.",
     "tags": [
       "scholarly-critique",
@@ -3946,7 +3946,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Nay%20Science.pdf",
+      "route": "/library/books/the-nay-science",
       "source": "item"
     },
     "system": {
@@ -3958,7 +3958,7 @@
     "id": "book:bol-the-origins-of-racism-in-the-humanities",
     "type": "book",
     "title": "The Origins of Racism in the Humanities",
-    "slug": "bol-the-origins-of-racism-in-the-humanities",
+    "slug": "the-origins-of-racism-in-the-humanities",
     "description": "Argument about how racial categories entered humanistic scholarship through philology and related disciplines.",
     "tags": [
       "race-theory",
@@ -3969,7 +3969,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Origins%20of%20Racism%20in%20the%20Humanities.pdf",
+      "route": "/library/books/the-origins-of-racism-in-the-humanities",
       "source": "item"
     },
     "system": {
@@ -3981,7 +3981,7 @@
     "id": "book:bol-the-passion-of-paul-hacker",
     "type": "book",
     "title": "The Passion of Paul Hacker",
-    "slug": "bol-the-passion-of-paul-hacker",
+    "slug": "the-passion-of-paul-hacker",
     "description": "Critical study of Paul Hacker and the theological-political assumptions behind his work on Hindu traditions.",
     "tags": [
       "paul-hacker",
@@ -3992,7 +3992,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Passion%20of%20Paul%20Hacker.pdf",
+      "route": "/library/books/the-passion-of-paul-hacker",
       "source": "item"
     },
     "system": {
@@ -4004,7 +4004,7 @@
     "id": "book:bol-the-real-threat-to-humanities-today",
     "type": "book",
     "title": "The Real Threat to Humanities Today",
-    "slug": "bol-the-real-threat-to-humanities-today",
+    "slug": "the-real-threat-to-humanities-today",
     "description": "Essay arguing that methodological decay, not external pressure alone, endangers the humanities.",
     "tags": [
       "humanities-crisis",
@@ -4015,7 +4015,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Real%20Threat%20to%20Humanities%20Today.pdf",
+      "route": "/library/books/the-real-threat-to-humanities-today",
       "source": "item"
     },
     "system": {
@@ -4027,7 +4027,7 @@
     "id": "book:bol-theses-on-indology",
     "type": "book",
     "title": "Theses on Indology",
-    "slug": "bol-theses-on-indology",
+    "slug": "theses-on-indology",
     "description": "Programmatic theses outlining a critique of Indology and an alternative scholarly orientation.",
     "tags": [
       "programmatic-theses",
@@ -4038,7 +4038,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Theses%20on%20Indology.pdf",
+      "route": "/library/books/theses-on-indology",
       "source": "item"
     },
     "system": {
@@ -4050,7 +4050,7 @@
     "id": "book:bol-a-primer-of-indian-logic",
     "type": "book",
     "title": "A Primer of Indian Logic",
-    "slug": "bol-a-primer-of-indian-logic",
+    "slug": "a-primer-of-indian-logic",
     "description": "Introductory exposition of Indian logical method, categories, inference, and debate using the Tarkasangraha tradition.",
     "tags": [
       "epistemology",
@@ -4061,7 +4061,7 @@
       "author": [
         "S. Kuppuswami Sastri"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20A%20Primer%20of%20Indian%20Logic.pdf",
+      "route": "/library/books/a-primer-of-indian-logic",
       "source": "item"
     },
     "system": {
@@ -4073,7 +4073,7 @@
     "id": "book:bol-an-elementary-treatise-on-mimamsa",
     "type": "book",
     "title": "An Elementary Treatise on Mimamsa",
-    "slug": "bol-an-elementary-treatise-on-mimamsa",
+    "slug": "an-elementary-treatise-on-mimamsa",
     "description": "Accessible introduction to Mimamsa principles, Vedic injunctions, and hermeneutical reasoning.",
     "tags": [
       "ritual-hermeneutics",
@@ -4084,7 +4084,7 @@
       "author": [
         "Laugakshi Bhaskara"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20An%20Elementary%20Treatise%20on%20Mimamsa.pdf",
+      "route": "/library/books/an-elementary-treatise-on-mimamsa",
       "source": "item"
     },
     "system": {
@@ -4096,7 +4096,7 @@
     "id": "book:bol-gangesas-theory-of-truth",
     "type": "book",
     "title": "Gangesa's Theory of Truth",
-    "slug": "bol-gangesas-theory-of-truth",
+    "slug": "gangesas-theory-of-truth",
     "description": "Study of Navya-Nyaya truth theory and the epistemic conditions of valid cognition.",
     "tags": [
       "navya-nyaya",
@@ -4107,7 +4107,7 @@
       "author": [
         "Jitendra Nath Mohanty"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Gangesa's%20Theory%20of%20Truth.pdf",
+      "route": "/library/books/gangesas-theory-of-truth",
       "source": "item"
     },
     "system": {
@@ -4119,7 +4119,7 @@
     "id": "book:bol-gaudapada-karika",
     "type": "book",
     "title": "Gaudapada Karika",
-    "slug": "bol-gaudapada-karika",
+    "slug": "gaudapada-karika",
     "description": "Classical Advaita work on non-duality, consciousness, and the Mandukya Upanishad.",
     "tags": [
       "advaita-vedanta",
@@ -4130,7 +4130,7 @@
       "author": [
         "Gaudapada"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Gaudapada%20Karika.pdf",
+      "route": "/library/books/gaudapada-karika",
       "source": "item"
     },
     "system": {
@@ -4142,7 +4142,7 @@
     "id": "book:bol-gautamas-nyayasutras",
     "type": "book",
     "title": "Gautama's Nyayasutras",
-    "slug": "bol-gautamas-nyayasutras",
+    "slug": "gautamas-nyayasutras",
     "description": "Edition or translation of the foundational Nyaya sutras on knowledge, inference, debate, and liberation.",
     "tags": [
       "nyaya-sutra",
@@ -4153,7 +4153,7 @@
       "author": [
         "Gautama"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Gautama's%20Nyayasutras.pdf",
+      "route": "/library/books/gautamas-nyayasutras",
       "source": "item"
     },
     "system": {
@@ -4165,7 +4165,7 @@
     "id": "book:bol-gheranda-samhita",
     "type": "book",
     "title": "Gheranda Samhita",
-    "slug": "bol-gheranda-samhita",
+    "slug": "gheranda-samhita",
     "description": "Hatha yoga manual on bodily discipline, purification, mudra, meditation, and yogic accomplishment.",
     "tags": [
       "hatha-yoga",
@@ -4176,7 +4176,7 @@
       "author": [
         "Translated by Srisa Chandra Vasu"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Gheranda%20Samhita.pdf",
+      "route": "/library/books/gheranda-samhita",
       "source": "item"
     },
     "system": {
@@ -4188,7 +4188,7 @@
     "id": "book:bol-hindu-realism-an-introduction-to-vaisheshika",
     "type": "book",
     "title": "Hindu Realism An Introduction to Vaisheshika",
-    "slug": "bol-hindu-realism-an-introduction-to-vaisheshika",
+    "slug": "hindu-realism-an-introduction-to-vaisheshika",
     "description": "Introductory study of Vaisheshika realism, categories of being, and metaphysical analysis.",
     "tags": [
       "vaisheshika",
@@ -4199,7 +4199,7 @@
       "author": [
         "JC Chatterjee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindu%20Realism%20An%20Introduction%20to%20Vaisheshika.pdf",
+      "route": "/library/books/hindu-realism-an-introduction-to-vaisheshika",
       "source": "item"
     },
     "system": {
@@ -4211,7 +4211,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-1",
     "type": "book",
     "title": "History of Dharmashastras Vol 1",
-    "slug": "bol-history-of-dharmashastras-vol-1",
+    "slug": "history-of-dharmashastras-vol-1",
     "description": "Reference study of dharmashastra literature, sources of dharma, and the historical formation of legal-ritual norms.",
     "tags": [
       "dharmashastra",
@@ -4222,7 +4222,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%201.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-1",
       "source": "item"
     },
     "system": {
@@ -4234,7 +4234,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-2-part-1",
     "type": "book",
     "title": "History of Dharmashastras Vol 2 Part 1",
-    "slug": "bol-history-of-dharmashastras-vol-2-part-1",
+    "slug": "history-of-dharmashastras-vol-2-part-1",
     "description": "Reference study of dharmashastra literature with focus on ritual, samskara, and normative practice.",
     "tags": [
       "dharmashastra",
@@ -4245,7 +4245,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%202%20Part%201.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-2-part-1",
       "source": "item"
     },
     "system": {
@@ -4257,7 +4257,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-2-part-2",
     "type": "book",
     "title": "History of Dharmashastras Vol 2 Part 2",
-    "slug": "bol-history-of-dharmashastras-vol-2-part-2",
+    "slug": "history-of-dharmashastras-vol-2-part-2",
     "description": "Reference study of dharmashastra literature continuing discussion of rites, duties, and normative institutions.",
     "tags": [
       "dharmashastra",
@@ -4268,7 +4268,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%202%20Part%202.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-2-part-2",
       "source": "item"
     },
     "system": {
@@ -4280,7 +4280,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-3",
     "type": "book",
     "title": "History of Dharmashastras Vol 3",
-    "slug": "bol-history-of-dharmashastras-vol-3",
+    "slug": "history-of-dharmashastras-vol-3",
     "description": "Reference study of dharmashastra themes including social duties, legal procedure, and normative ordering.",
     "tags": [
       "dharmashastra",
@@ -4291,7 +4291,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%203.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-3",
       "source": "item"
     },
     "system": {
@@ -4303,7 +4303,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-4",
     "type": "book",
     "title": "History of Dharmashastras Vol 4",
-    "slug": "bol-history-of-dharmashastras-vol-4",
+    "slug": "history-of-dharmashastras-vol-4",
     "description": "Reference study of dharmashastra themes with detailed treatment of law, custom, and social institutions.",
     "tags": [
       "dharmashastra",
@@ -4314,7 +4314,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%204.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-4",
       "source": "item"
     },
     "system": {
@@ -4326,7 +4326,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-5-part-1",
     "type": "book",
     "title": "History of Dharmashastras Vol 5 Part 1",
-    "slug": "bol-history-of-dharmashastras-vol-5-part-1",
+    "slug": "history-of-dharmashastras-vol-5-part-1",
     "description": "Reference study of later dharmashastra topics, jurisprudence, and social-religious regulation.",
     "tags": [
       "dharmashastra",
@@ -4337,7 +4337,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%205%20Part%201.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-5-part-1",
       "source": "item"
     },
     "system": {
@@ -4349,7 +4349,7 @@
     "id": "book:bol-history-of-dharmashastras-vol-5-part-2",
     "type": "book",
     "title": "History of Dharmashastras Vol 5 Part 2",
-    "slug": "bol-history-of-dharmashastras-vol-5-part-2",
+    "slug": "history-of-dharmashastras-vol-5-part-2",
     "description": "Reference study completing the dharmashastra series with later legal and ritual materials.",
     "tags": [
       "dharmashastra",
@@ -4360,7 +4360,7 @@
       "author": [
         "PV Kane"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20History%20of%20Dharmashastras%20Vol%205%20Part%202.pdf",
+      "route": "/library/books/history-of-dharmashastras-vol-5-part-2",
       "source": "item"
     },
     "system": {
@@ -4372,7 +4372,7 @@
     "id": "book:bol-logic-language-and-reality",
     "type": "book",
     "title": "Logic, Language and Reality",
-    "slug": "bol-logic-language-and-reality",
+    "slug": "logic-language-and-reality",
     "description": "Philosophical study connecting logic, linguistic analysis, and theories of reality in Indian thought.",
     "tags": [
       "language-philosophy",
@@ -4383,7 +4383,7 @@
       "author": [
         "Bimal Krishna Matilal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Logic,%20Language%20and%20Reality.pdf",
+      "route": "/library/books/logic-language-and-reality",
       "source": "item"
     },
     "system": {
@@ -4395,7 +4395,7 @@
     "id": "book:bol-outline-of-hindu-philosophy",
     "type": "book",
     "title": "Outline of Hindu Philosophy",
-    "slug": "bol-outline-of-hindu-philosophy",
+    "slug": "outline-of-hindu-philosophy",
     "description": "Broad survey of major schools and recurrent philosophical themes in Hindu thought.",
     "tags": [
       "comparative-darshanas",
@@ -4406,7 +4406,7 @@
       "author": [
         "M. Hiriyanna"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Outline%20of%20Hindu%20Philosophy.pdf",
+      "route": "/library/books/outline-of-hindu-philosophy",
       "source": "item"
     },
     "system": {
@@ -4418,7 +4418,7 @@
     "id": "book:bol-paratrishika-vivarana-by-abhinavagupta",
     "type": "book",
     "title": "Paratrishika Vivarana by Abhinavagupta",
-    "slug": "bol-paratrishika-vivarana-by-abhinavagupta",
+    "slug": "paratrishika-vivarana-by-abhinavagupta",
     "description": "Abhinavagupta’s esoteric Shaiva commentary on language, mantra, consciousness, and manifestation.",
     "tags": [
       "kashmir-shaivism",
@@ -4429,7 +4429,7 @@
       "author": [
         "Jaideva Singh"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Paratrishika%20Vivarana%20by%20Abhinavagupta.pdf",
+      "route": "/library/books/paratrishika-vivarana-by-abhinavagupta",
       "source": "item"
     },
     "system": {
@@ -4441,7 +4441,7 @@
     "id": "book:bol-patanjalis-yogasutras",
     "type": "book",
     "title": "Patanjali's Yogasutras",
-    "slug": "bol-patanjalis-yogasutras",
+    "slug": "patanjalis-yogasutras",
     "description": "Edition or translation of the Yoga Sutras with emphasis on mind, practice, samadhi, and liberation.",
     "tags": [
       "yoga-sutra",
@@ -4452,7 +4452,7 @@
       "author": [
         "Patanjali"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Patanjali's%20Yogasutras.pdf",
+      "route": "/library/books/patanjalis-yogasutras",
       "source": "item"
     },
     "system": {
@@ -4464,7 +4464,7 @@
     "id": "book:bol-purva-mimamsa-in-its-sources",
     "type": "book",
     "title": "Purva Mimamsa in its Sources",
-    "slug": "bol-purva-mimamsa-in-its-sources",
+    "slug": "purva-mimamsa-in-its-sources",
     "description": "Source-based introduction to Purva Mimamsa doctrine and textual method.",
     "tags": [
       "sourcebook",
@@ -4475,7 +4475,7 @@
       "author": [
         "Dr. Ganganatha Jha"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Purva%20Mimamsa%20in%20its%20Sources.pdf",
+      "route": "/library/books/purva-mimamsa-in-its-sources",
       "source": "item"
     },
     "system": {
@@ -4487,7 +4487,7 @@
     "id": "book:bol-quintessence-of-brahmasutra",
     "type": "book",
     "title": "Quintessence of Brahmasutra",
-    "slug": "bol-quintessence-of-brahmasutra",
+    "slug": "quintessence-of-brahmasutra",
     "description": "Introductory digest of Vedanta centered on the Brahmasutra tradition and its key metaphysical claims.",
     "tags": [
       "brahma-sutra",
@@ -4498,7 +4498,7 @@
       "author": [
         "Mahamahopadhyaya Iranganti Rangacharya"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Quintessence%20of%20Brahmasutra.pdf",
+      "route": "/library/books/quintessence-of-brahmasutra",
       "source": "item"
     },
     "system": {
@@ -4510,7 +4510,7 @@
     "id": "book:bol-sankhya-philosophy-by-banerji",
     "type": "book",
     "title": "Sankhya Philosophy by Banerji",
-    "slug": "bol-sankhya-philosophy-by-banerji",
+    "slug": "sankhya-philosophy-by-banerji",
     "description": "Interpretive exposition of the Sankhya school and its key doctrines.",
     "tags": [
       "sankhya",
@@ -4521,7 +4521,7 @@
       "author": [
         "Chandra Banerji"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Sankhya%20Philosophy%20by%20Banerji.pdf",
+      "route": "/library/books/sankhya-philosophy-by-banerji",
       "source": "item"
     },
     "system": {
@@ -4533,7 +4533,7 @@
     "id": "book:bol-sastradipika",
     "type": "book",
     "title": "Sastradipika",
-    "slug": "bol-sastradipika",
+    "slug": "sastradipika",
     "description": "Classical Mimamsa text on interpretation, injunction, and the structure of Vedic authority.",
     "tags": [
       "mimamsa",
@@ -4544,7 +4544,7 @@
       "author": [
         "Parthasarathi Mishra, translated by D. Venkatramiah"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Sastradipika.pdf",
+      "route": "/library/books/sastradipika",
       "source": "item"
     },
     "system": {
@@ -4556,7 +4556,7 @@
     "id": "book:bol-siddhantabindu",
     "type": "book",
     "title": "Siddhantabindu",
-    "slug": "bol-siddhantabindu",
+    "slug": "siddhantabindu",
     "description": "Vedantic sub-commentarial text presenting core Advaita positions in a compact form.",
     "tags": [
       "advaita-vedanta",
@@ -4567,7 +4567,7 @@
       "author": [
         "Srimat Madhusudana Sarasvati, translated by Achalananda"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Siddhantabindu.pdf",
+      "route": "/library/books/siddhantabindu",
       "source": "item"
     },
     "system": {
@@ -4579,7 +4579,7 @@
     "id": "book:bol-six-ways-of-knowing",
     "type": "book",
     "title": "Six Ways of Knowing",
-    "slug": "bol-six-ways-of-knowing",
+    "slug": "six-ways-of-knowing",
     "description": "Scholarly work on Indian thought and civilization with relevance to the themes signaled by its title.",
     "tags": [
       "pramana-theory",
@@ -4590,7 +4590,7 @@
       "author": [
         "D.M. Datta"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Six%20Ways%20of%20Knowing.pdf",
+      "route": "/library/books/six-ways-of-knowing",
       "source": "item"
     },
     "system": {
@@ -4602,7 +4602,7 @@
     "id": "book:bol-the-advaita-vedanta-of-brahmasiddhi",
     "type": "book",
     "title": "The Advaita Vedanta of Brahmasiddhi",
-    "slug": "bol-the-advaita-vedanta-of-brahmasiddhi",
+    "slug": "the-advaita-vedanta-of-brahmasiddhi",
     "description": "Study of the Brahmasiddhi tradition and major issues in Advaita metaphysics and epistemology.",
     "tags": [
       "advaita-vedanta",
@@ -4613,7 +4613,7 @@
       "author": [
         "Allen Wright Thrasher"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Advaita%20Vedanta%20of%20Brahmasiddhi.pdf",
+      "route": "/library/books/the-advaita-vedanta-of-brahmasiddhi",
       "source": "item"
     },
     "system": {
@@ -4625,7 +4625,7 @@
     "id": "book:bol-the-nyaya-theory-of-knowledge",
     "type": "book",
     "title": "The Nyaya Theory of Knowledge",
-    "slug": "bol-the-nyaya-theory-of-knowledge",
+    "slug": "the-nyaya-theory-of-knowledge",
     "description": "Study of Nyaya epistemology with emphasis on pramanas, error, and valid cognition.",
     "tags": [
       "nyaya",
@@ -4636,7 +4636,7 @@
       "author": [
         "S.C. Chatterjee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Nyaya%20Theory%20of%20Knowledge.pdf",
+      "route": "/library/books/the-nyaya-theory-of-knowledge",
       "source": "item"
     },
     "system": {
@@ -4648,7 +4648,7 @@
     "id": "book:bol-the-paramarthasara-of-adisesa",
     "type": "book",
     "title": "The Paramarthasara of Adisesa",
-    "slug": "bol-the-paramarthasara-of-adisesa",
+    "slug": "the-paramarthasara-of-adisesa",
     "description": "Philosophical text associated with non-dual Shaiva traditions and the path to liberation.",
     "tags": [
       "kashmir-shaivism",
@@ -4659,7 +4659,7 @@
       "author": [
         "Adi Sesa"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Paramarthasara%20of%20Adisesa.pdf",
+      "route": "/library/books/the-paramarthasara-of-adisesa",
       "source": "item"
     },
     "system": {
@@ -4671,7 +4671,7 @@
     "id": "book:bol-the-purva-mimamsa-sutras-of-jaimini",
     "type": "book",
     "title": "The Purva Mimamsa Sutras of Jaimini",
-    "slug": "bol-the-purva-mimamsa-sutras-of-jaimini",
+    "slug": "the-purva-mimamsa-sutras-of-jaimini",
     "description": "Foundational Mimamsa sutra text on ritual duty, injunction, and scriptural interpretation.",
     "tags": [
       "mimamsa-sutra",
@@ -4682,7 +4682,7 @@
       "author": [
         "Jaimini, translated by Dr. Ganganatha Jha"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Purva%20Mimamsa%20Sutras%20of%20Jaimini.pdf",
+      "route": "/library/books/the-purva-mimamsa-sutras-of-jaimini",
       "source": "item"
     },
     "system": {
@@ -4694,7 +4694,7 @@
     "id": "book:bol-the-sankhya-aphorisms-of-kapila",
     "type": "book",
     "title": "The Sankhya Aphorisms of Kapila",
-    "slug": "bol-the-sankhya-aphorisms-of-kapila",
+    "slug": "the-sankhya-aphorisms-of-kapila",
     "description": "Presentation of the Sankhya aphorism tradition on purusha, prakriti, tattvas, and liberation.",
     "tags": [
       "sankhya",
@@ -4705,7 +4705,7 @@
       "author": [
         "Kapila, translated by J. Ballantyne"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Sankhya%20Aphorisms%20of%20Kapila.pdf",
+      "route": "/library/books/the-sankhya-aphorisms-of-kapila",
       "source": "item"
     },
     "system": {
@@ -4717,7 +4717,7 @@
     "id": "book:bol-the-sankhya-karika-of-iswara-krishna",
     "type": "book",
     "title": "The Sankhya Karika of Iswara Krishna",
-    "slug": "bol-the-sankhya-karika-of-iswara-krishna",
+    "slug": "the-sankhya-karika-of-iswara-krishna",
     "description": "Classical Sankhya summary text on ontology, causation, bondage, and release.",
     "tags": [
       "sankhya",
@@ -4728,7 +4728,7 @@
       "author": [
         "HT Colebrooke"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Sankhya%20Karika%20of%20Iswara%20Krishna.pdf",
+      "route": "/library/books/the-sankhya-karika-of-iswara-krishna",
       "source": "item"
     },
     "system": {
@@ -4740,7 +4740,7 @@
     "id": "book:bol-the-sankhya-philosophy",
     "type": "book",
     "title": "The Sankhya Philosophy",
-    "slug": "bol-the-sankhya-philosophy",
+    "slug": "the-sankhya-philosophy",
     "description": "Translation or study of Sankhya metaphysics, dualism, and liberation theory.",
     "tags": [
       "sankhya",
@@ -4751,7 +4751,7 @@
       "author": [
         "Major BD Basu"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Sankhya%20Philosophy.pdf",
+      "route": "/library/books/the-sankhya-philosophy",
       "source": "item"
     },
     "system": {
@@ -4763,7 +4763,7 @@
     "id": "book:bol-the-sankhya-system-by-keith",
     "type": "book",
     "title": "The Sankhya System by Keith",
-    "slug": "bol-the-sankhya-system-by-keith",
+    "slug": "the-sankhya-system-by-keith",
     "description": "Scholarly account of Sankhya doctrine in historical and comparative perspective.",
     "tags": [
       "sankhya",
@@ -4774,7 +4774,7 @@
       "author": [
         "AB Keith"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Sankhya%20System%20by%20Keith.pdf",
+      "route": "/library/books/the-sankhya-system-by-keith",
       "source": "item"
     },
     "system": {
@@ -4786,7 +4786,7 @@
     "id": "book:bol-the-vaisheshika-darshan",
     "type": "book",
     "title": "The Vaisheshika Darshan",
-    "slug": "bol-the-vaisheshika-darshan",
+    "slug": "the-vaisheshika-darshan",
     "description": "Presentation of the Vaisheshika system and its ontology of substances, qualities, and relations.",
     "tags": [
       "vaisheshika",
@@ -4797,7 +4797,7 @@
       "author": [
         "John Wells"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Vaisheshika%20Darshan.pdf",
+      "route": "/library/books/the-vaisheshika-darshan",
       "source": "item"
     },
     "system": {
@@ -4809,7 +4809,7 @@
     "id": "book:bol-the-yogasutras-of-patanjali",
     "type": "book",
     "title": "The Yogasutras of Patanjali",
-    "slug": "bol-the-yogasutras-of-patanjali",
+    "slug": "the-yogasutras-of-patanjali",
     "description": "Translation and explanation of Patanjali’s Yoga Sutras focused on discipline, concentration, and liberation.",
     "tags": [
       "yoga-sutra",
@@ -4820,7 +4820,7 @@
       "author": [
         "Patanjali, translated by Sriram Lele"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Yogasutras%20of%20Patanjali.pdf",
+      "route": "/library/books/the-yogasutras-of-patanjali",
       "source": "item"
     },
     "system": {
@@ -4832,7 +4832,7 @@
     "id": "book:bol-theories-of-language",
     "type": "book",
     "title": "Theories of Language",
-    "slug": "bol-theories-of-language",
+    "slug": "theories-of-language",
     "description": "Study of Indian theories of language, meaning, signification, and verbal cognition.",
     "tags": [
       "language-philosophy",
@@ -4843,7 +4843,7 @@
       "author": [
         "Korada Subrahmanyam"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Theories%20of%20Language.pdf",
+      "route": "/library/books/theories-of-language",
       "source": "item"
     },
     "system": {
@@ -4855,7 +4855,7 @@
     "id": "book:bol-yogasutra-with-commentary-of-madhavacharya",
     "type": "book",
     "title": "Yogasutra with Commentary of Madhavacharya",
-    "slug": "bol-yogasutra-with-commentary-of-madhavacharya",
+    "slug": "yogasutra-with-commentary-of-madhavacharya",
     "description": "Yoga Sutra text accompanied by traditional commentary for philosophical and practical interpretation.",
     "tags": [
       "yoga-commentary",
@@ -4866,7 +4866,7 @@
       "author": [
         "Madhvacharya"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Yogasutra%20with%20Commentary%20of%20Madhavacharya.pdf",
+      "route": "/library/books/yogasutra-with-commentary-of-madhavacharya",
       "source": "item"
     },
     "system": {
@@ -4878,7 +4878,7 @@
     "id": "book:bol-a-scheme-for-knowledge-representation-in-samskritam",
     "type": "book",
     "title": "A Scheme for Knowledge Representation in Samskritam",
-    "slug": "bol-a-scheme-for-knowledge-representation-in-samskritam",
+    "slug": "a-scheme-for-knowledge-representation-in-samskritam",
     "description": "Paper exploring Sanskrit-based formal knowledge representation and semantic structuring.",
     "tags": [
       "knowledge-representation",
@@ -4889,7 +4889,7 @@
       "author": [
         "P. Ramanujan"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20A%20Scheme%20for%20Knowledge%20Representation%20in%20Samskritam.pdf",
+      "route": "/library/books/a-scheme-for-knowledge-representation-in-samskritam",
       "source": "item"
     },
     "system": {
@@ -4901,7 +4901,7 @@
     "id": "book:bol-bhartrharis-linguistic-ontology-and-the-semantics-of-atmanepada",
     "type": "book",
     "title": "Bhartṛhari’s Linguistic Ontology and the Semantics of Ātmanepada",
-    "slug": "bol-bhartrharis-linguistic-ontology-and-the-semantics-of-atmanepada",
+    "slug": "bhartrharis-linguistic-ontology-and-the-semantics-of-atmanepada",
     "description": "Specialized study of Bhartrhari’s metaphysics of language and grammatical semantics.",
     "tags": [
       "bhartrhari",
@@ -4912,7 +4912,7 @@
       "author": [
         "Dilip Loundo"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Bhartṛhari’s%20Linguistic%20Ontology%20and%20the%20Semantics%20of%20Ātmanepada.pdf",
+      "route": "/library/books/bhartrharis-linguistic-ontology-and-the-semantics-of-atmanepada",
       "source": "item"
     },
     "system": {
@@ -4924,7 +4924,7 @@
     "id": "book:bol-essential-coomaraswamy",
     "type": "book",
     "title": "Essential Coomaraswamy",
-    "slug": "bol-essential-coomaraswamy",
+    "slug": "essential-coomaraswamy",
     "description": "General overview of Hindu tradition, covering its beliefs, practices, social vision, and intellectual foundations.",
     "tags": [
       "civilizational-thought",
@@ -4935,7 +4935,7 @@
       "author": [
         "Ananda Coomaraswamy"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Essential%20Coomaraswamy.pdf",
+      "route": "/library/books/essential-coomaraswamy",
       "source": "item"
     },
     "system": {
@@ -4947,7 +4947,7 @@
     "id": "book:bol-future-of-mankind",
     "type": "book",
     "title": "Future of Mankind",
-    "slug": "bol-future-of-mankind",
+    "slug": "future-of-mankind",
     "description": "Civilizational reflection arguing for a spiritually grounded future rooted in perennial wisdom.",
     "tags": [
       "civilizational-future",
@@ -4958,7 +4958,7 @@
       "author": [
         "Sri Aurobindo"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Future%20of%20Mankind.pdf",
+      "route": "/library/books/future-of-mankind",
       "source": "item"
     },
     "system": {
@@ -4970,7 +4970,7 @@
     "id": "book:bol-hindu-dharma",
     "type": "book",
     "title": "Hindu Dharma",
-    "slug": "bol-hindu-dharma",
+    "slug": "hindu-dharma",
     "description": "General account of Hindu dharma, its philosophical foundations, social vision, and practical disciplines.",
     "tags": [
       "religious-worldview",
@@ -4981,7 +4981,7 @@
       "author": [
         "S. Radhakrishnan"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindu%20Dharma.pdf",
+      "route": "/library/books/hindu-dharma",
       "source": "item"
     },
     "system": {
@@ -4993,7 +4993,7 @@
     "id": "book:bol-the-beautiful-tree",
     "type": "book",
     "title": "The Beautiful Tree",
-    "slug": "bol-the-beautiful-tree",
+    "slug": "the-beautiful-tree",
     "description": "Historical argument about indigenous education in India before colonial disruption.",
     "tags": [
       "indigenous-education",
@@ -5004,7 +5004,7 @@
       "author": [
         "Dharampal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Beautiful%20Tree.pdf",
+      "route": "/library/books/the-beautiful-tree",
       "source": "item"
     },
     "system": {
@@ -5016,7 +5016,7 @@
     "id": "book:bol-the-knowledge-structure-in-the-amarakosha",
     "type": "book",
     "title": "The Knowledge Structure in the Amarakosha",
-    "slug": "bol-the-knowledge-structure-in-the-amarakosha",
+    "slug": "the-knowledge-structure-in-the-amarakosha",
     "description": "Study of how the Amarakosha encodes categories, semantic relations, and systems of knowledge.",
     "tags": [
       "amarakosha",
@@ -5027,7 +5027,7 @@
       "author": [
         "Sivaja S. Nair"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Knowledge%20Structure%20in%20the%20Amarakosha.pdf",
+      "route": "/library/books/the-knowledge-structure-in-the-amarakosha",
       "source": "item"
     },
     "system": {
@@ -5039,7 +5039,7 @@
     "id": "book:bol-the-vedas",
     "type": "book",
     "title": "The Vedas",
-    "slug": "bol-the-vedas",
+    "slug": "the-vedas",
     "description": "General introduction to the Vedas, outlining their structure, themes, ritual setting, and long civilizational influence.",
     "tags": [
       "vedic-overview",
@@ -5050,7 +5050,7 @@
       "author": [
         "Chandrasekharendra Saraswati"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Vedas.pdf",
+      "route": "/library/books/the-vedas",
       "source": "item"
     },
     "system": {
@@ -5062,7 +5062,7 @@
     "id": "book:bol-vakyapadiya",
     "type": "book",
     "title": "Vākyapadīya",
-    "slug": "bol-vakyapadiya",
+    "slug": "vakyapadiya",
     "description": "Foundational work of Bhartrhari on language, meaning, cognition, and the philosophy of linguistic unity.",
     "tags": [
       "bhartrhari",
@@ -5073,7 +5073,7 @@
       "author": [
         "Bhartṛhari"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Vākyapadīya.pdf",
+      "route": "/library/books/vakyapadiya",
       "source": "item"
     },
     "system": {
@@ -5085,7 +5085,7 @@
     "id": "book:bol-64-arts-in-ancient-india",
     "type": "book",
     "title": "64 Arts in Ancient India",
-    "slug": "bol-64-arts-in-ancient-india",
+    "slug": "64-arts-in-ancient-india",
     "description": "Survey of the classical list of sixty-four arts and what it reveals about education and cultured accomplishment.",
     "tags": [
       "sixty-four-arts",
@@ -5096,7 +5096,7 @@
       "author": [
         "Anil Baran Ganguly"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%2064%20Arts%20in%20Ancient%20India.pdf",
+      "route": "/library/books/64-arts-in-ancient-india",
       "source": "item"
     },
     "system": {
@@ -5108,7 +5108,7 @@
     "id": "book:bol-amarakosah-devanagari",
     "type": "book",
     "title": "Amarakośaḥ Devanāgarī",
-    "slug": "bol-amarakosah-devanagari",
+    "slug": "amarakosah-devanagari",
     "description": "Devanagari text of the Amarakosha for direct study of the classical Sanskrit lexicon.",
     "tags": [
       "amarakosha",
@@ -5119,7 +5119,7 @@
       "author": [
         "Amarasiṃha"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Amarakośaḥ%20Devanāgarī.pdf",
+      "route": "/library/books/amarakosah-devanagari",
       "source": "item"
     },
     "system": {
@@ -5131,7 +5131,7 @@
     "id": "book:bol-amarakosha-english-translation",
     "type": "book",
     "title": "Amarakosha English Translation",
-    "slug": "bol-amarakosha-english-translation",
+    "slug": "amarakosha-english-translation",
     "description": "English translation of the Amarakosha, the classical Sanskrit lexicon arranged by semantic groupings.",
     "tags": [
       "amarakosha",
@@ -5142,7 +5142,7 @@
       "author": [
         "NG Sardesai"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Amarakosha%20English%20Translation.pdf",
+      "route": "/library/books/amarakosha-english-translation",
       "source": "item"
     },
     "system": {
@@ -5154,7 +5154,7 @@
     "id": "book:bol-art-experience",
     "type": "book",
     "title": "Art Experience",
-    "slug": "bol-art-experience",
+    "slug": "art-experience",
     "description": "Reflection on art, meaning, symbolism, and the experience of beauty in Indian thought.",
     "tags": [
       "aesthetic-experience",
@@ -5165,7 +5165,7 @@
       "author": [
         "M Hiriyanna"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Art%20Experience.pdf",
+      "route": "/library/books/art-experience",
       "source": "item"
     },
     "system": {
@@ -5177,7 +5177,7 @@
     "id": "book:bol-hindustani-music",
     "type": "book",
     "title": "Hindustani Music",
-    "slug": "bol-hindustani-music",
+    "slug": "hindustani-music",
     "description": "Overview of Hindustani music theory, form, pedagogy, and performance practice.",
     "tags": [
       "musicology",
@@ -5188,7 +5188,7 @@
       "author": [
         "Lakshmi Sreeram"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindustani%20Music.pdf",
+      "route": "/library/books/hindustani-music",
       "source": "item"
     },
     "system": {
@@ -5200,7 +5200,7 @@
     "id": "book:bol-historical-methods",
     "type": "book",
     "title": "Historical Methods",
-    "slug": "bol-historical-methods",
+    "slug": "historical-methods",
     "description": "Discussion of historical method with relevance to Sanskrit and Indian civilizational sources.",
     "tags": [
       "historiography",
@@ -5211,7 +5211,7 @@
       "author": [
         "Shonaleeka Kaul"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Historical%20Methods.pdf",
+      "route": "/library/books/historical-methods",
       "source": "item"
     },
     "system": {
@@ -5223,7 +5223,7 @@
     "id": "book:bol-ideas-of-history-in-sanskrit-literature",
     "type": "book",
     "title": "Ideas of History in Sanskrit Literature",
-    "slug": "bol-ideas-of-history-in-sanskrit-literature",
+    "slug": "ideas-of-history-in-sanskrit-literature",
     "description": "Study of how historical consciousness appears in Sanskrit narrative, genealogy, and literary memory.",
     "tags": [
       "sanskrit-historiography",
@@ -5234,7 +5234,7 @@
       "author": [
         "RC Majumdar"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Ideas%20of%20History%20in%20Sanskrit%20Literature.pdf",
+      "route": "/library/books/ideas-of-history-in-sanskrit-literature",
       "source": "item"
     },
     "system": {
@@ -5246,7 +5246,7 @@
     "id": "book:bol-illustrated-amarakosha-in-4-languages",
     "type": "book",
     "title": "Illustrated Amarakosha in 4 Languages",
-    "slug": "bol-illustrated-amarakosha-in-4-languages",
+    "slug": "illustrated-amarakosha-in-4-languages",
     "description": "Multilingual and illustrated presentation of the Amarakosha for comparative and pedagogical use.",
     "tags": [
       "amarakosha",
@@ -5257,7 +5257,7 @@
       "author": [
         "Dr. H Madhav"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Illustrated%20Amarakosha%20in%204%20Languages.pdf",
+      "route": "/library/books/illustrated-amarakosha-in-4-languages",
       "source": "item"
     },
     "system": {
@@ -5269,7 +5269,7 @@
     "id": "book:bol-indian-concept-of-performance",
     "type": "book",
     "title": "Indian Concept of Performance",
-    "slug": "bol-indian-concept-of-performance",
+    "slug": "indian-concept-of-performance",
     "description": "Study of performance as a conceptual and embodied category in Indian aesthetic theory.",
     "tags": [
       "performance-theory",
@@ -5280,7 +5280,7 @@
       "author": [
         "Bharat Gupt"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Indian%20Concept%20of%20Performance.pdf",
+      "route": "/library/books/indian-concept-of-performance",
       "source": "item"
     },
     "system": {
@@ -5292,7 +5292,7 @@
     "id": "book:bol-introduction-to-iks",
     "type": "book",
     "title": "Introduction to IKS",
-    "slug": "bol-introduction-to-iks",
+    "slug": "introduction-to-iks",
     "description": "Survey introduction to Indian Knowledge Systems and their major domains, methods, and categories.",
     "tags": [
       "knowledge-systems-overview",
@@ -5303,7 +5303,7 @@
       "author": [
         "Kapil Kapoor"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Introduction%20to%20IKS.pdf",
+      "route": "/library/books/introduction-to-iks",
       "source": "item"
     },
     "system": {
@@ -5315,7 +5315,7 @@
     "id": "book:bol-introduction-to-sanskrit-shabdamitra",
     "type": "book",
     "title": "Introduction to Sanskrit Shabdamitra",
-    "slug": "bol-introduction-to-sanskrit-shabdamitra",
+    "slug": "introduction-to-sanskrit-shabdamitra",
     "description": "Introductory Sanskrit learning aid focused on vocabulary, forms, and basic usage.",
     "tags": [
       "sanskrit-pedagogy",
@@ -5326,7 +5326,7 @@
       "author": [
         "Kulkarni, Joshi et al"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Introduction%20to%20Sanskrit%20Shabdamitra.pdf",
+      "route": "/library/books/introduction-to-sanskrit-shabdamitra",
       "source": "item"
     },
     "system": {
@@ -5338,7 +5338,7 @@
     "id": "book:bol-language-and-reality-world-view-of-the-nyaya-vaisesika-system-of-indian-philosophy",
     "type": "book",
     "title": "Language and Reality, World View of the Nyaya-Vaisesika System of Indian Philosophy",
-    "slug": "bol-language-and-reality-world-view-of-the-nyaya-vaisesika-system-of-indian-philosophy",
+    "slug": "language-and-reality-world-view-of-the-nyaya-vaisesika-system-of-indian-philosophy",
     "description": "Study of how Nyaya-Vaisheshika links language, ontology, and realism.",
     "tags": [
       "nyaya-vaisheshika",
@@ -5349,7 +5349,7 @@
       "author": [
         "VN Jha"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Language%20and%20Reality,%20World%20View%20of%20the%20Nyaya-Vaisesika%20System%20of%20Indian%20Philosophy.pdf",
+      "route": "/library/books/language-and-reality-world-view-of-the-nyaya-vaisesika-system-of-indian-philosophy",
       "source": "item"
     },
     "system": {
@@ -5361,7 +5361,7 @@
     "id": "book:bol-on-natyashastra",
     "type": "book",
     "title": "On Natyashastra",
-    "slug": "bol-on-natyashastra",
+    "slug": "on-natyashastra",
     "description": "Introductory or interpretive study of the Natyashastra and its framework for drama, performance, and rasa.",
     "tags": [
       "natyashastra",
@@ -5372,7 +5372,7 @@
       "author": [
         "Bharat Gupt"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20On%20Natyashastra.pdf",
+      "route": "/library/books/on-natyashastra",
       "source": "item"
     },
     "system": {
@@ -5384,7 +5384,7 @@
     "id": "book:bol-on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
     "type": "book",
     "title": "On the Nature of Mathematics and Scientific Knowledge in Indian Tradition",
-    "slug": "bol-on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
+    "slug": "on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
     "description": "Study of how Indian traditions theorized mathematics, knowledge, and scientific reasoning.",
     "tags": [
       "mathematics",
@@ -5395,7 +5395,7 @@
       "author": [
         "MD Srinivas"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20On%20the%20Nature%20of%20Mathematics%20and%20Scientific%20Knowledge%20in%20Indian%20Tradition.pdf",
+      "route": "/library/books/on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
       "source": "item"
     },
     "system": {
@@ -5407,7 +5407,7 @@
     "id": "book:bol-the-kalas",
     "type": "book",
     "title": "The Kalās",
-    "slug": "bol-the-kalas",
+    "slug": "the-kalas",
     "description": "Work on Indian Knowledge Systems, bringing traditional categories into conversation with practice, theory, or pedagogy.",
     "tags": [
       "arts-classification",
@@ -5418,7 +5418,7 @@
       "author": [
         "A Venkatasubbiah"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Kalās.pdf",
+      "route": "/library/books/the-kalas",
       "source": "item"
     },
     "system": {
@@ -5430,7 +5430,7 @@
     "id": "book:bol-a-practical-sanskrit-introductory",
     "type": "book",
     "title": "A Practical Sanskrit Introductory",
-    "slug": "bol-a-practical-sanskrit-introductory",
+    "slug": "a-practical-sanskrit-introductory",
     "description": "Beginner-oriented introduction to Sanskrit language and basic grammar.",
     "tags": [
       "introductory-grammar",
@@ -5441,7 +5441,7 @@
       "author": [
         "C Wikner"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20A%20Practical%20Sanskrit%20Introductory.pdf",
+      "route": "/library/books/a-practical-sanskrit-introductory",
       "source": "item"
     },
     "system": {
@@ -5453,7 +5453,7 @@
     "id": "book:bol-sanskrit-grammar",
     "type": "book",
     "title": "Sanskrit Grammar",
-    "slug": "bol-sanskrit-grammar",
+    "slug": "sanskrit-grammar",
     "description": "Reference-style overview of Sanskrit grammar, inflection, and syntax.",
     "tags": [
       "grammar-reference",
@@ -5464,7 +5464,7 @@
       "author": [
         "WD Whitney"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Sanskrit%20Grammar.pdf",
+      "route": "/library/books/sanskrit-grammar",
       "source": "item"
     },
     "system": {
@@ -5476,7 +5476,7 @@
     "id": "book:bol-agni-purana",
     "type": "book",
     "title": "Agni Purana",
-    "slug": "bol-agni-purana",
+    "slug": "agni-purana",
     "description": "Edition or translation of the Agni Purana, an encyclopedic Purana covering cosmology, ritual, iconography, kingship, and sacred practice.",
     "tags": [
       "encyclopedic-purana",
@@ -5485,7 +5485,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Agni%20Purana.pdf",
+      "route": "/library/books/agni-purana",
       "source": "item"
     },
     "system": {
@@ -5497,7 +5497,7 @@
     "id": "book:bol-aitareya-upanishad",
     "type": "book",
     "title": "Aitareya Upanishad",
-    "slug": "bol-aitareya-upanishad",
+    "slug": "aitareya-upanishad",
     "description": "English edition or translation of the Aitareya Upanishad, highlighting creation, consciousness, and the identity of the self with ultimate reality.",
     "tags": [
       "creation-doctrine",
@@ -5506,7 +5506,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Aitareya%20Upanishad.pdf",
+      "route": "/library/books/aitareya-upanishad",
       "source": "item"
     },
     "system": {
@@ -5518,7 +5518,7 @@
     "id": "book:bol-bhagavata-purana",
     "type": "book",
     "title": "Bhagavata Purana",
-    "slug": "bol-bhagavata-purana",
+    "slug": "bhagavata-purana",
     "description": "Edition or translation of the Bhagavata Purana, a major Vaishnava Purana centered on Krishna, bhakti, cosmology, and liberation.",
     "tags": [
       "krishna-bhakti",
@@ -5527,7 +5527,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Bhagavata%20Purana.pdf",
+      "route": "/library/books/bhagavata-purana",
       "source": "item"
     },
     "system": {
@@ -5539,7 +5539,7 @@
     "id": "book:bol-brahma-purana",
     "type": "book",
     "title": "Brahma Purana",
-    "slug": "bol-brahma-purana",
+    "slug": "brahma-purana",
     "description": "Edition or translation of the Brahma Purana, creation narratives, sacred geography, pilgrimage, ritual life, and dynastic lore.",
     "tags": [
       "cosmology",
@@ -5548,7 +5548,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Brahma%20Purana.pdf",
+      "route": "/library/books/brahma-purana",
       "source": "item"
     },
     "system": {
@@ -5560,7 +5560,7 @@
     "id": "book:bol-brahmanda-purana",
     "type": "book",
     "title": "Brahmanda Purana",
-    "slug": "bol-brahmanda-purana",
+    "slug": "brahmanda-purana",
     "description": "Edition or translation of the Brahmanda Purana, cosmology, cycles of time, genealogies, and later devotional theology.",
     "tags": [
       "cosmology",
@@ -5569,7 +5569,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Brahmanda%20Purana.pdf",
+      "route": "/library/books/brahmanda-purana",
       "source": "item"
     },
     "system": {
@@ -5581,7 +5581,7 @@
     "id": "book:bol-brhadaranyak-upanishad",
     "type": "book",
     "title": "Brhadaranyak Upanishad",
-    "slug": "bol-brhadaranyak-upanishad",
+    "slug": "brhadaranyak-upanishad",
     "description": "English edition or translation of the Brhadaranyak Upanishad, highlighting selfhood, negation, sacrifice, and the search for brahman.",
     "tags": [
       "atman",
@@ -5590,7 +5590,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Brhadaranyak%20Upanishad.pdf",
+      "route": "/library/books/brhadaranyak-upanishad",
       "source": "item"
     },
     "system": {
@@ -5602,7 +5602,7 @@
     "id": "book:bol-chandogya-upanishad",
     "type": "book",
     "title": "Chandogya Upanishad",
-    "slug": "bol-chandogya-upanishad",
+    "slug": "chandogya-upanishad",
     "description": "English edition or translation of the Chandogya Upanishad, highlighting meditation, sacred speech, ritual symbolism, and the teaching of tat tvam asi.",
     "tags": [
       "meditation",
@@ -5611,7 +5611,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Chandogya%20Upanishad.pdf",
+      "route": "/library/books/chandogya-upanishad",
       "source": "item"
     },
     "system": {
@@ -5623,7 +5623,7 @@
     "id": "book:bol-garuda-purana",
     "type": "book",
     "title": "Garuda Purana",
-    "slug": "bol-garuda-purana",
+    "slug": "garuda-purana",
     "description": "Edition or translation of the Garuda Purana, afterlife teachings, funerary rites, ethics, cosmology, and Vaishnava doctrine.",
     "tags": [
       "afterlife",
@@ -5632,7 +5632,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Garuda%20Purana.pdf",
+      "route": "/library/books/garuda-purana",
       "source": "item"
     },
     "system": {
@@ -5644,7 +5644,7 @@
     "id": "book:bol-geography-of-the-puranas",
     "type": "book",
     "title": "Geography of the Puranas",
-    "slug": "bol-geography-of-the-puranas",
+    "slug": "geography-of-the-puranas",
     "description": "Edition or translation of the Geography of the Puranas, a Purana text combining mythology, cosmology, ritual observance, and sacred geography.",
     "tags": [
       "sacred-geography",
@@ -5655,7 +5655,7 @@
       "author": [
         "MA Ali"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Geography%20of%20the%20Puranas.pdf",
+      "route": "/library/books/geography-of-the-puranas",
       "source": "item"
     },
     "system": {
@@ -5667,7 +5667,7 @@
     "id": "book:bol-harivansha-purana",
     "type": "book",
     "title": "Harivansha Purana",
-    "slug": "bol-harivansha-purana",
+    "slug": "harivansha-purana",
     "description": "Edition or translation of the Harivansha Purana, Krishna lineage narratives and cosmological material closely tied to the Mahabharata tradition.",
     "tags": [
       "krishna-lineage",
@@ -5676,7 +5676,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Harivansha%20Purana.pdf",
+      "route": "/library/books/harivansha-purana",
       "source": "item"
     },
     "system": {
@@ -5688,7 +5688,7 @@
     "id": "book:bol-isha-upanishad",
     "type": "book",
     "title": "Isha Upanishad",
-    "slug": "bol-isha-upanishad",
+    "slug": "isha-upanishad",
     "description": "English edition or translation of the Isha Upanishad, highlighting renunciation, action, inner self, and the relation between knowledge and world-engagement.",
     "tags": [
       "renunciation",
@@ -5697,7 +5697,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Isha%20Upanishad.pdf",
+      "route": "/library/books/isha-upanishad",
       "source": "item"
     },
     "system": {
@@ -5709,7 +5709,7 @@
     "id": "book:bol-katha-upanishad",
     "type": "book",
     "title": "Katha Upanishad",
-    "slug": "bol-katha-upanishad",
+    "slug": "katha-upanishad",
     "description": "English edition or translation of the Katha Upanishad, highlighting death, the self, disciplined choice, and liberation through insight.",
     "tags": [
       "death-dialogue",
@@ -5718,7 +5718,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Katha%20Upanishad.pdf",
+      "route": "/library/books/katha-upanishad",
       "source": "item"
     },
     "system": {
@@ -5730,7 +5730,7 @@
     "id": "book:bol-kena-upanishad",
     "type": "book",
     "title": "Kena Upanishad",
-    "slug": "bol-kena-upanishad",
+    "slug": "kena-upanishad",
     "description": "English edition or translation of the Kena Upanishad, highlighting the limits of ordinary cognition and the grounding of mind and speech in brahman.",
     "tags": [
       "brahman",
@@ -5739,7 +5739,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Kena%20Upanishad.pdf",
+      "route": "/library/books/kena-upanishad",
       "source": "item"
     },
     "system": {
@@ -5751,7 +5751,7 @@
     "id": "book:bol-kurma-purana",
     "type": "book",
     "title": "Kurma Purana",
-    "slug": "bol-kurma-purana",
+    "slug": "kurma-purana",
     "description": "Edition or translation of the Kurma Purana, cosmology, pilgrimage, dharma, and sectarian theology in dialogic form.",
     "tags": [
       "pilgrimage",
@@ -5760,7 +5760,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Kurma%20Purana.pdf",
+      "route": "/library/books/kurma-purana",
       "source": "item"
     },
     "system": {
@@ -5772,7 +5772,7 @@
     "id": "book:bol-linga-purana",
     "type": "book",
     "title": "Linga Purana",
-    "slug": "bol-linga-purana",
+    "slug": "linga-purana",
     "description": "Edition or translation of the Linga Purana, Shaiva theology of the linga alongside cosmology, vows, and sacred geography.",
     "tags": [
       "shaiva-theology",
@@ -5781,7 +5781,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Linga%20Purana.pdf",
+      "route": "/library/books/linga-purana",
       "source": "item"
     },
     "system": {
@@ -5793,7 +5793,7 @@
     "id": "book:bol-maitrayaniya-upanishad",
     "type": "book",
     "title": "Maitrayaniya Upanishad",
-    "slug": "bol-maitrayaniya-upanishad",
+    "slug": "maitrayaniya-upanishad",
     "description": "English edition or translation of the Maitrayaniya Upanishad, highlighting self-knowledge, mind, time, cosmology, and yogic discipline.",
     "tags": [
       "mind",
@@ -5802,7 +5802,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Maitrayaniya%20Upanishad.pdf",
+      "route": "/library/books/maitrayaniya-upanishad",
       "source": "item"
     },
     "system": {
@@ -5814,7 +5814,7 @@
     "id": "book:bol-mandukya-upanishad",
     "type": "book",
     "title": "Mandukya Upanishad",
-    "slug": "bol-mandukya-upanishad",
+    "slug": "mandukya-upanishad",
     "description": "English edition or translation of the Mandukya Upanishad, highlighting Om, waking-dream-sleep states, and the non-dual fourth state.",
     "tags": [
       "om",
@@ -5823,7 +5823,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Mandukya%20Upanishad.pdf",
+      "route": "/library/books/mandukya-upanishad",
       "source": "item"
     },
     "system": {
@@ -5835,7 +5835,7 @@
     "id": "book:bol-markandeya-purana",
     "type": "book",
     "title": "Markandeya Purana",
-    "slug": "bol-markandeya-purana",
+    "slug": "markandeya-purana",
     "description": "Edition or translation of the Markandeya Purana, mythic and ethical narrative best known for the Devi Mahatmya and broader cosmological material.",
     "tags": [
       "devi-mahatmya",
@@ -5844,7 +5844,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Markandeya%20Purana.pdf",
+      "route": "/library/books/markandeya-purana",
       "source": "item"
     },
     "system": {
@@ -5856,7 +5856,7 @@
     "id": "book:bol-matsya-purana",
     "type": "book",
     "title": "Matsya Purana",
-    "slug": "bol-matsya-purana",
+    "slug": "matsya-purana",
     "description": "Edition or translation of the Matsya Purana, the flood myth together with temple, iconographic, genealogical, and pilgrimage material.",
     "tags": [
       "flood-myth",
@@ -5865,7 +5865,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Matsya%20Purana.pdf",
+      "route": "/library/books/matsya-purana",
       "source": "item"
     },
     "system": {
@@ -5877,7 +5877,7 @@
     "id": "book:bol-mundaka-upanishad",
     "type": "book",
     "title": "Mundaka Upanishad",
-    "slug": "bol-mundaka-upanishad",
+    "slug": "mundaka-upanishad",
     "description": "English edition or translation of the Mundaka Upanishad, highlighting higher and lower knowledge, brahman, renunciation, and liberation.",
     "tags": [
       "higher-knowledge",
@@ -5886,7 +5886,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Mundaka%20Upanishad.pdf",
+      "route": "/library/books/mundaka-upanishad",
       "source": "item"
     },
     "system": {
@@ -5898,7 +5898,7 @@
     "id": "book:bol-narada-purana",
     "type": "book",
     "title": "Narada Purana",
-    "slug": "bol-narada-purana",
+    "slug": "narada-purana",
     "description": "Edition or translation of the Narada Purana, ritual, devotion, pilgrimage, and religious observance in a Purana compendium format.",
     "tags": [
       "devotional-practice",
@@ -5907,7 +5907,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Narada%20Purana.pdf",
+      "route": "/library/books/narada-purana",
       "source": "item"
     },
     "system": {
@@ -5919,7 +5919,7 @@
     "id": "book:bol-padma-purana",
     "type": "book",
     "title": "Padma Purana",
-    "slug": "bol-padma-purana",
+    "slug": "padma-purana",
     "description": "Edition or translation of the Padma Purana, creation, pilgrimage, dharma, sacred places, and large Vaishnava devotional sections.",
     "tags": [
       "pilgrimage",
@@ -5928,7 +5928,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Padma%20Purana.pdf",
+      "route": "/library/books/padma-purana",
       "source": "item"
     },
     "system": {
@@ -5940,7 +5940,7 @@
     "id": "book:bol-prashna-upanishad",
     "type": "book",
     "title": "Prashna Upanishad",
-    "slug": "bol-prashna-upanishad",
+    "slug": "prashna-upanishad",
     "description": "English edition or translation of the Prashna Upanishad, highlighting six questions on prana, cosmology, Om, and the inner self.",
     "tags": [
       "question-dialogue",
@@ -5949,7 +5949,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Prashna%20Upanishad.pdf",
+      "route": "/library/books/prashna-upanishad",
       "source": "item"
     },
     "system": {
@@ -5961,7 +5961,7 @@
     "id": "book:bol-shiva-purana",
     "type": "book",
     "title": "Shiva Purana",
-    "slug": "bol-shiva-purana",
+    "slug": "shiva-purana",
     "description": "Edition or translation of the Shiva Purana, myths, worship, cosmology, and theology centered on Shiva.",
     "tags": [
       "shaiva-mythology",
@@ -5970,7 +5970,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Shiva%20Purana.pdf",
+      "route": "/library/books/shiva-purana",
       "source": "item"
     },
     "system": {
@@ -5982,7 +5982,7 @@
     "id": "book:bol-skanda-purana",
     "type": "book",
     "title": "Skanda Purana",
-    "slug": "bol-skanda-purana",
+    "slug": "skanda-purana",
     "description": "Edition or translation of the Skanda Purana, a vast pilgrimage-oriented Purana organized around sacred geography and regional mahatmyas.",
     "tags": [
       "pilgrimage-cycles",
@@ -5991,7 +5991,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Skanda%20Purana.pdf",
+      "route": "/library/books/skanda-purana",
       "source": "item"
     },
     "system": {
@@ -6003,7 +6003,7 @@
     "id": "book:bol-taittiriya-upanishad",
     "type": "book",
     "title": "Taittiriya Upanishad",
-    "slug": "bol-taittiriya-upanishad",
+    "slug": "taittiriya-upanishad",
     "description": "English edition or translation of the Taittiriya Upanishad, highlighting the sheaths of the self, brahman as bliss, and the transmission of Vedic learning.",
     "tags": [
       "five-sheaths",
@@ -6012,7 +6012,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Taittiriya%20Upanishad.pdf",
+      "route": "/library/books/taittiriya-upanishad",
       "source": "item"
     },
     "system": {
@@ -6024,7 +6024,7 @@
     "id": "book:bol-vamana-purana",
     "type": "book",
     "title": "Vamana Purana",
-    "slug": "bol-vamana-purana",
+    "slug": "vamana-purana",
     "description": "Edition or translation of the Vamana Purana, mythic narrative, pilgrimage, and Vaishnava themes around the Vamana tradition.",
     "tags": [
       "vamana-myth",
@@ -6033,7 +6033,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Vamana%20Purana.pdf",
+      "route": "/library/books/vamana-purana",
       "source": "item"
     },
     "system": {
@@ -6045,7 +6045,7 @@
     "id": "book:bol-varaha-purana",
     "type": "book",
     "title": "Varaha Purana",
-    "slug": "bol-varaha-purana",
+    "slug": "varaha-purana",
     "description": "Edition or translation of the Varaha Purana, Vaishnava cosmology, ritual observance, pilgrimage, and the Varaha incarnation.",
     "tags": [
       "varaha-avatar",
@@ -6054,7 +6054,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Varaha%20Purana.pdf",
+      "route": "/library/books/varaha-purana",
       "source": "item"
     },
     "system": {
@@ -6066,7 +6066,7 @@
     "id": "book:bol-vayu-purana",
     "type": "book",
     "title": "Vayu Purana",
-    "slug": "bol-vayu-purana",
+    "slug": "vayu-purana",
     "description": "Edition or translation of the Vayu Purana, cosmology, genealogies, dynastic memory, and ancient sacred lore.",
     "tags": [
       "genealogies",
@@ -6075,7 +6075,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Vayu%20Purana.pdf",
+      "route": "/library/books/vayu-purana",
       "source": "item"
     },
     "system": {
@@ -6087,7 +6087,7 @@
     "id": "book:bol-vishnu-purana",
     "type": "book",
     "title": "Vishnu Purana",
-    "slug": "bol-vishnu-purana",
+    "slug": "vishnu-purana",
     "description": "Edition or translation of the Vishnu Purana, creation, dynasties, avatara doctrine, cosmology, and dharma in a foundational Vaishnava Purana.",
     "tags": [
       "avatara-doctrine",
@@ -6096,7 +6096,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Vishnu%20Purana.pdf",
+      "route": "/library/books/vishnu-purana",
       "source": "item"
     },
     "system": {
@@ -6108,7 +6108,7 @@
     "id": "book:bol-light-of-the-vedas",
     "type": "book",
     "title": "Light of the Vedas",
-    "slug": "bol-light-of-the-vedas",
+    "slug": "light-of-the-vedas",
     "description": "Newsletter-style reflections and essays on Vedic spirituality, leadership, and contemporary applications of Vedic thought.",
     "tags": [
       "newsletter",
@@ -6119,7 +6119,7 @@
       "author": [
         "David Frawley"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Light%20of%20the%20Vedas.pdf",
+      "route": "/library/books/light-of-the-vedas",
       "source": "item"
     },
     "system": {
@@ -6131,7 +6131,7 @@
     "id": "book:bol-argument-and-design-the-unity-of-the-mahabharata",
     "type": "book",
     "title": "Argument and Design the Unity of the Mahabharata",
-    "slug": "bol-argument-and-design-the-unity-of-the-mahabharata",
+    "slug": "argument-and-design-the-unity-of-the-mahabharata",
     "description": "Study arguing for the literary and philosophical unity of the Mahabharata against fragmenting critical models.",
     "tags": [
       "mahabharata",
@@ -6142,7 +6142,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Argument%20and%20Design%20the%20Unity%20of%20the%20Mahabharata.pdf",
+      "route": "/library/books/argument-and-design-the-unity-of-the-mahabharata",
       "source": "item"
     },
     "system": {
@@ -6154,7 +6154,7 @@
     "id": "book:bol-arthashastra",
     "type": "book",
     "title": "Arthashastra",
-    "slug": "bol-arthashastra",
+    "slug": "arthashastra",
     "description": "Classical treatise on statecraft, administration, diplomacy, economy, espionage, and royal governance.",
     "tags": [
       "statecraft",
@@ -6165,7 +6165,7 @@
       "author": [
         "Kautilya"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Arthashastra.pdf",
+      "route": "/library/books/arthashastra",
       "source": "item"
     },
     "system": {
@@ -6177,7 +6177,7 @@
     "id": "book:bol-civil-disobedience-in-indian-tradition",
     "type": "book",
     "title": "Civil Disobedience in Indian Tradition",
-    "slug": "bol-civil-disobedience-in-indian-tradition",
+    "slug": "civil-disobedience-in-indian-tradition",
     "description": "Study of resistance, legitimacy, and non-cooperation within Indian political and ethical traditions.",
     "tags": [
       "political-ethics",
@@ -6188,7 +6188,7 @@
       "author": [
         "Dharampal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Civil%20Disobedience%20in%20Indian%20Tradition.pdf",
+      "route": "/library/books/civil-disobedience-in-indian-tradition",
       "source": "item"
     },
     "system": {
@@ -6200,7 +6200,7 @@
     "id": "book:bol-essays-on-tradition-recovery-and-freedom",
     "type": "book",
     "title": "Essays on Tradition, Recovery and Freedom",
-    "slug": "bol-essays-on-tradition-recovery-and-freedom",
+    "slug": "essays-on-tradition-recovery-and-freedom",
     "description": "Essays on cultural continuity, intellectual decolonization, and the recovery of civilizational freedom.",
     "tags": [
       "tradition-and-modernity",
@@ -6211,7 +6211,7 @@
       "author": [
         "Dharampal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Essays%20on%20Tradition,%20Recovery%20and%20Freedom.pdf",
+      "route": "/library/books/essays-on-tradition-recovery-and-freedom",
       "source": "item"
     },
     "system": {
@@ -6223,7 +6223,7 @@
     "id": "book:bol-gandhis-theory-of-society-and-our-times",
     "type": "book",
     "title": "Gandhis Theory of Society and Our Times",
-    "slug": "bol-gandhis-theory-of-society-and-our-times",
+    "slug": "gandhis-theory-of-society-and-our-times",
     "description": "Interpretive study of Gandhi’s social philosophy, moral politics, and continuing relevance.",
     "tags": [
       "gandhian-thought",
@@ -6234,7 +6234,7 @@
       "author": [
         "AK Saran"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Gandhis%20Theory%20of%20Society%20and%20Our%20Times.pdf",
+      "route": "/library/books/gandhis-theory-of-society-and-our-times",
       "source": "item"
     },
     "system": {
@@ -6246,7 +6246,7 @@
     "id": "book:bol-hermeneutics-and-narrative-architecture",
     "type": "book",
     "title": "Hermeneutics and Narrative Architecture",
-    "slug": "bol-hermeneutics-and-narrative-architecture",
+    "slug": "hermeneutics-and-narrative-architecture",
     "description": "Study of how interpretive method and narrative design work together in Sanskrit epic literature.",
     "tags": [
       "hermeneutics",
@@ -6257,7 +6257,7 @@
       "author": [
         "Vishwa Adluri"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hermeneutics%20and%20Narrative%20Architecture.pdf",
+      "route": "/library/books/hermeneutics-and-narrative-architecture",
       "source": "item"
     },
     "system": {
@@ -6269,7 +6269,7 @@
     "id": "book:bol-indian-science-and-technology-in-the-18th-century",
     "type": "book",
     "title": "Indian Science and Technology in the 18th Century",
-    "slug": "bol-indian-science-and-technology-in-the-18th-century",
+    "slug": "indian-science-and-technology-in-the-18th-century",
     "description": "Documentary study of scientific and technical practices in early modern India.",
     "tags": [
       "technology-history",
@@ -6280,7 +6280,7 @@
       "author": [
         "Dharampal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Indian%20Science%20and%20Technology%20in%20the%2018th%20Century.pdf",
+      "route": "/library/books/indian-science-and-technology-in-the-18th-century",
       "source": "item"
     },
     "system": {
@@ -6292,7 +6292,7 @@
     "id": "book:bol-katha-sarit-sagar",
     "type": "book",
     "title": "Katha Sarit Sagar",
-    "slug": "bol-katha-sarit-sagar",
+    "slug": "katha-sarit-sagar",
     "description": "Large compendium of narrative literature preserving story cycles, moral reflection, and courtly imagination.",
     "tags": [
       "story-cycle",
@@ -6303,7 +6303,7 @@
       "author": [
         "C.H. Tawney"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Katha%20Sarit%20Sagar.pdf",
+      "route": "/library/books/katha-sarit-sagar",
       "source": "item"
     },
     "system": {
@@ -6315,7 +6315,7 @@
     "id": "book:bol-panchayat-raj-and-indias-polity",
     "type": "book",
     "title": "Panchayat Raj and India's Polity",
-    "slug": "bol-panchayat-raj-and-indias-polity",
+    "slug": "panchayat-raj-and-indias-polity",
     "description": "Study of village governance and decentralized political structures in Indian constitutional and civilizational context.",
     "tags": [
       "local-governance",
@@ -6326,7 +6326,7 @@
       "author": [
         "Dharampal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Panchayat%20Raj%20and%20India's%20Polity.pdf",
+      "route": "/library/books/panchayat-raj-and-indias-polity",
       "source": "item"
     },
     "system": {
@@ -6338,7 +6338,7 @@
     "id": "book:bol-prolegomena-to-any-future-mahabharata-studies",
     "type": "book",
     "title": "Prolegomena to any Future Mahabharata Studies",
-    "slug": "bol-prolegomena-to-any-future-mahabharata-studies",
+    "slug": "prolegomena-to-any-future-mahabharata-studies",
     "description": "Methodological essay rethinking how the Mahabharata should be studied, edited, and interpreted.",
     "tags": [
       "mahabharata-method",
@@ -6349,7 +6349,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Prolegomena%20to%20any%20Future%20Mahabharata%20Studies.pdf",
+      "route": "/library/books/prolegomena-to-any-future-mahabharata-studies",
       "source": "item"
     },
     "system": {
@@ -6361,7 +6361,7 @@
     "id": "book:bol-rajatarangini",
     "type": "book",
     "title": "Rajatarangini",
-    "slug": "bol-rajatarangini",
+    "slug": "rajatarangini",
     "description": "Chronicle of Kashmir that blends political history, dynastic memory, and literary historiography.",
     "tags": [
       "chronicle",
@@ -6372,7 +6372,7 @@
       "author": [
         "Ranjit Sitaram Pandit"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Rajatarangini.pdf",
+      "route": "/library/books/rajatarangini",
       "source": "item"
     },
     "system": {
@@ -6384,7 +6384,7 @@
     "id": "book:bol-rediscovering-india",
     "type": "book",
     "title": "Rediscovering India",
-    "slug": "bol-rediscovering-india",
+    "slug": "rediscovering-india",
     "description": "Essays aimed at recovering Indian civilizational categories, intellectual memory, and cultural self-knowledge.",
     "tags": [
       "civilizational-recovery",
@@ -6395,7 +6395,7 @@
       "author": [
         "Dharampal"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Rediscovering%20India.pdf",
+      "route": "/library/books/rediscovering-india",
       "source": "item"
     },
     "system": {
@@ -6407,7 +6407,7 @@
     "id": "book:bol-rigveda-a-historical-analysis",
     "type": "book",
     "title": "Rigveda a Historical Analysis",
-    "slug": "bol-rigveda-a-historical-analysis",
+    "slug": "rigveda-a-historical-analysis",
     "description": "Historical reading of the Rigveda that uses textual evidence to discuss chronology, culture, and social setting.",
     "tags": [
       "rigveda",
@@ -6418,7 +6418,7 @@
       "author": [
         "Shrikant Talageri"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Rigveda%20a%20Historical%20Analysis.pdf",
+      "route": "/library/books/rigveda-a-historical-analysis",
       "source": "item"
     },
     "system": {
@@ -6430,7 +6430,7 @@
     "id": "book:bol-the-crisis-of-hinduism",
     "type": "book",
     "title": "The Crisis of Hinduism",
-    "slug": "bol-the-crisis-of-hinduism",
+    "slug": "the-crisis-of-hinduism",
     "description": "Reflection on modern challenges facing Hindu civilizational confidence, continuity, and self-understanding.",
     "tags": [
       "religious-reform",
@@ -6441,7 +6441,7 @@
       "author": [
         "AK Saran"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Crisis%20of%20Hinduism.pdf",
+      "route": "/library/books/the-crisis-of-hinduism",
       "source": "item"
     },
     "system": {
@@ -6453,7 +6453,7 @@
     "id": "book:bol-the-perils-of-textual-transmission",
     "type": "book",
     "title": "The Perils of Textual Transmission",
-    "slug": "bol-the-perils-of-textual-transmission",
+    "slug": "the-perils-of-textual-transmission",
     "description": "Scholarly work on Indian thought and civilization with relevance to the themes signaled by its title.",
     "tags": [
       "textual-transmission",
@@ -6464,7 +6464,7 @@
       "author": [
         "Vishwa Adluri"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Perils%20of%20Textual%20Transmission.pdf",
+      "route": "/library/books/the-perils-of-textual-transmission",
       "source": "item"
     },
     "system": {
@@ -6476,7 +6476,7 @@
     "id": "book:bol-the-redemption-of-the-brahman",
     "type": "book",
     "title": "The Redemption of the Brahman",
-    "slug": "bol-the-redemption-of-the-brahman",
+    "slug": "the-redemption-of-the-brahman",
     "description": "Interpretive essay on the figure of the Brahman and debates about textual and cultural transformation.",
     "tags": [
       "brahman-figure",
@@ -6487,7 +6487,7 @@
       "author": [
         "Vishwa Adluri, Joydeep Bagchee"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Redemption%20of%20the%20Brahman.pdf",
+      "route": "/library/books/the-redemption-of-the-brahman",
       "source": "item"
     },
     "system": {
@@ -6499,7 +6499,7 @@
     "id": "book:bol-the-riks",
     "type": "book",
     "title": "The Riks",
-    "slug": "bol-the-riks",
+    "slug": "the-riks",
     "description": "Selection and interpretation of Rigvedic hymns highlighting poetic vision, symbolism, and early Vedic spirituality.",
     "tags": [
       "rigvedic-hymns",
@@ -6510,7 +6510,7 @@
       "author": [
         "Shri Paramasiva Iyer"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Riks.pdf",
+      "route": "/library/books/the-riks",
       "source": "item"
     },
     "system": {
@@ -6522,7 +6522,7 @@
     "id": "book:bol-the-secret-of-the-veda",
     "type": "book",
     "title": "The Secret of the Veda",
-    "slug": "bol-the-secret-of-the-veda",
+    "slug": "the-secret-of-the-veda",
     "description": "Sri Aurobindo’s symbolic interpretation of the Vedic hymns as spiritual and psychological texts rather than merely ritual documents.",
     "tags": [
       "symbolic-exegesis",
@@ -6533,7 +6533,7 @@
       "author": [
         "Sri Aurobindo"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Secret%20of%20the%20Veda.pdf",
+      "route": "/library/books/the-secret-of-the-veda",
       "source": "item"
     },
     "system": {
@@ -6545,7 +6545,7 @@
     "id": "book:bol-treatise-on-rigveda",
     "type": "book",
     "title": "Treatise on Rigveda",
-    "slug": "bol-treatise-on-rigveda",
+    "slug": "treatise-on-rigveda",
     "description": "Extended interpretive study of the Rigveda with attention to language, symbolism, and historical understanding.",
     "tags": [
       "rigveda",
@@ -6556,7 +6556,7 @@
       "author": [
         "Vedayana"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Treatise%20on%20Rigveda.pdf",
+      "route": "/library/books/treatise-on-rigveda",
       "source": "item"
     },
     "system": {
@@ -6568,7 +6568,7 @@
     "id": "book:bol-wisdom-of-the-ancient-seers",
     "type": "book",
     "title": "Wisdom of the Ancient Seers",
-    "slug": "bol-wisdom-of-the-ancient-seers",
+    "slug": "wisdom-of-the-ancient-seers",
     "description": "Introductory reflections on Vedic and Upanishadic insight framed for modern readers.",
     "tags": [
       "vedic-wisdom",
@@ -6579,7 +6579,7 @@
       "author": [
         "David Frawley"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Wisdom%20of%20the%20Ancient%20Seers.pdf",
+      "route": "/library/books/wisdom-of-the-ancient-seers",
       "source": "item"
     },
     "system": {
@@ -6591,7 +6591,7 @@
     "id": "book:bol-religious-sects-of-hindus",
     "type": "book",
     "title": "Religious Sects of Hindus",
-    "slug": "bol-religious-sects-of-hindus",
+    "slug": "religious-sects-of-hindus",
     "description": "Survey of major Hindu sects, their doctrines, institutions, and devotional lineages.",
     "tags": [
       "sectarian-traditions",
@@ -6602,7 +6602,7 @@
       "author": [
         "HH Wilson"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Religious%20Sects%20of%20Hindus.pdf",
+      "route": "/library/books/religious-sects-of-hindus",
       "source": "item"
     },
     "system": {
@@ -6614,7 +6614,7 @@
     "id": "book:bol-all-about-hinduism",
     "type": "book",
     "title": "All About Hinduism",
-    "slug": "bol-all-about-hinduism",
+    "slug": "all-about-hinduism",
     "description": "Popular overview of Hindu beliefs, practices, festivals, symbols, and philosophical foundations.",
     "tags": [
       "introductory-survey",
@@ -6625,7 +6625,7 @@
       "author": [
         "Sri Swami Sivananda"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20All%20About%20Hinduism.pdf",
+      "route": "/library/books/all-about-hinduism",
       "source": "item"
     },
     "system": {
@@ -6637,7 +6637,7 @@
     "id": "book:bol-hinduism-ancient-and-modern",
     "type": "book",
     "title": "Hinduism Ancient and Modern",
-    "slug": "bol-hinduism-ancient-and-modern",
+    "slug": "hinduism-ancient-and-modern",
     "description": "Comparative overview of continuities and changes in Hindu tradition across historical periods.",
     "tags": [
       "historical-survey",
@@ -6648,7 +6648,7 @@
       "author": [
         "Rai Bahadur Lala Baij Nath"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hinduism%20Ancient%20and%20Modern.pdf",
+      "route": "/library/books/hinduism-ancient-and-modern",
       "source": "item"
     },
     "system": {
@@ -6660,7 +6660,7 @@
     "id": "book:bol-elementary-textbook-of-hindu-ethics",
     "type": "book",
     "title": "Elementary Textbook of Hindu Religion and Ethics",
-    "slug": "bol-elementary-textbook-of-hindu-ethics",
+    "slug": "elementary-textbook-of-hindu-ethics",
     "description": "Introductory textbook on Hindu beliefs, duties, virtues, and everyday ethical formation.",
     "tags": [
       "ethics-textbook",
@@ -6669,7 +6669,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Elementary%20Textbook%20of%20Hindu%20Ethics.pdf",
+      "route": "/library/books/elementary-textbook-of-hindu-ethics",
       "source": "item"
     },
     "system": {
@@ -6681,7 +6681,7 @@
     "id": "book:bol-advanced-textbook-of-hindu-religion-and-ethics",
     "type": "book",
     "title": "Advanced Textbook of Hindu Religion and Ethics",
-    "slug": "bol-advanced-textbook-of-hindu-religion-and-ethics",
+    "slug": "advanced-textbook-of-hindu-religion-and-ethics",
     "description": "More advanced textbook on Hindu ethics, doctrine, discipline, and moral reasoning.",
     "tags": [
       "ethics-textbook",
@@ -6690,7 +6690,7 @@
     ],
     "meta": {
       "author": [],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Advanced%20Textbook%20of%20Hindu%20Religion%20and%20Ethics.pdf",
+      "route": "/library/books/advanced-textbook-of-hindu-religion-and-ethics",
       "source": "item"
     },
     "system": {
@@ -6702,7 +6702,7 @@
     "id": "book:bol-a-study-of-tarakasamgraha-as-compromise-between-nyaya-and-vaisheshika",
     "type": "book",
     "title": "A Study of Tarakasamgraha as Compromise Between Nyaya and Vaisheshika",
-    "slug": "bol-a-study-of-tarakasamgraha-as-compromise-between-nyaya-and-vaisheshika",
+    "slug": "a-study-of-tarakasamgraha-as-compromise-between-nyaya-and-vaisheshika",
     "description": "Detailed study of the Tarkasamgraha as a bridge text combining Nyaya logic with Vaisheshika ontology.",
     "tags": [
       "tarkasamgraha",
@@ -6713,7 +6713,7 @@
       "author": [
         "Priya M. P."
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20A%20Study%20of%20Tarakasamgraha%20as%20Compromise%20Between%20Nyaya%20and%20Vaisheshika.pdf",
+      "route": "/library/books/a-study-of-tarakasamgraha-as-compromise-between-nyaya-and-vaisheshika",
       "source": "item"
     },
     "system": {
@@ -6725,7 +6725,7 @@
     "id": "book:bol-abhinavagupta-a-historical-and-philosophical-study",
     "type": "book",
     "title": "Abhinavagupta a Historical and Philosophical Study",
-    "slug": "bol-abhinavagupta-a-historical-and-philosophical-study",
+    "slug": "abhinavagupta-a-historical-and-philosophical-study",
     "description": "Study of Abhinavagupta’s life, thought, Kashmir Shaivism, and aesthetic philosophy.",
     "tags": [
       "abhinavagupta",
@@ -6736,7 +6736,7 @@
       "author": [
         "Unknown"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Abhinavagupta%20a%20Historical%20and%20Philosophical%20Study.pdf",
+      "route": "/library/books/abhinavagupta-a-historical-and-philosophical-study",
       "source": "item"
     },
     "system": {
@@ -6748,7 +6748,7 @@
     "id": "book:bol-agnihotra-kranti",
     "type": "book",
     "title": "Agnihotra Kranti",
-    "slug": "bol-agnihotra-kranti",
+    "slug": "agnihotra-kranti",
     "description": "Text advocating or explaining the revival of Agnihotra and related Vedic fire ritual practice.",
     "tags": [
       "agnihotra",
@@ -6759,7 +6759,7 @@
       "author": [
         "Unknown"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Agnihotra%20Kranti.pdf",
+      "route": "/library/books/agnihotra-kranti",
       "source": "item"
     },
     "system": {
@@ -6771,7 +6771,7 @@
     "id": "book:bol-gulmavrikshayurveda",
     "type": "book",
     "title": "Gulmavrikshayurveda",
-    "slug": "bol-gulmavrikshayurveda",
+    "slug": "gulmavrikshayurveda",
     "description": "Traditional treatise on plants, horticulture, and knowledge systems related to trees and cultivation.",
     "tags": [
       "plant-science",
@@ -6782,7 +6782,7 @@
       "author": [
         "Unknown"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Gulmavrikshayurveda.pdf",
+      "route": "/library/books/gulmavrikshayurveda",
       "source": "item"
     },
     "system": {
@@ -6794,7 +6794,7 @@
     "id": "book:bol-hindu-dharma-radhakrishnan",
     "type": "book",
     "title": "Hindu Dharma Radhakrishnan",
-    "slug": "bol-hindu-dharma-radhakrishnan",
+    "slug": "hindu-dharma-radhakrishnan",
     "description": "Essay by S. Radhakrishnan presenting Hindu dharma as a living, adaptive, and philosophically grounded religious tradition.",
     "tags": [
       "religious-philosophy",
@@ -6805,7 +6805,7 @@
       "author": [
         "S. Radhakrishnan"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Hindu%20Dharma%20Radhakrishnan.pdf",
+      "route": "/library/books/hindu-dharma-radhakrishnan",
       "source": "item"
     },
     "system": {
@@ -6817,7 +6817,7 @@
     "id": "book:bol-lokopakara",
     "type": "book",
     "title": "Lokopakara",
-    "slug": "bol-lokopakara",
+    "slug": "lokopakara",
     "description": "Traditional practical compendium on useful arts, household knowledge, and applied sciences.",
     "tags": [
       "practical-knowledge",
@@ -6828,7 +6828,7 @@
       "author": [
         "Unknown"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20Lokopakara.pdf",
+      "route": "/library/books/lokopakara",
       "source": "item"
     },
     "system": {
@@ -6840,7 +6840,7 @@
     "id": "book:bol-the-mimamsa-sutras-of-jaimini",
     "type": "book",
     "title": "The Mimamsa Sutras of Jaimini",
-    "slug": "bol-the-mimamsa-sutras-of-jaimini",
+    "slug": "the-mimamsa-sutras-of-jaimini",
     "description": "Another edition of the Mimamsa Sutras presenting the core framework of Vedic hermeneutics and duty.",
     "tags": [
       "mimamsa-sutra",
@@ -6851,7 +6851,7 @@
       "author": [
         "Jaimini"
       ],
-      "route": "https://pub-1837129c34d34e56a6a81ac74dde2c4b.r2.dev/BOL%20-%20The%20Mimamsa%20Sutras%20of%20Jaimini.pdf",
+      "route": "/library/books/the-mimamsa-sutras-of-jaimini",
       "source": "item"
     },
     "system": {

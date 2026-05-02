@@ -2,8 +2,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Swipes from '$lib/comps/swipercomp.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Youtuber from '$lib/comps/youtuber.svelte';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import VideoPlayer from '$lib/comps/custom-video-player.svelte'
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
@@ -42,9 +41,9 @@
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Videos" showD={true} desc={metaDescription}/>
+<Container>
+	<div class="stdbox stdpad header-margin is-last">
+		<Crumb showT={true} title="Videos" showD={true} desc={metaDescription}/>
 		{#if vids && vids.length > 0}
 		<Swipes slidesPerView={3} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 3,spaceBetween: 8}}}>
 			{#each vids as item}

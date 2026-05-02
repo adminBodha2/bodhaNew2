@@ -54,11 +54,9 @@
 				{/if}
 			</div>
 		</div>
-		<div class="box mainarea">
-			<div class="labelbox borderbot title-area">
-				<Crumb rgap={16} item1="Research" item1Link="/research" />
-				<h1 class="doc-title source-serif pbot8">{data.title}</h1>
-				<p class="descriptor-text grey pbot8">{data.description}</p>
+		<div class="stdbox mainarea stdpad is-first is-last">
+			<div class="labelbox title-area">
+				<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap">
 						{#each data.tags as tag}
@@ -66,12 +64,13 @@
 						{/each}
 					</div>
 				{/if}
+				</Crumb>
 			</div>
-			<div class="classic-document ptop32 pbot32">
+			<div class="classic-document">
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
-				<section class="box rgap32 ptop32 pbot32 bordertop">
+				<section class="box rgap32">
 					<p class="card-title">Related Readings</p>
 					<div class="grid two white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}

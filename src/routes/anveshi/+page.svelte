@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import autoAnimate from '@formkit/auto-animate';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Swipes from '$lib/comps/swipercomp.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
@@ -87,10 +87,10 @@
 		</div>
 	</div>
 </div>
-<Container narrow={true} scaled={true}>
+<Container>
 	<!-- ── INTRO ─────────────────────────────────────────── -->
-	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" />
+	<div class="stdbox stdpad is-first">
+		<Crumb/>
 		<div class="xleft textbox" use:autoAnimate>
 			<p class="paragraph-text">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p>
 			<p class="paragraph-text width80">
@@ -134,8 +134,8 @@
 
 	<!-- ── CURRENT CHAPTERS ──────────────────────────────── -->
 	{#if currproj && currproj.length > 0}
-		<div class="stdbox padded bordertop" id="current-chapter">
-			<Title text="current chapter" />
+		<div class="stdbox stdpad bordertop" id="current-chapter">
+			<Title text="current chapter" anveshi={true} />
 			{#each currproj as item, i}
 				<a class="blank grid two anveshi" href="/anveshi{item.link}">
 					<div class="anv-current-image">
@@ -156,8 +156,8 @@
 	{/if}
 
 	{#if testis && testis.length > 0}
-		<div class="stdbox padded bordertop" id="testimonials">
-			<Title text="Testimonials" />
+		<div class="stdbox stdpad bordertop" id="testimonials">
+			<Title text="Testimonials" anveshi={true} />
 			<div class="testi-grid">
 				<Swipes
 					slidesPerView={3}
@@ -179,8 +179,8 @@
 		</div>
 	{/if}
 
-	<div class="stdbox padded bordertop" id="future-chapters">
-		<Title text="future chapters" />
+	<div class="stdbox stdpad bordertop" id="future-chapters">
+		<Title text="future chapters" anveshi={true} />
 		<div class="row cgap8 rgap8 wrap">
 			<button class="nav-btn anveshi" class:active={isRegion[7]} onclick={() => toggleRegion(7)}>All</button>
 			<button
@@ -284,8 +284,8 @@
 	</div>
 
 	{#if pastproj && pastproj.length > 0}
-		<div class="stdbox padded bordertop" id="past-chapters">
-			<Title text="past chapters" />
+		<div class="stdbox stdpad bordertop" id="past-chapters">
+			<Title text="past chapters" anveshi={true} />
 			<div class="white-grid grid four stay2">
 				{#each pastproj as item, i}
 					{#if item.pageactive === true}
@@ -299,7 +299,7 @@
 						</div>
 					</div>
 					{:else}
-					<div class="box labelbox past-grid-items">
+					<div class="box labelbox past-grid-items whitestone">
 						<div class="anv-past-image-wrap">
 							<img class="anv-past-image" src={item.gallery} alt={item.chapter} />
 						</div>
@@ -312,7 +312,7 @@
 			</div>
 		</div>
 	{/if}
-	<div class="stdbox padded bordertop" id="faqs">
+	<div class="stdbox stdpad is-last bordertop" id="faqs">
 		<FAQ />
 	</div>
 </Container>

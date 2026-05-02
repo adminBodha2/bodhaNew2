@@ -2,7 +2,7 @@
 
 	import type { PageData } from './$types';
 	import autoAnimate from '@formkit/auto-animate';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -47,10 +47,10 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-<div class="stdbox padded-ontop thisbox">
+<Container>
+<div class="stdbox thisbox stdpad header-margin is-last">
 	<div class="explorer-heading">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything."/>
+		<Crumb showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything."/>
 	</div>
 		<div class="section-tray">
 			{#each tabs as tab, i}
@@ -75,7 +75,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}	
 		{:else if active === 1}
 	 	{#each data.grouped.externalArticles as node, i (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)} target="_blank" rel="noreferrer">
+		<a class="labelbox whitestone tight-padded blank" href={node.meta.route} target="_blank" rel="noreferrer">
     	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
@@ -89,7 +89,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 2}
 	 	{#each data.grouped.books as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
+		<a class="labelbox whitestone tight-padded blank" href={node.meta.route} target="_blank" rel="noreferrer">
     	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}

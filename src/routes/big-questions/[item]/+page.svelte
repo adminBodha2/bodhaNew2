@@ -8,7 +8,6 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import { WaterRipple } from "$lib/motion-core";
-	import Liner from '$lib/icons/anim-line.svelte'
 
 	interface Props {
 	    data: PageData;
@@ -61,11 +60,9 @@ let {
 				</div>
 			{/if}
 		</div>
-		<div class="box mainarea">
-			<div class="labelbox borderbot title-area">
-				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
-				<h1 class="doc-title source-serif pbot8">{data.title}</h1>
-				<p class="descriptor-text grey pbot8">{data.description}</p>
+		<div class="stdbox mainarea">
+			<div class="labelbox title-area stdpad is-first is-last">
+				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap">
 						{#each data.tags as tag}
@@ -73,12 +70,13 @@ let {
 						{/each}
 					</div>
 				{/if}
+				</Crumb>
 			</div>
-			<div class="classic-document ptop32 pbot32">
+			<div class="classic-document">
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
-				<section class="box rgap32 ptop32 pbot32 bordertop">
+				<section class="box rgap32">
 					<p class="card-title">Related Readings</p>
 					<div class="grid two white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}

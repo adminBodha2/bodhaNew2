@@ -34,5 +34,6 @@
 	"markdown.preview.fontFamily": "\"Google Sans Flex\", sans-serif",
 	"editor.fontFamily": "\"Google Sans Flex\", sans-serif",
 	"editor.formatOnPaste": true,
-	"editor.rename.enablePreview": false
+	"editor.rename.enablePreview": false,
+	"editor.parameterHints.enabled": false
 }

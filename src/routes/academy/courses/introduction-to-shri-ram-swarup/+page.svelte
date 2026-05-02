@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -44,28 +44,28 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1200" imHeight="630" {jsonld} />
 
-<Container narrow={true} scaled={true}>
+<Container>
 	<div class="stdbox ycenter" id="course-header">
 		<div class="hero-layout">
 			<div class="hero-left">
-				<Crumb item1="Bodha" item1Link="/" show2={true} item2="Academy" item2linked={true} item2Link="/academy" />
+				<Crumb/>
 				<div class="elembox hero-inner-text">
 					<h1 class="source-serif">Introduction to Shri Ram Swarup</h1>
 					<p class="grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
 					<div class="grid four stay2 stats-row">
-						<div class="stat-item rgap4">
+						<div class="stat-item rgap4 si-1">
 							<Calendar />
 							<p class="descriptor-text w500 tight">21–24 Mar · 1–4 Apr</p>
 						</div>
-						<div class="stat-item rgap4 tight">
+						<div class="stat-item rgap4 tight si-2">
 							<Sessions />
 							<p class="descriptor-text w500 tight">8 Sessions</p>
 						</div>
-						<div class="stat-item rgap4">
+						<div class="stat-item rgap4 si-3">
 							<Time />
 							<p class="descriptor-text w500">7 – 8 PM</p>
 						</div>
-						<div class="stat-item rgap4">
+						<div class="stat-item rgap4 si-4">
 							<Rupee />
 							<p class="descriptor-text w500">₹ 2499</p>
 						</div>
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop" id="course-details">
+	<div class="stdbox stdpad is-last bordertop" id="course-details">
 		<Title text="Course Details" />
 		<div class="section-tray">
 			{#each tabs as tab, i}
@@ -315,10 +315,19 @@
 	padding: 1.5rem
 
 .stats-row
-	background: var(--color-alt-2)
-	backdrop-filter: blur(10x) saturate(1.5)
-	box-shadow: -3px 1px 2px rgba(0,0,0,0.03), inset 0 4px 10px rgba(0,0,0,0.03), 0 4px 4px rgba(0,0,0,0.07)
 	margin-top: 1rem
+	@media screen and (max-width: 1024px)
+		border: var(--border-main)
+		border-radius: 4px
+		.si-1, .si-2
+			border-bottom: var(--border-main)
+		.si-1, .si-3
+			border-right: var(--border-main)
+	@media screen and (min-width: 1025px)
+		border: var(--border-main)
+		border-radius: 4px
+		.si-1, .si-2, .si-3
+			border-right: var(--border-main)
 
 .tab-panel
 	border-top: var(--border-main)

@@ -57,7 +57,6 @@
 	let categories = $derived((data.categories ?? []) as CategoryCount[]);
 	let externalPosts = $derived(((data.externalPosts ?? []) as ExternalPost[]).slice(0, 6));
 	let tags = $derived(((data.tags ?? []) as TagCount[]).slice(0, 18));
-	let writers = $derived(((data.writers ?? []) as WriterCount[]).slice(0, 10));
 	let heroPosts = $derived(posts.slice(0, 3));
 	let gridPosts = $derived(
 		posts.filter((post) => selectedCategory === 'All' || postCategories(post).includes(selectedCategory))
@@ -100,10 +99,6 @@
 
 	function primaryCategory(post: BlogPost) {
 		return postCategories(post)[0] ?? 'Essay';
-	}
-
-	function writerUrl(writer: string) {
-		return `/blog/writers/${encodeURIComponent(writer)}`;
 	}
 
 	function tagUrl(tag: string) {

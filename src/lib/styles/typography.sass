@@ -155,7 +155,7 @@ h1
 
 h2
 	line-height: 1.12
-	font-size: var(--typeH2)
+	font-size: var(--typeH1)
 	font-weight: 680
 	letter-spacing: -0.02rem
 	&.thin
@@ -287,6 +287,8 @@ a.tag-text
 		margin-bottom: 1.25rem
 	li
 		margin-bottom: 0.5rem
+	li::marker
+		content: "- "
 	ul, ol
 		margin-top: 0
 		margin-bottom: 1.25rem
@@ -299,6 +301,11 @@ a.tag-text
 		font-size: var(--typeH1)
 		margin-bottom: 1.25rem
 		margin-top: 2.5rem
+	@media screen and (max-width: 1024px)
+		p, pre
+			font-size: 1.20rem
+		li
+			font-size: 1.2rem
 
 small
 	font-size: 11px

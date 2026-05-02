@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { page } from '$app/state';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -53,10 +53,10 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
+<Container>
+	<div class="stdbox stdpad header-margin">
 			<div class="labelbox">
-				<Crumb item1="Bodha" item1Link="/" show2={true} item2="Concepts" item2linked={true} item2Link="/concepts" showT={true} title={data.concept.title}/>
+				<Crumb showT={true} title={data.concept.title}/>
 				<p class="descriptor-text grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes. All subdomains listed here:</p>
 			{#if data.conceptTree.length > 0}
 			<div class="row wrap collage ptop16">
@@ -67,7 +67,7 @@
 			{/if}
 			</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad is-last bordertop">
 	<Buttontray 
 		options={groups} 
 		onSelect={toggleIsItem} 

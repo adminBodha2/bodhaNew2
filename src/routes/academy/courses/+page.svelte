@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Hidden from '$lib/comps/page-header-one.svelte'
@@ -39,10 +39,10 @@
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
+<Container>
 <Hidden title="Courses at Bodha"/>
-<div class="stdbox padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" show2={true} item2="Academy" item2linked={true} item2Link="/academy" showT={true} title="Courses"/>
+<div class="stdbox stdpad header-margin">
+	<Crumb showT={true} title="Courses" showD={true} desc={metaDescription}/>
 		<div class="white-grid grid two">
 			<a class="box course-item" href="/academy/courses/introduction-to-shri-ram-swarup">
 				<div class="image-type-c">

@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import KnowledgeGraph from '$lib/comps/knowledgegraph.svelte';
@@ -27,9 +27,9 @@
 />
 
 <div id="intro">
-<Container narrow={true} scaled={true}>
-<div class="stdbox padded-ontop thisbox">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Graph Explore" showD={true} desc="Trace how essays, questions, thinkers, schools, books, and concepts pull on each other. Select a node to follow its nearby constellation."/>
+<Container>
+<div class="stdbox stdpad header-margin is-last thisbox">
+	<Crumb showT={true} title="Graph Explore" showD={true} desc="Trace how essays, questions, thinkers, schools, books, and concepts pull on each other. Select a node to follow its nearby constellation."/>
 	<KnowledgeGraph nodes={data.graph.nodes} edges={data.graph.edges} />
 </div>
 </Container>

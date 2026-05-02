@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -31,21 +31,21 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" ogType="book" {jsonld} />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
-		<Crumb centered={true} item1="Library" item1Link="/library" show2={true} item2={data.type} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
+<Container>
+	<div class="stdbox stdpad header-margin">
+		<Crumb centered={true} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 			<div class="row cgap8 rgap8 mwrap">
 				{#each data.tags as tag}
 					<a class="tag-pill themed tt-u" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
 				{/each}
 			</div>
 		</Crumb>
-		<div class="box std pdf-reader">
+		<div class="stdbox pdf-reader">
 			<PDFReader src={data.linkcloud} title={data.name} height="82vh" />
 		</div>
 	</div>
 	{#if relatedBooks && relatedBooks.length > 0}
-		<div class="stdbox padded bordertop">
+		<div class="stdbox stdpad is-last bordertop">
 			<Title text="Related Books" />
 			<div class="grid four white-grid stay2">
 				{#each relatedBooks as item, i}

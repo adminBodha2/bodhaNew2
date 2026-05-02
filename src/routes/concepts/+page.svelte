@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -30,9 +30,9 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Concepts" showD={true} desc="Concepts are the main domains of thought across the knowledge base. Each one leads to the essays, books, thinkers, questions, and research nodes gathered under that domain."/>
+<Container>
+	<div class="stdbox stdpad header-margin is-last">
+		<Crumb showT={true} title="Concepts" showD={true} desc="Concepts are the main domains of thought across the knowledge base. Each one leads to the essays, books, thinkers, questions, and research nodes gathered under that domain."/>
 			<div class="grid three white-grid">
 					{#each data.topLevelConcepts as concept (concept.id)}
 						<a class="blank labelbox whitestone card-padded" href={`/concepts/${concept.slug}`}>

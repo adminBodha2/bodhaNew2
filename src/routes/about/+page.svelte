@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { teamMembers } from '$lib/utils/localsends';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -24,9 +24,9 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="About Bodha" />
+<Container>
+	<div class="stdbox stdpad header-margin">
+		<Crumb showT={true} title="About Bodha" />
 		<div class="grid two midgaps right">
 			<p class="paragraph-text">Bodha is a <span class="blue">think tank and research group</span> studying contemporary issues of cultural concern. We inform core areas of policy with wisdom derived from Hindu culture and philosophy, and help orient education to the Indian Knowledge Systems (IKS). We also curate cultural experiences of core Hindu institutions like the Hindu temple.</p>
 			<div class="labelbox">
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad bordertop">
 		<Title text="Our Work" />
 		<div class="grid four widegaps midrows work-grid">
 			<div class="textbox work-item item1">
@@ -72,13 +72,13 @@
 			</div>
 		</div>
 	</div>
-		<div class="textbox bordertop padded">
+		<div class="textbox stdpad bordertop">
 			<p class="paragraph-text width70">The <a class="linkedlight w500" href="/library">Bodha Open Library</a> features 200+ texts ranging from Puranas and Darshanic texts to papers on Indo-European linguistics, IKS, and more.</p>
 			<p class="paragraph-text width70">Read our essays on culture, history, tradition, and more at our <a class="linkedlight w500" href="/blog">Blog</a>, and explore our talks, podcasts, conference sessions and other videos <a class="linkedlight w500" href="/videos">here.</a></p>
 			<p class="paragraph-text width70">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world. We document the schools of thought and thinkers that inspire and inform us at <a class="linkedlight w500" href="/inspiration">Inspiration.</a></p>
 			<p class="paragraph-text width70">On the <a class="linkedlight w500" href="/blog/what-bodha-logo-means">meaning</a> behind our logo.</p>
 		</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad is-last bordertop">
 		<Title text="The Team" />
 		<div class="grid three white-grid">
 			{#each teamMembers as member}

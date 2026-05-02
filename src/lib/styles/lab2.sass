@@ -17,9 +17,6 @@ a.project-link
 	grid-template-areas: "mainarea" "sidearea"
 	.mainarea
 		grid-area: mainarea
-		.title-area
-			padding-top: 2rem
-			padding-bottom: 2rem
 	.sidearea
 		grid-area: sidearea
 		border-top: var(--border-dark)
@@ -35,11 +32,9 @@ a.project-link
 		border-bottom: var(--border-main)
 		.mainarea
 			padding-left: 6rem
-			.title-area
-				padding-top: 4rem
-				padding-bottom: 2rem
+			padding-bottom: 4rem
 		.sidearea
-			padding-top: 4rem
+			padding-top: 2rem
 			border-right: var(--border-main)
 			border-top: none
 			height: 100%
@@ -52,11 +47,7 @@ a.project-link
 				padding-bottom: 1rem
 
 .documents-grid.amarakosher
-	.title-area
-		padding-top: 6rem
 	@media screen and (min-width: 1025px)
-		.title-area
-			padding-top: 8rem
 		.sidearea
 			.all-items
 				height: calc(100vh - 160px)

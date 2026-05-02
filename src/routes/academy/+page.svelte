@@ -2,7 +2,7 @@
 <script lang="ts">
 
 	import type { PageData } from './$types'
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
@@ -27,9 +27,9 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" />
 
 <Parallax imageLink="/images/key-academy.webp" isClass="is50" />
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Academy" showD={true} desc={metaDescription}/>
+<Container>
+	<div class="stdbox stdpad is-first">
+		<Crumb showT={true} title="Bodha Academy" showD={true} desc={metaDescription}/>
 		<div class="grid two tightrows reading-block">
 			<p class="paragraph-text">Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
 			<div class="textbox">
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad bordertop">
 		<Title text="courses" />
 		<div class="white-grid grid two">
 			<a class="box course-item" href="/academy/courses/introduction-to-shri-ram-swarup">
@@ -69,7 +69,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad is-last bordertop">
 		<Title text="Academy Scholars"/>
 		<div class="grid two tight right">
 			{#each posts as item}

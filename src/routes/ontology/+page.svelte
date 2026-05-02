@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -33,10 +33,10 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
+<Container>
+	<div class="stdbox stdpad header-margin is-last">
 		<div class="ontology-head">
-			<Crumb item1="Bodha" item1Link="/" showT={true} title="Ontology" showD={true} desc={metaDescription} />
+			<Crumb showT={true} title="Ontology" showD={true} desc={metaDescription} />
 			<div class="stats-grid">
 				<div class="labelbox whitestone card-padded">
 					<p class="descriptor-text grey tt-u">Vargas</p>
@@ -48,7 +48,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="varga-grid">
 			{#each data.ontology as item (item.varga.id)}
 				<a class="blank labelbox whitestone card-padded varga-card" href={`/ontology/${item.varga.slug}`}>

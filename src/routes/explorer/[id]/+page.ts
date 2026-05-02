@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import { error } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import { getNode, getOutgoing, getIncoming, nodeById } from '$lib/graph';
 import type { GraphNode } from '$lib/noder/graph';
 
@@ -9,6 +9,10 @@ export const load: PageLoad = ({ params }) => {
 
   if (!node) {
     throw error(404, 'Node not found');
+  }
+
+  if (node.meta.route) {
+    throw redirect(302, node.meta.route);
   }
 
   const conceptMap = new Map<string, GraphNode>();

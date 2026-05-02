@@ -92,15 +92,15 @@ function handleKeydown(e: KeyboardEvent) {
 <style lang="sass">
 
 main
-	transition: background-size 0.5s ease
+	transition: background-size 0.35s ease
 	view-transition-name: page
 	background: var(--color-back)
 
 :global(::view-transition-old(page))
-	animation: page-out 300ms var(--cz-easeInQuad) both
+	animation: page-out 150ms var(--cz-easeInQuad) both
 
 :global(::view-transition-new(page))
-	animation: page-in 500ms var(--cz-easeOutQuad) 270ms both
+	animation: page-in 180ms var(--cz-easeOutQuad) 270ms both
 
 @media (prefers-reduced-motion: reduce)
 	:global(::view-transition-old(page)),

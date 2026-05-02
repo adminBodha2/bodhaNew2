@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
@@ -23,8 +23,8 @@
 	imHeight="1440"
 />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
+<Container>
+	<div class="stdbox">
 		<Crumb item1="Bodha" item1Link="/" showT={true} title={data.title} showD={true} desc={data.description}/>
 		<article class="core-item">
 			<data.content/>

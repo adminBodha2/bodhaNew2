@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { flip } from 'svelte/animate';
 	import Title from '$lib/comps/page-title.svelte'
@@ -22,16 +22,16 @@
 
 <div id="intro">
 	<section class="page-hero">
-		<div class="in-screen box narrowbox" style:transform={`translateY(${parallaxY}px)`}>
-			<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Bodha Open Library" item2Link="/library" showT={true} title="Indian Journal of Archaeology" />
+		<div class="in-screen elembox narrowbox" style:transform={`translateY(${parallaxY}px)`}>
+			<Crumb showT={true} title="Indian Journal of Archaeology" />
 			<p class="altprim rem1 width50">
 				The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016. "Full access, no subscriptions, and no limitations." This totals to around 41 issues so far, spread over 11 volumes all available on their <a class="linked" target="_blank" rel="noreferrer" href="https://ijarch.com/">website.</a>
 				Here at Bodha Open Library, we've sifted through each issue, sorted and classified the articles, and present the archive in easy to navigate, explore-friendly forms.
 			</p>
 		</div>
 	</section>
-	<Container narrow={true} scaled={true}>
-		<div class="stdbox padded" id="contents">
+	<Container>
+		<div class="stdbox stdpad" id="contents">
 			<Title text="Themes"/>
 			{#if groups && groups.length > 0}
 				<div class="three grid white-grid">
@@ -43,7 +43,7 @@
 				</div>
 			{/if}
 		</div>
-		<div class="stdbox padded bordertop">
+		<div class="stdbox bordertop stdpad is-last">
 			<div class="grid issues ultra">
 				{#each data.issues as item (item.issue)}
 					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 350, easing: sineOut}}>

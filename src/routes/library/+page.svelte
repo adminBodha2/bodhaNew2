@@ -3,7 +3,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Dropdown from '$lib/comps/responsive-menu.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -56,15 +56,16 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
 
 <Parallax imageLink="/images/key-bol.webp" isClass="is50" />
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Open Library" showD={true} desc="A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more." />
-		<div class="grid two tightrows reading-block">
+<Container>
+	<div class="stdbox stdpad is-first">
+		<Crumb showT={true} title="Bodha Open Library" showD={true} desc="A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more." />
+		<div class="grid two tightrows">
 			<p class="paragraph-text">Bodha Open Library is a collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more. Find your next reading by browsing the categories, or select one of our curated reading paths.</p>
 			<p class="paragraph-text">All texts in the library are sourced from the public domain. If any text violates copyright, please write to us at <span class="blue">sitemaster@bodharesearch.in</span>. All works compiled under 'Aryan Issue' are externally hosted/published papers, and links will open in a new tab.</p>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop" id="categories">
+	<div class="stdbox stdpad bordertop" id="categories">
+		<Title text="Categories" />
 		<div class="grid white-grid four">
 			{#each libCategories as cat, i}
 				<a class="card-padded labelbox whitestone" href={cat.href}>
@@ -79,7 +80,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="stdbox padded bordertop" id="reading-paths">
+	<div class="stdbox stdpad bordertop" id="reading-paths">
 		<Title text="Curated Reading Paths" />
 		<div class="grid white-grid four">
 			{#each libPaths as path, i}
@@ -90,7 +91,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="stdbox padded bordertop" id="bharata1000">
+	<div class="stdbox stdpad bordertop" id="bharata1000">
 		<div class="textbox">
 			<Title text="Bharata1000" />
 			<div class="grid two tightrows">
@@ -144,7 +145,7 @@
 				</div>
 			{/if}
 	</div>
-	<div class="stdbox padded bordertop" id="other-resources">
+	<div class="stdbox stdpad is-last bordertop" id="other-resources">
 		<Title text="External Resources" />
 		<div class="white-grid grid four">
 			{#each libExternal as res}

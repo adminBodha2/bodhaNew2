@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
@@ -39,9 +39,9 @@
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-<div class="stdbox padded-ontop">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Lab" showD={true} desc={metaDescription}/>
+<Container>
+<div class="stdbox stdpad header-margin is-last">
+	<Crumb showT={true} title="Bodha Lab" showD={true} desc={metaDescription}/>
 	{#if labItems.length > 0}
 		<div class="white-grid grid four stay2">
 			{#each labItems as item, i}

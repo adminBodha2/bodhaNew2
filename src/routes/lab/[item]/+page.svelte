@@ -7,7 +7,6 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import '$lib/styles/lab2.sass';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import Liner from '$lib/icons/anim-line.svelte'
 
 	let { data } = $props();
 
@@ -62,13 +61,11 @@
 				</div>
 			{/if}
 		</div>
-		<div class="box mainarea ptop64">
-			<div class="labelbox borderbot title-area">
-				<Crumb rgap={16} item1="Big Questions" item1Link="/big-questions"/>
-				<h1 class="doc-title source-serif pbot8">{data.title}</h1>
-				<p class="descriptor-text grey pbot8">{data.excerpt}</p>
+		<div class="stdbox mainarea stdpad header-margin is-last">
+			<div class="labelbox title-area">
+				<Crumb showT={true} title={data.title} showD={true} desc={data.excerpt}/>
 			</div>
-			<div class="classic-document ptop32 pbot32 thislab">
+			<div class="classic-document thislab">
 				<data.content />
 			</div>
 		</div>

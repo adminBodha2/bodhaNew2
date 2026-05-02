@@ -1,9 +1,8 @@
 <script lang="ts">
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { page } from '$app/state';
 	import { DEFAULT_IMAGE, SITE_URL } from '$lib/utils/seo';
-
 	const title = 'Page Not Found | Bodha';
 	const metaDescription = 'The requested page could not be found on Bodha.';
 	const metaUrl = SITE_URL;
@@ -19,8 +18,8 @@
 	imHeight="1440"
 />
 
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded-ontop">
+<Container>
+	<div class="stdbox stdpad header-margin">
 		<div class="labelbox">
 		<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
 		<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>

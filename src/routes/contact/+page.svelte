@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import FB from '$lib/icons/facebook.svelte';
 	import Twitter from '$lib/icons/twitter.svelte';
 	import Insta from '$lib/icons/instagram.svelte';
@@ -45,8 +46,9 @@
 	{jsonld}
 />
 
-<Container narrow={true} scaled={true}>
-	<div class="textbox padded-ontop">
+<Container>
+	<div class="stdbox stdpad header-margin is-last">
+		<Crumb showT={true} title="Contact Us"/>
 		<p>
 			Write to us at <span class="blue">contact@bodharesearch.in</span><br />
 			or, reach out on social media-

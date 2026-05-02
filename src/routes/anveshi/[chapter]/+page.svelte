@@ -67,8 +67,8 @@
 <section class="ripple-image-box">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
 </section>
-	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" show2={true} item2="Anveshi" item2linked={true} item2Link="/anveshi" showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
+	<div class="stdbox stdpad is-first">
+		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
 			<p class="tag-pill anveshi">OPEN NOW!</p>
 			{/if}
@@ -114,7 +114,7 @@
 		</div>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad bordertop">
 		<Title text="Itinerary" anveshi={true}/>
 		{#if itins && itins.length > 0}
 			{#if iW > 1024}
@@ -151,7 +151,7 @@
 			{/if}
 		{/if}
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad bordertop">
 		<Title text="Temples" anveshi={true}/>
 		{#if temples && temples.length > 0}
 		<Swipes slidesPerView={templeStatus} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: templeStatus,spaceBetween: 8}}}>
@@ -178,7 +178,7 @@
 		</Swipes>
 		{/if}
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad is-last bordertop">
 		<FAQ/>
 	</div>
 </Container>

@@ -2,6 +2,7 @@
 	import { tick } from 'svelte';
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/wrapper.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Heading from '$lib/comps/page-header-one.svelte';
 	import BlogMenu from '$lib/icons/blog-menu.svelte';
@@ -74,6 +75,7 @@
 <Container>
 	<Heading title="Writers | Bodha Blog"/>
 	<div class="textbox blog-wrapper">
+		<Crumb/>
 		<div class="row cgap8 rgap8 mwrap xleft selection-row ycenter">
 			<p class="tag-text tt-u" style="margin-right: 1rem; font-weight: bold">Writers</p>
 			<a class="small-button tt-u" href="/blog">Blog Main</a>

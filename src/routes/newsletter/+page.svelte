@@ -45,15 +45,15 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} {jsonld} />
 
 <Container>
-	<div class="stdbox padded-ontop">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha."/>
+	<div class="stdbox stdpad header-margin">
+		<Crumb showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha."/>
 		<div class="textbox">
 			<p class="paragraph-text">
 				Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling. Bodha’s work is expanding across research, writing, publishing, design, archives, and public education. Rather than letting these efforts remain scattered across different platforms, this newsletter will serve as a regular monthly record of what we are thinking, building, publishing, and preparing.
 			</p>
 		</div>
 	</div>
-	<div class="stdbox padded bordertop">
+	<div class="stdbox stdpad is-last bordertop">
 		{#each posts as item}
 			<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">
 				<News/>

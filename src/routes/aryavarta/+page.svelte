@@ -27,9 +27,9 @@
 <section class="key-image">
 	<WaterRipple src="/images/heroes/key-soa.webp" class="ripple-motion" brushSize={100} />
 </section>
-<div class="stdbox padded">
-	<Crumb item1="Bodha" item1Link="/" showT={true} title="Scrolls of Aryavarta" showD={true} desc="A creative project in cultural storytelling through digital comics, recreating legends, triumphs, struggles, and tragedies from Indian history."/>
-	<div class="box bordertop ptop32">
+<div class="stdbox stdpad is-first is-last">
+	<Crumb showT={true} title="Scrolls of Aryavarta" showD={true} desc="A creative project in cultural storytelling through digital comics, recreating legends, triumphs, struggles, and tragedies from Indian history."/>
+	<div class="box">
 		<div class="grid three tight">
 			{#each posts as item}
 				<a class="blank box comic-card card-padded" href={item.linkpath}>

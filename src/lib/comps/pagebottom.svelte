@@ -254,6 +254,8 @@ p.light-footer
 .foot-link
 	font-size: 1.1rem
 	transition: color 0.12s ease
+	font-variant: small-caps
+	text-transform: lowercase
 	&:hover
 		color: var(--color-theme)
 

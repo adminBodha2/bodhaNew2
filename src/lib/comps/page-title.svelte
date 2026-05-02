@@ -18,9 +18,9 @@
 
 <div class="row ycenter xleft cgap8 rgap8 mwrap trigger" class:xcenter={isCenter} class:mleft={isCenter}>
 	<div class="bob">
-		<Arrow size={24} color={anveshi ? '#D3633A' : undefined} />
+		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="source-serif name tt-c">
+	<h2 class="name tt-l">
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style="animation-delay: {i * 0.04}s">{char}</span>
 		{/each}
@@ -28,6 +28,10 @@
 </div>
 
 <style lang="sass">
+
+h2
+	font-variant: small-caps
+	font-weight: 500
 
 .trigger
 	@media screen and (max-width: 1024px)

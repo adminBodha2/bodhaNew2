@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Dropdowner from '$lib/comps/responsive-menu.svelte'
 	import { libCategories } from '$lib/utils/localsends';
@@ -44,9 +44,9 @@
 />
 
 
-<Container narrow={true} scaled={true}>
-	<div class="box std padded-ontop">
-		<Crumb item1="Library" item1Link="/library" show2={true} item2="Categories" showT={true} title={category.label} showD={true} desc={category.desc} showRow={true}>
+<Container>
+	<div class="stdbox stdpad header-margin is-last">
+		<Crumb showT={true} title={category.label} showD={true} desc={category.desc} showRow={true}>
 			<div class="row cgap8 rgap8 mwrap ptop8">
 				{#each libCategories as cat (cat.type)}
 					{#if cat.type !== category.type}

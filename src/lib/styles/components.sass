@@ -105,25 +105,23 @@ button
 	&.std
 		row-gap: 2.4rem
 
-.padded
-	padding-top: var(--pad-std)
-	padding-bottom: var(--pad-std)
-.padded-ontop
-	padding-top: 8rem
-	padding-bottom: var(--pad-std)
-.padded-ontop.only
-	padding-top: 8rem
-	padding-bottom: 0
+.stdpad
+	padding-top: 3rem
+	padding-bottom: 3rem
+	&.header-margin
+		margin-top: 3rem
+	&.is-last
+		padding-bottom: 0
+	&.is-first
+		padding-top: 3rem
+	@media screen and (min-width: 1025px)
+		padding-top: 5rem
+		padding-bottom: 5rem
+		&.header-margin
+			margin-top: 2rem
+
 .tightrows
 	row-gap: 12px
-
-@media screen and (max-width: 1024px)
-	.padded-ontop
-		padding-top: 6rem
-		padding-bototm: var(--pad-std)
-	.padded-ontop.only
-		padding-top: 6rem
-		padding-bottom: 0
 
 .labelbox, .elembox, .textbox, .stdbox
 	display: flex

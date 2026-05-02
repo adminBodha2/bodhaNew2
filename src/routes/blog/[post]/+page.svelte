@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { onDestroy } from 'svelte';
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
@@ -110,10 +110,10 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
 <Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="3px" {ref} />
-<Container narrow={true} scaled={true}>
-<div class="blog-heading stdbox padded-ontop">
+<Container>
+<div class="blog-heading stdbox stdpad header-margin">
 	<div class="elembox blog-title-area xcenter mleft ta-c">
-		<Crumb centered={true} item1="Bodha" item1Link="/" show2={true} item2="Blog" item2linked={true} item2Link="/blog" showRow={true}/>
+		<Crumb/>
 		<h1 class="page-title source-serif width80 self-center">{data.title}</h1>
 		<div class="textbox stone-box width60 self-center">
 		<p class="altprim">{data.excerpt}</p>
@@ -142,7 +142,7 @@
 	</article>
 	</div>
 </div>
-<div class="stdbox padded bordertop">
+<div class="stdbox bordertop">
 	{#if posts && posts.length > 0}
 		<Title text="More Like This"/>
 		<div class="grid four white-grid">

@@ -1,8 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Title from '$lib/comps/page-title.svelte'
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
@@ -36,9 +37,9 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
 <Parallax imageLink="/images/key-bigquestions.webp" isClass="is50" />
-<Container narrow={true} scaled={true}>
-	<div class="stdbox padded">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title="Big Questions" showD={true} desc={metaDescription} />
+<Container>
+	<div class="stdbox stdpad is-first">
+		<Crumb showT={true} title="Big Questions" showD={true} desc={metaDescription} />
 		<div class="grid two tightrows reading-block">
 			<div class="textbox">
 				<p class="paragraph-text">Hindu society today sits at the cusp of great change. Hindu consciousness is awakening across the nation and awareness of civilizational issues is rising. Established mentalities about Hindu society, dharma, and culture are being challenged, status quos are being quashed, and new paradigms are coming into force. An intellectual renaissance is underway.</p>
@@ -49,7 +50,8 @@
 				Hindu society, leading to narrative building which will aid the reestablishment of a correct Hindu worldview rooted in facts and history.
 			</p>
 		</div>
-		<div class="stdbox bordertop ptop32">
+	</div>
+	<div class="stdbox stdpad bordertop">
 			<div class="labelbox card-padded and-bordered">
 			<p class="bold badger">The Big Question in 2026</p>
 			<div class="questionbox row mcol rgap8 cgap8">
@@ -58,7 +60,9 @@
 			</div>
 			<p class="paragraph-text ptop8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
 			</div>
-		</div>
+	</div>
+	<div class="stdbox stdpad bordertop is-last">
+		<Title text="All Big Questions"/>
 		{#if questions && questions.length > 0}
 			<div class="grid  three tight of-questions">
 				{#each questions as item, i}

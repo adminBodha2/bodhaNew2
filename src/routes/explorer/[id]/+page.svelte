@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Heading from '$lib/comps/page-header-one.svelte';
 	import { absoluteImage, absoluteUrl, webPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -35,12 +34,12 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container narrow={true} scaled={true}>
+<Container>
 	<Heading title={data.node.title} />
-	<div class="stdbox padded-ontop">
+	<div class="stdbox stdpad header-margin is-last">
 		<div class="grid two left">
 			<div class="labelbox sidebox">
-				<Crumb item1="Bodha" item1Link="/" show2={true} item2linked={true} item2="Explorer" item2Link="/explorer" />
+				<Crumb/>
 				<h2 class="card-title source-serif">{data.node.title}</h2>
 				<p class="tight rem1 grey">{data.node.description}</p>
 				{#if data.node.meta.author?.length}
@@ -54,7 +53,7 @@
 					</div>
 				{/if}
 			</div>
-			<div class="box mainbox padded">
+			<div class="box mainbox">
 				{#if data.concepts.length}
 					<div class="grid three stay2 white-grid">
 						{#each data.concepts as concept (concept.id)}

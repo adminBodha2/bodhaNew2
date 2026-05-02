@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import '$lib/styles/lab2.sass';
-	import Container from '$lib/comps/container.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -34,7 +34,7 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container narrow={true} scaled={true}>
+<Container>
 	<section class="documents-grid amarakosher">
 		<div class="box sidearea">
 			<div class="all-items">
@@ -45,18 +45,17 @@
 				{/each}
 			</div>
 		</div>
-		<div class="box mainarea">
-			<div class="labelbox borderbot title-area">
-				<Crumb rgap={16} item1="Ontology" item1Link="/ontology"/>
-				<h1 class="doc-title source-serif pbot8">{data.ontology.varga.title}</h1>
-				<p class="descriptor-text grey pbot8">{data.ontology.varga.description}</p>
+		<div class="stdbox mainarea stdpad header-margin is-last">
+			<div class="labelbox title-area">
+				<Crumb showT={true} title={data.ontology.varga.title} showD={true} desc={data.ontology.varga.description} showRow={true}>
 				<div class="row wrap cgap8 rgap8">
 					{#each countEntries as [type, count]}
 						<p class="tag-pill tt-u">{type.replaceAll('-', ' ')}: {count}</p>
 					{/each}
 				</div>
+				</Crumb>
 			</div>
-			<div class="box ptop16">
+			<div class="box">
 				<p class="tag-text grey tt-u">Matched Concepts</p>
 				<div class="row wrap cgap8 rgap8">
 					{#each data.ontology.concepts as concept (concept.id)}
@@ -96,9 +95,6 @@
 <style lang="sass">
 
 	.ontology-section
-		border-bottom: var(--border-main)
-		padding-top: 2rem
-		padding-bottom: 2rem
 		display: flex
 		flex-direction: column
 		row-gap: 1rem
@@ -114,4 +110,5 @@
 
 	.node-card
 		min-height: 100%
+
 </style>
