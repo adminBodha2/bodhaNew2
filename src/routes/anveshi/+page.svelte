@@ -289,18 +289,23 @@
 			<div class="white-grid grid four stay2">
 				{#each pastproj as item, i}
 					{#if item.pageactive === true}
-					<a class="box labelbox past-grid-items blank" href="/anveshi{item.link}">
-						<div class="anv-past-image-wrap">
+					<div class="box labelbox past-grid-items blank whitestone">
+						<a class="anv-past-image-wrap blank" href="/anveshi{item.link}">
 							<img class="anv-past-image" src={item.gallery} alt={item.chapter}/>
+						</a>
+						<div class="box tight-padded" style="row-gap: 4px">
+							<p class="rem1 w500">{item.chapter}</p>
+							<a class="small-button row ycenter cgap8 themed" href="/anveshi{item.link}">SEE CHAPTER<div class="button-text">→</div></a>
 						</div>
-						<p class="rem1 w500">{item.chapter}</p>
-					</a>
+					</div>
 					{:else}
 					<div class="box labelbox past-grid-items">
 						<div class="anv-past-image-wrap">
 							<img class="anv-past-image" src={item.gallery} alt={item.chapter} />
 						</div>
-						<p class="rem1 w500">{item.chapter}</p>
+						<div class="tight-padded">
+							<p class="rem1 w500">{item.chapter}</p>
+						</div>
 					</div>
 					{/if}
 				{/each}
@@ -457,8 +462,5 @@ swiper-slide > *
 
 .past-grid-items
 	padding-bottom: 1rem
-	background: var(--color-back)
-	p
-		padding-left: 1rem
 
 </style>

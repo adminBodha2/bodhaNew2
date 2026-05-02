@@ -3,7 +3,7 @@ title: Gujarat Chapter
 description: The land that was one of the first to be destroyed in the path of Islamic invaders, and yet somehow survived.
 image: https://www.bodharesearch.in/images/anveshi/gujarathero.webp
 id: 4
-isOpen: true
+isOpen: false
 dates: 24 - 25 Dec 2025
 price: ₹37,999/-
 duration: 4N 4D
@@ -12,6 +12,7 @@ slug: gujarat
 registerLink: 
 brochureLink: ''
 quote:
+templetext: true
 ---
 
 This time, let Anveṣī take you to the westernmost part of India, which borders Pakistan. The province which is tantalizingly close to Pakistan and was one of the first to be destroyed in the path of Islamic invaders and yet somehow survived; the semi-arid, semi-desert state with one of the richest economies of India, as well as the richest natural and cultural heritage. The state where dharma was not just saved but revived and preserved with great care, and without neglecting the human aspect.

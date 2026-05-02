@@ -12,6 +12,7 @@ slug: badami
 registerLink: https://docs.google.com/forms/d/e/1FAIpQLSfCVk0RSNNCwL_06qcsOmhWs4wQH_Z2OtJ_Pw0gmmo9kh7iMA/viewform
 brochureLink: ''
 quote:
+templetext: false
 ---
 
 Karnataka has been called the laboratory of Hindu temple architecture. And Badami is one of its greatest centers where the origin and evolution of temple architecture can be traced. Located in Bagalkot district of northern Karnataka, in the famed Deccan it is a great Hindu cultural center. Badami, along with Pattadakallu, Aihole and Mahakoota creates an ensemble which displays a wide variety of temples. The seat of the great Badami Chalukyas, Badami has one of the earliest cave temples of India, in which Hindu iconography touches some of its greatest heights. But it does not stop at cave temples and the evolution can be seen in the later temples around the lake.

@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Swipes from '$lib/comps/swipercomp.svelte';
-	import Container from '$lib/comps/container.svelte';
-	import Parallax from '$lib/comps/parallaxfull.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -10,11 +9,13 @@
 	import Session from '$lib/icons/sessions.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Location from '$lib/icons/location.svelte';
+	import { WaterRipple } from '$lib/motion-core';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
 	let selectedDay = $state(0);
+	let templeStatus = $state(0);
 	let iW = $state(0);
 
 	function selectDay(index: number) {
@@ -28,6 +29,10 @@
 	let metaDescription = $derived(data.description);
 	let metaUrl = $derived(absoluteUrl('/anveshi/' + data.slug));
 	let metaImage = $derived(absoluteImage(data.image));
+
+	$effect(() => {
+		templeStatus = data.templetext === false ? 4 : 1;
+	});
 
 	let jsonld = $derived(
 		stringifyJsonLd(
@@ -58,9 +63,10 @@
 	{jsonld}
 />
 
-
-<Parallax isClass="is50" imageLink={data.image} />
-<Container narrow={true} scaled={true}>
+<Container>
+<section class="ripple-image-box">
+	<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
+</section>
 	<div class="stdbox padded">
 		<Crumb item1="Bodha" item1Link="/" show2={true} item2="Anveshi" item2linked={true} item2Link="/anveshi" showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
@@ -148,13 +154,25 @@
 	<div class="stdbox padded bordertop">
 		<Title text="Temples" anveshi={true}/>
 		{#if temples && temples.length > 0}
-		<Swipes slidesPerView={4} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 4,spaceBetween: 8}}}>
+		<Swipes slidesPerView={templeStatus} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: templeStatus,spaceBetween: 8}}}>
 			{#each temples as item}
 				<swiper-slide>
-					<div class="labelbox">
+					{#if data.templetext}
+						<div class="grid two tight temple-descriptions">
+							<div class="up tight-padded">
+								<img class="temple-image" src={item.image} alt={item.temple}/>
+							</div>
+							<div class="textbox down card-padded">
+								<p class="highlight-text w500">{item.temple}</p>
+								<p>{item.description}</p>
+							</div>
+						</div>
+					{:else}
+					<div class="labelbox singular">
 						<img class="temple-image" src={item.image} alt={item.temple}/>
 						<p class="rem1">{item.temple}</p>
 					</div>
+					{/if}
 				</swiper-slide>
 			{/each}
 		</Swipes>
@@ -173,12 +191,24 @@ img.icon
 	height: 32px
 	margin-bottom: 1rem
 
-img.temple-image
-	object-fit: cover
-	width: 100%
-	height: 280px
-	@media screen and (min-width: 1025px)
-		height: 240px
+.temple-descriptions
+	.card-padded, .tight-padded
+		border: var(--border-main)
+
+.up
+	img.temple-image
+		object-fit: cover
+		width: 100%
+		@media screen and (min-width: 1025px)
+			height: 100%
+
+.singular
+	img.temple-image
+		object-fit: cover
+		width: 100%
+		height: 280px
+		@media screen and (min-width: 1025px)
+			height: 240px
 
 .itin-grid
 	@media screen and (min-width: 1025px)

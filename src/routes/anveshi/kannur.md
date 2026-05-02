@@ -12,6 +12,7 @@ slug: kannur
 registerLink: 
 brochureLink: 
 quote: In this Kerala Kannur chapter of Bodha Anveshi, we will expose you to all of this and a lot more. Join us for an uplifting adventure through one of the lesser known but pristine Hindu temple clusters of Kerala.
+templetext: true
 ---
 
 The Kannur cluster of Hindu temples is as diverse as it gets, with temples dedicated to Shiva, Vishnu, Shakti, Ganpati, Murugan and many other deities, covering a diverse range of sects. In architecture, while some display the typical Kerala style architecture, others rival the great temples built on the other side of the Western ghats. Contrary to what the leftists would have us believe, Kerala has always been foremost in worshiping Shri Rama. Temples dedicated to Shri Rama and other characters of Ramayana are as alive today as they were in ancient times.

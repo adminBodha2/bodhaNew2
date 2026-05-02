@@ -12,6 +12,7 @@ slug: kullu
 registerLink: https://docs.google.com/forms/d/e/1FAIpQLSdGOxxUH32klulnlGriEQUI6uK2tiJLFmH98K04tAbaAU4sUw/viewform
 brochureLink: https://drive.google.com/file/d/1BH2N3UKiWYuZCcyUXlcYoYgIReDJnnxW/view?usp=drive_link
 quote: Come explore the sacred kshetras of the Kullu valley in Himachal Pradesh. Come to experience the divine here, and the festivals organized to celebrate that divine. Come to Bodha Anveshi — Kullu Chapter to experience Himachal in a way you have never before.
+templetext: true
 ---
 
 Himachalis claim that their deities “talk to them”. When they say this, it isn’t metaphors or symbols - they mean it, literally. And one needs to visit the kshetras of Himachal to well and truly understand this. Located in quaint little villages in some of the most beautiful mountain valleys with snow-capped peaks and ancient deodar forests as the backdrop, these sacred kshetras have a divine presence which is so palpable it can be felt by almost everyone who visits. From temples dedicated to the classical Hindu pantheon, to ones built to worship Nagas and local deities, those of rarely worshipped deities like Lord Brahma, or ones consecrated to honor kind-hearted asuras - these temples display breathtaking diversity.

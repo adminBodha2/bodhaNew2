@@ -113,6 +113,9 @@
 <svelte:window bind:innerWidth={iW} />
 
 <div class="swiper-row" class:marquee>
+	<div class="xleft column width100 mobile-rule">
+	<p class="descriptor-text mleft ta-l bold tt-u">Swipe left/right to navigate</p>
+	</div>
 	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
 			{@render children?.()}
@@ -141,8 +144,14 @@
 	@media screen and (max-width: 1024px)
 		width: 100%
 
+.mobile-rule
+	@media screen and (min-width: 1025px)
+		display: none
+
 .buttons-and-rule
 	margin-bottom: auto
+	@media screen and (max-width: 1024px)
+		display: none
 
 button.nav
 	background: var(--color-grey-3)

@@ -15,7 +15,8 @@ export async function load({ params }: { params: { chapter: string } }) {
 		slug,
 		registerLink,
 		brochureLink,
-		quote
+		quote,
+		templetext
 	} = post.metadata;
 	const content = post.default;
 
@@ -40,6 +41,7 @@ export async function load({ params }: { params: { chapter: string } }) {
 		brochureLink,
 		quote,
 		itins,
-		templesList: templeList
+		templesList: templeList,
+		templetext
 	};
 }

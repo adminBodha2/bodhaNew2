@@ -494,3 +494,15 @@ a
 	&:hover
 		.a-hover
 			color: var(--color-theme)
+
+.ripple-image-box
+	width: 100%
+	height: 400px
+	background-size: cover
+	background-fit: center center
+	.ripple-inscreen
+		height: 100%
+		width: 100%
+	@media screen and (min-width: 1025px)
+		height: calc(100vh - 144px)
+		margin-top: 72px
