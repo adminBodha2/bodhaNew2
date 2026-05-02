@@ -62,7 +62,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{#if active === 0}
 	 	{#each data.grouped.blogs as node, i (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -76,7 +76,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 1}
 	 	{#each data.grouped.externalArticles as node, i (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)} target="_blank" rel="noreferrer">
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -90,7 +90,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 2}
 	 	{#each data.grouped.books as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -104,7 +104,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 3}
 	 	{#each data.grouped.questions as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -118,7 +118,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 4}
 	 	{#each data.grouped.projects as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -132,7 +132,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 5}
 	 	{#each data.grouped.thinkers as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -146,7 +146,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 6}
 	 	{#each data.grouped.schools as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -160,7 +160,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		{:else if active === 7}
 	 	{#each data.grouped.labs as node (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight">{node.title}</p>
+    	<p class="tight w500">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
