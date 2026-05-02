@@ -75,6 +75,11 @@
 
 <style lang="sass">
 
+.open-drawer
+	z-index: 2000
+	height: calc(100vh - 144px)
+	overflow-y: scroll
+
 .mobile-selection-menu
 	display: none
 	position: relative
