@@ -10,6 +10,7 @@
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import { InteractiveGrid } from "$lib/motion-core";
+	import { WaterRipple } from "$lib/motion-core";
 	import { mouseStore } from '$lib/utils/mousestore'
 	import { readerChromeHidden } from '$lib/utils/globalstores';
 
@@ -129,7 +130,7 @@
 		</div>
 	</div>
 	<div class="box blog-image-area xcenter">
-		<InteractiveGrid image={metaImage} class="ripple-motion" {grid} {mouseSize} {strength} {relaxation}/>
+		<WaterRipple src={metaImage} class="ripple-motion" brushSize={100}/>
 	</div>
 	<div class="article-slate">
 	<article class="blog-article self-center" bind:this={ref}>
