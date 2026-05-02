@@ -163,7 +163,7 @@
 								<img class="temple-image" src={item.image} alt={item.temple}/>
 							</div>
 							<div class="textbox down card-padded">
-								<p class="highlight-text w500">{item.temple}</p>
+								<p class="paragraph-text w500">{item.temple}</p>
 								<p>{item.description}</p>
 							</div>
 						</div>

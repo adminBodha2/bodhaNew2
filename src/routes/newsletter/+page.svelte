@@ -13,7 +13,8 @@
 			title?: string;
 			date?: string;
 			id?: number;
-			pdflink?: string
+			pdflink?: string;
+			image?: string
 		}
 	}
 
@@ -54,13 +55,29 @@
 	</div>
 	<div class="stdbox padded bordertop">
 		{#each posts as item}
-			<a class="row cgap8 ytop svg-hover" href={item.linkpath}>
+			<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">
 				<News/>
 				<div class="box">
-				<p class="highlight-text a-hover">{item.meta.title}</p>
+				<p class="paragraph-text a-hover">{item.meta.title}</p>
 				<p class="tag-text grey">{item.meta.date}</p>
 				</div>
 			</a>
 		{/each}
 	</div>
 </Container>
+
+<style lang="sass">
+
+a.has-image-background
+	height: 200px
+	max-width: 500px
+	border: 1px solid var(--color-back)
+	padding-left: 1rem
+	padding-top: 1rem
+	&:hover
+		border: var(--border-dark)
+	@media screen and (min-width: 1025px)
+		padding-left: 2rem
+		padding-top: 2rem
+
+</style>

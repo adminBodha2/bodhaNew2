@@ -240,7 +240,7 @@
 						<div class="box labelbox all-item">
 							<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
 							<div class="labelbox card-future">
-								<p class="bold source-serif">{item.chapter}</p>
+								<p class="paragraph-text bold">{item.chapter}</p>
 								<p class="descriptor-text grey">{item.shortdesc}</p>
 								{#if item.region}<p class="citation-big anveshi-o tt-u">{item.region}</p>{/if}
 							</div>
@@ -271,7 +271,7 @@
 					<div class="box labelbox sub-item">
 						<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
 						<div class="labelbox card-future">
-							<p class="bold source-serif">{item.chapter}</p>
+							<p class="bold paragraph-text">{item.chapter}</p>
 							<p class="descriptor-text grey">{item.shortdesc}</p>
 						</div>
 						{#if item.regopen === true}
