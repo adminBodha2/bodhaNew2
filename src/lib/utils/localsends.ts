@@ -221,14 +221,19 @@ export const teamMembers = [
 			role: 'Manager, Content',
 			image: '/images/team/PM.webp',
 			bio: 'Padmavathy comes from a background of Advaita Vedānta, with professional experience in software entrepreneurship. Her work in this field is driven by a life-long reverence for Bhārata.',
-			links: []
+			links: [
+				{ label: 'Twitter', href: 'https://x.com/padmavadati' },
+				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/padmavathy-mana-739018209/' }
+			]
 		},
 		{
 			name: 'Ankit Mishra',
 			role: 'Manager, Operations',
 			image: '/images/team/AM.webp',
 			bio: 'Ankit transitioned from engineering to the development sector after his interests in public policy. He has worked as a political consultant to several political parties and renowned leaders. He aims to integrate Indian Knowledge Systems in development sector and politics to rekindle the dharma and civilizational flame.',
-			links: []
+			links: [
+				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/ankit-mishra-64b15b123/' }
+			]
 		},
 	];
 
