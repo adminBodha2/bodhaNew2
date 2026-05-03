@@ -13,14 +13,17 @@
 	import '$lib/styles/animations.sass'
 	import '$lib/styles/glass.sass';
 	import '$lib/styles/icons.css';
-	import { darkTheme, iW, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
+	import { darkTheme, iW, openSiteTourSelector, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
+	import { elementVisibilityStore } from '$lib/utils/elementVisibility';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
+	import SiteTour from '$lib/comps/sitetour.svelte';
 
 	let { children } = $props();
-	let sY = $state(0);
 	let width = $state(0);
+	let footerRef = $state<HTMLElement | null>(null);
+	let isFooterVisible = $state(false);
 	$effect(() => {
 		$iW = width < 1025;
 	});
@@ -28,21 +31,45 @@
 	injectSpeedInsights();
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
-function handleKeydown(e: KeyboardEvent) {
-    const isMod = e.metaKey || e.ctrlKey;
+	function handleKeydown(e: KeyboardEvent) {
+		const isMod = e.metaKey || e.ctrlKey;
 
-    // Cmd+K -> Search
-    if (isMod && e.key === 'k') {
-        e.preventDefault();
-        $searchState = !$searchState;
-    }
+		// Cmd+Control+T -> Site Tour
+		if (e.metaKey && e.ctrlKey && e.key.toLowerCase() === 't') {
+			e.preventDefault();
+			openSiteTourSelector();
+		}
 
-    // Cmd+Z -> Theme
-    if (isMod && e.key === 'z') {
-        e.preventDefault();
-        toggleTheme();
-    }
-}
+		// Cmd+K -> Search
+		if (isMod && e.key === 'k') {
+			e.preventDefault();
+			$searchState = !$searchState;
+		}
+
+		// Cmd+Z -> Theme
+		if (isMod && e.key === 'z') {
+			e.preventDefault();
+			toggleTheme();
+		}
+	}
+
+	$effect(() => {
+		if (!footerRef) {
+			isFooterVisible = false;
+			return;
+		}
+
+		const visibility = elementVisibilityStore(footerRef);
+
+		const unsubscribe = visibility.isVisible.subscribe((value: boolean) => {
+			isFooterVisible = value;
+		});
+
+		return () => {
+			unsubscribe();
+			visibility.stop();
+		};
+	});
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -59,7 +86,7 @@ function handleKeydown(e: KeyboardEvent) {
 	});
 </script>
 
-<svelte:window bind:scrollY={sY} bind:innerWidth={width} onkeydown={handleKeydown} />
+<svelte:window bind:innerWidth={width} onkeydown={handleKeydown} />
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
@@ -83,10 +110,11 @@ function handleKeydown(e: KeyboardEvent) {
 	<main>
 		{@render children?.()}
 	</main>
-	<footer class="column">
+	<footer class="column" bind:this={footerRef}>
 		<Bottom />
 	</footer>
 	<SearchModal />
+	<SiteTour isFooterVisible={isFooterVisible} />
 </div>
 
 <style lang="sass">
@@ -153,5 +181,6 @@ header
 footer
 	width: 100%
 	border-top: 1px solid var(--color-grey-1)
+	z-index: 999
 
 </style>

@@ -51,6 +51,7 @@
 </div>
 
 <style lang="sass">
+
 .button-tray
 	--bg-color: #fff
 	--accent-color: rgb(11, 117, 223)

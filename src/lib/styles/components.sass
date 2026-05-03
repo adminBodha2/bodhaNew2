@@ -9,6 +9,7 @@ button
 		margin: 0
 		border: none
 		background: none
+		width: max-content
 		&:hover
 			svg.search-svg
 				fill: var(--color-theme)
@@ -16,6 +17,28 @@ button
 	&.nav-btn
 		font-weight: 500
 		font-family: 'Google Sans', sans-serif
+
+button.with-tooltip
+	position: relative
+	.tooltip
+		position: absolute
+		top: 49%
+		right: 130%
+		width: max-content
+		padding: 0.25rem 0.5rem
+		background: var(--color-grey-4)
+		opacity: 0
+		pointer-events: none
+		transform: translateY(0)
+		transition: opacity 0.12s ease, transform 0.12s ease
+		color: var(--color-back)
+		font-size: 0.75rem
+		font-weight: 500
+		white-space: nowrap
+	&:hover, &:focus-visible
+		.tooltip
+			opacity: 1
+			transform: translateX(1rem)
 
 .self-center
 	@media screen and (min-width: 1025px)
@@ -261,7 +284,6 @@ button
 
 .and-bordered
 	border: var(--border-main)
-
 
 .small-button
 	font-size: 0.8rem
@@ -520,26 +542,30 @@ a
 	border-radius: 8px
 	overflow: hidden
 	position: relative
-	box-shadow: 2px 2px 4px rgba(0,0,0,.2)
-	background: var(--color-know)
+	box-shadow: 4px 4px 10px rgba(0,0,0,0)
+	background: #F0F4EF
 	color: var(--color-primary)
-	border: 1px solid  var(--color-grey-1)
+	border: 1px solid #F0F4EF
 	cursor: pointer
-	padding: 0.5rem 1.5rem
+	padding: 0.35rem 1.15rem
 	width: max-content
+	transition: all .23s cubic-bezier(0.680, -0.550, 0.265, 1.550)
 	&:hover
-		box-shadow: 4px 4px 10px rgba(0,0,0,0)
+		box-shadow: 2px 2px 4px rgba(0,0,0,.2)
 		.button__text
 			color: #fff
 		.button-decor
-			transform: translate(0)
+			width: 100%
+			left: 0
 
 .button-decor
 	position: absolute
-	inset: 0
-	background-color: var(--color-theme)
-	transform: translateX(-100%)
-	transition: transform .3s
+	top: 0
+	left: 50%
+	width: 0
+	height: 100%
+	background-color: var(--color-theme-2)
+	transition: all .23s cubic-bezier(0.680, -0.550, 0.265, 1.550)
 	z-index: 0
 
 .button-content
@@ -591,3 +617,51 @@ a
 		box-shadow: 0 3px 5px rgba(0,0,0,0.1)
 		&::before
 			opacity: 1
+
+.blankbutton
+	background: none
+	border-top: none
+	border-right: none
+	border-bottom: none
+	border-left: none
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-direction: row
+	font-family: 'Google Sans', sans-serif
+	text-transform: capitalize
+	font-size: 1.2rem
+	column-gap: 4px
+	font-weight: 500
+	transition: all 0.2s ease
+	position: relative
+	.green.bold
+		transition: transform 0.2s ease
+	&:hover
+		.green.bold
+			transform: translateX(8px)
+
+.nav
+	border: none
+	padding: 2rem 1rem
+	background: var(--color-stone)
+	width: 100%
+	text-align: left
+	border-bottom: var(--border-main)
+	&:hover
+		background: #F0F4EF
+		color: var(--color-theme-2)
+		.blankbutton
+			transform: translateX(8px)
+
+a.nav
+	font-size: 1.1rem
+	color: var(--color-primary)
+	font-weight: 450
+
+a.nav
+	padding: 1rem 2rem
+	width: max-content
+	border: var(--border-darker)
+	border-radius: 8px
+	background: #FFF

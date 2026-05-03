@@ -51,18 +51,32 @@
 			</p>
 		</div>
 	</div>
-	<!--
+
 	<div class="stdbox stdpad bordertop">
-			<div class="labelbox card-padded and-bordered">
-			<p class="bold badger">The Big Question in 2026</p>
-			<div class="questionbox row mcol rgap8 cgap8">
-				<img class="icon" src="/images/bgicons/diversity.png" alt="big-question icon"/>
-				<p class="headline">Is Hindu Unity Compatible With Indian Diversity?</p>
+		<div class="grid two rgap16">
+			<div class="elembox down">
+				<div class="row cgap8 ybottom top-shelf">
+					<img class="icon" src="/images/bgicons/diversity.png" alt="big-question icon"/>
+					<p class="bold tight">The Big Question in 2026</p>
+				</div>
+				<div class="textbox mid-shelf">
+				<h2 class="source-serif card-title">Is Hindu Unity Compatible With Indian Diversity?</h2>
+				<p class="paragraph-text pbot8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
+				<a class="primary black" href="/big-questions/hindu-unity-and-diversity">
+					<span>Read More →</span>
+				</a>
+				</div>
+				<div class="bot-shelf labelbox">
+					<p class="rem1 altprim">This Big Question 2026 is made possible by the generous support of Shri Hari Kiran Vadlamani, the founder of <a class="linked" target="_blank" rel="noreferrer" href="https://cohari.org/">coHari</a> and <a class="linked" target="_blank" rel="noreferrer" href="https://indica.in/">INDICA</a>. We are grateful to him for his patronage.</p>
+					<img class="shri-hari-kiran-vadlamani" src="/images/shri-hari-kiran-vadlamani.webp" alt="shri-hari-kiran-vadlamani"/>
+				</div>
 			</div>
-			<p class="paragraph-text ptop8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
-			</div>
+			<a class="blank box up" href="/big-questions/hindu-unity-and-diversity">
+				<img src="/images/questions/current-big-question.webp" alt="Is Hindu Unity Compatible With Indian Diversity"/>
+			</a>
+		</div>	
 	</div>
-	-->
+
 	<div class="stdbox stdpad bordertop is-last">
 		<Title text="All Big Questions"/>
 		{#if questions && questions.length > 0}
@@ -92,24 +106,36 @@
 
 <style lang="sass">
 
+img.shri-hari-kiran-vadlamani
+	object-fit: cover
+	height: 104px
+	width: 104px
+	border-radius: 64px
+
+.up	img
+	object-fit: cover
+	width: 100%
+	height: 100%
+	@media screen and (max-width: 1024px)
+		height: 240px
+
+.mid-shelf
+	padding-right: 2rem
+
+.bot-shelf
+	border-top: var(--border-dark)
+	padding-top: 1rem
+	padding-right: 1rem
+
+.top-shelf
+	border-bottom: var(--border-dark)
+	padding-bottom: 1rem
+	padding-right: 1rem
+
 img.icon
 	object-fit: contain
 	width: 32px
 	height: 32px
-
-.badger
-	background: var(--color-know-2)
-	width: max-content
-	padding: 0.5rem 1rem
-	border: var(--border-dark)
-
-.questionbox
-	background: var(--color-know)
-	padding: 1rem
-	border: 1px solid #d7d7d7
-	p
-		font-weight: bold
-		font-size: 1.33rem
 
 .reading-block
 	background: var(--color-back)

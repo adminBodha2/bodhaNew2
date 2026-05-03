@@ -7,7 +7,7 @@
 	import Designed from '$lib/icons/designed.svelte'
 	import Sun from '$lib/icons/sun.svelte'
 	import Moon from '$lib/icons/moon.svelte'
-	import { darkTheme, toggleTheme } from '$lib/utils/globalstores'
+	import { darkTheme, openSiteTourSelector, toggleTheme } from '$lib/utils/globalstores'
 	import '$lib/styles/graphing.sass'
 </script>
 
@@ -72,6 +72,7 @@
 					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
 					<a class="foot-link blank white" href="/lab">Lab</a>
 					<a class="foot-link blank white" href="/aryavarta">Aryavarta</a>
+					<button type="button" class="foot-link footer-btn" onclick={openSiteTourSelector}>Site Tour</button>
 				</div>
 			</div>
 		</div>
@@ -112,7 +113,7 @@ p.light-footer
 	.foot-brand
 		grid-column: span 3
 	column-gap: 2rem
-	@media screen and (max-width: 1024px)
+	@media screen and (max-width: 1201px)
 		grid-template-columns: 1fr 1fr
 		.foot-col
 			grid-column: span 1
@@ -258,6 +259,20 @@ p.light-footer
 	text-transform: lowercase
 	&:hover
 		color: var(--color-theme)
+
+button.footer-btn
+	background: none
+	border: none
+	color: #FFFFFF
+	display: flex
+	flex-direction: column
+	text-align: left
+	padding-left: 0
+	@media screen and (min-width: 1025px)
+		text-align: right
+		align-items: flex-end
+		width: 100%
+		padding-right: 0
 
 // ── BOTTOM BAR ────────────────────────────────────────────
 

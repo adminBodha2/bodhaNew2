@@ -1,21 +1,41 @@
-import type { ActionReturn } from "svelte/action";
+import type { ActionReturn } from 'svelte/action';
 
 interface Attributes {
-	"on:clickoutside"?: (e: CustomEvent<void>) => void;
+	onclickoutside?: (e: CustomEvent<void>) => void;
+	onescape?: (e: CustomEvent<void>) => void;
 }
 
-type Callback = () => unknown
-export function clickOutsideAction(node: HTMLElement, callback?: Callback): ActionReturn<{}, Attributes> {
+type Callback = () => unknown;
+
+export function clickOutsideAction(
+	node: HTMLElement,
+	callback?: Callback
+): ActionReturn<{}, Attributes> {
+	const close = () => {
+		callback?.();
+	};
+
 	const handleClick = (event: Event) => {
 		if (event.target !== null && !node.contains(event.target as Node)) {
-			node.dispatchEvent(new CustomEvent("clickoutside"));
-                        callback?.();
+			node.dispatchEvent(new CustomEvent('clickoutside'));
+			close();
 		}
 	};
-	document.addEventListener("click", handleClick, true);
+
+	const handleKeydown = (event: KeyboardEvent) => {
+		if (event.key !== 'Escape') return;
+
+		node.dispatchEvent(new CustomEvent('escape'));
+		close();
+	};
+
+	document.addEventListener('click', handleClick, true);
+	document.addEventListener('keydown', handleKeydown, true);
+
 	return {
 		destroy() {
-			document.removeEventListener("click", handleClick, true);
-		},
+			document.removeEventListener('click', handleClick, true);
+			document.removeEventListener('keydown', handleKeydown, true);
+		}
 	};
 }

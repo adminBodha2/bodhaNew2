@@ -48,14 +48,25 @@ export type SiteTourState = {
 	dismissed: boolean;
 };
 
-export const SITE_TOUR_VERSION = 1;
+export const SITE_TOUR_VERSION = 2;
 export const SITE_TOUR_STORAGE_KEY = 'bodha_site_tour_state';
+export const SITE_VISITOR_STORAGE_KEY = 'bodha_site_visitor_state';
+export const SITE_TOUR_OPEN_EVENT = 'bodha:open-site-tour';
+export const NEW_USER_VISIT_LIMIT = 5;
+const VISIT_SESSION_MS = 30 * 60 * 1000;
+
+export type SiteVisitorState = {
+	version: number;
+	visit_count: number;
+	first_seen_at: string;
+	last_seen_at: string;
+};
 
 export function createDefaultSiteTourState(): SiteTourState {
 	return {
 		version: SITE_TOUR_VERSION,
 		tour_id: null,
-		step_number: null,
+		step_number: 0,
 		dismissed: false
 	};
 }
@@ -82,7 +93,7 @@ export function loadSiteTourState(): SiteTourState {
 			version: SITE_TOUR_VERSION,
 			tour_id: isSiteTourId(parsed.tour_id) ? parsed.tour_id : null,
 			step_number:
-				typeof parsed.step_number === 'number' && parsed.step_number > 0
+				typeof parsed.step_number === 'number' && parsed.step_number >= 0
 					? parsed.step_number
 					: null,
 			dismissed: parsed.dismissed === true
@@ -123,4 +134,77 @@ export function dismissSiteTour() {
 		step_number: null,
 		dismissed: true
 	});
+}
+
+export function resetSiteTour() {
+	saveSiteTourState(createDefaultSiteTourState());
+}
+
+export function loadVisitorState(): SiteVisitorState | null {
+	if (!browser) return null;
+
+	const raw = localStorage.getItem(SITE_VISITOR_STORAGE_KEY);
+	if (!raw) return null;
+
+	try {
+		const parsed = JSON.parse(raw) as Partial<SiteVisitorState>;
+
+		if (parsed.version !== SITE_TOUR_VERSION) {
+			localStorage.removeItem(SITE_VISITOR_STORAGE_KEY);
+			return null;
+		}
+
+		return {
+			version: SITE_TOUR_VERSION,
+			visit_count: typeof parsed.visit_count === 'number' ? parsed.visit_count : 0,
+			first_seen_at: typeof parsed.first_seen_at === 'string' ? parsed.first_seen_at : new Date().toISOString(),
+			last_seen_at: typeof parsed.last_seen_at === 'string' ? parsed.last_seen_at : new Date().toISOString()
+		};
+	} catch {
+		localStorage.removeItem(SITE_VISITOR_STORAGE_KEY);
+		return null;
+	}
+}
+
+export function recordSiteVisit(): SiteVisitorState {
+	const now = new Date().toISOString();
+	const defaultState: SiteVisitorState = {
+		version: SITE_TOUR_VERSION,
+		visit_count: 1,
+		first_seen_at: now,
+		last_seen_at: now
+	};
+
+	if (!browser) return defaultState;
+	if (isLocalSiteTourPreview()) return defaultState;
+
+	const saved = loadVisitorState();
+	const shouldCountVisit =
+		!saved || Date.now() - Date.parse(saved.last_seen_at) > VISIT_SESSION_MS;
+
+	const nextState: SiteVisitorState = saved
+		? {
+				...saved,
+				visit_count: shouldCountVisit ? saved.visit_count + 1 : saved.visit_count,
+				last_seen_at: now
+			}
+		: defaultState;
+
+	localStorage.setItem(SITE_VISITOR_STORAGE_KEY, JSON.stringify(nextState));
+	return nextState;
+}
+
+export function isNewVisitor(visitorState: SiteVisitorState) {
+	return visitorState.visit_count <= NEW_USER_VISIT_LIMIT;
+}
+
+export function openSiteTourSelector() {
+	if (!browser) return;
+	window.dispatchEvent(new CustomEvent(SITE_TOUR_OPEN_EVENT));
+}
+
+export function isLocalSiteTourPreview() {
+	if (!browser) return false;
+
+	return ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname);
 }
