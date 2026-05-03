@@ -119,9 +119,20 @@
 		});
 	}
 
-	async function navigateToStep(step: TourStep) {
-		if (step.anchor && page.url.pathname === step.route_path) {
-			scrollToAnchor(step.anchor);
+	function isRouteOrSubroute(currentPath: string, routePath: string) {
+		if (routePath === '/') return currentPath === '/';
+		return currentPath === routePath || currentPath.startsWith(`${routePath}/`);
+	}
+
+	async function navigateToStep(step: TourStep, options: { preserveSubroute?: boolean } = {}) {
+		if (page.url.pathname === step.route_path) {
+			if (step.anchor) {
+				scrollToAnchor(step.anchor);
+			}
+			return;
+		}
+
+		if (options.preserveSubroute && isRouteOrSubroute(page.url.pathname, step.route_path)) {
 			return;
 		}
 
@@ -175,7 +186,7 @@
 			activeTourId = savedTourState.tour_id;
 			activeStepNumber = targetStep.step_number;
 			tourVisibility = 'panel';
-			await navigateToStep(targetStep);
+			await navigateToStep(targetStep, { preserveSubroute: true });
 			return;
 		}
 
@@ -194,7 +205,7 @@
 		tourVisibility = 'panel';
 
 		if (currentStep) {
-			await navigateToStep(currentStep);
+			await navigateToStep(currentStep, { preserveSubroute: true });
 		}
 	}
 
@@ -258,7 +269,7 @@
 
 		activeScreen = 'tour';
 		activeStepNumber = targetStep.step_number;
-		setVisibilityAfterTourNavigation();
+		tourVisibility = 'panel';
 		await navigateToStep(targetStep);
 	}
 
