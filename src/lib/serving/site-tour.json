@@ -1,4 +1,15 @@
 [
+{
+  "tour_id": "start_screen",
+  "step_number": 0,
+  "step_type": "start",
+  "route_label": "Select Route",
+  "route_path": "",
+  "anchor": "",
+  "route_text": "This tour is designed to introduce and orient you to our website. Please select your exploration route.",
+  "next_button_label": "Our Work",
+  "secondary_button_label": "Content"
+},
  {
    "tour_id": "work_first",
    "step_number": 1,

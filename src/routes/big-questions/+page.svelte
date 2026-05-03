@@ -51,6 +51,7 @@
 			</p>
 		</div>
 	</div>
+	<!--
 	<div class="stdbox stdpad bordertop">
 			<div class="labelbox card-padded and-bordered">
 			<p class="bold badger">The Big Question in 2026</p>
@@ -61,6 +62,7 @@
 			<p class="paragraph-text ptop8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
 			</div>
 	</div>
+	-->
 	<div class="stdbox stdpad bordertop is-last">
 		<Title text="All Big Questions"/>
 		{#if questions && questions.length > 0}

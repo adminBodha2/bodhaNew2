@@ -25,7 +25,7 @@
 
 <Container>
 	<div class="stdbox">
-		<Crumb item1="Bodha" item1Link="/" showT={true} title={data.title} showD={true} desc={data.description}/>
+		<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
 		<article class="core-item">
 			<data.content/>
 		</article>
