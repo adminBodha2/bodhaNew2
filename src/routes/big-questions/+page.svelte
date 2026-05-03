@@ -67,7 +67,7 @@
 				</a>
 				</div>
 				<div class="bot-shelf labelbox">
-					<p class="rem1 altprim">This Big Question 2026 is made possible by the generous support of Shri Hari Kiran Vadlamani, the founder of <a class="linked" target="_blank" rel="noreferrer" href="https://cohari.org/">coHari</a> and <a class="linked" target="_blank" rel="noreferrer" href="https://indica.in/">INDICA</a>. We are grateful to him for his patronage.</p>
+					<p class="rem1 altprim">This Big Question 2026 is made possible by the generous support of Shri Hari Kiran Vadlamani, the founder of <a class="linked" target="_blank" rel="noreferrer" href="https://cohari.org/">coHari</a>. We are grateful to him for his patronage.</p>
 					<img class="shri-hari-kiran-vadlamani" src="/images/shri-hari-kiran-vadlamani.webp" alt="shri-hari-kiran-vadlamani"/>
 				</div>
 			</div>

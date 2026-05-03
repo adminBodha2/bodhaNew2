@@ -7,6 +7,7 @@
 	import { fly } from 'svelte/transition';
 	import { dismissSiteTour, iW, isLocalSiteTourPreview, loadSiteTourState, resetSiteTour, saveSiteTourProgress, saveSiteTourState, SITE_TOUR_OPEN_EVENT, SITE_TOUR_VERSION, recordSiteVisit, isNewVisitor, type SiteTourId } from '$lib/utils/globalstores';
 	import Icon from '$lib/icons/tour-info.svelte';
+	import Menu from '$lib/icons/menu.svelte'
 	import Close from '$lib/icons/close.svelte';
 
 	type TourVisibility = 'none' | 'icon' | 'panel';
@@ -35,6 +36,8 @@
 		step_type: 'start';
 	};
 
+type TourPanelMode = 'full' | 'half';
+
 	type SiteTourJsonStep = TourStep | StartStep;
 
 	const siteTourSteps = tourStepsJson as SiteTourJsonStep[];
@@ -46,6 +49,7 @@
 	let activeStepNumber = $state<number | null>(null);
 	let siteTourStateLoaded = $state(false);
 	let autoIconEligible = $state(false);
+	let tourPanelMode = $state<TourPanelMode>('full');
 	let { isFooterVisible = false }: Props = $props();
 
 	const stepCounter = [
@@ -131,7 +135,6 @@
 			}
 			return;
 		}
-
 		if (options.preserveSubroute && isRouteOrSubroute(page.url.pathname, step.route_path)) {
 			return;
 		}
@@ -156,16 +159,23 @@
 		);
 	}
 
-	async function startTour(tourId: SiteTourId, stepNumber = 1) {
-		const firstStep = tourSteps.find((step) => step.tour_id === tourId && step.step_number === stepNumber);
-		if (!firstStep) return;
+function openPanelFull() {
+	tourVisibility = 'panel';
+	tourPanelMode = 'full';
+}
 
-		setVisibilityAfterTourNavigation();
-		activeScreen = 'tour';
-		activeTourId = tourId;
-		activeStepNumber = firstStep.step_number;
-		await navigateToStep(firstStep);
+function openPanelHalf() {
+	tourVisibility = 'panel';
+	if ( $iW ) {
+		tourPanelMode = 'half';
+	} else {
+		tourPanelMode = 'full'
 	}
+}
+
+function minimizePanelToIcon() {
+	tourVisibility = shouldShowIconWhenClosed() ? 'icon' : 'none';
+}
 
 	function showSelector() {
 		tourVisibility = 'panel';
@@ -175,13 +185,93 @@
 		resetSiteTour();
 	}
 
+function setPanelModeAfterNavigation() {
+	if ($iW) {
+		tourVisibility = 'panel';
+		tourPanelMode = 'half';
+		return;
+	}
+	tourVisibility = 'panel';
+	tourPanelMode = 'full';
+}
+
+	function endTour() {
+		tourVisibility = 'panel';
+		activeScreen = 'ended';
+		activeTourId = null;
+		activeStepNumber = null;
+		autoIconEligible = false;
+		dismissSiteTour();
+	}
+
+	function closeEndedTour() {
+		resetJourney(true);
+		activeScreen = 'selector';
+		tourVisibility = 'none';
+	}
+
+	function restartEndedTour() {
+		resetJourney(false);
+		activeScreen = 'selector';
+		tourVisibility = 'panel';
+	}
+
+	async function startTour(tourId: SiteTourId, stepNumber = 1) {
+		const firstStep = tourSteps.find((step) => step.tour_id === tourId && step.step_number === stepNumber);
+		if (!firstStep) return;
+
+		tourVisibility = 'panel';
+		if ($iW) {
+			tourPanelMode = 'half';
+		} else {
+			tourPanelMode = 'full';
+		}
+		activeScreen = 'tour';
+		activeTourId = tourId;
+		activeStepNumber = firstStep.step_number;
+		await navigateToStep(firstStep);
+	}
+
+
+	async function goNext() {
+		if (!currentStep) return;
+		const nextStep = activeSteps.find((step) => step.step_number === currentStep.step_number + 1);
+		if (!nextStep) {
+			endTour();
+			return;
+		}
+		activeStepNumber = nextStep.step_number;
+		setPanelModeAfterNavigation();
+		await navigateToStep(nextStep);
+	}
+
+	async function goPrev() {
+		if (!currentStep) return;
+		const prevStep = activeSteps.find((step) => step.step_number === currentStep.step_number - 1);
+		if (!prevStep) {
+			showSelector();
+			return;
+		}
+		activeStepNumber = prevStep.step_number;
+		setPanelModeAfterNavigation();
+		await navigateToStep(prevStep);
+	}
+
+	async function goToStep(stepNumber: number) {
+		const targetStep = activeSteps.find((step) => step.step_number === stepNumber);
+		if (!targetStep) return;
+
+		activeScreen = 'tour';
+		activeStepNumber = targetStep.step_number;
+		setPanelModeAfterNavigation();
+		await navigateToStep(targetStep);
+	}
+
 	async function openTourFromPersistedState() {
 		const savedTourState = loadSiteTourState();
-
 		if (hasSavedTourStep(savedTourState)) {
 			const targetStep = tourSteps.find((step) => step.tour_id === savedTourState.tour_id && step.step_number === savedTourState.step_number);
 			if (!targetStep) return;
-
 			activeScreen = 'tour';
 			activeTourId = savedTourState.tour_id;
 			activeStepNumber = targetStep.step_number;
@@ -189,7 +279,6 @@
 			await navigateToStep(targetStep, { preserveSubroute: true });
 			return;
 		}
-
 		tourVisibility = 'panel';
 		activeScreen = 'selector';
 		activeTourId = null;
@@ -201,9 +290,7 @@
 			await openTourFromPersistedState();
 			return;
 		}
-
 		tourVisibility = 'panel';
-
 		if (currentStep) {
 			await navigateToStep(currentStep, { preserveSubroute: true });
 		}
@@ -239,65 +326,23 @@
 		});
 	}
 
-	async function goNext() {
-		if (!currentStep) return;
-		const nextStep = activeSteps.find((step) => step.step_number === currentStep.step_number + 1);
-		if (!nextStep) {
-			endTour();
-			return;
+
+	$effect(() => {
+		if (!$iW) {
+			document.body.style.overflow = '';
+		} else if ( tourVisibility === 'panel' && tourPanelMode === 'half') {
+			document.body.style.overflow = ''
+		} else if ( tourVisibility === 'panel' && tourPanelMode === 'full') {
+			document.body.style.overflow = 'hidden';
+		} else if (tourVisibility !== 'panel') {
+			document.body.style.overflow = '';
 		}
-		activeStepNumber = nextStep.step_number;
-		setVisibilityAfterTourNavigation();
-		await navigateToStep(nextStep);
-	}
-
-	async function goPrev() {
-		if (!currentStep) return;
-		const prevStep = activeSteps.find((step) => step.step_number === currentStep.step_number - 1);
-		if (!prevStep) {
-			showSelector();
-			return;
-		}
-		activeStepNumber = prevStep.step_number;
-		setVisibilityAfterTourNavigation();
-		await navigateToStep(prevStep);
-	}
-
-	async function goToStep(stepNumber: number) {
-		const targetStep = activeSteps.find((step) => step.step_number === stepNumber);
-		if (!targetStep) return;
-
-		activeScreen = 'tour';
-		activeStepNumber = targetStep.step_number;
-		tourVisibility = 'panel';
-		await navigateToStep(targetStep);
-	}
-
-	function endTour() {
-		tourVisibility = 'panel';
-		activeScreen = 'ended';
-		activeTourId = null;
-		activeStepNumber = null;
-		autoIconEligible = false;
-		dismissSiteTour();
-	}
-
-	function closeEndedTour() {
-		resetJourney(true);
-		activeScreen = 'selector';
-		tourVisibility = 'none';
-	}
-
-	function restartEndedTour() {
-		resetJourney(false);
-		activeScreen = 'selector';
-		tourVisibility = 'panel';
-	}
+	});
 
 </script>
 
 {#if tourVisibility === 'panel'}
-		<aside class="tour-card" use:clickOutsideAction={handlePanelClose} aria-label="Site Tour" in:fly={{ y: 200, duration: 280 }} out:fly={{ y: 200, duration: 240 }}>
+		<aside class="tour-card" use:clickOutsideAction={handlePanelClose} class:half={tourPanelMode === 'half'} class:full={tourPanelMode === 'full'} aria-label="Site Tour" in:fly={{ y: 200, duration: 280 }} out:fly={{ y: 200, duration: 240 }}>
 			{#if activeScreen === 'ended'}
 				<div class="textbox top-end">
 					<div class="row ycenter xbetween">
@@ -313,14 +358,14 @@
 								<p class="card-title bold blue-dark tight" style="padding-top: 4px">End of Tour</p>
 								<button class="blank" style="margin-bottom: 4px" onclick={closeEndedTour}><Close size={36} color="var(--color-primary)" /></button>
 							</div>
-							<p class="tight">We hope this tour helped you discover areas of our website relevant to you. Restart this tour any time from 'Site Tour' link in the footer.</p>
+							<p class="tight pbot8">We hope this tour helped you discover areas of our website relevant to you. Restart this tour any time from 'Site Tour' link in the footer.</p>
 							<button class="small-button variant" onclick={showSelector}>Restart Now</button>
 						</div>
 					</div>
 				</div>
 				<div class="labelbox self-bottom">
 					<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
-					<p class="rem1 tight white">Re-open this tour anytime with the icon at bottom-right screen corner, or through the 'Site Tour' link in the footer.</p>
+					<p class="rem1 tight white">Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.</p>
 					<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
 				</div>
 			{/if}
@@ -344,7 +389,7 @@
 								<button class="blank" style="margin-bottom: 4px" onclick={handlePanelClose}><Close size={36} color="var(--color-primary)" /></button>
 							</div>
 							<p class="tight">{startScreen?.route_text ?? 'This tour is designed to introduce and orient you to our website. Please select your exploration route.'}</p>
-							<div class="row cgap8 ptop8">
+							<div class="row cgap8 ptop8 selector-items">
 						<button class="newbutton" onclick={() => startTour('work_first')}
 							><span class="button-decor"></span>
 							<div class="button-content"><span class="button__text">{startScreen?.next_button_label ?? 'Our Work'}</span></div></button>
@@ -357,14 +402,13 @@
 							<p class="rem1">This tour functions better on a laptop/PC.</p>
 							<div class="row cgap8">
 								<button class="small-button variant" onclick={endTour}>End</button>
-								<button class="small-button variant" onclick={showSelector}>Restart</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="labelbox self-bottom">
 					<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
-					<p class="rem1 tight white">Re-open this tour anytime with the icon at bottom-right screen corner, or through the 'Site Tour' link in the footer.</p>
+					<p class="rem1 tight white">Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.</p>
 					<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
 				</div>
 			{:else if currentStep}
@@ -396,7 +440,7 @@
 						</div>
 						<div class="mid-one-side">
 						<button class="nav box ycenter" onclick={goNext}>
-							<p class="tag-text grey">NEXT</p>
+							<p class="tag-text grey">NEXT | {String($iW)} | {tourPanelMode}</p>
 							<span class="blankbutton">{currentStep.next_button_label} <span class="blue-dark bold">→</span></span>
 						</button>
 							<div class="row cgap8 easy-buttons">
@@ -405,6 +449,7 @@
 							{/if}
 							<button class="small-button variant" onclick={showSelector}>Restart</button>
 							<button class="small-button variant prev-on-mobile" onclick={goPrev}>Previous</button>
+							<button class="small-button variant expand-on-mobile" onclick={openPanelFull}>Expand</button>
 							</div>
 						</div>
 					</div>
@@ -418,7 +463,7 @@
 				</div>
 				<div class="labelbox self-bottom">
 					<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
-					<p class="rem1 tight white">Re-open this tour anytime with the icon at bottom-right screen corner, or through the 'Site Tour' link in the footer.</p>
+					<p class="rem1 tight white">Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.</p>
 					<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
 				</div>
 			{/if}
@@ -427,6 +472,9 @@
 	<button class="blank with-tooltip" aria-label="Open Site Tour" onclick={openTourPanel}
 		><Icon />
 		<span class="tooltip" role="tooltip"> Open Site Tour </span>
+	</button>
+	<button class="for-mobile" aria-label="Open Site Tour" onclick={openTourPanel}>
+		<Menu color="#FFFFFF" size={32}/>
 	</button>
 {/if}
 
@@ -448,6 +496,10 @@
 	font-weight: bold
 	font-size: 5rem
 	line-height: 1
+
+.tour-card.full
+	.expand-on-mobile
+		display: none
 
 .stepcounter, .prev-on-desk
 	@media screen and (max-width: 1024px)
@@ -490,16 +542,23 @@ button.baselinebutton
 		padding: 0.5rem
 		border-bottom: var(--border-main)
 
+button.for-mobile
+	position: sticky
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 56px
+	background: linear-gradient(90deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 28, 59, 1) 100%)
+	box-shadow: 0 -4px 8px #a7a7a7
+	border: none
+	@media screen and (min-width: 1025px)
+		display: none
+
 button.blank.with-tooltip
 	z-index: 900
 	view-transition-name: site-tour
 	@media screen and (max-width: 1024px)
-		position: sticky
-		bottom: 0
-		width: 100%
-		padding-top: 10px
-		padding-bottom: 10px
-		background: linear-gradient(80deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 100%)
+		display: none
 	@media screen and (min-width: 1025px)
 		position: fixed
 		right: 0
@@ -513,29 +572,33 @@ button.blank.with-tooltip
 			background: var(--color-stone)
 
 .tour-card
-	border: var(--border-dark)
-	width: 100%
-	height: 240px
-	box-shadow: 5px 8px 16px rgba(0,0,0,0.3), -4px 0 32px rgba(0,0,0,0.6)
-	background: #FFFFFF
-	position: sticky
-	left: 0
-	bottom: 0
 	z-index: 900
-	display: grid
-	grid-template-columns: 160px 1fr 240px
 	view-transition-name: site-tour
 	transition: all 0.3s ease
 	.top-end
+		background: linear-gradient(60deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 100%)
 		padding: 1rem
-		width: 160px
-		background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 84%, rgba(0, 0, 0, 1) 100%)
-	.mid-area
-		border-left: var(--border-dark)
-		border-right: var(--border-dark)
-		display: flex
-		flex-direction: column
-		@media screen and (min-width: 1025px)
+	.self-bottom
+		background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 28, 49, 1) 100%)
+		padding: 1rem
+	@media screen and (min-width: 1025px)
+		position: sticky
+		left: 1rem
+		bottom: 1rem
+		display: grid
+		grid-template-columns: 160px 1fr 240px
+		border: var(--border-main)
+		width: calc(100% - 2rem)
+		min-height: 240px
+		background: #FFFFFF
+		border-radius: 5px
+		overflow: hidden
+		box-shadow: inset -4px -2px 8px rgba(0,0,0,0.3), inset 2px 4px 5px rgba(0,0,0,0.1)
+		.top-end
+			width: 160px
+		.mid-area
+			border-left: var(--border-dark)
+			border-right: var(--border-dark)
 			display: grid
 			grid-template-columns: 1fr
 			grid-template-rows: 1fr 40px
@@ -587,67 +650,89 @@ button.blank.with-tooltip
 				width: 100%
 				button.baselinebutton
 					flex: 1
-	.self-bottom
-		padding: 1rem
-		width: 240px
-		background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 84%, rgba(0, 0, 0, 1) 100%)
-		height: 100%
-	@media screen and (min-width: 1025px)
-		bottom: 0
+		.self-bottom
+			width: 240px
+			background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 84%, rgba(0, 0, 0, 1) 100%)
+			height: 100%
 	@media screen and (max-width: 1024px)
-		display: flex
-		border-radius: 8px
-		overflow: hidden
-		flex-direction: column
-		width: calc(100% - 1rem)
-		margin-left: auto
-		margin-right: auto
-		right: 0.5rem
-		bottom: 1rem
-		height: calc(100dvh - 80px)
-		box-shadow: 3px 6px 10px rgba(0,0,0,0.3), -4px 0 13px rgba(0,0,0,0.3)
-		.top-end, .mid-area, .self-bottom
-			width: 100%
-		.mid-area
-			border-left: none
-			border-right: none
+		&.half
+			background: rgba(255,255,255,0.2)
+			backdrop-filter: blur(15px)
+			position: fixed
+			bottom: 8px
+			left: 8px
+			width: calc(100% - 16px)
 			display: flex
 			flex-direction: column
-			height: 100%
+			height: max-content
+			border: 1px solid #FFFFFF
+			border-radius: 6px
+			.top-end, .self-bottom, .mid-baseline
+				display: none
 			.mid-one
-				padding: 1rem
-				display: flex
-				flex-direction: column
-				height: 100%
 				.mid-one-main
+					padding: 1rem
 					display: flex
 					flex-direction: column
 					row-gap: 1rem
-					border-bottom: var(--border-main)
-					padding-bottom: 2rem
-				.mid-one-side
+				.easy-buttons
+					padding: 1rem
+		&.full
+			background: #FFFFFF
+			position: fixed
+			top: 72px
+			display: flex
+			border-radius: 0
+			overflow: hidden
+			flex-direction: column
+			width: calc(100% - 16px)
+			left: 8px
+			height: calc(100vh - 80px)
+			.top-end, .mid-area, .self-bottom
+				width: 100%
+			.top-end
+				height: 48px
+			.mid-area
+				border-left: none
+				border-right: none
+				display: flex
+				flex-direction: column
+				height: 100%
+				.mid-one
+					padding: 1rem
 					display: flex
 					flex-direction: column
-					justify-content: space-between
 					height: 100%
-					.nav
-						padding: 2rem
-						background: var(--color-stone)
-						border-top: none
-						border-left: none
-						border-right: none
+					.mid-one-main
+						display: flex
+						flex-direction: column
+						row-gap: 1rem
 						border-bottom: var(--border-main)
-						text-align: left
-			.mid-baseline
-				display: flex
-				flex-direction: row
-				flex-wrap: wrap
-				width: 100%
-				margin-top: auto
-				button.baselinebutton
-					flex: 1 0 20%
-		.self-bottom
-			height: 160px
+						padding-bottom: 2rem
+					.mid-one-side
+						display: flex
+						flex-direction: column
+						justify-content: space-between
+						height: 100%
+						.nav
+							padding: 2rem
+							background: var(--color-stone)
+							border-top: none
+							border-left: none
+							border-right: none
+							border-bottom: var(--border-main)
+							text-align: left
+				.mid-baseline
+					display: flex
+					flex-direction: row
+					flex-wrap: wrap
+					width: 100%
+					margin-top: auto
+					button.baselinebutton
+						flex: 1 0 20%
+			.self-bottom
+				height: 160px
+
 
 :global(::view-transition-old(site-tour)),
 :global(::view-transition-new(site-tour))

@@ -4,19 +4,27 @@
 	import Search from '$lib/icons/search.svelte';
 	import Close from '$lib/icons/close.svelte';
 	import Mobilemenu from '$lib/comps/mobilemenu.svelte';
-	import { menuState, toggleMenuState, toggleSearch, darkTheme } from '$lib/utils/globalstores';
+	import { menuState, toggleMenuState, toggleSearch, darkTheme, iW } from '$lib/utils/globalstores';
 	import { navLinks } from '$lib/utils/localsends'
 
-	let iW = $state(0);
+
 	let scro = $state(0);
 
 	let firstSubroute = $derived.by(() => {
 		const parts = page.url.pathname.split('/').filter(Boolean);
 		return parts.length > 0 ? '/' + parts[0] : '/';
 	});
+
+	$effect(() => {
+		if ($menuState && $iW ) {
+			document.body.style.overflow = 'hidden';
+		} else  {
+			document.body.style.overflow = '';
+		}
+	});
 </script>
 
-<svelte:window bind:innerWidth={iW} bind:scrollY={scro} />
+<svelte:window bind:scrollY={scro} />
 
 <div class="row width100 ycenter xbetween narrowbox">
 		<a class="blank row ycenter logoholder" href="/">
@@ -28,7 +36,7 @@
 				<img class="rest" src="/images/rest.png" alt="rest" />
 			{/if}
 		</a>
-	{#if iW > 1024}
+	{#if !$iW}
 		<nav class="row ycenter tray">
 			{#each navLinks as link}
 				<a class="nav-link blank tt-u" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
@@ -52,7 +60,7 @@
 		</div>
 	{/if}
 </div>
-{#if $menuState === true && iW < 1025}
+{#if $menuState && $iW}
 	<Mobilemenu />
 {/if}
 
