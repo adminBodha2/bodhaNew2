@@ -45,12 +45,6 @@
 			e.preventDefault();
 			$searchState = !$searchState;
 		}
-
-		// Cmd+Z -> Theme
-		if (isMod && e.key === 'z') {
-			e.preventDefault();
-			toggleTheme();
-		}
 	}
 
 	$effect(() => {
