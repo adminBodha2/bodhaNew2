@@ -9,7 +9,6 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import { InteractiveGrid } from "$lib/motion-core";
 	import { WaterRipple } from "$lib/motion-core";
 	import { mouseStore } from '$lib/utils/mousestore'
 	import { readerChromeHidden } from '$lib/utils/globalstores';

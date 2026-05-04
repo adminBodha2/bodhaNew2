@@ -26,7 +26,7 @@
 		<div class="footer-grid">
 			<div class="foot-brand">
 				<p class="light-footer descriptor-text">Bodha is a think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="light-footer descriptor-text">Site designed at Bodha Lab. <br><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
+				<p class="light-footer descriptor-text">Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact.</a></p> 
 				<div class="row ycenter cgap8">
 				<Designed/>
 				<!--
@@ -113,6 +113,7 @@ p.light-footer
 	.foot-brand
 		grid-column: span 3
 	column-gap: 2rem
+	row-gap: 1rem
 	@media screen and (max-width: 1201px)
 		grid-template-columns: 1fr 1fr
 		.foot-col
@@ -181,7 +182,7 @@ p.light-footer
 	padding: 2rem
 	row-gap: 6rem
 	@media screen and (max-width: 1024px)
-		padding-top: 4rem
+		padding-top: 3rem
 		padding-left: 1rem
 		padding-right: 1rem
 		width: 100%

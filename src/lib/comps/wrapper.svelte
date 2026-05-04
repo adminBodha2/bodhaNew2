@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import type { Snippet } from 'svelte';
+
 	type Props = {
 		graphing?: boolean;
 		children?: Snippet;
@@ -45,6 +46,7 @@
 		padding-bottom: 4rem
 		padding-left: 1rem
 		padding-right: 1rem
+		background: transparent
 		.content-wrapper
 			width: 992px
 	@media screen and (min-width: 1201px)

@@ -89,6 +89,17 @@ button.with-tooltip
 	&:hover span
 		animation: scaleUp 0.9s ease-in-out
 		color: #FFFFFF
+	&.desb
+		border-radius: 30px
+		padding: 1rem 1.7rem
+		background: var(--color-desb)
+		transition: all 0.05s ease-in-out
+		span
+			padding: 0
+		&::after
+			background: var(--color-desb2)
+		&:hover
+			transform: scaleX(1.05)
 	@media screen and (min-width: 1025px)
 		font-size: 1rem
 
@@ -186,7 +197,7 @@ button.with-tooltip
 	padding: 3px 6px
 	border-radius: 0px
 	border: none
-	background: var(--color-green)
+	background: var(--color-theme)
 	transition: all 0.12s var(--cz-easeOutQuint)
 	width: max-content
 	transform-origin: center center
@@ -684,3 +695,15 @@ a.nav
 	border: var(--border-darker)
 	border-radius: 8px
 	background: #FFF
+
+.whitepaper-page
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+		padding: 1rem
+		margin-bottom: 1.25rem
+	@media screen and (min-width: 1025px)
+		img
+			max-height: 600px
+			object-fit: contain

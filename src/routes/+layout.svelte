@@ -52,13 +52,10 @@
 			isFooterVisible = false;
 			return;
 		}
-
 		const visibility = elementVisibilityStore(footerRef);
-
 		const unsubscribe = visibility.isVisible.subscribe((value: boolean) => {
 			isFooterVisible = value;
 		});
-
 		return () => {
 			unsubscribe();
 			visibility.stop();
