@@ -125,7 +125,7 @@
 							<p class="tag-text tt-u">{item.meta.words} words</p>
 						</a>
 					</div>
-					<div class="row wrap self-bottom bordertop tight-padded">
+					<div class="row wrap self-bottom bordertop tight-padded rgap4 cgap4">
 						{#each item.meta.tags as tag}
 							<p class="tag-pill tt-u">{tag.replaceAll('-',' ')}</p>
 						{/each}

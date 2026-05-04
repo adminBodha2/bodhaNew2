@@ -47,10 +47,12 @@
 pre
 	font-family: var(--fontface-sans)
 	line-height: 1.5
+	font-size: 1rem
 
 .acco-box
 	padding: 1rem
 	border-bottom: 1px solid var(--color-alt-2)
+	width: 100%
 	&:last-child
 		border-bottom: none
 	&:hover

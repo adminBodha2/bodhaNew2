@@ -91,7 +91,7 @@
 							<p class="grey descriptor-text">{item.meta.description}</p>
 						</a>
 							{#if item.meta.tags}
-								<div class="row wrap meta">
+								<div class="row wrap cgap4 rgap4 meta">
 									{#each item.meta.tags as tag}
 										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
 									{/each}

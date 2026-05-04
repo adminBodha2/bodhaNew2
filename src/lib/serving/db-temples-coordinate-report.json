@@ -1,0 +1,1889 @@
+{
+	"summary": {
+		"total": 268,
+		"totalWithCoordinates": 229,
+		"totalWithoutCoordinates": 39
+	},
+	"report": [
+		{
+			"slug": "sri-jagannath-temple",
+			"name": "Sri Jagannath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kanchipuram-ekambareswarar-temple",
+			"name": "Kanchipuram Ekambareswarar Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "tirumala-venkateswara-temple",
+			"name": "Tirumala Venkateswara Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "madurai-meenakshi-amman-temple",
+			"name": "Madurai Meenakshi Amman Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "sringeri-sharada-peetham",
+			"name": "Sringeri Sharada Peetham",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kamkhent",
+			"name": "Kamkhent",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "muktoknang",
+			"name": "Muktoknang",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "pelling-doi",
+			"name": "Pelling Doi",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "tawang-monastery",
+			"name": "Tawang Monastery",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kamlang-doi",
+			"name": "Kamlang Doi",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "shakti-peeth",
+			"name": "Shakti Peeth",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "namdrokpa",
+			"name": "Namdrokpa",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "jakar-doi-murong",
+			"name": "Jakar Doi Murong",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "umananda-temple",
+			"name": "Umananda Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "bhubaneswari-temple",
+			"name": "Bhubaneswari Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kamakhyaguri-temple",
+			"name": "Kamakhyaguri Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "sukreswar-temple",
+			"name": "Sukreswar Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "RR58+7VR",
+			"address": "RR58+7VR, Chudanga Sahi, Puri, Odisha 752001, India"
+		},
+		{
+			"slug": "kamakhya-temple",
+			"name": "Kamakhya Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "navagraha-temple",
+			"name": "Navagraha Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "siddivinayak-temple",
+			"name": "Siddivinayak Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "dakshineswar-kali-temple",
+			"name": "Dakshineswar Kali Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "hayagriva-madhava-temple",
+			"name": "Hayagriva Madhava Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "baidyanath-dham",
+			"name": "Baidyanath Dham",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kashi-vishwanath-temple",
+			"name": "Kashi Vishwanath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "ram-janmabhoomi-temple",
+			"name": "Ram Janmabhoomi Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "surya-kund-temple",
+			"name": "Surya Kund Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "bihar-sharif",
+			"name": "Bihar Sharif",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "mahabodhi-temple",
+			"name": "Mahabodhi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "uttar-gaya-temple",
+			"name": "Uttar Gaya Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Gaya",
+			"address": "Gaya, Bihar, India"
+		},
+		{
+			"slug": "sitamarhi-temple",
+			"name": "Sitamarhi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "jagannath-puri",
+			"name": "Jagannath Puri",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "jagannath-temple",
+			"name": "Jagannath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "meenakshi-amman-temple",
+			"name": "Meenakshi Amman Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "chidambaram-nataraja-temple",
+			"name": "Chidambaram Nataraja Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Chidambaram",
+			"address": "Chidambaram, Tamil Nadu, India"
+		},
+		{
+			"slug": "sri-padmanabhaswamy-temple",
+			"name": "Sri Padmanabhaswamy Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kashi-vishwanath-temple-2",
+			"name": "Kashi Vishwanath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "brihadeeswarar-temple",
+			"name": "Brihadeeswarar Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "dwarkadish-temple",
+			"name": "Dwarkadish Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "tirupati-venkateswara-temple",
+			"name": "Tirupati Venkateswara Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "ranganathaswamy-temple",
+			"name": "Ranganathaswamy Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shantadurga-temple",
+			"name": "Shantadurga Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "chapaguri-temple",
+			"name": "Chapaguri Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Chapaguri",
+			"address": "Chapaguri, West Bengal 736179, India"
+		},
+		{
+			"slug": "shri-shantadurga-temple",
+			"name": "Shri Shantadurga Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-mangueshi-temple",
+			"name": "Shri Mangueshi Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 42,
+			"match": "240",
+			"address": "240, Dinanath Mangeshkar Rd, Mangeshi village, Mardol, Priol, Goa 403404, India"
+		},
+		{
+			"slug": "mahalaxmi-temple",
+			"name": "Mahalaxmi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "mahadeva-temple",
+			"name": "Mahadeva Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-mangueshi-temple-2",
+			"name": "Shri Mangueshi Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 42,
+			"match": "240",
+			"address": "240, Dinanath Mangeshkar Rd, Mangeshi village, Mardol, Priol, Goa 403404, India"
+		},
+		{
+			"slug": "shri-ramnath-temple",
+			"name": "Shri Ramnath Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "East Car Street",
+			"address": "E Car St, Rameswaram, Tamil Nadu 623526, India"
+		},
+		{
+			"slug": "bhagwan-mahavir-temple",
+			"name": "Bhagwan Mahavir Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 64,
+			"match": "ISKCON Temple - Glory of India",
+			"address": "Hare Krishna Hills, Sant Nagar, East of Kailash, New Delhi, Delhi 110065"
+		},
+		{
+			"slug": "ambaji-temple",
+			"name": "Ambaji Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "dwarkadhish-temple",
+			"name": "Dwarkadhish Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "pataneshwar-mahadev-temple",
+			"name": "Pataneshwar Mahadev Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "V458+C9H",
+			"address": "V458+C9H, Bhairav Nagar, Patan, Gujarat 384265, India"
+		},
+		{
+			"slug": "swaminarayan-akshardham-temple",
+			"name": "Swaminarayan Akshardham Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "akshardham-temple",
+			"name": "Akshardham Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "modhera-sun-temple",
+			"name": "Modhera Sun Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shree-swaminarayan-mandir",
+			"name": "Shree Swaminarayan Mandir",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-siddhivinayak-temple",
+			"name": "Shri Siddhivinayak Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "somnath-temple",
+			"name": "Somnath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-sheetla-mata-temple",
+			"name": "Shri Sheetla Mata Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-balaji-temple",
+			"name": "Shri Balaji Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-laxmi-narayan-temple",
+			"name": "Shri Laxmi Narayan Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-hanuman-temple",
+			"name": "Shri Hanuman Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-kali-mata-temple",
+			"name": "Shri Kali Mata Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-shiv-mandir",
+			"name": "Shri Shiv Mandir",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-ganesha-temple",
+			"name": "Shri Ganesha Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-mata-mansa-devi-temple",
+			"name": "Shri Mata Mansa Devi Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "chintapurni-temple",
+			"name": "Chintapurni Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "trilokinath-temple",
+			"name": "Trilokinath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "hadimba-temple",
+			"name": "Hadimba Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shrikhand-mahadev-temple",
+			"name": "Shrikhand Mahadev Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Shrikhand Mahadev",
+			"address": "Shrikhand Mahadev, Himachal Pradesh, India"
+		},
+		{
+			"slug": "jwalamukhi-temple",
+			"name": "Jwalamukhi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "bhimakali-temple",
+			"name": "Bhimakali Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "rohtang-la-temple",
+			"name": "Rohtang La Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "mata-murti-temple",
+			"name": "Mata Murti Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Ward 27",
+			"address": "Ward 27, Shipra Path, Barh Devariya, Mansarovar, Jaipur, Rajasthan 302020, India"
+		},
+		{
+			"slug": "naina-devi-temple",
+			"name": "Naina Devi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "bhadrakali-temple",
+			"name": "Bhadrakali Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "35",
+			"address": "35, Tarka Siddhanta Ln, Belur, Bally, Howrah, West Bengal 711201, India"
+		},
+		{
+			"slug": "hari-parbat-temple",
+			"name": "Hari Parbat Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "katra-temple",
+			"name": "Katra Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "raghunath-temple",
+			"name": "Raghunath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-mata-vaishno-devi-temple",
+			"name": "Shri Mata Vaishno Devi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "durga-temple",
+			"name": "Durga Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "mukhteshwar-temple",
+			"name": "Mukhteshwar Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "amarnath-temple",
+			"name": "Amarnath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shiva-temple",
+			"name": "Shiva Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "jyeshteeshwar-mahadev-temple",
+			"name": "Jyeshteeshwar Mahadev Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "M8HH+2M9",
+			"address": "M8HH+2M9, Mahavir Nagar, Korti, Bhosale Nagar, Pandharpur, Maharashtra 413304, India"
+		},
+		{
+			"slug": "jagannath-temple-2",
+			"name": "Jagannath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "maa-vindhyavasini-temple",
+			"name": "Maa Vindhyavasini Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "maa-chandi-temple",
+			"name": "Maa Chandi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "maa-gomti-temple",
+			"name": "Maa Gomti Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "MAA KAMAKHYA Bhawani Temple Ashram, Sunwa, Uttar Pradesh, India",
+			"address": "JM7G+GQX, Sunwa, Uttar Pradesh 224118"
+		},
+		{
+			"slug": "maa-pataleshwari-temple",
+			"name": "Maa Pataleshwari Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Temple",
+			"address": "J4CM+WFJ Temple, Bans Ghat, Raja Ji Salai, Buddha Colony, Patna, Bihar 800001, India"
+		},
+		{
+			"slug": "kameshwar-dham",
+			"name": "Kameshwar Dham",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "maa-dhakeswari-temple",
+			"name": "Maa Dhakeswari Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "baidyanath-dham-2",
+			"name": "Baidyanath Dham",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "maa-manasa-temple",
+			"name": "Maa Manasa Temple",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "maa-basukinath-temple",
+			"name": "Maa Basukinath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "sri-krishna-temple",
+			"name": "Sri Krishna Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "vittala-temple",
+			"name": "Vittala Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "mallikarjuna-temple",
+			"name": "Mallikarjuna Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "mahadev-temple",
+			"name": "Mahadev Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "chamundeshwari-temple",
+			"name": "Chamundeshwari Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "kashi-vishwanath-temple-3",
+			"name": "Kashi Vishwanath Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shiva-temple-2",
+			"name": "Shiva Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "durga-temple-2",
+			"name": "Durga Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "badami-cave-temples",
+			"name": "Badami Cave Temples",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "guruvayur-temple",
+			"name": "Guruvayur Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "thrissur-pooram",
+			"name": "Thrissur Pooram",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Thrissur",
+			"address": "Thrissur, Kerala, India"
+		},
+		{
+			"slug": "mahadeva-temple-2",
+			"name": "Mahadeva Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "subramanya-swami-temple",
+			"name": "Subramanya Swami Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Thiruchendur",
+			"address": "Thiruchendur, Tamil Nadu 628215, India"
+		},
+		{
+			"slug": "dakshinamurthy-temple",
+			"name": "Dakshinamurthy Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "krishna-temple",
+			"name": "Krishna Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "ayyappan-temple",
+			"name": "Ayyappan Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Swamy Ayyappan Road",
+			"address": "Swamy Ayyappan Rd, Sannidhanam, Sabarimala, Kerala 689662, India"
+		},
+		{
+			"slug": "sree-padmanabhaswamy-temple",
+			"name": "Sree Padmanabhaswamy Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "ashtalakshmi-temple",
+			"name": "Ashtalakshmi Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "vadakkumnathan-temple",
+			"name": "Vadakkumnathan Temple",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "Swaraj Round North",
+			"address": "Swaraj Round N, Kuruppam, Thekkinkadu Maidan, Thrissur, Kerala 680001, India"
+		},
+		{
+			"slug": "omkareshwar-temple",
+			"name": "Omkareshwar Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "bhopal-bhimtaleshwar-temple",
+			"name": "Bhopal Bhimtaleshwar Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Bhopal",
+			"address": "Bhopal, Madhya Pradesh, India"
+		},
+		{
+			"slug": "dhar-somnath-temple",
+			"name": "Dhar Somnath Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Dhar",
+			"address": "Dhar, Madhya Pradesh 454001, India"
+		},
+		{
+			"slug": "gwalior-fort",
+			"name": "Gwalior Fort",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "khajuraho-group-of-monuments",
+			"name": "Khajuraho Group of Monuments",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "maheshwar-mahamaya-temple",
+			"name": "Maheshwar Mahamaya Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Maheshwar",
+			"address": "Maheshwar, Madhya Pradesh, India"
+		},
+		{
+			"slug": "chitrakoot-ram-janmabhoomi-temple",
+			"name": "Chitrakoot Ram Janmabhoomi Temple",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 64,
+			"match": "Chitrakoot",
+			"address": "Chitrakoot, Madhya Pradesh, India"
+		},
+		{
+			"slug": "mandu-hindola-mahal",
+			"name": "Mandu Hindola Mahal",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "ujjain-mahakaleshwar-temple",
+			"name": "Ujjain Mahakaleshwar Temple",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-mahalaxmi-temple-mumbai",
+			"name": "Shri Mahalaxmi Temple, Mumbai",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 68,
+			"match": "Mahalaxmi Temple",
+			"address": "Breach Candy, Cumballa Hill, Mumbai, Maharashtra 400026, India"
+		},
+		{
+			"slug": "shri-vitthal-rukmini-temple-pandharpur",
+			"name": "Shri Vitthal Rukmini Temple, Pandharpur",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-trimbakeshwar-temple-nashik",
+			"name": "Shri Trimbakeshwar Temple, Nashik",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-aundheshwar-temple-pune",
+			"name": "Shri Aundheshwar Temple, Pune",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "31",
+			"address": "31, AIMS Rd, Sarkar Wada, Ward No. 8, Aundh Gaon, Aundh, Pune, Maharashtra 411067, India"
+		},
+		{
+			"slug": "shri-kashi-vishwanath-temple-kolhapur",
+			"name": "Shri Kashi Vishwanath Temple, Kolhapur",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Kolhapur",
+			"address": "Kolhapur, Maharashtra, India"
+		},
+		{
+			"slug": "shri-haji-ali-dargah-mumbai",
+			"name": "Shri Haji Ali Dargah, Mumbai",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-rameshwar-temple-nasik",
+			"name": "Shri Rameshwar Temple, Nasik",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "Baste Farm Road",
+			"address": "Baste Farm Rd, Jayaram Nagar, Pathardi Phata, Nashik, Maharashtra 422010, India"
+		},
+		{
+			"slug": "shri-siddhivinayak-temple-mumbai",
+			"name": "Shri Siddhivinayak Temple, Mumbai",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-tulja-bhavani-temple-tuljapur",
+			"name": "Shri Tulja Bhavani Temple, Tuljapur",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-bhimashankar-temple-pune",
+			"name": "Shri Bhimashankar Temple, Pune",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-shri-singhajit-singh-temple-imphal",
+			"name": "Shri Shri Singhajit Singh Temple, Imphal",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "shri-shri-shri-govindajee-temple-bishnupur",
+			"name": "Shri Shri Shri Govindajee Temple, Bishnupur",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 54,
+			"match": "Sri Vishnu Temple - Bishnupur, Manipur, India",
+			"address": "JQC5+3W9, Bishnupur, Manipur 795126"
+		},
+		{
+			"slug": "shri-shri-shri-govindajee-temple-wangkhei",
+			"name": "Shri Shri Shri Govindajee Temple, Wangkhei",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Shree Govindajee (Radha Krishna) Temple - Imphal, Manipur, India",
+			"address": "RW8P+RP5, Khoyathong, Thangmeiband, Imphal, Manipur 795001"
+		},
+		{
+			"slug": "shri-shri-shree-govindajee-temple-kakching",
+			"name": "Shri Shri Shree Govindajee Temple, Kakching",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Kakching",
+			"address": "Kakching, Manipur, India"
+		},
+		{
+			"slug": "shri-govindajee-temple-imphal",
+			"name": "Shri Govindajee Temple, Imphal",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Shree Govindajee (Radha Krishna) Temple - Imphal, Manipur, India",
+			"address": "RW8P+RP5, Khoyathong, Thangmeiband, Imphal, Manipur 795001"
+		},
+		{
+			"slug": "shri-shri-shri-govindajee-temple-moirang",
+			"name": "Shri Shri Shri Govindajee Temple, Moirang",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Shree Govindajee (Radha Krishna) Temple - Imphal, Manipur, India",
+			"address": "RW8P+RP5, Khoyathong, Thangmeiband, Imphal, Manipur 795001"
+		},
+		{
+			"slug": "kamakhya-temple-guwahati",
+			"name": "Kamakhya Temple, Guwahati",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "iskcon-temple-guwahati",
+			"name": "ISKCON Temple, Guwahati",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "Kasturba Ashram Road",
+			"address": "Kasturba Ashram Rd, South Sarania, Ulubari, Guwahati, Assam 781007, India"
+		},
+		{
+			"slug": "dakshineswar-kali-temple-kolkata",
+			"name": "Dakshineswar Kali Temple, Kolkata",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 92,
+			"match": "Dakshineswar",
+			"address": "Dakshineswar, Kolkata, West Bengal 700035, India"
+		},
+		{
+			"slug": "hayagriva-madhava-temple-hajo",
+			"name": "Hayagriva Madhava Temple, Hajo",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "umananda-temple-guwahati",
+			"name": "Umananda Temple, Guwahati",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "navagraha-temple-guwahati",
+			"name": "Navagraha Temple, Guwahati",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "shri-ram-janaki-temple-aizawl",
+			"name": "Shri Ram Janaki Temple, Aizawl",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Aizawl",
+			"address": "Aizawl, Mizoram, India"
+		},
+		{
+			"slug": "shri-hanuman-temple-aizawl",
+			"name": "Shri Hanuman Temple, Aizawl",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Aizawl",
+			"address": "Aizawl, Mizoram, India"
+		},
+		{
+			"slug": "shri-laxmi-narayan-temple-aizawl",
+			"name": "Shri Laxmi Narayan Temple, Aizawl",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Aizawl",
+			"address": "Aizawl, Mizoram, India"
+		},
+		{
+			"slug": "shri-shiva-temple-aizawl",
+			"name": "Shri Shiva Temple, Aizawl",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Shiv Temple - Aizawl, Mizoram, India",
+			"address": "Y-47/1, Armed Veng Rd, Aizawl, Mizoram 796008"
+		},
+		{
+			"slug": "shri-radha-krishna-temple-aizawl",
+			"name": "Shri Radha Krishna Temple, Aizawl",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Aizawl",
+			"address": "Aizawl, Mizoram, India"
+		},
+		{
+			"slug": "shri-shri-maa-kamakhya-temple-kohima",
+			"name": "Shri Shri Maa Kamakhya Temple, Kohima",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Kohima",
+			"address": "Kohima, Nagaland, India"
+		},
+		{
+			"slug": "shri-shri-lakshmi-narayan-temple-tuensang",
+			"name": "Shri Shri Lakshmi Narayan Temple, Tuensang",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Tuensang",
+			"address": "Tuensang, Nagaland 798612, India"
+		},
+		{
+			"slug": "shri-shri-sankaradeva-temple-dimapur",
+			"name": "Shri Shri Sankaradeva Temple, Dimapur",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Dimapur Kalibari - Dimapur, Nagaland, India",
+			"address": "Zhimomi Apartments, Kalibari Rd, West Yard Colony, Railway Colony, Dimapur, Nagaland 797112"
+		},
+		{
+			"slug": "shri-shri-shiv-mandir-wokha",
+			"name": "Shri Shri Shiv Mandir, Wokha",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Wokha",
+			"address": "Wokha, Nagaland 797111, India"
+		},
+		{
+			"slug": "shri-shri-durgabari-temple-mokokchung",
+			"name": "Shri Shri Durgabari Temple, Mokokchung",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Mokokchung",
+			"address": "Mokokchung, Nagaland 798601, India"
+		},
+		{
+			"slug": "lingaraja-temple-bhubaneswar",
+			"name": "Lingaraja Temple, Bhubaneswar",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "mukteshwar-temple-bhubaneswar",
+			"name": "Mukteshwar Temple, Bhubaneswar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "Old Town",
+			"address": "Old Town, 6RVR+35P, Kedar Gouri Vihar, Old Town, Bhubaneswar, Odisha 751002, India"
+		},
+		{
+			"slug": "adi-keshava-temple-bhubaneswar",
+			"name": "Adi Keshava Temple, Bhubaneswar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Om Sai Arcade",
+			"address": "Om Sai Arcade, Patia, Bhubaneswar, Odisha 751031, India"
+		},
+		{
+			"slug": "rajarani-temple-bhubaneswar",
+			"name": "Rajarani Temple, Bhubaneswar",
+			"status": "already_had_coordinates"
+		},
+		{
+			"slug": "vaital-deula-bhubaneswar",
+			"name": "Vaital Deula, Bhubaneswar",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "6RRJ+XW4",
+			"address": "6RRJ+XW4, Barhadanda Road, Old Town, Bhubaneswar, Odisha 751002, India"
+		},
+		{
+			"slug": "konark-sun-temple-konark",
+			"name": "Konark Sun Temple, Konark",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Konark",
+			"address": "Konark, Odisha 752111, India"
+		},
+		{
+			"slug": "brahmeswara-temple-bhubaneswar",
+			"name": "Brahmeswara Temple, Bhubaneswar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "Near",
+			"address": "Near, Tankapani Rd, Siba Nagar, Brahmeswarpatna, Bhubaneswar, Odisha 751002, India"
+		},
+		{
+			"slug": "jagannath-temple-puri",
+			"name": "Jagannath Temple, Puri",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 102,
+			"match": "Puri",
+			"address": "Puri, Odisha 752001, India"
+		},
+		{
+			"slug": "siddhesvara-temple-bhubaneswar",
+			"name": "Siddhesvara Temple, Bhubaneswar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "33",
+			"address": "33, Santoshi Vihar, Laxmisagar, Bhubaneswar, Odisha 751006, India"
+		},
+		{
+			"slug": "parasurameswara-temple-bhubaneswar",
+			"name": "Parasurameswara Temple, Bhubaneswar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "6RVQ+6JX",
+			"address": "6RVQ+6JX, Kedar Gouri Vihar, Old Town, Bhubaneswar, Odisha 751002, India"
+		},
+		{
+			"slug": "golden-temple-amritsar",
+			"name": "Golden Temple, Amritsar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 82,
+			"match": "Amritsar",
+			"address": "Atta Mandi, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab 143006, India"
+		},
+		{
+			"slug": "shri-mansa-devi-mandir-solan",
+			"name": "Shri Mansa Devi Mandir, Solan",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Solan",
+			"address": "Solan, Himachal Pradesh, India"
+		},
+		{
+			"slug": "shri-jwala-ji-mandir-kangra",
+			"name": "Shri Jwala Ji Mandir, Kangra",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 42,
+			"match": "1005",
+			"address": "1005, Jawala Ji Temple Rd, Kohala, Jawalamukhi, Himachal Pradesh 176031, India"
+		},
+		{
+			"slug": "shri-kali-devi-mandir-patiala",
+			"name": "Shri Kali Devi Mandir, Patiala",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "89PV+FMG",
+			"address": "89PV+FMG, Manjit Nagar, Sidhu Colony, Patiala, Punjab 147001, India"
+		},
+		{
+			"slug": "durgiana-temple-amritsar",
+			"name": "Durgiana Temple, Amritsar",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "near",
+			"address": "near, Hathi Gate Chowk, near Durgiana Mandir, opp. golbagh, Hathi Gate, Goal Bagh, Amritsar, Punjab 143001, India"
+		},
+		{
+			"slug": "shri-chintpurni-devi-mandir-una",
+			"name": "Shri Chintpurni Devi Mandir, Una",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Chintpurni",
+			"address": "Chintpurni, Himachal Pradesh 177110, India"
+		},
+		{
+			"slug": "jagat-mandir-udaipur",
+			"name": "Jagat Mandir, Udaipur",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "HMHW+V5F",
+			"address": "HMHW+V5F, Sindhi Bazar Rd, Old City, Bapu Bazar, Nada Khada, Udaipur, Rajasthan 313001, India"
+		},
+		{
+			"slug": "kumbha-shyam-temple-nathdwara",
+			"name": "Kumbha Shyam Temple, Nathdwara",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Nathdwara",
+			"address": "Nathdwara, Rajasthan 313301, India"
+		},
+		{
+			"slug": "moti-dungri-temple-jaipur",
+			"name": "Moti Dungri Temple, Jaipur",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "shrinathji-temple-nathdwara",
+			"name": "Shrinathji Temple, Nathdwara",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "NH 8",
+			"address": "NH 8, Shiv Nagar, Nathdwara, Rajasthan 313301, India"
+		},
+		{
+			"slug": "birla-mandir-jaipur",
+			"name": "Birla Mandir, Jaipur",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "Jawahar Lal Nehru Marg",
+			"address": "Jawahar Lal Nehru Marg, Tilak Nagar, Jaipur, Rajasthan 302022, India"
+		},
+		{
+			"slug": "laxmi-narayan-temple-pushkar",
+			"name": "Laxmi Narayan Temple, Pushkar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Pushkar",
+			"address": "Pushkar, Rajasthan 305022, India"
+		},
+		{
+			"slug": "ujjayini-mahakaleshwar-temple-ujjain",
+			"name": "Ujjayini Mahakaleshwar Temple, Ujjain",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 42,
+			"match": "Jaisinghpura",
+			"address": "Jaisinghpura, Ujjain, Madhya Pradesh 456006, India"
+		},
+		{
+			"slug": "sanganer-jain-temple-jaipur",
+			"name": "Sanganer Jain Temple, Jaipur",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "jain-temple-ranakpur",
+			"name": "Jain Temple, Ranakpur",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 40,
+			"match": "Ranakpur Road",
+			"address": "Ranakpur Rd, Desuri, Sadri, Ranakpur, Rajasthan 306707, India"
+		},
+		{
+			"slug": "pemayangtse-monastery-pelling",
+			"name": "Pemayangtse Monastery, Pelling",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "namchi-monastery-namchi",
+			"name": "Namchi Monastery, Namchi",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Namchi",
+			"address": "Namchi, Sikkim 737126, India"
+		},
+		{
+			"slug": "khecheopalri-lake-temple-khecheopalri",
+			"name": "Khecheopalri Lake Temple, Khecheopalri",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "rumtek-monastery-upper-dzongu",
+			"name": "Rumtek Monastery, Upper Dzongu",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Rumtek",
+			"address": "Rumtek, Sikkim 737135, India"
+		},
+		{
+			"slug": "enchey-monastery-gangtok",
+			"name": "Enchey Monastery, Gangtok",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "tashiding-monastery-tashiding",
+			"name": "Tashiding Monastery, Tashiding",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "madurai-meenakshi-amman-temple-madurai",
+			"name": "Madurai Meenakshi Amman Temple, Madurai",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "Madurai Main",
+			"address": "Madurai Main, Madurai, Tamil Nadu 625001, India"
+		},
+		{
+			"slug": "tiruvannamalai-arunachaleswarar-temple-tiruvannamalai",
+			"name": "Tiruvannamalai Arunachaleswarar Temple, Tiruvannamalai",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Pavazhakundur",
+			"address": "Pavazhakundur, Tiruvannamalai, Tamil Nadu 606601, India"
+		},
+		{
+			"slug": "tirupati-venkateswara-temple-tirupati",
+			"name": "Tirupati Venkateswara Temple, Tirupati",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "chidambaram-nataraja-temple-chidambaram",
+			"name": "Chidambaram Nataraja Temple, Chidambaram",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Chidambaram",
+			"address": "Chidambaram, Tamil Nadu 608001, India"
+		},
+		{
+			"slug": "srirangam-ranganathaswamy-temple-srirangam",
+			"name": "Srirangam Ranganathaswamy Temple, Srirangam",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 110,
+			"match": "Srirangam",
+			"address": "Srirangam, Tiruchirappalli, Tamil Nadu 620006, India"
+		},
+		{
+			"slug": "kanchipuram-varadaraja-perumal-temple-kanchipuram",
+			"name": "Kanchipuram Varadaraja Perumal Temple, Kanchipuram",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "RP9F+PWJ",
+			"address": "RP9F+PWJ, W Mada St, Nethaji Nagar, Kanchipuram, Nattapettai, Tamil Nadu 631501, India"
+		},
+		{
+			"slug": "sri-laxmi-narasimha-swamy-temple-yadagirigutta",
+			"name": "Sri Laxmi Narasimha Swamy Temple, Yadagirigutta",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "Yadadri Temple 1st Ghat Road",
+			"address": "Yadadri Temple 1st Ghat Rd, Gandhi Nagar, Yadagirigutta, Telangana 508115, India"
+		},
+		{
+			"slug": "sri-mahankali-temple-secunderabad",
+			"name": "Sri Mahankali Temple, Secunderabad",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "FM26+HQ7",
+			"address": "FM26+HQ7, Yamnampet, Secunderabad, Telangana 501302, India"
+		},
+		{
+			"slug": "sri-raja-rajeshwara-swamy-temple-vemulawada",
+			"name": "Sri Raja Rajeshwara Swamy Temple, Vemulawada",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "Rajanna",
+			"address": "Rajanna, 7/8/61, Gandhi Nagar, Gandi Nagar, Sircilla, Vemulawada, Telangana 505302, India"
+		},
+		{
+			"slug": "sri-kaleswaram-temple-karimnagar",
+			"name": "Sri Kaleswaram Temple, Karimnagar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Karimnagar",
+			"address": "Karimnagar, Telangana, India"
+		},
+		{
+			"slug": "sri-venkateswara-swamy-temple-hyderabad",
+			"name": "Sri Venkateswara Swamy Temple, Hyderabad",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "F8VF+GH7",
+			"address": "F8VF+GH7, Manjeera Rd, Indira Nagar, Chanda Nagar, Hyderabad, Telangana 500050, India"
+		},
+		{
+			"slug": "sri-durgamamba-temple-khammam",
+			"name": "Sri Durgamamba Temple, Khammam",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Sri Suvarchala Sahitha Hanuman Devalayam 🚩",
+			"address": "mahabubabad cross road,dsp office Yellandu ఖమ్మం Telangana 507123 India, Mahabubabad - Yellandu Rd, Yellandu, Telangana 507124"
+		},
+		{
+			"slug": "sri-yadadri-lakshmi-narasimha-swamy-temple-yadadri-bhuvanagiri",
+			"name": "Sri Yadadri Lakshmi Narasimha Swamy Temple, Yadadri Bhuvanagiri",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "Yadadri Temple 1st Ghat Road",
+			"address": "Yadadri Temple 1st Ghat Rd, Gandhi Nagar, Yadagirigutta, Telangana 508115, India"
+		},
+		{
+			"slug": "sri-mallanna-temple-medak",
+			"name": "Sri Mallanna Temple, Medak",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Medak",
+			"address": "Medak, Telangana 502110, India"
+		},
+		{
+			"slug": "sri-bhramaramba-mallikarjuna-swamy-temple-warangal",
+			"name": "Sri Bhramaramba Mallikarjuna Swamy Temple, Warangal",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "Warangal Urban Dist",
+			"address": "Warangal Urban Dist, VG8W+H92, Inavolu, Telangana 506310, India"
+		},
+		{
+			"slug": "mata-tripura-sundari-temple-udaipur",
+			"name": "Mata Tripura Sundari Temple, (Udaipur)",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "Chandrapur Colony",
+			"address": "Chandrapur Colony, Shillong - Agartala - Sabroom Rd, Dakshin Chandrapur, Uttar Chandrapur, Tripura 799013, India"
+		},
+		{
+			"slug": "krishna-temple-agartala",
+			"name": "Krishna Temple, (Agartala)",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 64,
+			"match": "Ramakrishna Math and Mission",
+			"address": "P.O. Viveknagar (near Amtali Bazar) Agartala, West Tripura, Tripura 799130 India, Amtali, Agartala, Madhupur, Tripura 799130"
+		},
+		{
+			"slug": "shiva-temple-agartala",
+			"name": "Shiva Temple, (Agartala)",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "V822+X97",
+			"address": "V822+X97, Indranagar, Agartala, Tripura 799006, India"
+		},
+		{
+			"slug": "durga-temple-agartala",
+			"name": "Durga Temple, (Agartala)",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Baidyermura , Durga Mandir, দূর্গা মন্দির, বৈদ্যের মুড়া India",
+			"address": "G8JF+9H2 Baidyer mura, Kemtali, Melaghar, Paschim Nalchar, Tripura 799115"
+		},
+		{
+			"slug": "ujjayanta-temple-udaipur",
+			"name": "Ujjayanta Temple, (Udaipur)",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "ram-temple-agartala",
+			"name": "Ram Temple, (Agartala)",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 64,
+			"match": "Ramakrishna Math and Mission",
+			"address": "P.O. Viveknagar (near Amtali Bazar) Agartala, West Tripura, Tripura 799130 India, Amtali, Agartala, Madhupur, Tripura 799130"
+		},
+		{
+			"slug": "badrinath-temple-badrinath-uttarakhand",
+			"name": "Badrinath Temple, Badrinath, Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "Badri to Mata Murti Road",
+			"address": "Badri to Mata Murti road, Badrinath, Uttarakhand 246422, India"
+		},
+		{
+			"slug": "dakshineswar-kali-temple-kolkata-west-bengal",
+			"name": "Dakshineswar Kali Temple, Kolkata, West Bengal",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Dakshineswar",
+			"address": "Dakshineswar, Kolkata, West Bengal 700035, India"
+		},
+		{
+			"slug": "haridwar-mansarovar-temple-haridwar-uttarakhand",
+			"name": "Haridwar Mansarovar Temple, Haridwar, Uttarakhand",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "kedarnath-temple-kedarnath-uttarakhand",
+			"name": "Kedarnath Temple, Kedarnath, Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Kedarnath",
+			"address": "Kedarnath, Uttarakhand 246445, India"
+		},
+		{
+			"slug": "madurai-meenakshi-amman-temple-madurai-tamil-nadu",
+			"name": "Madurai Meenakshi Amman Temple, Madurai, Tamil Nadu",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "Madurai Main",
+			"address": "Madurai Main, Madurai, Tamil Nadu 625001, India"
+		},
+		{
+			"slug": "padmanabhaswamy-temple-thiruvananthapuram-kerala",
+			"name": "Padmanabhaswamy Temple, Thiruvananthapuram, Kerala",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 42,
+			"match": "West Nada",
+			"address": "West Nada, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Kerala 695023, India"
+		},
+		{
+			"slug": "ram-janmabhoomi-temple-ayodhya-uttar-pradesh",
+			"name": "Ram Janmabhoomi Temple, Ayodhya, Uttar Pradesh",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Ayodhyawalepremi Uttar Pradesh India",
+			"address": "Q5RX+PQ4, Ayodhya - Faizabad Rd, Ram Nagar, Ayodhya, Uttar Pradesh 224123"
+		},
+		{
+			"slug": "srirangam-ranganathaswamy-temple-srirangam-tamil-nadu",
+			"name": "Srirangam Ranganathaswamy Temple, Srirangam, Tamil Nadu",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 110,
+			"match": "Srirangam",
+			"address": "Srirangam, Tiruchirappalli, Tamil Nadu 620006, India"
+		},
+		{
+			"slug": "akshardham-temple-new-delhi-delhi",
+			"name": "Akshardham Temple, New Delhi, Delhi",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "NH 24",
+			"address": "NH 24, Pramukh Swami Maharaj Marg, Pandav Nagar, New Delhi, Delhi, 110092, India"
+		},
+		{
+			"slug": "golden-temple-amritsar-punjab",
+			"name": "Golden Temple, Amritsar, Punjab",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 72,
+			"match": "Amritsar",
+			"address": "Atta Mandi, Katra Ahluwalia, Amritsar, Amritsar Cantt., Punjab 143006, India"
+		},
+		{
+			"slug": "konark-sun-temple-konark-odisha",
+			"name": "Konark Sun Temple, Konark, Odisha",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Konark",
+			"address": "Konark, Odisha 752111, India"
+		},
+		{
+			"slug": "puri-jagannath-temple-puri-odisha",
+			"name": "Puri Jagannath Temple, Puri, Odisha",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Puri",
+			"address": "Puri, Odisha 752001, India"
+		},
+		{
+			"slug": "vaishno-devi-temple-katra-jammu-and-kashmir",
+			"name": "Vaishno Devi Temple, Katra, Jammu and Kashmir",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "kashi-vishwanath-temple-varanasi-uttar-pradesh",
+			"name": "Kashi Vishwanath Temple, Varanasi, Uttar Pradesh",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 102,
+			"match": "Varanasi",
+			"address": "Lahori Tola, Varanasi, Uttar Pradesh 221001, India"
+		},
+		{
+			"slug": "somnath-temple-prabhas-patan-gujarat",
+			"name": "Somnath Temple, Prabhas Patan, Gujarat",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "mahabodhi-temple-bodh-gaya-bihar",
+			"name": "Mahabodhi Temple, Bodh Gaya, Bihar",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 72,
+			"match": "Bodh Gaya",
+			"address": "Bodh Gaya, Bihar 824231, India"
+		},
+		{
+			"slug": "birla-mandir-kolkata-west-bengal",
+			"name": "Birla Mandir, Kolkata, West Bengal",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 42,
+			"match": "29",
+			"address": "29, Ashutosh Chowdary Ave, Ballygunge, Kolkata, West Bengal 700019, India"
+		},
+		{
+			"slug": "badrinath-temple-badrinath-uttarakhand-2",
+			"name": "Badrinath Temple, (Badrinath), Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "Badri to Mata Murti Road",
+			"address": "Badri to Mata Murti road, Badrinath, Uttarakhand 246422, India"
+		},
+		{
+			"slug": "yamunotri-temple-yamunotri-uttarakhand",
+			"name": "Yamunotri Temple, (Yamunotri), Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "XFX7+V5V",
+			"address": "XFX7+V5V, Yamunotri, Uttarakhand 249141, India"
+		},
+		{
+			"slug": "rishikesh-rishikesh-uttarakhand",
+			"name": "Rishikesh, (Rishikesh), Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 88,
+			"match": "Rishikesh",
+			"address": "Rishikesh, Uttarakhand, India"
+		},
+		{
+			"slug": "mansa-devi-temple-chandigarh-punjab",
+			"name": "Mansa Devi Temple, (Chandigarh), Punjab",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Mansa",
+			"address": "Mansa, Punjab 151505, India"
+		},
+		{
+			"slug": "gangotri-temple-gangotri-uttarakhand",
+			"name": "Gangotri Temple, (Gangotri), Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 66,
+			"match": "XWVR+QF7",
+			"address": "XWVR+QF7, Gangotri, Uttarakhand 249136, India"
+		},
+		{
+			"slug": "hemkund-sahib-gopeshwar-uttarakhand",
+			"name": "Hemkund Sahib, (Gopeshwar), Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Hemkund",
+			"address": "Hemkund, Uttarakhand 246443, India"
+		},
+		{
+			"slug": "haridwar-dham-haridwar-uttarakhand",
+			"name": "Haridwar Dham, (Haridwar), Uttarakhand",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "kedarnath-temple-kedarnath-uttarakhand-2",
+			"name": "Kedarnath Temple, (Kedarnath), Uttarakhand",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Kedarnath",
+			"address": "Kedarnath, Uttarakhand 246445, India"
+		},
+		{
+			"slug": "belur-math-howrah-west-bengal",
+			"name": "Belur Math, Howrah, West Bengal",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 94,
+			"match": "Belur Math Road",
+			"address": "Belur Math Rd, Belur Math, Howrah, West Bengal 711202, India"
+		},
+		{
+			"slug": "kalighat-temple-kolkata-west-bengal",
+			"name": "Kalighat Temple, Kolkata, West Bengal",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Kalighat",
+			"address": "Anami Sangha, Kalighat, Kolkata, West Bengal 700026, India"
+		},
+		{
+			"slug": "jagannath-temple-puri-odisha",
+			"name": "Jagannath Temple, Puri, Odisha",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 92,
+			"match": "Puri",
+			"address": "Puri, Odisha 752001, India"
+		},
+		{
+			"slug": "tarakeswar-temple-hooghly-west-bengal",
+			"name": "Tarakeswar Temple, Hooghly, West Bengal",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "V2P9+42Q",
+			"address": "V2P9+42Q, Mandir Rd, Tarkeshwar, Bhanjipur, West Bengal 712410, India"
+		},
+		{
+			"slug": "dakshineswar-kali-temple-kolkata-west-bengal-2",
+			"name": "Dakshineswar Kali Temple, Kolkata, West Bengal",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Dakshineswar",
+			"address": "Dakshineswar, Kolkata, West Bengal 700035, India"
+		},
+		{
+			"slug": "kamakhya-temple-guwahati-assam",
+			"name": "Kamakhya Temple, Guwahati, Assam",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 116,
+			"match": "Kamakhya",
+			"address": "Kamakhya, Guwahati, Assam 781010, India"
+		},
+		{
+			"slug": "ramakrishna-mission-ashram-port-blair",
+			"name": "Ramakrishna Mission Ashram, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "JPCG+M4H",
+			"address": "JPCG+M4H, NH 223, Prothrapur, Sri Vijaya Puram, Andaman and Nicobar Islands 744105, India"
+		},
+		{
+			"slug": "kali-temple-port-blair",
+			"name": "Kali Temple, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "JPG8+5G6",
+			"address": "JPG8+5G6, VIP Rd, Pathergudda, Pahargaon, Sri Vijaya Puram, Andaman and Nicobar Islands 744103, India"
+		},
+		{
+			"slug": "hanuman-temple-port-blair",
+			"name": "Hanuman Temple, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "MP9R+2WG",
+			"address": "MP9R+2WG, Aberdeen Bazar, Rajiv Gandhi Nagar, Sri Vijaya Puram, Andaman and Nicobar Islands 744101, India"
+		},
+		{
+			"slug": "sai-baba-temple-port-blair",
+			"name": "Sai Baba Temple, Port Blair",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "jagannath-temple-port-blair",
+			"name": "Jagannath Temple, Port Blair",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "durga-temple-port-blair",
+			"name": "Durga Temple, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "MP3V+29H",
+			"address": "MP3V+29H, Nayagaon, Sri Vijaya Puram, Andaman and Nicobar Islands 744106, India"
+		},
+		{
+			"slug": "murugan-temple-port-blair",
+			"name": "Murugan Temple, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "MP7W+7H2",
+			"address": "MP7W+7H2, RGT Rd, Shadipur, Sri Vijaya Puram, Andaman and Nicobar Islands 744101, India"
+		},
+		{
+			"slug": "krishna-temple-port-blair",
+			"name": "Krishna Temple, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Sree Gokula Krishnan Temple",
+			"address": "MP8Q+VG4, MA Rd, opp. Indian Overseak Bank, Phoenix Bay, Sri Vijaya Puram, Andaman and Nicobar Islands 744101"
+		},
+		{
+			"slug": "shiva-temple-port-blair",
+			"name": "Shiva Temple, Port Blair",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "MP9R+G2C",
+			"address": "MP9R+G2C, Gurudwara Ln, Aberdeen Bazar, Aberdeen, Sri Vijaya Puram, Andaman and Nicobar Islands 744101, India"
+		},
+		{
+			"slug": "shri-ram-mandir-daman-daman-and-diu",
+			"name": "Shri Ram Mandir, Daman, Daman and Diu",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Laxmi Nagar",
+			"address": "Laxmi Nagar, Dalwada, Bhimpore, Marwad, Dadra and Nagar Haveli and Daman and Diu 396210, India"
+		},
+		{
+			"slug": "shri-mahadev-mandir-silvassa-dadra-and-nagar-haveli",
+			"name": "Shri Mahadev Mandir, Silvassa, Dadra and Nagar Haveli",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 74,
+			"match": "Silvassa",
+			"address": "Silvassa, Dadra and Nagar Haveli and Daman and Diu, India"
+		},
+		{
+			"slug": "shri-sai-baba-mandir-diu-daman-and-diu",
+			"name": "Shri Sai Baba Mandir, Diu, Daman and Diu",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "PX7J+P74",
+			"address": "PX7J+P74, Diu, Dadra and Nagar Haveli and Daman and Diu 362520, India"
+		},
+		{
+			"slug": "shri-hanuman-mandir-diu-daman-and-diu",
+			"name": "Shri Hanuman Mandir, Diu, Daman and Diu",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Diu",
+			"address": "Diu, Dadra and Nagar Haveli and Daman and Diu 362520, India"
+		},
+		{
+			"slug": "shri-ramnath-mandir-silvassa-dadra-and-nagar-haveli",
+			"name": "Shri Ramnath Mandir, Silvassa, Dadra and Nagar Haveli",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Silvassa",
+			"address": "Silvassa, Dadra and Nagar Haveli and Daman and Diu, India"
+		},
+		{
+			"slug": "shri-lakshmi-narayan-mandir-daman-daman-and-diu",
+			"name": "Shri Lakshmi Narayan Mandir, Daman, Daman and Diu",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "CV64+GJ3",
+			"address": "CV64+GJ3, Medi Falia, Varkund Village, Daman, Varkund, Dadra and Nagar Haveli and Daman and Diu 396210, India"
+		},
+		{
+			"slug": "androth-sri-krishna-temple-androth-lakshadweep",
+			"name": "Androth Sri Krishna Temple, Androth, Lakshadweep",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "kadmat-devi-temple-kadmat-lakshadweep",
+			"name": "Kadmat Devi Temple, Kadmat, Lakshadweep",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Kadmat",
+			"address": "Kadmat, Lakshadweep 682556, India"
+		},
+		{
+			"slug": "kiltan-devi-temple-kiltan-lakshadweep",
+			"name": "Kiltan Devi Temple, Kiltan, Lakshadweep",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "suheli-devi-temple-suheli-lakshadweep",
+			"name": "Suheli Devi Temple, Suheli, Lakshadweep",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "bangaram-devi-temple-bangaram-lakshadweep",
+			"name": "Bangaram Devi Temple, Bangaram, Lakshadweep",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "minicoy-devi-temple-minicoy-lakshadweep",
+			"name": "Minicoy Devi Temple, Minicoy, Lakshadweep",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 50,
+			"match": "Sree Krishna Temple",
+			"address": "Near Indian Reserve Battalion (IRB), 73J3+9WM, Minicoy P.O., Lakshadweep 682559"
+		},
+		{
+			"slug": "kavaratti-sri-krishna-temple-kavaratti-lakshadweep",
+			"name": "Kavaratti Sri Krishna Temple, Kavaratti, Lakshadweep",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 100,
+			"match": "Sree Krishna Temple",
+			"address": "Near Indian Reserve Battalion (IRB), 73J3+9WM, Minicoy P.O., Lakshadweep 682559"
+		},
+		{
+			"slug": "agatti-devi-temple-agatti-lakshadweep",
+			"name": "Agatti Devi Temple, Agatti, Lakshadweep",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "arulmigu-kapaleeswarar-temple-pondicherry-puducherry",
+			"name": "Arulmigu Kapaleeswarar Temple, Pondicherry, Puducherry",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Puducherry",
+			"address": "Puducherry, India"
+		},
+		{
+			"slug": "arulmigu-sri-vailankanni-mariamman-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Vailankanni Mariamman Temple, Pondicherry, Puducherry",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "WQRQ+G66",
+			"address": "WQRQ+G66, School Street, T, Mettupalayam, kottapakkathuveli, virattikuppam, Puducherry, Tamil Nadu 605009, India"
+		},
+		{
+			"slug": "arulmigu-sri-venugopalaswamy-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Venugopalaswamy Temple, Pondicherry, Puducherry",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 46,
+			"match": "22",
+			"address": "22, Muthiah Mudaliar St, Depasimpet, Puducherry, 605003, India"
+		},
+		{
+			"slug": "arulmigu-manakula-vinayagar-temple-pondicherry-puducherry",
+			"name": "Arulmigu Manakula Vinayagar Temple, Pondicherry, Puducherry",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "WRPM+8F7",
+			"address": "WRPM+8F7, R. Manakkula Vinayagar St, White Town, Puducherry, 605001, India"
+		},
+		{
+			"slug": "arulmigu-sri-veeraraghava-perumal-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Veeraraghava Perumal Temple, Pondicherry, Puducherry",
+			"status": "coordinate_matched",
+			"confidence": "medium",
+			"score": 52,
+			"match": "WRRJ+924",
+			"address": "WRRJ+924, Mahatma Gandhi Rd, Heritage Town, Puducherry, 605001, India"
+		},
+		{
+			"slug": "arulmigu-sri-raja-rajeshwari-amman-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Raja Rajeshwari Amman Temple, Pondicherry, Puducherry",
+			"status": "no_confident_google_match"
+		},
+		{
+			"slug": "arulmigu-sri-yoga-narasimha-swamy-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Yoga Narasimha Swamy Temple, Pondicherry, Puducherry",
+			"status": "coordinate_matched",
+			"confidence": "high",
+			"score": 60,
+			"match": "Puducherry",
+			"address": "Puducherry, India"
+		}
+	]
+}

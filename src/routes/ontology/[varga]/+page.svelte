@@ -48,7 +48,7 @@
 		<div class="stdbox mainarea stdpad header-margin is-last">
 			<div class="labelbox title-area">
 				<Crumb showT={true} title={data.ontology.varga.title} showD={true} desc={data.ontology.varga.description} showRow={true}>
-				<div class="row wrap cgap8 rgap8">
+				<div class="row wrap cgap4 rgap4">
 					{#each countEntries as [type, count]}
 						<p class="tag-pill tt-u">{type.replaceAll('-', ' ')}: {count}</p>
 					{/each}
@@ -57,7 +57,7 @@
 			</div>
 			<div class="box">
 				<p class="tag-text grey tt-u">Matched Concepts</p>
-				<div class="row wrap cgap8 rgap8">
+				<div class="row wrap cgap4 rgap4">
 					{#each data.ontology.concepts as concept (concept.id)}
 						<a class="tag-pill tt-u blank" href={`/concepts/${concept.slug}`}>{concept.title}</a>
 					{/each}
@@ -75,9 +75,9 @@
 							target={item.isExternal ? '_blank' : undefined}
 							rel={item.isExternal ? 'noreferrer' : undefined}
 						>
-							<div class="row wrap ycenter cgap8 rgap8">
+							<div class="row wrap ycenter cgap4 rgap4">
 								<p class="tag-pill tt-u">{item.node.type.replaceAll('-', ' ')}</p>
-								<p class="tag-pill tt-u">{Math.round(item.classification.confidence * 100)}%</p>
+								<p class="tag-pill accented tt-u">{Math.round(item.classification.confidence * 100)}%</p>
 							</div>
 							<p class="w500 tight">{item.node.title}</p>
 							<p class="descriptor-text blue tight">{item.classification.reason}</p>

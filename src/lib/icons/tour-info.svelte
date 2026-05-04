@@ -8,8 +8,8 @@ svg
 	transition: transform 0.2s ease
 	fill: #FFF
 	@media screen and (min-width: 1025px)
-		height: 48px
-		width: 48px
-		fill: var(--color-theme-2)
+		height: 32px
+		width: 32px
+		fill: #673C4F
 
 </style>

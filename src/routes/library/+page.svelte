@@ -96,11 +96,11 @@
 			<Title text="Bharata1000" />
 			<div class="grid two tightrows">
 				<p>
-					Bharata1000 is a curation of 1000 books to learn and understand itihasa, Bharata, and Dharma. These books are not available here at the library, but several that are in the public domain are linked to their sources, and for those in copyright we label so. The idea here is to provide rampways and learning paths for those looking to study deeper into civilizational and cultural Bharata.
-					Presenting a work in this list is not an endorsement of its contents -
+					Bharata1000 is a curation of 1000 books to learn and understand itihasa, Bharata, and Dharma. The idea here is to provide rampways and learning paths for those looking to study deeper into civilizational and cultural Bharata.
+					Presenting a work in this list is not an endorsement of its contents, for many are listed to inform the reader's shatrubodha, and expose them to problematic but well-known paradigms for India and Dharma.
 				</p>
 				<p>
-					...for many are listed to inform the reader's shatrubodha, and expose them to problematic but well-known paradigms for India and Dharma. For example, there is no good English language translation of the Rigveda, and problems abound in those that are available. But if Ralph Griffith's work shows how the early European mind understood the text, and how they read it, then the more recent
+					For example, there is no good English language translation of the Rigveda, and problems abound in those that are available. But if Ralph Griffith's work shows how the early European mind understood the text, and how they read it, then the more recent
 					translation by Jamison and Brereton evidences the interpretations that are being pushed now.
 				</p>
 			</div>
@@ -135,11 +135,6 @@
 							{/if}
 							</div>
 							<p class="descriptor-text grey tight">{item.description}</p>
-							{#if item.link === "In Copyright" || item.link === null}
-							<p class="tag-text tt-u w500 themed">IN COPYRIGHT</p>
-							{:else}
-							<a class="tag-text tt-u linked" href={item.link} target="_blank" rel="noreferrer"><b>See Text →</b></a>
-							{/if}
 						</div>
 					{/each}
 				</div>

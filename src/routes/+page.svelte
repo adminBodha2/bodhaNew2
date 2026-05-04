@@ -53,7 +53,7 @@
 		<Title text="Latest at Bodha"/>
 		<div class="grid fitted-four tight">
 			{#each latestItems as item}
-				<a class="blank labelbox card-padded and-bordered" href={item.link}>
+				<a class="blank labelbox card-padded more-mob and-bordered glass-3" href={item.link}>
 					<p class="card-title tight source-serif a-hover">{item.title}</p>
 					<p class="descriptor-text grey tight borderbot pbot8">{item.description}</p>
 					<p class="tag-pill tt-u self-bottom">{item.badge}</p>
@@ -76,7 +76,7 @@
 					<div class="post-card box glass-2">
 						<div class="row post-metadata ycenter">
 							{#if item.meta.tags && item.meta.tags.length > 0}
-								<div class="row wrap all-tags">
+								<div class="row wrap cgap4 all-tags">
 									{#each item.meta.tags as tag}
 										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
 									{/each}
@@ -110,7 +110,7 @@
 					<div class="box labelbox">
 						<p class="card-title source-serif">{pub.title}</p>
 						<p class="descriptor-text grey">{pub.desc}</p>
-						<div class="row wrap cgap16 rgap8 ptop8">
+						<div class="row wrap cgap8 rgap8 ptop8">
 							{#each pub.links as link}
 								<a class="small-button row ycenter cgap8" href={link.href} target="_blank" rel="noreferrer"
 									>{link.label}
@@ -200,20 +200,20 @@
 		.imgbox
 			height: 200px
 		.labelbox
-			padding: 0 1rem 1.5rem 1rem
+			padding: 1rem 2rem 2rem 2rem
 
 .post-card
 	border-radius: 4px
 	.title-desc
 		padding: 1rem
 	.post-metadata
-		padding: 0.5rem
+		padding: 1rem 0.5rem
 	.foot
 		margin-top: auto
 		border-top: var(--border-dark)
 		padding: 1rem
 	a.imgbox
-		height: 160px
+		height: 240px
 		padding: 0 0.5rem
 		img
 			object-fit: cover

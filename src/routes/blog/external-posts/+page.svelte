@@ -130,7 +130,7 @@ import Crumb from '$lib/comps/breadcrumb.svelte';
 					<p class="tag-text blue tt-u">{post.platform}</p>
 					<p class="paragraph-text tight bold">{post.title}</p>
 					<p class="descriptor-text grey tight">{post.description}</p> 
-					<div class="row wrap self-bottom">
+					<div class="row wrap self-bottom rgap4 cgap4">
 						{#each post.tags as tag}
 							{#if tag !== ""}
 							<p class="tag-pill tt-u">{tag.replaceAll('-',' ')}</p>

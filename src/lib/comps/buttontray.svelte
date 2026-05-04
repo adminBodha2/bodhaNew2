@@ -1,4 +1,10 @@
 <script lang="ts">
+
+	import { iW } from '$lib/utils/globalstores'
+	import { clickOutsideAction } from '$lib/utils/clickoutside';
+	import { fly } from 'svelte/transition'
+	import { quintIn, quadOut } from 'svelte/easing'
+	import BlogMenu from '$lib/icons/blog-menu.svelte';
 	// 1. Updated Interface to accept your 'items' property
 	interface Option {
 		label: string;
@@ -14,7 +20,7 @@
 	} = $props();
 
 	let selectedIndex = $state(0);
-	
+	let mobileMenuOpen = $state(false);	
 	// 2. Math for the grid layout
 	let mobileCols = $derived(Math.ceil(options.length / 2));
 	
@@ -26,11 +32,47 @@
 	function handleSelect(index: number) {
 		selectedIndex = index;
 		onSelect(index);
+		if ($iW && mobileMenuOpen) {
+			mobileMenuOpen = false;
+		}
 	}
+
+	function closeMobileMenu() {
+		mobileMenuOpen = false;
+	}
+
+	function onWindowKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			closeMobileMenu();
+		}
+	}
+
+	$effect(() => {
+		if (mobileMenuOpen && $iW) {
+			document.body.style.overflow = 'hidden';
+		} else if (!mobileMenuOpen && $iW) {
+			document.body.style.overflow = '';
+		} else if (!$iW) {
+			document.body.style.overflow = '';
+		}
+	});
 </script>
 
+<svelte:window onkeydown={onWindowKeydown} />
+
+<div class="button-wrapper box " class:bordered={mobileMenuOpen}>
+{#if $iW}
+<button class="mobile-shelf row ycenter xleft cgap8" aria-haspopup="menu" aria-expanded={mobileMenuOpen} onclick={() => (mobileMenuOpen = !mobileMenuOpen)}>
+	<BlogMenu size="32" color="currentColor" />
+	<span class="mobile-shelf-text">Browse</span>
+</button>
+{/if}
+{#if !$iW || mobileMenuOpen}
 <div 
-	class="button-tray" 
+	class="button-tray"
+	in:fly={{ duration: 120, easing: quadOut }}
+	out:fly={{ duration: 120, easing: quintIn }}
+	use:clickOutsideAction={closeMobileMenu}
 	style:--d-col={desktopCol}
 	style:--m-row={mobileRow}
 	style:--m-col={mobileCol}
@@ -46,57 +88,83 @@
 			{option.label}
 		</button>
 	{/each}
-
 	<span class="selection"></span>
+</div>
+{/if}
 </div>
 
 <style lang="sass">
 
-.button-tray
-	--bg-color: #fff
-	--accent-color: rgb(11, 117, 223)
-	position: relative
-	display: grid
-	grid-template-columns: repeat(8, 1fr)
-	background-color: var(--color-back)
-	border-radius: 3px
-	border: 1px solid rgba(0, 0, 0, 0.1)
-	width: 100%
-	overflow: hidden
-	@media (max-width: 1024px)
-		grid-template-columns: repeat(4, 1fr)
-	button
-		all: unset
-		padding: 15px 5px
-		cursor: pointer
-		text-align: center
-		z-index: 1
-		font-weight: 500
-		font-size: 13.4px
-		text-transform: uppercase
-		transition: color 0.2s ease
-		display: flex
-		justify-content: center
-		align-items: center
-		&.active
-			color: #fff
-	.selection
-		position: absolute
-		background-color: var(--color-grey-4)
-		z-index: 0
-		top: 0
-		left: 0
-		transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s, height 0.2s
-		
-		// Desktop defaults (1 row)
-		// We use transform to move the pill. 100% = the width of the pill itself.
-		width: calc(100% / 8)
+@media screen and (max-width: 1024px)
+	.button-wrapper
+		position: relative
 		height: 100%
-		transform: translateX(calc(100% * var(--d-col)))
+		background: var(--color-back)
+		z-index: 1
+		&.bordered
+			background: var(--color-back)
+		.button-tray
+			position: absolute
+			border: 1px solid #d7d7d7
+			width: 100%
+			left: 0
+			top: 3rem
+			background: var(--color-back)
+			box-shadow: 2px 3px 7px rgba(0,0,0,0.2)
 
-		@media (max-width: 1024px)
-			width: calc(100% / 4)
-			height: 50%
-			// Move X by column and Y by row
-			transform: translate(calc(100% * var(--m-col)), calc(100% * var(--m-row)))
+.mobile-shelf
+	background: var(--color-theme-5)
+	border: 1px solid #d7d7d7
+	padding: 0.4rem 0.5rem
+	border-radius: 5px
+	width: 100%
+	.mobile-shelf-text
+		font-size: 1.2rem
+	@media (min-width: 1025px)
+		display: none
+
+.button-tray
+	@media screen and (max-width: 1024px)
+		display: flex
+		flex-direction: column
+		button
+			font-size: 1.1rem
+			padding: 1rem 0.75rem
+			text-align: left
+			font-weight: 450
+			background: none
+			border-top: none
+			border-left: none
+			border-right: none
+			border-bottom: var(--border-main)
+	@media (min-width: 1025px)
+		--bg-color: #fff
+		--accent-color: rgb(11, 117, 223)
+		position: relative
+		display: grid
+		grid-template-columns: repeat(8, 1fr)
+		background-color: var(--color-back)
+		border-radius: 3px
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		width: 100%
+		overflow: hidden
+		button
+			all: unset
+			padding: 15px 5px
+			cursor: pointer
+			text-align: center
+			font-weight: 500
+			font-size: 13.4px
+			text-transform: uppercase
+			transition: all 0.17s ease
+			display: flex
+			justify-content: center
+			align-items: center
+			&:hover
+				background: var(--color-grey-3)
+				color: #FFFFFF
+			&.active
+				background: var(--color-grey-4)
+				color: #FFFFFF
+
 </style>

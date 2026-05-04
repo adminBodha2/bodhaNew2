@@ -6,7 +6,7 @@
 	import tourStepsJson from '$lib/serving/site-tour.json';
 	import { fly } from 'svelte/transition';
 	import { dismissSiteTour, iW, isLocalSiteTourPreview, loadSiteTourState, resetSiteTour, saveSiteTourProgress, saveSiteTourState, SITE_TOUR_OPEN_EVENT, SITE_TOUR_VERSION, recordSiteVisit, isNewVisitor, type SiteTourId } from '$lib/utils/globalstores';
-	import Icon from '$lib/icons/tour-info.svelte';
+	import Icon from '$lib/icons/tour-drawer.svelte';
 	import Menu from '$lib/icons/menu.svelte'
 	import Close from '$lib/icons/close.svelte';
 
@@ -564,12 +564,14 @@ button.blank.with-tooltip
 		right: 0
 		top: 72px
 		height: calc(100vh - 72px)
-		width: 64px
-		background: rgba(255,255,255,0.3)
+		width: 48px
+		background: var(--color-back)
 		border-left: var(--border-main)
 		backdrop-filter: blur(10px)
+		transition: width 0.15s ease
 		&:hover
-			background: var(--color-stone)
+			background: var(--color-stone-3)
+			width: 64px
 
 .tour-card
 	z-index: 900

@@ -20,7 +20,7 @@
 	<div class="bob">
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="name tt-l">
+	<h2 class="header-2 name tt-l">
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style="animation-delay: {i * 0.04}s">{char}</span>
 		{/each}
@@ -33,16 +33,14 @@ h2
 	font-variant: small-caps
 	font-weight: 500
 
-.trigger
-	@media screen and (max-width: 1024px)
-		margin-left: -8px
-
 .name
 	.char-0, .char-1, .char-2, .char-3, .char-4, .char-5, .char-6, .char-7, .char-8, .char-9, .char-10, .char-11, .char-12, .char-13
 		color: var(--lgrey)
 
 .bob
 	animation: bob 2s ease-in-out infinite
+	@media screen and (max-width: 1024px)
+		display: none
 
 @keyframes bob
 	0%

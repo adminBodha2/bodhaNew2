@@ -75,7 +75,7 @@
 							<p class="descriptor-text grey tight">{item.summary}</p>
 							<p class="citation-big tt-u lgrey">{item.author}</p>
 							{#if item.tags && item.tags.length > 0}
-								<div class="row wrap self-bottom">
+								<div class="row wrap self-bottom cgap4 rgap4">
 									{#each item.tags as tag}
 										<p class="tag-pill tt-u">{tag.replaceAll('-',' ')}</p>
 									{/each}
@@ -88,7 +88,7 @@
 							<p class="descriptor-text grey tight">{item.summary}</p>
 							<p class="citation-big tt-u lgrey self-bottom">{item.author}</p>
 							{#if item.tags && item.tags.length > 0}
-								<div class="row wrap self-bottom">
+								<div class="row wrap self-bottom cgap4 rgap4">
 									{#each item.tags as tag}
 										<p class="tag-pill tt-u">{tag.replaceAll('-',' ')}</p>
 									{/each}

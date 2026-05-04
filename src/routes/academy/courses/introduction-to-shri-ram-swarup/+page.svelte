@@ -271,8 +271,6 @@
 				border-radius: 0
 			&:active
 				transform: scale(1.05)
-			&:hover
-				color: var(--color-back)
 
 #course-header
 	@media screen and (min-width: 1025px)
@@ -350,8 +348,8 @@
 		width: 300px
 		@media screen and (max-width: 1024px)
 			object-fit: cover
-			width: 240px
-			height: 240px
+			width: 180px
+			height: 180px
 			border-radius: 120px
 
 .all-sessions

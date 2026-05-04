@@ -1,16 +1,35 @@
 <script lang="ts">
 
-	let { children } = $props();
+	import type { Snippet } from 'svelte';
+	type Props = {
+		graphing?: boolean;
+		children?: Snippet;
+	};
+	let {
+		graphing = false,
+		children
+	}: Props = $props();
 
 </script>
 
-<div class="page-wrapper">
+<div class="page-wrapper" class:graphed={graphing}>
 	<div class="content-wrapper">
 		  {@render children?.()}
 	</div>
 </div>
 
 <style lang="sass">
+
+.page-wrapper.graphed
+	z-index: 0
+	background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
+	background-position: center center
+	@media screen and (max-width: 1024px)
+		background-size: 3rem 3rem, 3rem 3rem
+		background-image: linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px)
+	@media screen and (min-width: 1025px)
+		transition: background-position 0.1s linear
+		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
 
 .page-wrapper
 	min-height: 100vh

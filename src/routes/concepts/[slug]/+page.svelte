@@ -6,6 +6,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import Buttontray from '$lib/comps/buttontray.svelte'
+	import Dropdown from '$lib/comps/responsive-menu.svelte'
 	import { slide } from 'svelte/transition'
 	import { quartInOut, quintOut } from 'svelte/easing'
 
@@ -53,78 +54,61 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container>
+<Container graphing={true}>
 	<div class="stdbox stdpad header-margin">
 			<div class="labelbox">
-				<Crumb showT={true} title={data.concept.title}/>
+				<Crumb showT={true} title={data.concept.title} showRow={true}>
 				<p class="descriptor-text grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes. All subdomains listed here:</p>
-			{#if data.conceptTree.length > 0}
-			<div class="row wrap collage ptop16">
-				{#each data.conceptTree.slice(0, 60)  as concept, i (concept.id)}
-					<p class="descriptor-text hollow tt-u opac">{concept.title}</p>
+				</Crumb>
+			</div>
+			<div class="elembox">
+				<Buttontray 
+					options={groups} 
+					onSelect={toggleIsItem} 
+				/>
+				{#each groups as group, i (group.label)}
+					{#if i === isItem}
+						<div class="node-grid">
+							{#each group.items as item, j (item.node.id)}
+								<a
+									class="blank labelbox whitestone card-padded node-card"
+									href={item.href}
+									target={item.isExternal ? '_blank' : undefined}
+									rel={item.isExternal ? 'noreferrer' : undefined}
+									in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
+								>
+									<p class="paragraph-text w500 tight">{item.node.title}</p>
+									{#if item.node.description}
+										<p class="descriptor-text grey tight">{item.node.description}</p>
+									{/if}
+									<div class="row cgap4 rgap4 wrap ycenter self-bottom bordertop ptop8">
+										{#each item.node.tags as tag}
+											<span class="tag-pill dead tt-u">{tag.replaceAll('-',' ')}</span>
+										{/each}
+									</div>
+								</a>
+							{/each}
+						</div>
+					{/if}
 				{/each}
 			</div>
-			{/if}
-			</div>
-	</div>
-	<div class="stdbox stdpad is-last bordertop">
-	<Buttontray 
-		options={groups} 
-		onSelect={toggleIsItem} 
-	/>
-
-		{#each groups as group, i (group.label)}
-			{#if i === isItem}
-				<div class="node-grid">
-					{#each group.items as item, j (item.node.id)}
-						<a
-							class="blank labelbox whitestone card-padded node-card"
-							href={item.href}
-							target={item.isExternal ? '_blank' : undefined}
-							rel={item.isExternal ? 'noreferrer' : undefined}
-							in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
-						>
-							<p class="paragraph-text w500 tight">{item.node.title}</p>
-							{#if item.node.description}
-								<p class="descriptor-text grey tight">{item.node.description}</p>
-							{/if}
-							<div class="row wrap ycenter self-bottom">
-								{#each item.matchedConcepts as concept (concept.id)}
-									<p class="tag-pill know tt-u">{concept.title}</p>
-								{/each}
-							</div>
-						</a>
-					{/each}
-				</div>
-			{/if}
-		{/each}
 	</div>
 </Container>
 
 <style lang="sass">
 
-	.opac:nth-child(4n)
-		opacity: 0.8
-	.opac:nth-child(4n + 1)
-		opacity: 0.65
-	.opac:nth-child(4n + 2)
-		opacity: 0.5
-	.opac:nth-child(4n + 3)
-		opacity: 0.35
-	.collage
-		column-gap: 2px
+.node-grid
+	display: grid
+	grid-template-columns: 1fr
+	gap: 1px
+	background: var(--color-grey-1)
+	border: var(--border-main)
+	@media screen and (min-width: 760px)
+		grid-template-columns: repeat(2, minmax(0, 1fr))
+	@media screen and (min-width: 1180px)
+		grid-template-columns: repeat(3, minmax(0, 1fr))
 
-	.node-grid
-		display: grid
-		grid-template-columns: 1fr
-		gap: 1px
-		background: var(--color-grey-1)
-		border: var(--border-main)
-		@media screen and (min-width: 760px)
-			grid-template-columns: repeat(2, minmax(0, 1fr))
-		@media screen and (min-width: 1180px)
-			grid-template-columns: repeat(3, minmax(0, 1fr))
+.node-card
+	min-height: 100%
 
-	.node-card
-		min-height: 100%
 </style>

@@ -368,7 +368,7 @@
 						<article class="essay-holder whitestone">
 							<div class="essay-holder-left">
 								<img src={post.meta.image} alt={post.meta.title} />
-									<div class="row wrap essay-tags">
+									<div class="row wrap essay-tags rgap4 cgap4">
 										{#each post.meta.tags ?? [] as tag}
 											<a class="tag-pill tt-u" href={tagUrl(tag)}>{tag.replaceAll('-', ' ')}</a>
 										{/each}

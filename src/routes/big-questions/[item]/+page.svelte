@@ -64,7 +64,7 @@ let {
 			<div class="labelbox title-area stdpad is-first is-last">
 				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
 				{#if data.tags && data.tags.length > 0}
-					<div class="row wrap">
+					<div class="row wrap cgap4 rgap4">
 						{#each data.tags as tag}
 							<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
 						{/each}

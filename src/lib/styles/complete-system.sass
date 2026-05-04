@@ -1,0 +1,1254 @@
+// Complete custom class system assembled from vars, typography, globals, measures, and components.
+// Import this as a single foundation file when you want the core Bodha tokens, layout utilities, type rules, and reusable components.
+
+:root
+	--fontface-sans: 'Google Sans', sans-serif
+	--fontface-sans-flex: 'Google Sans Flex', sans-serif
+	--fontface-serif: 'Source Serif 4', serif
+	--fontface-serif-alt: 'EB Garamond', serif
+	--pad-std: 3rem
+	--space-1: 0.25rem
+	--space-2: 0.5rem
+	--space-3: 0.75rem
+	--space-4: 1rem
+	--space-5: 1.5rem
+	--space-6: 2rem
+	--space-7: 3rem
+	--space-8: 4rem
+	--space-9: 6.5rem
+	--space-10: 8rem
+	--radius-1: 3px
+	--radius-2: 4px
+	--radius-3: 5px
+	--radius-4: 8px
+	--radius-pill: 999px
+	--transition-fast: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
+	--transition-base: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
+	--transition-slow: all 550ms cubic-bezier(0.215, 0.610, 0.355, 1.000)
+	--cz-linear: cubic-bezier(0.250, 0.250, 0.750, 0.750)
+	--cz-ease: cubic-bezier(0.250, 0.100, 0.250, 1.000)
+	--cz-easeIn: cubic-bezier(0.420, 0.000, 1.000, 1.000)
+	--cz-easeOut: cubic-bezier(0.000, 0.000, 0.580, 1.000)
+	--cz-easeInOut: cubic-bezier(0.420, 0.000, 0.580, 1.000)
+	--cz-easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000)
+	--cz-easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	@media screen and (min-width: 1025px)
+		--pad-std: 4rem
+		--typeBase: 1.33rem
+		--typeBaseLow: 1.06rem
+		--typeScale: 1.25
+		--typeH1: 1.66rem
+		--typeH2: 2.078rem
+		--typeH3: 2.597rem
+		--typeH4: 3.247rem
+		--typeH5: 4.059rem
+		--typeH6: 5.074rem
+		--typePs: 1.164rem
+		--serif-adjust: 1.2
+		--serif-adjust-blog: 1.2
+	@media screen and (max-width: 1024px)
+		--typeBase: 1.25rem
+		--typeBaseLow: 1.06rem
+		--typeScale: 1.2
+		--typeScaleLow: 1.05
+		--typeH1: 1.5rem
+		--typeH2: 1.8rem
+		--typeH3: 2.16rem
+		--typeH4: 2.592rem
+		--typeH5: 3.110rem
+		--typeH6: 3.732rem
+		--typePs: 1.093rem
+		--serif-adjust: 1.25
+		--serif-adjust-blog: 1.1
+
+.light
+	--shadow1: 0 6px 10px rgba(0, 0, 0, 0.06)
+	--shadow2: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
+	--shadow3: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
+	--shadow7: 0 1px 2px rgba(0, 0, 0, 0.04)
+	--shadow8: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02)
+	--shadow9: 0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02)
+	--shadow10: 0 24px 48px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04)
+	--shadow-inset-1: inset 0 2px 4px rgba(0, 0, 0, 0.03)
+	--color-primary: #070707
+	--color-back: #FFFFFF
+	--color-theme: #1971c2
+	--color-theme-2: #054370
+	--color-theme-3: #014694
+	--color-theme-4: #4dabf7
+	--color-theme-5: #daf2fc
+	--color-theme-6: #f3fafd
+	--color-theme-7: #fafeff
+	--color-alt-1: #FAFAFA
+	--color-alt-2: #EFEFEF
+	--color-alt-3: #f4f4f5
+	--color-alt-4: #F8FAFC
+	--color-grey-1: #d1d1d1
+	--color-grey-2: #a7a7a7
+	--color-grey-3: #878787
+	--color-grey-4: #474747
+	--color-stone: #F9F8F6
+	--color-stone-2: #F8F7F4
+	--color-stone-3: #FBFBF9
+	--color-white: #FFFFFF
+	--color-black: #070707
+	--color-anveshi: #D3633A
+	--color-anveshi-2: #9f401d
+	--color-know: #fff8e0
+	--color-know-2: #fffbf0
+	--color-yellow: #FED766
+	--color-green: #4DA167
+	--border-main: 1px solid #E7E7E7
+	--border-dark: 1px solid #DFDFDF
+	--border-darker: 1px solid #a7a7a7
+	--header-back: #FFFFFF
+	--header-border: var(--border-main)
+	--theme-back-o50: rgba(255,255,255,0.5)
+	--theme-back-o35: rgba(255,255,255,0.35)
+
+.dark
+	--shadow1: 0 6px 10px rgba(0, 0, 0, 0.06)
+	--shadow2: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
+	--shadow3: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
+	--shadow7: 0 1px 2px rgba(0, 0, 0, 0.04)
+	--shadow8: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02)
+	--shadow9: 0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02)
+	--shadow10: 0 24px 48px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04)
+	--shadow-inset-1: inset 0 2px 4px rgba(0, 0, 0, 0.03)
+	--color-primary: #e2e2e2
+	--color-back: #171717
+	--color-theme: #0479e7
+	--color-theme-2: #0d5284
+	--color-theme-3: #08589f
+	--color-theme-4: #4dabf7
+	--color-theme-5: #daf2fc
+	--color-theme-6: #f3fafd
+	--color-alt-1: #3f3f3f
+	--color-alt-2: #373737
+	--color-alt-3: #212121
+	--color-alt-4: #2f2f2f
+	--color-grey-1: #272727
+	--color-grey-2: #3f3f3f
+	--color-grey-3: #515151
+	--color-grey-4: #8a8a8a
+	--color-stone: #282826
+	--color-stone-2: #F8F7F4
+	--color-stone-3: #FBFBF9
+	--color-white: #FFFFFF
+	--color-black: #070707
+	--color-anveshi: #D3633A
+	--color-anveshi-2: #9f401d
+	--color-know: #fff8e0
+	--color-know-2: #fffbf0
+	--color-green: #009B72
+	--border-main: 1px solid #272727
+	--border-dark: 1px solid #474747
+	--border-darker: 1px solid #8a8a8a
+	--header-back: #171717
+	--header-border: 1px solid rgba(0,0,0,0.28)
+	--theme-back-o50: rgba(0,0,0,0.5)
+	--theme-back-o35: rgba(0,0,0,0.35)
+
+html, body
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	font-family: var(--fontface-sans)
+	color: var(--color-primary)
+	background: var(--color-back)
+
+*, :root
+	box-sizing: border-box
+
+p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
+	margin: 0
+	color: var(--color-primary)
+
+pre
+	box-sizing: border-box
+	font-family: var(--fontface-sans)
+	white-space: pre-line
+	word-wrap: break-word
+	word-break: break-word
+	overflow: hidden
+
+a
+	text-decoration: none
+	font-family: inherit
+	color: inherit
+	&.linker:hover
+		text-decoration: underline
+		text-decoration-color: var(--color-theme)
+	&.linked
+		text-decoration: underline
+		text-decoration-color: var(--color-theme-4)
+		&:hover
+			color: var(--color-theme)
+	&.linkonhover:hover
+		color: var(--color-theme)
+	&.linkedlight
+		color: var(--color-theme)
+
+button
+	cursor: pointer
+	font-family: var(--fontface-sans)
+
+img.fit-image
+	object-fit: cover
+	width: 100%
+
+img.blog-image
+	object-fit: cover
+	width: 100%
+	height: 240px
+
+h1
+	line-height: 1.1
+	font-size: var(--typeH3)
+	letter-spacing: -0.05rem
+	font-weight: 690
+	&.thin
+		font-weight: 400
+	&.page-title, &.doc-title
+		font-size: var(--typeH3)
+		letter-spacing: -0.02rem
+	@media screen and (min-width: 1025px)
+		letter-spacing: -0.14rem
+		font-size: var(--typeH6)
+		&.page-title, &.doc-title
+			font-size: var(--typeH4)
+			letter-spacing: -0.06rem
+
+h2
+	line-height: 1.12
+	font-size: var(--typeH1)
+	font-weight: 680
+	letter-spacing: -0.02rem
+	&.thin
+		font-weight: 400
+	&.card-title
+		font-size: var(--typeH2)
+	@media screen and (min-width: 1025px)
+		letter-spacing: -0.03rem
+		font-size: var(--typeH2)
+		&.card-title
+			font-size: var(--typeH3)
+
+h3
+	line-height: 1.2
+	font-size: var(--typeH3)
+	&.thin
+		font-weight: 400
+
+h4
+	line-height: 1.2
+	font-size: var(--typeH2)
+	&.thin
+		font-weight: 400
+	&.tight
+		line-height: 1.12
+
+h5
+	font-size: var(--typeH2)
+	line-height: 1.28
+	&.tight
+		line-height: 1.12
+	&.thin
+		font-weight: 400
+
+h6
+	font-size: var(--typeH1)
+	line-height: 1.5
+	&.tight
+		line-height: 1.2
+	&.thin
+		font-weight: 400
+
+p, pre, li
+	font-size: 1.1rem
+	line-height: 1.4
+	letter-spacing: 0
+	color: var(--color-primary)
+	&.tight
+		line-height: 1.2
+	&.paragraph-text
+		font-size: calc(var(--typeBase) * 0.95)
+	&.descriptor-text
+		font-size: 0.95rem
+	&.tag-text
+		font-size: 0.6rem
+		font-family: var(--fontface-sans-flex)
+		font-weight: 450
+		letter-spacing: 0.02rem
+	&.card-title
+		font-size: var(--typeH1)
+		font-weight: 650
+		line-height: 1.2
+		letter-spacing: -0.02rem
+	&.rem1
+		font-size: 1rem
+	&.citation-big
+		font-size: 10px
+		font-weight: 600
+	@media screen and (min-width: 1025px)
+		font-size: 1.2rem
+		line-height: 1.5
+		&.paragraph-text
+			font-size: var(--typeBase)
+		&.tag-text
+			font-size: 0.65rem
+
+small
+	font-size: 11px
+
+h1.visually-hidden, .visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	overflow: hidden
+	clip: rect(0, 0, 0, 0)
+	white-space: nowrap
+	border: 0
+	font-size: 12px
+
+.row, .column
+	display: flex
+
+.row
+	flex-direction: row
+	&.wrapper, &.wrap
+		flex-wrap: wrap
+	&.xbetween
+		justify-content: space-between
+	&.xleft
+		justify-content: flex-start
+	&.xright
+		justify-content: flex-end
+	&.xcenter
+		justify-content: center
+	&.ycenter
+		align-items: center
+	&.ytop
+		align-items: flex-start
+	&.ybottom
+		align-items: flex-end
+	@media screen and (min-width: 1025px)
+		&.xbetween-mleft
+			justify-content: space-between
+	@media screen and (max-width: 1024px)
+		&.mwrap
+			flex-wrap: wrap
+		&.mcol
+			flex-direction: column
+		&.xcenter.mleft, &.xright.mleft
+			justify-content: flex-start
+
+.column, .box, .stdbox, .labelbox, .textbox, .elembox
+	display: flex
+	flex-direction: column
+	&.ycenter
+		justify-content: center
+	&.ybetween
+		justify-content: space-between
+		height: 100%
+	&.ytop
+		justify-content: flex-start
+	&.ybottom
+		justify-content: flex-end
+	&.xcenter
+		align-items: center
+	&.xleft
+		align-items: flex-start
+		text-align: left
+	&.xright
+		align-items: flex-end
+		text-align: right
+	@media screen and (max-width: 1024px)
+		&.mrow
+			flex-direction: row
+			align-items: center
+		&.xcenter.mleft, &.xright.mleft
+			align-items: flex-start
+			text-align: left
+
+.stdbox
+	row-gap: 2.5rem
+
+.labelbox
+	row-gap: 0.5rem
+
+.elembox
+	row-gap: 1.5rem
+
+.textbox
+	row-gap: 1rem
+
+.box.std
+	row-gap: 2.4rem
+
+.grid
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	&.ytop
+		align-items: start
+	&.ybottom
+		align-items: end
+	&.ultra
+		gap: 6px
+	&.tight
+		gap: 1rem
+	&.midgaps
+		gap: 2rem
+	&.widegaps
+		gap: 4rem
+	&.tightcols
+		column-gap: 1rem
+		row-gap: 2rem
+	&.tightrows
+		column-gap: 2rem
+		row-gap: 1rem
+	@media screen and (min-width: 1025px)
+		&.five
+			grid-template-columns: repeat(5, 1fr)
+		&.four, &.fitted-four
+			grid-template-columns: repeat(4, 1fr)
+		&.three
+			grid-template-columns: repeat(3, 1fr)
+		&.two
+			grid-template-columns: repeat(2, 1fr)
+		&.two.left
+			grid-template-columns: 32% 1fr
+		&.two.softleft
+			grid-template-columns: 40% 1fr
+		&.two.right
+			grid-template-columns: 1fr 32%
+		&.two.softright
+			grid-template-columns: 1fr 40%
+	@media screen and (min-width: 1025px) and (max-width: 1200px)
+		&.three.mid2, &.four.mid2
+			grid-template-columns: repeat(2, 1fr)
+	@media screen and (max-width: 1024px)
+		&.five, &.four, &.fitted-four, &.three, &.two
+			grid-template-columns: 1fr
+		&.four.stay2, &.three.stay2, &.two.stay2
+			grid-template-columns: repeat(2, 1fr)
+		&.stay2.tightrows
+			column-gap: 1rem
+		&.two
+			grid-template-areas: "up" "down"
+			.up
+				grid-area: up
+			.down
+				grid-area: down
+
+.narrowbox
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	@media screen and (max-width: 1024px)
+		padding-left: 1rem
+		padding-right: 1rem
+	@media screen and (min-width: 1025px)
+		width: 992px
+	@media screen and (min-width: 1201px)
+		width: 1168px
+	@media screen and (min-width: 1441px)
+		width: 1408px
+	@media screen and (min-width: 1601px)
+		width: 1472px
+
+.narrowsize
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+	@media screen and (min-width: 1025px)
+		width: 992px
+	@media screen and (min-width: 1201px)
+		width: 1168px
+	@media screen and (min-width: 1441px)
+		width: 1408px
+	@media screen and (min-width: 1601px)
+		width: 1472px
+
+.standard-grid
+	display: grid
+	gap: 1px
+	background: var(--color-alt-2)
+	border: var(--border-dark)
+	overflow: hidden
+	@media screen and (max-width: 1024px)
+		background: var(--color-back)
+	&.whiten
+		background: var(--color-back)
+
+.white-grid
+	background: var(--color-alt-2)
+	gap: 1px
+	border: 1px solid var(--color-alt-2)
+	border-radius: var(--radius-2)
+
+.stdpad
+	padding-top: 3rem
+	padding-bottom: 3rem
+	&.header-margin
+		margin-top: 3rem
+	&.is-last
+		padding-bottom: 0
+	&.is-first
+		padding-top: 3rem
+	@media screen and (min-width: 1025px)
+		padding-top: 5rem
+		padding-bottom: 5rem
+		&.header-margin
+			margin-top: 2rem
+
+.card-padded
+	padding: 1rem
+	@media screen and (max-width: 1024px)
+		&.more-mob
+			padding: 1.5rem
+	@media screen and (min-width: 1025px)
+		padding: 1.5rem
+		&.more
+			padding: 2rem
+
+.tight-padded
+	padding: 0.65rem
+	@media screen and (min-width: 1025px)
+		padding: 0.8rem
+
+.width100
+	width: 100%
+
+.width50
+	width: 50%
+
+.width60
+	width: 60%
+
+.width70
+	width: 70%
+
+.width80
+	width: 80%
+
+.width90
+	width: 90%
+
+.widthmax
+	width: max-content
+
+.width50, .width60, .width70, .width80, .width90, .widthmax
+	@media screen and (max-width: 1024px)
+		width: 100%
+
+.height100
+	height: 100%
+
+.cgap4
+	column-gap: 5px
+
+.cgap8
+	column-gap: 0.5rem
+
+.cgap12
+	column-gap: 0.75rem
+
+.cgap16
+	column-gap: 1rem
+
+.cgap24
+	column-gap: 1.5rem
+
+.cgap32
+	column-gap: 2rem
+
+.cgap48
+	column-gap: 3rem
+
+.cgap64
+	column-gap: 4rem
+
+.rgap4
+	row-gap: 6px
+
+.rgap8
+	row-gap: 0.5rem
+
+.rgap12
+	row-gap: 0.75rem
+
+.rgap16
+	row-gap: 1rem
+
+.rgap24
+	row-gap: 1.5rem
+
+.rgap32
+	row-gap: 2rem
+
+.rgap48
+	row-gap: 3rem
+
+.rgap64
+	row-gap: 4rem
+
+.ptop128
+	padding-top: 8rem
+
+.ptop104
+	padding-top: 6.5rem
+
+.ptop64
+	padding-top: 4rem
+
+.ptop32
+	padding-top: 2rem
+
+.ptop24
+	padding-top: 1.5rem
+
+.ptop16
+	padding-top: 1rem
+
+.ptop8
+	padding-top: 0.5rem
+
+.ptop4
+	padding-top: 0.25rem
+
+.pbot128
+	padding-bottom: 8rem
+
+.pbot104
+	padding-bottom: 6.5rem
+
+.pbot64
+	padding-bottom: 4rem
+
+.pbot32
+	padding-bottom: 2rem
+
+.pbot24
+	padding-bottom: 1.5rem
+
+.pbot16
+	padding-bottom: 1rem
+
+.pbot8
+	padding-bottom: 0.5rem
+
+.pbot4
+	padding-bottom: 0.25rem
+
+.bordertop
+	border-top: var(--border-main)
+
+.borderbot
+	border-bottom: var(--border-main)
+
+.and-bordered
+	border: var(--border-main)
+
+.radius
+	border-radius: var(--radius-3)
+
+.whitecard
+	background: var(--color-back)
+
+.whitestone
+	background: var(--color-back)
+	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	&:hover
+		background: var(--color-stone)
+
+.self-center
+	@media screen and (min-width: 1025px)
+		margin-left: auto
+		margin-right: auto
+
+.self-bottom
+	margin-top: auto
+
+.self-top
+	margin-bottom: auto
+
+.source-serif
+	font-family: var(--fontface-serif)
+
+.garamond
+	font-family: var(--fontface-serif-alt)
+
+.bold
+	font-weight: 600
+
+.inherit
+	color: inherit
+
+.italic
+	font-style: italic
+
+.ta-j
+	text-align: justify
+
+.ta-c
+	text-align: center
+	@media screen and (max-width: 1024px)
+		&.mleft
+			text-align: left
+
+.ta-l
+	text-align: left
+
+.ta-r
+	text-align: right
+	@media screen and (max-width: 1024px)
+		&.mleft
+			text-align: left
+
+.tt-u
+	text-transform: uppercase
+
+.tt-l
+	text-transform: lowercase
+
+.tt-c
+	text-transform: capitalize
+
+.white
+	color: var(--color-white)
+
+.blue
+	color: var(--color-theme)
+
+.blue-dark
+	color: var(--color-theme-2)
+
+.anveshi-o
+	color: var(--color-anveshi)
+
+.grey
+	color: var(--color-grey-3)
+
+.altprim, .altcolor
+	color: var(--color-grey-4)
+
+.lgrey, .heading.lgrey
+	color: var(--color-grey-2)
+
+.green
+	color: var(--color-green)
+
+.w500
+	font-weight: 500
+
+.sidebar-text
+	font-size: 1.125rem
+	line-height: 1.2
+	@media screen and (min-width: 1025px)
+		font-size: 1rem
+
+a.descriptor-text, .descriptor-text
+	font-size: 0.75rem
+
+a.tag-text
+	font-size: 0.6rem
+	font-family: var(--fontface-sans-flex)
+	font-weight: 450
+	letter-spacing: 0.02rem
+	@media screen and (min-width: 1025px)
+		font-size: 0.65rem
+
+.primary
+	position: relative
+	text-decoration: none
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: var(--radius-2)
+	background: var(--color-alt-2)
+	overflow: hidden
+	cursor: pointer
+	border: 1px solid #d7d7d7
+	width: max-content
+	&::after
+		content: ""
+		width: 0%
+		height: 100%
+		background: var(--color-theme)
+		position: absolute
+		transition: all 0.24s ease-in-out
+		right: 50%
+	&:hover::after
+		right: 0
+		width: 100%
+	span
+		text-align: center
+		text-decoration: none
+		width: 100%
+		padding: 0.7rem 1rem
+		color: var(--color-white)
+		font-weight: 500
+		font-size: 0.9rem
+		text-transform: uppercase
+		z-index: 20
+		transition: all 0.05s ease-in-out
+	&:hover span
+		animation: scaleUp 0.9s ease-in-out
+		color: var(--color-white)
+	&.black
+		background: var(--color-grey-4)
+		border: var(--border-dark)
+		&:hover
+			background: var(--color-grey-3)
+		span
+			color: var(--color-back)
+	&.black.smaller
+		span
+			font-size: 0.75rem
+			padding: 0.5rem
+		&.active
+			background: var(--color-theme)
+			border: 1px solid var(--color-theme-2)
+	&.anveshi
+		background: var(--color-anveshi-2)
+		&::after
+			background: var(--color-anveshi)
+		span
+			color: var(--color-white)
+
+.small-button
+	font-size: 0.8rem
+	font-weight: 500
+	padding: 0.25rem 0.875rem
+	border-radius: var(--radius-pill)
+	border: var(--border-dark)
+	background: var(--color-alt-2)
+	text-decoration: none
+	color: var(--color-grey-4)
+	transition: var(--transition-base)
+	width: max-content
+	.button-text
+		transition: all 0.12s
+		transform-origin: left center
+	&:hover
+		border: 1px solid var(--color-theme)
+		color: var(--color-theme)
+		background: var(--color-theme-6)
+		.button-text
+			transform: scaleX(1.2)
+			color: var(--color-theme)
+	&.themed
+		background: var(--color-theme-5)
+	&.hollow
+		padding: 0
+		background: none
+		border: none
+		font-size: 1rem
+		color: var(--color-primary)
+		font-weight: 700
+
+.nav-btn
+	font-size: 0.78rem
+	font-weight: 500
+	padding: 5px 14px
+	border-radius: var(--radius-1)
+	border: var(--border-dark)
+	color: var(--color-primary)
+	background: var(--color-back)
+	cursor: pointer
+	transition: all 0.15s cubic-bezier(0.055, 0.795, 0.000, 0.995)
+	transform-origin: center center
+	&:hover
+		border-color: var(--color-theme)
+		color: var(--color-theme)
+		background: var(--color-theme-6)
+		transform: scale(0.95)
+	&.active
+		background: var(--color-theme)
+		border-color: var(--color-theme)
+		color: var(--color-back)
+	&.anveshi
+		&:hover
+			border-color: var(--color-anveshi)
+			color: var(--color-anveshi)
+			background: var(--color-back)
+		&.active
+			background: var(--color-anveshi)
+			border-color: var(--color-anveshi)
+			color: var(--color-back)
+
+.filter-button
+	font-size: 0.9rem
+	font-family: var(--fontface-sans-flex)
+	text-transform: uppercase
+	font-weight: 450
+	padding: 8px 20px
+	border-radius: var(--radius-1)
+	border: var(--border-dark)
+	background: var(--color-theme-7)
+	color: var(--color-grey-4)
+	cursor: pointer
+	transition: all 0.25s var(--cz-easeOutExpo)
+	&:hover
+		background: var(--color-theme-2)
+		color: var(--color-back)
+		border: 1px solid var(--color-theme-2)
+		box-shadow: 2px 4px 6px rgba(0,0,0,0.3)
+		transform: translateY(-2px)
+	&:active
+		transform: scale(1.05)
+	&.active
+		background: var(--color-theme)
+		border-color: var(--color-theme)
+		color: var(--color-back)
+
+.small-btn
+	background: var(--color-theme-6)
+	border: var(--border-darker)
+	padding: 0.2rem 0.5rem
+	font-family: var(--fontface-sans-flex)
+	text-transform: capitalize
+	font-weight: 450
+	font-size: 0.8rem
+	border-radius: 12px
+	min-width: 64px
+	position: relative
+	isolation: isolate
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		z-index: -1
+		transition: all 250ms ease
+		border-radius: 12px
+		background: var(--color-theme-5)
+	&:hover
+		box-shadow: 0 3px 5px rgba(0,0,0,0.1)
+		&::before
+			opacity: 1
+
+button.blank, .blankbutton
+	background: none
+	border: none
+	display: flex
+	align-items: center
+	padding: 0
+	margin: 0
+	width: max-content
+
+.blankbutton
+	justify-content: flex-start
+	flex-direction: row
+	text-transform: capitalize
+	font-size: 1.2rem
+	column-gap: 4px
+	font-weight: 500
+	transition: all 0.2s ease
+	position: relative
+	.green.bold
+		transition: transform 0.2s ease
+	&:hover
+		.green.bold
+			transform: translateX(8px)
+
+button.with-tooltip
+	position: relative
+	svg
+		#point
+			transition: transform 0.27s ease
+	.tooltip
+		position: absolute
+		top: 49%
+		right: 130%
+		width: max-content
+		padding: 0.25rem 0.5rem
+		background: var(--color-grey-4)
+		opacity: 0
+		pointer-events: none
+		transform: translateX(-2rem)
+		transition: opacity 0.2s ease, transform 0.2s ease
+		color: var(--color-back)
+		font-size: 0.75rem
+		font-weight: 500
+		white-space: nowrap
+	&:hover, &:focus-visible
+		.tooltip
+			opacity: 1
+			transform: translateX(0)
+		svg #point
+			transform: translateX(-2rem)
+
+.tag-pill, p.tag-pill, a.tag-pill
+	font-size: 9px
+	font-weight: 600
+	letter-spacing: 0.03em
+	color: var(--color-alt-3)
+	padding: 3px 6px
+	border-radius: 0
+	border: none
+	background: var(--color-green)
+	transition: all 0.12s var(--cz-easeOutQuint)
+	width: max-content
+	transform-origin: center center
+	&:hover
+		background: var(--color-theme-2)
+		transform: scale(0.95)
+	&.dead:hover
+		transform: scale(1)
+		background: var(--color-green)
+	&.accented
+		background: var(--color-theme-2)
+		color: var(--color-back)
+		border: 1px solid var(--color-theme-2)
+	&.anveshi
+		background: var(--color-anveshi)
+		color: var(--color-back)
+		border: none
+	&.themed
+		background: var(--color-theme)
+		color: var(--color-back)
+		border: 1px solid var(--color-theme)
+	&.hollow
+		padding: 0
+		background: none
+		border: none
+		font-size: 10px
+		color: var(--color-grey-2)
+	&.know
+		background: var(--color-grey-1)
+		color: var(--color-grey-4)
+
+.tag-item
+	font-size: 0.875rem
+	padding: 6px 12px
+	border-radius: var(--radius-1)
+	border: 1px solid var(--color-grey-1)
+	background: var(--color-theme-6)
+	transition: all 0.12s ease
+	&:hover
+		box-shadow: 2px 3px 5px rgba(0,0,0,0.1)
+		background: var(--color-theme-5)
+	.tag-count
+		font-size: 0.8rem
+		margin-left: 4px
+	@media screen and (min-width: 1025px)
+		font-size: 1rem
+		padding: 8px 16px
+
+.popping
+	transition: transform 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030), box-shadow 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030), background 160ms ease
+	&:hover
+		transform: translateY(-2px)
+		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.12)
+
+.flowing
+	transition: box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1)
+	&:hover
+		box-shadow: 0 16px 35px rgba(0,0,0,0.10)
+
+.toggler-std
+	position: relative
+	width: 50px
+	height: 26px
+	user-select: none
+	border-radius: 14px
+	label
+		position: absolute
+		top: 0
+		left: 0
+		width: 50px
+		height: 26px
+		border-radius: 50px
+		background: var(--color-alt-2)
+		border: var(--border-dark)
+		cursor: pointer
+		transition: all 0.3s ease
+		&:after
+			content: ''
+			position: absolute
+			top: 1px
+			left: 1px
+			width: 22px
+			height: 22px
+			border-radius: 50%
+			background-color: var(--color-white)
+			transition: all 0.3s ease
+	input[type="checkbox"]:checked + label
+		background: var(--color-theme)
+		&:after
+			transform: translateX(23px)
+
+.in-toggle
+	position: absolute
+	top: 0
+	left: 0
+	width: 50px
+	height: 20px
+	border: none
+	outline: none
+	display: none
+
+.image-type-c
+	img
+		object-fit: cover
+		width: 100%
+	@media screen and (min-width: 1025px)
+		img
+			height: 300px
+	@media screen and (max-width: 1024px)
+		img
+			height: 256px
+
+.has-image-background
+	background-size: cover
+	background-position: center center
+
+.ripple-motion
+	height: 100%
+	min-height: 5rem
+	width: 100%
+	img
+		object-position: center center
+		object-fit: cover
+		width: 100%
+		height: 100%
+
+.motion-vid-wrapper
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 4rem 2rem
+
+.classic-document
+	p, pre, li
+		line-height: 1.6
+		letter-spacing: 0
+		font-weight: 400
+		font-size: var(--typeBase)
+	p, pre
+		margin-bottom: 1.25rem
+	li
+		margin-bottom: 0.5rem
+	li::marker
+		content: "- "
+	ul, ol
+		margin-top: 0
+		margin-bottom: 1.25rem
+		padding-left: 1rem
+	h2, h3
+		font-size: var(--typeH1)
+		margin-bottom: 1.25rem
+		margin-top: 2.5rem
+	img
+		display: block
+		max-width: 100%
+		height: auto
+		max-height: 540px
+		object-fit: contain
+		margin-right: auto
+		border: var(--border-main)
+		padding: 1rem
+		background: var(--color-stone)
+		border-radius: 6px
+		margin-bottom: 1rem
+	@media screen and (max-width: 1024px)
+		p, pre, li
+			font-size: 1.2rem
+
+.blog-article
+	p, pre, li
+		font-family: 'Newsreader', serif
+		font-size: calc(var(--typeBase) * 1.2)
+		line-height: 1.5
+		margin-bottom: 1.25rem
+		font-weight: 400
+	ul, ol
+		padding-left: 1rem
+	blockquote
+		font-style: italic
+		margin-top: 2rem
+		border-left: 4px solid var(--color-theme)
+		padding-left: 1rem
+		p
+			font-size: calc(var(--typeBase) * 1.4)
+			margin-bottom: 2rem
+	h2
+		font-size: var(--typeH3)
+		font-weight: 700
+		letter-spacing: -0.03rem
+		margin-top: 3rem
+		padding-top: 2rem
+		margin-bottom: 1.25rem
+	h3
+		font-size: var(--typeH1)
+		margin-bottom: 1rem
+		margin-top: 2.5rem
+	h5
+		font-weight: 600
+		font-size: var(--typeH1)
+		position: relative
+		padding-top: 1rem
+		margin-top: 3rem
+		line-height: 1.5
+		margin-bottom: 2.5rem
+		&:before
+			content: ' '
+			width: 10%
+			height: 2px
+			background: var(--color-theme)
+			position: absolute
+			top: 0
+			left: 0
+	a
+		color: var(--color-theme)
+		&:hover
+			text-decoration: underline
+	@media screen and (max-width: 1024px)
+		h2
+			margin-top: 2rem
+			font-size: var(--typeH2)
+		blockquote
+			margin-left: 0.5rem
+			margin-right: 0
+			p
+				line-height: 1.28
+				font-size: calc(var(--typeBase) * 1.2)
+
+.site-docs
+	p, ul, ol
+		margin-bottom: 1rem
+	h2
+		font-size: var(--typeH1)
+		margin-bottom: 1rem
+		margin-top: 2.5rem
+
+.wiki-body
+	p, pre, li
+		font-size: 1.25rem
+		line-height: 1.5
+	p, pre, ul, ol
+		margin-bottom: 1.5rem
+	ul, ol
+		padding-left: 1rem
+	h2
+		font-size: 1.56rem
+		margin-bottom: 1.5rem
+		margin-top: 4rem
+	h3
+		font-size: 1.4rem
+
+@keyframes scaleUp
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)

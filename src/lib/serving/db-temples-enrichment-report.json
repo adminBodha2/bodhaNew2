@@ -1,0 +1,1608 @@
+{
+	"summary": {
+		"total": 268,
+		"matched": 0,
+		"coordinates": 0,
+		"downloaded": 0,
+		"correctedStates": 85
+	},
+	"report": [
+		{
+			"slug": "sri-jagannath-temple",
+			"name": "Sri Jagannath Temple",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "kanchipuram-ekambareswarar-temple",
+			"name": "Kanchipuram Ekambareswarar Temple",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "tirumala-venkateswara-temple",
+			"name": "Tirumala Venkateswara Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&languages=en&props=labels%7Cdescriptions%7Cclaims&ids=Q9375937%7CQ1436816"
+		},
+		{
+			"slug": "madurai-meenakshi-amman-temple",
+			"name": "Madurai Meenakshi Amman Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Madurai+Meenakshi+Amman+Temple+Madurai"
+		},
+		{
+			"slug": "sringeri-sharada-peetham",
+			"name": "Sringeri Sharada Peetham",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sringeri+Sharada+Peetham+Sringeri+Sharada+Peetham"
+		},
+		{
+			"slug": "kamkhent",
+			"name": "Kamkhent",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kamkhent+Kamkhent"
+		},
+		{
+			"slug": "muktoknang",
+			"name": "Muktoknang",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Muktoknang+Muktoknang"
+		},
+		{
+			"slug": "pelling-doi",
+			"name": "Pelling Doi",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Pelling+Doi+Pelling"
+		},
+		{
+			"slug": "tawang-monastery",
+			"name": "Tawang Monastery",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Tawang+Monastery"
+		},
+		{
+			"slug": "kamlang-doi",
+			"name": "Kamlang Doi",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kamlang+Doi+Kamlang+Doi"
+		},
+		{
+			"slug": "shakti-peeth",
+			"name": "Shakti Peeth",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shakti+Peeth"
+		},
+		{
+			"slug": "namdrokpa",
+			"name": "Namdrokpa",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Namdrokpa"
+		},
+		{
+			"slug": "jakar-doi-murong",
+			"name": "Jakar Doi Murong",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jakar+Doi+Murong+Jakar+Doi+Murong"
+		},
+		{
+			"slug": "umananda-temple",
+			"name": "Umananda Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Umananda+Temple+Guwahati"
+		},
+		{
+			"slug": "bhubaneswari-temple",
+			"name": "Bhubaneswari Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bhubaneswari+Temple+Bhubaneswar"
+		},
+		{
+			"slug": "kamakhyaguri-temple",
+			"name": "Kamakhyaguri Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kamakhyaguri+Temple+Kamakhyaguri"
+		},
+		{
+			"slug": "sukreswar-temple",
+			"name": "Sukreswar Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sukreswar+Temple+Sukreswar+Temple"
+		},
+		{
+			"slug": "kamakhya-temple",
+			"name": "Kamakhya Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kamakhya+Temple+Guwahati"
+		},
+		{
+			"slug": "navagraha-temple",
+			"name": "Navagraha Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Navagraha+Temple+Navagraha+Temple"
+		},
+		{
+			"slug": "siddivinayak-temple",
+			"name": "Siddivinayak Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Siddivinayak+Temple+temple"
+		},
+		{
+			"slug": "dakshineswar-kali-temple",
+			"name": "Dakshineswar Kali Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dakshineswar+Kali+Temple+Dakshineswar"
+		},
+		{
+			"slug": "hayagriva-madhava-temple",
+			"name": "Hayagriva Madhava Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Hayagriva+Madhava+Temple+Puri"
+		},
+		{
+			"slug": "baidyanath-dham",
+			"name": "Baidyanath Dham",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Baidyanath+Dham+Deoghar"
+		},
+		{
+			"slug": "kashi-vishwanath-temple",
+			"name": "Kashi Vishwanath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kashi+Vishwanath+Temple+Varanasi"
+		},
+		{
+			"slug": "ram-janmabhoomi-temple",
+			"name": "Ram Janmabhoomi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ram+Janmabhoomi+Temple"
+		},
+		{
+			"slug": "surya-kund-temple",
+			"name": "Surya Kund Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Surya+Kund+Temple+Surya+Kund+Temple"
+		},
+		{
+			"slug": "bihar-sharif",
+			"name": "Bihar Sharif",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bihar+Sharif"
+		},
+		{
+			"slug": "mahabodhi-temple",
+			"name": "Mahabodhi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mahabodhi+Temple+Bodh+Gaya"
+		},
+		{
+			"slug": "uttar-gaya-temple",
+			"name": "Uttar Gaya Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Uttar+Gaya+Temple+Uttar+Gaya"
+		},
+		{
+			"slug": "sitamarhi-temple",
+			"name": "Sitamarhi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sitamarhi+Temple+Sitamarhi"
+		},
+		{
+			"slug": "jagannath-puri",
+			"name": "Jagannath Puri",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagannath+Puri"
+		},
+		{
+			"slug": "jagannath-temple",
+			"name": "Jagannath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagannath+Temple+Puri"
+		},
+		{
+			"slug": "meenakshi-amman-temple",
+			"name": "Meenakshi Amman Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Meenakshi+Amman+Temple+Madurai"
+		},
+		{
+			"slug": "chidambaram-nataraja-temple",
+			"name": "Chidambaram Nataraja Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Chidambaram+Nataraja+Temple"
+		},
+		{
+			"slug": "sri-padmanabhaswamy-temple",
+			"name": "Sri Padmanabhaswamy Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Padmanabhaswamy+Temple+Thiruvananthapuram"
+		},
+		{
+			"slug": "kashi-vishwanath-temple-2",
+			"name": "Kashi Vishwanath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kashi+Vishwanath+Temple+Varanasi"
+		},
+		{
+			"slug": "brihadeeswarar-temple",
+			"name": "Brihadeeswarar Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Brihadeeswarar+Temple+Thanjavur"
+		},
+		{
+			"slug": "dwarkadish-temple",
+			"name": "Dwarkadish Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dwarkadish+Temple+Dwarka"
+		},
+		{
+			"slug": "tirupati-venkateswara-temple",
+			"name": "Tirupati Venkateswara Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Tirupati+Venkateswara+Temple"
+		},
+		{
+			"slug": "ranganathaswamy-temple",
+			"name": "Ranganathaswamy Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ranganathaswamy+Temple+Srirangam"
+		},
+		{
+			"slug": "shantadurga-temple",
+			"name": "Shantadurga Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shantadurga+Temple+Shantadurga+Temple"
+		},
+		{
+			"slug": "chapaguri-temple",
+			"name": "Chapaguri Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Chapaguri+Temple+Chapaguri"
+		},
+		{
+			"slug": "shri-shantadurga-temple",
+			"name": "Shri Shantadurga Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shantadurga+Temple+Kolhapur"
+		},
+		{
+			"slug": "shri-mangueshi-temple",
+			"name": "Shri Mangueshi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Mangueshi+Temple+Shri+Mangueshi+Temple"
+		},
+		{
+			"slug": "mahalaxmi-temple",
+			"name": "Mahalaxmi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mahalaxmi+Temple+Mumbai"
+		},
+		{
+			"slug": "mahadeva-temple",
+			"name": "Mahadeva Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mahadeva+Temple+Ujjain"
+		},
+		{
+			"slug": "shri-mangueshi-temple-2",
+			"name": "Shri Mangueshi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Mangueshi+Temple+Shri+Mangueshi+Temple"
+		},
+		{
+			"slug": "shri-ramnath-temple",
+			"name": "Shri Ramnath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Ramnath+Temple+temple"
+		},
+		{
+			"slug": "bhagwan-mahavir-temple",
+			"name": "Bhagwan Mahavir Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bhagwan+Mahavir+Temple+temple"
+		},
+		{
+			"slug": "ambaji-temple",
+			"name": "Ambaji Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ambaji+Temple"
+		},
+		{
+			"slug": "dwarkadhish-temple",
+			"name": "Dwarkadhish Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dwarkadhish+Temple+Dwarka"
+		},
+		{
+			"slug": "pataneshwar-mahadev-temple",
+			"name": "Pataneshwar Mahadev Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Pataneshwar+Mahadev+Temple+Patan"
+		},
+		{
+			"slug": "swaminarayan-akshardham-temple",
+			"name": "Swaminarayan Akshardham Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Swaminarayan+Akshardham+Temple+New+Delhi"
+		},
+		{
+			"slug": "akshardham-temple",
+			"name": "Akshardham Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Akshardham+Temple+New+Delhi"
+		},
+		{
+			"slug": "modhera-sun-temple",
+			"name": "Modhera Sun Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Modhera+Sun+Temple+Modhera"
+		},
+		{
+			"slug": "shree-swaminarayan-mandir",
+			"name": "Shree Swaminarayan Mandir",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shree+Swaminarayan+Mandir"
+		},
+		{
+			"slug": "shri-siddhivinayak-temple",
+			"name": "Shri Siddhivinayak Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Siddhivinayak+Temple+Prabhadevi"
+		},
+		{
+			"slug": "somnath-temple",
+			"name": "Somnath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Somnath+Temple+Prabhas+Patan"
+		},
+		{
+			"slug": "shri-sheetla-mata-temple",
+			"name": "Shri Sheetla Mata Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Sheetla+Mata+Temple+temple"
+		},
+		{
+			"slug": "shri-balaji-temple",
+			"name": "Shri Balaji Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Balaji+Temple+Tirupati"
+		},
+		{
+			"slug": "shri-laxmi-narayan-temple",
+			"name": "Shri Laxmi Narayan Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Laxmi+Narayan+Temple+temple"
+		},
+		{
+			"slug": "shri-hanuman-temple",
+			"name": "Shri Hanuman Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Hanuman+Temple+temple"
+		},
+		{
+			"slug": "shri-kali-mata-temple",
+			"name": "Shri Kali Mata Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Kali+Mata+Temple+temple"
+		},
+		{
+			"slug": "shri-shiv-mandir",
+			"name": "Shri Shiv Mandir",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shiv+Mandir"
+		},
+		{
+			"slug": "shri-ganesha-temple",
+			"name": "Shri Ganesha Temple",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "shri-mata-mansa-devi-temple",
+			"name": "Shri Mata Mansa Devi Temple",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "chintapurni-temple",
+			"name": "Chintapurni Temple",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "trilokinath-temple",
+			"name": "Trilokinath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Trilokinath+Temple+Himachal+Pradesh"
+		},
+		{
+			"slug": "hadimba-temple",
+			"name": "Hadimba Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Hadimba+Temple+Manali"
+		},
+		{
+			"slug": "shrikhand-mahadev-temple",
+			"name": "Shrikhand Mahadev Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shrikhand+Mahadev+Temple+Shrikhand+Mahadev+Temple"
+		},
+		{
+			"slug": "jwalamukhi-temple",
+			"name": "Jwalamukhi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jwalamukhi+Temple+Jwalamukhi"
+		},
+		{
+			"slug": "bhimakali-temple",
+			"name": "Bhimakali Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bhimakali+Temple+Bhimakali+Temple"
+		},
+		{
+			"slug": "rohtang-la-temple",
+			"name": "Rohtang La Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Rohtang+La+Temple+Rohtang+Pass"
+		},
+		{
+			"slug": "mata-murti-temple",
+			"name": "Mata Murti Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mata+Murti+Temple+Mata+Murti+Temple"
+		},
+		{
+			"slug": "naina-devi-temple",
+			"name": "Naina Devi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Naina+Devi+Temple+Naina+Devi+Temple"
+		},
+		{
+			"slug": "bhadrakali-temple",
+			"name": "Bhadrakali Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bhadrakali+Temple+Bhadrakali+Temple"
+		},
+		{
+			"slug": "hari-parbat-temple",
+			"name": "Hari Parbat Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Hari+Parbat+Temple+Hari+Parbat+Temple"
+		},
+		{
+			"slug": "katra-temple",
+			"name": "Katra Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Katra+Temple+Katra"
+		},
+		{
+			"slug": "raghunath-temple",
+			"name": "Raghunath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Raghunath+Temple+Puri"
+		},
+		{
+			"slug": "shri-mata-vaishno-devi-temple",
+			"name": "Shri Mata Vaishno Devi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Mata+Vaishno+Devi+Temple+Katra"
+		},
+		{
+			"slug": "durga-temple",
+			"name": "Durga Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Durga+Temple"
+		},
+		{
+			"slug": "mukhteshwar-temple",
+			"name": "Mukhteshwar Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mukhteshwar+Temple+Mukhteshwar"
+		},
+		{
+			"slug": "amarnath-temple",
+			"name": "Amarnath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Amarnath+Temple+Located+in+the+Indian+state+of+Jammu+and+Kashmir"
+		},
+		{
+			"slug": "shiva-temple",
+			"name": "Shiva Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shiva+Temple"
+		},
+		{
+			"slug": "jyeshteeshwar-mahadev-temple",
+			"name": "Jyeshteeshwar Mahadev Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jyeshteeshwar+Mahadev+Temple+temple"
+		},
+		{
+			"slug": "jagannath-temple-2",
+			"name": "Jagannath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagannath+Temple+Puri"
+		},
+		{
+			"slug": "maa-vindhyavasini-temple",
+			"name": "Maa Vindhyavasini Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Vindhyavasini+Temple+Vindhyachal"
+		},
+		{
+			"slug": "maa-chandi-temple",
+			"name": "Maa Chandi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Chandi+Temple+Maa+Chandi+Temple"
+		},
+		{
+			"slug": "maa-gomti-temple",
+			"name": "Maa Gomti Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Gomti+Temple+temple"
+		},
+		{
+			"slug": "maa-pataleshwari-temple",
+			"name": "Maa Pataleshwari Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Pataleshwari+Temple+temple"
+		},
+		{
+			"slug": "kameshwar-dham",
+			"name": "Kameshwar Dham",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kameshwar+Dham+Kameshwar+Dham"
+		},
+		{
+			"slug": "maa-dhakeswari-temple",
+			"name": "Maa Dhakeswari Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Dhakeswari+Temple+Kathmandu"
+		},
+		{
+			"slug": "baidyanath-dham-2",
+			"name": "Baidyanath Dham",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Baidyanath+Dham+Deoghar"
+		},
+		{
+			"slug": "maa-manasa-temple",
+			"name": "Maa Manasa Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Manasa+Temple+temple"
+		},
+		{
+			"slug": "maa-basukinath-temple",
+			"name": "Maa Basukinath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maa+Basukinath+Temple+temple"
+		},
+		{
+			"slug": "sri-krishna-temple",
+			"name": "Sri Krishna Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Krishna+Temple+Sri+Krishna+Temple"
+		},
+		{
+			"slug": "vittala-temple",
+			"name": "Vittala Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Vittala+Temple+Hampi"
+		},
+		{
+			"slug": "mallikarjuna-temple",
+			"name": "Mallikarjuna Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mallikarjuna+Temple+Srisailam"
+		},
+		{
+			"slug": "mahadev-temple",
+			"name": "Mahadev Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mahadev+Temple+Mahadev+Temple"
+		},
+		{
+			"slug": "chamundeshwari-temple",
+			"name": "Chamundeshwari Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Chamundeshwari+Temple+Chamundi+Hill"
+		},
+		{
+			"slug": "kashi-vishwanath-temple-3",
+			"name": "Kashi Vishwanath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kashi+Vishwanath+Temple+Varanasi"
+		},
+		{
+			"slug": "shiva-temple-2",
+			"name": "Shiva Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shiva+Temple"
+		},
+		{
+			"slug": "durga-temple-2",
+			"name": "Durga Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Durga+Temple"
+		},
+		{
+			"slug": "badami-cave-temples",
+			"name": "Badami Cave Temples",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Badami+Cave+Temples+Badami"
+		},
+		{
+			"slug": "guruvayur-temple",
+			"name": "Guruvayur Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Guruvayur+Temple+Guruvayur"
+		},
+		{
+			"slug": "thrissur-pooram",
+			"name": "Thrissur Pooram",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Thrissur+Pooram"
+		},
+		{
+			"slug": "mahadeva-temple-2",
+			"name": "Mahadeva Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mahadeva+Temple+Ujjain"
+		},
+		{
+			"slug": "subramanya-swami-temple",
+			"name": "Subramanya Swami Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Subramanya+Swami+Temple+Thiruchendur"
+		},
+		{
+			"slug": "dakshinamurthy-temple",
+			"name": "Dakshinamurthy Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dakshinamurthy+Temple"
+		},
+		{
+			"slug": "krishna-temple",
+			"name": "Krishna Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Krishna+Temple"
+		},
+		{
+			"slug": "ayyappan-temple",
+			"name": "Ayyappan Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ayyappan+Temple+Ayyappan+Temple"
+		},
+		{
+			"slug": "sree-padmanabhaswamy-temple",
+			"name": "Sree Padmanabhaswamy Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sree+Padmanabhaswamy+Temple"
+		},
+		{
+			"slug": "ashtalakshmi-temple",
+			"name": "Ashtalakshmi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ashtalakshmi+Temple+Ashtalakshmi+Temple"
+		},
+		{
+			"slug": "vadakkumnathan-temple",
+			"name": "Vadakkumnathan Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Vadakkumnathan+Temple+Thiruvananthapuram"
+		},
+		{
+			"slug": "omkareshwar-temple",
+			"name": "Omkareshwar Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Omkareshwar+Temple+Omkareshwar"
+		},
+		{
+			"slug": "bhopal-bhimtaleshwar-temple",
+			"name": "Bhopal Bhimtaleshwar Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bhopal+Bhimtaleshwar+Temple"
+		},
+		{
+			"slug": "dhar-somnath-temple",
+			"name": "Dhar Somnath Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dhar+Somnath+Temple+Dhar"
+		},
+		{
+			"slug": "gwalior-fort",
+			"name": "Gwalior Fort",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Gwalior+Fort"
+		},
+		{
+			"slug": "khajuraho-group-of-monuments",
+			"name": "Khajuraho Group of Monuments",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Khajuraho+Group+of+Monuments+Chhatarpur+district"
+		},
+		{
+			"slug": "maheshwar-mahamaya-temple",
+			"name": "Maheshwar Mahamaya Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Maheshwar+Mahamaya+Temple+Maheshwar"
+		},
+		{
+			"slug": "chitrakoot-ram-janmabhoomi-temple",
+			"name": "Chitrakoot Ram Janmabhoomi Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Chitrakoot+Ram+Janmabhoomi+Temple+Chitrakoot"
+		},
+		{
+			"slug": "mandu-hindola-mahal",
+			"name": "Mandu Hindola Mahal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mandu+Hindola+Mahal+Mandu"
+		},
+		{
+			"slug": "ujjain-mahakaleshwar-temple",
+			"name": "Ujjain Mahakaleshwar Temple",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ujjain+Mahakaleshwar+Temple+Ujjain"
+		},
+		{
+			"slug": "shri-mahalaxmi-temple-mumbai",
+			"name": "Shri Mahalaxmi Temple, Mumbai",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Mahalaxmi+Temple%2C+Mumbai+temple"
+		},
+		{
+			"slug": "shri-vitthal-rukmini-temple-pandharpur",
+			"name": "Shri Vitthal Rukmini Temple, Pandharpur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Vitthal+Rukmini+Temple%2C+Pandharpur+Pandharpur"
+		},
+		{
+			"slug": "shri-trimbakeshwar-temple-nashik",
+			"name": "Shri Trimbakeshwar Temple, Nashik",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Trimbakeshwar+Temple%2C+Nashik+Trimbakeshwar"
+		},
+		{
+			"slug": "shri-aundheshwar-temple-pune",
+			"name": "Shri Aundheshwar Temple, Pune",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Aundheshwar+Temple%2C+Pune+Aundh"
+		},
+		{
+			"slug": "shri-kashi-vishwanath-temple-kolhapur",
+			"name": "Shri Kashi Vishwanath Temple, Kolhapur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Kashi+Vishwanath+Temple%2C+Kolhapur"
+		},
+		{
+			"slug": "shri-haji-ali-dargah-mumbai",
+			"name": "Shri Haji Ali Dargah, Mumbai",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Haji+Ali+Dargah%2C+Mumbai"
+		},
+		{
+			"slug": "shri-rameshwar-temple-nasik",
+			"name": "Shri Rameshwar Temple, Nasik",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Rameshwar+Temple%2C+Nasik+temple"
+		},
+		{
+			"slug": "shri-siddhivinayak-temple-mumbai",
+			"name": "Shri Siddhivinayak Temple, Mumbai",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Siddhivinayak+Temple%2C+Mumbai+Prabhadevi"
+		},
+		{
+			"slug": "shri-tulja-bhavani-temple-tuljapur",
+			"name": "Shri Tulja Bhavani Temple, Tuljapur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Tulja+Bhavani+Temple%2C+Tuljapur"
+		},
+		{
+			"slug": "shri-bhimashankar-temple-pune",
+			"name": "Shri Bhimashankar Temple, Pune",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Bhimashankar+Temple%2C+Pune+Bhimashankar"
+		},
+		{
+			"slug": "shri-shri-singhajit-singh-temple-imphal",
+			"name": "Shri Shri Singhajit Singh Temple, Imphal",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "shri-shri-shri-govindajee-temple-bishnupur",
+			"name": "Shri Shri Shri Govindajee Temple, Bishnupur",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "shri-shri-shri-govindajee-temple-wangkhei",
+			"name": "Shri Shri Shri Govindajee Temple, Wangkhei",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "shri-shri-shree-govindajee-temple-kakching",
+			"name": "Shri Shri Shree Govindajee Temple, Kakching",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Shree+Govindajee+Temple%2C+Kakching+Manipur"
+		},
+		{
+			"slug": "shri-govindajee-temple-imphal",
+			"name": "Shri Govindajee Temple, Imphal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Govindajee+Temple%2C+Imphal"
+		},
+		{
+			"slug": "shri-shri-shri-govindajee-temple-moirang",
+			"name": "Shri Shri Shri Govindajee Temple, Moirang",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Shri+Govindajee+Temple%2C+Moirang+Moirang"
+		},
+		{
+			"slug": "kamakhya-temple-guwahati",
+			"name": "Kamakhya Temple, Guwahati",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kamakhya+Temple%2C+Guwahati+Guwahati"
+		},
+		{
+			"slug": "iskcon-temple-guwahati",
+			"name": "ISKCON Temple, Guwahati",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=ISKCON+Temple%2C+Guwahati+temple"
+		},
+		{
+			"slug": "dakshineswar-kali-temple-kolkata",
+			"name": "Dakshineswar Kali Temple, Kolkata",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dakshineswar+Kali+Temple%2C+Kolkata"
+		},
+		{
+			"slug": "hayagriva-madhava-temple-hajo",
+			"name": "Hayagriva Madhava Temple, Hajo",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Hayagriva+Madhava+Temple%2C+Hajo+Hajo"
+		},
+		{
+			"slug": "umananda-temple-guwahati",
+			"name": "Umananda Temple, Guwahati",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Umananda+Temple%2C+Guwahati+Umananda+Island"
+		},
+		{
+			"slug": "navagraha-temple-guwahati",
+			"name": "Navagraha Temple, Guwahati",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Navagraha+Temple%2C+Guwahati+Navagraha+Temple"
+		},
+		{
+			"slug": "shri-ram-janaki-temple-aizawl",
+			"name": "Shri Ram Janaki Temple, Aizawl",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Ram+Janaki+Temple%2C+Aizawl+temple"
+		},
+		{
+			"slug": "shri-hanuman-temple-aizawl",
+			"name": "Shri Hanuman Temple, Aizawl",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Hanuman+Temple%2C+Aizawl+temple"
+		},
+		{
+			"slug": "shri-laxmi-narayan-temple-aizawl",
+			"name": "Shri Laxmi Narayan Temple, Aizawl",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Laxmi+Narayan+Temple%2C+Aizawl+temple"
+		},
+		{
+			"slug": "shri-shiva-temple-aizawl",
+			"name": "Shri Shiva Temple, Aizawl",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shiva+Temple%2C+Aizawl+temple"
+		},
+		{
+			"slug": "shri-radha-krishna-temple-aizawl",
+			"name": "Shri Radha Krishna Temple, Aizawl",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Radha+Krishna+Temple%2C+Aizawl+temple"
+		},
+		{
+			"slug": "shri-shri-maa-kamakhya-temple-kohima",
+			"name": "Shri Shri Maa Kamakhya Temple, Kohima",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Maa+Kamakhya+Temple%2C+Kohima+Kohima"
+		},
+		{
+			"slug": "shri-shri-lakshmi-narayan-temple-tuensang",
+			"name": "Shri Shri Lakshmi Narayan Temple, Tuensang",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Lakshmi+Narayan+Temple%2C+Tuensang+temple"
+		},
+		{
+			"slug": "shri-shri-sankaradeva-temple-dimapur",
+			"name": "Shri Shri Sankaradeva Temple, Dimapur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Sankaradeva+Temple%2C+Dimapur+temple"
+		},
+		{
+			"slug": "shri-shri-shiv-mandir-wokha",
+			"name": "Shri Shri Shiv Mandir, Wokha",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Shiv+Mandir%2C+Wokha+Wokha"
+		},
+		{
+			"slug": "shri-shri-durgabari-temple-mokokchung",
+			"name": "Shri Shri Durgabari Temple, Mokokchung",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Shri+Durgabari+Temple%2C+Mokokchung"
+		},
+		{
+			"slug": "lingaraja-temple-bhubaneswar",
+			"name": "Lingaraja Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Lingaraja+Temple%2C+Bhubaneswar"
+		},
+		{
+			"slug": "mukteshwar-temple-bhubaneswar",
+			"name": "Mukteshwar Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mukteshwar+Temple%2C+Bhubaneswar+Mukteshwar+Temple"
+		},
+		{
+			"slug": "adi-keshava-temple-bhubaneswar",
+			"name": "Adi Keshava Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Adi+Keshava+Temple%2C+Bhubaneswar+Bhubaneswar"
+		},
+		{
+			"slug": "rajarani-temple-bhubaneswar",
+			"name": "Rajarani Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Rajarani+Temple%2C+Bhubaneswar+Bhubaneswar"
+		},
+		{
+			"slug": "vaital-deula-bhubaneswar",
+			"name": "Vaital Deula, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Vaital+Deula%2C+Bhubaneswar"
+		},
+		{
+			"slug": "konark-sun-temple-konark",
+			"name": "Konark Sun Temple, Konark",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Konark+Sun+Temple%2C+Konark+Konark"
+		},
+		{
+			"slug": "brahmeswara-temple-bhubaneswar",
+			"name": "Brahmeswara Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Brahmeswara+Temple%2C+Bhubaneswar+Bhubaneswar"
+		},
+		{
+			"slug": "jagannath-temple-puri",
+			"name": "Jagannath Temple, Puri",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagannath+Temple%2C+Puri"
+		},
+		{
+			"slug": "siddhesvara-temple-bhubaneswar",
+			"name": "Siddhesvara Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Siddhesvara+Temple%2C+Bhubaneswar+Siddhesvara+Temple"
+		},
+		{
+			"slug": "parasurameswara-temple-bhubaneswar",
+			"name": "Parasurameswara Temple, Bhubaneswar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Parasurameswara+Temple%2C+Bhubaneswar+Bhubaneswar"
+		},
+		{
+			"slug": "golden-temple-amritsar",
+			"name": "Golden Temple, Amritsar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Golden+Temple%2C+Amritsar"
+		},
+		{
+			"slug": "shri-mansa-devi-mandir-solan",
+			"name": "Shri Mansa Devi Mandir, Solan",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Mansa+Devi+Mandir%2C+Solan+Solan"
+		},
+		{
+			"slug": "shri-jwala-ji-mandir-kangra",
+			"name": "Shri Jwala Ji Mandir, Kangra",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Jwala+Ji+Mandir%2C+Kangra"
+		},
+		{
+			"slug": "shri-kali-devi-mandir-patiala",
+			"name": "Shri Kali Devi Mandir, Patiala",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Kali+Devi+Mandir%2C+Patiala"
+		},
+		{
+			"slug": "durgiana-temple-amritsar",
+			"name": "Durgiana Temple, Amritsar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Durgiana+Temple%2C+Amritsar"
+		},
+		{
+			"slug": "shri-chintpurni-devi-mandir-una",
+			"name": "Shri Chintpurni Devi Mandir, Una",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Chintpurni+Devi+Mandir%2C+Una+Una"
+		},
+		{
+			"slug": "jagat-mandir-udaipur",
+			"name": "Jagat Mandir, Udaipur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagat+Mandir%2C+Udaipur+Jagat+Mandir"
+		},
+		{
+			"slug": "kumbha-shyam-temple-nathdwara",
+			"name": "Kumbha Shyam Temple, Nathdwara",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kumbha+Shyam+Temple%2C+Nathdwara+Nathdwara"
+		},
+		{
+			"slug": "moti-dungri-temple-jaipur",
+			"name": "Moti Dungri Temple, Jaipur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Moti+Dungri+Temple%2C+Jaipur"
+		},
+		{
+			"slug": "shrinathji-temple-nathdwara",
+			"name": "Shrinathji Temple, Nathdwara",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shrinathji+Temple%2C+Nathdwara+Nathdwara"
+		},
+		{
+			"slug": "birla-mandir-jaipur",
+			"name": "Birla Mandir, Jaipur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Birla+Mandir%2C+Jaipur"
+		},
+		{
+			"slug": "laxmi-narayan-temple-pushkar",
+			"name": "Laxmi Narayan Temple, Pushkar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Laxmi+Narayan+Temple%2C+Pushkar+Pushkar"
+		},
+		{
+			"slug": "ujjayini-mahakaleshwar-temple-ujjain",
+			"name": "Ujjayini Mahakaleshwar Temple, Ujjain",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ujjayini+Mahakaleshwar+Temple%2C+Ujjain"
+		},
+		{
+			"slug": "sanganer-jain-temple-jaipur",
+			"name": "Sanganer Jain Temple, Jaipur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sanganer+Jain+Temple%2C+Jaipur"
+		},
+		{
+			"slug": "jain-temple-ranakpur",
+			"name": "Jain Temple, Ranakpur",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jain+Temple%2C+Ranakpur+Ranakpur"
+		},
+		{
+			"slug": "pemayangtse-monastery-pelling",
+			"name": "Pemayangtse Monastery, Pelling",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Pemayangtse+Monastery%2C+Pelling+Pelling"
+		},
+		{
+			"slug": "namchi-monastery-namchi",
+			"name": "Namchi Monastery, Namchi",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Namchi+Monastery%2C+Namchi+Namchi"
+		},
+		{
+			"slug": "khecheopalri-lake-temple-khecheopalri",
+			"name": "Khecheopalri Lake Temple, Khecheopalri",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Khecheopalri+Lake+Temple%2C+Khecheopalri+Khecheopalri+Lake"
+		},
+		{
+			"slug": "rumtek-monastery-upper-dzongu",
+			"name": "Rumtek Monastery, Upper Dzongu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Rumtek+Monastery%2C+Upper+Dzongu"
+		},
+		{
+			"slug": "enchey-monastery-gangtok",
+			"name": "Enchey Monastery, Gangtok",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Enchey+Monastery%2C+Gangtok"
+		},
+		{
+			"slug": "tashiding-monastery-tashiding",
+			"name": "Tashiding Monastery, Tashiding",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Tashiding+Monastery%2C+Tashiding+Tashiding+Monastery"
+		},
+		{
+			"slug": "madurai-meenakshi-amman-temple-madurai",
+			"name": "Madurai Meenakshi Amman Temple, Madurai",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Madurai+Meenakshi+Amman+Temple%2C+Madurai+Madurai"
+		},
+		{
+			"slug": "tiruvannamalai-arunachaleswarar-temple-tiruvannamalai",
+			"name": "Tiruvannamalai Arunachaleswarar Temple, Tiruvannamalai",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Tiruvannamalai+Arunachaleswarar+Temple%2C+Tiruvannamalai+Tiruvannamalai"
+		},
+		{
+			"slug": "tirupati-venkateswara-temple-tirupati",
+			"name": "Tirupati Venkateswara Temple, Tirupati",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Tirupati+Venkateswara+Temple%2C+Tirupati"
+		},
+		{
+			"slug": "chidambaram-nataraja-temple-chidambaram",
+			"name": "Chidambaram Nataraja Temple, Chidambaram",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Chidambaram+Nataraja+Temple%2C+Chidambaram+Chidambaram"
+		},
+		{
+			"slug": "srirangam-ranganathaswamy-temple-srirangam",
+			"name": "Srirangam Ranganathaswamy Temple, Srirangam",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Srirangam+Ranganathaswamy+Temple%2C+Srirangam+Srirangam"
+		},
+		{
+			"slug": "kanchipuram-varadaraja-perumal-temple-kanchipuram",
+			"name": "Kanchipuram Varadaraja Perumal Temple, Kanchipuram",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kanchipuram+Varadaraja+Perumal+Temple%2C+Kanchipuram+Kanchipuram"
+		},
+		{
+			"slug": "sri-laxmi-narasimha-swamy-temple-yadagirigutta",
+			"name": "Sri Laxmi Narasimha Swamy Temple, Yadagirigutta",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Laxmi+Narasimha+Swamy+Temple%2C+Yadagirigutta"
+		},
+		{
+			"slug": "sri-mahankali-temple-secunderabad",
+			"name": "Sri Mahankali Temple, Secunderabad",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Mahankali+Temple%2C+Secunderabad"
+		},
+		{
+			"slug": "sri-raja-rajeshwara-swamy-temple-vemulawada",
+			"name": "Sri Raja Rajeshwara Swamy Temple, Vemulawada",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Raja+Rajeshwara+Swamy+Temple%2C+Vemulawada"
+		},
+		{
+			"slug": "sri-kaleswaram-temple-karimnagar",
+			"name": "Sri Kaleswaram Temple, Karimnagar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Kaleswaram+Temple%2C+Karimnagar"
+		},
+		{
+			"slug": "sri-venkateswara-swamy-temple-hyderabad",
+			"name": "Sri Venkateswara Swamy Temple, Hyderabad",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Venkateswara+Swamy+Temple%2C+Hyderabad+temple"
+		},
+		{
+			"slug": "sri-durgamamba-temple-khammam",
+			"name": "Sri Durgamamba Temple, Khammam",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Durgamamba+Temple%2C+Khammam"
+		},
+		{
+			"slug": "sri-yadadri-lakshmi-narasimha-swamy-temple-yadadri-bhuvanagiri",
+			"name": "Sri Yadadri Lakshmi Narasimha Swamy Temple, Yadadri Bhuvanagiri",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Yadadri+Lakshmi+Narasimha+Swamy+Temple%2C+Yadadri+Bhuvanagiri"
+		},
+		{
+			"slug": "sri-mallanna-temple-medak",
+			"name": "Sri Mallanna Temple, Medak",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Mallanna+Temple%2C+Medak"
+		},
+		{
+			"slug": "sri-bhramaramba-mallikarjuna-swamy-temple-warangal",
+			"name": "Sri Bhramaramba Mallikarjuna Swamy Temple, Warangal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sri+Bhramaramba+Mallikarjuna+Swamy+Temple%2C+Warangal"
+		},
+		{
+			"slug": "mata-tripura-sundari-temple-udaipur",
+			"name": "Mata Tripura Sundari Temple, (Udaipur)",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mata+Tripura+Sundari+Temple%2C+%28Udaipur%29"
+		},
+		{
+			"slug": "krishna-temple-agartala",
+			"name": "Krishna Temple, (Agartala)",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Krishna+Temple%2C+%28Agartala%29+Krishna+Temple"
+		},
+		{
+			"slug": "shiva-temple-agartala",
+			"name": "Shiva Temple, (Agartala)",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "durga-temple-agartala",
+			"name": "Durga Temple, (Agartala)",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "ujjayanta-temple-udaipur",
+			"name": "Ujjayanta Temple, (Udaipur)",
+			"status": "no_confident_wikidata_match"
+		},
+		{
+			"slug": "ram-temple-agartala",
+			"name": "Ram Temple, (Agartala)",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ram+Temple%2C+%28Agartala%29+Tripura"
+		},
+		{
+			"slug": "badrinath-temple-badrinath-uttarakhand",
+			"name": "Badrinath Temple, Badrinath, Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Badrinath+Temple%2C+Badrinath%2C+Uttarakhand+Badrinath"
+		},
+		{
+			"slug": "dakshineswar-kali-temple-kolkata-west-bengal",
+			"name": "Dakshineswar Kali Temple, Kolkata, West Bengal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dakshineswar+Kali+Temple%2C+Kolkata%2C+West+Bengal+Dakshineswar"
+		},
+		{
+			"slug": "haridwar-mansarovar-temple-haridwar-uttarakhand",
+			"name": "Haridwar Mansarovar Temple, Haridwar, Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Haridwar+Mansarovar+Temple%2C+Haridwar%2C+Uttarakhand+Haridwar"
+		},
+		{
+			"slug": "kedarnath-temple-kedarnath-uttarakhand",
+			"name": "Kedarnath Temple, Kedarnath, Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kedarnath+Temple%2C+Kedarnath%2C+Uttarakhand+Kedarnath"
+		},
+		{
+			"slug": "madurai-meenakshi-amman-temple-madurai-tamil-nadu",
+			"name": "Madurai Meenakshi Amman Temple, Madurai, Tamil Nadu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Madurai+Meenakshi+Amman+Temple%2C+Madurai%2C+Tamil+Nadu+Madurai"
+		},
+		{
+			"slug": "padmanabhaswamy-temple-thiruvananthapuram-kerala",
+			"name": "Padmanabhaswamy Temple, Thiruvananthapuram, Kerala",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Padmanabhaswamy+Temple%2C+Thiruvananthapuram%2C+Kerala"
+		},
+		{
+			"slug": "ram-janmabhoomi-temple-ayodhya-uttar-pradesh",
+			"name": "Ram Janmabhoomi Temple, Ayodhya, Uttar Pradesh",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ram+Janmabhoomi+Temple%2C+Ayodhya%2C+Uttar+Pradesh"
+		},
+		{
+			"slug": "srirangam-ranganathaswamy-temple-srirangam-tamil-nadu",
+			"name": "Srirangam Ranganathaswamy Temple, Srirangam, Tamil Nadu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Srirangam+Ranganathaswamy+Temple%2C+Srirangam%2C+Tamil+Nadu+Srirangam"
+		},
+		{
+			"slug": "akshardham-temple-new-delhi-delhi",
+			"name": "Akshardham Temple, New Delhi, Delhi",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Akshardham+Temple%2C+New+Delhi%2C+Delhi+Akshardham+Temple"
+		},
+		{
+			"slug": "golden-temple-amritsar-punjab",
+			"name": "Golden Temple, Amritsar, Punjab",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Golden+Temple%2C+Amritsar%2C+Punjab"
+		},
+		{
+			"slug": "konark-sun-temple-konark-odisha",
+			"name": "Konark Sun Temple, Konark, Odisha",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Konark+Sun+Temple%2C+Konark%2C+Odisha+Konark"
+		},
+		{
+			"slug": "puri-jagannath-temple-puri-odisha",
+			"name": "Puri Jagannath Temple, Puri, Odisha",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Puri+Jagannath+Temple%2C+Puri%2C+Odisha+Puri"
+		},
+		{
+			"slug": "vaishno-devi-temple-katra-jammu-and-kashmir",
+			"name": "Vaishno Devi Temple, Katra, Jammu and Kashmir",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Vaishno+Devi+Temple%2C+Katra%2C+Jammu+and+Kashmir+Katra"
+		},
+		{
+			"slug": "kashi-vishwanath-temple-varanasi-uttar-pradesh",
+			"name": "Kashi Vishwanath Temple, Varanasi, Uttar Pradesh",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kashi+Vishwanath+Temple%2C+Varanasi%2C+Uttar+Pradesh"
+		},
+		{
+			"slug": "somnath-temple-prabhas-patan-gujarat",
+			"name": "Somnath Temple, Prabhas Patan, Gujarat",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Somnath+Temple%2C+Prabhas+Patan%2C+Gujarat"
+		},
+		{
+			"slug": "mahabodhi-temple-bodh-gaya-bihar",
+			"name": "Mahabodhi Temple, Bodh Gaya, Bihar",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mahabodhi+Temple%2C+Bodh+Gaya%2C+Bihar"
+		},
+		{
+			"slug": "birla-mandir-kolkata-west-bengal",
+			"name": "Birla Mandir, Kolkata, West Bengal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Birla+Mandir%2C+Kolkata%2C+West+Bengal"
+		},
+		{
+			"slug": "badrinath-temple-badrinath-uttarakhand-2",
+			"name": "Badrinath Temple, (Badrinath), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Badrinath+Temple%2C+%28Badrinath%29%2C+Uttarakhand+Badrinath"
+		},
+		{
+			"slug": "yamunotri-temple-yamunotri-uttarakhand",
+			"name": "Yamunotri Temple, (Yamunotri), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Yamunotri+Temple%2C+%28Yamunotri%29%2C+Uttarakhand+Yamunotri"
+		},
+		{
+			"slug": "rishikesh-rishikesh-uttarakhand",
+			"name": "Rishikesh, (Rishikesh), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Rishikesh%2C+%28Rishikesh%29%2C+Uttarakhand"
+		},
+		{
+			"slug": "mansa-devi-temple-chandigarh-punjab",
+			"name": "Mansa Devi Temple, (Chandigarh), Punjab",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Mansa+Devi+Temple%2C+%28Chandigarh%29%2C+Punjab+Mansa+Devi+Temple"
+		},
+		{
+			"slug": "gangotri-temple-gangotri-uttarakhand",
+			"name": "Gangotri Temple, (Gangotri), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Gangotri+Temple%2C+%28Gangotri%29%2C+Uttarakhand+Gangotri"
+		},
+		{
+			"slug": "hemkund-sahib-gopeshwar-uttarakhand",
+			"name": "Hemkund Sahib, (Gopeshwar), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Hemkund+Sahib%2C+%28Gopeshwar%29%2C+Uttarakhand+Hemkund+Sahib"
+		},
+		{
+			"slug": "haridwar-dham-haridwar-uttarakhand",
+			"name": "Haridwar Dham, (Haridwar), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Haridwar+Dham%2C+%28Haridwar%29%2C+Uttarakhand+Haridwar"
+		},
+		{
+			"slug": "kedarnath-temple-kedarnath-uttarakhand-2",
+			"name": "Kedarnath Temple, (Kedarnath), Uttarakhand",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kedarnath+Temple%2C+%28Kedarnath%29%2C+Uttarakhand+Kedarnath"
+		},
+		{
+			"slug": "belur-math-howrah-west-bengal",
+			"name": "Belur Math, Howrah, West Bengal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Belur+Math%2C+Howrah%2C+West+Bengal+Belur"
+		},
+		{
+			"slug": "kalighat-temple-kolkata-west-bengal",
+			"name": "Kalighat Temple, Kolkata, West Bengal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kalighat+Temple%2C+Kolkata%2C+West+Bengal+Kalighat"
+		},
+		{
+			"slug": "jagannath-temple-puri-odisha",
+			"name": "Jagannath Temple, Puri, Odisha",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagannath+Temple%2C+Puri%2C+Odisha"
+		},
+		{
+			"slug": "tarakeswar-temple-hooghly-west-bengal",
+			"name": "Tarakeswar Temple, Hooghly, West Bengal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Tarakeswar+Temple%2C+Hooghly%2C+West+Bengal"
+		},
+		{
+			"slug": "dakshineswar-kali-temple-kolkata-west-bengal-2",
+			"name": "Dakshineswar Kali Temple, Kolkata, West Bengal",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Dakshineswar+Kali+Temple%2C+Kolkata%2C+West+Bengal+Dakshineswar"
+		},
+		{
+			"slug": "kamakhya-temple-guwahati-assam",
+			"name": "Kamakhya Temple, Guwahati, Assam",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kamakhya+Temple%2C+Guwahati%2C+Assam+Guwahati"
+		},
+		{
+			"slug": "ramakrishna-mission-ashram-port-blair",
+			"name": "Ramakrishna Mission Ashram, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Ramakrishna+Mission+Ashram%2C+Port+Blair"
+		},
+		{
+			"slug": "kali-temple-port-blair",
+			"name": "Kali Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kali+Temple%2C+Port+Blair+Kali+Temple"
+		},
+		{
+			"slug": "hanuman-temple-port-blair",
+			"name": "Hanuman Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Hanuman+Temple%2C+Port+Blair+temple"
+		},
+		{
+			"slug": "sai-baba-temple-port-blair",
+			"name": "Sai Baba Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Sai+Baba+Temple%2C+Port+Blair+temple"
+		},
+		{
+			"slug": "jagannath-temple-port-blair",
+			"name": "Jagannath Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Jagannath+Temple%2C+Port+Blair"
+		},
+		{
+			"slug": "durga-temple-port-blair",
+			"name": "Durga Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Durga+Temple%2C+Port+Blair+temple"
+		},
+		{
+			"slug": "murugan-temple-port-blair",
+			"name": "Murugan Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Murugan+Temple%2C+Port+Blair+Haddo"
+		},
+		{
+			"slug": "krishna-temple-port-blair",
+			"name": "Krishna Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Krishna+Temple%2C+Port+Blair+temple"
+		},
+		{
+			"slug": "shiva-temple-port-blair",
+			"name": "Shiva Temple, Port Blair",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shiva+Temple%2C+Port+Blair+Haddo"
+		},
+		{
+			"slug": "shri-ram-mandir-daman-daman-and-diu",
+			"name": "Shri Ram Mandir, Daman, Daman and Diu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Ram+Mandir%2C+Daman%2C+Daman+and+Diu+Daman"
+		},
+		{
+			"slug": "shri-mahadev-mandir-silvassa-dadra-and-nagar-haveli",
+			"name": "Shri Mahadev Mandir, Silvassa, Dadra and Nagar Haveli",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Mahadev+Mandir%2C+Silvassa%2C+Dadra+and+Nagar+Haveli+Silvassa"
+		},
+		{
+			"slug": "shri-sai-baba-mandir-diu-daman-and-diu",
+			"name": "Shri Sai Baba Mandir, Diu, Daman and Diu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Sai+Baba+Mandir%2C+Diu%2C+Daman+and+Diu+Diu"
+		},
+		{
+			"slug": "shri-hanuman-mandir-diu-daman-and-diu",
+			"name": "Shri Hanuman Mandir, Diu, Daman and Diu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Hanuman+Mandir%2C+Diu%2C+Daman+and+Diu+Diu"
+		},
+		{
+			"slug": "shri-ramnath-mandir-silvassa-dadra-and-nagar-haveli",
+			"name": "Shri Ramnath Mandir, Silvassa, Dadra and Nagar Haveli",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Ramnath+Mandir%2C+Silvassa%2C+Dadra+and+Nagar+Haveli"
+		},
+		{
+			"slug": "shri-lakshmi-narayan-mandir-daman-daman-and-diu",
+			"name": "Shri Lakshmi Narayan Mandir, Daman, Daman and Diu",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Shri+Lakshmi+Narayan+Mandir%2C+Daman%2C+Daman+and+Diu+Daman"
+		},
+		{
+			"slug": "androth-sri-krishna-temple-androth-lakshadweep",
+			"name": "Androth Sri Krishna Temple, Androth, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Androth+Sri+Krishna+Temple%2C+Androth%2C+Lakshadweep+Androth"
+		},
+		{
+			"slug": "kadmat-devi-temple-kadmat-lakshadweep",
+			"name": "Kadmat Devi Temple, Kadmat, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kadmat+Devi+Temple%2C+Kadmat%2C+Lakshadweep+Kadmat+Island"
+		},
+		{
+			"slug": "kiltan-devi-temple-kiltan-lakshadweep",
+			"name": "Kiltan Devi Temple, Kiltan, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kiltan+Devi+Temple%2C+Kiltan%2C+Lakshadweep+Kiltan"
+		},
+		{
+			"slug": "suheli-devi-temple-suheli-lakshadweep",
+			"name": "Suheli Devi Temple, Suheli, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Suheli+Devi+Temple%2C+Suheli%2C+Lakshadweep+Suheli"
+		},
+		{
+			"slug": "bangaram-devi-temple-bangaram-lakshadweep",
+			"name": "Bangaram Devi Temple, Bangaram, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Bangaram+Devi+Temple%2C+Bangaram%2C+Lakshadweep+Bangaram"
+		},
+		{
+			"slug": "minicoy-devi-temple-minicoy-lakshadweep",
+			"name": "Minicoy Devi Temple, Minicoy, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Minicoy+Devi+Temple%2C+Minicoy%2C+Lakshadweep+Minicoy+Island"
+		},
+		{
+			"slug": "kavaratti-sri-krishna-temple-kavaratti-lakshadweep",
+			"name": "Kavaratti Sri Krishna Temple, Kavaratti, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Kavaratti+Sri+Krishna+Temple%2C+Kavaratti%2C+Lakshadweep+Kavaratti"
+		},
+		{
+			"slug": "agatti-devi-temple-agatti-lakshadweep",
+			"name": "Agatti Devi Temple, Agatti, Lakshadweep",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Agatti+Devi+Temple%2C+Agatti%2C+Lakshadweep+Agatti+Island"
+		},
+		{
+			"slug": "arulmigu-kapaleeswarar-temple-pondicherry-puducherry",
+			"name": "Arulmigu Kapaleeswarar Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Kapaleeswarar+Temple%2C+Pondicherry%2C+Puducherry"
+		},
+		{
+			"slug": "arulmigu-sri-vailankanni-mariamman-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Vailankanni Mariamman Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Sri+Vailankanni+Mariamman+Temple%2C+Pondicherry%2C+Puducherry"
+		},
+		{
+			"slug": "arulmigu-sri-venugopalaswamy-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Venugopalaswamy Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Sri+Venugopalaswamy+Temple%2C+Pondicherry%2C+Puducherry"
+		},
+		{
+			"slug": "arulmigu-manakula-vinayagar-temple-pondicherry-puducherry",
+			"name": "Arulmigu Manakula Vinayagar Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Manakula+Vinayagar+Temple%2C+Pondicherry%2C+Puducherry"
+		},
+		{
+			"slug": "arulmigu-sri-veeraraghava-perumal-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Veeraraghava Perumal Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Sri+Veeraraghava+Perumal+Temple%2C+Pondicherry%2C+Puducherry"
+		},
+		{
+			"slug": "arulmigu-sri-raja-rajeshwari-amman-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Raja Rajeshwari Amman Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Sri+Raja+Rajeshwari+Amman+Temple%2C+Pondicherry%2C+Puducherry"
+		},
+		{
+			"slug": "arulmigu-sri-yoga-narasimha-swamy-temple-pondicherry-puducherry",
+			"name": "Arulmigu Sri Yoga Narasimha Swamy Temple, Pondicherry, Puducherry",
+			"status": "error",
+			"error": "429 Too Many Requests for https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&limit=5&search=Arulmigu+Sri+Yoga+Narasimha+Swamy+Temple%2C+Pondicherry%2C+Puducherry"
+		}
+	]
+}

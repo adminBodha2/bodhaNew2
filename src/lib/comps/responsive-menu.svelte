@@ -28,7 +28,6 @@
 
 	$effect(() => {
 		if (!mobileMenuOpen) return;
-
 		tick().then(() => {
 			firstMenuItem?.focus();
 		});

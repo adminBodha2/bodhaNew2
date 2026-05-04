@@ -162,10 +162,15 @@ h2
 		font-weight: 400
 	&.card-title
 		font-size: var(--typeH2)
+	&.header-2
+		font-size: var(--typeH2)
+		letter-spacing: -0.04rem
 	@media screen and (min-width: 1025px)
 		letter-spacing: -0.03rem
 		font-size: var(--typeH2)
 		&.card-title
+			font-size: var(--typeH3)
+		&.header-2
 			font-size: var(--typeH3)
 
 
@@ -382,7 +387,8 @@ a
 			text-decoration: underline
 			text-decoration-color: var(--color-theme)
 	&.linked
-		color: var(--color-theme-2)
+		text-decoration: underline
+		text-decoration-color: var(--color-theme-4)
 		&:hover
 			color: var(--color-theme)
 	&.linkonhover
