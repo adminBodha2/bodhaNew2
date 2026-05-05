@@ -147,12 +147,14 @@
 		const color = templeColor(temple.state);
 
 		return `
-			<div class="popup-temple-name">${temple.name}</div>
-			<div class="popup-state">
-				<span class="popup-state-dot" style="background:${color}"></span>
-				${temple.state}
-			</div>
-			<div class="popup-coords" style="background:transparent;color:#8b8078">${temple.latitude.toFixed(4)}, ${temple.longitude.toFixed(4)}</div>
+			<a class="popup-temple-link" href="/temples/${temple.slug}">
+				<div class="popup-temple-name">${temple.name}</div>
+				<div class="popup-state">
+					<span class="popup-state-dot" style="background:${color}"></span>
+					${temple.state}
+				</div>
+				<div class="popup-coords" style="background:transparent;color:#8b8078">${temple.latitude.toFixed(4)}, ${temple.longitude.toFixed(4)}</div>
+			</a>
 		`;
 	}
 
@@ -722,15 +724,20 @@
 		border-radius: 10px
 		padding: 12px 14px
 
-	:global(.maplibregl-popup-close-button)
-		color: #e0d5c8
-		font-size: 18px
-		padding: 2px 6px
+		:global(.maplibregl-popup-close-button)
+			color: #e0d5c8
+			font-size: 18px
+			padding: 2px 6px
 
-	:global(.popup-temple-name)
-		padding-right: 16px
-		font-weight: 700
-		color: #f7c948
+		:global(.popup-temple-link)
+			display: block
+			color: inherit
+			text-decoration: none
+
+		:global(.popup-temple-name)
+			padding-right: 16px
+			font-weight: 700
+			color: #f7c948
 
 	:global(.popup-state)
 		display: flex
