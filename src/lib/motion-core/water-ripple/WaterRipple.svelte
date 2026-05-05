@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Scene from "./WaterRippleScene.svelte";
+	import { onMount } from "svelte";
 	import { cn } from "../utils/cn";
+	import type Scene from "./WaterRippleScene.svelte";
 	import type { ComponentProps } from "svelte";
 
 	type SceneProps = ComponentProps<typeof Scene>;
@@ -28,11 +29,21 @@
 		brushSize = 20,
 		...rest
 	}: Props = $props();
+
+	let SceneComponent = $state<typeof Scene | null>(null);
+
+	onMount(async () => {
+		SceneComponent = (await import("./WaterRippleScene.svelte")).default;
+	});
 </script>
 
 <div class={cn("ripple-inner", className)} {...rest}>
 	<div class="carrier">
-		<Scene image={src} {brushSize} />
+		{#if SceneComponent}
+			<SceneComponent image={src} {brushSize} />
+		{:else}
+			<img class="ripple-fallback" {src} alt="" aria-hidden="true" />
+		{/if}
 	</div>
 </div>
 
@@ -51,5 +62,12 @@
 	height: 100%
 	width: 100%
 	overflow: hidden
+
+.ripple-fallback
+	position: absolute
+	inset: 0
+	height: 100%
+	width: 100%
+	object-fit: cover
 
 </style>
