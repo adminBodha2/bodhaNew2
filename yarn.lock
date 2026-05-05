@@ -1362,15 +1362,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gsap@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@types/gsap@npm:3.0.0"
-  dependencies:
-    gsap: "npm:*"
-  checksum: 10c0/da4d4cf2f4232b991eeef3e3a2589fdbb343bff2023e5f8860e4cba83a3fbbb16fa290f92be9910fd8161cd10c7e459bc16c0aa9d0bb5a2809e24eedabc56428
-  languageName: node
-  linkType: hard
-
 "@types/leaflet.markercluster@npm:^1":
   version: 1.5.6
   resolution: "@types/leaflet.markercluster@npm:1.5.6"
@@ -1673,7 +1664,6 @@ __metadata:
     "@sveltejs/kit": "npm:^2.57.0"
     "@sveltejs/vite-plugin-svelte": "npm:^7.0.0"
     "@types/flexsearch": "npm:^0.7.42"
-    "@types/gsap": "npm:^3.0.0"
     "@types/leaflet": "npm:^1"
     "@types/leaflet.markercluster": "npm:^1"
     "@types/node": "npm:^25.6.0"
@@ -1683,7 +1673,6 @@ __metadata:
     clsx: "npm:^2.1.1"
     flexsearch: "npm:^0.8.212"
     force-graph: "npm:^1.51.4"
-    gsap: "npm:^3.15.0"
     leaflet: "npm:^1.9.4"
     leaflet.markercluster: "npm:^1.5.3"
     maplibre-gl: "npm:^5.24.0"
@@ -2338,13 +2327,6 @@ __metadata:
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
-  languageName: node
-  linkType: hard
-
-"gsap@npm:*, gsap@npm:^3.15.0":
-  version: 3.15.0
-  resolution: "gsap@npm:3.15.0"
-  checksum: 10c0/5d86de72cb0bd6b20502c34c329a83a7d679979731bb465164407b7a5225aa61d612beee740eea36258622897c116cd2ca35320d530b7cf68bad62522361fcf7
   languageName: node
   linkType: hard
 

@@ -9,7 +9,7 @@
 	import Session from '$lib/icons/sessions.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Location from '$lib/icons/location.svelte';
-	import { WaterRipple } from '$lib/motion-core';
+	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();

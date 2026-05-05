@@ -2,31 +2,14 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
-	import { elementVisibilityStore } from '$lib/utils/elementVisibility'
-	import AnimatedOne from '$lib/comps/item-animated.svelte';
 	import Title from '$lib/comps/page-title.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Wordreveal from '$lib/comps/wordreveal.svelte'
-	import TextScramble from '$lib/comps/text-scramble.svelte'
-	import type { ComponentProps } from "svelte";
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
-
-	type Props = Partial<ComponentProps<typeof TextScramble>>;
-	let hoverTarget = $state<HTMLElement | null>(null);
-	let isVisible = $state(false)
-	let isHover = $state(false)
 
 	let iW = $state(0);
 	let sY = $state(0);
 
 	let imageLink = $state('/images/designbodha/key-desbodha.webp');
-
-	let {
-		scrambleDuration = 0.6,
-		stagger = 0.03,
-		cycles = 20,
-		characters = "DESIGNASKARMADESIGNASSEVADESIGNASDHARMA",
-	}: Props = $props();
 
 	const title = 'designBodha | Bodha';
 	const metaDescription = 'designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines.';
@@ -42,25 +25,6 @@
 			type: 'AboutPage'
 		})
 	);
-
-	function handleHover(){
-		isHover = !isHover
-	}
-
-	$effect(() => {
-		if (!hoverTarget) {
-			isVisible = false;
-			return;
-		}
-		const visibility = elementVisibilityStore(hoverTarget);
-		const unsubscribe = visibility.isVisible.subscribe((value: boolean) => {
-			isVisible = value;
-		});
-		return () => {
-			unsubscribe();
-			visibility.stop();
-		};
-	});
 
 	$effect(() => {
 		if (iW < 1025) {
@@ -97,17 +61,15 @@
 				<a class="primary desb" href="/designbodha/whitepaper-on-dharmic-design"><span>Whitepaper on Dharmic Design</span></a>
 			</div>
 			<div class="box down">
-				<AnimatedOne distance={200} direction="vertical" reverse={false} duration={1.6} initialOpacity={0} animateOpacity={true} scale={1.4} threshold={0.1} delay={0}>
-					<img class="square-image" src="/images/designbodha/db20.webp" alt="yagya" />
-				</AnimatedOne>
+				<img class="square-image" src="/images/designbodha/db20.webp" alt="yagya" />
 			</div>
 		</div>
 	</div>
-	<div class="stdbox stdpad bordertop" id="image-panel-2" bind:this={hoverTarget}>
+	<div class="stdbox stdpad bordertop" id="image-panel-2">
 			<img class="showoff" src="/images/designbodha/db17.webp" alt="db-hero"/>
 			<div class="row">
-				<button class="blank xleft ta-l" onmouseenter={handleHover} onmouseleave={handleHover}>
-					<TextScramble isScramble={isVisible || isHover} {scrambleDuration} {stagger} {cycles} {characters}>DESIGN AS YAGYA<br>DESIGN AS KARMA<br>DESIGN AS DHARMA</TextScramble>
+				<button class="blank xleft ta-l">
+					DESIGN AS YAGYA<br>DESIGN AS KARMA<br>DESIGN AS DHARMA
 				</button>
 			</div>
 			<h2 class="thin-heading anim-flyup">Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br>
@@ -116,7 +78,7 @@
 				of aligning human creation with the cosmic order.
 			</h2>
 			<div class="width60">
-			<Wordreveal children="It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life."/>
+				<p>It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
 			</div>
 	</div>
 	<div class="stdbox stdpad bordertop is-last">

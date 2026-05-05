@@ -9,7 +9,7 @@
 	import Time from '$lib/icons/time.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
 	import { absoluteImage, absoluteUrl, courseJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import { InteractiveGrid } from "$lib/motion-core";
+	import InteractiveGrid from '$lib/motion-core/interactive-grid/InteractiveGrid.svelte';
 	import type { ComponentProps } from "svelte"
 
 	const title = 'Introduction to Shri Ram Swarup | Bodha Courses';

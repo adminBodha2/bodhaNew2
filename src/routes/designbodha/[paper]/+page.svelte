@@ -2,7 +2,7 @@
 
 	import Container from '$lib/comps/wrapper.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
-	import { WaterRipple } from "$lib/motion-core";
+	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import Head from '$lib/comps/headcomponent.svelte'
 
 	let { data } = $props();

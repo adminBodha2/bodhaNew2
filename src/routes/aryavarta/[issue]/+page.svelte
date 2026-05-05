@@ -6,7 +6,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import PDFReader from '$lib/comps/pdfreader.svelte';
-	import { WaterRipple } from '$lib/motion-core';
+	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import { absoluteUrl, absoluteImage, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
