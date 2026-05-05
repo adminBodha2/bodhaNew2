@@ -92,7 +92,8 @@
 	let mapEl: HTMLDivElement;
 	let maplibre: typeof import('maplibre-gl') | undefined;
 	let map = $state<MapLibreMap | undefined>(undefined);
-	let activePopup: InstanceType<typeof import('maplibre-gl').Popup> | undefined;
+	let activeTemple = $state<TempleWithCoordinates | undefined>(undefined);
+	let popupPoint = $state<{ x: number; y: number } | undefined>(undefined);
 	let filterOpen = $state(false);
 	let searchQuery = $state('');
 	let dismissedSearchQuery = $state('');
@@ -143,33 +144,26 @@
 		return STATE_COLORS[state] ?? '#f7c948';
 	}
 
-	function popupHtml(temple: TempleWithCoordinates) {
-		const color = templeColor(temple.state);
+	function showTemplePopup(temple: TempleWithCoordinates) {
+		if (!map) return;
 
-		return `
-			<a class="popup-temple-link" href="/temples/${temple.slug}">
-				<div class="popup-temple-name">${temple.name}</div>
-				<div class="popup-state">
-					<span class="popup-state-dot" style="background:${color}"></span>
-					${temple.state}
-				</div>
-				<div class="popup-coords" style="background:transparent;color:#8b8078">${temple.latitude.toFixed(4)}, ${temple.longitude.toFixed(4)}</div>
-			</a>
-		`;
+		activeTemple = temple;
+		syncActivePopupPoint();
 	}
 
-	function showTemplePopup(temple: TempleWithCoordinates) {
-		if (!map || !maplibre) return;
+	function syncActivePopupPoint() {
+		if (!map || !activeTemple) {
+			popupPoint = undefined;
+			return;
+		}
 
-		activePopup?.remove();
-		activePopup = new maplibre.Popup({
-			closeButton: true,
-			closeOnClick: true,
-			offset: 14
-		})
-			.setLngLat([temple.longitude, temple.latitude])
-			.setHTML(popupHtml(temple))
-			.addTo(map);
+		const point = map.project([activeTemple.longitude, activeTemple.latitude]);
+		popupPoint = { x: point.x, y: point.y };
+	}
+
+	function closeTemplePopup() {
+		activeTemple = undefined;
+		popupPoint = undefined;
 	}
 
 	function findTempleBySlug(slug: string) {
@@ -380,45 +374,54 @@
 
 				const setupTempleMap = () => {
 					if (!mapInstance) return;
+					const activeMap = mapInstance;
 
-					loadBoundaryOverlay(mapInstance);
-					addTempleLayers(mapInstance);
+					loadBoundaryOverlay(activeMap);
+					addTempleLayers(activeMap);
 
-					mapInstance.on('click', 'temple-clusters', async (event) => {
-						if (!mapInstance) return;
-
-						const feature = mapInstance.queryRenderedFeatures(event.point, {
+					activeMap.on('click', 'temple-clusters', async (event) => {
+						const feature = activeMap.queryRenderedFeatures(event.point, {
 							layers: ['temple-clusters']
 						})[0];
 						const clusterId = feature?.properties?.cluster_id;
 						const coordinates = (feature?.geometry as { coordinates?: [number, number] } | undefined)
 							?.coordinates;
-						const source = mapInstance.getSource('temples') as GeoJSONSource | undefined;
+						const source = activeMap.getSource('temples') as GeoJSONSource | undefined;
 
 						if (!source || clusterId === undefined || !coordinates) return;
 
 						const zoom = await source.getClusterExpansionZoom(clusterId);
-						mapInstance.easeTo({
+						activeMap.easeTo({
 							center: coordinates,
 							zoom,
 							duration: 650
 						});
 					});
 
-				mapInstance.on('click', 'temple-points', (event) => {
-					const slug = event.features?.[0]?.properties?.slug;
-					if (typeof slug !== 'string') return;
+					activeMap.on('click', 'temple-points', (event) => {
+						const slug = event.features?.[0]?.properties?.slug;
+						if (typeof slug !== 'string') return;
 
-					const temple = findTempleBySlug(slug);
-					if (temple) showTemplePopup(temple);
-				});
+						const temple = findTempleBySlug(slug);
+						if (temple) showTemplePopup(temple);
+					});
+
+					activeMap.on('click', (event) => {
+						const clickedTempleFeature = activeMap.queryRenderedFeatures(event.point, {
+							layers: ['temple-points']
+						})[0];
+
+						if (!clickedTempleFeature) closeTemplePopup();
+					});
+
+					activeMap.on('move', syncActivePopupPoint);
 
 					for (const layerId of ['temple-clusters', 'temple-points']) {
-						mapInstance.on('mouseenter', layerId, () => {
-							mapInstance?.getCanvas().style.setProperty('cursor', 'pointer');
+						activeMap.on('mouseenter', layerId, () => {
+							activeMap.getCanvas().style.setProperty('cursor', 'pointer');
 						});
-						mapInstance.on('mouseleave', layerId, () => {
-							mapInstance?.getCanvas().style.setProperty('cursor', '');
+						activeMap.on('mouseleave', layerId, () => {
+							activeMap.getCanvas().style.setProperty('cursor', '');
 						});
 					}
 				};
@@ -434,7 +437,7 @@
 
 		return () => {
 			mounted = false;
-			activePopup?.remove();
+			closeTemplePopup();
 			mapInstance?.remove();
 			map = undefined;
 			maplibre = undefined;
@@ -448,6 +451,36 @@
 
 <section class="temple-map-shell">
 	<div bind:this={mapEl} class="temple-map"></div>
+	{#if activeTemple && popupPoint}
+		<div
+			class="temple-popup"
+			style={`left:${popupPoint.x}px;top:${popupPoint.y}px`}
+			role="dialog"
+			aria-label={activeTemple.name}
+		>
+			<button
+				type="button"
+				class="temple-popup-close"
+				aria-label="Close temple popup"
+				onclick={closeTemplePopup}
+			>
+				x
+			</button>
+			<a class="popup-temple-link" href={`/temples/${activeTemple.slug}`}>
+				<div class="popup-temple-name">{activeTemple.name}</div>
+				<div class="popup-state">
+					<span
+						class="popup-state-dot"
+						style={`background:${templeColor(activeTemple.state)}`}
+					></span>
+					{activeTemple.state}
+				</div>
+				<div class="popup-coords">
+					{activeTemple.latitude.toFixed(4)}, {activeTemple.longitude.toFixed(4)}
+				</div>
+			</a>
+		</div>
+	{/if}
 	<div class="search-panel">
 		<input
 			bind:value={searchQuery}
@@ -714,43 +747,68 @@
 	:global(.maplibregl-ctrl button + button)
 		border-top-color: rgba(247, 201, 72, 0.18)
 
-	:global(.maplibregl-popup-content),
-	:global(.maplibregl-popup-tip)
-		background: rgba(15, 15, 22, 0.98)
-		color: #e0d5c8
-
-	:global(.maplibregl-popup-content)
+	.temple-popup
+		position: absolute
+		z-index: 5
+		transform: translate(-50%, calc(-100% - 14px))
+		min-width: 190px
 		border: 1px solid rgba(247, 201, 72, 0.18)
 		border-radius: 10px
 		padding: 12px 14px
+		color: #e0d5c8
+		background: rgba(15, 15, 22, 0.98)
+		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32)
 
-		:global(.maplibregl-popup-close-button)
-			color: #e0d5c8
-			font-size: 18px
-			padding: 2px 6px
+		&::after
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: -8px
+			width: 14px
+			height: 14px
+			transform: translateX(-50%) rotate(45deg)
+			border-right: 1px solid rgba(247, 201, 72, 0.18)
+			border-bottom: 1px solid rgba(247, 201, 72, 0.18)
+			background: rgba(15, 15, 22, 0.98)
 
-		:global(.popup-temple-link)
-			display: block
-			color: inherit
-			text-decoration: none
+	.temple-popup-close
+		position: absolute
+		top: 2px
+		right: 6px
+		z-index: 1
+		border: 0
+		padding: 2px 6px
+		color: #e0d5c8
+		background: transparent
+		font-size: 18px
+		line-height: 1
+		cursor: pointer
 
-		:global(.popup-temple-name)
-			padding-right: 16px
-			font-weight: 700
+		&:hover
 			color: #f7c948
 
-	:global(.popup-state)
+	.popup-temple-link
+		display: block
+		color: inherit
+		text-decoration: none
+
+	.popup-temple-name
+		padding-right: 16px
+		font-weight: 700
+		color: #f7c948
+
+	.popup-state
 		display: flex
 		align-items: center
 		gap: 6px
 		margin-top: 6px
 
-	:global(.popup-state-dot)
+	.popup-state-dot
 		width: 8px
 		height: 8px
 		border-radius: 50%
 
-	:global(.popup-coords)
+	.popup-coords
 		margin-top: 6px
 		color: #8b8078
 		background: transparent
