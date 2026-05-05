@@ -1,0 +1,1878 @@
+[
+	{
+		"name": "Sri Jagannath Temple",
+		"slug": "sri-jagannath-temple",
+		"state": "Odisha",
+		"latitude": 19.804722,
+		"longitude": 85.818333
+	},
+	{
+		"name": "Kanchipuram Ekambareswarar Temple",
+		"slug": "kanchipuram-ekambareswarar-temple",
+		"state": "Tamil Nadu",
+		"latitude": 12.819,
+		"longitude": 79.725194
+	},
+	{
+		"name": "Tirumala Venkateswara Temple",
+		"slug": "tirumala-venkateswara-temple",
+		"state": "Andhra Pradesh",
+		"latitude": 13.68325,
+		"longitude": 79.347194
+	},
+	{
+		"name": "Madurai Meenakshi Amman Temple",
+		"slug": "madurai-meenakshi-amman-temple",
+		"state": "Tamil Nadu",
+		"latitude": 9.9197,
+		"longitude": 78.1194
+	},
+	{
+		"name": "Sringeri Sharada Peetham",
+		"slug": "sringeri-sharada-peetham",
+		"state": "Karnataka",
+		"latitude": 13.416519,
+		"longitude": 75.251972
+	},
+	{
+		"name": "Kamkhent",
+		"slug": "kamkhent",
+		"state": "Not Identified",
+		"latitude": null,
+		"longitude": null
+	},
+	{
+		"name": "Muktoknang",
+		"slug": "muktoknang",
+		"state": "Not Identified",
+		"latitude": null,
+		"longitude": null
+	},
+	{
+		"name": "Pelling Doi",
+		"slug": "pelling-doi",
+		"state": "Sikkim",
+		"latitude": 27.319772,
+		"longitude": 88.240033
+	},
+	{
+		"name": "Tawang Monastery",
+		"slug": "tawang-monastery",
+		"state": "Arunachal Pradesh",
+		"latitude": 27.586389,
+		"longitude": 91.8575
+	},
+	{
+		"name": "Kamlang Doi",
+		"slug": "kamlang-doi",
+		"state": "Arunachal Pradesh",
+		"latitude": 27.77350515,
+		"longitude": 96.32541765
+	},
+	{
+		"name": "Shakti Peeth",
+		"slug": "shakti-peeth",
+		"state": "Arunachal Pradesh",
+		"latitude": 27.83704726,
+		"longitude": 95.8813361
+	},
+	{
+		"name": "Namdrokpa",
+		"slug": "namdrokpa",
+		"state": "Arunachal Pradesh",
+		"latitude": 27.51849432,
+		"longitude": 92.16866638
+	},
+	{
+		"name": "Jakar Doi Murong",
+		"slug": "jakar-doi-murong",
+		"state": "Arunachal Pradesh",
+		"latitude": 28.13551077,
+		"longitude": 94.81583294
+	},
+	{
+		"name": "Umananda Temple",
+		"slug": "umananda-temple",
+		"state": "Assam",
+		"latitude": 26.196389,
+		"longitude": 91.745278
+	},
+	{
+		"name": "Bhubaneswari Temple",
+		"slug": "bhubaneswari-temple",
+		"state": "Odisha",
+		"latitude": 23.529,
+		"longitude": 91.505
+	},
+	{
+		"name": "Kamakhyaguri Temple",
+		"slug": "kamakhyaguri-temple",
+		"state": "Assam",
+		"latitude": 26.17361929,
+		"longitude": 91.73782503
+	},
+	{
+		"name": "Sukreswar Temple",
+		"slug": "sukreswar-temple",
+		"state": "Odisha",
+		"latitude": 19.808261,
+		"longitude": 85.817092
+	},
+	{
+		"name": "Kamakhya Temple",
+		"slug": "kamakhya-temple",
+		"state": "Assam",
+		"latitude": 26.166426,
+		"longitude": 91.705509
+	},
+	{
+		"name": "Navagraha Temple",
+		"slug": "navagraha-temple",
+		"state": "Gujarat",
+		"latitude": 23.658215,
+		"longitude": 73.083023
+	},
+	{
+		"name": "Siddivinayak Temple",
+		"slug": "siddivinayak-temple",
+		"state": "Maharashtra",
+		"latitude": 17.049039,
+		"longitude": 74.266827
+	},
+	{
+		"name": "Dakshineswar Kali Temple",
+		"slug": "dakshineswar-kali-temple",
+		"state": "West Bengal",
+		"latitude": 22.655,
+		"longitude": 88.357778
+	},
+	{
+		"name": "Hayagriva Madhava Temple",
+		"slug": "hayagriva-madhava-temple",
+		"state": "Odisha",
+		"latitude": 26.2427,
+		"longitude": 91.5265
+	},
+	{
+		"name": "Baidyanath Dham",
+		"slug": "baidyanath-dham",
+		"state": "Jharkhand",
+		"latitude": 24.4925,
+		"longitude": 86.7
+	},
+	{
+		"name": "Kashi Vishwanath Temple",
+		"slug": "kashi-vishwanath-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 25.310775,
+		"longitude": 83.010614
+	},
+	{
+		"name": "Ram Janmabhoomi Temple",
+		"slug": "ram-janmabhoomi-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 26.8757329,
+		"longitude": 82.20720027
+	},
+	{
+		"name": "Surya Kund Temple",
+		"slug": "surya-kund-temple",
+		"state": "Gujarat",
+		"latitude": 20.8870997,
+		"longitude": 70.41283814
+	},
+	{
+		"name": "Bihar Sharif",
+		"slug": "bihar-sharif",
+		"state": "Bihar",
+		"latitude": 25.197,
+		"longitude": 85.518
+	},
+	{
+		"name": "Mahabodhi Temple",
+		"slug": "mahabodhi-temple",
+		"state": "Bihar",
+		"latitude": 24.696,
+		"longitude": 84.9913
+	},
+	{
+		"name": "Uttar Gaya Temple",
+		"slug": "uttar-gaya-temple",
+		"state": "Bihar",
+		"latitude": 24.791396,
+		"longitude": 85.000234
+	},
+	{
+		"name": "Sitamarhi Temple",
+		"slug": "sitamarhi-temple",
+		"state": "Bihar",
+		"latitude": 26.594167,
+		"longitude": 85.500556
+	},
+	{
+		"name": "Jagannath Puri",
+		"slug": "jagannath-puri",
+		"state": "Odisha",
+		"latitude": 19.810556,
+		"longitude": 85.831389
+	},
+	{
+		"name": "Jagannath Temple",
+		"slug": "jagannath-temple",
+		"state": "Odisha",
+		"latitude": 19.804722,
+		"longitude": 85.818333
+	},
+	{
+		"name": "Meenakshi Amman Temple",
+		"slug": "meenakshi-amman-temple",
+		"state": "Tamil Nadu",
+		"latitude": 9.9197,
+		"longitude": 78.1194
+	},
+	{
+		"name": "Chidambaram Nataraja Temple",
+		"slug": "chidambaram-nataraja-temple",
+		"state": "Chhattisgarh",
+		"latitude": 11.407045,
+		"longitude": 79.691245
+	},
+	{
+		"name": "Sri Padmanabhaswamy Temple",
+		"slug": "sri-padmanabhaswamy-temple",
+		"state": "Kerala",
+		"latitude": 8.482778,
+		"longitude": 76.943611
+	},
+	{
+		"name": "Kashi Vishwanath Temple",
+		"slug": "kashi-vishwanath-temple-2",
+		"state": "Uttar Pradesh",
+		"latitude": 25.310775,
+		"longitude": 83.010614
+	},
+	{
+		"name": "Brihadeeswarar Temple",
+		"slug": "brihadeeswarar-temple",
+		"state": "Tamil Nadu",
+		"latitude": 10.78258,
+		"longitude": 79.131382
+	},
+	{
+		"name": "Dwarkadish Temple",
+		"slug": "dwarkadish-temple",
+		"state": "Gujarat",
+		"latitude": 22.237886,
+		"longitude": 68.967561
+	},
+	{
+		"name": "Tirupati Venkateswara Temple",
+		"slug": "tirupati-venkateswara-temple",
+		"state": "Andhra Pradesh",
+		"latitude": 13.68555859,
+		"longitude": 79.34716682
+	},
+	{
+		"name": "Ranganathaswamy Temple",
+		"slug": "ranganathaswamy-temple",
+		"state": "Tamil Nadu",
+		"latitude": 10.8625,
+		"longitude": 78.689722
+	},
+	{
+		"name": "Shantadurga Temple",
+		"slug": "shantadurga-temple",
+		"state": "Maharashtra",
+		"latitude": 15.673508,
+		"longitude": 74.056171
+	},
+	{
+		"name": "Chapaguri Temple",
+		"slug": "chapaguri-temple",
+		"state": "West Bengal",
+		"latitude": 26.362365,
+		"longitude": 89.476581
+	},
+	{
+		"name": "Shri Shantadurga Temple",
+		"slug": "shri-shantadurga-temple",
+		"state": "Maharashtra",
+		"latitude": 15.673508,
+		"longitude": 74.056171
+	},
+	{
+		"name": "Shri Mangueshi Temple",
+		"slug": "shri-mangueshi-temple",
+		"state": "Maharashtra",
+		"latitude": 15.444905,
+		"longitude": 73.966382
+	},
+	{
+		"name": "Mahalaxmi Temple",
+		"slug": "mahalaxmi-temple",
+		"state": "Maharashtra",
+		"latitude": 18.9774,
+		"longitude": 72.8065
+	},
+	{
+		"name": "Mahadeva Temple",
+		"slug": "mahadeva-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 24.853,
+		"longitude": 79.9197
+	},
+	{
+		"name": "Shri Mangueshi Temple",
+		"slug": "shri-mangueshi-temple-2",
+		"state": "Maharashtra",
+		"latitude": 15.444905,
+		"longitude": 73.966382
+	},
+	{
+		"name": "Shri Ramnath Temple",
+		"slug": "shri-ramnath-temple",
+		"state": "Tamil Nadu",
+		"latitude": 9.288114,
+		"longitude": 79.317392
+	},
+	{
+		"name": "Bhagwan Mahavir Temple",
+		"slug": "bhagwan-mahavir-temple",
+		"state": "Delhi",
+		"latitude": 28.556061,
+		"longitude": 77.253868
+	},
+	{
+		"name": "Ambaji Temple",
+		"slug": "ambaji-temple",
+		"state": "Gujarat",
+		"latitude": 24.33,
+		"longitude": 72.85
+	},
+	{
+		"name": "Dwarkadhish Temple",
+		"slug": "dwarkadhish-temple",
+		"state": "Gujarat",
+		"latitude": 22.237886,
+		"longitude": 68.967561
+	},
+	{
+		"name": "Pataneshwar Mahadev Temple",
+		"slug": "pataneshwar-mahadev-temple",
+		"state": "Gujarat",
+		"latitude": 23.858553,
+		"longitude": 72.11597
+	},
+	{
+		"name": "Swaminarayan Akshardham Temple",
+		"slug": "swaminarayan-akshardham-temple",
+		"state": "Delhi",
+		"latitude": 28.6125,
+		"longitude": 77.277222
+	},
+	{
+		"name": "Akshardham Temple",
+		"slug": "akshardham-temple",
+		"state": "Delhi",
+		"latitude": 28.6125,
+		"longitude": 77.277222
+	},
+	{
+		"name": "Modhera Sun Temple",
+		"slug": "modhera-sun-temple",
+		"state": "Gujarat",
+		"latitude": 23.583806,
+		"longitude": 72.132686
+	},
+	{
+		"name": "Shree Swaminarayan Mandir",
+		"slug": "shree-swaminarayan-mandir",
+		"state": "Gujarat",
+		"latitude": 21.210651,
+		"longitude": 72.790681
+	},
+	{
+		"name": "Shri Siddhivinayak Temple",
+		"slug": "shri-siddhivinayak-temple",
+		"state": "Maharashtra",
+		"latitude": 19.01692,
+		"longitude": 72.830409
+	},
+	{
+		"name": "Somnath Temple",
+		"slug": "somnath-temple",
+		"state": "Gujarat",
+		"latitude": 20.888028,
+		"longitude": 70.401389
+	},
+	{
+		"name": "Shri Sheetla Mata Temple",
+		"slug": "shri-sheetla-mata-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 25.288532,
+		"longitude": 82.99989
+	},
+	{
+		"name": "Shri Balaji Temple",
+		"slug": "shri-balaji-temple",
+		"state": "Andhra Pradesh",
+		"latitude": 17.743222,
+		"longitude": 83.316361
+	},
+	{
+		"name": "Shri Laxmi Narayan Temple",
+		"slug": "shri-laxmi-narayan-temple",
+		"state": "Delhi",
+		"latitude": 20.264722,
+		"longitude": 85.861111
+	},
+	{
+		"name": "Shri Hanuman Temple",
+		"slug": "shri-hanuman-temple",
+		"state": "Delhi",
+		"latitude": 28.63,
+		"longitude": 77.215
+	},
+	{
+		"name": "Shri Kali Mata Temple",
+		"slug": "shri-kali-mata-temple",
+		"state": "West Bengal",
+		"latitude": 22.450218,
+		"longitude": 88.386718
+	},
+	{
+		"name": "Shri Shiv Mandir",
+		"slug": "shri-shiv-mandir",
+		"state": "Haryana",
+		"latitude": 28.445461,
+		"longitude": 77.027769
+	},
+	{
+		"name": "Shri Ganesha Temple",
+		"slug": "shri-ganesha-temple",
+		"state": "Maharashtra",
+		"latitude": 18.276056,
+		"longitude": 74.321389
+	},
+	{
+		"name": "Shri Mata Mansa Devi Temple",
+		"slug": "shri-mata-mansa-devi-temple",
+		"state": "Punjab",
+		"latitude": 30.76489399,
+		"longitude": 76.65679155
+	},
+	{
+		"name": "Chintapurni Temple",
+		"slug": "chintapurni-temple",
+		"state": "Andhra Pradesh",
+		"latitude": 31.80875316,
+		"longitude": 76.10278884
+	},
+	{
+		"name": "Trilokinath Temple",
+		"slug": "trilokinath-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 32.7,
+		"longitude": 76.683333
+	},
+	{
+		"name": "Hadimba Temple",
+		"slug": "hadimba-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 32.248444,
+		"longitude": 77.180839
+	},
+	{
+		"name": "Shrikhand Mahadev Temple",
+		"slug": "shrikhand-mahadev-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 31.659006,
+		"longitude": 77.645737
+	},
+	{
+		"name": "Jwalamukhi Temple",
+		"slug": "jwalamukhi-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 31.8752,
+		"longitude": 76.3243
+	},
+	{
+		"name": "Bhimakali Temple",
+		"slug": "bhimakali-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 31.449431,
+		"longitude": 77.630869
+	},
+	{
+		"name": "Maharishi Ved Vyas Temple",
+		"slug": "maharishi-ved-vyas-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 32.36881885,
+		"longitude": 77.24548712
+	},
+	{
+		"name": "Mata Murti Temple",
+		"slug": "mata-murti-temple",
+		"state": "Rajasthan",
+		"latitude": 26.85698,
+		"longitude": 75.7709
+	},
+	{
+		"name": "Naina Devi Temple",
+		"slug": "naina-devi-temple",
+		"state": "Himachal Pradesh",
+		"latitude": 31.306028,
+		"longitude": 76.536394
+	},
+	{
+		"name": "Bhadrakali Temple",
+		"slug": "bhadrakali-temple",
+		"state": "West Bengal",
+		"latitude": 22.64055,
+		"longitude": 88.346795
+	},
+	{
+		"name": "Hari Parbat Temple",
+		"slug": "hari-parbat-temple",
+		"state": "Jammu and Kashmir",
+		"latitude": 34.105278,
+		"longitude": 74.816111
+	},
+	{
+		"name": "Katra Temple",
+		"slug": "katra-temple",
+		"state": "Jammu and Kashmir",
+		"latitude": 32.989444,
+		"longitude": 74.933333
+	},
+	{
+		"name": "Raghunath Temple",
+		"slug": "raghunath-temple",
+		"state": "Odisha",
+		"latitude": 32.730401,
+		"longitude": 74.862325
+	},
+	{
+		"name": "Shri Mata Vaishno Devi Temple",
+		"slug": "shri-mata-vaishno-devi-temple",
+		"state": "Jammu and Kashmir",
+		"latitude": 33.0299,
+		"longitude": 74.9482
+	},
+	{
+		"name": "Durga Temple",
+		"slug": "durga-temple",
+		"state": "Jammu and Kashmir",
+		"latitude": 34.075619,
+		"longitude": 74.832571
+	},
+	{
+		"name": "Mukhteshwar Temple",
+		"slug": "mukhteshwar-temple",
+		"state": "Punjab",
+		"latitude": 32.42491978,
+		"longitude": 75.73407801
+	},
+	{
+		"name": "Amarnath Temple",
+		"slug": "amarnath-temple",
+		"state": "Jammu and Kashmir",
+		"latitude": 34.2149,
+		"longitude": 75.5008
+	},
+	{
+		"name": "Shiva Temple",
+		"slug": "shiva-temple",
+		"state": "Jammu and Kashmir",
+		"latitude": 32.695664,
+		"longitude": 75.060866
+	},
+	{
+		"name": "Jyeshteeshwar Mahadev Temple",
+		"slug": "jyeshteeshwar-mahadev-temple",
+		"state": "Maharashtra",
+		"latitude": 17.677549,
+		"longitude": 75.329242
+	},
+	{
+		"name": "Jagannath Temple",
+		"slug": "jagannath-temple-2",
+		"state": "Odisha",
+		"latitude": 19.804722,
+		"longitude": 85.818333
+	},
+	{
+		"name": "Maa Vindhyavasini Temple",
+		"slug": "maa-vindhyavasini-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 25.166667,
+		"longitude": 82.5
+	},
+	{
+		"name": "Maa Chandi Temple",
+		"slug": "maa-chandi-temple",
+		"state": "Odisha",
+		"latitude": 20.706274,
+		"longitude": 86.099043
+	},
+	{
+		"name": "Maa Gomti Temple",
+		"slug": "maa-gomti-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 26.613868,
+		"longitude": 81.676998
+	},
+	{
+		"name": "Maa Pataleshwari Temple",
+		"slug": "maa-pataleshwari-temple",
+		"state": "Bihar",
+		"latitude": 25.622313,
+		"longitude": 85.133614
+	},
+	{
+		"name": "Kameshwar Dham",
+		"slug": "kameshwar-dham",
+		"state": "Uttar Pradesh",
+		"latitude": 25.718541,
+		"longitude": 83.96425593
+	},
+	{
+		"name": "Maa Dhakeswari Temple",
+		"slug": "maa-dhakeswari-temple",
+		"state": "Not Identified",
+		"latitude": null,
+		"longitude": null
+	},
+	{
+		"name": "Baidyanath Dham",
+		"slug": "baidyanath-dham-2",
+		"state": "Jharkhand",
+		"latitude": 24.4925,
+		"longitude": 86.7
+	},
+	{
+		"name": "Maa Manasa Temple",
+		"slug": "maa-manasa-temple",
+		"state": "Assam",
+		"latitude": 26.17627132,
+		"longitude": 91.74005146
+	},
+	{
+		"name": "Maa Basukinath Temple",
+		"slug": "maa-basukinath-temple",
+		"state": "Bihar",
+		"latitude": 24.662222,
+		"longitude": 87.1525
+	},
+	{
+		"name": "Sri Krishna Temple",
+		"slug": "sri-krishna-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 27.504748,
+		"longitude": 77.669754
+	},
+	{
+		"name": "Vittala Temple",
+		"slug": "vittala-temple",
+		"state": "Karnataka",
+		"latitude": 15.334444,
+		"longitude": 76.462222
+	},
+	{
+		"name": "Mallikarjuna Temple",
+		"slug": "mallikarjuna-temple",
+		"state": "Andhra Pradesh",
+		"latitude": 16.074167,
+		"longitude": 78.868056
+	},
+	{
+		"name": "Mahadev Temple",
+		"slug": "mahadev-temple",
+		"state": "Uttar Pradesh",
+		"latitude": 24.2125,
+		"longitude": 83.038056
+	},
+	{
+		"name": "Chamundeshwari Temple",
+		"slug": "chamundeshwari-temple",
+		"state": "Karnataka",
+		"latitude": 12.272474,
+		"longitude": 76.670611
+	},
+	{
+		"name": "Kashi Vishwanath Temple",
+		"slug": "kashi-vishwanath-temple-3",
+		"state": "Uttar Pradesh",
+		"latitude": 25.310775,
+		"longitude": 83.010614
+	},
+	{
+		"name": "Shiva Temple",
+		"slug": "shiva-temple-2",
+		"state": "Karnataka",
+		"latitude": 13.078854,
+		"longitude": 75.000147
+	},
+	{
+		"name": "Durga Temple",
+		"slug": "durga-temple-2",
+		"state": "Karnataka",
+		"latitude": 16.020667,
+		"longitude": 75.881944
+	},
+	{
+		"name": "Badami Cave Temples",
+		"slug": "badami-cave-temples",
+		"state": "Karnataka",
+		"latitude": 15.918333,
+		"longitude": 75.684167
+	},
+	{
+		"name": "Guruvayur Temple",
+		"slug": "guruvayur-temple",
+		"state": "Kerala",
+		"latitude": 10.5945,
+		"longitude": 76.039
+	},
+	{
+		"name": "Thrissur Pooram",
+		"slug": "thrissur-pooram",
+		"state": "Kerala",
+		"latitude": 10.524118,
+		"longitude": 76.212065
+	},
+	{
+		"name": "Mahadeva Temple",
+		"slug": "mahadeva-temple-2",
+		"state": "Madhya Pradesh",
+		"latitude": 24.853,
+		"longitude": 79.9197
+	},
+	{
+		"name": "Subramanya Swami Temple",
+		"slug": "subramanya-swami-temple",
+		"state": "Tamil Nadu",
+		"latitude": 8.495926,
+		"longitude": 78.1294
+	},
+	{
+		"name": "Dakshinamurthy Temple",
+		"slug": "dakshinamurthy-temple",
+		"state": "Kerala",
+		"latitude": 9.347913,
+		"longitude": 76.528588
+	},
+	{
+		"name": "Krishna Temple",
+		"slug": "krishna-temple",
+		"state": "Kerala",
+		"latitude": 13.332222,
+		"longitude": 74.746111
+	},
+	{
+		"name": "Ayyappan Temple",
+		"slug": "ayyappan-temple",
+		"state": "Kerala",
+		"latitude": 9.434598,
+		"longitude": 77.081378
+	},
+	{
+		"name": "Sree Padmanabhaswamy Temple",
+		"slug": "sree-padmanabhaswamy-temple",
+		"state": "Kerala",
+		"latitude": 8.482778,
+		"longitude": 76.943611
+	},
+	{
+		"name": "Ashtalakshmi Temple",
+		"slug": "ashtalakshmi-temple",
+		"state": "Tamil Nadu",
+		"latitude": 12.9926,
+		"longitude": 80.2704
+	},
+	{
+		"name": "Vadakkumnathan Temple",
+		"slug": "vadakkumnathan-temple",
+		"state": "Kerala",
+		"latitude": 10.524494,
+		"longitude": 76.214513
+	},
+	{
+		"name": "Omkareshwar Temple",
+		"slug": "omkareshwar-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 22.245583,
+		"longitude": 76.151056
+	},
+	{
+		"name": "Bhopal Bhimtaleshwar Temple",
+		"slug": "bhopal-bhimtaleshwar-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 23.259933,
+		"longitude": 77.412615
+	},
+	{
+		"name": "Dhar Somnath Temple",
+		"slug": "dhar-somnath-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 22.598055,
+		"longitude": 75.303963
+	},
+	{
+		"name": "Gwalior Fort",
+		"slug": "gwalior-fort",
+		"state": "Madhya Pradesh",
+		"latitude": 26.2303,
+		"longitude": 78.1689
+	},
+	{
+		"name": "Khajuraho Group of Monuments",
+		"slug": "khajuraho-group-of-monuments",
+		"state": "Madhya Pradesh",
+		"latitude": 24.854422,
+		"longitude": 79.921427
+	},
+	{
+		"name": "Maheshwar Mahamaya Temple",
+		"slug": "maheshwar-mahamaya-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 22.177285,
+		"longitude": 75.582978
+	},
+	{
+		"name": "Chitrakoot Ram Janmabhoomi Temple",
+		"slug": "chitrakoot-ram-janmabhoomi-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 25.178815,
+		"longitude": 80.865453
+	},
+	{
+		"name": "Mandu Hindola Mahal",
+		"slug": "mandu-hindola-mahal",
+		"state": "Madhya Pradesh",
+		"latitude": 22.35703249,
+		"longitude": 75.39286842
+	},
+	{
+		"name": "Ujjain Mahakaleshwar Temple",
+		"slug": "ujjain-mahakaleshwar-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 23.17,
+		"longitude": 75.79
+	},
+	{
+		"name": "Shri Mahalaxmi Temple, Mumbai",
+		"slug": "shri-mahalaxmi-temple-mumbai",
+		"state": "Maharashtra",
+		"latitude": 18.97614,
+		"longitude": 72.80742
+	},
+	{
+		"name": "Shri Vitthal Rukmini Temple, Pandharpur",
+		"slug": "shri-vitthal-rukmini-temple-pandharpur",
+		"state": "Maharashtra",
+		"latitude": 17.677778,
+		"longitude": 75.327778
+	},
+	{
+		"name": "Shri Trimbakeshwar Temple, Nashik",
+		"slug": "shri-trimbakeshwar-temple-nashik",
+		"state": "Maharashtra",
+		"latitude": 19.932222,
+		"longitude": 73.530833
+	},
+	{
+		"name": "Shri Aundheshwar Temple, Pune",
+		"slug": "shri-aundheshwar-temple-pune",
+		"state": "Maharashtra",
+		"latitude": 18.565312,
+		"longitude": 73.810752
+	},
+	{
+		"name": "Shri Kashi Vishwanath Temple, Kolhapur",
+		"slug": "shri-kashi-vishwanath-temple-kolhapur",
+		"state": "Maharashtra",
+		"latitude": 16.706369,
+		"longitude": 74.248177
+	},
+	{
+		"name": "Shri Haji Ali Dargah, Mumbai",
+		"slug": "shri-haji-ali-dargah-mumbai",
+		"state": "Maharashtra",
+		"latitude": 19.076111,
+		"longitude": 72.8775
+	},
+	{
+		"name": "Shri Rameshwar Temple, Nasik",
+		"slug": "shri-rameshwar-temple-nasik",
+		"state": "Maharashtra",
+		"latitude": 19.940522,
+		"longitude": 73.759373
+	},
+	{
+		"name": "Shri Siddhivinayak Temple, Mumbai",
+		"slug": "shri-siddhivinayak-temple-mumbai",
+		"state": "Maharashtra",
+		"latitude": 19.01692,
+		"longitude": 72.830409
+	},
+	{
+		"name": "Shri Tulja Bhavani Temple, Tuljapur",
+		"slug": "shri-tulja-bhavani-temple-tuljapur",
+		"state": "Maharashtra",
+		"latitude": 18.011386,
+		"longitude": 76.125641
+	},
+	{
+		"name": "Shri Bhimashankar Temple, Pune",
+		"slug": "shri-bhimashankar-temple-pune",
+		"state": "Maharashtra",
+		"latitude": 19.072,
+		"longitude": 73.536
+	},
+	{
+		"name": "Shri Shri Singhaji Singh Temple",
+		"slug": "shri-shri-singhaji-singh-temple",
+		"state": "Madhya Pradesh",
+		"latitude": 22.03611475,
+		"longitude": 76.6173935
+	},
+	{
+		"name": "Shri Shri Shri Govindajee Temple, Bishnupur",
+		"slug": "shri-shri-shri-govindajee-temple-bishnupur",
+		"state": "West Bengal",
+		"latitude": 24.620172,
+		"longitude": 93.759857
+	},
+	{
+		"name": "Shri Shri Shri Govindajee Temple, Wangkhei",
+		"slug": "shri-shri-shri-govindajee-temple-wangkhei",
+		"state": "Manipur",
+		"latitude": 24.817011,
+		"longitude": 93.936844
+	},
+	{
+		"name": "Shri Shri Shree Govindajee Temple, Kakching",
+		"slug": "shri-shri-shree-govindajee-temple-kakching",
+		"state": "Manipur",
+		"latitude": 24.497538,
+		"longitude": 93.986321
+	},
+	{
+		"name": "Shri Govindajee Temple, Imphal",
+		"slug": "shri-govindajee-temple-imphal",
+		"state": "Manipur",
+		"latitude": 24.817011,
+		"longitude": 93.936844
+	},
+	{
+		"name": "Shri Shri Shri Govindajee Temple, Moirang",
+		"slug": "shri-shri-shri-govindajee-temple-moirang",
+		"state": "Manipur",
+		"latitude": 24.817011,
+		"longitude": 93.936844
+	},
+	{
+		"name": "Kamakhya Temple, Guwahati",
+		"slug": "kamakhya-temple-guwahati",
+		"state": "Assam",
+		"latitude": 26.166426,
+		"longitude": 91.705509
+	},
+	{
+		"name": "ISKCON Temple, Guwahati",
+		"slug": "iskcon-temple-guwahati",
+		"state": "Assam",
+		"latitude": 26.176884,
+		"longitude": 91.759389
+	},
+	{
+		"name": "Dakshineswar Kali Temple, Kolkata",
+		"slug": "dakshineswar-kali-temple-kolkata",
+		"state": "West Bengal",
+		"latitude": 22.654884,
+		"longitude": 88.357691
+	},
+	{
+		"name": "Hayagriva Madhava Temple, Hajo",
+		"slug": "hayagriva-madhava-temple-hajo",
+		"state": "Assam",
+		"latitude": 26.2427,
+		"longitude": 91.5265
+	},
+	{
+		"name": "Umananda Temple, Guwahati",
+		"slug": "umananda-temple-guwahati",
+		"state": "Assam",
+		"latitude": 26.196389,
+		"longitude": 91.745278
+	},
+	{
+		"name": "Navagraha Temple, Guwahati",
+		"slug": "navagraha-temple-guwahati",
+		"state": "Assam",
+		"latitude": 26.172222,
+		"longitude": 91.745833
+	},
+	{
+		"name": "Shri Ram Janaki Temple, Aizawl",
+		"slug": "shri-ram-janaki-temple-aizawl",
+		"state": "Mizoram",
+		"latitude": 23.730718,
+		"longitude": 92.717311
+	},
+	{
+		"name": "Shri Hanuman Temple, Aizawl",
+		"slug": "shri-hanuman-temple-aizawl",
+		"state": "Mizoram",
+		"latitude": 23.730718,
+		"longitude": 92.717311
+	},
+	{
+		"name": "Shri Laxmi Narayan Temple, Aizawl",
+		"slug": "shri-laxmi-narayan-temple-aizawl",
+		"state": "Mizoram",
+		"latitude": 23.730718,
+		"longitude": 92.717311
+	},
+	{
+		"name": "Shri Shiva Temple, Aizawl",
+		"slug": "shri-shiva-temple-aizawl",
+		"state": "Mizoram",
+		"latitude": 23.734044,
+		"longitude": 92.725823
+	},
+	{
+		"name": "Shri Radha Krishna Temple, Aizawl",
+		"slug": "shri-radha-krishna-temple-aizawl",
+		"state": "Mizoram",
+		"latitude": 23.730718,
+		"longitude": 92.717311
+	},
+	{
+		"name": "Shri Shri Maa Kamakhya Temple, Kohima",
+		"slug": "shri-shri-maa-kamakhya-temple-kohima",
+		"state": "Nagaland",
+		"latitude": 25.674242,
+		"longitude": 94.108594
+	},
+	{
+		"name": "Shri Shri Lakshmi Narayan Temple, Tuensang",
+		"slug": "shri-shri-lakshmi-narayan-temple-tuensang",
+		"state": "Nagaland",
+		"latitude": 26.234793,
+		"longitude": 94.811956
+	},
+	{
+		"name": "Shri Shri Sankaradeva Temple, Dimapur",
+		"slug": "shri-shri-sankaradeva-temple-dimapur",
+		"state": "Nagaland",
+		"latitude": 25.904165,
+		"longitude": 93.725286
+	},
+	{
+		"name": "Shri Shri Shiv Mandir, Wokha",
+		"slug": "shri-shri-shiv-mandir-wokha",
+		"state": "Nagaland",
+		"latitude": 26.10239,
+		"longitude": 94.252244
+	},
+	{
+		"name": "Shri Shri Durgabari Temple, Mokokchung",
+		"slug": "shri-shri-durgabari-temple-mokokchung",
+		"state": "Nagaland",
+		"latitude": 26.321031,
+		"longitude": 94.514716
+	},
+	{
+		"name": "Lingaraja Temple, Bhubaneswar",
+		"slug": "lingaraja-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.238333,
+		"longitude": 85.833611
+	},
+	{
+		"name": "Mukteshwar Temple, Bhubaneswar",
+		"slug": "mukteshwar-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.242705,
+		"longitude": 85.84045
+	},
+	{
+		"name": "Adi Keshava Temple, Bhubaneswar",
+		"slug": "adi-keshava-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.349438,
+		"longitude": 85.838947
+	},
+	{
+		"name": "Rajarani Temple, Bhubaneswar",
+		"slug": "rajarani-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.243444,
+		"longitude": 85.843522
+	},
+	{
+		"name": "Vaital Deula, Bhubaneswar",
+		"slug": "vaital-deula-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.24238,
+		"longitude": 85.832325
+	},
+	{
+		"name": "Konark Sun Temple, Konark",
+		"slug": "konark-sun-temple-konark",
+		"state": "Odisha",
+		"latitude": 19.887595,
+		"longitude": 86.094536
+	},
+	{
+		"name": "Brahmeswara Temple, Bhubaneswar",
+		"slug": "brahmeswara-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.239734,
+		"longitude": 85.851727
+	},
+	{
+		"name": "Jagannath Temple, Puri",
+		"slug": "jagannath-temple-puri",
+		"state": "Odisha",
+		"latitude": 19.804938,
+		"longitude": 85.817939
+	},
+	{
+		"name": "Siddhesvara Temple, Bhubaneswar",
+		"slug": "siddhesvara-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.264691,
+		"longitude": 85.861105
+	},
+	{
+		"name": "Parasurameswara Temple, Bhubaneswar",
+		"slug": "parasurameswara-temple-bhubaneswar",
+		"state": "Odisha",
+		"latitude": 20.243121,
+		"longitude": 85.839109
+	},
+	{
+		"name": "Golden Temple, Amritsar",
+		"slug": "golden-temple-amritsar",
+		"state": "Punjab",
+		"latitude": 31.61998,
+		"longitude": 74.876485
+	},
+	{
+		"name": "Shri Mansa Devi Mandir, Solan",
+		"slug": "shri-mansa-devi-mandir-solan",
+		"state": "Himachal Pradesh",
+		"latitude": 30.908424,
+		"longitude": 77.099903
+	},
+	{
+		"name": "Shri Jwala Ji Mandir, Kangra",
+		"slug": "shri-jwala-ji-mandir-kangra",
+		"state": "Punjab",
+		"latitude": 31.875394,
+		"longitude": 76.324082
+	},
+	{
+		"name": "Shri Kali Devi Mandir, Patiala",
+		"slug": "shri-kali-devi-mandir-patiala",
+		"state": "Punjab",
+		"latitude": 30.336195,
+		"longitude": 76.394194
+	},
+	{
+		"name": "Durgiana Temple, Amritsar",
+		"slug": "durgiana-temple-amritsar",
+		"state": "Punjab",
+		"latitude": 31.627226,
+		"longitude": 74.867436
+	},
+	{
+		"name": "Shri Chintpurni Devi Mandir, Una",
+		"slug": "shri-chintpurni-devi-mandir-una",
+		"state": "Himachal Pradesh",
+		"latitude": 31.805439,
+		"longitude": 76.104451
+	},
+	{
+		"name": "Jagat Mandir, Udaipur",
+		"slug": "jagat-mandir-udaipur",
+		"state": "Rajasthan",
+		"latitude": 24.579676,
+		"longitude": 73.695431
+	},
+	{
+		"name": "Kumbha Shyam Temple, Nathdwara",
+		"slug": "kumbha-shyam-temple-nathdwara",
+		"state": "Rajasthan",
+		"latitude": 24.931156,
+		"longitude": 73.81934
+	},
+	{
+		"name": "Moti Dungri Temple, Jaipur",
+		"slug": "moti-dungri-temple-jaipur",
+		"state": "Rajasthan",
+		"latitude": 26.89487825,
+		"longitude": 75.81666175
+	},
+	{
+		"name": "Shrinathji Temple, Nathdwara",
+		"slug": "shrinathji-temple-nathdwara",
+		"state": "Rajasthan",
+		"latitude": 24.928263,
+		"longitude": 73.81599
+	},
+	{
+		"name": "Birla Mandir, Jaipur",
+		"slug": "birla-mandir-jaipur",
+		"state": "Rajasthan",
+		"latitude": 26.892169,
+		"longitude": 75.815309
+	},
+	{
+		"name": "Laxmi Narayan Temple, Pushkar",
+		"slug": "laxmi-narayan-temple-pushkar",
+		"state": "Rajasthan",
+		"latitude": 26.488582,
+		"longitude": 74.550942
+	},
+	{
+		"name": "Ujjayini Mahakaleshwar Temple, Ujjain",
+		"slug": "ujjayini-mahakaleshwar-temple-ujjain",
+		"state": "Rajasthan",
+		"latitude": 23.182937,
+		"longitude": 75.768247
+	},
+	{
+		"name": "Sanganer Jain Temple, Jaipur",
+		"slug": "sanganer-jain-temple-jaipur",
+		"state": "Rajasthan",
+		"latitude": 26.8150896,
+		"longitude": 75.78633275
+	},
+	{
+		"name": "Jain Temple, Ranakpur",
+		"slug": "jain-temple-ranakpur",
+		"state": "Rajasthan",
+		"latitude": 25.115658,
+		"longitude": 73.472873
+	},
+	{
+		"name": "Pemayangtse Monastery, Pelling",
+		"slug": "pemayangtse-monastery-pelling",
+		"state": "Sikkim",
+		"latitude": 27.30538214,
+		"longitude": 88.2515852
+	},
+	{
+		"name": "Namchi Monastery, Namchi",
+		"slug": "namchi-monastery-namchi",
+		"state": "Sikkim",
+		"latitude": 27.166635,
+		"longitude": 88.361933
+	},
+	{
+		"name": "Khecheopalri Lake Temple, Khecheopalri",
+		"slug": "khecheopalri-lake-temple-khecheopalri",
+		"state": "Sikkim",
+		"latitude": 27.34994788,
+		"longitude": 88.18832606
+	},
+	{
+		"name": "Rumtek Monastery, Upper Dzongu",
+		"slug": "rumtek-monastery-upper-dzongu",
+		"state": "Sikkim",
+		"latitude": 27.30591,
+		"longitude": 88.536289
+	},
+	{
+		"name": "Enchey Monastery, Gangtok",
+		"slug": "enchey-monastery-gangtok",
+		"state": "Sikkim",
+		"latitude": 27.33613692,
+		"longitude": 88.61919808
+	},
+	{
+		"name": "Tashiding Monastery, Tashiding",
+		"slug": "tashiding-monastery-tashiding",
+		"state": "Sikkim",
+		"latitude": 27.3091119,
+		"longitude": 88.2977995
+	},
+	{
+		"name": "Madurai Meenakshi Amman Temple, Madurai",
+		"slug": "madurai-meenakshi-amman-temple-madurai",
+		"state": "Tamil Nadu",
+		"latitude": 9.919505,
+		"longitude": 78.119342
+	},
+	{
+		"name": "Tiruvannamalai Arunachaleswarar Temple, Tiruvannamalai",
+		"slug": "tiruvannamalai-arunachaleswarar-temple-tiruvannamalai",
+		"state": "Tamil Nadu",
+		"latitude": 12.231653,
+		"longitude": 79.067761
+	},
+	{
+		"name": "Tirupati Venkateswara Temple, Tirupati",
+		"slug": "tirupati-venkateswara-temple-tirupati",
+		"state": "Tamil Nadu",
+		"latitude": 13.68022133,
+		"longitude": 79.34630852
+	},
+	{
+		"name": "Chidambaram Nataraja Temple, Chidambaram",
+		"slug": "chidambaram-nataraja-temple-chidambaram",
+		"state": "Tamil Nadu",
+		"latitude": 11.39929,
+		"longitude": 79.693519
+	},
+	{
+		"name": "Srirangam Ranganathaswamy Temple, Srirangam",
+		"slug": "srirangam-ranganathaswamy-temple-srirangam",
+		"state": "Tamil Nadu",
+		"latitude": 10.862217,
+		"longitude": 78.689937
+	},
+	{
+		"name": "Kanchipuram Varadaraja Perumal Temple, Kanchipuram",
+		"slug": "kanchipuram-varadaraja-perumal-temple-kanchipuram",
+		"state": "Tamil Nadu",
+		"latitude": 12.819335,
+		"longitude": 79.724771
+	},
+	{
+		"name": "Sri Laxmi Narasimha Swamy Temple, Yadagirigutta",
+		"slug": "sri-laxmi-narasimha-swamy-temple-yadagirigutta",
+		"state": "Telangana",
+		"latitude": 17.588906,
+		"longitude": 78.944338
+	},
+	{
+		"name": "Sri Mahankali Temple, Secunderabad",
+		"slug": "sri-mahankali-temple-secunderabad",
+		"state": "Telangana",
+		"latitude": 17.451479,
+		"longitude": 78.661914
+	},
+	{
+		"name": "Sri Raja Rajeshwara Swamy Temple, Vemulawada",
+		"slug": "sri-raja-rajeshwara-swamy-temple-vemulawada",
+		"state": "Telangana",
+		"latitude": 18.46725,
+		"longitude": 78.870972
+	},
+	{
+		"name": "Sri Kaleswaram Temple, Karimnagar",
+		"slug": "sri-kaleswaram-temple-karimnagar",
+		"state": "Telangana",
+		"latitude": 18.438555,
+		"longitude": 79.128841
+	},
+	{
+		"name": "Sri Venkateswara Swamy Temple, Hyderabad",
+		"slug": "sri-venkateswara-swamy-temple-hyderabad",
+		"state": "Telangana",
+		"latitude": 17.493799,
+		"longitude": 78.323933
+	},
+	{
+		"name": "Sri Durgamamba Temple, Khammam",
+		"slug": "sri-durgamamba-temple-khammam",
+		"state": "Telangana",
+		"latitude": 17.59507,
+		"longitude": 80.31155
+	},
+	{
+		"name": "Sri Yadadri Lakshmi Narasimha Swamy Temple, Yadadri Bhuvanagiri",
+		"slug": "sri-yadadri-lakshmi-narasimha-swamy-temple-yadadri-bhuvanagiri",
+		"state": "Telangana",
+		"latitude": 17.588906,
+		"longitude": 78.944338
+	},
+	{
+		"name": "Sri Mallanna Temple, Medak",
+		"slug": "sri-mallanna-temple-medak",
+		"state": "Telangana",
+		"latitude": 18.046219,
+		"longitude": 78.263176
+	},
+	{
+		"name": "Sri Bhramaramba Mallikarjuna Swamy Temple, Warangal",
+		"slug": "sri-bhramaramba-mallikarjuna-swamy-temple-warangal",
+		"state": "Telangana",
+		"latitude": 17.866391,
+		"longitude": 79.545891
+	},
+	{
+		"name": "Mata Tripura Sundari Temple, (Udaipur)",
+		"slug": "mata-tripura-sundari-temple-udaipur",
+		"state": "Tripura",
+		"latitude": 23.509072,
+		"longitude": 91.498282
+	},
+	{
+		"name": "Krishna Temple, (Agartala)",
+		"slug": "krishna-temple-agartala",
+		"state": "Tripura",
+		"latitude": 23.779941,
+		"longitude": 91.276594
+	},
+	{
+		"name": "Shiva Temple, (Agartala)",
+		"slug": "shiva-temple-agartala",
+		"state": "Tripura",
+		"latitude": 23.852416,
+		"longitude": 91.300932
+	},
+	{
+		"name": "Durga Temple, (Agartala)",
+		"slug": "durga-temple-agartala",
+		"state": "Tripura",
+		"latitude": 23.53089,
+		"longitude": 91.323893
+	},
+	{
+		"name": "Ujjayanta Temple, (Udaipur)",
+		"slug": "ujjayanta-temple-udaipur",
+		"state": "Rajasthan",
+		"latitude": 23.83749748,
+		"longitude": 91.28279863
+	},
+	{
+		"name": "Ram Temple, (Agartala)",
+		"slug": "ram-temple-agartala",
+		"state": "Tripura",
+		"latitude": 23.779941,
+		"longitude": 91.276594
+	},
+	{
+		"name": "Badrinath Temple, Badrinath, Uttarakhand",
+		"slug": "badrinath-temple-badrinath-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 30.744808,
+		"longitude": 79.491255
+	},
+	{
+		"name": "Dakshineswar Kali Temple, Kolkata, West Bengal",
+		"slug": "dakshineswar-kali-temple-kolkata-west-bengal",
+		"state": "West Bengal",
+		"latitude": 22.654884,
+		"longitude": 88.357691
+	},
+	{
+		"name": "Haridwar Mansarovar Temple, Haridwar, Uttarakhand",
+		"slug": "haridwar-mansarovar-temple-haridwar-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 29.98190679,
+		"longitude": 78.18678753
+	},
+	{
+		"name": "Kedarnath Temple, Kedarnath, Uttarakhand",
+		"slug": "kedarnath-temple-kedarnath-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 30.734627,
+		"longitude": 79.066894
+	},
+	{
+		"name": "Madurai Meenakshi Amman Temple, Madurai, Tamil Nadu",
+		"slug": "madurai-meenakshi-amman-temple-madurai-tamil-nadu",
+		"state": "Tamil Nadu",
+		"latitude": 9.919505,
+		"longitude": 78.119342
+	},
+	{
+		"name": "Padmanabhaswamy Temple, Thiruvananthapuram, Kerala",
+		"slug": "padmanabhaswamy-temple-thiruvananthapuram-kerala",
+		"state": "Uttar Pradesh",
+		"latitude": 8.482778,
+		"longitude": 76.943591
+	},
+	{
+		"name": "Ram Janmabhoomi Temple, Ayodhya, Uttar Pradesh",
+		"slug": "ram-janmabhoomi-temple-ayodhya-uttar-pradesh",
+		"state": "Uttar Pradesh",
+		"latitude": 26.791768,
+		"longitude": 82.19946
+	},
+	{
+		"name": "Srirangam Ranganathaswamy Temple, Srirangam, Tamil Nadu",
+		"slug": "srirangam-ranganathaswamy-temple-srirangam-tamil-nadu",
+		"state": "Tamil Nadu",
+		"latitude": 10.862217,
+		"longitude": 78.689937
+	},
+	{
+		"name": "Akshardham Temple, New Delhi, Delhi",
+		"slug": "akshardham-temple-new-delhi-delhi",
+		"state": "Delhi",
+		"latitude": 28.612673,
+		"longitude": 77.277262
+	},
+	{
+		"name": "Golden Temple, Amritsar, Punjab",
+		"slug": "golden-temple-amritsar-punjab",
+		"state": "Punjab",
+		"latitude": 31.61998,
+		"longitude": 74.876485
+	},
+	{
+		"name": "Konark Sun Temple, Konark, Odisha",
+		"slug": "konark-sun-temple-konark-odisha",
+		"state": "Odisha",
+		"latitude": 19.887595,
+		"longitude": 86.094536
+	},
+	{
+		"name": "Puri Jagannath Temple, Puri, Odisha",
+		"slug": "puri-jagannath-temple-puri-odisha",
+		"state": "Odisha",
+		"latitude": 19.804938,
+		"longitude": 85.817939
+	},
+	{
+		"name": "Vaishno Devi Temple, Katra, Jammu and Kashmir",
+		"slug": "vaishno-devi-temple-katra-jammu-and-kashmir",
+		"state": "Jammu and Kashmir",
+		"latitude": 33.23418873,
+		"longitude": 74.96644334
+	},
+	{
+		"name": "Kashi Vishwanath Temple, Varanasi, Uttar Pradesh",
+		"slug": "kashi-vishwanath-temple-varanasi-uttar-pradesh",
+		"state": "Uttar Pradesh",
+		"latitude": 25.310853,
+		"longitude": 83.010678
+	},
+	{
+		"name": "Somnath Temple, Prabhas Patan, Gujarat",
+		"slug": "somnath-temple-prabhas-patan-gujarat",
+		"state": "Gujarat",
+		"latitude": 20.88819262,
+		"longitude": 70.4011974
+	},
+	{
+		"name": "Mahabodhi Temple, Bodh Gaya, Bihar",
+		"slug": "mahabodhi-temple-bodh-gaya-bihar",
+		"state": "Bihar",
+		"latitude": 24.695922,
+		"longitude": 84.991419
+	},
+	{
+		"name": "Birla Mandir, Kolkata, West Bengal",
+		"slug": "birla-mandir-kolkata-west-bengal",
+		"state": "Uttar Pradesh",
+		"latitude": 22.530487,
+		"longitude": 88.365021
+	},
+	{
+		"name": "Badrinath Temple, (Badrinath), Uttarakhand",
+		"slug": "badrinath-temple-badrinath-uttarakhand-2",
+		"state": "Uttarakhand",
+		"latitude": 30.744808,
+		"longitude": 79.491255
+	},
+	{
+		"name": "Yamunotri Temple, (Yamunotri), Uttarakhand",
+		"slug": "yamunotri-temple-yamunotri-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 30.999731,
+		"longitude": 78.462916
+	},
+	{
+		"name": "Rishikesh, (Rishikesh), Uttarakhand",
+		"slug": "rishikesh-rishikesh-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 30.115762,
+		"longitude": 78.285302
+	},
+	{
+		"name": "Mansa Devi Temple, (Chandigarh), Punjab",
+		"slug": "mansa-devi-temple-chandigarh-punjab",
+		"state": "Chandigarh",
+		"latitude": 29.999507,
+		"longitude": 75.393681
+	},
+	{
+		"name": "Gangotri Temple, (Gangotri), Uttarakhand",
+		"slug": "gangotri-temple-gangotri-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 30.994409,
+		"longitude": 78.941182
+	},
+	{
+		"name": "Hemkund Sahib, (Gopeshwar), Uttarakhand",
+		"slug": "hemkund-sahib-gopeshwar-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 30.683333,
+		"longitude": 79.6
+	},
+	{
+		"name": "Haridwar Dham, (Haridwar), Uttarakhand",
+		"slug": "haridwar-dham-haridwar-uttarakhand",
+		"state": "Uttarakhand",
+		"latitude": 29.98988441,
+		"longitude": 78.18438414
+	},
+	{
+		"name": "Kedarnath Temple, (Kedarnath), Uttarakhand",
+		"slug": "kedarnath-temple-kedarnath-uttarakhand-2",
+		"state": "Uttarakhand",
+		"latitude": 30.734627,
+		"longitude": 79.066894
+	},
+	{
+		"name": "Belur Math, Howrah, West Bengal",
+		"slug": "belur-math-howrah-west-bengal",
+		"state": "West Bengal",
+		"latitude": 22.632656,
+		"longitude": 88.356381
+	},
+	{
+		"name": "Kalighat Temple, Kolkata, West Bengal",
+		"slug": "kalighat-temple-kolkata-west-bengal",
+		"state": "West Bengal",
+		"latitude": 22.520313,
+		"longitude": 88.342072
+	},
+	{
+		"name": "Jagannath Temple, Puri, Odisha",
+		"slug": "jagannath-temple-puri-odisha",
+		"state": "Odisha",
+		"latitude": 19.804938,
+		"longitude": 85.817939
+	},
+	{
+		"name": "Tarakeswar Temple, Hooghly, West Bengal",
+		"slug": "tarakeswar-temple-hooghly-west-bengal",
+		"state": "West Bengal",
+		"latitude": 22.885339,
+		"longitude": 88.017598
+	},
+	{
+		"name": "Dakshineswar Kali Temple, Kolkata, West Bengal",
+		"slug": "dakshineswar-kali-temple-kolkata-west-bengal-2",
+		"state": "West Bengal",
+		"latitude": 22.654884,
+		"longitude": 88.357691
+	},
+	{
+		"name": "Kamakhya Temple, Guwahati, Assam",
+		"slug": "kamakhya-temple-guwahati-assam",
+		"state": "Assam",
+		"latitude": 26.166411,
+		"longitude": 91.705503
+	},
+	{
+		"name": "Ramakrishna Mission Ashram, Port Blair",
+		"slug": "ramakrishna-mission-ashram-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.621689,
+		"longitude": 92.725366
+	},
+	{
+		"name": "Kali Temple, Port Blair",
+		"slug": "kali-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.62557,
+		"longitude": 92.716202
+	},
+	{
+		"name": "Hanuman Temple, Port Blair",
+		"slug": "hanuman-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.667564,
+		"longitude": 92.742334
+	},
+	{
+		"name": "Sai Baba Temple, Port Blair",
+		"slug": "sai-baba-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.66076865,
+		"longitude": 92.73995733
+	},
+	{
+		"name": "Jagannath Temple, Port Blair",
+		"slug": "jagannath-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.6552511,
+		"longitude": 92.72247526
+	},
+	{
+		"name": "Durga Temple, Port Blair",
+		"slug": "durga-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.652571,
+		"longitude": 92.743492
+	},
+	{
+		"name": "Murugan Temple, Port Blair",
+		"slug": "murugan-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.663146,
+		"longitude": 92.746382
+	},
+	{
+		"name": "Krishna Temple, Port Blair",
+		"slug": "krishna-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.667145,
+		"longitude": 92.738835
+	},
+	{
+		"name": "Shiva Temple, Port Blair",
+		"slug": "shiva-temple-port-blair",
+		"state": "Andaman and Nicobar Islands",
+		"latitude": 11.668818,
+		"longitude": 92.740003
+	},
+	{
+		"name": "Shri Ram Mandir, Daman, Daman and Diu",
+		"slug": "shri-ram-mandir-daman-daman-and-diu",
+		"state": "Dadra and Nagar Haveli and Daman and Diu",
+		"latitude": 20.444287,
+		"longitude": 72.853525
+	},
+	{
+		"name": "Shri Mahadev Mandir, Silvassa, Dadra and Nagar Haveli",
+		"slug": "shri-mahadev-mandir-silvassa-dadra-and-nagar-haveli",
+		"state": "Dadra and Nagar Haveli and Daman and Diu",
+		"latitude": 20.275341,
+		"longitude": 73.007299
+	},
+	{
+		"name": "Shri Sai Baba Mandir, Diu, Daman and Diu",
+		"slug": "shri-sai-baba-mandir-diu-daman-and-diu",
+		"state": "Dadra and Nagar Haveli and Daman and Diu",
+		"latitude": 20.714274,
+		"longitude": 70.980708
+	},
+	{
+		"name": "Shri Hanuman Mandir, Diu, Daman and Diu",
+		"slug": "shri-hanuman-mandir-diu-daman-and-diu",
+		"state": "Dadra and Nagar Haveli and Daman and Diu",
+		"latitude": 20.718092,
+		"longitude": 70.98579
+	},
+	{
+		"name": "Shri Ramnath Mandir, Silvassa, Dadra and Nagar Haveli",
+		"slug": "shri-ramnath-mandir-silvassa-dadra-and-nagar-haveli",
+		"state": "Dadra and Nagar Haveli and Daman and Diu",
+		"latitude": 20.275341,
+		"longitude": 73.007299
+	},
+	{
+		"name": "Shri Lakshmi Narayan Mandir, Daman, Daman and Diu",
+		"slug": "shri-lakshmi-narayan-mandir-daman-daman-and-diu",
+		"state": "Dadra and Nagar Haveli and Daman and Diu",
+		"latitude": 20.41126,
+		"longitude": 72.85655
+	},
+	{
+		"name": "Androth Sri Krishna Temple, Androth, Lakshadweep",
+		"slug": "androth-sri-krishna-temple-androth-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 8.30432148,
+		"longitude": 73.0598609
+	},
+	{
+		"name": "Kadmat Devi Temple, Kadmat, Lakshadweep",
+		"slug": "kadmat-devi-temple-kadmat-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 11.224567,
+		"longitude": 72.77459
+	},
+	{
+		"name": "Kiltan Devi Temple, Kiltan, Lakshadweep",
+		"slug": "kiltan-devi-temple-kiltan-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 11.4800031,
+		"longitude": 73.0053198
+	},
+	{
+		"name": "Suheli Devi Temple, Suheli, Lakshadweep",
+		"slug": "suheli-devi-temple-suheli-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 10.06922799,
+		"longitude": 72.28991721
+	},
+	{
+		"name": "Bangaram Devi Temple, Bangaram, Lakshadweep",
+		"slug": "bangaram-devi-temple-bangaram-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 10.94508686,
+		"longitude": 72.28763563
+	},
+	{
+		"name": "Minicoy Devi Temple, Minicoy, Lakshadweep",
+		"slug": "minicoy-devi-temple-minicoy-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 8.280956,
+		"longitude": 73.054785
+	},
+	{
+		"name": "Kavaratti Sri Krishna Temple, Kavaratti, Lakshadweep",
+		"slug": "kavaratti-sri-krishna-temple-kavaratti-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 8.280956,
+		"longitude": 73.054785
+	},
+	{
+		"name": "Agatti Devi Temple, Agatti, Lakshadweep",
+		"slug": "agatti-devi-temple-agatti-lakshadweep",
+		"state": "Lakshadweep",
+		"latitude": 10.86959309,
+		"longitude": 72.19510832
+	},
+	{
+		"name": "Arulmigu Kapaleeswarar Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-kapaleeswarar-temple-pondicherry-puducherry",
+		"state": "Puducherry",
+		"latitude": 11.941591,
+		"longitude": 79.808313
+	},
+	{
+		"name": "Arulmigu Sri Vailankanni Mariamman Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-sri-vailankanni-mariamman-temple-pondicherry-puducherry",
+		"state": "Puducherry",
+		"latitude": 11.941279,
+		"longitude": 79.788021
+	},
+	{
+		"name": "Arulmigu Sri Venugopalaswamy Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-sri-venugopalaswamy-temple-pondicherry-puducherry",
+		"state": "Puducherry",
+		"latitude": 11.953192,
+		"longitude": 79.831751
+	},
+	{
+		"name": "Arulmigu Manakula Vinayagar Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-manakula-vinayagar-temple-pondicherry-puducherry",
+		"state": "Puducherry",
+		"latitude": 11.935776,
+		"longitude": 79.833662
+	},
+	{
+		"name": "Arulmigu Sri Veeraraghava Perumal Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-sri-veeraraghava-perumal-temple-pondicherry-puducherry",
+		"state": "Puducherry",
+		"latitude": 11.940888,
+		"longitude": 79.830072
+	},
+	{
+		"name": "Arulmigu Sri Raja Rajeshwari Amman Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-sri-raja-rajeshwari-amman-temple-pondicherry-puducherry",
+		"state": "Tamil Nadu",
+		"latitude": 11.98436145,
+		"longitude": 79.79564148
+	},
+	{
+		"name": "Arulmigu Sri Yoga Narasimha Swamy Temple, Pondicherry, Puducherry",
+		"slug": "arulmigu-sri-yoga-narasimha-swamy-temple-pondicherry-puducherry",
+		"state": "Puducherry",
+		"latitude": 11.941591,
+		"longitude": 79.808313
+	}
+]

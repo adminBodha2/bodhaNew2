@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"name": "Layers_Other",
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "LineString", "coordinates": [ [ 69.4695725, 1.7055374 ], [ 65.6648485, 41.2012373 ], [ 100.3390163, 40.6379224 ], [ 94.964947, 1.3006154 ], [ 69.4695725, 1.7055374 ] ] } }
+]
+}

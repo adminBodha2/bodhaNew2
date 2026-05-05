@@ -5,9 +5,11 @@
 	import { elementVisibilityStore } from '$lib/utils/elementVisibility'
 	import AnimatedOne from '$lib/comps/item-animated.svelte';
 	import Title from '$lib/comps/page-title.svelte'
+	import Head from '$lib/comps/headcomponent.svelte';
 	import Wordreveal from '$lib/comps/wordreveal.svelte'
 	import TextScramble from '$lib/comps/text-scramble.svelte'
 	import type { ComponentProps } from "svelte";
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	type Props = Partial<ComponentProps<typeof TextScramble>>;
 	let hoverTarget = $state<HTMLElement | null>(null);
@@ -25,6 +27,21 @@
 		cycles = 20,
 		characters = "DESIGNASKARMADESIGNASSEVADESIGNASDHARMA",
 	}: Props = $props();
+
+	const title = 'designBodha | Bodha';
+	const metaDescription = 'designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines.';
+	const metaUrl = absoluteUrl('/designbodha');
+	const metaImage = absoluteImage('/images/designbodha/key-desbodha.webp');
+
+	const jsonld = stringifyJsonLd(
+		webPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			type: 'AboutPage'
+		})
+	);
 
 	function handleHover(){
 		isHover = !isHover
@@ -55,6 +72,8 @@
 </script>
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={sY} />
+
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container graphing={true}>
 	<section class="key-image desbodha">
