@@ -15,7 +15,7 @@ const config = {
 	extensions: ['.svelte', '.md', '.svx'],
 	kit: {
 		adapter: adapter({
-			runtime: 'nodejs22.x'
+			runtime: 'nodejs24.x'
 		})
 	}
 };
