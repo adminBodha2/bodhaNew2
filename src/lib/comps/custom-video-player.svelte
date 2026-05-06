@@ -59,6 +59,7 @@
 		loop?: boolean;
 		hideControls?: boolean;
 		lazy?: boolean;
+		loadOnVisible?: boolean;
 		lazyRootMargin?: string;
 		aspectRatio?: string;
 		class?: string;
@@ -73,6 +74,7 @@
 		loop = false,
 		hideControls = false,
 		lazy = true,
+		loadOnVisible = false,
 		lazyRootMargin = '300px',
 		aspectRatio = '16 / 9',
 		class: className = ''
@@ -290,6 +292,7 @@
 				fs: 0,
 				iv_load_policy: 3,
 				loop: loop ? 1 : 0,
+				origin: window.location.origin,
 				playsinline: 1,
 				playlist: loop ? resolvedVideoId : '',
 				rel: 0
@@ -335,6 +338,8 @@
 			hasError = true;
 			return;
 		}
+
+		if (lazy && !autoplay && !loadOnVisible) return;
 
 		if (!lazy) {
 			shouldLoadPlayer = true;

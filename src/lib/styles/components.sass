@@ -207,7 +207,7 @@ button.with-tooltip
 	&.dead
 		&:hover
 			transform: scale(1)
-			background: var(--color-green)
+			background: var(--color-theme)
 	&.accented
 		background: var(--color-theme-2)
 		color: var(--color-back)
@@ -310,43 +310,6 @@ button.with-tooltip
 
 .and-bordered
 	border: var(--border-main)
-
-.small-button
-	font-size: 0.8rem
-	font-weight: 500
-	padding: 0.4rem 1rem
-	border-radius: 2px
-	border: 1px solid #b7b7b7
-	background: var(--color-grey-1)
-	text-decoration: none
-	color: var(--color-grey-4)
-	transition: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
-	width: max-content
-	.button-text
-		transition: all 0.12s
-		transform-origin: left center
-	&:hover
-		border: 1px solid var(--color-theme-2)
-		color: var(--color-theme-4)
-		background: var(--color-theme-2)
-		transform: scale(0.96)
-		.button-text
-			transform: scaleX(1.2)
-			color: var(--color-theme-4)
-	&.themed
-		background: var(--color-theme)
-		color: var(--color-back)
-		border: 1px solid var(--color-theme-4)
-		box-shadow: 2px 2px 3px rgba(0,0,0,0)
-	&.hollow
-		padding: 0
-		background: none
-		border: none
-		font-size: 1rem
-		color: var(--color-primary)
-		font-weight: 700
-		&:hover
-			color: var(--color-theme)
 
 .nav-btn
 	font-size: 0.78rem

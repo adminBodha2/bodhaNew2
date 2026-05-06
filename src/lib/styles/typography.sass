@@ -31,6 +31,7 @@ p.bold
 	color: inherit
 
 :root
+	--font-scale: 1.25
 	@media screen and (min-width: 1025px)
 		--typeBase: 1.33rem
 		--typeBaseLow: 1.06rem
@@ -198,14 +199,14 @@ p.bold
 
 h1
 	line-height: 1.1
-	font-size: var(--typeH3)
-	letter-spacing: -0.05rem
+	font-size: 2.86rem
+	letter-spacing: -0.06rem
 	font-weight: 690
 	&.thin
 		font-weight: 400
 	&.page-title
-		font-size: var(--typeH3)
-		letter-spacing: -0.02rem
+		font-size: 2.16rem
+		letter-spacing: -0.04rem
 	&.doc-title
 		font-size: var(--typeH3)
 		letter-spacing: -0.02rem
@@ -214,18 +215,25 @@ h1
 		font-family: 'Google Sans Flex', sans-serif
 		letter-spacing: 0.02rem
 		color: #717171
-	@media screen and (min-width: 1025px)
-		letter-spacing: -0.14rem
-		font-size: var(--typeH6)
+	@media (min-width: 721px)
+		font-size: 3.5744rem
 		&.page-title
-			font-size: var(--typeH4)
-			letter-spacing: -0.06rem
+			font-size: 2.592rem
+	@media (min-width: 1025px)
+		letter-spacing: -0.14rem
+		font-size: 4.468rem
+		&.page-title
+			font-size: 3.11rem
 		&.doc-title
 			font-size: var(--typeH4)
 			letter-spacing: -0.06rem
 		&.design-bodha-head
 			font-size: calc(var(--typeH6) * 0.8)
 			line-height: 1.2
+	@media (min-width: 1201px)
+		font-size: 5.585rem
+		&.page-title
+			font-size: 3.73rem
 
 //-------------------------HEADER 2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -237,25 +245,37 @@ h2
 	&.thin
 		font-weight: 400
 	&.card-title
-		font-size: var(--typeH2)
+		font-size: 1.8rem
 	&.header-2
-		font-size: var(--typeH2)
-		letter-spacing: -0.04rem
+		font-size: 2.16rem
+		letter-spacing: -0.06rem
+		text-transform: lowercase
+		font-variant: small-caps
+		font-weight: 500
 	&.thin-heading
 		font-family: 'Google Sans', sans-serif
 		font-weight: 300
 		font-size: var(--typeH3)
 		letter-spacing: 0
-	@media screen and (min-width: 1025px)
+	@media (min-width: 721px)
+		&.card-title
+			font-size: 1.98rem
+		&.header-2
+			font-size: 2.592rem
+	@media (min-width: 1025px)
 		letter-spacing: -0.03rem
 		font-size: var(--typeH2)
 		&.card-title
-			font-size: var(--typeH3)
-		&.header-2
-			font-size: var(--typeH3)
+			font-size: 2.178rem
 		&.thin-heading
 			font-size: var(--typeH4)
 			line-height: 1.3
+		&.header-2
+			font-size: 3.11rem
+			letter-spacing: -0.08rem
+		@media (min-width: 1201px)
+			&.card-title
+				font-size: 2.39rem
 
 
 //-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -304,13 +324,16 @@ h6
 //-------------------------P, PRE, LI--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 p, pre, li
-	font-size: 1.1rem
+	font-size: 1rem
 	line-height: 1.4
 	letter-spacing: 0
 	&.tight
 		line-height: 1.2
 	&.paragraph-text
-		font-size: calc(var(--typeBase) * 0.95)
+		font-size: 1.15rem
+		line-height: 1.25
+	&.highlight-text
+		font-size: 1.33rem
 	&.descriptor-text
 		font-size: 0.95rem
 	&.tag-text
@@ -320,13 +343,11 @@ p, pre, li
 		letter-spacing: 0.02rem
 	&.card-title
 		font-size: 1.4rem
-		font-weight: 650
+		font-weight: 600
 		line-height: 1.2
 		letter-spacing: -0.02rem
 		&.thin
 			font-weight: 400
-		&.loose
-			line-height: 1.5
 		&.w500
 			font-weight: 500
 	&.rem1
@@ -336,15 +357,22 @@ p, pre, li
 		font-weight: 600
 		&.thin
 			font-weight: 400
-	@media screen and (min-width: 1025px)
-		font-size: 1.2rem
-		line-height: 1.35
+	@media (min-width: 721px)
+		&.highlight-text
+			font-size: 1.463rem
+	@media (min-width: 1025px)
 		&.paragraph-text
-			font-size: calc(var(--typeBase))
+			font-size: 1.2rem
+		&.highlight-text
+			font-size: 1.609rem
 		&.card-title
-			font-size: var(--typeH1)
+			font-size: 1.596rem
+			font-weight: 700
 		&.tag-text
 			font-size: 0.65rem
+	@media (min-width: 1201px)
+		&.highlight-text
+			font-size: 1.77rem
 
 a.tag-text
 	font-size: 0.6rem

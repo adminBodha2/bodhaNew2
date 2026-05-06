@@ -23,44 +23,8 @@ img.fit-image
 	object-fit: cover
 	width: 100%
 
-.row, .column
+.column
 	display: flex
-
-.row
-	flex-direction: row
-	&.wrapper
-		flex-wrap: wrap
-	&.xbetween
-		justify-content: space-between
-	&.xleft
-		justify-content: flex-start
-	&.xright
-		justify-content: flex-end
-		@media screen and (max-width: 1024px)
-			&.mleft
-				justify-content: flex-start
-	&.xcenter
-		justify-content: center
-	&.ycenter
-		align-items: center
-	&.ytop
-		align-items: flex-start
-	&.ybottom
-		align-items: flex-end
-	&.wrap
-		flex-wrap: wrap
-	@media screen and (min-width: 1025px)
-		&.xbetween-mleft
-			justify-content: space-between
-	@media screen and (max-width: 1024px)
-		&.mwrap
-			flex-wrap: wrap
-		&.mcol
-			flex-direction: column
-			&.mleft.ycenter
-				align-items: flex-start
-		&.xcenter.mleft
-			justify-content: flex-start
 
 .column, .stdbox, .labelbox, .textbox, .elembox, .box
 	display: flex
@@ -238,3 +202,4 @@ h1.visually-hidden
 	position: fixed
 	left: 2rem
 	top: 6rem
+	z-index: 999

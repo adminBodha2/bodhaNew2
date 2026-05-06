@@ -23,3 +23,47 @@
 	100%
 		opacity: 1
 		transform: translateY(0)
+
+.growingline
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		width: 0
+		height: 1px
+		background: #E1E1E1
+		animation: lineDraw
+		animation-timeline: view()
+	&.alternate
+		&::before
+			animation: revDraw
+			animation-timeline: view()
+
+@keyframes revDraw
+	0%
+		right: 0
+		width: 0
+		background: rgba(23, 113, 194, 20%)
+	50%
+		width: 100%
+		margin-right: 0
+		background: rgba(23, 113, 194, 60%)
+	100%
+		width: 0
+		margin-right: 100%
+		background: rgba(23, 113, 194, 20%)
+
+@keyframes lineDraw
+	0%
+		width: 0
+		margin-right: auto
+		background: rgba(23, 113, 194, 20%)
+	50%
+		width: 100%
+		margin-left: 0
+		background: rgba(23, 113, 194, 60%)
+	100%
+		margin-left: 100%
+		width: 0
+		background: rgba(23, 113, 194, 20%)

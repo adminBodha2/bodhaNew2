@@ -190,6 +190,7 @@ export const teamMembers = [
 			role: 'Founder',
 			image: '/images/team/PS.webp',
 			bio: 'Pankaj is an author on Hindu temples, arts, literature, history and culture. His writing explains the beauty of Sanātana Dharma through stories about traditions, communities and culture. He has a deep interest in cultural anthropology, evolutionary biology and ecology, and has visited more than 1600 Hindu temples. He is the author of Svayambodha and Shatrubodha.',
+			blog: "/blog/writers/Pankaj%20Saxena",
 			links: [
 				{ label: 'Twitter', href: 'https://x.com/PankajSaxena84' },
 				{ label: 'Facebook', href: 'https://www.facebook.com/PankajSaxena84' },
@@ -201,6 +202,7 @@ export const teamMembers = [
 			role: 'Co-founder',
 			image: '/images/team/AP.webp',
 			bio: 'Amrit combines 14 years of professional experience rooted in product development and business leadership, with a lifetime of engagement with ancient Indian history. He writes on history, civilizational thinking and design, and is a research fellow at Sir Jadunath Sarkar Fellowship for Indian History (2025–26) at FIHCR. He is the author of Fractal Maṇḍala — A History of Ancient India.',
+			blog: "/blog/writers/Amritanshu%20Pandey",
 			links: [
 				{ label: 'Twitter', href: 'https://x.com/saamaanyafreaky' },
 				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/amritanshu-pandey/' },
@@ -211,6 +213,7 @@ export const teamMembers = [
 			role: 'Co-founder',
 			image: '/images/team/AJ.webp',
 			bio: 'Akshay is a researcher of Hindu institutions and philosophy, with a current focus on Hindu temple management. His interests lie in Hindu knowledge tradition, ethnographic approaches to temple management, and the intersection of tradition with contemporary society.',
+			blog: "/blog/writers/Amritanshu%20Pandey",
 			links: [
 				{ label: 'Twitter', href: 'https://x.com/akshaystates' },
 				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/akshaykrjha/' },
@@ -221,6 +224,7 @@ export const teamMembers = [
 			role: 'Manager, Content',
 			image: '/images/team/PM.webp',
 			bio: 'Padmavathy comes from a background of Advaita Vedānta, with professional experience in software entrepreneurship. Her work in this field is driven by a life-long reverence for Bhārata.',
+			blog: "/blog/writers/Padmavathy%20Manavazhahan",
 			links: [
 				{ label: 'Twitter', href: 'https://x.com/padmavadati' },
 				{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/padmavathy-mana-739018209/' }
