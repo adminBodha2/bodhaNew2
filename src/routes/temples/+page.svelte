@@ -2,17 +2,22 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Optimizer from '$lib/comps/seo-optimizer.svelte'
 	import type { GeoJSONSource, Map as MapLibreMap } from 'maplibre-gl';
 	import type { FeatureCollection } from 'geojson';
 	import 'maplibre-gl/dist/maplibre-gl.css';
-	import temples from '$lib/serving/temples-latlongs.json';
-
+	import temples from '$lib/serving/db-hindu-temples.json';
+ 	let { data } = $props();
 	type Temple = {
 		name: string;
 		slug: string;
 		state: string;
 		latitude: number | null;
 		longitude: number | null;
+		story: {
+			details: string
+		};
+		'is-anveshi': Boolean;
 	};
 
 	type TempleWithCoordinates = Temple & {
@@ -103,9 +108,7 @@
 			typeof temple.latitude === 'number' && typeof temple.longitude === 'number'
 	);
 	const states = [...new Set(validTemples.map((temple) => temple.state))].sort();
-
 	let selectedStates = $state<string[]>([...states]);
-
 	const visibleTemples = $derived(
 		validTemples.filter((temple) => selectedStates.includes(temple.state))
 	);
@@ -135,7 +138,7 @@
 				name: temple.name,
 				slug: temple.slug,
 				state: temple.state,
-				color: templeColor(temple.state)
+				color: templeColor(temple.state),
 			}
 		}))
 	}));
@@ -212,8 +215,8 @@
 			type: 'geojson',
 			data: templeGeoJson,
 			cluster: true,
-			clusterMaxZoom: 13,
-			clusterRadius: 44
+			clusterMaxZoom: 30,
+			clusterRadius: 10
 		});
 
 		targetMap.addLayer({
@@ -222,8 +225,8 @@
 			source: 'temples',
 			filter: ['has', 'point_count'],
 			paint: {
-				'circle-color': '#FFFFFF',
-				'circle-radius': ['step', ['get', 'point_count'], 26, 10, 32, 50, 40],
+				'circle-color': ['coalesce', ['get', 'color'], '#f7c948'],
+				'circle-radius': 6,
 				'circle-opacity': 0,
 				'circle-blur': 0
 			}
@@ -235,8 +238,8 @@
 			source: 'temples',
 			filter: ['has', 'point_count'],
 			paint: {
-				'circle-color': '#313131',
-				'circle-radius': ['step', ['get', 'point_count'], 18, 10, 23, 50, 29],
+				'circle-color': '#fd3010',
+				'circle-radius': ['step', ['get', 'point_count'], 6, 10, 23, 50, 29],
 				'circle-stroke-color': 'rgba(0,0,0,0)',
 				'circle-stroke-width': 1
 			}
@@ -249,9 +252,9 @@
 			filter: ['!', ['has', 'point_count']],
 			paint: {
 				'circle-color': ['coalesce', ['get', 'color'], '#f7c948'],
-				'circle-radius': 13,
-				'circle-opacity': 0.28,
-				'circle-blur': 0.45
+				'circle-radius': 0,
+				'circle-opacity': 0,
+				'circle-blur': 0
 			}
 		});
 
@@ -262,7 +265,7 @@
 			filter: ['!', ['has', 'point_count']],
 			paint: {
 				'circle-color': ['coalesce', ['get', 'color'], '#f7c948'],
-				'circle-radius': 6,
+				'circle-radius': 4,
 				'circle-stroke-color': 'rgba(255, 255, 255, 0.92)',
 				'circle-stroke-width': 2.5
 			}
@@ -295,7 +298,7 @@
 			container: mapEl,
 			center: [78.9629, 22.5937],
 			zoom: 4,
-			minZoom: 3,
+			minZoom: 1,
 			maxZoom: 16,
 			attributionControl: false,
 				style: {
@@ -445,9 +448,23 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Temple Map | Bodha</title>
-</svelte:head>
+<Optimizer
+  title={data.seo.title}
+  description={data.seo.description}
+  url={data.seo.url}
+  siteUrl="https://mysite.com"
+  siteName="My Tech Blog"
+  image={data.seo.image}
+  imageAlt={data.seo.imageAlt}
+  type="article"
+  publishedDate={data.seo.publishedDate}
+  tags={data.seo.tags}
+  breadcrumbs={data.seo.breadcrumbs}
+  alternates={data.seo.alternates}
+  noindex={false}
+  author="Daniel Guimarães"
+  twitterCreator="@heydan_dev"
+/>
 
 <section class="temple-map-shell">
 	<div bind:this={mapEl} class="temple-map"></div>

@@ -1,0 +1,82 @@
+.g-grid
+	display: grid
+	grid-template-columns: 1fr
+	gap: 2vw
+	&.gap-1p
+		gap: 1px
+	@media (min-width: 721px)
+		grid-template-columns: repeat(2, 1fr)
+		gap: 1vw
+	@media (min-width: 1025px)
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+		gap: 0.75vw
+		&.g-4
+			grid-template-columns: repeat(2, 1fr)
+		&.g-3
+			grid-template-columns: repeat(3, 1fr)
+		&.g-2
+			grid-template-columns: repeat(2, 1fr)
+	@media (min-width: 1201px)
+		gap: 0.5vw
+		&.g-4
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+
+
+img.fit
+	object-fit: cover
+	width: 100%
+	aspect-ratio: 4/2.5
+	@media (min-width: 1025px)
+		aspect-ratio: 4/2
+		&.flip
+			aspect-ratio: 2/3
+
+img.portrait
+	object-fit: contain
+	aspect-ratio: 9/16
+	&.book
+		width: 160px
+
+
+:root
+	--scaler-pad: 10vw
+	@media (min-width: 721px)
+		--scaler-pad: 8vw
+	@media (min-width: 1025px)
+		--scaler-pad: 6vw
+
+.rgap-std
+	row-gap: 2em
+.rgap-sm
+	row-gap: 1em
+
+.padded-1
+	padding-top: clamp(0.5rem, 0.5rem + 1.28vw, 1rem)
+	padding-bottom: clamp(0.5rem, 0.5rem + 1.28vw, 1rem)
+	padding-left: clamp(0.5rem, 0.5rem + 1.28vw, 1rem)
+	padding-right: clamp(0.5rem, 0.5rem + 1.28vw, 1rem)
+	&.no-bot
+		padding-bottom: 0
+	&.no-mob
+		@media (max-width: 1024px)
+			padding: 0
+.padded-2
+	padding-top: clamp(0.75rem, 1rem + 1.28vw, 2rem)
+	padding-bottom: clamp(0.75rem, 1rem + 1.28vw, 2rem)
+	padding-left: clamp(0.75rem, 1rem + 1.28vw, 2rem)
+	padding-right: clamp(0.75rem, 1rem + 1.28vw, 2rem)
+	&.no-top
+		padding-top: 0
+	&.no-mob
+		@media (max-width: 1024px)
+			padding: 0
+
+@media (min-width: 1025px)
+	.rgap-std
+		row-gap: 3em
+
+.box-std
+	display: flex
+	flex-direction: column
+	padding-top: var(--scaler-pad)
+	padding-bottom: var(--scaler-pad)

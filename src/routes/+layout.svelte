@@ -8,6 +8,7 @@
 	import '$lib/styles/fontimports.sass';
 	import '$lib/styles/measures.sass';
 	import '$lib/styles/globals.sass';
+	import '$lib/styles/designbodha-system.sass'
 	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/animations.sass'

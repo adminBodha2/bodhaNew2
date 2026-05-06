@@ -88,35 +88,30 @@
 <Container>
 	<div class="stdbox stdpad header-margin is-last">
 		<Crumb showT={true} title={data.temple.name} showD={true} desc={crumbDescription} />
-
 		<article class="box rgap24">
 			{#if infoItems.length > 0}
 				<section class="box">
 					<p class="paragraph-text">{#each infoItems as item}{item.value.replaceAll('.','. ')}{/each}.</p>
 				</section>
 			{/if}
-
+			<section class="grid four white-grid">
 			{#if storyArchitectureItems.length > 0}
-				<section class="grid four midgaps">
 					{#each storyArchitectureItems as item}
-						<div class="labelbox">
+						<div class="labelbox card-padded whitestone">
 							<p class="tag-text green tt-u bold tight">{item.label}</p>
-							<p class="tight">{item.value}</p>
+							<p class="tight descriptor-text">{item.value}</p>
 						</div>
 					{/each}
-				</section>
 			{/if}
-
 			{#if visitingGuideItems.length > 0}
-				<section class="grid four">
 					{#each visitingGuideItems as item}
-						<div class="labelbox card-padded">
-							<p class="descriptor-text green tt-u tight">{item.label}</p>
-							<p class="descriptor-text grey tight">{item.value}</p>
+						<div class="labelbox card-padded whitestone">
+							<p class="tag-text green tt-u bold tight">{item.label}</p>
+							<p class="ight descriptor-text">{item.value}</p>
 						</div>
 					{/each}
-				</section>
 			{/if}
+			</section>
 		</article>
 	</div>
 </Container>

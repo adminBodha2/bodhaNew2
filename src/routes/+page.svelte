@@ -27,35 +27,33 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
 <Container>
-	<div class="stdbox stdpad ycenter" id="first">
-		<div class="home-panel box">
-			<div class="box elembox">
-				<h1 class="source-serif width50"><span class="blue">Bodha</span> is a think tank and research group,</h1>
-				<p class="paragraph-text loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
-			</div>
-		<div class="grid four mid2 tight">
-			{#each verticals as item, i}
-				<a class="elembox blank verticals glass-1" href={item.href}>
-					<div class="imgbox"><img src={item.image} alt={item.title} /></div>
-					<div class="labelbox">
-						<h2 class="card-title source-serif">{item.title}</h2>
-						<p class="descriptor-text grey">{item.desc}</p>
-					</div>
-				</a>
-			{/each}
+	<div class="box-std rgap-std ycenter" id="first">
+		<div class="box rgap-std">
+			<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
+			<p class="paragraph-text loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 		</div>
+		<div class="g-grid g-4">
+			{#each verticals as item, i}
+			<a class="box rgap-sm blank verticals glass-1" href={item.href}>
+				<div class="imgbox padded-1 no-bot"><img class="fit flip" src={item.image} alt={item.title} /></div>
+				<div class="box rgap-sm padded-2 no-top">
+					<h2 class="card-title source-serif ptop8">{item.title}</h2>
+					<p class="descriptor-text grey">{item.desc}</p>
+				</div>
+			</a>
+			{/each}
 		</div>
 	</div>
 
 <!--------latest---------------------------------------------------------------------->
 	{#if latestItems}
-	<div class="stdbox stdpad bordertop" id="latest">
+	<div class="box-std rgap-std bordertop" id="latest">
 		<Title text="Latest at Bodha"/>
-		<div class="grid fitted-four tight">
+		<div class="g-grid">
 			{#each latestItems as item}
-				<a class="blank labelbox card-padded more-mob and-bordered glass-3" href={item.link}>
-					<p class="card-title tight source-serif a-hover">{item.title}</p>
-					<p class="descriptor-text grey tight borderbot pbot8">{item.description}</p>
+				<a class="box rgap-sm blank glass-3 padded-2" href={item.link}>
+					<p class="card-title tight a-hover">{item.title}</p>
+					<p class="descriptor-text grey">{item.description}</p>
 					<p class="tag-pill tt-u self-bottom">{item.badge}</p>
 				</a>
 			{/each}
@@ -66,31 +64,29 @@
 <!------------blog articles------------------------------------------------------------>
 
 	{#if blogs.length > 0}
-		<div class="stdbox stdpad bordertop sideline" id="blog posts">
+		<div class="box-std rgap-std bordertop sideline" id="blog posts">
 			<div class="row xbetween ycenter rgap16 mcol mleft">
 				<Title text="essays and articles" />
 				<a class="small-button themed" href="/blog">See All</a>
 			</div>
-			<div class="grid three tight">
+			<div class="g-grid g-3">
 				{#each blogs as item, i}
-					<div class="post-card box glass-2">
-						<div class="row post-metadata ycenter">
+					<div class="post-card box glass-2 padded-1">
+						<div class="row cgap4 rgap4 ycenter padded-1">
 							{#if item.meta.tags && item.meta.tags.length > 0}
-								<div class="row wrap cgap4 all-tags">
 									{#each item.meta.tags as tag}
 										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
 									{/each}
-								</div>
 							{/if}
 						</div>
-						<a class="blank imgbox" href={item.linkpath}>
-							<img src={item.meta.image} alt={item.meta.title}/>
+						<a class="blank" href={item.linkpath}>
+							<img class="fit" src={item.meta.image} alt={item.meta.title}/>
 						</a>
-						<a class="blank labelbox title-desc" href={item.linkpath}>
-							<p class="source-serif card-title tight">{item.meta.title}</p>
+						<a class="blank box rgap-sm padded-1" href={item.linkpath}>
+							<p class="card-title tight">{item.meta.title}</p>
 							<p class="descriptor-text grey">{item.meta.excerpt}</p>
 						</a>
-						<div class="foot box">
+						<div class="self-bottom padded-1">
 							<p class="tag-text altprim tt-u w500">{item.formattedDate} | {item.meta.author} | {item.meta.words} words</p>
 						</div>
 					</div>
@@ -101,14 +97,14 @@
 
 <!------------publications------------------------------------------------------------>
 
-	<div class="stdbox stdpad bordertop sideline" id="publications">
+	<div class="box-std rgap-std bordertop" id="publications">
 		<Title text="publications" />
-		<div class="grid two tight">
+		<div class="g-grid g-2">
 			{#each publications as pub}
 				<div class="books">
-					<img class="publication-image" src={pub.image} alt={pub.title} />
-					<div class="box labelbox">
-						<p class="card-title source-serif">{pub.title}</p>
+					<img class="portrait book" src={pub.image} alt={pub.title} />
+					<div class="padded-2 no-mob rgap-sm column ycenter height100">
+						<p class="card-title">{pub.title}</p>
 						<p class="descriptor-text grey">{pub.desc}</p>
 						<div class="row wrap cgap8 rgap8 ptop8">
 							{#each pub.links as link}
@@ -131,7 +127,7 @@
 				<Title text="recent videos" />
 				<a class="small-button themed" href="/videos">All Videos</a>
 			</div>
-			<div class="standard-grid grid three video-grid">
+			<div class="g-grid g-3 gap-1p video-grid">
 				{#each vids as item, i}
 					<div class="video-card blank">
 						<VideoPlayer videoId={item.videoid} title={item.name} loop />
@@ -154,16 +150,6 @@
 #first
 	min-height: 100vh
 
-.home-panel
-	border-radius: 4px
-	padding-top: 4rem
-	.box.elembox
-		padding-bottom: 6rem
-	@media screen and (max-width: 1024px)
-		padding: 0
-		.box.elembox
-			padding-bottom: 3rem
-
 //verticals──────────────────────────────────────
 
 .verticals
@@ -176,17 +162,8 @@
 			width: 100%
 			left: 0
 	img
-		width: 100%
-		height: 100%
-		object-fit: cover
 		transition: all 120ms cubic-bezier(0.745, 0.150, 0.690, 0.470)
 		filter: saturate(0.25)
-	.labelbox
-		padding: 0 1.5rem 2rem 1.5rem
-	.imgbox
-		height: 420px
-		padding: 0.5rem 0.5rem 0 0.5rem
-		overflow: hidden
 	&::after
 		position: absolute
 		right: 0
@@ -196,39 +173,6 @@
 		height: 2px
 		background: var(--color-theme)
 		transition: width 200ms ease
-	@media screen and (max-width: 1024px)
-		.imgbox
-			height: 200px
-		.labelbox
-			padding: 1rem 2rem 2rem 2rem
-
-.post-card
-	border-radius: 4px
-	.title-desc
-		padding: 1rem
-	.post-metadata
-		padding: 1rem 0.5rem
-	.foot
-		margin-top: auto
-		border-top: var(--border-dark)
-		padding: 1rem
-	a.imgbox
-		height: 240px
-		padding: 0 0.5rem
-		img
-			object-fit: cover
-			width: 100%
-			height: 100%
-	@media screen and (min-width: 1025px)
-		.post-metadata
-			padding: 1rem
-		a.imgbox
-			height: 240px
-			padding: 0 1rem
-		.title-desc
-			padding: 1rem 2rem
-		.foot
-			padding: 1rem 2rem
 
 // ── GATEWAY CARDS ─────────────────────────────────────────
 
@@ -244,27 +188,9 @@
 .books
 	display: flex
 	flex-direction: column
-	gap: 1.25rem
-	padding: 1rem
-	border-radius: 4px
-	background: var(--color-back)
 	@media screen and (min-width: 1025px)
 		display: grid
 		grid-template-columns: 160px 1fr
-		align-items: start
-		.labelbox
-			padding: 1rem
-
-.publication-image
-	object-fit: cover
-	border-radius: 4px
-	display: block
-	@media screen and (min-width: 1025px)
-		height: 256px
-		width: 100%
-	@media screen and (max-width: 1024px)
-		height: 200px
-		margin-right: auto
 
 
 // ── VIDEOS ────────────────────────────────────────────────
