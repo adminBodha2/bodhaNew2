@@ -35,5 +35,8 @@
 	"editor.fontFamily": "\"Google Sans Flex\", sans-serif",
 	"editor.formatOnPaste": true,
 	"editor.rename.enablePreview": false,
-	"editor.parameterHints.enabled": false
+	"editor.parameterHints.enabled": false,
+	"[postcss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

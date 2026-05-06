@@ -1,30 +1,50 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import Optimizer from '$lib/comps/seo-optimizer.svelte'
 	import type { GeoJSONSource, Map as MapLibreMap } from 'maplibre-gl';
 	import type { FeatureCollection } from 'geojson';
-	import 'maplibre-gl/dist/maplibre-gl.css';
+	import '$lib/styles/maplibre-gl.css'
 	import temples from '$lib/serving/db-hindu-temples.json';
  	let { data } = $props();
+
+	//each temple carries this data on the page
 	type Temple = {
 		name: string;
 		slug: string;
 		state: string;
 		latitude: number | null;
 		longitude: number | null;
+		isanveshi: boolean;
+		anveshichapter: string | null;
+		anveshidescription: string | null;
+		image: string;
 		story: {
 			details: string
 		};
-		'is-anveshi': Boolean;
 	};
 
+	//coordinates of each temple
 	type TempleWithCoordinates = Temple & {
 		latitude: number;
 		longitude: number;
+		mapKey: string;
 	};
 
+	//temples in anveshi
+	type TempleInAnveshi = Temple & {
+		isanveshi: boolean;
+	}
+
+	type PopupPlacement = {
+		x: number;
+		y: number;
+		anchor: 'above' | 'below' | 'center';
+		maxHeight: number;
+	};
+
+	//temples given property of a circle
 	type TempleFeature = {
 		type: 'Feature';
 		geometry: {
@@ -36,14 +56,21 @@
 			slug: string;
 			state: string;
 			color: string;
+			mapKey: string;
+			isanveshi: boolean;
+			image: string;
+			anveshichapter: string | null;
+			anveshidescription: string | null
 		};
 	};
 
+	//entire temples collection complete
 	type TempleFeatureCollection = {
 		type: 'FeatureCollection';
 		features: TempleFeature[];
 	};
 
+	//base background for the map
 	const CARTO_DARK_TILES = [
 		'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
 		'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
@@ -51,12 +78,14 @@
 		'https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
 	];
 
+	//adding geoson to show correct political boundaries of india
 	const INDIA_BOUNDARY_SOURCE = '/maps/india-boundary.geojson';
 	const EMPTY_BOUNDARY: FeatureCollection = {
 		type: 'FeatureCollection',
 		features: []
 	};
 
+	//giving different colors to temples in different states
 	const STATE_COLORS: Record<string, string> = {
 		'Andaman and Nicobar Islands': '#26a69a',
 		'Andhra Pradesh': '#ef5350',
@@ -95,28 +124,46 @@
 	};
 
 	let mapEl: HTMLDivElement;
+	let filterPanelEl: HTMLDivElement;
 	let maplibre: typeof import('maplibre-gl') | undefined;
 	let map = $state<MapLibreMap | undefined>(undefined);
 	let activeTemple = $state<TempleWithCoordinates | undefined>(undefined);
-	let popupPoint = $state<{ x: number; y: number } | undefined>(undefined);
+	let popupPlacement = $state<PopupPlacement | undefined>(undefined);
 	let filterOpen = $state(false);
 	let searchQuery = $state('');
 	let dismissedSearchQuery = $state('');
+	let showAnveshiOnly = $state(false);
+	let mapReady = $state(false);
 
-	const validTemples = (temples as Temple[]).filter(
-		(temple): temple is TempleWithCoordinates =>
-			typeof temple.latitude === 'number' && typeof temple.longitude === 'number'
-	);
+	const validTemples = (temples as Temple[])
+		.filter(
+			(temple): temple is Temple & { latitude: number; longitude: number } =>
+				typeof temple.latitude === 'number' && typeof temple.longitude === 'number'
+		)
+		.map((temple) => ({
+			...temple,
+			mapKey: `${temple.slug}:${temple.latitude}:${temple.longitude}`
+		}));
+
 	const states = [...new Set(validTemples.map((temple) => temple.state))].sort();
+
 	let selectedStates = $state<string[]>([...states]);
+
 	const visibleTemples = $derived(
-		validTemples.filter((temple) => selectedStates.includes(temple.state))
+		validTemples.filter(
+			(temple) =>
+				selectedStates.includes(temple.state) &&
+				(!showAnveshiOnly || temple.isanveshi)
+		)
 	);
+
 	const visibleCount = $derived(visibleTemples.length);
+	const anveshiCount = $derived(validTemples.filter((temple) => temple.isanveshi).length);
+
 	const searchResults = $derived(
 		searchQuery.trim().length < 2
 			? []
-			: validTemples
+			: visibleTemples
 					.filter((temple) => {
 						const query = searchQuery.toLowerCase().trim();
 						return (
@@ -126,6 +173,7 @@
 					})
 					.slice(0, 12)
 	);
+
 	const templeGeoJson = $derived.by<TempleFeatureCollection>(() => ({
 		type: 'FeatureCollection',
 		features: visibleTemples.map((temple) => ({
@@ -139,52 +187,105 @@
 				slug: temple.slug,
 				state: temple.state,
 				color: templeColor(temple.state),
+				mapKey: temple.mapKey,
+				isanveshi: temple.isanveshi,
+				image: temple.image,
+				anveshichapter: temple.anveshichapter,
+				anveshidescription: temple.anveshidescription
 			}
 		}))
 	}));
 
+
 	function templeColor(state: string) {
-		return STATE_COLORS[state] ?? '#f7c948';
+		return STATE_COLORS[state] ?? '#FFFFFF';
 	}
 
 	function showTemplePopup(temple: TempleWithCoordinates) {
 		if (!map) return;
-
 		activeTemple = temple;
 		syncActivePopupPoint();
 	}
 
 	function syncActivePopupPoint() {
 		if (!map || !activeTemple) {
-			popupPoint = undefined;
+			popupPlacement = undefined;
 			return;
 		}
 
 		const point = map.project([activeTemple.longitude, activeTemple.latitude]);
-		popupPoint = { x: point.x, y: point.y };
+		const shell = mapEl.parentElement;
+		const shellWidth = shell?.clientWidth ?? mapEl.clientWidth;
+		const shellHeight = shell?.clientHeight ?? mapEl.clientHeight;
+		const markerX = mapEl.offsetLeft + point.x;
+		const markerY = mapEl.offsetTop + point.y;
+		const popupWidth = Math.min(360, shellWidth - 32);
+		const edgePadding = 16;
+
+		if (shellWidth < 1025) {
+			popupPlacement = {
+				x: shellWidth / 2,
+				y: mapEl.offsetTop + mapEl.clientHeight / 2,
+				anchor: 'center',
+				maxHeight: Math.max(160, Math.min(520, mapEl.clientHeight - 32))
+			};
+			return;
+		}
+
+		const x = Math.min(
+			Math.max(markerX, edgePadding + popupWidth / 2),
+			shellWidth - edgePadding - popupWidth / 2
+		);
+		const spaceAbove = markerY - edgePadding;
+		const spaceBelow = shellHeight - markerY - edgePadding;
+		const anchor = spaceAbove < 260 && spaceBelow > spaceAbove ? 'below' : 'above';
+		const availableHeight = anchor === 'below' ? spaceBelow : spaceAbove;
+
+		popupPlacement = {
+			x,
+			y: markerY,
+			anchor,
+			maxHeight: Math.max(160, Math.min(520, availableHeight - 24))
+		};
 	}
 
 	function closeTemplePopup() {
 		activeTemple = undefined;
-		popupPoint = undefined;
+		popupPlacement = undefined;
 	}
 
-	function findTempleBySlug(slug: string) {
-		return validTemples.find((temple) => temple.slug === slug);
+	function templeHref(temple: TempleWithCoordinates) {
+		if (temple.isanveshi && temple.anveshichapter) {
+			return `/anveshi/${temple.anveshichapter}`;
+		}
+
+		return `/temples/${temple.slug}`;
+	}
+
+	function findTempleByMapKey(mapKey: string) {
+		return validTemples.find((temple) => temple.mapKey === mapKey);
 	}
 
 	function toggleState(state: string) {
 		selectedStates = selectedStates.includes(state)
 			? selectedStates.filter((item) => item !== state)
 			: [...selectedStates, state];
+		refreshTempleSource();
 	}
 
 	function selectAllStates() {
 		selectedStates = [...states];
+		refreshTempleSource();
 	}
 
 	function clearStates() {
 		selectedStates = [];
+		refreshTempleSource();
+	}
+
+	function toggleAnveshiTemples() {
+		showAnveshiOnly = !showAnveshiOnly;
+		refreshTempleSource();
 	}
 
 	function focusTemple(temple: TempleWithCoordinates) {
@@ -204,8 +305,39 @@
 	}
 
 	$effect(() => {
+		if (!mapReady) return;
+		setTempleSourceData();
+	});
+
+	$effect(() => {
+		if (!activeTemple) return;
+
+		const isStillVisible = visibleTemples.some((temple) => temple.slug === activeTemple?.slug);
+		if (!isStillVisible) closeTemplePopup();
+	});
+
+	function setTempleSourceData() {
 		const source = map?.getSource('temples') as GeoJSONSource | undefined;
 		source?.setData(templeGeoJson);
+	}
+
+	function refreshTempleSource() {
+		void tick().then(setTempleSourceData);
+	}
+
+	$effect(() => {
+		if (!filterOpen) return;
+
+		function closeFilterOnOutsideClick(event: PointerEvent) {
+			if (filterPanelEl?.contains(event.target as Node)) return;
+			filterOpen = false;
+		}
+
+		document.addEventListener('pointerdown', closeFilterOnOutsideClick);
+
+		return () => {
+			document.removeEventListener('pointerdown', closeFilterOnOutsideClick);
+		};
 	});
 
 	function addTempleLayers(targetMap: MapLibreMap) {
@@ -215,21 +347,8 @@
 			type: 'geojson',
 			data: templeGeoJson,
 			cluster: true,
-			clusterMaxZoom: 30,
-			clusterRadius: 10
-		});
-
-		targetMap.addLayer({
-			id: 'temple-clusters-halo',
-			type: 'circle',
-			source: 'temples',
-			filter: ['has', 'point_count'],
-			paint: {
-				'circle-color': ['coalesce', ['get', 'color'], '#f7c948'],
-				'circle-radius': 6,
-				'circle-opacity': 0,
-				'circle-blur': 0
-			}
+			clusterMaxZoom: 1,
+			clusterRadius: 0
 		});
 
 		targetMap.addLayer({
@@ -238,9 +357,9 @@
 			source: 'temples',
 			filter: ['has', 'point_count'],
 			paint: {
-				'circle-color': '#fd3010',
-				'circle-radius': ['step', ['get', 'point_count'], 6, 10, 23, 50, 29],
-				'circle-stroke-color': 'rgba(0,0,0,0)',
+				'circle-color': '#56ed49',
+				'circle-radius': ['step', ['get', 'point_count'], 4, 5, 8, 50, 12],
+				'circle-stroke-color': '#FFFFFF',
 				'circle-stroke-width': 1
 			}
 		});
@@ -251,7 +370,7 @@
 			source: 'temples',
 			filter: ['!', ['has', 'point_count']],
 			paint: {
-				'circle-color': ['coalesce', ['get', 'color'], '#f7c948'],
+				'circle-color': '#FFFFFF',
 				'circle-radius': 0,
 				'circle-opacity': 0,
 				'circle-blur': 0
@@ -264,12 +383,13 @@
 			source: 'temples',
 			filter: ['!', ['has', 'point_count']],
 			paint: {
-				'circle-color': ['coalesce', ['get', 'color'], '#f7c948'],
+				'circle-color': ['case', ['==', ['get', 'isanveshi'], true], '#D3633A', '#9ED800'],
 				'circle-radius': 4,
-				'circle-stroke-color': 'rgba(255, 255, 255, 0.92)',
-				'circle-stroke-width': 2.5
+				'circle-stroke-color': ['case', ['==', ['get', 'isanveshi'], true], '#D3633A', '#9ED800'],
+				'circle-stroke-width': 0
 			}
 		});
+		mapReady = true;
 	}
 
 	async function loadBoundaryOverlay(targetMap: MapLibreMap) {
@@ -402,10 +522,10 @@
 					});
 
 					activeMap.on('click', 'temple-points', (event) => {
-						const slug = event.features?.[0]?.properties?.slug;
-						if (typeof slug !== 'string') return;
+						const mapKey = event.features?.[0]?.properties?.mapKey;
+						if (typeof mapKey !== 'string') return;
 
-						const temple = findTempleBySlug(slug);
+						const temple = findTempleByMapKey(mapKey);
 						if (temple) showTemplePopup(temple);
 					});
 
@@ -418,6 +538,7 @@
 					});
 
 					activeMap.on('move', syncActivePopupPoint);
+					activeMap.on('resize', syncActivePopupPoint);
 
 					for (const layerId of ['temple-clusters', 'temple-points']) {
 						activeMap.on('mouseenter', layerId, () => {
@@ -452,26 +573,27 @@
   title={data.seo.title}
   description={data.seo.description}
   url={data.seo.url}
-  siteUrl="https://mysite.com"
-  siteName="My Tech Blog"
+  siteUrl="https://www.bodharesearch.in"
+  siteName="Bodha"
   image={data.seo.image}
   imageAlt={data.seo.imageAlt}
   type="article"
   publishedDate={data.seo.publishedDate}
   tags={data.seo.tags}
   breadcrumbs={data.seo.breadcrumbs}
-  alternates={data.seo.alternates}
   noindex={false}
-  author="Daniel Guimarães"
-  twitterCreator="@heydan_dev"
+  author="designBodha"
+  twitterCreator="@BodhaResearch"
 />
 
 <section class="temple-map-shell">
 	<div bind:this={mapEl} class="temple-map"></div>
-	{#if activeTemple && popupPoint}
+	{#if activeTemple && popupPlacement}
 		<div
 			class="temple-popup"
-			style={`left:${popupPoint.x}px;top:${popupPoint.y}px`}
+			class:below={popupPlacement.anchor === 'below'}
+			class:center={popupPlacement.anchor === 'center'}
+			style={`left:${popupPlacement.x}px;top:${popupPlacement.y}px;--popup-max-height:${popupPlacement.maxHeight}px`}
 			role="dialog"
 			aria-label={activeTemple.name}
 		>
@@ -483,67 +605,55 @@
 			>
 				x
 			</button>
-			<a class="popup-temple-link" href={`/temples/${activeTemple.slug}`}>
+			<a class="popup-temple-link" href={templeHref(activeTemple)}>
+				{#if activeTemple.isanveshi}
+					<img class="fit" src={activeTemple.image} alt={activeTemple.name}/>
+				{/if}
 				<div class="popup-temple-name">{activeTemple.name}</div>
-				<div class="popup-state">
-					<span
-						class="popup-state-dot"
-						style={`background:${templeColor(activeTemple.state)}`}
-					></span>
-					{activeTemple.state}
-				</div>
-				<div class="popup-coords">
-					{activeTemple.latitude.toFixed(4)}, {activeTemple.longitude.toFixed(4)}
-				</div>
+				{#if activeTemple.isanveshi}
+					<div class="popup-badge">In Anveshi</div>
+				{/if}
+				{#if activeTemple.isanveshi && activeTemple.anveshidescription}
+					<p class="popup-story">{activeTemple.anveshidescription.slice(0,80)}...<span style="color: #F18100">(Go to Page)</span></p>
+				{/if}
+				{#if activeTemple.story?.details && !activeTemple.isanveshi}
+					<p class="popup-story">{activeTemple.story.details.slice(0,80)}... <span style="color: #F18100">(Go to Page)</span></p>
+				{/if}
 			</a>
 		</div>
 	{/if}
-	<div class="search-panel">
-		<input
-			bind:value={searchQuery}
-			type="search"
-			placeholder="Search temples or states"
-			aria-label="Search temples or states"
-			oninput={() => (dismissedSearchQuery = '')}
-		/>
-
-		{#if searchQuery.trim().length >= 2 && searchQuery !== dismissedSearchQuery}
-			<div class="search-results">
-				{#if searchResults.length > 0}
-					{#each searchResults as temple}
-						<button type="button" onclick={() => focusTemple(temple)}>
-							<span style={`background:${templeColor(temple.state)}`}></span>
-							<strong>{temple.name}</strong>
-							<small>{temple.state}</small>
-						</button>
-					{/each}
-				{:else}
-					<p>No temples found</p>
-				{/if}
-			</div>
-		{/if}
-	</div>
 	<div class="stats-panel">
-		<p>India Temples Map</p>
 		<div class="stats-row">
-			<div>
-				<strong>{validTemples.length}</strong>
-				<span>Total</span>
-			</div>
 			<div>
 				<strong>{states.length}</strong>
 				<span>States</span>
 			</div>
 			<div>
 				<strong>{visibleCount}</strong>
-				<span>Visible</span>
+				<span>TEMPLES</span>
 			</div>
 		</div>
+		<p class="smalltext">
+			Temples base data from <a class="linked" href="https://github.com/rishabhmodi03/hindu-temples" target="_blank" rel="noreferrer">
+				Hindu temples repo by Rishabh Modi.
+			</a>
+			Locations are approximate. Data cleaning underway. To contribute, write to sitemaster@bodharesearch.in
+		</p>
 	</div>
-	<div class="filter-panel">
-		<button type="button" class="filter-toggle" onclick={() => (filterOpen = !filterOpen)}>
-			Filter by State
-		</button>
+	<div class="filter-panel" bind:this={filterPanelEl}>
+		<div class="filter-buttons">
+			<button
+				type="button"
+				class="filter-toggle"
+				class:active={showAnveshiOnly}
+				onclick={toggleAnveshiTemples}
+			>
+				Anveshi Temples ({anveshiCount})
+			</button>
+			<button type="button" class="filter-toggle" onclick={() => (filterOpen = !filterOpen)}>
+				States
+			</button>
+		</div>
 		{#if filterOpen}
 			<div class="filter-dropdown">
 				<div class="filter-actions">
@@ -563,113 +673,55 @@
 			</div>
 		{/if}
 	</div>
+	<div class="temple-data-attribution">
+		<p>
+			Temples base data from <a class="linked" href="https://github.com/rishabhmodi03/hindu-temples" target="_blank" rel="noreferrer">
+				Hindu temples repo by Rishabh Modi.
+			</a>
+			Locations are approximate. Data cleaning underway. To contribute, write to sitemaster@bodharesearch.in
+		</p>
+	</div>
 </section>
 
 <style lang="sass">
+
+	.temple-data-attribution
+		position: fixed
+		top: 80px
+		left: 8px
+		background: rgba(0,0,0,0.1)
+		padding: 1rem
+		z-index: 999
+		width: 300px
+		p
+			font-size: 12px
+			color: #878787
+		@media (max-width: 1024px)
+			top: 64px
+			width: calc(100% - 3rem)
+			left: 3rem
+
 	.temple-map-shell
 		position: relative
 		min-height: 100vh
-		background: #111117
+		background: var(--color-back)
 		overflow: hidden
+		margin-top: 0
+		padding-top: 64px
+		@media (min-width: 1025px)
+			padding-top: 72px
 
 	.temple-map
 		width: 100%
-		height: 100vh
+		height: calc(100vh - 64px)
 		z-index: 1
-
-	.search-panel
-		position: absolute
-		top: 18px
-		right: 24px
-		z-index: 4
-		width: min(320px, calc(100vw - 48px))
-
-		input
+		@media (min-width: 1025px)
 			width: 100%
-			border: 1px solid rgba(247, 201, 72, 0.25)
-			border-radius: 10px
-			padding: 11px 14px
-			color: #f5eadf
-			background: rgba(15, 15, 22, 0.94)
-			outline: none
-
-	.search-results
-		margin-top: 8px
-		max-height: 320px
-		overflow: auto
-		border: 1px solid rgba(247, 201, 72, 0.18)
-		border-radius: 12px
-		background: rgba(15, 15, 22, 0.97)
-
-		button
-			width: 100%
-			display: grid
-			grid-template-columns: 10px 1fr
-			gap: 4px 8px
-			padding: 10px 14px
-			border: 0
-			border-bottom: 1px solid rgba(255, 255, 255, 0.06)
-			color: #e0d5c8
-			text-align: left
-			background: transparent
-			cursor: pointer
-
-			&:hover
-				background: rgba(247, 201, 72, 0.1)
-
-			span
-				width: 9px
-				height: 9px
-				border-radius: 50%
-				margin-top: 5px
-
-			strong
-				font-size: 13px
-				font-weight: 600
-
-			small
-				grid-column: 2
-				color: #8b8078
-				font-size: 11px
-
-		p
-			margin: 0
-			padding: 14px
-			color: #8b8078
-
-	.stats-panel
-		position: absolute
-		left: 24px
-		bottom: 24px
-		z-index: 4
-		display: grid
-		gap: 10px
-		padding: 14px 18px
-		border: 1px solid rgba(255, 255, 255, 0.08)
-		border-radius: 12px
-		background: rgba(10, 10, 15, 0.74)
-		backdrop-filter: blur(16px)
-
-		p
-			margin: 0
-			color: #fff
-			font-weight: 700
-
-		strong
-			color: #fff
-			font-size: 22px
-			line-height: 1
-
-		span
-			color: #8b8078
-			font-size: 10px
-			text-transform: uppercase
-			letter-spacing: 0.08em
+			height: calc(100vh - 72px)
 
 	.stats-row
 		display: flex
 		gap: 16px
-
 		div
 			display: grid
 			gap: 3px
@@ -677,17 +729,30 @@
 
 	.filter-panel
 		position: absolute
-		right: 24px
-		bottom: 24px
+		right: 4rem
+		bottom: 3rem
 		z-index: 4
 
+	.filter-buttons
+		display: flex
+		justify-content: flex-end
+		gap: 8px
+
 	.filter-toggle
-		border: 1px solid rgba(247, 201, 72, 0.25)
-		border-radius: 10px
-		padding: 10px 16px
-		color: #f7c948
-		background: rgba(15, 15, 22, 0.94)
+		border: 1px solid rgba(255,255,255,0.2)
+		border-radius: 4px
+		padding: 8px 16px
+		font-size: 12px
+		color: #d7d7d7
+		background: rgba(0,0,0,0.1)
+		backdrop-filter: blur(10px)
 		cursor: pointer
+		&.active
+			color: var(--color-white)
+			background: var(--color-theme-2)
+		&:hover
+			color: var(--color-white)
+			background: var(--color-theme)
 
 	.filter-dropdown
 		position: absolute
@@ -697,23 +762,27 @@
 		max-height: 420px
 		overflow: auto
 		padding: 10px
-		border: 1px solid rgba(247, 201, 72, 0.18)
+		border: 1px solid rgba(255,255,255,0.2)
 		border-radius: 12px
-		background: rgba(15, 15, 22, 0.98)
+		background: rgba(0,0,0,0.1)
+		backdrop-filter: blur(10px)
 
 	.filter-actions
 		display: flex
 		gap: 8px
 		margin-bottom: 8px
-
 		button
 			flex: 1
-			border: 1px solid rgba(247, 201, 72, 0.18)
+			border: 1px solid rgba(255,255,255,0.2)
 			border-radius: 8px
+			font-size: 12px
 			padding: 7px
-			color: #f7c948
-			background: rgba(247, 201, 72, 0.08)
+			color: #d7d7d7
+			background: rgba(0,0,0,0.1)
 			cursor: pointer
+			&:hover
+				color: var(--color-white)
+				background: var(--color-theme)
 
 	.filter-item
 		width: 100%
@@ -728,23 +797,19 @@
 		text-align: left
 		background: transparent
 		cursor: pointer
-
 		&:hover
 			background: rgba(247, 201, 72, 0.08)
-
 		span
 			width: 18px
 			height: 18px
 			display: grid
 			place-items: center
-			border: 1px solid rgba(247, 201, 72, 0.32)
+			border: 1px solid rgba(255,255,255,0.2)
 			border-radius: 5px
 			color: #101015
 			font-size: 12px
-
 			&.checked
-				background: #f7c948
-
+				background: rgba(255,255,255,0.5)
 		i
 			width: 10px
 			height: 10px
@@ -768,14 +833,16 @@
 		position: absolute
 		z-index: 5
 		transform: translate(-50%, calc(-100% - 14px))
-		min-width: 190px
-		border: 1px solid rgba(247, 201, 72, 0.18)
+		width: min(360px, calc(100vw - 32px))
+		max-height: var(--popup-max-height, min(520px, calc(100vh - 160px)))
+		overflow: auto
+		border: 1px solid rgba(255,255,255,0.2)
 		border-radius: 10px
-		padding: 12px 14px
-		color: #e0d5c8
-		background: rgba(15, 15, 22, 0.98)
+		padding: 1rem
+		color: #FFFFFF
+		background: rgba(0,0,0,0.1)
+		backdrop-filter: blur(5px)
 		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32)
-
 		&::after
 			content: ''
 			position: absolute
@@ -787,9 +854,21 @@
 			border-right: 1px solid rgba(247, 201, 72, 0.18)
 			border-bottom: 1px solid rgba(247, 201, 72, 0.18)
 			background: rgba(15, 15, 22, 0.98)
-
+		&.below
+			transform: translate(-50%, 14px)
+			&::after
+				top: -8px
+				bottom: auto
+				border: 0
+				border-left: 1px solid rgba(247, 201, 72, 0.18)
+				border-top: 1px solid rgba(247, 201, 72, 0.18)
+		&.center
+			transform: translate(-50%, -50%)
+			&::after
+				display: none
 	.temple-popup-close
 		position: absolute
+		border: none
 		top: 2px
 		right: 6px
 		z-index: 1
@@ -800,52 +879,79 @@
 		font-size: 18px
 		line-height: 1
 		cursor: pointer
-
 		&:hover
 			color: #f7c948
-
+	img.fit
+		margin-top: 1rem
+		border-radius: 8px
 	.popup-temple-link
 		display: block
 		color: inherit
 		text-decoration: none
-
 	.popup-temple-name
-		padding-right: 16px
-		font-weight: 700
-		color: #f7c948
+		border: none
+		color: #FFFFFF
+		font-weight: bold
+		margin-top: 0.5rem
+	.popup-badge
+		width: max-content
+		border: 1px solid rgba(255,255,255,0.5)
+		border-radius: 4px
+		padding: 4px
+		color: #FFFFFF
+		background: var(--color-anveshi)
+		font-size: 10px
+		font-weight: 450
+		margin-top: 0.5rem
+		text-transform: uppercase
+	.popup-story
+		margin: 10px 0 0
+		color: #dedede
+		font-size: 12px
+		line-height: 1.45
 
-	.popup-state
+	.stats-panel
+		position: absolute
+		left: 24px
+		bottom: 24px
+		z-index: 4
 		display: flex
+		flex-direction: row
+		gap: 10px
+		padding: 14px 18px
+		border: 1px solid rgba(255, 255, 255, 0.08)
+		border-radius: 12px
+		background: rgba(10, 10, 15, 0.74)
+		backdrop-filter: blur(16px)
 		align-items: center
-		gap: 6px
-		margin-top: 6px
-
-	.popup-state-dot
-		width: 8px
-		height: 8px
-		border-radius: 50%
-
-	.popup-coords
-		margin-top: 6px
-		color: #8b8078
-		background: transparent
-		font-size: 11px
+		strong
+			color: #fff
+			font-size: 22px
+			line-height: 1
+		span
+			color: #8b8078
+			font-size: 10px
+			text-transform: uppercase
+			letter-spacing: 0.08em
+		p.smalltext
+			color: #878787
+			font-size: 12px
+			width: 300px
+			padding-left: 1rem
 
 	@media screen and (max-width: 720px)
-		.search-panel
-			top: 72px
-			left: 16px
-			right: 16px
-			width: auto
-
 		.stats-panel
-			left: 16px
-			bottom: 16px
-
+			width: calc(100% - 16px)
+			left: 8px
+			bottom: 8px
+			padding: 0.5rem
+			p.smalltext
+				padding-left: 0.5rem
+				width: 100%
 		.filter-panel
 			right: 16px
-			bottom: 16px
-
+			bottom: 8rem
 		:global(.maplibregl-ctrl-top-left)
 			left: 16px
+
 </style>

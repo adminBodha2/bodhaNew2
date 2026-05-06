@@ -6,11 +6,34 @@ export interface TempleRecord {
 	name: string;
 	slug: string;
 	state: string;
-	info?: Record<string, string> | null;
-	story?: Record<string, string> | null;
-	visiting_guide?: Record<string, string> | null;
-	architecture?: Record<string, string> | null;
-	[key: string]: unknown;
+	image?: string | null;
+	latitude?: number | null;
+	longitude?: number | null;
+	isanveshi?: boolean | null;
+	anveshichapter?: string | null;
+	'anveshi-description'?: string | null;
+	anveshidescription?: string | null;
+	info?: {
+		location?: string | null;
+		'main-deity'?: string | null;
+		maindeity?: string | null;
+		'other-deities'?: { deity?: string | null }[] | null;
+		highlights?: { highlight?: string | null }[] | null;
+	} | null;
+	story?: {
+		details?: string | null;
+		'scriptural-references'?: { reference?: string | null }[] | null;
+		'scriptural-facts'?: { fact?: string | null; detail?: string | null }[] | string[] | null;
+	} | null;
+	'visiting-guide'?: {
+		'getting-there'?: string | null;
+		'things-to-do'?: string | null;
+		tips?: string | null;
+	} | null;
+	architecture?: {
+		details?: string | null;
+		'key-features'?: { feature?: string | null }[] | null;
+	} | null;
 }
 
 const temples = templesJson as unknown as TempleRecord[];

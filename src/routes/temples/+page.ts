@@ -1,21 +1,16 @@
 export const load = async () => {
   return {
     seo: {
-      title: 'My Awesome Article',
-      description: 'A complete guide on Svelte 5 and SEO.',
-      url: '/blog/my-article',
-      image: '/images/cover.jpg',
-      imageAlt: 'Article cover with Svelte logo',
+      title: 'Temples Map | Bodha',
+      description: 'A map of Hindu temples, linking to infomation about them.',
+      url: '/temples',
+      image: '/images/bodhacover.png',
+      imageAlt: 'Bodha cover image',
       publishedDate: '2026-02-22T10:00:00Z',
-      tags: ['Svelte', 'SEO', 'Web Development'],
+      tags: ['Temples', 'Research', 'Hindu'],
       breadcrumbs: [
-        { name: 'Blog', url: '/blog' },
-        { name: 'My Awesome Article', url: '/blog/my-article' }
+        { name: 'Temples', url: '/temples' },
       ],
-      alternates: [
-        { hreflang: 'pt-BR', href: '/blog/my-article' },
-        { hreflang: 'en-US', href: '/en/blog/my-article' }
-      ]
     }
   };
 };
