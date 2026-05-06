@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import { nodes, getIncoming, getOutgoing, nodeById } from '$lib/graph';
-import type { GraphNode, NodeType } from '$lib/noder/graph';
+import type { GraphEdge, GraphNode, NodeType } from '$lib/noder/graph';
 
 type ConceptWithCount = GraphNode & {
 	count: number;
@@ -56,6 +56,72 @@ function countContentForConcept(concept: GraphNode) {
 	return contentIds.size;
 }
 
+function nodeHref(node: GraphNode) {
+	return node.meta.route || `/explorer/${encodeURIComponent(node.id)}`;
+}
+
+function conceptRouteNode(concept: ConceptWithCount): GraphNode {
+	return {
+		...concept,
+		description:
+			concept.description ||
+			`${concept.count} knowledge-base nodes gathered under this top-level domain.`,
+		meta: {
+			...concept.meta,
+			route: `/concepts/${concept.slug}`
+		}
+	};
+}
+
+function buildTopLevelConceptGraph(topLevelConcepts: ConceptWithCount[]) {
+	const graphNodes = new Map<string, GraphNode>();
+	const graphEdges = new Map<string, GraphEdge>();
+
+	for (const concept of topLevelConcepts) {
+		const topConcept = conceptRouteNode(concept);
+		graphNodes.set(topConcept.id, topConcept);
+
+		const contentIds = new Set<string>();
+		for (const treeConcept of collectConceptTree(concept)) {
+			for (const edge of getIncoming(treeConcept.id)) {
+				const source = nodeById.get(edge.from);
+				if (!source || !contentTypes.has(source.type)) continue;
+
+				contentIds.add(source.id);
+			}
+		}
+
+		for (const contentId of contentIds) {
+			const contentNode = nodeById.get(contentId);
+			if (!contentNode) continue;
+
+			graphNodes.set(contentNode.id, {
+				...contentNode,
+				meta: {
+					...contentNode.meta,
+					route: nodeHref(contentNode)
+				}
+			});
+
+			graphEdges.set(`${topConcept.id}->${contentNode.id}`, {
+				id: `top-concept:${topConcept.slug}:${contentNode.id}`,
+				from: topConcept.id,
+				to: contentNode.id,
+				type: 'HAS_TAG',
+				meta: {
+					source: 'manual',
+					weight: 1
+				}
+			});
+		}
+	}
+
+	return {
+		nodes: Array.from(graphNodes.values()),
+		edges: Array.from(graphEdges.values())
+	};
+}
+
 export const load: PageLoad = () => {
 	const allConcepts = nodes.filter((n) => n.type === 'concept');
 	const childIds = new Set<string>();
@@ -74,7 +140,10 @@ export const load: PageLoad = () => {
 			childCount: getChildConcepts(concept.id).length
 		}))
 		.sort((a, b) => b.count - a.count || a.title.localeCompare(b.title));
+	const conceptGraph = buildTopLevelConceptGraph(topLevelConcepts);
+
 	return {
-		topLevelConcepts
+		topLevelConcepts,
+		conceptGraph
 	};
 };

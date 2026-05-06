@@ -565,7 +565,7 @@ button.blank.with-tooltip
 		top: 72px
 		height: calc(100vh - 72px)
 		width: 48px
-		background: var(--color-back)
+		background: var(--color-stone-2)
 		border-left: var(--border-main)
 		backdrop-filter: blur(10px)
 		transition: width 0.15s ease

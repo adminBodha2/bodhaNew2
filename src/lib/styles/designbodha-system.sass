@@ -4,23 +4,50 @@
 	gap: 2vw
 	&.gap-1p
 		gap: 1px
+	.row-1
+		grid-row: 1
+	.row-2
+		grid-row: 2
+	.row-3
+		grid-row: 3
+	.span-2, .span-3, .span-4
+		grid-column: 1 / -1
+	.in-grid
+		grid-column: 1 / -1
 	@media (min-width: 721px)
 		grid-template-columns: repeat(2, 1fr)
 		gap: 1vw
 	@media (min-width: 1025px)
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
 		gap: 0.75vw
+		&.g-hard4
+			grid-template-columns: repeat(4, 1fr)
+			.span-2
+				grid-column: span 2
+			.span-3
+				grid-column: span 3
 		&.g-4
 			grid-template-columns: repeat(2, 1fr)
 		&.g-3
 			grid-template-columns: repeat(3, 1fr)
 		&.g-2
 			grid-template-columns: repeat(2, 1fr)
+		.span-2
+			grid-column: span 1
+		.span-3
+			grid-column: span 2
+		.span-4
+			grid-column: span 2
 	@media (min-width: 1201px)
 		gap: 0.5vw
 		&.g-4
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-
+			grid-template-columns: repeat(4, 1fr)
+		.span-2
+			grid-column: span 2
+		.span-3
+			grid-column: span 3
+		.span-4
+			grid-column: span 4
 
 img.fit
 	object-fit: cover
@@ -37,13 +64,19 @@ img.portrait
 	&.book
 		width: 160px
 
-
 :root
 	--scaler-pad: 10vw
+	--header-pad: 24vw
+	--mid-pad: 6vw
 	@media (min-width: 721px)
 		--scaler-pad: 8vw
+		--header-pad: 16vw
 	@media (min-width: 1025px)
 		--scaler-pad: 6vw
+		--header-pad: 12vw
+	@media (min-width: 1201px)
+		--header-pad: 6vw
+		--mid-pad: 3vw
 
 .rgap-std
 	row-gap: 2em
@@ -75,8 +108,18 @@ img.portrait
 	.rgap-std
 		row-gap: 3em
 
+.pad-std
+	padding-top: var(--scaler-pad)
+	padding-bottom: var(--scaler-pad)
+
+.pad-md
+	padding-top: var(--mid-pad)
+	padding-bottom: var(--mid-pad)
+
 .box-std
 	display: flex
 	flex-direction: column
 	padding-top: var(--scaler-pad)
 	padding-bottom: var(--scaler-pad)
+	&.header-pad
+		padding-top: var(--header-pad)

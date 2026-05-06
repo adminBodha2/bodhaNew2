@@ -55,9 +55,12 @@
 	type Props = {
 		nodes: GraphNode[];
 		edges: GraphEdge[];
+		featuredNodeIds?: string[];
+		maxNodes?: number;
+		maxLinks?: number;
 	};
 
-	let { nodes, edges }: Props = $props();
+	let { nodes, edges, featuredNodeIds = [], maxNodes = 260, maxLinks = 520 }: Props = $props();
 
 	const colorByType: Record<NodeType, string> = {
 		blog: '#1971c2',
@@ -131,17 +134,25 @@ const baseImage = "/images/demos/night.png";
 	const revealImage = "/images/demos/day.png";
 
 	let selectedNode = $derived(selectedId ? indexes.pointById.get(selectedId) : undefined);
+	let featuredNodeIdSet = $derived(new Set(featuredNodeIds));
 	let visibleGraph = $derived(buildVisibleGraph(activeType, query, selectedId));
 	let visibleCounts = $derived({
 		nodes: visibleGraph.nodes.length,
 		links: visibleGraph.links.length
 	});
-	let topNodes = $derived(
-		Array.from(indexes.pointById.values())
+	let topNodes = $derived.by(() => {
+		const points = Array.from(indexes.pointById.values());
+		const featured = points
+			.filter((node) => featuredNodeIdSet.has(node.id))
+			.sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title));
+
+		if (featured.length) return featured.slice(0, 8);
+
+		return points
 			.filter((node) => node.type !== 'concept')
-			.sort((a, b) => b.degree - a.degree)
-			.slice(0, 5)
-	);
+			.sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title))
+			.slice(0, 5);
+	});
 
 	function buildVisibleGraph(type: NodeType | 'all', search: string, focusId: string | null) {
 		const normalizedSearch = search.trim().toLowerCase();
@@ -172,11 +183,11 @@ const baseImage = "/images/demos/night.png";
 		const graphNodes = Array.from(visibleIds)
 			.map((id) => indexes.pointById.get(id))
 			.filter((node): node is GraphPoint => !!node)
-			.slice(0, 260);
+			.slice(0, maxNodes);
 		const graphNodeIds = new Set(graphNodes.map((node) => node.id));
 		const graphLinks = edges
 			.filter((edge) => graphNodeIds.has(edge.from) && graphNodeIds.has(edge.to))
-			.slice(0, 520)
+			.slice(0, maxLinks)
 			.map((edge) => ({
 				id: edge.id,
 				source: edge.from,

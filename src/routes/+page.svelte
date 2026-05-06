@@ -41,10 +41,10 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
 <Container>
-	<div class="box-std rgap-std ycenter" id="first">
-		<div class="box rgap-std">
-			<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
-			<p class="paragraph-text loose width80" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+	<div class="box-std pad-std rgap-std ycenter" id="first">
+		<div class="g-grid g-hard4 rgap-std">
+			<h1 class="source-serif span-2 row-1"><span class="blue">Bodha</span> is a think tank and research group,</h1>
+			<p class="paragraph-text loose span-3 row-2" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 		</div>
 		<div class="g-grid g-4" bind:this={section}>
 			{#each verticals as item, i}
