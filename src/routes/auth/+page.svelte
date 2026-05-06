@@ -73,6 +73,7 @@
 				</form>
 
 				<form class="auth-panel" method="POST" action="?/signup">
+					<input type="hidden" name="next" value={next} />
 					<div>
 						<p class="label">Create account</p>
 						<h2>Email signup</h2>

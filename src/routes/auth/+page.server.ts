@@ -49,6 +49,9 @@ export const actions: Actions = {
 	signup: async ({ request, locals, url }) => {
 		const formData = await request.formData();
 		const credentials = readCredentials(formData);
+		const next = redirectPath(formData);
+		const emailRedirectTo = new URL('/auth/callback', url.origin);
+		emailRedirectTo.searchParams.set('next', next);
 
 		if (!credentials) {
 			return fail(400, { signupError: 'Enter both email and password.' });
@@ -57,7 +60,7 @@ export const actions: Actions = {
 		const { error } = await locals.supabase.auth.signUp({
 			...credentials,
 			options: {
-				emailRedirectTo: `${url.origin}/auth/callback`
+				emailRedirectTo: emailRedirectTo.toString()
 			}
 		});
 
