@@ -11,6 +11,8 @@ node_modules
 src/routes/site-docs/
 CLAUDE.md
 AGENTS.md
+temp
+temp/
 
 # OS
 .DS_Store

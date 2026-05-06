@@ -3,37 +3,30 @@ import templesJson from '$lib/serving/db-hindu-temples.json';
 import type { PageLoad } from './$types';
 
 export interface TempleRecord {
-	name: string;
+	temple_name: string;
 	slug: string;
-	state: string;
+	description?: string | null;
+	main_deity?: string | null;
+	category?: string | null;
+	temple_type?: string | null;
+	shiva_temple?: boolean | null;
+	vishnu_temple?: boolean | null;
+	devi_temple?: boolean | null;
+	ganesha_temple?: boolean | null;
+	saptapuri?: boolean | null;
+	char_dham?: boolean | null;
+	is_architectural_heritage?: boolean | null;
+	anveshi_image?: string | null;
+	latitude: number;
+	longitude: number;
+	state?: string | null;
 	image?: string | null;
-	latitude?: number | null;
-	longitude?: number | null;
-	isanveshi?: boolean | null;
-	anveshichapter?: string | null;
-	'anveshi-description'?: string | null;
-	anveshidescription?: string | null;
-	info?: {
-		location?: string | null;
-		'main-deity'?: string | null;
-		maindeity?: string | null;
-		'other-deities'?: { deity?: string | null }[] | null;
-		highlights?: { highlight?: string | null }[] | null;
-	} | null;
-	story?: {
-		details?: string | null;
-		'scriptural-references'?: { reference?: string | null }[] | null;
-		'scriptural-facts'?: { fact?: string | null; detail?: string | null }[] | string[] | null;
-	} | null;
-	'visiting-guide'?: {
-		'getting-there'?: string | null;
-		'things-to-do'?: string | null;
-		tips?: string | null;
-	} | null;
-	architecture?: {
-		details?: string | null;
-		'key-features'?: { feature?: string | null }[] | null;
-	} | null;
+	is_anveshi?: boolean | null;
+	chapter?: string | null;
+	other_deities?: { deity?: string | null; details?: string | null }[] | null;
+	other_details?: { details?: string | null }[] | null;
+	scriptural?: { details?: string | null; reference?: string | null; fact?: string | null }[] | null;
+	architecture?: string | null;
 }
 
 const temples = templesJson as unknown as TempleRecord[];

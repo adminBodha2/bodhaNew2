@@ -4,25 +4,34 @@
 	import { onMount, tick } from 'svelte';
 	import Optimizer from '$lib/comps/seo-optimizer.svelte'
 	import type { GeoJSONSource, Map as MapLibreMap } from 'maplibre-gl';
+	import type { PageProps } from './$types';
 	import type { FeatureCollection } from 'geojson';
 	import '$lib/styles/maplibre-gl.css'
 	import temples from '$lib/serving/db-hindu-temples.json';
- 	let { data } = $props();
+ 	let { data }: PageProps = $props();
 
 	//each temple carries this data on the page
 	type Temple = {
-		name: string;
+		temple_name: string;
 		slug: string;
-		state: string;
-		latitude: number | null;
-		longitude: number | null;
-		isanveshi: boolean;
-		anveshichapter: string | null;
-		anveshidescription: string | null;
-		image: string;
-		story: {
-			details: string
-		};
+		description: string | null;
+		main_deity: string | null;
+		category: string | null;
+		temple_type: string | null;
+		shiva_temple: boolean | null;
+		vishnu_temple: boolean | null;
+		devi_temple: boolean | null;
+		ganesha_temple: boolean | null;
+		saptapuri: boolean | null;
+		char_dham: boolean | null;
+		is_architectural_heritage: boolean | null;
+		anveshi_image: string | null;
+		latitude: number;
+		longitude: number;
+		state: string | null;
+		image: string | null;
+		is_anveshi: boolean | null;
+		chapter: string | null;
 	};
 
 	//coordinates of each temple
@@ -30,12 +39,9 @@
 		latitude: number;
 		longitude: number;
 		mapKey: string;
+		displayState: string;
+		displayImage: string | null;
 	};
-
-	//temples in anveshi
-	type TempleInAnveshi = Temple & {
-		isanveshi: boolean;
-	}
 
 	type PopupPlacement = {
 		x: number;
@@ -57,10 +63,10 @@
 			state: string;
 			color: string;
 			mapKey: string;
-			isanveshi: boolean;
-			image: string;
-			anveshichapter: string | null;
-			anveshidescription: string | null
+			is_anveshi: boolean;
+			image: string | null;
+			chapter: string | null;
+			description: string | null
 		};
 	};
 
@@ -106,6 +112,7 @@
 		Lakshadweep: '#5c6bc0',
 		'Madhya Pradesh': '#ffca28',
 		Maharashtra: '#ff6b35',
+		Meghalaya: '#b0bec5',
 		Manipur: '#7986cb',
 		Mizoram: '#4db6ac',
 		Nagaland: '#aed581',
@@ -120,7 +127,8 @@
 		Tripura: '#80cbc4',
 		'Uttar Pradesh': '#fff176',
 		Uttarakhand: '#90caf9',
-		'West Bengal': '#ce93d8'
+		'West Bengal': '#ce93d8',
+		Unknown: '#8b8078'
 	};
 
 	let mapEl: HTMLDivElement;
@@ -142,23 +150,25 @@
 		)
 		.map((temple) => ({
 			...temple,
-			mapKey: `${temple.slug}:${temple.latitude}:${temple.longitude}`
+			mapKey: `${temple.slug}:${temple.latitude}:${temple.longitude}`,
+			displayState: getTempleState(temple),
+			displayImage: getTempleImage(temple)
 		}));
 
-	const states = [...new Set(validTemples.map((temple) => temple.state))].sort();
+	const states = [...new Set(validTemples.map((temple) => temple.displayState))].sort();
 
 	let selectedStates = $state<string[]>([...states]);
 
 	const visibleTemples = $derived(
 		validTemples.filter(
 			(temple) =>
-				selectedStates.includes(temple.state) &&
-				(!showAnveshiOnly || temple.isanveshi)
+				selectedStates.includes(temple.displayState) &&
+				(!showAnveshiOnly || temple.is_anveshi)
 		)
 	);
 
 	const visibleCount = $derived(visibleTemples.length);
-	const anveshiCount = $derived(validTemples.filter((temple) => temple.isanveshi).length);
+	const anveshiCount = $derived(validTemples.filter((temple) => temple.is_anveshi).length);
 
 	const searchResults = $derived(
 		searchQuery.trim().length < 2
@@ -167,8 +177,9 @@
 					.filter((temple) => {
 						const query = searchQuery.toLowerCase().trim();
 						return (
-							temple.name.toLowerCase().includes(query) ||
-							temple.state.toLowerCase().includes(query)
+							temple.temple_name.toLowerCase().includes(query) ||
+							temple.displayState.toLowerCase().includes(query) ||
+							(temple.main_deity?.toLowerCase().includes(query) ?? false)
 						);
 					})
 					.slice(0, 12)
@@ -183,19 +194,30 @@
 				coordinates: [temple.longitude, temple.latitude]
 			},
 			properties: {
-				name: temple.name,
+				name: temple.temple_name,
 				slug: temple.slug,
-				state: temple.state,
-				color: templeColor(temple.state),
+				state: temple.displayState,
+				color: templeColor(temple.displayState),
 				mapKey: temple.mapKey,
-				isanveshi: temple.isanveshi,
-				image: temple.image,
-				anveshichapter: temple.anveshichapter,
-				anveshidescription: temple.anveshidescription
+				is_anveshi: temple.is_anveshi === true,
+				image: temple.displayImage,
+				chapter: temple.chapter,
+				description: temple.description
 			}
 		}))
 	}));
 
+	function getTempleState(temple: Temple) {
+		return temple.state?.trim() || 'Unknown';
+	}
+
+	function getTempleImage(temple: Temple) {
+		return temple.anveshi_image || temple.image;
+	}
+
+	function getTempleDescription(temple: Temple) {
+		return temple.description?.trim() ?? '';
+	}
 
 	function templeColor(state: string) {
 		return STATE_COLORS[state] ?? '#FFFFFF';
@@ -255,8 +277,8 @@
 	}
 
 	function templeHref(temple: TempleWithCoordinates) {
-		if (temple.isanveshi && temple.anveshichapter) {
-			return `/anveshi/${temple.anveshichapter}`;
+		if (temple.is_anveshi && temple.chapter) {
+			return `/anveshi/${temple.chapter}`;
 		}
 
 		return `/temples/${temple.slug}`;
@@ -289,11 +311,11 @@
 	}
 
 	function focusTemple(temple: TempleWithCoordinates) {
-		searchQuery = temple.name;
-		dismissedSearchQuery = temple.name;
+		searchQuery = temple.temple_name;
+		dismissedSearchQuery = temple.temple_name;
 
-		if (!selectedStates.includes(temple.state)) {
-			selectedStates = [...selectedStates, temple.state];
+		if (!selectedStates.includes(temple.displayState)) {
+			selectedStates = [...selectedStates, temple.displayState];
 		}
 
 		map?.easeTo({
@@ -383,9 +405,9 @@
 			source: 'temples',
 			filter: ['!', ['has', 'point_count']],
 			paint: {
-				'circle-color': ['case', ['==', ['get', 'isanveshi'], true], '#D3633A', '#9ED800'],
+				'circle-color': ['case', ['==', ['get', 'is_anveshi'], true], '#D3633A', '#9ED800'],
 				'circle-radius': 4,
-				'circle-stroke-color': ['case', ['==', ['get', 'isanveshi'], true], '#D3633A', '#9ED800'],
+				'circle-stroke-color': ['case', ['==', ['get', 'is_anveshi'], true], '#D3633A', '#9ED800'],
 				'circle-stroke-width': 0
 			}
 		});
@@ -595,7 +617,7 @@
 			class:center={popupPlacement.anchor === 'center'}
 			style={`left:${popupPlacement.x}px;top:${popupPlacement.y}px;--popup-max-height:${popupPlacement.maxHeight}px`}
 			role="dialog"
-			aria-label={activeTemple.name}
+			aria-label={activeTemple.temple_name}
 		>
 			<button
 				type="button"
@@ -606,18 +628,15 @@
 				x
 			</button>
 			<a class="popup-temple-link" href={templeHref(activeTemple)}>
-				{#if activeTemple.isanveshi}
-					<img class="fit" src={activeTemple.image} alt={activeTemple.name}/>
+				{#if activeTemple.displayImage}
+					<img class="fit" src={activeTemple.displayImage} alt={activeTemple.temple_name}/>
 				{/if}
-				<div class="popup-temple-name">{activeTemple.name}</div>
-				{#if activeTemple.isanveshi}
+				<div class="popup-temple-name">{activeTemple.temple_name}</div>
+				{#if activeTemple.is_anveshi}
 					<div class="popup-badge">In Anveshi</div>
 				{/if}
-				{#if activeTemple.isanveshi && activeTemple.anveshidescription}
-					<p class="popup-story">{activeTemple.anveshidescription.slice(0,80)}...<span style="color: #F18100">(Go to Page)</span></p>
-				{/if}
-				{#if activeTemple.story?.details && !activeTemple.isanveshi}
-					<p class="popup-story">{activeTemple.story.details.slice(0,80)}... <span style="color: #F18100">(Go to Page)</span></p>
+				{#if getTempleDescription(activeTemple)}
+					<p class="popup-story">{getTempleDescription(activeTemple).slice(0,80)}... <span style="color: #F18100">(Go to Page)</span></p>
 				{/if}
 			</a>
 		</div>
