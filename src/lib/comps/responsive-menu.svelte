@@ -1,185 +1,152 @@
 <script lang="ts">
-
 	import { tick } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import BlogMenu from '$lib/icons/blog-menu.svelte';
-	let mobileMenuOpen = $state(false);
-	let firstMenuItem: HTMLButtonElement | undefined = $state();
+	import { slide } from 'svelte/transition'
+	import { clickOutsideAction } from '$lib/utils/clickoutside';
 
 	type Props = {
-		button1text?:string;
+		button1text?: string;
+		label?: string;
+		ariaLabel?: string;
 		children?: Snippet;
+	};
+
+	let { button1text, label = 'Browse', ariaLabel = 'Responsive menu', children }: Props = $props();
+
+	let open = $state(false);
+	let menuElement = $state<HTMLElement>();
+	let buttonText = $derived(button1text ?? label);
+
+	function closeMenu() {
+		open = false;
 	}
 
-	let {
-		button1text = 'Essays',
-		children
-	}: Props = $props();
-
-	function closeMobileMenu() {
-		mobileMenuOpen = false;
+	function toggleMenu() {
+		open = !open;
 	}
 
-	function onWindowKeydown(event: KeyboardEvent) {
+	function handleMenuClick(event: MouseEvent) {
+		const target = event.target;
+
+		if (!(target instanceof Element)) return;
+
+		if (target.closest('button, a, [role="menuitem"]')) {
+			closeMenu();
+		}
+	}
+
+	function closeOnMenuItemClick(node: HTMLElement) {
+		node.addEventListener('click', handleMenuClick);
+
+		return {
+			destroy() {
+				node.removeEventListener('click', handleMenuClick);
+			}
+		};
+	}
+
+	function handleWindowKeydown(event: KeyboardEvent) {
 		if (event.key === 'Escape') {
-			closeMobileMenu();
+			closeMenu();
 		}
 	}
 
 	$effect(() => {
-		if (!mobileMenuOpen) return;
+		if (!open) return;
+
 		tick().then(() => {
-			firstMenuItem?.focus();
+			const firstItem = menuElement?.querySelector<HTMLElement>('button, a, [role="menuitem"]');
+			firstItem?.focus();
 		});
 	});
-
 </script>
 
-<svelte:window onkeydown={onWindowKeydown} />
+<svelte:window onkeydown={handleWindowKeydown} />
 
-<div class="mobile-selection-menu">
-	<button
-		class="mobile-menu-trigger"
-		type="button"
-		aria-haspopup="menu"
-		aria-expanded={mobileMenuOpen}
-		aria-controls="test-anveshi-selection-menu"
-		onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
-	>
-		<span class="row ycenter cgap8">
-			<BlogMenu size="20" color="currentColor" />
-			<span>Browse</span>
-		</span>
-		<span class="menu-state" aria-hidden="true">{mobileMenuOpen ? 'Close' : 'Menu'}</span>
+<div class:open class="responsive-wrapper">
+<div class="responsive-menu" use:clickOutsideAction={closeMenu}>
+	<button class="responsive-menu__trigger" type="button" aria-haspopup="menu" aria-expanded={open} aria-controls="responsive-menu-items" onclick={toggleMenu}>
+		<BlogMenu size="32" color="currentColor" />
+		<span>{buttonText}</span>
 	</button>
-	{#if mobileMenuOpen}
-		<button class="mobile-menu-scrim" type="button" aria-label="Close menu" onclick={closeMobileMenu}></button>
-		<div id="test-anveshi-selection-menu" class="mobile-menu-content" role="menu" aria-label="Blog navigation">
-			<div class="mobile-menu-arrow"></div>
-			<button
-				bind:this={firstMenuItem}
-				class="mobile-menu-item active"
-				type="button"
-				role="menuitem"
-				onclick={closeMobileMenu}
-			>
-				<span>{button1text}</span>
-			</button>
-			<button class="open-drawer box" onclick={closeMobileMenu}>
-				{@render children?.()}
-			</button>
-		</div>
-	{/if}
+	<nav id="responsive-menu-items" class="responsive-menu__items" class:open aria-label={ariaLabel} bind:this={menuElement} use:closeOnMenuItemClick>
+		{@render children?.()}
+	</nav>
+</div>
 </div>
 
 <style lang="sass">
 
-.open-drawer
-	z-index: 2000
-	height: calc(100vh - 144px)
-	overflow-y: scroll
-
-.mobile-selection-menu
-	display: none
+.responsive-menu
 	position: relative
 	z-index: 20
+	width: 100%
 
-.mobile-menu-trigger
+.responsive-menu__trigger
 	width: 100%
 	display: flex
 	align-items: center
 	justify-content: space-between
-	gap: 1rem
-	padding: 0.8rem 0.9rem
-	border: var(--border-dark)
-	border-radius: 5px
 	background: var(--color-stone)
-	color: var(--color-primary)
-	font-family: var(--fontface-sans)
-	font-size: 0.78rem
-	font-weight: 700
-	letter-spacing: 0.02rem
-	text-transform: uppercase
-	box-shadow: var(--shadow11)
-	&:hover
-		background: var(--color-theme)
-		color: var(--color-white)
+	border: 1px solid #e1e1e1
+	padding: 0.5em 1em
+	box-shadow: 2px 1px 4px rgba(0,0,0,0.2)
+	border-radius: 8px
+	cursor: pointer
+	&:active
+		background: var(--color-grey-2)
+	span
+		font-size: 1rem
+		text-transform: uppercase
+		font-weight: 600
+	@media (min-width: 1025px)
+		display: none
 
-.menu-state
-	font-size: 0.66rem
-	font-weight: 600
-	opacity: 0.72
+.responsive-menu__items
+	display: none
+	transition: all 250ms ease
+	&.open
+		position: absolute
+		top: calc(100% + 0.45rem)
+		left: 0
+		right: 0
+		z-index: 21
+		display: flex
+		flex-direction: column
+		gap: 0
+		padding: 1rem
+		border-radius: 8px
+		background: var(--color-back)
+		border: var(--border-darker)
+		box-shadow: 2px 4px 8px rgba(0,0,0,0.2)
+		transition: all 250ms ease
+	@media (min-width: 1025px)
+		position: static
+		display: flex
+		flex-direction: row
+		align-items: center
+		gap: 0.5rem
+		padding: 0
+		&:open
+			position: static
+			display: flex
+			flex-direction: row
+			align-items: center
+			gap: 0.5rem
+			padding: 0
 
-.mobile-menu-scrim
-	position: fixed
-	inset: 0
-	z-index: 18
-	border: none
-	background: rgba(0,0,0,0.18)
-	backdrop-filter: blur(2px)
-
-.mobile-menu-content
-	position: absolute
-	top: calc(100% + 0.55rem)
-	left: 0
-	right: 0
-	z-index: 21
-	display: flex
-	flex-direction: column
-	padding: 0.45rem
-	border: var(--border-dark)
-	border-radius: 7px
-	background: var(--color-back)
-	box-shadow: 0 18px 45px rgba(0,0,0,0.18)
-	transform-origin: top center
-	animation: menuIn 0.24s cubic-bezier(0.190, 1.000, 0.220, 1.000)
-
-.mobile-menu-arrow
-	position: absolute
-	top: -6px
-	left: 22px
-	width: 12px
-	height: 12px
-	border-left: var(--border-dark)
-	border-top: var(--border-dark)
-	background: var(--color-back)
-	transform: rotate(45deg)
-
-.mobile-menu-item
+.responsive-menu__items :global(button), .responsive-menu__items :global(a), .responsive-menu__items :global([role='menuitem'])
+	width: 100%
 	display: flex
 	align-items: center
-	justify-content: space-between
-	gap: 1rem
-	padding: 0.78rem 0.85rem
-	border: none
-	border-radius: 4px
-	background: transparent
-	color: var(--color-primary)
-	font-family: var(--fontface-sans)
-	font-size: 0.82rem
-	font-weight: 650
-	line-height: 1.1
+	justify-content: flex-start
 	text-align: left
-	text-transform: uppercase
-	transition: background 0.08s ease, color 0.08s ease
-	&:hover, &:focus-visible
-		outline: none
-		background: var(--color-stone)
-		color: var(--color-theme-2)
-	&.active
-		background: var(--color-theme-6)
-		color: var(--color-theme-2)
-
-@keyframes menuIn
-	from
-		opacity: 0
-		transform: translateY(-4px) scale(0.98)
-	to
-		opacity: 1
-		transform: translateY(0) scale(1)
-
-@media screen and (max-width: 1024px)
-	.mobile-selection-menu
-		display: block
+	text-decoration: none
+	cursor: pointer
+	@media (min-width: 1025px)
+		width: auto
+		justify-content: center
+		text-align: center
 
 </style>

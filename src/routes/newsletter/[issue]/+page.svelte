@@ -31,7 +31,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title={data.title}/>
 		<div class="pdf-reader">
 			<PDFReader src={data.pdflink} title={data.title} height="82vh" />

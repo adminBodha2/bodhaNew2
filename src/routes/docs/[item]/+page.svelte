@@ -43,7 +43,7 @@ let metaDescription = $derived(descriptions[data.item] ?? `${data.title} at Bodh
 />
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 	<Crumb showT={true} title={data.title}/>
 	<article class="site-docs width70">
 		<data.content/>

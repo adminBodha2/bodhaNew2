@@ -42,7 +42,7 @@
 />
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title="Videos" showD={true} desc={metaDescription}/>
 		{#if vids && vids.length > 0}
 		<Swipes slidesPerView={3} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 3,spaceBetween: 8}}}>

@@ -40,10 +40,10 @@
 />
 
 <Container>
-<div class="stdbox stdpad header-margin is-last">
+<div class="header-margin is-last">
 	<Crumb showT={true} title="Bodha Lab" showD={true} desc={metaDescription}/>
 	{#if labItems.length > 0}
-		<div class="white-grid grid four stay2">
+		<div class="grid grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each labItems as item, i}
 			<a class="labelbox box-of-items blank whitestone card-padded" href={item.linkpath}>
 				<div class="item-meta row ycenter cgap8 xbetween">

@@ -1,0 +1,79 @@
+.row,
+.column,
+.box
+	display: flex
+
+.row
+	flex-direction: row
+
+.column,
+.box
+	flex-direction: column
+
+.wrap
+	flex-wrap: wrap
+
+.row
+	&.xleft
+		justify-content: flex-start
+	&.xcenter
+		justify-content: center
+	&.xright
+		justify-content: flex-end
+	&.xbetween
+		justify-content: space-between
+	&.ytop
+		align-items: flex-start
+	&.ycenter
+		align-items: center
+	&.ybottom
+		align-items: flex-end
+
+.column,
+.box
+	&.xleft
+		align-items: flex-start
+		text-align: left
+	&.xcenter
+		align-items: center
+	&.xright
+		align-items: flex-end
+		text-align: right
+	&.ytop
+		justify-content: flex-start
+	&.ycenter
+		justify-content: center
+	&.ybottom
+		justify-content: flex-end
+	&.ybetween
+		justify-content: space-between
+
+.self-bottom
+	margin-top: auto
+
+.self-top
+	margin-bottom: auto
+
+.flex-shrink-0
+	flex-shrink: 0
+
+.flex-grow
+	flex-grow: 1
+
+@media (max-width: 1024px)
+	.mwrap
+		flex-wrap: wrap
+	.mcol
+		flex-direction: column
+	.mrow
+		flex-direction: row
+	.mleft
+		justify-content: flex-start
+		text-align: left
+		&.column,
+		&.box
+			align-items: flex-start
+	.row.mleft.ycenter,
+	.column.mleft.xcenter,
+	.box.mleft.xcenter
+		align-items: flex-start

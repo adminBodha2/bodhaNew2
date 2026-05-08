@@ -2,7 +2,7 @@
 
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
-	import '$lib/styles/lab2.sass';
+	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -43,26 +43,26 @@ let {
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
 <Container>
-<section class="key-image">
-	<WaterRipple src={data.icon} class="ripple-motion" {brushSize}/>
-</section>
-	<section class="documents-grid">
-		<div class="box sidearea">
+	<section class="dohero">
+		<WaterRipple src={data.icon} class="ripple-motion" {brushSize}/>
+	</section>
+	<section class="docgrid">
+		<div class="box docside">
 			{#if data.questions?.length > 0}
-				<div class="all-items">
+				<div class="doclist">
 					{#each data.questions as item}
-					{#if item.meta.title !== data.title}
-						<a class="project-link sidebar-text" href={item.linkpath}>
-							{item.meta.title}
-						</a>
-					{/if}
+						{#if item.meta.title !== data.title}
+							<a class="doclink sidebar-text" href={item.linkpath}>
+								{item.meta.title}
+							</a>
+						{/if}
 					{/each}
 				</div>
 			{/if}
 		</div>
-		<div class="stdbox mainarea">
-			<div class="labelbox title-area stdpad is-first is-last">
-				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
+		<div class="docmain box rgap32">
+			<div class="box title-area">
+				<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap cgap4 rgap4">
 						{#each data.tags as tag}
@@ -72,31 +72,31 @@ let {
 				{/if}
 				</Crumb>
 			</div>
-			<div class="classic-document">
+			<div class="doctext classic-document">
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
-				<section class="box rgap32">
+				<section class="box rgap32 bordertop ptop32">
 					<p class="card-title">Related Readings</p>
-					<div class="grid two white-grid">
+					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}
 							<a
-								class="blank textbox whitestone card-padded"
+								class="blank textbox whitestone p16 lg:p32"
 								href={item.href}
 								target={item.isExternal ? '_blank' : undefined}
 								rel={item.isExternal ? 'noreferrer' : undefined}
 							>
-							<div class="labelbox">
+							<div class="box rgap16">
 								<p class="tag-text lgrey tt-u">{item.node.type}</p>
 								<p class="paragraph-text w500 tight">{item.node.title}</p>
 								{#if item.node.description}
 									<p class="descriptor-text grey tight">{item.node.description}</p>
 								{/if}
 							</div>
-							<div class="row wrap cgap8 rgap4 self-bottom">
-									{#each item.node.tags as tag}
-										<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-',' ')}</p>
-									{/each}
+							<div class="row wrap cgap8 rgap4 self-bottom ptop32">
+								{#each item.node.tags as tag}
+									<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-',' ')}</p>
+								{/each}
 							</div>
 							</a>
 						{/each}

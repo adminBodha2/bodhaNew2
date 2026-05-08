@@ -34,7 +34,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<div class="ontology-head">
 			<Crumb showT={true} title="Ontology" showD={true} desc={metaDescription} />
 			<div class="stats-grid">

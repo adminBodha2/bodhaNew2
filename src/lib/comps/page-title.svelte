@@ -13,7 +13,7 @@
 		text = 'Title',
 		anveshi = false,
 		isCenter = false,
-		span = 'span-4'
+		span = 'col-span-full'
 	}: Props = $props();
 
 	let reference = $state<HTMLElement | null>(null);
@@ -24,7 +24,7 @@
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="header-2 name tt-l" class:animatenow={isVisible.visible}>
+	<h2 class="header-2 name tt-l hover-animation" class:animatenow={isVisible.visible}>
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style:animation-delay={`${(i+10) * 0.02}s`}>
 				{char === ' ' ? '\u00A0' : char}
@@ -42,6 +42,7 @@
 	h2
 		font-variant: small-caps
 		font-weight: 500
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.3)
 
 	.bob
 		opacity: 0

@@ -19,7 +19,7 @@
 />
 
 <Container>
-	<div class="stdbox stdpad header-margin">
+	<div class="header-margin">
 		<div class="labelbox">
 		<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
 		<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>

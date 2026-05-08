@@ -110,7 +110,7 @@
 
 <Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="3px" {ref} />
 <Container>
-<div class="blog-heading stdbox stdpad header-margin">
+<div class="blog-heading header-margin">
 	<div class="elembox blog-title-area xcenter mleft ta-c">
 		<Crumb/>
 		<h1 class="page-title source-serif width80 self-center">{data.title}</h1>
@@ -141,10 +141,10 @@
 	</article>
 	</div>
 </div>
-<div class="stdbox bordertop">
+<div class="bordertop">
 	{#if posts && posts.length > 0}
 		<Title text="More Like This"/>
-		<div class="grid four white-grid">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each posts as item, i}
 				<a class="postcard blank labelbox card-padded" href={item.linkpath}>
 					<p class="paragraph-text tight bold">{item.meta.title}</p>

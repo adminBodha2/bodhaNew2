@@ -7,11 +7,21 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import FAQ from '$lib/comps/anveshifaqs.svelte';
 	import Title from '$lib/comps/page-title.svelte';
+	import Mark from '$lib/comps/marquee.svelte';
 	import Anveshilogo from '$lib/assets/anveshilogo.svelte';
+	import ResponsiveMenu from '$lib/comps/responsive-menu.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd, webPageJsonLd } from '$lib/utils/seo';
-	import Quote from '$lib/icons/quote.svelte'
+	import Quote from '$lib/icons/quote.svelte';
+	import Slider from '$lib/svelteanim/components/Slide.svelte';
+	import { useInView } from '$lib/svelteanim';
+	import Scale from '$lib/svelteanim/components/Scale.svelte';
+	import { Lightbox, LightboxGallery, GalleryImage, GalleryThumbnail } from 'svelte-lightbox';
 
 	let { data }: { data: PageData } = $props();
+	let reference = $state<HTMLElement | null>(null);
+	let scaleRef = $state<HTMLElement | null>(null);
+	let isVisible = useInView(() => reference, { threshold: 0.8, once: true });
+	let scaleVis = useInView(() => scaleRef, { threshold: 0.5, once: true})
 
 	const title = 'Anveshi | Bodha';
 	const metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
@@ -48,14 +58,12 @@
 	let sY = $state(0);
 	let iW = $state(0);
 	let region = $state('northern india');
-	let goTime = $derived(sY >= 0);
+	let goTime = $derived(sY >= 10);
 	let screenerY = $derived(sY / 2);
 	let isRegion = $state([false, false, false, false, false, false, false, true]);
 	let showText = $state(false);
 
-	let regionAnveshi = $derived(
-		futureproj.filter((item: any) => item.region?.toLowerCase() === region)
-	);
+	let regionAnveshi = $derived(futureproj.filter((item: any) => item.region?.toLowerCase() === region));
 	function setRegion(newRegion: string) {
 		region = newRegion;
 	}
@@ -76,49 +84,51 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
-<div class="column screener-wrap scaledTypo">
+<div class="box screener-wrap">
 	<div class="screener" style:transform={`translateY(${screenerY}px)`}>
-		<div class="column rgap24 inscreen xcenter ycenter">
-			<Anveshilogo {goTime} />
-			<p class="tight white ta-c pbot16">
-				Sacred journeys to unexplored kshetras of India.<br />Where, every outer journey becomes an inner journey.
-			</p>
-			<a class="primary anveshi" href="/anveshi/badami"><span>OPEN NOW - BADAMI CHAPTER</span></a>
+		<div class="column rgap24 inscreen xcenter ybottom">
+			<div class="even-in column rgap24 xcenter" style:margin-bottom={`calc(${screenerY / 10}rem + 2rem)`}>
+				<Anveshilogo {goTime} />
+				<p class="tight white ta-c pbot16 ptop16">
+					Sacred journeys to unexplored kshetras of India.<br />Where, every outer journey becomes an inner journey.
+				</p>
+				<a class="primary anveshi" href="/anveshi/badami"><span>OPEN NOW - BADAMI CHAPTER</span></a>
+			</div>
 		</div>
 	</div>
 </div>
 <Container>
 	<!-- ── INTRO ─────────────────────────────────────────── -->
-	<div class="stdbox stdpad is-first">
-		<Crumb/>
-		<div class="xleft textbox" use:autoAnimate>
-			<p class="paragraph-text">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p>
-			<p class="paragraph-text width80">
+	<div class="box padded wraps is-first">
+		<Crumb />
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 rgap16 cgap16" use:autoAnimate>
+			<p class="highlight-text col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p>
+			<p class="highlight-text col-span-full md:col-span-2 lg:col-span-3">
 				The word anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer. Kaśmīr Śaiva darśana tells us that, vimarṣa - Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
 				cosmos, life and existence.
 			</p>
-			<p class="paragraph-text bold">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p>
+			<p class="paragraph-text bold col-span-full">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p>
 			{#if !showText}
-				<button class="blank anv-readmore" onclick={toggleText}>
-					<span>Read more</span>
-					<span class="anv-readmore-arrow">→</span>
+				<button class="hollow-link anveshi" onclick={toggleText}>
+					Read More
+					<span class="button-text">→</span>
 				</button>
 			{/if}
 			{#if showText}
-				<div class="box column rgap16 xleft">
-					<div class="grid two tightrows">
+				<div class="grid col-span-full">
+					<div class="grid grid-cols-1 lg:grid-cols-2 col-span-full rgap16 cgap32">
 						<div class="box textbox">
-							<p class="paragraph-text">
+							<p class="highlight-text">
 								A favorite theme of literature is wanderlust—fernweh—the innate urge to go out and discover the world. This desire for discovery is fundamental to human nature: to seek the new, to unravel the hidden, to find joy in the very act of anveṣaṇa. Human history is shaped by such courageous journeys—taken by individuals and communities—that have transformed the course of civilizations.
 							</p>
-							<p class="paragraph-text">
+							<p class="highlight-text">
 								This urge is biological; most species possess the instinct to chart new waters and explore unknown territories. Yet, there is a deeper, inner dimension to this impulse. In discovering the world, we also seek to discover the self. In our pursuit of the new, we yearn for the eternal. In our search for change, we long for what is unchanging. In essence, every outer journey becomes an
 								inner anvekṣaṇa.
 							</p>
 						</div>
-						<div class="box textbox">
-							<p class="paragraph-text">In Bhāratavarṣa and the Hindu dhārmic tradition, these two seemingly opposing impulses are beautifully harmonized through the tradition of yātrā to sacred kṣetrās—a journey where both the inner and outer quests are fulfilled in ways that are joyful, meaningful, and spiritually elevating.</p>
-							<p class="paragraph-text">
+						<div class="box">
+							<p class="highlight-text">In Bhāratavarṣa and the Hindu dhārmic tradition, these two seemingly opposing impulses are beautifully harmonized through the tradition of yātrā to sacred kṣetrās—a journey where both the inner and outer quests are fulfilled in ways that are joyful, meaningful, and spiritually elevating.</p>
+							<p class="highlight-text">
 								Anveṣī seeks to contemporize the ancient Indian tradition of yātrā by taking modern seekers to sacred kṣetrās of India - places that are largely unexplored by most of us, yet are rich in architectural, sculptural, and cultural splendor. These are not just historical sites, but living systems that have sustained vibrant cultural traditions for thousands of years.
 							</p>
 						</div>
@@ -134,227 +144,258 @@
 
 	<!-- ── CURRENT CHAPTERS ──────────────────────────────── -->
 	{#if currproj && currproj.length > 0}
-		<div class="stdbox stdpad bordertop" id="current-chapter">
+		<div class="box wraps padded growingline alternate" id="current-chapter" bind:this={reference}>
 			<Title text="current chapter" anveshi={true} />
 			{#each currproj as item, i}
-				<a class="blank grid two anveshi" href="/anveshi{item.link}">
-					<div class="anv-current-image">
-						<img src={item.image} alt="{item.chapter} Chapter" />
-					</div>
-					<div class="textbox current-item">
-						<p class="descriptor-text w500 tt-u" style="width: max-content">{item.fromto}</p>
-						<h2 class="card-title source-serif">{item.chapter} Chapter</h2>
-						<p class="grey pbot8">{item.desc}</p>
-						<div class="self-bottom foot row ycenter xbetween mwrap cgap8 rgap8">
-							<p class="anveshi-o descriptor-text bold">OPEN NOW</p>
-							<p class="anveshi-o descriptor-text bold">→</p>
+				<Slider visible={isVisible.visible} direction="down" outDirection="down" distance={300} duration={500} delay={500}>
+					<a class="box current-anveshi blank" style="background-image: url({item.image})" href="/anveshi{item.link}">
+						<div class="box inside-current-anveshi p16 md:p32 ybetween">
+								<span class="openbadge">OPEN NOW</span>
+								<div class="box rgap16">
+ 									<p class="white w500 tt-u" style="width: max-content">{item.fromto}</p>
+									<h2 class="card-title white">{item.chapter} Chapter</h2>
+									<p class="paragraph-text white">{item.desc}</p>
+									<p class="anveshi-o descriptor-text bold">→</p>
+								</div>
 						</div>
-					</div>
-				</a>
+					</a>
+				</Slider>
 			{/each}
 		</div>
 	{/if}
 
 	{#if testis && testis.length > 0}
-		<div class="stdbox stdpad bordertop" id="testimonials">
-			<Title text="Testimonials" anveshi={true} />
-			<div class="testi-grid">
-				<Swipes
-					slidesPerView={3}
-					spaceBetween={8}
-					pagination={false}
-					breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 3, spaceBetween: 8 } }}
-				>
+		<div class="box wraps padded growingline" id="testimonials">
+			<Title text="testimonials" anveshi={true} />
+			<div class="box rgap16">
+				<Mark fade pauseOnHover duration="200s" gap="1rem">
 					{#each testis as item}
-						<swiper-slide>
-							<div class="box labelbox card-padded testi">
+						<div class="testimonial box rgap8 p32">
+							<Quote />
+							<p class="thin italic">{item.content}</p>
+							<p class="anveshi-o citation w500 tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
+						</div>
+					{/each}
+				</Mark>
+				<Mark fade pauseOnHover reverse={true} duration="200s" gap="1rem">
+					{#each testis as item, i}
+						{#if i > 3}
+							<div class="testimonial box rgap8 p32">
 								<Quote />
-								<p class="source-serif thin italic paragraph-text">{item.content}</p>
-								<p class="grey rem1 ptop8">{item.person} | {item.chapter}</p>
+								<p class="thin italic">{item.content}</p>
+								<p class="anveshi-o citation w500 tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
+							</div>
+						{/if}
+					{/each}
+				</Mark>
+			</div>
+		</div>
+	{/if}
+
+	<div class="box padded wraps growingline alternate" id="future-chapters">
+		<Title text="future chapters" anveshi={true} />
+		<div class="area-of-display">
+			<div class="selection-menu">
+				<ResponsiveMenu label="Menu" ariaLabel="Future chapters regions">
+					<button class="selection-button" class:active={isRegion[7]} onclick={() => toggleRegion(7)}>All</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[0]}
+						onclick={() => {
+							toggleRegion(0);
+							setRegion('northern india');
+						}}>North</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[1]}
+						onclick={() => {
+							toggleRegion(1);
+							setRegion('eastern india');
+						}}>East</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[2]}
+						onclick={() => {
+							toggleRegion(2);
+							setRegion('western india');
+						}}>West</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[3]}
+						onclick={() => {
+							toggleRegion(3);
+							setRegion('southern india');
+						}}>South</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[4]}
+						onclick={() => {
+							toggleRegion(4);
+							setRegion('central india');
+						}}>Centre</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[5]}
+						onclick={() => {
+							toggleRegion(5);
+							setRegion('himalayas');
+						}}>Himalayas</button>
+					<button
+						class="selection-button"
+						class:active={isRegion[6]}
+						onclick={() => {
+							toggleRegion(6);
+							setRegion('international');
+						}}>International</button>
+				</ResponsiveMenu>
+			</div>
+			{#if futureproj && futureproj.length > 0 && isRegion[7]}
+				<Swipes slidesPerView={4} spaceBetween={16} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 4, spaceBetween: 16 } }}>
+					{#each futureproj as item}
+						<swiper-slide>
+							<div class="sub-item box rgap16 swiper-sub">
+								<div class="p8"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
+								<div class="box rgap8 px16 lg:px24">
+									<p class="paragraph-text bold tt-c">{item.chapter}</p>
+									<p class="grey pbot8">{item.shortdesc}</p>
+								</div>
+								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
+									{#if item.region}<p class="tag-pill anveshi tt-u">{item.region}</p>{/if}
+									{#if item.regopen === true}
+										<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+									{/if}
+								</div>
 							</div>
 						</swiper-slide>
 					{/each}
 				</Swipes>
-			</div>
-		</div>
-	{/if}
-
-	<div class="stdbox stdpad bordertop" id="future-chapters">
-		<Title text="future chapters" anveshi={true} />
-		<div class="row cgap8 rgap8 wrap">
-			<button class="nav-btn anveshi" class:active={isRegion[7]} onclick={() => toggleRegion(7)}>All</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[0]}
-				onclick={() => {
-					toggleRegion(0);
-					setRegion('northern india');
-				}}>North</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[1]}
-				onclick={() => {
-					toggleRegion(1);
-					setRegion('eastern india');
-				}}>East</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[2]}
-				onclick={() => {
-					toggleRegion(2);
-					setRegion('western india');
-				}}>West</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[3]}
-				onclick={() => {
-					toggleRegion(3);
-					setRegion('southern india');
-				}}>South</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[4]}
-				onclick={() => {
-					toggleRegion(4);
-					setRegion('central india');
-				}}>Centre</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[5]}
-				onclick={() => {
-					toggleRegion(5);
-					setRegion('himalayas');
-				}}>Himalayas</button>
-			<button
-				class="nav-btn anveshi"
-				class:active={isRegion[6]}
-				onclick={() => {
-					toggleRegion(6);
-					setRegion('international');
-				}}>International</button>
-		</div>
-		{#if futureproj && futureproj.length > 0 && isRegion[7]}
-			<Swipes slidesPerView={4} spaceBetween={8} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 4, spaceBetween: 8 } }}>
-				{#each futureproj as item}
-					<swiper-slide>
-						<div class="box labelbox all-item">
-							<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
-							<div class="labelbox card-future">
-								<p class="paragraph-text bold">{item.chapter}</p>
-								<p class="descriptor-text grey">{item.shortdesc}</p>
-								{#if item.region}<p class="citation-big anveshi-o tt-u">{item.region}</p>{/if}
+			{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 rgap16 cgap16" use:autoAnimate>
+					{#each regionAnveshi as item, i}
+						<div class="sub-item box rgap16">
+							<div class="p8"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
+							<div class="box p16 lg:p32 notop rgap8">
+								<p class="bold paragraph-text tt-c">{item.chapter}</p>
+								<p class="grey">{item.shortdesc}</p>
 							</div>
+							<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
 							{#if item.regopen === true}
-								<a class="blank open-link" href="/anveshi{item.link}">OPEN NOW →</a>
+								<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
 							{/if}
+							</div>
 						</div>
-					</swiper-slide>
-				{/each}
-			</Swipes>
-			<!--
-			<div class="white-grid grid stay2 four" use:autoAnimate>
-				{#each futureproj as item, i}
-					<div class="box labelbox all-item">
-						<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
-						<div class="labelbox card-future">
-							<p class="w500">{item.chapter}</p>
-							<p class="descriptor-text grey">{item.shortdesc}</p>
-							{#if item.region}<p class="citation-big anveshi-o tt-u">{item.region}</p>{/if}
-						</div>
-					</div>
-				{/each}
-			</div>
-			-->
-		{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
-			<div class="white-grid grid stay2 four" use:autoAnimate>
-				{#each regionAnveshi as item, i}
-					<div class="box labelbox sub-item">
-						<img class="anv-future-image" src={item.gallery} alt={item.chapter} />
-						<div class="labelbox card-future">
-							<p class="bold paragraph-text">{item.chapter}</p>
-							<p class="descriptor-text grey">{item.shortdesc}</p>
-						</div>
-						{#if item.regopen === true}
-							<a class="blank open-link" href="/anveshi{item.link}">OPEN NOW →</a>
-						{/if}
-					</div>
-				{/each}
-			</div>
-		{/if}
+					{/each}
+				</div>
+			{/if}
+		</div>
 	</div>
 
 	{#if pastproj && pastproj.length > 0}
-		<div class="stdbox stdpad bordertop" id="past-chapters">
+		<div class="box padded wraps is-last growingline" id="past-chapters">
 			<Title text="past chapters" anveshi={true} />
-			<div class="white-grid grid four stay2">
+			<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16" bind:this={scaleRef}>
 				{#each pastproj as item, i}
+					<Scale visible={scaleVis.visible}>
 					{#if item.pageactive === true}
-					<div class="box labelbox past-grid-items blank whitestone">
-						<a class="anv-past-image-wrap blank" href="/anveshi{item.link}">
-							<img class="anv-past-image" src={item.gallery} alt={item.chapter}/>
-						</a>
-						<div class="box tight-padded" style="row-gap: 4px">
-							<p class="rem1 w500">{item.chapter}</p>
-							<a class="small-button row ycenter cgap8 themed" href="/anveshi{item.link}">SEE CHAPTER<div class="button-text">→</div></a>
+						<div class="box past-grid-items blank stonecard p16 lg:p24">
+							<Lightbox><enhanced:img class="fit t2" src={item.gallery} alt={item.chapter} /></Lightbox>
+							<a class="box p16 nobot" style="row-gap: 4px" href="/anveshi{item.link}">
+								<p class="paragraph-text w500">{item.chapter}</p>
+								<span class="hollow-link">Explore <span class="button-text">→</span></span>
+							</a>
 						</div>
-					</div>
 					{:else}
-					<div class="box labelbox past-grid-items whitestone">
-						<div class="anv-past-image-wrap">
-							<img class="anv-past-image" src={item.gallery} alt={item.chapter} />
+						<div class="box past-grid-items blank stonecard p16 lg:p24">
+							<Lightbox><enhanced:img class="fit t2" src={item.gallery} alt={item.chapter} /></Lightbox>
+							<div class="box p16 lg:p24" style="row-gap: 4px">
+								<p class="paragraph-text w500">{item.chapter}</p>
+							</div>
 						</div>
-						<div class="tight-padded">
-							<p class="rem1 w500">{item.chapter}</p>
-						</div>
-					</div>
 					{/if}
+					</Scale>
 				{/each}
 			</div>
 		</div>
 	{/if}
-	<div class="stdbox stdpad is-last bordertop" id="faqs">
+	<div class="box padded wraps is-last growingline" id="faqs">
 		<FAQ />
 	</div>
 </Container>
 
 <style lang="sass">
 
-#testimonials
+.openbadge
+	background: var(--color-anveshi)
+	width: max-content
+	padding: 0.25rem 0.5rem
+	font-size: 14px
+	color: white
+	font-weight: 600
+	box-shadow: 4px 2px 6px rgba(0,0,0,0.3)
+
+.current-anveshi
+	background-position: center center
+	background-size: cover
+	border-radius: 8px
+	overflow: hidden
+	height: 500px
+	width: 100%
+	.inside-current-anveshi
+		height: 100%
+		width: 100%
+		background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%)
+		transition: all 300ms ease
+	&:hover
+		.inside-current-anveshi
+			background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%)
+	@media (min-width: 1025px)
+		height: 70vh
+		width: 100%
+
+
+.area-of-display
 	min-height: 80vh
-
-.testi
-	border: var(--border-main)
-	height: 100%
-
-.grid.two.anveshi
-	padding: 1.25rem
 	border: var(--border-dark)
-	border-radius: 4px
-	box-shadow: 0 6px 18px rgba(15,23,42,0.05)
-	@media screen and (max-width: 1024px)
-		padding: 0.5rem
-
-.current-item
-	padding: 1.25rem
-	@media screen and (max-width: 1024px)
-		padding: 1rem 0.5rem
-
-.all-item, .sub-item
-	background: var(--color-back)
-	.open-link
-		font-size: 0.875rem
-		font-weight: 600
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	row-gap: 2rem
+	border: var(--border-dark)
+	background-position: center center
+	border-radius: 8px
+	@media (max-width: 1024px)
+		background-size: 3rem 3rem, 3rem 3rem
 		padding: 1rem
-		border-top: var(--border-main)
-		color: var(--color-primary)
-		background: var(--color-alt-3)
-		&:hover
-			color: var(--color-anveshi)
-			font-wieght: 400
+		background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
+	@media (min-width: 1025px)
+		min-height: 80vh
+		row-gap: 3rem
+		padding: 3rem 4rem
+		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
+		background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
 
+#testimonials
+	@media (min-width: 1025px)
+		min-height: 100vh
+
+.testimonial
+	background: var(--color-back)
+	border: var(--border-dark)
+	border-radius: 8px
+	height: 100%
+	width: 400px
+	transition: all 120ms ease
+	&:hover
+		background: linear-gradient(154.4deg, #F8F7F4 6.75%, #F9F8F6 89.88%)
+	
 .sub-item
-		width: %
-		height: %
+	border: 1px solid #d7d7d7
+	border-radius: 8px
+	box-shadow: 2px 0px 7px rgba(0,0,0,0.2)
+	background: var(--color-back)
+	&.swiper-sub
+		height: calc(100% - 2rem)
+		margin-bottom: 2rem
 
 swiper-slide
 	height: auto
@@ -362,13 +403,6 @@ swiper-slide
 
 swiper-slide > *
 	width: 100%
-
-.all-item
-	border: var(--border-main)
-	height: 100%
-
-.card-future
-	padding: 0.5rem 1rem 1rem 1rem
 
 // ── PARALLAX (untouched) ──────────────────────────────────
 
@@ -415,52 +449,11 @@ swiper-slide > *
 .anv-readless
 	margin-top: 0.25rem
 
-// ── CURRENT CHAPTERS ──────────────────────────────────────
-
-.anv-current-image
-	position: relative
-	overflow: hidden
-	height: 400px
-	@media screen and (max-width: 1024px)
-		height: 280px
-	img
-		width: 100%
-		height: 100%
-		object-fit: cover
-		transition: transform 0.4s ease
-	&:hover img
-		transform: scale(1.03)
-
-.current-item
-	.self-bottom
-		border-top: var(--border-main)
-		padding-top: 1rem
-
-
-// ── FUTURE CHAPTERS ───────────────────────────────────────
-
 .anv-future-image
 	width: 100%
-	height: 200px
+	height: 240px
 	object-fit: cover
-
-// ── PAST CHAPTERS ─────────────────────────────────────────
-
-.anv-past-image-wrap
-	overflow: hidden
-	height: 160px
-	@media screen and (min-width: 1025px)
-		height: 240px
-
-.anv-past-image
-	width: 100%
-	height: 100%
-	object-fit: cover
-	transition: transform 0.3s ease
-	&:hover
-		transform: scale(1.04)
-
-.past-grid-items
-	padding-bottom: 1rem
+	box-shadow: 3px 2px 3px rgba(0,0,0,0.2)
+	border-radius: 4px
 
 </style>

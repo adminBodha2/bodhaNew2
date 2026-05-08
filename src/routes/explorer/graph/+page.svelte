@@ -28,7 +28,7 @@
 
 <div id="intro">
 <Container>
-<div class="stdbox stdpad header-margin is-last thisbox">
+<div class="header-margin is-last thisbox">
 	<Crumb showT={true} title="Graph Explore" showD={true} desc="Trace how essays, questions, thinkers, schools, books, and concepts pull on each other. Select a node to follow its nearby constellation."/>
 	<KnowledgeGraph nodes={data.graph.nodes} edges={data.graph.edges} />
 </div>

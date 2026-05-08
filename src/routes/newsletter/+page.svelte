@@ -45,7 +45,7 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} {jsonld} />
 
 <Container>
-	<div class="stdbox stdpad header-margin">
+	<div class="header-margin">
 		<Crumb showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha."/>
 		<div class="textbox">
 			<p class="paragraph-text">
@@ -53,7 +53,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="stdbox stdpad is-last bordertop">
+	<div class="is-last bordertop">
 		{#each posts as item}
 			<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">
 				<News/>

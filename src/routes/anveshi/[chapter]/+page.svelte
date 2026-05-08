@@ -11,6 +11,7 @@
 	import Location from '$lib/icons/location.svelte';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
+	import { Lightbox } from 'svelte-lightbox';
 
 	let { data } = $props();
 
@@ -67,71 +68,69 @@
 <section class="ripple-image-box">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
 </section>
-	<div class="stdbox stdpad is-first">
+	<section class="box wrapper-std first-box rgap32">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
 			<p class="tag-pill anveshi">OPEN NOW!</p>
 			{/if}
 		</Crumb>
-		<div class="text-container elembox">
-			<div class="grid two tightrows">
+		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 content-highlights">
 			<data.content/>
-			</div>
 		</div>
 		{#if data.quote}
-			<p class="card-title italic source-serif thin width80 loose">{data.quote}</p>
+			<p class="card-title thin italic source-serif width60 quote-text" style="color: var(--color-anveshi-2)">{data.quote}</p>
 		{/if}
-		<div class="textbox">
-		<div class="grid four stay2 widthmax info-row">
-			<div class="box dates card-padded">
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 col-span-full info-row width60">
+			<div class="box dates p16">
 				<Calendar fill="var(--color-anveshi)"/>
 				<p class="descriptor-text w500 ptop8">{data.dates}</p>
 				<p class="tag-text grey tt-u">Dates</p>
 			</div>
-			<div class="box price card-padded">
+			<div class="box price p16">
 				<Rupee fill="var(--color-anveshi)"/>
 				<p class="descriptor-text w500 ptop8">{data.price}</p>
 				<p class="tag-text grey tt-u">Price</p>
 			</div>
-			<div class="box duration card-padded">
+			<div class="box duration p16">
 				<Session fill="var(--color-anveshi)"/>
 				<p class="descriptor-text w500 ptop8">{data.duration}</p>
 				<p class="tag-text grey tt-u">Duration</p>
 			</div>
-			<div class="box temples card-padded">
+			<div class="box temples p16">
 				<Location fill="var(--color-anveshi)"/>
 				<p class="descriptor-text w500 ptop8">{data.temples}</p>
 				<p class="tag-text grey tt-u">Temples</p>
 			</div>
 		</div>
-		<div class="row cgap16 ycenter">
-		{#if data.isOpen}
-			<a class="primary anveshi" href={data.registerLink} target="_blank" rel="noreferrer"><span>Register Now</span></a>
-		{/if}
-		{#if data.brochureLink}
-			<a class="primary anveshi" href={data.brochureLink} target="_blank" rel="noreferrer"><span>Brochure</span></a>
-		{/if}
+		<div class="box col-span-full">
+			<div class="row cgap16 ycenter">
+				{#if data.isOpen}
+					<a class="primary anveshi" href={data.registerLink} target="_blank" rel="noreferrer"><span>Register Now</span></a>
+				{/if}
+				{#if data.brochureLink}
+					<a class="primary anveshi" href={data.brochureLink} target="_blank" rel="noreferrer"><span>Brochure</span></a>
+				{/if}
 		</div>
 		</div>
-	</div>
-	<div class="stdbox stdpad bordertop">
+	</section>
+	<section class="box wrapper-std growingline rgap64">
 		<Title text="Itinerary" anveshi={true}/>
 		{#if itins && itins.length > 0}
 			{#if iW > 1024}
-			<div class="itin-grid">
+			<div class="itin-grid radius">
 				<div class="box itin-nav">
 					{#each itins as item, i}
 					<button class="box xleft ta-l itin-button" onclick={() => selectDay(i)} class:active={selectedDay === i}>
-						<p class="citation-big tt-u lgrey">{item.daylabel}</p>
-						<p class="rem1 w500">{item.label}</p>
+						<p class="tag-text tt-u lgrey">{item.daylabel}</p>
+						<p class="w500">{item.label}</p>
 					</button>
 					{/each}
 				</div>
-				<div class="box itin-item card-padded">
+				<div class="box itin-item p16 md:p32">
 					{#each itins as item, i}
 					{#if selectedDay === i}
 					<img src="https://www.bodharesearch.in/images/anveshi/day-{i+1}.png" alt="icon" class="icon"/>
-					<pre class="hi">{item.itinerary}</pre>
+					<pre class="paragraph-text">{item.itinerary}</pre>
 					{/if}
 					{/each}
 				</div>
@@ -150,21 +149,21 @@
 			</div>
 			{/if}
 		{/if}
-	</div>
-	<div class="stdbox stdpad bordertop">
+	</section>
+	<section class="box wrapper-std growingline alternate rgap64">
 		<Title text="Temples" anveshi={true}/>
 		{#if temples && temples.length > 0}
 		<Swipes slidesPerView={templeStatus} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: templeStatus,spaceBetween: 8}}}>
 			{#each temples as item}
 				<swiper-slide>
 					{#if data.templetext}
-						<div class="grid two tight temple-descriptions">
-							<div class="up tight-padded">
-								<img class="temple-image" src={item.image} alt={item.temple}/>
+						<div class="grid grid-cols-1 lg:grid-cols-2 cgap16 rgap16 temple-descriptions">
+							<div class="up">
+								<Lightbox><enhanced:img class="fit t2 radius" src={item.image} alt={item.temple}/></Lightbox>	
 							</div>
-							<div class="textbox down card-padded">
-								<p class="paragraph-text w500">{item.temple}</p>
-								<p>{item.description}</p>
+							<div class="box rgap16 down stonecard p16 md:p32">
+								<p class="highlight-text w500">{item.temple}</p>
+								<p class="pa">{item.description}</p>
 							</div>
 						</div>
 					{:else}
@@ -177,10 +176,10 @@
 			{/each}
 		</Swipes>
 		{/if}
-	</div>
-	<div class="stdbox stdpad is-last bordertop">
+	</section>
+	<section class="box wrapper-std growingline">
 		<FAQ/>
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">
@@ -192,15 +191,8 @@ img.icon
 	margin-bottom: 1rem
 
 .temple-descriptions
-	.card-padded, .tight-padded
-		border: var(--border-main)
-
-.up
-	img.temple-image
-		object-fit: cover
-		width: 100%
-		@media screen and (min-width: 1025px)
-			height: 100%
+	@media (min-width: 1025px)
+		grid-template-columns: 500px 1fr
 
 .singular
 	img.temple-image

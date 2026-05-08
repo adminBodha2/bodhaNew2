@@ -31,10 +31,10 @@
 		</div>
 	</section>
 	<Container>
-		<div class="stdbox stdpad" id="contents">
+		<div class="p16 lg:p32" id="contents">
 			<Title text="Themes"/>
 			{#if groups && groups.length > 0}
-				<div class="three grid white-grid">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 					{#each groups as item}
 						<a class="blank card-padded whitestone" href={item.linkpath}>
 							<p class="paragraph-text">{item.meta.title}</p>
@@ -43,7 +43,7 @@
 				</div>
 			{/if}
 		</div>
-		<div class="stdbox bordertop stdpad is-last">
+		<div class="bordertop is-last">
 			<div class="grid issues ultra">
 				{#each data.issues as item (item.issue)}
 					<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 350, easing: sineOut}}>
@@ -56,7 +56,7 @@
 						{#if openIssue === item.issue}
 						<div class="textbox contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 270, axis: 'y', easing: sineIn}}>
 						<p class="grey">{item.description}</p>
-						<div class="grid two metaitem midgaps tightrows">
+						<div class="grid grid-cols-1 lg:grid-cols-2 metaitem cgap16 rgap16">
 								{#each item.items as iss}
 									<div class="box">
 										<p class="w500 tight">{iss.title}</p>

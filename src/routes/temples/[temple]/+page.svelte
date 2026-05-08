@@ -114,7 +114,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title={templeName} showD={true} desc={crumbDescription} />
 		<article class="box rgap24">
 			{#if displayImage}
@@ -124,7 +124,7 @@
 			{/if}
 
 			{#if factItems.length > 0}
-				<section class="grid four white-grid">
+				<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 					{#each factItems as item}
 						<div class="labelbox card-padded whitestone">
 							<p class="tag-text green tt-u bold tight">{item.label}</p>
@@ -161,7 +161,7 @@
 			{/if}
 
 			{#if otherDeities.length > 0 || otherDetails.length > 0 || scripturalItems.length > 0}
-				<section class="grid two white-grid">
+				<section class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 					{#if otherDeities.length > 0}
 						<div class="labelbox card-padded whitestone">
 							<p class="tag-text green tt-u bold tight">other deities</p>

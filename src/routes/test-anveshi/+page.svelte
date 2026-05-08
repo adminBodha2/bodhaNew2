@@ -25,7 +25,7 @@
 </script>
 
 <Container>
-	<div class="box-std pad-std">
+	<div class="box padded wraps is-first">
 		<section class="bits-demo box rgap24">
 			<div class="box rgap8">
 				<p class="tag-text green tt-u bold tight">Bits UI Demo</p>
@@ -46,6 +46,14 @@
 					</Accordion.Item>
 				{/each}
 			</Accordion.Root>
+		</section>
+		<section>
+			<p class="tag-text">orm 7 creator Takayuki Miyoshi announced at WordCamp Asia 2</p>
+			<p class="citation">orm 7 creator Takayuki Miyoshi announced at WordCamp Asia 2orm 7 creator Takayuki Miyoshi announced at WordCamp Asia 2orm 7 creator Takayuki Miyoshi announced at WordCamp Asia 2orm 7 creator Takayuki Miyoshi announced at WordCamp Asia 2</p>
+			<p>Contact Form 7 creator Takayuki Miyoshi announced at WordCamp Asia 2026 that version 6.2 will be the plugin's final major release, entering a feature freeze with only security patches going forward. The successor project Contactable.io isn't expected until 2028. A step-by-step migration guide walks WordPress users through switching to WPForms using its built-in Contact Form 7 importer, covering installation, running the import wizard, reviewing migrated forms, replacing old shortcodes/blocks, testing submissions, and finally deactivating Contact Form 7. The free WPForms Lite version </p>
+			<p class="paragraph-text">PARAGRAPH -Contact Form 7 creator Takayuki Miyoshi announced at WordCamp Asia 2026 that version 6.2 will be the plugin's final major release, entering a feature freeze with only security patches going forward. The successor project Contactable.io isn't expected until 2028. A step-by-step migration guide walks WordPress users through switching to WPForms using its built-in Contact Form 7 importer, covering installation, running the import wizard, reviewing migrated forms, replacing old shortcodes/blocks, testing submissions, and finally deactivating Contact Form 7. The free WPForms Lite version </p>
+			<p class="highlight-text">HIGHLIGHT - Contact Form 7 creator Takayuki Miyoshi announced at WordCamp Asia 2026 that version 6.2 will be the plugin's final major release, entering a feature freeze with only security patches going forward. The successor project Contactable.io isn't expected until 2028. A step-by-step migration guide walks WordPress users through switching to WPForms using its built-in Contact Form 7 importer, covering installation, running the import wizard, reviewing migrated forms, replacing old shortcodes/blocks, testing submissions, and finally deactivating Contact Form 7. The free WPForms Lite version </p>
+			<p class="card-title">CARDTITLE - Contact Form 7 creator Takayuki Miyoshi announced at WordCamp Asia 2026 that version 6.2 will be the plugin's final major release, entering a feature freeze with only security patches going forward. The successor project Contactable.io isn't expected until 2028. A step-by-step migration guide walks WordPress users through switching to WPForms using its built-in Contact Form 7 importer, covering installation, running the import wizard, reviewing migrated forms, replacing old shortcodes/blocks, testing submissions, and finally deactivating Contact Form 7. The free WPForms Lite version </p>
 		</section>
 	</div>
 </Container>

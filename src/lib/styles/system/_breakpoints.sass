@@ -1,0 +1,12 @@
+@use 'sass:map'
+
+$breakpoints: ("md": 721px, "lg": 1025px, "xl": 1201px)
+$max-breakpoints: ("sm": 1024px)
+
+=respond($name)
+	@media (min-width: map.get($breakpoints, $name))
+		@content
+
+=respond-down($name)
+	@media (max-width: map.get($max-breakpoints, $name))
+		@content

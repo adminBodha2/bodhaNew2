@@ -6,7 +6,7 @@
 </script>
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 	<Crumb showT={true} title="Site Docs"/>
 	<div class="textbox">
 		<a class="linked" href="/docs/terms-and-conditions">Terms and Conditions</a>

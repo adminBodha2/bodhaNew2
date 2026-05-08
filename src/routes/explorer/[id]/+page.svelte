@@ -36,8 +36,8 @@
 
 <Container>
 	<Heading title={data.node.title} />
-	<div class="stdbox stdpad header-margin is-last">
-		<div class="grid two left">
+	<div class="header-margin is-last">
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32 left">
 			<div class="labelbox sidebox">
 				<Crumb/>
 				<h2 class="card-title source-serif">{data.node.title}</h2>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="box mainbox">
 				{#if data.concepts.length}
-					<div class="grid three stay2 white-grid">
+					<div class="grid grid-cols-2 lg:grid-cols-3 white-grid">
 						{#each data.concepts as concept (concept.id)}
 							<a class="blank card-padded whitestone" href={conceptHref(concept)}>
 								<p class="w500">{concept.title}</p>
@@ -65,14 +65,14 @@
 				{/if}
 {#if data.akVargas.length}
   <p class="descriptor-text">Amarakosha Categories</p>
-  <div class="grid three tight">
+  <div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
     {#each data.akVargas as node (node.id)}
       <p><a href={nodeHref(node)}>{node.title}</a></p>
     {/each}
   </div>
 {/if}
 				{#if data.related.length}
-					<div class="grid three tight">
+					<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
 						{#each data.related as node (node.id)}
 							<p>
 								<a href={nodeHref(node)}>{node.title}</a>
@@ -84,7 +84,7 @@
 					</div>
 				{/if}
 				{#if data.referencedBy.length}
-					<div class="grid three tight">
+					<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
 						{#each data.referencedBy as node (node.id)}
 							<p><a href={nodeHref(node)}>{node.title}</a></p>
 						{/each}

@@ -55,7 +55,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container graphing={true}>
-	<div class="stdbox stdpad header-margin">
+	<div class="header-margin">
 			<div class="labelbox">
 				<Crumb showT={true} title={data.concept.title} showRow={true}>
 				<p class="descriptor-text grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes. All subdomains listed here:</p>

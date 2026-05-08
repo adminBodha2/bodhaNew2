@@ -8,10 +8,9 @@
 	import Sun from '$lib/icons/sun.svelte'
 	import Moon from '$lib/icons/moon.svelte'
 	import { darkTheme, openSiteTourSelector, toggleTheme } from '$lib/utils/globalstores'
-	import '$lib/styles/graphing.sass'
 </script>
 
-<div class="foot-wrap stdbox">
+<div class="foot-wrap box">
 	<div class="foot-wide-lines"></div>
 	<div class="foot-inner narrowsize box">
 		<div class="foot-top">

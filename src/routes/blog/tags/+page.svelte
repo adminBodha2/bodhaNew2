@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { tick } from 'svelte';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Heading from '$lib/comps/page-header-one.svelte';
-	import BlogMenu from '$lib/icons/blog-menu.svelte';
+	import '$lib/styles/system/blog.sass';
+	import ResponsiveMenu from '$lib/comps/responsive-menu-2.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
@@ -12,13 +11,15 @@
 	let tags = $derived(data.tags ?? []);
 	let tagsC = $derived(data.tagsC ?? []);
 	let showCount = $state(false);
-	let mobileMenuOpen = $state(false);
-	let firstMenuItem: HTMLButtonElement | undefined = $state();
 
 	const title = 'Tags | Bodha Blog';
 	const metaDescription = 'All content tags at the Bodha website.';
 	const metaUrl = absoluteUrl('/blog/tags');
 	const metaImage = absoluteImage('/images/bodhacover.png');
+
+	function toggleTagC() {
+		showCount = !showCount;
+	}
 
 	let jsonld = $derived(
 		stringifyJsonLd(
@@ -34,84 +35,29 @@
 			})
 		)
 	);
-
-	function toggleTagC() {
-		showCount = !showCount;
-		mobileMenuOpen = false;
-	}
-
-	function closeMobileMenu() {
-		mobileMenuOpen = false;
-	}
-
-	function onWindowKeydown(event: KeyboardEvent) {
-		if (event.key === 'Escape') {
-			closeMobileMenu();
-		}
-	}
-
-	$effect(() => {
-		if (!mobileMenuOpen) return;
-
-		tick().then(() => {
-			firstMenuItem?.focus();
-		});
-	});
 </script>
 
-<svelte:window onkeydown={onWindowKeydown} />
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<Heading title="Writers | Bodha Blog" />
-	<div class="textbox blog-wrapper">
-		<Crumb/>
-		<div class="row cgap8 rgap8 mwrap xleft selection-row ycenter">
-			<p class="tag-text tt-u" style="margin-right: 1rem; font-weight: bold">Tags</p>
-			<a class="small-button tt-u" href="/blog">Blog Main</a>
-			<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
-			<a class="small-button tt-u" href="/blog/writers">Writers</a>
+	<section class="box wrapper-std header-margin">
+		<Crumb showT={false} title="Tags | Bodha" showRow={true}>
+			<ResponsiveMenu>
+				<a class="small-button tt-u" href="/blog">Blog Main</a>
+				<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
+				<a class="small-button tt-u" href="/blog/writers">Writers</a>
+			</ResponsiveMenu>
+		</Crumb>
+		<div class="blog-wrapper ptop32 rgap32 box">
 			<div class="row cgap8 ycenter">
 				<div class="toggler-std">
 					<input class="in-toggle" id="check-toggle" type="checkbox" bind:checked={showCount} />
 					<label for="check-toggle"></label>
 				</div>
-				<p class="tag-text tt-u w500 altprim tight">
+				<p class="tag-text tt-u lgrey">
 					{#if showCount}View Alphabetical{:else}View by Count{/if}
 				</p>
 			</div>
-		</div>
-		<div class="mobile-selection-menu">
-			<button class="mobile-menu-trigger" type="button" aria-haspopup="menu" aria-expanded={mobileMenuOpen} aria-controls="test-anveshi-selection-menu" onclick={() => (mobileMenuOpen = !mobileMenuOpen)}>
-				<span class="row ycenter cgap8">
-					<BlogMenu size="20" color="currentColor" />
-					<span>Browse</span>
-				</span>
-				<span class="menu-state" aria-hidden="true">{mobileMenuOpen ? 'Close' : 'Menu'}</span>
-			</button>
-			{#if mobileMenuOpen}
-				<button class="mobile-menu-scrim" type="button" aria-label="Close menu" onclick={closeMobileMenu}></button>
-				<div id="test-anveshi-selection-menu" class="mobile-menu-content" role="menu" aria-label="Blog navigation">
-					<div class="mobile-menu-arrow"></div>
-					<button bind:this={firstMenuItem} class="mobile-menu-item active" type="button" role="menuitem" onclick={closeMobileMenu}>
-						<span>Tags</span>
-					</button>
-					<a class="mobile-menu-item" role="menuitem" href="/blog" onclick={closeMobileMenu}>
-						<span>Blog Main</span>
-					</a>
-					<a class="mobile-menu-item" role="menuitem" href="/blog/external-posts" onclick={closeMobileMenu}>
-						<span>External Posts</span>
-					</a>
-					<a class="mobile-menu-item" role="menuitem" href="/blog/writers" onclick={closeMobileMenu}>
-						<span>Writers</span>
-					</a>
-					<button class="mobile-menu-item" role="menuitem" onclick={toggleTagC}>
-						{#if showCount}View Alphabetical{:else}View by Count{/if}
-					</button>
-				</div>
-			{/if}
-		</div>
-		<div class="textbox">
 			<div class="row wrap cgap8 rgap8 tray-of-tags">
 				{#if showCount && tagsC && tagsC.length > 0}
 					{#each tagsC as tag}
@@ -129,118 +75,22 @@
 				{/if}
 			</div>
 		</div>
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">
 
-.blog-wrapper
-	padding-top: 5rem
-	@media screen and (min-width: 1025px)
-		padding-top: 6rem
-
-.mobile-selection-menu
-	display: none
-	position: relative
-	z-index: 20
-
-.mobile-menu-trigger
-	width: 100%
-	display: flex
-	align-items: center
-	justify-content: space-between
-	gap: 1rem
-	padding: 0.8rem 0.9rem
-	border: var(--border-dark)
-	border-radius: 5px
-	background: var(--color-grey-4)
-	color: var(--color-back)
-	font-family: var(--fontface-sans)
-	font-size: 0.78rem
-	font-weight: 700
-	letter-spacing: 0.02rem
-	text-transform: uppercase
-	box-shadow: var(--shadow11)
-	&:hover
-		background: var(--color-theme)
-
-.menu-state
-	font-size: 0.66rem
-	font-weight: 600
-	opacity: 0.72
-
-.mobile-menu-scrim
-	position: fixed
-	inset: 0
-	z-index: 18
-	border: none
-	background: rgba(0,0,0,0.18)
-	backdrop-filter: blur(2px)
-
-.mobile-menu-content
-	position: absolute
-	top: calc(100% + 0.55rem)
-	left: 0
-	right: 0
-	z-index: 21
-	display: flex
-	flex-direction: column
-	padding: 0.45rem
-	border: var(--border-dark)
-	border-radius: 7px
-	background: var(--color-back)
-	box-shadow: 0 18px 45px rgba(0,0,0,0.18)
-	transform-origin: top center
-	animation: menuIn 0.14s ease-out
-
-.mobile-menu-arrow
-	position: absolute
-	top: -6px
-	left: 22px
-	width: 12px
-	height: 12px
-	border-left: var(--border-dark)
-	border-top: var(--border-dark)
-	background: var(--color-back)
-	transform: rotate(45deg)
-
-.mobile-menu-item
-	display: flex
-	align-items: center
-	justify-content: space-between
-	gap: 1rem
-	padding: 0.78rem 0.85rem
-	border: none
+.tag-item
+	background: #575757
+	border: 1px solid #171717
+	padding: 0.5rem 1rem
+	color: #FFFFFF
 	border-radius: 4px
-	background: transparent
-	color: var(--color-primary)
-	font-family: var(--fontface-sans)
-	font-size: 0.82rem
-	font-weight: 650
-	line-height: 1.1
-	text-align: left
-	text-transform: uppercase
-	transition: background 0.08s ease, color 0.08s ease
-	&:hover, &:focus-visible
-		outline: none
-		background: var(--color-stone)
-		color: var(--color-theme-2)
-	&.active
-		background: var(--color-theme-6)
-		color: var(--color-theme-2)
-
-@keyframes menuIn
-	from
-		opacity: 0
-		transform: translateY(-4px) scale(0.98)
-	to
-		opacity: 1
-		transform: translateY(0) scale(1)
-
-@media screen and (max-width: 1024px)
-	.selection-row
-		display: none
-	.mobile-selection-menu
-		display: block
+	font-size: 0.9rem
+	letter-spacing: 0.04rem
+	&:hover
+		border: 1px solid var(--color-theme-4)
+		background: var(--color-theme-2)
+		color: var(--color-theme-5)
 
 </style>

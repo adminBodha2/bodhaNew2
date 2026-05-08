@@ -48,7 +48,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 />
 
 <Container>
-<div class="stdbox thisbox stdpad header-margin is-last">
+<div class="thisbox header-margin is-last">
 	<div class="explorer-heading">
 		<Crumb showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything."/>
 	</div>
@@ -58,7 +58,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 			{/each}
 				<a class="tray-btn item" href="/explorer/graph">View Graph</a>
 		</div>
-	<div class="grid white-grid four thisgrid" use:autoAnimate>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid thisgrid" use:autoAnimate>
 		{#if active === 0}
 	 	{#each data.grouped.blogs as node, i (node.id)}
 		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>

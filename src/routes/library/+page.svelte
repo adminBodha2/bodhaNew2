@@ -57,16 +57,16 @@
 
 <Parallax imageLink="/images/key-bol.webp" isClass="is50" />
 <Container>
-	<div class="stdbox stdpad is-first">
+	<div class="is-first">
 		<Crumb showT={true} title="Bodha Open Library" showD={true} desc="A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more." />
-		<div class="grid two tightrows">
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap32">
 			<p class="paragraph-text">Bodha Open Library is a collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more. Find your next reading by browsing the categories, or select one of our curated reading paths.</p>
 			<p class="paragraph-text">All texts in the library are sourced from the public domain. If any text violates copyright, please write to us at <span class="blue">sitemaster@bodharesearch.in</span>. All works compiled under 'Aryan Issue' are externally hosted/published papers, and links will open in a new tab.</p>
 		</div>
 	</div>
-	<div class="stdbox stdpad bordertop" id="categories">
+	<div class="bordertop" id="categories">
 		<Title text="Categories" />
-		<div class="grid white-grid four">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each libCategories as cat, i}
 				<a class="card-padded labelbox whitestone" href={cat.href}>
 					<div class="box shelf-main">
@@ -80,9 +80,9 @@
 			{/each}
 		</div>
 	</div>
-	<div class="stdbox stdpad bordertop" id="reading-paths">
+	<div class="bordertop" id="reading-paths">
 		<Title text="Curated Reading Paths" />
-		<div class="grid white-grid four">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each libPaths as path, i}
 				<a class="card-padded labelbox blank whitestone" href={path.href}>
 					<p class="paragraph-text w500 tight">{path.label}</p>
@@ -91,10 +91,10 @@
 			{/each}
 		</div>
 	</div>
-	<div class="stdbox stdpad bordertop" id="bharata1000">
+	<div class="bordertop" id="bharata1000">
 		<div class="textbox">
 			<Title text="Bharata1000" />
-			<div class="grid two tightrows">
+			<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap32">
 				<p>
 					Bharata1000 is a curation of 1000 books to learn and understand itihasa, Bharata, and Dharma. The idea here is to provide rampways and learning paths for those looking to study deeper into civilizational and cultural Bharata.
 					Presenting a work in this list is not an endorsement of its contents, for many are listed to inform the reader's shatrubodha, and expose them to problematic but well-known paradigms for India and Dharma.
@@ -125,7 +125,7 @@
 				{/each}
 		</Dropdown>
 			{#if bharatabooks}
-				<div class="grid four midgaps stay2">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 cgap16 rgap16">
 					{#each bharatabooks as item}
 						<div class="box labelbox">
 							<div class="box borderbot pbot8">
@@ -140,9 +140,9 @@
 				</div>
 			{/if}
 	</div>
-	<div class="stdbox stdpad is-last bordertop" id="other-resources">
+	<div class="is-last bordertop" id="other-resources">
 		<Title text="External Resources" />
-		<div class="white-grid grid four">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each libExternal as res}
 				<a class="resource-card blank whitestone" href={res.href} target="_blank" rel="noreferrer">
 					<p class="item-line tight">{res.label} →</p>

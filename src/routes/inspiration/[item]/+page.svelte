@@ -2,7 +2,7 @@
 
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
-	import '$lib/styles/lab2.sass';
+	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -59,29 +59,29 @@ let {
 
 
 <Container>
-<section class="key-image">
-	<WaterRipple src={data.image} class="ripple-motion" {brushSize}/>
-</section>
-	<section class="documents-grid">
-		<div class="box sidearea">
-				<div class="all-items">
+	<section class="dohero">
+		<WaterRipple src={data.image} class="ripple-motion" {brushSize}/>
+	</section>
+	<section class="docgrid">
+		<div class="box docside">
+			<div class="doclist">
 				{#if schools && schools.length > 0}
 					{#each schools as item}
-						<a class="project-link sidebar-text" href={item.linkpath}>
+						<a class="doclink sidebar-text" href={item.linkpath}>
 							{item.meta.title}
 						</a>
 					{/each}
 				{/if}
 				{#if thinkers && thinkers.length > 0}
 					{#each thinkers as item}
-					<a class="blank project-link whitestone" href={item.linkpath}>
-						<p class="rem1 tight grey">{item.meta.title}</p>
-					</a>
+						<a class="blank doclink whitestone" href={item.linkpath}>
+							<p class="rem1 tight grey">{item.meta.title}</p>
+						</a>
 					{/each}
 				{/if}
-				</div>
+			</div>
 		</div>
-		<div class="stdbox mainarea stdpad is-first is-last">
+		<div class="docmain is-first is-last">
 			<div class="labelbox title-area">
 				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
 				{#if data.tags && data.tags.length > 0}
@@ -93,7 +93,7 @@ let {
 				{/if}
 				</Crumb>
 			</div>
-			<div class="classic-document">
+			<div class="doctext classic-document">
 				<data.content />
 			</div>
 		</div>

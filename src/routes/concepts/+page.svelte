@@ -32,7 +32,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container graphing={true}>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title="Concepts" showD={true} desc="Concepts are the main domains of thought across the knowledge base. Each one leads to the essays, books, thinkers, questions, and research nodes gathered under that domain."/>
 			<KnowledgeGraph
 				nodes={data.conceptGraph.nodes}
@@ -41,7 +41,7 @@
 				maxNodes={520}
 				maxLinks={900}
 			/>
-			<div class="grid four white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 					{#each data.topLevelConcepts as concept (concept.id)}
 						<a class="blank labelbox whitestone sm-shadow card-padded more-mob" href={`/concepts/${concept.slug}`}>
 							<p class="paragraph-text bold tight">{concept.title}</p>

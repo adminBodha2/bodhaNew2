@@ -13,11 +13,11 @@
 		desc?: string;
 		centered?: boolean;
 		serifed?: boolean;
-		span?: string;
+		fullP?: boolean;
 		children?: Snippet;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, desc = ' ', centered = false, serifed = true, span = 'span-4', children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, desc = ' ', centered = false, serifed = true, fullP = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -27,7 +27,10 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box mleft null{rgap} crumb-outer {span}" class:xcenter={centered}>
+<div class="box null{rgap} crumb-outer" class:fullP={fullP} class:xcenter={centered}>
+	{#if !showT}
+		<h1 class="visually-hidden">{title}</h1>
+	{/if}
 	<div class="row ycenter xleft cgap4 rgap8 mwrap crumbrow">
 		<a class="crumb-link row cgap4" class:faded={routeDepth > 1} href="/"
 			><div class="link-arrow" class:gone={routeDepth > 1}>←</div>
@@ -48,13 +51,12 @@
 			{/if}
 		{/if}
 	</div>
-	<div class="mleft" class:ta-c={centered}>
+	<div class="mleft box rgap8" class:pbot8={showRow} class:ta-c={centered}>
 		{#if showT}
 			<h1 class="page-title tt-c tight" class:source-serif={serifed}>{title}</h1>
 		{/if}
-
 		{#if showD}
-			<p class="descriptor-text grey tight" class:width50={!centered}>{desc}</p>
+			<p class="grey tight" class:width60={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 	{#if showRow}
@@ -69,7 +71,7 @@
 
 .crumb-outer
 	border-bottom: var(--border-dark)
-	padding-bottom: 1rem
+	padding-bottom: 2rem
 
 .divider
 	font-size: 0.5rem

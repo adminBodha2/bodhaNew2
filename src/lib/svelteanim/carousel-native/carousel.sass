@@ -1,0 +1,137 @@
+.cr-root
+	--cr-gap: 1rem
+	--cr-btn-bg: #ffffff
+	--cr-btn-fg: #0a0a0a
+	--cr-btn-border: rgba(0, 0, 0, 0.12)
+	--cr-btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.06)
+	--cr-btn-size: 2rem
+	--cr-radius: 9999px
+
+	position: relative
+	outline: none
+
+	&:focus-visible
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15)
+		border-radius: 0.5rem
+
+.cr-viewport
+	overflow: hidden
+	scroll-behavior: smooth
+	cursor: grab
+	user-select: none
+	-webkit-user-select: none
+	touch-action: pan-y
+
+	&[data-orientation="horizontal"]
+		overflow-x: auto
+		scroll-snap-type: x mandatory
+		touch-action: pan-y
+
+	&[data-orientation="vertical"]
+		overflow-y: auto
+		scroll-snap-type: y mandatory
+		max-height: 100%
+		touch-action: pan-x
+
+	&.cr-dragging
+		cursor: grabbing
+		scroll-behavior: auto
+		scroll-snap-type: none
+
+	scrollbar-width: none
+
+	&::-webkit-scrollbar
+		display: none
+
+.cr-track
+	display: flex
+
+	&[data-orientation="horizontal"]
+		flex-direction: row
+		margin-inline-start: calc(var(--cr-gap) * -1)
+
+	&[data-orientation="vertical"]
+		flex-direction: column
+		margin-block-start: calc(var(--cr-gap) * -1)
+
+.cr-item
+	min-width: 0
+	flex: 0 0 100%
+	scroll-snap-align: start
+	scroll-snap-stop: always
+
+	&[data-orientation="horizontal"]
+		padding-inline-start: var(--cr-gap)
+
+	&[data-orientation="vertical"]
+		padding-block-start: var(--cr-gap)
+
+.cr-btn
+	position: absolute
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	width: var(--cr-btn-size)
+	height: var(--cr-btn-size)
+	padding: 0
+	background: var(--cr-btn-bg)
+	color: var(--cr-btn-fg)
+	border: 1px solid var(--cr-btn-border)
+	border-radius: var(--cr-radius)
+	box-shadow: var(--cr-btn-shadow)
+	cursor: pointer
+	transition: opacity 150ms ease, transform 150ms ease
+
+	svg
+		width: 1rem
+		height: 1rem
+
+	&:hover:not(:disabled)
+		transform: scale(1.05)
+
+	&:disabled
+		opacity: 0.4
+		cursor: not-allowed
+
+	&:focus-visible
+		outline: none
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25), var(--cr-btn-shadow)
+
+.cr-btn-prev
+	&[data-orientation="horizontal"]
+		inset-inline-start: -2.75rem
+		top: 50%
+		transform: translateY(-50%)
+		&:hover:not(:disabled)
+			transform: translateY(-50%) scale(1.05)
+
+	&[data-orientation="vertical"]
+		inset-inline-start: 50%
+		top: -2.75rem
+		transform: translateX(-50%) rotate(90deg)
+		&:hover:not(:disabled)
+			transform: translateX(-50%) rotate(90deg) scale(1.05)
+
+.cr-btn-next
+	&[data-orientation="horizontal"]
+		inset-inline-end: -2.75rem
+		top: 50%
+		transform: translateY(-50%)
+		&:hover:not(:disabled)
+			transform: translateY(-50%) scale(1.05)
+
+	&[data-orientation="vertical"]
+		inset-inline-start: 50%
+		bottom: -2.75rem
+		transform: translateX(-50%) rotate(90deg)
+		&:hover:not(:disabled)
+			transform: translateX(-50%) rotate(90deg) scale(1.05)
+
+@media (prefers-color-scheme: dark)
+	.cr-root
+		--cr-btn-bg: #0a0a0a
+		--cr-btn-fg: #fafafa
+		--cr-btn-border: rgba(255, 255, 255, 0.12)
+		--cr-btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
+
+

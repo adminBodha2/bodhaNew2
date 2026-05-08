@@ -63,18 +63,23 @@ button.with-tooltip
 	cursor: pointer
 	border: 1px solid #d7d7d7
 	width: max-content
+	border-radius: 8px
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.4)
+	transition: all 0.14s ease-in-out
 	&::after
 		content: ""
 		width: 0%
 		height: 100%
 		background: var(--color-theme)
 		position: absolute
-		transition: all 0.24s ease-in-out
+		transition: all 0.14s ease-in-out
 		right: 50%
-	&:hover::after
-		right: auto
-		right: 0
-		width: 100%
+	&:hover
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		&::after
+			right: auto
+			right: 0
+			width: 100%
 	span
 		text-align: center
 		text-decoration: none
@@ -137,58 +142,6 @@ button.with-tooltip
 	span
 		color: #FFFFFF
 
-//-----------------PAGE CONTAINERS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.box
-	display: flex
-	flex-direction: column
-	&.std
-		row-gap: 2.4rem
-
-.stdpad
-	padding-top: 3rem
-	padding-bottom: 3rem
-	&.header-margin
-		margin-top: 3rem
-	&.is-last
-		padding-bottom: 0
-	&.is-first
-		padding-top: 3rem
-	@media screen and (min-width: 1025px)
-		padding-top: 5rem
-		padding-bottom: 5rem
-		&.header-margin
-			margin-top: 2rem
-
-.tightrows
-	row-gap: 12px
-
-.labelbox, .elembox, .textbox, .stdbox
-	display: flex
-	flex-direction: column
-
-.stdbox
-	row-gap: 2.5rem
-.labelbox
-	row-gap: 0.5rem
-.elembox
-	row-gap: 1.5rem
-.textbox
-	row-gap: 1rem
-
-//-----------------PAGE SHELLS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.standard-grid
-	display: grid
-	gap: 1px
-	background: var(--color-alt-2)
-	border: var(--border-dark)
-	overflow: hidden
-	@media screen and (max-width: 1024px)
-		background: var(--color-back)
-	&.whiten
-		background: var(--color-back)
-
 .tag-pill, p.tag-pill, a.tag-pill, .scaledTypo p.tag-pill
 	font-size: 9px
 	font-weight: 600
@@ -247,147 +200,29 @@ button.with-tooltip
 	100%
 		transform: translateX(0) scale(1.1)
 
-.number:nth-child(3n)
-	background: var(--color-alt-1)
-	&:hover
-		background: var(--color-stone)
-
-.number:nth-child(3n + 1)
-	background: var(--color-stone-3)
-	&:hover
-		background: var(--color-stone)
-
-.number:nth-child(3n + 2)
-	background: var(--color-alt-4)
-	&:hover
-		background: var(--color-stone)
-
 .white-grid
-	background: var(--color-alt-2)
+	background: #e1e1e1
 	gap: 1px
-	border: 1px solid var(--color-alt-2)
-	border-radius: 4px
-
-.filter-button
-	font-size: 0.9rem
-	font-family: 'Google Sans Flex', sans-serif
-	text-transform: uppercase
-	font-weight: 450
-	padding: 8px 20px
-	border-radius: 3px
-	border: var(--border-dark)
-	background: var(--color-theme-7)
-	color: var(--color-grey-4)
-	cursor: pointer
-	transition: all 0.25s var(--cz-easeOutExpo)
-	&:hover
-		background: var(--color-theme-2)
-		color: var(--color-back)
-		border: 1px solid var(--color-theme-2)
-		box-shadow: 2px 4px 6px rgba(0,0,0,0.3)
-		transform: translateY(-2px)
-	&:active
-		transform: scale(1.05)
-	&.active
-		background: var(--color-theme)
-		border-color: var(--color-theme)
-		color: var(--color-back)
-
-.card-padded
-	padding: 1rem
-	@media screen and (max-width: 1024px)
-		&.more-mob
-			padding: 1.5rem
-	@media screen and (min-width: 1025px)
-		padding: 1.5rem
-		&.more
-			padding: 2rem
-
-.tight-padded
-	padding: 0.65rem
-	@media screen and (min-width: 1025px)
-		padding: 0.8rem
-
-.and-bordered
-	border: var(--border-main)
-
-.nav-btn
-	font-size: 0.78rem
-	font-weight: 500
-	padding: 5px 14px
-	border-radius: 3px
-	border: var(--border-dark)
-	color: var(--color-primary)
-	background: var(--color-back)
-	cursor: pointer
-	transition: all 0.15s cubic-bezier(0.055, 0.795, 0.000, 0.995)
-	transform-origin: center center
-	&:hover
-		border-color: var(--color-theme)
-		color: var(--color-theme)
-		background: var(--color-theme-6)
-		transform: scale(0.95)
-	&.active
-		background: var(--color-theme)
-		border-color: var(--color-theme)
-		color: var(--color-back)
-	&.anveshi
-		&:hover
-			border-color: var(--color-anveshi)
-			color: var(--color-anveshi)
-			background: var(--color-back)
-		&.active
-			background: var(--color-anveshi)
-			border-color: var(--color-anveshi)
-			&:hover
-				color: var(--color-back)
+	border: 1px solid #e1e1e1
+	border-radius: 8px
+	overflow: hidden
 
 .whitecard
 	background: var(--color-back)
 
-.whitestone
+.whitestone, button.whitestone
 	background: var(--color-back)
 	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
 	&:hover
 		background: var(--color-stone)
 
-.tag-item
-	font-size: 0.875rem
-	padding: 6px 12px
-	border-radius: 3px
-	border: 1px solid var(--color-grey-1)
-	background: var(--color-theme-6)
-	transition: all 0.12s ease
-	&:hover
-		box-shadow: 2px 3px 5px rgba(0,0,0,0.1)
-		background: var(--color-theme-5)
-	.tag-count
-		font-size: 0.8rem
-		margin-left: 4px
-	@media screen and (min-width: 1025px)
-		font-size: 1rem
-		padding: 8px 16px
-
-.popping
-	transition: transform 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030), box-shadow 160ms cubic-bezier(0.205, 1.000, 0.355, 1.030), background 160ms ease
-	&:hover
-		transform: translateY(-2px)
-		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.12)
-
-.flowing
-	transition: box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1)
-	&:hover
-		box-shadow: 0 16px 35px rgba(0,0,0,0.10)
+.stonecard
+	background: var(--color-stone)
 
 .pdf-btn
 	&:hover
 		svg
 			fill: var(--color-theme)
-
-.experiment
-	width: 100%
-	height: 100%
-	min-height: 24rem
 
 .ripple-motion
 	height: 100%
@@ -421,7 +256,7 @@ button.with-tooltip
 		width: 50px
 		height: 26px
 		border-radius: 50px
-		background: var(--color-alt-2)
+		background: var(--color-grey-4)
 		border: var(--border-dark)
 		cursor: pointer
 		transition: all 0.3s ease
@@ -440,9 +275,9 @@ button.with-tooltip
 		&:after
 			transform: translateX(23px)
 	label:hover
-		background: linear-gradient(to bottom, #b3b3b3, #e6e6e6)
 		&:after
 			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3)
+
 .in-toggle
 	position: absolute
 	top: 0
@@ -453,33 +288,8 @@ button.with-tooltip
 	outline: none
 	display: none
 
-.open-drawer
-	border: none
-	background: var(--color-back)
-	a.dropped-link
-		font-size: 1rem
-		text-transform: uppercase
-		text-align: left
-		padding: 0.75rem 0.5rem
-		font-weight: 450
-		border-bottom: var(--border-dark)
-	button.dropped-link
-		font-size: 1rem
-		text-transform: capitalize
-		text-align: left
-		padding: 0.75rem 0.5rem
-		border-top: none
-		border-left: none
-		border-right: none
-		background: none
-		font-weight: 450
-		border-bottom: var(--border-dark)
-
 .pdf-reader
 	align-items: center
-	padding: 2rem
-	@media screen and (max-width: 1024px)
-		padding: 0
 
 a.svg-hover
 	&:hover
@@ -488,7 +298,7 @@ a.svg-hover
 a
 	&:hover
 		.a-hover
-			color: var(--color-theme-2)
+			color: var(--color-theme-3)
 
 .ripple-image-box
 	width: 100%
@@ -511,153 +321,6 @@ a
 		color: var(--color-theme)
 		&:hover
 			text-decoration: underline
-
-.classic-button
-	background: linear-gradient(45deg,rgba(235, 252, 255, 1) 0%, rgba(161, 244, 255, 1) 100%)
-	border: 1px solid #d7d7d7
-	padding: 0.65rem 1.5rem 0.85rem 1.5rem
-	border-radius: 4px
-	font-family: 'Google Sans Flex', sans-serif
-	font-variant: small-caps
-	text-transform: lowercase
-	font-size: 1.3rem
-	font-weight: 500
-	display: flex
-	flex-direction: row
-	align-items: center
-	transition: all 0.25s ease
-	&:hover
-		background: linear-gradient(95deg,rgba(235, 252, 255, 1) 0%, rgba(161, 244, 255, 1) 100%)
-
-.newbutton
-	text-decoration: none
-	line-height: 1
-	border-radius: 8px
-	overflow: hidden
-	position: relative
-	box-shadow: 4px 4px 10px rgba(0,0,0,0)
-	background: #F0F4EF
-	color: var(--color-primary)
-	border: 1px solid #F0F4EF
-	cursor: pointer
-	padding: 0.35rem 1.15rem
-	width: max-content
-	transition: all .23s cubic-bezier(0.680, -0.550, 0.265, 1.550)
-	&:hover
-		box-shadow: 2px 2px 4px rgba(0,0,0,.2)
-		.button__text
-			color: #fff
-		.button-decor
-			width: 100%
-			left: 0
-
-.button-decor
-	position: absolute
-	top: 0
-	left: 50%
-	width: 0
-	height: 100%
-	background-color: var(--color-theme-2)
-	transition: all .23s cubic-bezier(0.680, -0.550, 0.265, 1.550)
-	z-index: 0
-
-.button-content
-	display: flex
-	align-items: center
-	justify-content: center
-	text-align: center
-	font-weight: 600
-	position: relative
-	overflow: hidden
-	text-transform: lowercase
-	font-variant: small-caps
-	font-family: 'Google Sans Flex', san-serif
-	font-size: 1.2rem
-
-.button__text
-	display: inline-block
-	transition: color .2s
-	padding-bottom: 2px
-	white-space: nowrap
-
-.small-btn
-	background: var(--color-theme-6)
-	border: var(--border-darker)
-	padding: 0.2rem 0.5rem
-	font-family: 'Google Sans Flex', sans-serif
-	text-transform: capitalize
-	font-weight: 450
-	font-size: 0.8rem
-	border-radius: 12px
-	corner-shape: squircle
-	min-width: 64px
-	position: relative
-	isolation: isolate
-	&::before
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		opacity: 0
-		z-index: -1
-		transition: all 250ms ease
-		border-radius: 12px
-		corner-shape: squircle
-		background: var(--color-theme-5)
-	&:hover
-		box-shadow: 0 3px 5px rgba(0,0,0,0.1)
-		&::before
-			opacity: 1
-
-.blankbutton
-	background: none
-	border-top: none
-	border-right: none
-	border-bottom: none
-	border-left: none
-	display: flex
-	justify-content: flex-start
-	align-items: center
-	flex-direction: row
-	font-family: 'Google Sans', sans-serif
-	text-transform: capitalize
-	font-size: 1.2rem
-	column-gap: 4px
-	font-weight: 500
-	transition: all 0.2s ease
-	position: relative
-	.green.bold
-		transition: transform 0.2s ease
-	&:hover
-		.green.bold
-			transform: translateX(8px)
-
-.nav
-	border: none
-	padding: 2rem 1rem
-	background: var(--color-stone)
-	width: 100%
-	text-align: left
-	border-bottom: var(--border-main)
-	&:hover
-		background: #F0F4EF
-		color: var(--color-theme-2)
-		.blankbutton
-			transform: translateX(8px)
-
-a.nav
-	font-size: 1.1rem
-	color: var(--color-primary)
-	font-weight: 450
-
-a.nav
-	padding: 1rem 2rem
-	width: max-content
-	border: var(--border-darker)
-	border-radius: 8px
-	background: #FFF
 
 .whitepaper-page
 	img
@@ -684,3 +347,165 @@ a.nav
 .maplibregl-ctrl-group button
 	background: rgba(0,0,0,0.1)
 	color: rgba(255,255,255,1)
+
+.standard-grid
+	display: grid
+	gap: 1px
+	background: var(--color-alt-2)
+	border: var(--border-dark)
+	overflow: hidden
+	@media screen and (max-width: 1024px)
+		background: var(--color-back)
+	&.whiten
+		background: var(--color-back)
+
+
+.selection-button
+	background: var(--color-stone)
+	font-size: 1rem
+	text-transform: uppercase
+	font-family: 'Google Sans', sans-serif
+	font-weight: 600
+	letter-spacing: 0.01rem
+	padding: 1em 2em
+	border: 1px solid #e1e1e1
+	border-radius: 4px
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.3)
+	transition: background 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), color 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), border 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), box-shadow 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), transform 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
+	transform-origin: center center
+	z-index: 199
+	&:hover
+		background: var(--color-grey-4)
+		color: #FFF
+		border: 1px solid var(--color-theme-4)
+		box-shadow: 2px 3px 4px rgba(0,0,0,0.4)
+	&.active
+		border: 1px solid #d7d7d7
+		background: var(--color-back)
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		&:hover
+			color: var(--color-primary)
+	@media (min-width: 1025px)
+		min-width: 96px
+		font-size: 0.85rem
+		&:active
+			transform: scale(1.05)
+
+.responsive-menu__items
+	.selection-button
+		@media (max-width: 1024px)
+			border: none
+			box-shadow: none
+			background: none
+			&:hover
+				color: var(--color-primary)
+				background: var(--color-stone)
+			&.active
+				background: var(--color-alt-2)
+
+.light
+	.glass-2
+		position: relative
+		overflow: hidden
+		border: 1px solid #efefef
+		background: rgba(249, 248, 246, 55%)
+		box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0)
+		transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms cubic-bezier(0.16, 1, 0.3, 1), background 240ms cubic-bezier(0.16, 1, 0.3, 1)
+		&:hover
+			border-color: rgba(255,255,255,1)
+			box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 -1px 0 rgba(0,0,0,0.04) inset, 0 18px 50px rgba(15,23,42,0.08), 0 6px 18px rgba(15,23,42,0.05)
+			background: rgba(255,255,255, 100%)
+	.glass-books
+		box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -4px 20px rgba(255,255,255,0.15)
+	.glass-inset
+		position: relative
+		overflow: hidden
+		border: 1px solid rgba(255,255,255,0.9)
+		background: var(--color-back)
+		box-shadow: 0 0px 0px rgba(255,255,255,0), 0 1px 2px rgba(0,0,0,0.1), 2px 2px 4px rgba(15,23,42,0.1), 0 4px 9px rgba(15,23,42,0.03)
+		transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1)
+		&:hover
+			box-shadow: 0 4px 6px rgba(255,255,255,0.3) inset, 0 2px 4px rgba(0,0,0,0.2) inset, 4px 4px 8px rgba(15,23,42,0.1), 0 6px 18px rgba(15,23,42,0.05)
+	.glass-3
+		background: var(--color-stone-2)
+		border: 1px solid var(--color-alt-2)
+		transition: box-shadow 0.14s cubic-bezier(0.860, 0.000, 0.070, 1.000)
+		box-shadow: 3px 1px 2px rgba(5,5,55,0.1),  0 -1px 2px rgba(33,33,33,0.1)
+		&:hover
+			background: var(--color-back)
+			border: var(--border-main)
+			box-shadow: 0px 0px 0px rgba(0,0,0,0), 0 0 0 rgba(0,0,0,0)
+
+.dark
+	.glass-1
+		border: 1px solid #272727
+		background: var(--color-back)
+		transition: all 160ms cubic-bezier(0.22, 1, 0.36, 1)
+		box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.03), 4px  4px 10px rgba(0, 0, 0, 0.5)
+		&:hover
+			box-shadow: -4px -4px 10px rgba(255, 255, 255, 0), 4px  4px 10px rgba(0, 0, 0, 0)
+			border: 1px solid #474747
+	.glass-2
+		border: 1px solid #212121
+		position: relative
+		overflow: hidden
+		background: var(--color-back)
+		box-shadow: -2px -2px 6px rgba(255,255,255,0.02), 2px 2px 6px rgba(0,0,0,0.3)
+		&:hover
+			box-shadow: -2px -2px 6px rgba(255,255,255,0), 2px 2px 6px rgba(0,0,0,0)
+			border: 1px solid #474747
+	.glass-books
+		box-shadow: 0 1px 1px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -4px 20px rgba(255,255,255,0.05)
+	.glass-inset
+		position: relative
+		overflow: hidden
+		border: 1px solid #212121
+		background: var(--color-back)
+		box-shadow: 0 4px 6px rgba(255,255,255,0) inset, 0 2px 4px rgba(0,0,0,0) inset, -4px -4px 10px rgba(255, 255, 255, 0.03), 4px  4px 10px rgba(0, 0, 0, 0.5)
+		transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1)
+		&:hover
+			box-shadow: 0 4px 6px rgba(0,0,0,0.7) inset, 0 2px 4px rgba(0,0,0,0.1) inset, 4px 4px 8px rgba(15,23,42,0.1), 0 6px 18px rgba(15,23,42,0.05)
+
+.radius6
+	border-radius: 6px
+
+.number:nth-child(odd)
+	background: #fcfcfc
+	&:hover
+		background: #F9F8F6
+
+.number:nth-child(even)
+	background: #f5f5f5
+	&:hover
+		background: #F9F8F6
+
+.ncolor:nth-child(4n)
+	background: var(--color-stone)
+
+.ncolor:nth-child(4n+1)
+	background: var(--color-alt-2)
+
+.ncolor:nth-child(4n+2)
+	background: var(--color-stone-3)
+
+.ncolor:nth-child(4n+3)
+	background: var(--color-alt-3)
+
+.ncolor
+	transition: background 190ms ease
+
+a.ncolor
+	&:hover
+		background: var(--color-back)
+
+.ncolor-inv:nth-child(3n)
+	&:hover
+		background: var(--color-stone)
+
+.ncolor-inv:nth-child(3n+1)
+	&:hover
+		background: var(--color-stone-3)
+
+.ncolor-inv:nth-child(3n+2)
+	&:hover
+		background: var(--color-alt-1)

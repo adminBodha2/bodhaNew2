@@ -27,36 +27,29 @@
 <section class="key-image">
 	<WaterRipple src="/images/heroes/key-soa.webp" class="ripple-motion" brushSize={100} />
 </section>
-<div class="stdbox stdpad is-first is-last">
+<section class="box wrapper-std first-box rgap32">
 	<Crumb showT={true} title="Scrolls of Aryavarta" showD={true} desc="A creative project in cultural storytelling through digital comics, recreating legends, triumphs, struggles, and tragedies from Indian history."/>
-	<div class="box">
-		<div class="grid three tight">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cgap16 rgap16">
 			{#each posts as item}
-				<a class="blank box comic-card card-padded" href={item.linkpath}>
-					<img src={item.meta.image} alt={item.meta.title}/>
-					<div class="box comic-data-main tight-padded">
+				<a class="blank box comic-card p8 radius whitestone" href={item.linkpath}>
+					<img class="fit" src={item.meta.image} alt={item.meta.title}/>
+					<div class="box comic-data-main p16">
 						<p class="card-title a-hover">{item.meta.title}</p>
-						<p class="grey descriptor-text">{item.meta.description}</p>
+						<p class="grey">{item.meta.description}</p>
 					</div>
-					<div class="self-bottom bordertop tight-padded">
+					<div class="self-bottom bordertop p16 nobot">
 						<p class="tag-text">Vol. {item.meta.volume}, Issue {item.meta.issue} | {item.meta.date}</p>
 					</div>
 				</a>
 			{/each}
 		</div>
-	</div>
-</div>
+</section>
 </Container>
 
 <style lang="sass">
 
 .comic-card
-	img
-		object-fit: cover
-		width: 100%
-		height: 200px
-		@media screen and (min-width: 1025px)
-			height: 280px
+	border: var(--border-dark)
 
 .key-image
 	width: 100%

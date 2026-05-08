@@ -45,7 +45,7 @@
 
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title={category.label} showD={true} desc={category.desc} showRow={true}>
 			<div class="row cgap8 rgap8 mwrap ptop8">
 				{#each libCategories as cat (cat.type)}
@@ -67,7 +67,7 @@
 			{/each}
 		</Dropdowner>
 		{#if books && books.length > 0}
-			<div class="grid four white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 				{#each books as item, i}
 					{#if item.type === 'aryan-issue'}
 						<a class="blank labelbox whitestone card-padded" href={item.linkreal} target="_blank" rel="noreferrer">

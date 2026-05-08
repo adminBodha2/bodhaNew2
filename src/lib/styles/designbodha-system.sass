@@ -2,7 +2,7 @@
 
 .row
 	display: flex
-	flex-direction: row
+	flex-direction: row																																		
 	&.wrap
 		flex-wrap: wrap
 	&.xbetween
@@ -19,9 +19,25 @@
 		align-items: flex-start
 	&.ybottom
 		align-items: flex-end
-	@media (min-width: 1025px)
+	@media (max-width: 1024px)
 		&.mwrap
 			flex-wrap: wrap
+		&.mcol
+			flex-direction: column
+			&.ycenter
+				align-items: flex-start
+
+.box
+	&.wraps
+		row-gap: 2rem
+	@media (min-width: 1025px)
+		&.wraps
+			row-gap: 4rem
+
+.flex-shrink-0
+	flex-shrink: 0
+.flex-grow
+	flex-grow: 1
 
 .db-grid
 	display: grid
@@ -32,108 +48,107 @@
 	&.rgap-sd
 		gap: 1rem
 	.span-4, .span-2, .span-3, .span-2n
-		grid-column: -1 / 1
+		grid-column: 1 / -1
+	&.stay2
+		grid-template-columns: 1fr 1fr
 	@media (min-width: 721px)
 		grid-template-columns: 1fr 1fr
+		&.fix-1
+			grid-template-columns: 1fr
 		&.fix-2
-			grid-template-columns: 1fr 1fr
-		.span-2
-			grid-column: -2 / 1
-		.span-1n, .span-2
-			grid-column: span 2
-	@media (min-width: 1025px)
+			grid-template-columns: 1fr
 		&.fix-3
-			grid-template-columns: 1fr 1fr 1fr
-		&.wraps
-			gap: 4rem 1rem
-		.span-2n
-			grid-columns: span 2
+			grid-template-columns: 1fr
+		&.fix-4
+			grid-template-columns: 1fr 1fr
+			.span-2
+				grid-column: span 2
 		.span-2
 			grid-column: span 1
-	@media (min-width: 1201px)
-		grid-template-columns: 1fr 1fr 1fr 1fr
 		.span-3
-			grid-column: span 3
+			grid-column: span 2
+		.span-f
+			grid-column: span  2
+	@media (min-width: 1025px)
+		grid-template-columns: 1fr 1fr 1fr
+		&.spaced
+			gap: 2rem
 		.span-2
 			grid-column: span 2
+		.span-3
+			grid-column: span 3
+		&.wraps
+			gap: 4rem 1rem
+		&.fix-1
+			grid-template-columns: 1fr
+		&.fix-2
+			grid-template-columns: 1fr 1fr
+			.span-2
+				grid-column: span 1
+		&.fix-3
+			grid-template-columns: 1fr 1fr 1fr
+		&.fix-4
+			grid-template-columns: 1fr 1fr 1fr 1fr
+		.span-f
+			grid-column: span 3
+	@media (min-width: 1201px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		&.fix-1
+			grid-template-columns: 1fr
+		&.fix-2
+			grid-template-columns: 1fr 1fr
+			.span-2
+				grid-column: span 1
+		&.fix-3
+			grid-template-columns: 1fr 1fr 1fr
+		&.fix-4
+			grid-template-columns: 1fr 1fr 1fr 1fr
+		.span-2
+			grid-column: span 2
+		.span-3
+			grid-column: span 3
+		.span-f
+			grid-column: span 4
 
 //--------------------box cushioning----------------------------
-
-.header-margin
-	margin-top: 64px
-	@media (min-width: 1025px)
-		margin-top: 72px
 
 .padded
 	padding-top: 4rem
 	padding-bottom: 4rem
-	&.first-box
-		padding-top: 2rem
-		padding-bottom: 4rem
-	@media (min-width: 1025px)
-		padding-top: 6rem
-		padding-bottom: 6rem
-		&.first-box
-			padding-top: 2rem
-			padding-bottom: 6rem
 
-.p0000
-	padding: 0.25rem
-.pt0
-	padding: 0 0.25rem 0.25rem 0.25rem
-.pb0
-	padding: 0.25rem 0.25rem 0 0.25rem
-
-.p1111
-	padding: 0.5rem
-.p0111
-	padding: 0 0.5rem 0.5rem 0.5rem
-.p1101
-	padding: 0.5rem 0.5rem 0 0.5rem
-.p1010
-	padding: 0.5rem 0
-.p0101
-	padding: 0 0.5rem
-.p2222
+.pad-bounded
 	padding: 1rem
-.p2121
-	padding: 1rem 0.5rem
-.p1212
-	padding: 0.5rem 1rem
-.p0222
-	padding: 0 1rem 1rem 1rem
-.p1222
-	padding: 0.5rem 1rem 1rem 1rem
-.p2202
-	padding: 1rem 1rem 0 1rem
-.p2020
-	padding: 1rem 0
+	&.notop
+		padding-top: 0
+	&.nobot
+		padding-bottom: 0
+	@media (min-width: 1025px)
+		padding: 2rem
 
-@media (min-width: 1025px)
-	.p1111
-		padding: 1rem
-	.p0111
-		padding: 0 1rem 1rem 1rem
-	.p1101
-		padding: 1rem 1rem 0 1rem
-	.p1010
-		padding: 1rem 0
-	.p0101
-		padding: 0 1rem
-	.p2222
-		padding: 1.6rem
-	.p2121
-		padding: 1.6rem 0.8rem
-	.p1212
-		padding: 0.8rem 1.6rem
-	.p0222
-		padding: 0 1.6rem 1.6rem 1.6rem
-	.p1222
-		padding: 0.8rem 1.6rem 1.6rem
-	.p2202
-		padding: 1.6rem 1.6rem 0 1.6rem
-	.p2020
-		padding: 1.6rem 0
+.pad-tight
+	padding: 1rem
+	&.notop
+		padding-top: 0
+	&.nobot
+		padding-bottom: 0
+	@media (min-width: 1025px)
+		padding: 1.35rem
+
+.pad-min
+	padding: 0.5rem
+
+.ptop16
+	padding-top: 1rem
+.ptop8
+	padding-top: 0.5rem
+.ptop4
+	padding-top: 0.25rem
+.pbot16
+	padding-bottom: 1rem
+.pbot8
+	padding-bottom: 0.5rem
+.pbot4
+	padding-bottom: 0.25rem
 
 .b1111
 	border: 1px solid #E7e7e7
@@ -152,6 +167,8 @@ a.bk2222
 		p.headlink
 			color: var(--color-theme-2)
 
+.rgap-lg
+	row-gap: 2rem
 .rgap-sd
 	row-gap: 1rem
 .rgap-sm
@@ -163,8 +180,12 @@ a.bk2222
 	column-gap: 4px
 .rgap8
 	row-gap: 8px
+.rgap16
+	row-gap: 16px
 .cgap8
 	column-gap: 8px
+.cgap16
+	column-gap: 16px
 
 .mtop8
 	margin-top: 8px
@@ -179,20 +200,40 @@ a.bk2222
 img.fit
 	object-fit: cover
 	width: 100%
-	height: 240px
 	&.t2
+		aspect-ratio: 16/9
 		@media (min-width: 1025px)
-			height: 360px
+			height: 400px
+	height: 240px
+
+img.std
+	object-fit: cover
+	aspect-ratio: 3/2
+	width: 100%
+	@media (max-width: 1024px)
+		height: 240px
 
 img.square
+	aspect-ratio: 1/1
+	object-fit: contain
+	width: 100%
+	max-height: 300px
+	@media (min-width: 1025px)
+		max-height: 400px
+
+img.size-lg
 	object-fit: cover
 	width: 100%
-	aspect-ratio: 1/1
+	height: 300px
+	@media (min-width: 721px)
+		height: 320px
+	@media (min-width: 1025px)
+		height: 360px
 
 img.portrait
 	object-fit: cover
 	width: 100%
-	height:320px
+	height:280px
 	@media (min-width: 1025px)
 		height: 480px
 
@@ -215,25 +256,87 @@ img.contained
 
 //--------------links and buttons--------------------------------------------------------------------------------
 
-.grey-button
-	font-size: 1rem
-	font-family: 'Google Sans', sans-serif
+a.small-button, button.small-button
+	font-size: 12px
 	font-weight: 500
-	padding: 0.6em 1.2em
-	border-radius: 0
-	border: 1px solid var(--color-grey-1)
-	background: var(--color-grey-1)
+	font-family: 'Google Sans', sans-serif
+	padding: 0.4em 0.8em
+	border-radius: 4px
+	border: 1px solid var(--color-grey-4)
+	background: #424242
 	text-decoration: none
-	color: var(--color-grey-4)
+	color: var(--color-back)
 	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
 	transform-origin: center center
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.3)
+	width: max-content
+	&:hover
+		border: 1px solid var(--color-theme-2)
+		color: var(--color-back)
+		background: rgba(5, 67, 112, 1)
+		transform: scale(0.95)
+		box-shadow: 4px 2px 7px rgba(0,0,0,0)
+	&.active
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		background: var(--color-theme-2)
+		color: var(--color-theme-5)
+
+.responsive-menu-2__items
+	@media (max-width: 1024px)
+		a.small-button, button.small-button
+			background: none
+			color: var(--color-primary)
+			border: none
+			box-shadow: none
+			font-size: 1rem
+			width: 100%
+			&:hover
+				background: var(--color-grey-4)
+				transform: scale(1)
+				color: #FFFFFF
+			&.active
+				color: var(--color-theme)
+				background: var(--color-grey-1)
+
+
+a.blue-button
+	background: rgba(5, 67, 112, 1)
+	color: var(--color-theme-5)
+	border: 1px solid var(--color-theme-2)
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.3)
+	padding: 0.5em 1em
+	border-radius: 6px
+	font-size: 15px
+	transform-origin: center center
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	&:hover
+		box-shadow: 4px 2px 7px rgba(0,0,0,0)
+		color: var(--color-grey-5)
+		border: 1px solid var(--color-grey-3)
+		background: linear-gradient(158deg,rgba(209, 209, 209, 1) 0%, rgba(167, 167, 167, 1) 55%, rgba(160, 160, 160, 1) 73%, rgba(135, 135, 135, 0.8) 98%)
+		background: #a7a7a7
+		transform: scale(0.95)
+
+.grey-button
+	font-size: 15px
+	font-family: 'Google Sans', sans-serif
+	padding: 0.4em 0.8em
+	border-radius: 6px
+	border: 1px solid var(--color-grey-3)
+	background: linear-gradient(158deg,rgba(209, 209, 209, 1) 0%, rgba(167, 167, 167, 1) 55%, rgba(160, 160, 160, 1) 73%, rgba(135, 135, 135, 0.8) 98%)
+	background: #a7a7a7
+	text-decoration: none
+	color: var(--color-grey-5)
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	transform-origin: center center
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.3)
 	width: max-content
 	&:hover
 		border: 1px solid var(--color-theme-2)
 		color: var(--color-theme-4)
-		background: var(--color-theme-2)
+		background: rgba(5, 67, 112, 1)
 		transform: scale(0.95)
-
+		box-shadow: 4px 2px 7px rgba(0,0,0,0)
 
 a.hollow-link
 	display: flex
@@ -252,13 +355,49 @@ a.hollow-link
 		color: var(--color-theme)
 		.button-text
 			transform: translateX(8px)
+	&.anveshi
+		color: var(--color-anveshi)
 
-a.blue-button
-	background: var(--color-theme-3)
-	color: var(--color-back)
-	border: 1px solid var(--color-theme-4)
-	box-shadow: 2px 2px 3px rgba(0,0,0,0)
-	padding: 0.5em 1em
-	font-size: 15px
+button.hollow-link
+	display: flex
+	column-gap: 4px
+	border: none
+	background: none
+	margin-top: 4px
+	font-size: 1rem
+	font-weight: 600
+	color: var(--color-theme-3)
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	transform-origin: center center
+	width: max-content
+	.button-text
+		transition: all 0.1s ease
 	&:hover
-		box-shadow: 4px 1px 10px rgba(0,0,0,0.2)
+		color: var(--color-theme)
+		.button-text
+			transform: translateX(8px)
+	&.anveshi
+		color: var(--color-anveshi)
+
+.darkbox
+	background: #0B132B
+
+.on-hover
+	svg.svgicon
+		filter: drop-shadow(0px 0px 0px rgb(0 0 0 / 0))
+
+.person-card
+	display: flex
+	flex-direction: column
+	row-gap: 1rem
+	img
+		object-fit: cover
+		width: 200px
+		height: 200px
+		border-radius: 100px
+	@media (min-width: 1025px)
+		flex-direction: row
+		column-gap: 2rem
+		img
+			flex-shrink: 0
+

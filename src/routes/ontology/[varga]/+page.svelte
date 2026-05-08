@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import '$lib/styles/lab2.sass';
+	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -35,17 +35,17 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="documents-grid amarakosher">
-		<div class="box sidearea">
-			<div class="all-items">
+	<section class="docgrid scrollside">
+		<div class="box docside">
+			<div class="doclist">
 				{#each data.allVargas as item}
-					<a class="project-link sidebar-text" class:active={item.slug === data.ontology.varga.slug} href={`/ontology/${item.slug}`}>
+					<a class="doclink sidebar-text" class:active={item.slug === data.ontology.varga.slug} href={`/ontology/${item.slug}`}>
 						{item.title}
 					</a>
 				{/each}
 			</div>
 		</div>
-		<div class="stdbox mainarea stdpad header-margin is-last">
+		<div class="docmain header-margin is-last">
 			<div class="labelbox title-area">
 				<Crumb showT={true} title={data.ontology.varga.title} showD={true} desc={data.ontology.varga.description} showRow={true}>
 				<div class="row wrap cgap4 rgap4">

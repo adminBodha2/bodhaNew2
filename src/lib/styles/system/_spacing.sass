@@ -1,0 +1,45 @@
+@use 'tokens' as t
+@use 'breakpoints' as b
+
+=spacing-utils($prefix: "")
+	@each $key, $value in t.$space-scale
+		.#{$prefix}p#{$key}
+			padding: $value
+		.#{$prefix}px#{$key}
+			padding-left: $value
+			padding-right: $value
+		.#{$prefix}py#{$key}
+			padding-top: $value
+			padding-bottom: $value
+		.#{$prefix}ptop#{$key}
+			padding-top: $value
+		.#{$prefix}pbot#{$key}
+			padding-bottom: $value
+		.#{$prefix}pleft#{$key}
+			padding-left: $value
+		.#{$prefix}pright#{$key}
+			padding-right: $value
+		.#{$prefix}mtop#{$key}
+			margin-top: $value
+		.#{$prefix}mbot#{$key}
+			margin-bottom: $value
+		.#{$prefix}mleft#{$key}
+			margin-left: $value
+		.#{$prefix}mright#{$key}
+			margin-right: $value
+		.#{$prefix}rgap#{$key}
+			row-gap: $value
+		.#{$prefix}cgap#{$key}
+			column-gap: $value
+		.#{$prefix}gap#{$key}
+			gap: $value
+
++spacing-utils()
+
+@each $name, $width in b.$breakpoints
+	@media (min-width: $width)
+		+spacing-utils("#{$name}\\:")
+
+@each $name, $width in b.$max-breakpoints
+	@media (max-width: $width)
+		+spacing-utils("#{$name}\\:")

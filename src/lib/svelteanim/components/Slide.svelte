@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import type { EasingFunction } from 'svelte/transition';
-	import { cubicOut } from 'svelte/easing';
+	import { quintOut } from 'svelte/easing';
 	import { slide } from '../transitions/slide';
 	import type { SlideDirection } from '../types';
 
@@ -37,7 +37,7 @@
 		distance = 100,
 		duration = 300,
 		delay = 0,
-		easing = cubicOut,
+		easing = quintOut,
 		opacity = true,
 		children,
 		...rest

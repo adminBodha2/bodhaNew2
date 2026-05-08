@@ -35,21 +35,19 @@
 <section class="key-image">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
 </section>
-	<div class="box stdpad is-first is-last">
-		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
-			<div class="box">
-				<p class="descriptor-text grey">Vol. {data.volume}, Issue {data.issue} | {data.date}</p>
-			</div>
-		</Crumb>
-		<div class="textbox aryavarta-content ptop32">
-		<div class="width70">
-			<data.content/>
+<section class="box wrapper-std first-box rgap32">
+	<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
+		<div class="box">
+			<p class="grey">Vol. {data.volume}, Issue {data.issue} | {data.date}</p>
 		</div>
-		<div class="pdf-reader">
-			<PDFReader src={data.pdflink} title={data.title} height="82vh" />
-		</div>
-		</div>
+	</Crumb>
+	<div class="width70 content-highlights">
+		<data.content/>
 	</div>
+	<div class="pdf-reader">
+		<PDFReader src={data.pdflink} title={data.title} height="82vh" />
+	</div>
+</section>
 </Container>
 
 <style lang="sass">

@@ -1,0 +1,30 @@
+@use 'tokens' as t
+@use 'breakpoints' as b
+
+=grid-utils($prefix: "")
+	@for $i from 1 through t.$grid-columns
+		.#{$prefix}grid-cols-#{$i}
+			grid-template-columns: repeat(#{$i}, minmax(0, 1fr))
+		.#{$prefix}col-span-#{$i}
+			grid-column: span #{$i}
+
+.grid
+	display: grid
+	grid-template-columns: minmax(0, 1fr)
+
+.col-span-full
+	grid-column: 1 / -1
+
++grid-utils()
+
+@each $name, $width in b.$breakpoints
+	@media (min-width: $width)
+		+grid-utils("#{$name}\\:")
+		.#{$name}\:col-span-full
+			grid-column: 1 / -1
+
+@each $name, $width in b.$max-breakpoints
+	@media (max-width: $width)
+		+grid-utils("#{$name}\\:")
+		.#{$name}\:col-span-full
+			grid-column: 1 / -1

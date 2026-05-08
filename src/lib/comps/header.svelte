@@ -7,7 +7,6 @@
 	import { menuState, toggleMenuState, toggleSearch, darkTheme, iW } from '$lib/utils/globalstores';
 	import { navLinks } from '$lib/utils/localsends'
 
-
 	let scro = $state(0);
 
 	let firstSubroute = $derived.by(() => {
@@ -26,7 +25,7 @@
 
 <svelte:window bind:scrollY={scro} />
 
-<div class="row width100 ycenter xbetween narrowbox">
+<div class="row ycenter xbetween narrowbox">
 		<a class="blank row ycenter logoholder" href="/">
 			{#if $darkTheme}
 				<img class="rotator dark" src="/images/rotator-d.png" alt="rotator" style="transform: rotate({scro / 8}deg)" />

@@ -12,7 +12,7 @@
 	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/animations.sass'
-	import '$lib/styles/glass.sass';
+	import '$lib/styles/system/index.sass';
 	import '$lib/styles/icons.css';
 	import { darkTheme, iW, openSiteTourSelector, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
 	import { elementVisibilityStore } from '$lib/utils/elementVisibility';
@@ -21,10 +21,15 @@
 	import SearchModal from '$lib/comps/searchmodal.svelte';
 	import SiteTour from '$lib/comps/sitetour.svelte';
 
+	const pageTransitionTopClass = 'page-transition-top';
+	const pageTransitionDeepClass = 'page-transition-deep';
+	const pageTransitionDeepScrollY = 240;
+
 	let { children } = $props();
 	let width = $state(0);
 	let footerRef = $state<HTMLElement | null>(null);
 	let isFooterVisible = $state(false);
+	let count = $state(0)
 	$effect(() => {
 		$iW = width < 1025;
 	});
@@ -67,12 +72,20 @@
 		if (!document.startViewTransition) return;
 		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		if (navigation.from?.url.pathname === navigation.to?.url.pathname) return;
-		if (window.scrollY > 120) return;
+		const isDeepScroll = window.scrollY > pageTransitionDeepScrollY;
+		const transitionClass = isDeepScroll ? pageTransitionDeepClass : pageTransitionTopClass;
 
 		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
+			document.documentElement.classList.add(transitionClass);
+			const transition = document.startViewTransition(async () => {
 				resolve(undefined);
 				await navigation.complete;
+				if (isDeepScroll) {
+					window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+				}
+			});
+			transition.finished.finally(() => {
+				document.documentElement.classList.remove(transitionClass);
 			});
 		});
 	});
@@ -106,7 +119,6 @@
 		<Bottom />
 	</footer>
 	<SearchModal />
-	<SiteTour isFooterVisible={isFooterVisible} />
 </div>
 
 <style lang="sass">
@@ -116,32 +128,48 @@ main
 	view-transition-name: page
 	background: var(--color-back)
 
-:global(::view-transition-old(page))
-	animation: page-out 150ms var(--cz-easeInQuad) both
+:global(html.page-transition-top::view-transition-old(page)),
+:global(html.page-transition-top::view-transition-new(page)),
+:global(html.page-transition-deep::view-transition-old(page)),
+:global(html.page-transition-deep::view-transition-new(page))
+	animation: none
+	mix-blend-mode: normal
 
-:global(::view-transition-new(page))
-	animation: page-in 180ms var(--cz-easeOutQuad) 270ms both
+:global(html.page-transition-top::view-transition-old(page)),
+:global(html.page-transition-deep::view-transition-old(page))
+	z-index: 1
+
+:global(html.page-transition-top::view-transition-new(page)),
+:global(html.page-transition-deep::view-transition-new(page))
+	z-index: 2
+
+:global(html.page-transition-top::view-transition-new(page))
+	animation: page-vertical-wipe 560ms cubic-bezier(0.76, 0, 0.24, 1) both
+
+:global(html.page-transition-deep::view-transition-new(page))
+	animation: page-deep-scroll-reveal 460ms cubic-bezier(0.76, 0, 0.24, 1) both
 
 @media (prefers-reduced-motion: reduce)
-	:global(::view-transition-old(page)),
-	:global(::view-transition-new(page))
+	:global(html.page-transition-top::view-transition-old(page)),
+	:global(html.page-transition-top::view-transition-new(page)),
+	:global(html.page-transition-deep::view-transition-old(page)),
+	:global(html.page-transition-deep::view-transition-new(page))
 		animation: none
+		mix-blend-mode: normal
 
-@keyframes page-out
+@keyframes page-vertical-wipe
 	from
-		opacity: 1
-		transform: translateY(0) scale(1)
+		clip-path: inset(0 100% 0 0)
 	to
-		opacity: 0
-		transform: translateY(-50px) scale(0.995)
+		clip-path: inset(0 0 0 0)
 
-@keyframes page-in
+@keyframes page-deep-scroll-reveal
 	from
-		opacity: 0
-		transform: translateY(50px) scale(0.995)
+		clip-path: inset(0 0 100% 0)
+		opacity: 0.92
 	to
+		clip-path: inset(0 0 0 0)
 		opacity: 1
-		transform: translateY(0) scale(1)
 
 @keyframes breathers
 	from

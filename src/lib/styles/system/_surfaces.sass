@@ -1,0 +1,53 @@
+.blank
+	text-decoration: none
+	color: inherit
+
+button.blank
+	display: flex
+	align-items: center
+	justify-content: center
+	width: max-content
+	padding: 0
+	margin: 0
+	border: 0
+	background: none
+
+.bordertop
+	border-top: var(--border-main)
+
+.borderbot
+	border-bottom: var(--border-main)
+
+.radius
+	border-radius: 5px
+
+.radius4
+	border-radius: 4px
+
+.radius8
+	border-radius: 8px
+
+.white-grid
+	background: #e1e1e1
+	gap: 1px
+	border: 1px solid #e1e1e1
+	border-radius: 8px
+	overflow: hidden
+
+.whitecard
+	background: var(--color-back)
+
+.whitestone
+	background: var(--color-back)
+	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	&:hover
+		background: var(--color-stone)
+
+button.whitestone
+	background: var(--color-back)
+	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	&:hover
+		background: var(--color-stone)
+
+.stonecard
+	background: var(--color-stone)

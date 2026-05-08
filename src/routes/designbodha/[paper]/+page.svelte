@@ -14,7 +14,7 @@
 <section class="key-image">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100}/>
 </section>
-	<div class="stdpad is-first">
+	<div class="is-first">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
 		<div class="whitepaper-box">
 			<div class="whitepaper-page">

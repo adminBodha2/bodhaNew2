@@ -39,17 +39,17 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
 <Container>
-	<div class="db-grid padded wraps" id="first">
-		<div class="db-grid span-4 rgap-sd">
-			<h1 class="source-serif span-2 mwidth90"><span class="blue">Bodha</span> is a think tank and research group,</h1>
-			<p class="highlight-text span-3" style="font-weight: 400">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+	<section class="box wrapper-std rgap32 lg:rgap64" id="first">
+		<div class="box rgap16">
+			<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
+			<p class="highlight-text width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 		</div>
-		<div class="db-grid span-4" bind:this={section}>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" bind:this={section}>
 			{#each verticals as item, i}
 				<Slider visible={verticalsInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 200}>
 					<a class="box blank verticals glass-1" href={item.href}>
-						<div class="pb0"><img class="portrait" src={item.image} alt={item.title} /></div>
-						<div class="box rgap-sm p1222">
+						<div class="p8 pbot12"><enhanced:img class="portrait" src={item.image} alt={item.title} /></div>
+						<div class="box rgap8 p16 notop">
 							<h2 class="card-title source-serif">{item.title}</h2>
 							<p class="grey">{item.desc}</p>
 						</div>
@@ -57,71 +57,71 @@
 				</Slider>
 			{/each}
 		</div>
-	</div>
+	</section>
 
 	<!--------latest---------------------------------------------------------------------->
 	{#if latestItems}
-		<div class="db-grid padded wraps growingline" id="latest" bind:this={sectionTwo}>
+		<section class="box wrapper-std rgap32 lg:rgap64 growingline" id="latest" bind:this={sectionTwo}>
 			<Title text="Latest at Bodha" />
-			<div class="db-grid span-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 				{#each latestItems as item, i}
 					<Slider visible={secondInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<a class="box rgap-sm p2222 blank glass-3" href={item.link}>
-							<p class="card-title tight a-hover">{item.title}</p>
+						<a class="box rgap8 p16 blank glass-3" href={item.link}>
+							<p class="paragraph-text w500 tight a-hover">{item.title}</p>
 							<p class="grey">{item.description}</p>
 							<p class="tag-pill tt-u self-bottom dead">{item.badge}</p>
 						</a>
 					</Slider>
 				{/each}
 			</div>
-		</div>
+		</section>
 	{/if}
 
 	<!------------blog articles------------------------------------------------------------>
 	{#if blogs.length > 0}
-		<div class="db-grid padded wraps growingline alternate" id="blog posts" bind:this={sectionThree}>
-			<div class="row xbetween ycenter rgap16 mwrap mleft span-4">
+		<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate" id="blog-posts" bind:this={sectionThree}>
+			<div class="row xbetween ycenter rgap16 mcol col-span-full">
 				<Title text="essays and articles" />
 				<a class="blue-button" href="/blog">See All</a>
 			</div>
-			<div class="db-grid fix-3 span-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each blogs as item, i}
 					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
 						<div class="box glass-2">
-							<div class="row cgap4 rgap4 ycenter p1101">
+							<div class="row cgap4 rgap4 ycenter p8 nobot">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
 										<a class="tag-pill tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 									{/each}
 								{/if}
 							</div>
-							<a class="blank p1111" href={item.linkpath}>
-								<img class="fit" src={item.meta.image} alt={item.meta.title} />
+							<a class="blank p8" href={item.linkpath} aria-label="image">
+								<enhanced:img class="fit" src={item.meta.image} alt={item.meta.title} />
 							</a>
-							<a class="blank box rgap-sd p0222" href={item.linkpath}>
-								<p class="card-title tight">{item.meta.title}</p>
-								<p class="descriptor-text grey">{item.meta.excerpt}</p>
+							<a class="blank box rgap8 p16 notop" href={item.linkpath}>
+								<p class="card-title a-hover">{item.meta.title}</p>
+								<p class="grey">{item.meta.excerpt}</p>
 							</a>
-							<div class="self-bottom p1212 bordertop">
+							<div class="self-bottom bordertop p8" style="background: var(--color-alt-3)">
 								<p class="tag-text altprim tt-u w500">{item.formattedDate} | {item.meta.author} | {item.meta.words} words</p>
 							</div>
 						</div>
 					</Slider>
 				{/each}
 			</div>
-		</div>
+		</section>
 	{/if}
 
 	<!------------publications------------------------------------------------------------>
-	<div class="db-grid padded wraps growingline" id="publications" bind:this={sectionFour}>
+	<section class="box wrapper-std rgap32 lg:rgap64 growingline" id="publications" bind:this={sectionFour}>
 		<Title text="publications" />
-		<div class="db-grid span-4 fix-2">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap32">
 			{#each publications as pub, i}
 				<Slider visible={fourthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-					<div class="books rgap-sd">
-						<img class="contained left" src={pub.image} alt={pub.title} />
-						<div class="box rgap-sm p1111">
-							<p class="card-title">{pub.title}</p>
+					<div class="books rgap16">
+						<enhanced:img class="contained left" src={pub.image} alt={pub.title} />
+						<div class="box rgap8 p16 lg:p32">
+							<p class="highlight-text bold">{pub.title}</p>
 							<p class="grey">{pub.desc}</p>
 							<div class="row wrap cgap8 rgap8 mtop8">
 								{#each pub.links as link}
@@ -135,36 +135,38 @@
 				</Slider>
 			{/each}
 		</div>
-	</div>
+	</section>
 
 	<!-----------videos------------------------------------------------------------>
 	{#if vids.length > 0}
-		<div class="db-grid padded wraps growingline alternate" bind:this={sectionFive}>
-			<div class="row xbetween ycenter rgap16 mcol mleft span-4">
+		<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate" bind:this={sectionFive}>
+			<div class="row xbetween ycenter rgap16 mcol mleft col-span-full">
 				<Title text="recent videos" />
 				<a class="blue-button" href="/videos">All Videos</a>
 			</div>
-			<div class="db-grid fix-3 span-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 				{#each vids as item, i}
 					<Slider visible={fifthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<div class="box rgap-sd p0000 blank whitestone theme-line-parent videobox">
+						<div class="box p0 blank whitestone theme-line-parent videobox">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
-							<a class="box rgap-sm p0111" href={item.link} target="_blank" rel="noreferrer">
-								<p class="bold paragraph-text tight">{item.name}</p>
+							<a class="box rgap8 p16" href={item.link} target="_blank" rel="noreferrer">
+								<p class="bold tight">{item.name}</p>
+								<div class="self-bottom box rgap8">
 								<div class="theme-line"></div>
 								<p class="tag-text lgrey tt-u">{item.channel}</p>
+								</div>
 							</a>
 						</div>
 					</Slider>
 				{/each}
 			</div>
-		</div>
+		</section>
 	{/if}
 </Container>
 
 <style lang="sass">
 
-img.contained
+.contained.left
 	object-fit: contain
 
 //verticals──────────────────────────────────────
@@ -173,12 +175,12 @@ img.contained
 	border-radius: 4px
 	position: relative
 	&:hover
-		img
+		.portrait
 			filter: saturate(1)
 		&::after
 			width: 100%
 			left: 0
-	img
+	.portrait
 		transition: all 120ms cubic-bezier(0.745, 0.150, 0.690, 0.470)
 		filter: saturate(0.25)
 	&::after

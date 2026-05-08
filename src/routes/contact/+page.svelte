@@ -47,7 +47,7 @@
 />
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title="Contact Us"/>
 		<p>
 			Write to us at <span class="blue">contact@bodharesearch.in</span><br />

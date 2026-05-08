@@ -44,21 +44,21 @@
 
 <Parallax imageLink="/images/key-inspiration.webp" isClass="is50" />
 <Container>
-	<div class="stdbox stdpad is-first">
+	<div class="is-first">
 		<Crumb showT={true} title="Inspiration" showD={true} desc="Thinkers and schools of thought that continue to shape our method, our questions, and the intellectual company we keep."/>
 		<div class="box">
 			<p class="paragraph-text source-serif italic">"The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge."</p>
-			<p class="descriptor-text lgrey tt-u" style="margin-top: 4px">Sri Aurobindo</p>
-			<div class="grid two tightrows ptop32 pbot32">
+			<p class="descriptor-text lgrey tt-u mtop4">Sri Aurobindo</p>
+			<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap16 ptop32 pbot32">
 				<p class="paragraph-text">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world.</p>
 				<p class="paragraph-text">We do not treat these figures and schools as authorities to be followed uncritically, but as companions in inquiry. Some agree, some sharply disagree, and that tension is part of what keeps the page alive.</p>
 			</div>
 		</div>
 	</div>
-	<div class="stdbox stdpad bordertop">
+	<div class="bordertop">
 		{#if schools.length > 0}
 		<Title text="Schools of Thought"/>
-		<div class="grid four ultra stay2">
+		<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
 					{#each schools as item}
 						<a class="inspiration-card blank" href={item.linkpath}>
 							<img class="card-image" src={item.meta.image} alt={item.meta.title} />
@@ -71,9 +71,9 @@
 		{/if}
 	</div>
 		{#if thinkers.length > 0}
-			<div class="stdbox stdpad is-last bordertop">
+			<div class="is-last bordertop">
 			<Title text="Thinkers"/>
-				<div class="grid four ultra stay2">
+				<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
 					{#each thinkers as item}
 						<a class="inspiration-card blank" href={item.linkpath}>
 							<img class="card-image" src={item.meta.image} alt={item.meta.title} />

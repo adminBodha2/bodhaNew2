@@ -38,10 +38,10 @@
 
 <Parallax imageLink="/images/key-bigquestions.webp" isClass="is50" />
 <Container>
-	<div class="stdbox stdpad is-first">
+	<section class="box wrapper-std first-box rgap32">
 		<Crumb showT={true} title="Big Questions" showD={true} desc={metaDescription} />
-		<div class="grid two tightrows reading-block">
-			<div class="textbox">
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap32">
+			<div class="box rgap16">
 				<p class="paragraph-text">Hindu society today sits at the cusp of great change. Hindu consciousness is awakening across the nation and awareness of civilizational issues is rising. Established mentalities about Hindu society, dharma, and culture are being challenged, status quos are being quashed, and new paradigms are coming into force. An intellectual renaissance is underway.</p>
 				<p class="paragraph-text">Bodha wants to aid the process by asking provocative questions about some of the most fundamental problems and open questions that Hindu society faces today. There are issues that are not settled, questions that are perennially asked by every Hindu generation, and novel dilemmas that we face today.</p>
 			</div>
@@ -50,48 +50,45 @@
 				Hindu society, leading to narrative building which will aid the reestablishment of a correct Hindu worldview rooted in facts and history.
 			</p>
 		</div>
-	</div>
-
-	<div class="stdbox stdpad bordertop">
-		<div class="grid two rgap16">
-			<div class="elembox down">
-				<div class="row cgap8 ybottom top-shelf">
-					<img class="icon" src="/images/bgicons/diversity.png" alt="big-question icon"/>
-					<p class="bold tight">The Big Question in 2026</p>
-				</div>
-				<div class="textbox mid-shelf">
-				<h2 class="source-serif card-title">Is Hindu Unity Compatible With Indian Diversity?</h2>
-				<p class="paragraph-text pbot8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
-				<a class="primary black" href="/big-questions/hindu-unity-and-diversity">
+	</section>
+	<section class="box wrapper-std growingline rgap32 md:rgap64">
+		<Title text="Big Question 2026"/>
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16 bq26box sm:p16 radius lg:ptop32 lg:pbot32">
+			<div class="box down rgap32">
+				<div class="mid-shelf rgap16 box">
+					<h2 class="card-title">Is Hindu Unity Compatible With Indian Diversity?</h2>
+					<p class="paragraph-text pbot8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
+					<a class="primary black" href="/big-questions/hindu-unity-and-diversity">
 					<span>Read More →</span>
-				</a>
+					</a>
 				</div>
-				<div class="bot-shelf labelbox">
+				<div class="bot-shelf box rgap16">
 					<p class="rem1 altprim">This Big Question 2026 is made possible by the generous support of Shri Hari Kiran Vadlamani, the founder of <a class="linked" target="_blank" rel="noreferrer" href="https://cohari.org/">coHari</a>. We are grateful to him for his patronage.</p>
 					<img class="shri-hari-kiran-vadlamani" src="/images/shri-hari-kiran-vadlamani.webp" alt="shri-hari-kiran-vadlamani"/>
 				</div>
 			</div>
 			<a class="blank box up" href="/big-questions/hindu-unity-and-diversity">
-				<img src="/images/questions/current-big-question.webp" alt="Is Hindu Unity Compatible With Indian Diversity"/>
+				<img class="std" src="/images/questions/current-big-question.webp" alt="Is Hindu Unity Compatible With Indian Diversity"/>
 			</a>
 		</div>	
-	</div>
+	</section>
 
-	<div class="stdbox stdpad bordertop is-last">
+	<section class="box wrapper-std growingline alternate rgap48 md:rgap64">
 		<Title text="All Big Questions"/>
-		{#if questions && questions.length > 0}
-			<div class="grid  three tight of-questions">
+		<div class="grey-graph">
+			{#if questions && questions.length > 0}
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rgap16 cgap16 of-questions">
 				{#each questions as item, i}
-					<div class="blank labelbox q-item glass-inset">
-						<a class="q-imager blank" href={item.linkpath}>
-							<img src={item.meta.icon} alt={item.meta.title}/>
+					<div class="blank labelbox q-item glass-1">
+						<a class="p8 blank" href={item.linkpath}>
+							<img class="std" src={item.meta.icon} alt={item.meta.title}/>
 						</a>
-						<a class="onhover labelbox blank" href={item.linkpath}>
-							<h2 class="source-serif">{item.meta.title}</h2>
+						<a class="onhover box rgap16 p16 blank" href={item.linkpath}>
+							<p class="card-title tight">{item.meta.title}</p>
 							<p class="grey descriptor-text">{item.meta.description}</p>
 						</a>
 							{#if item.meta.tags}
-								<div class="row wrap cgap4 rgap4 meta">
+								<div class="row wrap cgap4 rgap4 p16 bordertop self-bottom">
 									{#each item.meta.tags as tag}
 										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
 									{/each}
@@ -101,23 +98,29 @@
 				{/each}
 			</div>
 		{/if}
-	</div>
+		</div>
+	</section>
 </Container>
 
 <style lang="sass">
+
+.bq26box
+	@media (min-width: 1025px)
+		border-top: var(--border-main)
+		border-bottom: var(--border-main)
+	@media (max-width: 1024px)
+		border: var(--border-main)
+		background: var(--color-stone)
+		.up
+			order: 1
+		.down
+			order: 2
 
 img.shri-hari-kiran-vadlamani
 	object-fit: cover
 	height: 104px
 	width: 104px
 	border-radius: 64px
-
-.up	img
-	object-fit: cover
-	width: 100%
-	height: 100%
-	@media screen and (max-width: 1024px)
-		height: 240px
 
 .mid-shelf
 	padding-right: 2rem
@@ -126,46 +129,5 @@ img.shri-hari-kiran-vadlamani
 	border-top: var(--border-dark)
 	padding-top: 1rem
 	padding-right: 1rem
-
-.top-shelf
-	border-bottom: var(--border-dark)
-	padding-bottom: 1rem
-	padding-right: 1rem
-
-img.icon
-	object-fit: contain
-	width: 32px
-	height: 32px
-
-.reading-block
-	background: var(--color-back)
-
-.q-item
-	border-radius: 4px
-	&:hover
-		.q-imager
-			img
-				filter: grayscale(0.4)
-	.q-imager
-		height: 240px
-		padding: 0.5rem
-		img
-			filter: grayscale(1)
-			object-fit: cover
-			width: 100%
-			height: 100%
-			transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1)
-	.onhover
-		padding: 0 1rem 0.25rem 1rem
-	.meta
-		padding: 0.25rem 1rem 1rem 1rem
-	@media screen and (min-width: 1025px)
-		.q-imager
-			padding: 1rem
-			height: 320px
-		.onhover
-			padding: 0 1.5rem 0.25rem 1.5rem
-		.meta
-			padding: 0.25rem 1.5rem 1.5rem 1.5rem
 
 </style>

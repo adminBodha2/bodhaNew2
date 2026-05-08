@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
-	import '$lib/styles/lab2.sass';
+	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -39,22 +39,22 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" ogType="article" {jsonld} />
 <Container>
-	<section class="key-image">
+	<section class="dohero">
 		<WaterRipple src={data.image} class="ripple-motion" {brushSize} />
 	</section>
-	<section class="documents-grid">
-		<div class="box sidearea">
-			<div class="all-items">
+	<section class="docgrid">
+		<div class="box docside">
+			<div class="doclist">
 				{#if data.research && data.research.length > 0}
 					{#each data.research as item}
-						<a class="project-link sidebar-text" href={item.linkpath}>
+						<a class="doclink sidebar-text" href={item.linkpath}>
 							{item.meta.title}
 						</a>
 					{/each}
 				{/if}
 			</div>
 		</div>
-		<div class="stdbox mainarea stdpad is-first is-last">
+		<div class="docmain is-first is-last">
 			<div class="labelbox title-area">
 				<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description}>
 				{#if data.tags && data.tags.length > 0}
@@ -66,13 +66,13 @@
 				{/if}
 				</Crumb>
 			</div>
-			<div class="classic-document">
+			<div class="doctext classic-document">
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
 				<section class="box rgap32">
 					<p class="card-title">Related Readings</p>
-					<div class="grid two white-grid">
+					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}
 							<a class="blank textbox whitestone card-padded" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
 								<div class="labelbox">

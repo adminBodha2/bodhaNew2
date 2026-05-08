@@ -31,27 +31,27 @@
 
 <Parallax imageLink="/images/key-research.webp" isClass="is50"/>
 <Container>
-<div class="stdbox stdpad is-first">
+<section class="box wrapper-std rgap32">
 	<Crumb showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities."/>
-	<div class="grid two widecol tightrows">
-		<p class="paragraph-text">A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles. Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.</p>
-		<p class="paragraph-text">Our goal is to make experimental methodology central to policy recommendations so that policy in future India is conducive to India’s culture and also practical and capable of competing with global forces. A key component of this is cultural furtherance in education and education policy, giving us a clear mandate to develop work in service of the Indian Knowledge Systems, through case-studies, curriculum development, and more.</p>
+	<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64 ptop16">
+		<p class="highlight-text">A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles. Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.</p>
+		<p class="highlight-text">Our goal is to make experimental methodology central to policy recommendations so that policy in future India is conducive to India’s culture and also practical and capable of competing with global forces. A key component of this is cultural furtherance in education and education policy, giving us a clear mandate to develop work in service of the Indian Knowledge Systems, through case-studies, curriculum development, and more.</p>
 	</div>
-</div>
-	<div class="stdbox stdpad is-last bordertop">
+</section>
+	<section class="box wrapper-std growingline rgap32">
 		<Title text="Research Pillars"/>
-		<div class="grid three areas-grid standard-grid">
+		<div class="grid grid-cols-1 lg:grid-cols-3 areas-grid white-grid">
 			{#each researchAreas as area, i}
 			<div class="box pillar item{i}">
-				<div class="area-image">
-					<img src={area.image} alt={area.title} />
+				<div class="area-image p16 nobot">
+					<img class="fit" src={area.image} alt={area.title} />
 				</div>
-				<div class="area-body">
+				<div class="area-body p16 notop">
 					<p class="card-title">{area.title}</p>
-					<div class="area-links">
+					<div class="area-links box">
 						{#each area.items as item}
 						{#if item.href}
-							<a class="area-link blank row xbetween width100" href={item.href}><p class="rem">
+							<a class="area-link p16 blank row xbetween width100" href={item.href}><p>
 								{item.label}</p>
 								<div class="area-arrow"><p class="rem1">↗</p></div>
 							</a>
@@ -64,7 +64,7 @@
 			</div>
 			{/each}
 		</div>
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">
@@ -80,19 +80,6 @@
 		background: var(--color-stone)
 		box-shadow: var(--shadow11)
 
-.item0, .item1
-	@media screen and (min-width: 1025px)
-		border-right: var(--border-dark)
-
-.area-image
-	height: 240px
-	img
-		width: 100%
-		aspect-ratio: 16 / 9
-		height: 100%
-		object-fit: cover
-		display: block
-
 .area-body
 	display: flex
 	flex-direction: column
@@ -103,13 +90,12 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
-	gap: 0.75rem
-	padding: 0.72rem 0
-	border-bottom: var(--border-main)
 	transition: color 0.12s ease, transform 0.12s ease
 	&:hover
+		background: var(--color-back)
 		p
 			color: var(--color-theme)
+			background: var(--color-back)
 		.area-arrow
 			transform: translateX(2px)
 	&:last-child
@@ -124,8 +110,6 @@
 .area-link-dim
 	line-height: 1.45
 	color: var(--color-grey-3)
-	padding: 0.72rem 0
-	border-bottom: var(--border-main)
 	&:last-child
 		border-bottom: none
 

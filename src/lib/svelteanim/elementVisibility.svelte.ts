@@ -1,37 +1,27 @@
-import { defaultWindow, tryOnDestroy, writableToReadable } from "$lib/utils/shared";
-import type { ConfigurableWindow } from '$lib/utils/mouse-store-types';
-import { writable } from "svelte/store";
+// ── Components ────────────────────────────────────────────────────────────────
+export { default as Slide }  from './components/Slide.svelte';
+export { default as Reveal } from './components/Reveal.svelte';
+export { default as Scale }  from './components/Scale.svelte';
+export { default as Blur }   from './components/Blur.svelte';
 
-export function elementVisibilityStore(
-	target: Element | null,
-	{ window = defaultWindow }: ConfigurableWindow = {}
-) {
-	const store = writable(false);
+// ── Raw transition functions ──────────────────────────────────────────────────
+// Use these directly with Svelte's in:/out: directives for full control.
+export { slide }   from './transitions/slide.js';
+export { reveal }  from './transitions/reveal.js';
+export { scaleIn } from './transitions/scale.js';
+export { blurIn }  from './transitions/blur.js';
 
-	$effect(() => {
-	function check() {
-		if (!window) return;
-		if (target === null) return;
-		const document = window.document;
-		const rect = target.getBoundingClientRect();
-		const test =
-			rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
-			rect.bottom >= 0 &&
-			rect.right >= 0;
-		store.set(test);
-	}
+// ── Composables ───────────────────────────────────────────────────────────────
+export { useInView } from './utils/useInView.svelte.js';
 
-	function start() {
-		stop();
-		window?.addEventListener("scroll", check, { capture: false, passive: true });
-		window?.addEventListener("resize", check, { capture: false, passive: true });
-		check();
-	}
+// ── Utilities ─────────────────────────────────────────────────────────────────
+export { stagger } from './utils/stagger.js';
 
-	start();
-	tryOnDestroy(stop);
-	})
-
-	return { isVisible: writableToReadable(store), stop };
-}
+// ── Types ─────────────────────────────────────────────────────────────────────
+export type { SlideDirection, SlideParams }    from './types.js';
+export type { RevealDirection, RevealParams }  from './transitions/reveal.js';
+export type { ScaleParams }                    from './transitions/scale.js';
+export type { BlurParams }                     from './transitions/blur.js';
+export type { StaggerPattern, StaggerOptions } from './utils/stagger.js';
+export type { UseInViewOptions }               from './utils/useInView.svelte.js';
+export type { EasingFunction }                 from 'svelte/transition';

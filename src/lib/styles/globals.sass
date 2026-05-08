@@ -23,8 +23,44 @@ img.fit-image
 	object-fit: cover
 	width: 100%
 
-.column
+.row, .column, .box
 	display: flex
+
+.row
+	flex-direction: row
+	&.wrapper
+		flex-wrap: wrap
+	&.xbetween
+		justify-content: space-between
+	&.xleft
+		justify-content: flex-start
+	&.xright
+		justify-content: flex-end
+		@media screen and (max-width: 1024px)
+			&.mleft
+				justify-content: flex-start
+	&.xcenter
+		justify-content: center
+	&.ycenter
+		align-items: center
+	&.ytop
+		align-items: flex-start
+	&.ybottom
+		align-items: flex-end
+	&.wrap
+		flex-wrap: wrap
+	@media screen and (min-width: 1025px)
+		&.xbetween-mleft
+			justify-content: space-between
+	@media screen and (max-width: 1024px)
+		&.mwrap
+			flex-wrap: wrap
+		&.mcol
+			flex-direction: column
+			&.mleft.ycenter
+				align-items: flex-start
+		&.xcenter.mleft
+			justify-content: flex-start
 
 .column, .stdbox, .labelbox, .textbox, .elembox, .box
 	display: flex
@@ -57,81 +93,6 @@ img.fit-image
 		&.mrow
 			flex-direction: row
 			align-items: center
-
-.grid
-	display: grid
-	grid-auto-flow: row
-	grid-template-rows: auto
-	&.ytop
-		align-items: start
-	&.ultra
-		column-gap: 6px
-		row-gap: 6px
-	&.tight
-		column-gap: 1rem
-		row-gap: 1rem
-	&.midgaps
-		column-gap: 2rem
-		row-gap: 2rem
-	&.widegaps
-		column-gap: 4rem
-		row-gap: 4rem
-	&.tightcols
-		column-gap: 1rem
-		row-gap: 2rem
-	&.tightrows
-		column-gap: 2rem
-		row-gap: 1rem
-	&.midrows.widegaps
-		column-gap: 4rem
-		row-gap: 2rem
-	&.tightrows.widecol
-		column-gap: 4rem
-		row-gap: 1rem
-	&.tightrows.midgaps
-		column-gap: 2rem
-		row-gap: 1rem
-	&.ybottom
-		align-items: end
-	@media screen and (min-width: 1025px)
-		&.fitted-four
-			grid-template-columns: repeat(4, 1fr)
-		&.five
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-		&.four
-			grid-template-columns: 1fr 1fr 1fr 1fr
-		&.three
-			grid-template-columns: 1fr 1fr 1fr
-		&.two
-			grid-template-columns: 1fr 1fr
-		&.two.left
-			grid-template-columns: 32% 1fr
-		&.two.softleft
-			grid-template-columns: 40% 1fr
-		&.two.right
-			grid-template-columns: 1fr 32%
-		&.two.softright
-			grid-template-columns: 1fr 40%
-	@media screen and (min-width: 1025px) and (max-width: 1200px)
-		&.three.mid2
-			grid-template-columns: 1fr 1fr
-		&.four.mid2
-			grid-template-columns: 1fr 1fr
-	@media screen and (max-width: 1024px)
-		&.fitted-four
-			grid-template-columns: 1fr
-		&.four, &.three, &.two, &.five
-			grid-template-columns: 1fr
-		&.four.stay2, &.three.stay2, &.two.stay2
-			grid-template-columns: 1fr 1fr
-		&.stay2.tightrows
-			column-gap: 1rem
-		&.two
-			grid-template-areas: "up" "down"
-			.up
-				grid-area: up
-			.down
-				grid-area: down
 
 .narrowbox
 	width: 100%

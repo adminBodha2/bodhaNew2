@@ -32,7 +32,7 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" ogType="book" {jsonld} />
 
 <Container>
-	<div class="stdbox stdpad header-margin">
+	<div class="header-margin">
 		<Crumb centered={true} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 			<div class="row cgap8 rgap8 mwrap">
 				{#each data.tags as tag}
@@ -40,14 +40,14 @@
 				{/each}
 			</div>
 		</Crumb>
-		<div class="stdbox pdf-reader">
+		<div class="pdf-reader">
 			<PDFReader src={data.linkcloud} title={data.name} height="82vh" />
 		</div>
 	</div>
 	{#if relatedBooks && relatedBooks.length > 0}
-		<div class="stdbox stdpad is-last bordertop">
+		<div class="is-last bordertop">
 			<Title text="Related Books" />
-			<div class="grid four white-grid stay2">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 				{#each relatedBooks as item, i}
 					<a class="blank labelbox card-padded whitestone" href={item.linkfinal2}>
 						<p class="w500 tight">{item.name}</p>

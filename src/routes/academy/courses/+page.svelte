@@ -41,9 +41,9 @@
 
 <Container>
 <Hidden title="Courses at Bodha"/>
-<div class="stdbox stdpad header-margin">
+<div class="header-margin">
 	<Crumb showT={true} title="Courses" showD={true} desc={metaDescription}/>
-		<div class="white-grid grid two">
+		<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 			<a class="box course-item" href="/academy/courses/introduction-to-shri-ram-swarup">
 				<div class="image-type-c">
 					<img src="/images/srg-square.webp" alt="Introduction to Shri Ram Swarup" />

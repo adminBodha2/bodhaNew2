@@ -5,7 +5,7 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import '$lib/styles/lab2.sass';
+	import '$lib/styles/system/document-layout.sass';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
@@ -47,25 +47,25 @@
 />
 
 <Container>
-	<section class="documents-grid">
-		<div class="box sidearea">
+	<section class="docgrid">
+		<div class="box docside">
 			{#if labitems && labitems.length > 0}
-				<div class="all-items">
+				<div class="doclist">
 					{#each labitems as item}
 						{#if item.meta.title !== data.title}
-						<a class="project-link sidebar-text" href={item.linkpath}>
-							{item.meta.title}
-						</a>
+							<a class="doclink sidebar-text" href={item.linkpath}>
+								{item.meta.title}
+							</a>
 						{/if}
 					{/each}
 				</div>
 			{/if}
 		</div>
-		<div class="stdbox mainarea stdpad header-margin is-last">
+		<div class="docmain header-margin is-last">
 			<div class="labelbox title-area">
 				<Crumb showT={true} title={data.title} showD={true} desc={data.excerpt}/>
 			</div>
-			<div class="classic-document thislab">
+			<div class="doctext labtext classic-document">
 				<data.content />
 			</div>
 		</div>

@@ -43,14 +43,14 @@
 	<section class="key-image desbodha">
 		<WaterRipple src={imageLink} class="ripple-motion" brushSize={70} />
 	</section>
-	<div class="stdbox stdpad is-first">
+	<div class="is-first">
 		<Crumb showT={false} showD={false} />
 		<h1 class="ptop32 anim-flyup"><span class="desb">design</span>Bodha</h1>
 		<h1 class="design-bodha-head">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</h1>
 		<img class="motif anim-flyin-right" style="margin-left: 200px;transform: translateX(-{sY / 7}px) rotate({sY / 2}deg)" src="/images/designbodha/desbodha-motif.webp" alt="designBodha motif" />
 	</div>
-	<div class="stdbox stdpad bordertop" id="image-panel">
-		<div class="grid two has-background rgap16">
+	<div class="bordertop" id="image-panel">
+		<div class="grid grid-cols-1 lg:grid-cols-2 has-background rgap16">
 			<div class="textbox up anim-fadeIn card-padded">
 				<p>In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -</p>
 				<p>
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="stdbox stdpad bordertop" id="image-panel-2">
+	<div class="bordertop" id="image-panel-2">
 			<img class="showoff" src="/images/designbodha/db17.webp" alt="db-hero"/>
 			<div class="row">
 				<button class="blank xleft ta-l">
@@ -81,9 +81,9 @@
 				<p>It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
 			</div>
 	</div>
-	<div class="stdbox stdpad bordertop is-last">
+	<div class="bordertop is-last">
 		<Title text="project objectives"/>
-		<div class="grid two midgaps">
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32">
 			<div class="textbox">
 				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2"/>
 				<p class="card-title">Phase 1 - Foundation and Taxonomy</p>

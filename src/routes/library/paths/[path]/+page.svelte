@@ -39,9 +39,9 @@
 
 
 <Container>
-	<div class="stdbox stdpad header-margin is-last">
+	<div class="header-margin is-last">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
-		<div class="grid four midgaps">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 cgap16 rgap16">
 			{#each bookItems as item}
 				<a class="blank box labelbox" href={item.link}>
 					<p class="w500 a-hover tight">{item.text}</p>
