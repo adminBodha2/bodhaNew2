@@ -406,7 +406,7 @@ const baseImage = "/images/demos/night.png";
 		border-radius: 8px
 		background-color: var(--color-stone-3)
 		background-image: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(248,247,244,0.86)), radial-gradient(circle at 18% 18%, rgba(211,99,58,0.14), transparent 28%), radial-gradient(circle at 82% 12%, rgba(25,113,194,0.14), transparent 30%)
-		box-shadow: var(0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03))
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
 
 	.graph-toolbar
 		display: grid
@@ -457,7 +457,7 @@ const baseImage = "/images/demos/night.png";
 		border: 1px solid rgba(7,7,7,0.1)
 		border-radius: 8px
 		background: rgba(255,255,255,0.88)
-		box-shadow: var(0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02))
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02)
 		backdrop-filter: blur(18px)
 		padding: 18px
 		@media screen and (max-width: 720px)
