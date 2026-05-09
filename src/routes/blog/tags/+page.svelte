@@ -89,8 +89,8 @@
 	font-size: 0.9rem
 	letter-spacing: 0.04rem
 	&:hover
-		border: 1px solid var(--color-theme-4)
-		background: var(--color-theme-2)
-		color: var(--color-theme-5)
+		border: 1px solid var(--color-theme-light)
+		background: var(--color-theme-dark)
+		color: var(--color-theme-light2)
 
 </style>

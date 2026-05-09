@@ -88,14 +88,14 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
-	background: var(--color-stone)
+	background: var(--color-stone-1)
 	border: 1px solid #e1e1e1
 	padding: 0.5em 1em
 	box-shadow: 2px 1px 4px rgba(0,0,0,0.2)
 	border-radius: 8px
 	cursor: pointer
 	&:active
-		background: var(--color-grey-2)
+		background: var(--color-grey-0)
 	span
 		font-size: 1rem
 		text-transform: uppercase

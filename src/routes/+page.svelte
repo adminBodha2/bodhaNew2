@@ -39,12 +39,12 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
 <Container>
-	<section class="box wrapper-std rgap32 lg:rgap64" id="first">
+	<section class="wrapper-std tight-stack" id="first">
 		<div class="box rgap16">
 			<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
 			<p class="highlight-text width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" bind:this={section}>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4" bind:this={section}>
 			{#each verticals as item, i}
 				<Slider visible={verticalsInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 200}>
 					<a class="box blank verticals glass-1" href={item.href}>
@@ -61,9 +61,9 @@
 
 	<!--------latest---------------------------------------------------------------------->
 	{#if latestItems}
-		<section class="box wrapper-std rgap32 lg:rgap64 growingline" id="latest" bind:this={sectionTwo}>
+		<section class="wrapper-std growingline" id="latest" bind:this={sectionTwo}>
 			<Title text="Latest at Bodha" />
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4">
 				{#each latestItems as item, i}
 					<Slider visible={secondInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
 						<a class="box rgap8 p16 blank glass-3" href={item.link}>
@@ -79,30 +79,30 @@
 
 	<!------------blog articles------------------------------------------------------------>
 	{#if blogs.length > 0}
-		<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate" id="blog-posts" bind:this={sectionThree}>
-			<div class="row xbetween ycenter rgap16 mcol col-span-full">
+		<section class="wrapper-std growingline alternate" id="blog-posts" bind:this={sectionThree}>
+			<div class="row xbetween ycenter rgap16 mleft mwrap">
 				<Title text="essays and articles" />
-				<a class="blue-button" href="/blog">See All</a>
+				<a class="primary" href="/blog"><span>See All</span></a>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each blogs as item, i}
 					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
 						<div class="box glass-2">
-							<div class="row cgap4 rgap4 ycenter p8 nobot">
+							<div class="row cgap4 rgap4 ycenter p16 nobot">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
 										<a class="tag-pill tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 									{/each}
 								{/if}
 							</div>
-							<a class="blank p8" href={item.linkpath} aria-label="image">
+							<a class="blank p16" href={item.linkpath} aria-label="image">
 								<enhanced:img class="fit" src={item.meta.image} alt={item.meta.title} />
 							</a>
-							<a class="blank box rgap8 p16 notop" href={item.linkpath}>
-								<p class="card-title a-hover">{item.meta.title}</p>
+							<a class="blank box rgap8 p16 lg:p32 notop" href={item.linkpath}>
+								<p class="card-title tight a-hover">{item.meta.title}</p>
 								<p class="grey">{item.meta.excerpt}</p>
 							</a>
-							<div class="self-bottom bordertop p8" style="background: var(--color-alt-3)">
+							<div class="self-bottom bordertop p16" style="background: var(--color-stone-3)">
 								<p class="tag-text altprim tt-u w500">{item.formattedDate} | {item.meta.author} | {item.meta.words} words</p>
 							</div>
 						</div>
@@ -113,7 +113,7 @@
 	{/if}
 
 	<!------------publications------------------------------------------------------------>
-	<section class="box wrapper-std rgap32 lg:rgap64 growingline" id="publications" bind:this={sectionFour}>
+	<section class="wrapper-std growingline" id="publications" bind:this={sectionFour}>
 		<Title text="publications" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap32">
 			{#each publications as pub, i}
@@ -125,8 +125,8 @@
 							<p class="grey">{pub.desc}</p>
 							<div class="row wrap cgap8 rgap8 mtop8">
 								{#each pub.links as link}
-									<a class="grey-button" href={link.href} target="_blank" rel="noreferrer"
-										>{link.label} →
+									<a class="primary grey" href={link.href} target="_blank" rel="noreferrer"
+										><span>{link.label} →</span>
 										</a>
 								{/each}
 							</div>
@@ -139,18 +139,18 @@
 
 	<!-----------videos------------------------------------------------------------>
 	{#if vids.length > 0}
-		<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate" bind:this={sectionFive}>
+		<section class="wrapper-std growingline alternate" bind:this={sectionFive}>
 			<div class="row xbetween ycenter rgap16 mcol mleft col-span-full">
 				<Title text="recent videos" />
-				<a class="blue-button" href="/videos">All Videos</a>
+				<a class="primary" href="/videos"><span>All Videos</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap4">
 				{#each vids as item, i}
 					<Slider visible={fifthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
 						<div class="box p0 blank whitestone theme-line-parent videobox">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
 							<a class="box rgap8 p16" href={item.link} target="_blank" rel="noreferrer">
-								<p class="bold tight">{item.name}</p>
+								<p class="paragraph-text w600 tight">{item.name}</p>
 								<div class="self-bottom box rgap8">
 								<div class="theme-line"></div>
 								<p class="tag-text lgrey tt-u">{item.channel}</p>
@@ -172,7 +172,6 @@
 //verticals──────────────────────────────────────
 
 .verticals
-	border-radius: 4px
 	position: relative
 	&:hover
 		.portrait
@@ -208,7 +207,9 @@
 
 .videobox
 	border: var(--border-main)
+	border-radius: 8px
+	overflow: hidden
 	&:hover
-		border: 1px solid var(--color-stone)
+		border: 1px solid var(--color-stone-1)
 
 </style>

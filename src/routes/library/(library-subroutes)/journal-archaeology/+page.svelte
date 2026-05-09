@@ -76,7 +76,7 @@ a.golink
 	font-size: 0.9rem	
 	transform-origin: center center
 	&:hover
-		background: var(--color-theme-2)
+		background: var(--color-theme-dark)
 
 .each-issue
 	overflow: hidden
@@ -122,7 +122,7 @@ button.blank.row.xbetween.thisdoes
 	p
 		transition: all 120ms ease
 	&:hover
-		background: var(--color-stone)
+		background: var(--color-stone-1)
 		p
 			transform: scale(0.95)
 

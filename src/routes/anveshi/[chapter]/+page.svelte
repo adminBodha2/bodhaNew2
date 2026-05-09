@@ -78,7 +78,7 @@
 			<data.content/>
 		</div>
 		{#if data.quote}
-			<p class="card-title thin italic source-serif width60 quote-text" style="color: var(--color-anveshi-2)">{data.quote}</p>
+			<p class="card-title thin italic source-serif width60 quote-text" style="color: var(--color-anveshi-alt)">{data.quote}</p>
 		{/if}
 		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 col-span-full info-row width60">
 			<div class="box dates p16">
@@ -212,7 +212,7 @@ img.icon
 			padding-left: 1rem
 			border-right: var(--border-main)
 		.itin-item
-			background: var(--color-alt-1)
+			background: var(--color-stone-1)
 
 .itin-button
 	background: none

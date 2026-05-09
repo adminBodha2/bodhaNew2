@@ -406,7 +406,7 @@ const baseImage = "/images/demos/night.png";
 		border-radius: 8px
 		background-color: var(--color-stone-3)
 		background-image: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(248,247,244,0.86)), radial-gradient(circle at 18% 18%, rgba(211,99,58,0.14), transparent 28%), radial-gradient(circle at 82% 12%, rgba(25,113,194,0.14), transparent 30%)
-		box-shadow: var(--shadow6)
+		box-shadow: var(0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03))
 
 	.graph-toolbar
 		display: grid
@@ -457,7 +457,7 @@ const baseImage = "/images/demos/night.png";
 		border: 1px solid rgba(7,7,7,0.1)
 		border-radius: 8px
 		background: rgba(255,255,255,0.88)
-		box-shadow: var(--shadow9)
+		box-shadow: var(0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02))
 		backdrop-filter: blur(18px)
 		padding: 18px
 		@media screen and (max-width: 720px)
@@ -483,9 +483,9 @@ const baseImage = "/images/demos/night.png";
 		a
 			border: 1px solid rgba(25,113,194,0.2)
 			border-radius: 999px
-			background: var(--color-theme-6)
+			background: var(--color-theme-light2)
 			padding: 5px 8px
-			color: var(--color-theme-2)
+			color: var(--color-theme-dark)
 			font-size: 0.72rem
 			font-weight: 700
 			text-decoration: none
@@ -521,7 +521,7 @@ const baseImage = "/images/demos/night.png";
 			gap: 12px
 			border: var(--border-main)
 			border-radius: 2px
-			background: var(--color-know-2)
+			background: var(--color-stone-1-2)
 			padding: 9px
 			text-align: left
 			cursor: pointer
@@ -531,7 +531,7 @@ const baseImage = "/images/demos/night.png";
 				line-height: 1.2
 			small
 				flex: 0 0 auto
-				color: var(--color-grey-3)
+				color: var(--color-grey-1)
 				font-size: 0.72rem
 
 	.graph-footer
@@ -552,7 +552,7 @@ const baseImage = "/images/demos/night.png";
 			display: inline-flex
 			align-items: center
 			gap: 6px
-			color: var(--color-grey-4)
+			color: var(--color-grey-2)
 			font-size: 0.76rem
 			font-weight: 650
 		i
@@ -583,7 +583,7 @@ const baseImage = "/images/demos/night.png";
 	display: grid
 	grid-template-columns: 1fr 1fr
 	border: var(--border-dark)
-	background: var(--color-grey-1)
+	background: var(--color-grey-0)
 	gap: 1px
 	border-radius: 5px
 	overflow: visible
@@ -601,8 +601,8 @@ const baseImage = "/images/demos/night.png";
 		&:nth-last-child(2)
 			border-radius: 0 0 0 5px
 		&:hover
-			background: var(--color-theme-5)
-			border: 1px solid var(--color-theme-5)
+			background: var(--color-theme-light2)
+			border: 1px solid var(--color-theme-light2)
 			box-shadow: none
 		&.active
 			background: linear-gradient(158.19deg, #1971C2 10.95%, #0C365C 85.73%)

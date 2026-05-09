@@ -1,0 +1,374 @@
+@use 'sass:map'
+@use 'tokens' as t
+@use 'breakpoints' as b
+
+button
+	cursor: pointer
+	font-family: 'Google Sans', sans-serif
+	&.blank
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		margin: 0
+		border: none
+		background: none
+		width: max-content
+		&:hover
+			svg.search-svg
+				fill: var(--color-theme)
+				stroke: var(--color-theme)
+
+a.svg-hover
+	&:hover
+		svg
+			fill: var(--color-theme)
+a
+	&:hover
+		.a-hover
+			color: var(--color-theme-dark)
+
+.primary, a.primary
+	position: relative
+	text-decoration: none
+	display: flex
+	justify-content: center
+	align-items: center
+	background: var(--color-grey-2)
+	overflow: hidden
+	cursor: pointer
+	border: 1px solid #d7d7d7
+	width: max-content
+	border-radius: 8px
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.4)
+	transition: all 0.14s ease-in-out
+	&::after
+		content: ""
+		width: 0%
+		height: 100%
+		background: var(--color-theme)
+		position: absolute
+		transition: all 0.14s ease-in-out
+		border-radius: 8px
+		right: 50%
+	&:hover
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		&::after
+			right: auto
+			right: 0
+			width: 100%
+	span
+		text-align: center
+		text-decoration: none
+		width: 100%
+		padding: 0.7rem 1rem
+		color: #FFFFFF
+		font-weight: 500
+		font-size: 0.9rem
+		text-transform: uppercase
+		border-radius: 8px
+		z-index: 20
+		transition: all 0.05s ease-in-out
+	&:hover span
+		animation: scaleUp 0.9s ease-in-out
+		color: #FFFFFF
+	&.desb
+		border-radius: 30px
+		padding: 1rem 1.7rem
+		background: var(--color-designB)
+		transition: all 0.05s ease-in-out
+		span
+			padding: 0
+		&::after
+			background: var(--color-designB-alt)
+		&:hover
+			transform: scaleX(1.05)
+	&.black
+		background: var(--color-grey-2)
+		border: var(--border-dark)
+		&:hover
+			background: var(--color-grey-1)
+		span
+			color: var(--color-back)
+	&.anveshi
+		background: var(--color-anveshi-alt)
+		&::after
+			background: var(--color-anveshi)
+		&:hover
+			background: var(--color-anveshi-alt)
+		span
+			color: #FFFFFF
+	&.grey
+		box-shadow: 2px 3px 8px rgba(0,0,0,0)
+		span
+			font-size: 0.875rem
+		&::after
+			background: var(--color-theme-dark)
+		&:hover
+			span
+				color: var(--color-theme-light)
+
+@keyframes scaleUp
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)
+
+.tag-pill, p.tag-pill, a.tag-pill
+	font-size: 9px
+	font-weight: 600
+	letter-spacing: 0.03em
+	color: var(--color-stone-3)
+	padding: 3px 6px
+	border-radius: 0px
+	border: none
+	background: var(--color-theme)
+	transition: all 0.12s cubic-bezier(0.250, 0.100, 0.250, 1.000)
+	width: max-content
+	transform-origin: center center
+	&:hover
+		background: var(--color-theme-dark)
+		transform: scale(0.95)
+	&.dead
+		&:hover
+			transform: scale(1)
+			background: var(--color-theme)
+	&.anveshi
+		background: var(--color-anveshi)
+		color: var(--color-back)
+		border: none
+	&.themed
+		background: var(--color-theme)
+		color: var(--color-back)
+		border: 1px solid var(--color-theme)
+		&:hover
+			background: var(--color-theme-dark)
+			color: var(--color-back)
+	&.hollow
+		padding: 0
+		background: none
+		border: none
+		font-size: 10px
+		color: var(--color-grey-0)
+		&.green
+			color: var(--color-theme-alt)
+		&.themed
+			color: var(--color-theme)
+			background: none
+			border: none
+
+.toggler-std
+	position: relative
+	width: 50px
+	height: 26px
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	border-radius: 14px
+	label
+		position: absolute
+		top: 0
+		left: 0
+		width: 50px
+		height: 26px
+		border-radius: 50px
+		background: var(--color-grey-2)
+		border: var(--border-dark)
+		cursor: pointer
+		transition: all 0.3s ease
+		&:after
+			content: ''
+			position: absolute
+			top: 1px
+			left: 1px
+			width: 22px
+			height: 22px
+			border-radius: 50%
+			background-color: #fff
+			transition: all 0.3s ease
+	input[type="checkbox"]:checked + label
+		background: var(--color-theme)
+		&:after
+			transform: translateX(23px)
+	label:hover
+		&:after
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3)
+
+.in-toggle
+	position: absolute
+	top: 0
+	left: 0
+	width: 50px
+	height: 20px
+	border: none
+	outline: none
+	display: none
+
+.selection-button
+	background: var(--color-stone-1)
+	font-size: 1rem
+	text-transform: uppercase
+	font-family: 'Google Sans', sans-serif
+	font-weight: 600
+	letter-spacing: 0.01rem
+	padding: 1em 2em
+	border: 1px solid #e1e1e1
+	border-radius: 4px
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.3)
+	transition: background 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), color 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), border 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), box-shadow 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), transform 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
+	transform-origin: center center
+	z-index: 199
+	&:hover
+		background: var(--color-grey-2)
+		color: #FFF
+		border: 1px solid var(--color-theme-light)
+		box-shadow: 2px 3px 4px rgba(0,0,0,0.4)
+	&.active
+		border: 1px solid #d7d7d7
+		background: var(--color-back)
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		&:hover
+			color: var(--color-primary)
+	@media (min-width: 1025px)
+		min-width: 96px
+		font-size: 0.85rem
+		&:active
+			transform: scale(1.05)
+
+.responsive-menu__items
+	.selection-button
+		@media (max-width: 1024px)
+			border: none
+			box-shadow: none
+			background: none
+			&:hover
+				color: var(--color-primary)
+				background: var(--color-stone-1)
+			&.active
+				background: var(--color-stone-2)
+
+
+a.small-button, button.small-button
+	font-size: 12px
+	font-weight: 500
+	font-family: 'Google Sans', sans-serif
+	padding: 0.4em 0.8em
+	border-radius: 4px
+	border: 1px solid var(--color-grey-2)
+	background: #424242
+	text-decoration: none
+	color: var(--color-back)
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	transform-origin: center center
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.3)
+	width: max-content
+	&:hover
+		border: 1px solid var(--color-theme-dark)
+		color: var(--color-back)
+		background: rgba(5, 67, 112, 1)
+		transform: scale(0.95)
+		box-shadow: 4px 2px 7px rgba(0,0,0,0)
+	&.active
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		background: var(--color-theme-dark)
+		color: var(--color-theme-light2)
+
+.responsive-menu-2__items
+	@media (max-width: 1024px)
+		a.small-button, button.small-button
+			background: none
+			color: var(--color-primary)
+			border: none
+			box-shadow: none
+			font-size: 1rem
+			width: 100%
+			&:hover
+				background: var(--color-grey-2)
+				transform: scale(1)
+				color: #FFFFFF
+			&.active
+				color: var(--color-theme)
+				background: var(--color-grey-0)
+
+a.blue-button
+	background: rgba(5, 67, 112, 1)
+	color: var(--color-theme-light2)
+	border: 1px solid var(--color-theme-dark)
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.3)
+	padding: 0.5em 1em
+	border-radius: 6px
+	font-size: 15px
+	transform-origin: center center
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	&:hover
+		box-shadow: 4px 2px 7px rgba(0,0,0,0)
+		color: var(--color-grey-5)
+		border: 1px solid var(--color-grey-1)
+		background: linear-gradient(158deg,rgba(209, 209, 209, 1) 0%, rgba(167, 167, 167, 1) 55%, rgba(160, 160, 160, 1) 73%, rgba(135, 135, 135, 0.8) 98%)
+		background: #a7a7a7
+		transform: scale(0.95)
+
+.grey-button
+	font-size: 15px
+	font-family: 'Google Sans', sans-serif
+	padding: 0.4em 0.8em
+	border-radius: 6px
+	border: 1px solid var(--color-grey-1)
+	background: linear-gradient(158deg,rgba(209, 209, 209, 1) 0%, rgba(167, 167, 167, 1) 55%, rgba(160, 160, 160, 1) 73%, rgba(135, 135, 135, 0.8) 98%)
+	background: #a7a7a7
+	text-decoration: none
+	color: var(--color-grey-5)
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	transform-origin: center center
+	box-shadow: 4px 2px 7px rgba(0,0,0,0.3)
+	width: max-content
+	&:hover
+		border: 1px solid var(--color-theme-dark)
+		color: var(--color-theme-light)
+		background: rgba(5, 67, 112, 1)
+		transform: scale(0.95)
+		box-shadow: 4px 2px 7px rgba(0,0,0,0)
+
+a.hollow-link
+	display: flex
+	column-gap: 4px
+	margin-top: 4px
+	font-size: 1rem
+	font-weight: 600
+	text-decoration: none
+	color: var(--color-theme-dark)
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	transform-origin: center center
+	width: max-content
+	.button-text
+		transition: all 0.1s ease
+	&:hover
+		color: var(--color-theme)
+		.button-text
+			transform: translateX(8px)
+	&.anveshi
+		color: var(--color-anveshi)
+
+button.hollow-link
+	display: flex
+	column-gap: 4px
+	border: none
+	background: none
+	margin-top: 4px
+	font-size: 1rem
+	font-weight: 600
+	color: var(--color-theme-dark)
+	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190)
+	transform-origin: center center
+	width: max-content
+	.button-text
+		transition: all 0.1s ease
+	&:hover
+		color: var(--color-theme)
+		.button-text
+			transform: translateX(8px)
+	&.anveshi
+		color: var(--color-anveshi)

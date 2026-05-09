@@ -25,7 +25,8 @@
 
 <svelte:window bind:scrollY={scro} />
 
-<div class="row ycenter xbetween narrowbox">
+<section class="header-wrapper">
+<div class="row ycenter xbetween header-content">
 		<a class="blank row ycenter logoholder" href="/">
 			{#if $darkTheme}
 				<img class="rotator dark" src="/images/rotator-d.png" alt="rotator" style="transform: rotate({scro / 8}deg)" />
@@ -62,8 +63,34 @@
 {#if $menuState && $iW}
 	<Mobilemenu />
 {/if}
+</section>
 
 <style lang="sass">
+
+.header-wrapper
+	width: 100%
+	.header-content
+		width: 100%
+	@media (min-width: 1025px)
+		padding-left: 1rem
+		padding-right: 1rem
+		.header-content
+			width: 992px
+	@media (min-width: 1201px)
+		.header-content
+			width: 1168px
+	@media (min-width: 1441px)
+		.header-content
+			width: 1408px
+	@media (min-width: 1601px)
+		padding-left: 4rem
+		padding-right: 4rem
+		.header-content
+			width: 1472px
+
+.header-content
+	margin-left: auto
+	margin-right: auto
 
 .tray
 	column-gap: 4px
@@ -84,7 +111,7 @@
 	color: var(--color-primary)
 	padding: 4px 6px
 	border-radius: 2px
-	transition: var(--transition2)
+	transition: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
 	&:hover
 		color: var(--color-back)
 		background: var(--color-theme)

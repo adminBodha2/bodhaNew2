@@ -1,21 +1,26 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import { onMount } from 'svelte';
 
 	type Props = {
 		imageLink?: string;
 		isClass?: string;
 		alt?: string;
+		wipe?: boolean;
+		children?: Snippet;
 	};
 
 	let wrapperElement = $state<HTMLDivElement>();
-	let imageElement = $state<HTMLImageElement>();
+	let parallaxElement = $state<HTMLDivElement>();
 	let frameId = 0;
 	let reduceMotion = false;
 
 	let {
 		imageLink = '',
 		isClass = 'is100',
-		alt = 'Page hero image'
+		alt = 'Page hero image',
+		wipe = false,
+		children
 	}: Props = $props();
 
 	function isWrapperNearViewport() {
@@ -28,9 +33,9 @@
 
 	function renderParallax() {
 		frameId = 0;
-		if (!imageElement || reduceMotion || !isWrapperNearViewport()) return;
+		if (!parallaxElement || reduceMotion || !isWrapperNearViewport()) return;
 
-		imageElement.style.transform = `translateY(${window.scrollY / 2}px)`;
+		parallaxElement.style.transform = `translateY(${window.scrollY / 2}px)`;
 	}
 
 	function scheduleParallax() {
@@ -39,9 +44,9 @@
 	}
 
 	onMount(() => {
-		if (!wrapperElement || !imageElement) return;
+		if (!wrapperElement || !parallaxElement) return;
 
-		const image = imageElement;
+		const parallaxTarget = parallaxElement;
 		const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 		const updateMotionPreference = () => {
 			reduceMotion = mediaQuery.matches;
@@ -50,7 +55,7 @@
 					cancelAnimationFrame(frameId);
 					frameId = 0;
 				}
-				image.style.transform = '';
+				parallaxTarget.style.transform = '';
 				return;
 			}
 			scheduleParallax();
@@ -71,39 +76,54 @@
 </script>
 
 <div bind:this={wrapperElement} class="imager {isClass}">
-  <img bind:this={imageElement} src={imageLink} {alt}/>
+	<div bind:this={parallaxElement} class="parallax-target">
+		{#if wipe}
+			{@render children?.()}
+		{:else}
+			<img src={imageLink} {alt} />
+		{/if}
+	</div>
 </div>
 
 <style lang="sass">
 
 .imager
 	overflow: hidden
-	margin-top: 64px
-	img
-		display: block
+	margin-top: 72px
+	border-radius: 32px
+	.parallax-target
+		height: 100%
+		width: 100%
 		will-change: transform
 		backface-visibility: hidden
+		img
+			display: block
 	@media screen and (min-width: 1025px)
 		height: 100vh
-		margin-top: 72px
+		margin-top: 80px
+		border-radius: 64px
 		&.is100
 			height: calc(100vh - 144px)
-		img
-			object-fit: cover
-			object-position: center center
-			height: 100%
-			width: 100%
+		.parallax-target
+			img,
+			:global(.ripple-motion)
+				object-fit: cover
+				object-position: center center
+				height: 100%
+				width: 100%
 	@media screen and (max-width: 1024px)
 		&.is100, &.is50
 			height: 32vh
-			margin-top: 64px
-		img
-			object-fit: cover
-			object-position: center center
-			width: 100%
-			height: 100%
+			margin-top: 72px
+		.parallax-target
+			img,
+			:global(.ripple-motion)
+				object-fit: cover
+				object-position: center center
+				width: 100%
+				height: 100%
 	@media (prefers-reduced-motion: reduce)
-		img
+		.parallax-target
 			transform: none !important
 
 </style>

@@ -106,8 +106,8 @@
 
 .course-item
 	background: var(--color-back)
-	transition: var(--transition1)
+	transition: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
 	&:hover
-		background: var(--color-stone)
+		background: var(--color-stone-1)
 
 </style>

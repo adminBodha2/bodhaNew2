@@ -6,10 +6,6 @@
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import '$lib/styles/vars.sass';
 	import '$lib/styles/fontimports.sass';
-	import '$lib/styles/measures.sass';
-	import '$lib/styles/globals.sass';
-	import '$lib/styles/designbodha-system.sass'
-	import '$lib/styles/components.sass';
 	import '$lib/styles/typography.sass';
 	import '$lib/styles/animations.sass'
 	import '$lib/styles/system/index.sass';
@@ -107,7 +103,7 @@
 	<main>
 		{@render children?.()}
 	</main>
-	<footer class="column" bind:this={footerRef}>
+	<footer class="box" bind:this={footerRef}>
 		<Bottom />
 	</footer>
 	<SearchModal />
@@ -173,7 +169,7 @@ header
 
 footer
 	width: 100%
-	border-top: 1px solid var(--color-grey-1)
+	border-top: 1px solid var(--color-grey-0)
 	z-index: 999
 
 </style>

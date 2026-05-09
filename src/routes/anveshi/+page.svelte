@@ -15,6 +15,7 @@
 	import Slider from '$lib/svelteanim/components/Slide.svelte';
 	import { useInView } from '$lib/svelteanim';
 	import Scale from '$lib/svelteanim/components/Scale.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
 	import { Lightbox, LightboxGallery, GalleryImage, GalleryThumbnail } from 'svelte-lightbox';
 
 	let { data }: { data: PageData } = $props();
@@ -22,6 +23,8 @@
 	let scaleRef = $state<HTMLElement | null>(null);
 	let isVisible = useInView(() => reference, { threshold: 0.8, once: true });
 	let scaleVis = useInView(() => scaleRef, { threshold: 0.5, once: true})
+	let revRef = $state<HTMLElement | null>(null)
+	let revVis = useInView(() => revRef, { threshold: 0.5, once: true})
 
 	const title = 'Anveshi | Bodha';
 	const metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
@@ -86,8 +89,8 @@
 
 <div class="box screener-wrap">
 	<div class="screener" style:transform={`translateY(${screenerY}px)`}>
-		<div class="column rgap24 inscreen xcenter ybottom">
-			<div class="even-in column rgap24 xcenter" style:margin-bottom={`calc(${screenerY / 10}rem + 2rem)`}>
+		<div class="box rgap24 inscreen xcenter ybottom">
+			<div class="even-in box rgap24 xcenter" style:margin-bottom={`calc(${screenerY / 10}rem + 2rem)`}>
 				<Anveshilogo {goTime} />
 				<p class="tight white ta-c pbot16 ptop16">
 					Sacred journeys to unexplored kshetras of India.<br />Where, every outer journey becomes an inner journey.
@@ -99,15 +102,15 @@
 </div>
 <Container>
 	<!-- ── INTRO ─────────────────────────────────────────── -->
-	<div class="box padded wraps is-first">
+	<section class="wrapper-std tight-stack first-box">
 		<Crumb />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 rgap16 cgap16" use:autoAnimate>
-			<p class="highlight-text col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p>
-			<p class="highlight-text col-span-full md:col-span-2 lg:col-span-3">
+		<div class="box rgap16" use:autoAnimate bind:this={revRef}>
+			<Reveal visible={revVis.visible}><p class="highlight-text col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p></Reveal>
+			<Reveal visible={revVis.visible} delay={300}>			<p class="highlight-text width60">
 				The word anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer. Kaśmīr Śaiva darśana tells us that, vimarṣa - Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
 				cosmos, life and existence.
-			</p>
-			<p class="paragraph-text bold col-span-full">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p>
+			</p></Reveal>
+			<Reveal visible={revVis.visible} delay={600}><p class="highlight-text bold">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p></Reveal>
 			{#if !showText}
 				<button class="hollow-link anveshi" onclick={toggleText}>
 					Read More
@@ -140,15 +143,15 @@
 				</button>
 			{/if}
 		</div>
-	</div>
+	</section>
 
 	<!-- ── CURRENT CHAPTERS ──────────────────────────────── -->
 	{#if currproj && currproj.length > 0}
-		<div class="box wraps padded growingline alternate" id="current-chapter" bind:this={reference}>
+		<section class="wrapper-std growingline alternate" id="current-chapter" bind:this={reference}>
 			<Title text="current chapter" anveshi={true} />
 			{#each currproj as item, i}
 				<Slider visible={isVisible.visible} direction="down" outDirection="down" distance={300} duration={500} delay={500}>
-					<a class="box current-anveshi blank" style="background-image: url({item.image})" href="/anveshi{item.link}">
+					<a class="box current-anveshi blank" style="background-image: url({item.gallery})" href="/anveshi{item.link}">
 						<div class="box inside-current-anveshi p16 md:p32 ybetween">
 								<span class="openbadge">OPEN NOW</span>
 								<div class="box rgap16">
@@ -161,23 +164,23 @@
 					</a>
 				</Slider>
 			{/each}
-		</div>
+		</section>
 	{/if}
 
 	{#if testis && testis.length > 0}
-		<div class="box wraps padded growingline" id="testimonials">
+		<section class="wrapper-std growingline" id="testimonials">
 			<Title text="testimonials" anveshi={true} />
-			<div class="box rgap16">
-				<Mark fade pauseOnHover duration="200s" gap="1rem">
+			<div class="box rgap4">
+				<Mark fade pauseOnHover duration="200s" gap="4px">
 					{#each testis as item}
-						<div class="testimonial box rgap8 p32">
+						<div class="testimonial box rgap8 p16 lg:p24">
 							<Quote />
 							<p class="thin italic">{item.content}</p>
 							<p class="anveshi-o citation w500 tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
 						</div>
 					{/each}
 				</Mark>
-				<Mark fade pauseOnHover reverse={true} duration="200s" gap="1rem">
+				<Mark fade pauseOnHover reverse={true} duration="200s" gap="4px">
 					{#each testis as item, i}
 						{#if i > 3}
 							<div class="testimonial box rgap8 p32">
@@ -189,10 +192,10 @@
 					{/each}
 				</Mark>
 			</div>
-		</div>
+		</section>
 	{/if}
 
-	<div class="box padded wraps growingline alternate" id="future-chapters">
+	<section class="wrapper-std growingline alternate" id="future-chapters">
 		<Title text="future chapters" anveshi={true} />
 		<div class="area-of-display">
 			<div class="selection-menu">
@@ -288,38 +291,38 @@
 				</div>
 			{/if}
 		</div>
-	</div>
+	</section>
 
 	{#if pastproj && pastproj.length > 0}
-		<div class="box padded wraps is-last growingline" id="past-chapters">
+		<section class="wrapper-std growingline" id="past-chapters">
 			<Title text="past chapters" anveshi={true} />
-			<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16" bind:this={scaleRef}>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap4" bind:this={scaleRef}>
 				{#each pastproj as item, i}
 					<Scale visible={scaleVis.visible}>
 					{#if item.pageactive === true}
-						<div class="box past-grid-items blank stonecard p16 lg:p24">
-							<Lightbox><enhanced:img class="fit t2" src={item.gallery} alt={item.chapter} /></Lightbox>
-							<a class="box p16 nobot" style="row-gap: 4px" href="/anveshi{item.link}">
-								<p class="paragraph-text w500">{item.chapter}</p>
-								<span class="hollow-link">Explore <span class="button-text">→</span></span>
+						<div class="box past-grid-items blank b-main p8 radius8 ncolor-inv">
+							<Lightbox><enhanced:img class="fit t2 radius" src={item.gallery} alt={item.chapter} /></Lightbox>
+							<a class="box p16" href="/anveshi{item.link}">
+								<p class="highlight-text w600">{item.chapter}</p>
+								<span class="hollow-link anveshi-o">Explore <span class="button-text">→</span></span>
 							</a>
 						</div>
 					{:else}
-						<div class="box past-grid-items blank stonecard p16 lg:p24">
-							<Lightbox><enhanced:img class="fit t2" src={item.gallery} alt={item.chapter} /></Lightbox>
-							<div class="box p16 lg:p24" style="row-gap: 4px">
-								<p class="paragraph-text w500">{item.chapter}</p>
+						<div class="box past-grid-items blank b-main p8 radius8">
+							<Lightbox><enhanced:img class="fit t2 radius" src={item.gallery} alt={item.chapter} /></Lightbox>
+							<div class="box p16">
+								<p class="highlight-text w600">{item.chapter}</p>
 							</div>
 						</div>
 					{/if}
 					</Scale>
 				{/each}
 			</div>
-		</div>
+		</section>
 	{/if}
-	<div class="box padded wraps is-last growingline" id="faqs">
+	<section class="wrapper-std growingline" id="faqs">
 		<FAQ />
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">
@@ -352,27 +355,21 @@
 		height: 70vh
 		width: 100%
 
-
 .area-of-display
 	min-height: 80vh
-	border: var(--border-dark)
 	display: flex
 	flex-direction: column
 	justify-content: flex-start
 	row-gap: 2rem
-	border: var(--border-dark)
-	background-position: center center
+	border: var(--border-main)
+	background: var(--color-stone-3)
 	border-radius: 8px
 	@media (max-width: 1024px)
-		background-size: 3rem 3rem, 3rem 3rem
 		padding: 1rem
-		background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
 	@media (min-width: 1025px)
 		min-height: 80vh
-		row-gap: 3rem
-		padding: 3rem 4rem
-		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
-		background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)
+		row-gap: 2rem
+		padding: 2rem
 
 #testimonials
 	@media (min-width: 1025px)

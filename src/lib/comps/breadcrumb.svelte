@@ -79,21 +79,21 @@
 
 .divider
 	font-size: 0.5rem
-	color: var(--color-grey-2)
+	color: var(--color-grey-0)
 
 a.crumb-link
 	font-size: 0.8rem
 	text-transform: uppercase
 	font-weight: 500
 	letter-spacing: 0.01rem
-	color: var(--color-grey-3)
+	color: var(--color-grey-1)
 	.link-arrow
 		transform-origin: left center
 		font-size: 0.5rem
 		&.gone
 			display: none
 	&.faded
-		color: var(--color-grey-2)
+		color: var(--color-grey-0)
 	&:hover
 		color: var(--color-theme)
 		.link-arrow

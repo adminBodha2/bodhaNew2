@@ -110,7 +110,7 @@
 		border-bottom: var(--border-main)
 	@media (max-width: 1024px)
 		border: var(--border-main)
-		background: var(--color-stone)
+		background: var(--color-stone-1)
 		.up
 			order: 1
 		.down

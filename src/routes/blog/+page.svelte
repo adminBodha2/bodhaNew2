@@ -197,7 +197,7 @@
 						<div class="external-list">
 							{#each externalPosts.slice(0, 6) as post}
 								<a class="external-item blank" href={post.route} target="_blank" rel="noreferrer">
-									<div class="column rgap4">
+									<div class="box rgap4">
 										<p class="w500 tight">{post.title}</p>
 										<p class="tag-text tt-u lgrey">{post.platform}</p>
 									</div>
@@ -286,7 +286,7 @@
 			padding-top: 1rem
 			padding-left: 1rem
 			padding-bottom: 1rem
-			background: var(--color-grey-4)
+			background: var(--color-grey-2)
 			color: #FFFFFF
 			&:hover
 				color: var(--color-theme)
@@ -395,7 +395,7 @@
 .article-grid
 	display: grid
 	gap: 1px
-	background: var(--color-alt-2)
+	background: var(--color-stone-2)
 	border: var(--border-dark)
 	overflow: hidden
 	@media screen and (min-width: 1025px)
@@ -445,12 +445,12 @@
 	text-transform: uppercase
 	transition: background 0.08s ease, color 0.08s ease, border-color 0.08s ease
 	span
-		color: var(--color-grey-2)
+		color: var(--color-grey-0)
 		font-size: 0.68rem
 		font-weight: 600
 	&:hover
-		background: var(--color-theme-2)
-		border-color: var(--color-theme-2)
+		background: var(--color-theme-dark)
+		border-color: var(--color-theme-dark)
 		color: var(--color-back)
 		span
 			color: var(--color-back)
@@ -508,12 +508,12 @@
 	background: var(--color-back)
 	transition: background 0.08s ease
 	&:hover
-		background: var(--color-stone)
+		background: var(--color-stone-1)
 
 .latest-number
 	font-size: 2rem
 	line-height: 1
-	color: var(--color-theme-2)
+	color: var(--color-theme-dark)
 
 .external-item
 	gap: 0.8rem
@@ -559,17 +559,17 @@
 	gap: 5px
 	width: max-content
 	max-width: 100%
-	border: 1px solid var(--color-grey-1)
+	border: 1px solid var(--color-grey-0)
 	border-radius: 3px
-	background: var(--color-grey-4)
-	color: var(--color-alt-3)
+	background: var(--color-grey-2)
+	color: var(--color-stone-3)
 	font-size: 0.68rem
 	font-weight: 600
 	line-height: 1.1
 	text-transform: uppercase
 	transition: all 0.08s ease
 	&:hover
-		background: var(--color-theme-2)
+		background: var(--color-theme-dark)
 		color: var(--color-back)
 
 </style>

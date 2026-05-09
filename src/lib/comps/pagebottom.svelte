@@ -12,7 +12,7 @@
 
 <div class="foot-wrap box">
 	<div class="foot-wide-lines"></div>
-	<div class="foot-inner narrowsize box">
+	<div class="foot-inner box">
 		<div class="foot-top">
 			<button
 				class="blank foot-scroll"
@@ -184,9 +184,34 @@ p.light-footer
 		padding-top: 3rem
 		padding-left: 1rem
 		padding-right: 1rem
-		width: 100%
 		height: 100%
 		row-gap: 2rem
+
+.foot-wrap
+	width: 100%
+	.foot-inner
+		width: 100%
+	@media (min-width: 1025px)
+		padding-left: 1rem
+		padding-right: 1rem
+		.foot-inner
+			width: 992px
+	@media (min-width: 1201px)
+		.foot-inner
+			width: 1168px
+	@media (min-width: 1441px)
+		.foot-inner
+			width: 1408px
+	@media (min-width: 1601px)
+		padding-left: 4rem
+		padding-right: 4rem
+		.foot-inner
+			width: 1472px
+
+.foot-inner
+	margin-left: auto
+	margin-right: auto
+
 
 // ── TOP ROW ───────────────────────────────────────────────
 
@@ -228,14 +253,14 @@ p.light-footer
 
 .foot-scroll-arrow
 	font-size: 1rem
-	color: var(--color-theme-2)
+	color: var(--color-theme-dark)
 	line-height: 1
 
 .foot-scroll-label
 	font-size: 8px
 	font-weight: 700
 	letter-spacing: 0.1em
-	color: var(--color-theme-2)
+	color: var(--color-theme-dark)
 
 // ── LINK GRID ─────────────────────────────────────────────
 

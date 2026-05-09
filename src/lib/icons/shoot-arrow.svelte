@@ -6,7 +6,7 @@
 
 </script>
 
-<div class="hold xcenter ycenter column">
+<div class="hold xcenter ycenter box">
 	<svg class="stay" width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M13.833 7.5V11.167H7.16699V24.833H20.833V18.167H24.5V26.667C24.4998 27.6793 23.6793 28.4998 22.667 28.5H5.33301C4.32076 28.4998 3.50018 27.6793 3.5 26.667V9.33301C3.50018 8.32075 4.32075 7.50018 5.33301 7.5H13.833Z" fill={color}/>
 		</svg>		

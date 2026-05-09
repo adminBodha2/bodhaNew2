@@ -1,152 +1,77 @@
-:root
-	--pad-std: 3rem
-	--transition1: all 200ms cubic-bezier(0.000, 1.145, 0.905, 0.970)
-	--transition2: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
-	--transition3: all 550ms cubic-bezier(0.215, 0.610, 0.355, 1.000)
-	--cz-linear: cubic-bezier(0.250, 0.250, 0.750, 0.750)
-	--cz-ease: cubic-bezier(0.250, 0.100, 0.250, 1.000)
-	--cz-easeIn: cubic-bezier(0.420, 0.000, 1.000, 1.000)
-	--cz-easeOut: cubic-bezier(0.000, 0.000, 0.580, 1.000)
-	--cz-easeInOut: cubic-bezier(0.420, 0.000, 0.580, 1.000)
-	--cz-easeInQuad: cubic-bezier(0.550, 0.085, 0.680, 0.530)
-	--cz-easeInCubic: cubic-bezier(0.550, 0.055, 0.675, 0.190)
-	--cz-easeInQuart: cubic-bezier(0.895, 0.030, 0.685, 0.220)
-	--cz-easeInQuint: cubic-bezier(0.755, 0.050, 0.855, 0.060)
-	--cz-easeInSine: cubic-bezier(0.470, 0.000, 0.745, 0.715)
-	--cz-easeInExpo: cubic-bezier(0.950, 0.050, 0.795, 0.035)
-	--cz-easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335)
-	--cz-easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045)
-	--cz-easeOutQuad: cubic-bezier(0.250, 0.460, 0.450, 0.940)
-	--cz-easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000)
-	--cz-easeOutQuart: cubic-bezier(0.165, 0.840, 0.440, 1.000)
-	--cz-easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000)
-	--cz-easeOutSine: cubic-bezier(0.390, 0.575, 0.565, 1.000)
-	--cz-easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000)
-	--cz-easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000)
-	--cz-easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275)
-	--cz-easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955)
-	--cz-easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000)
-	--cz-easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000)
-	--cz-easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000)
-	--cz-easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950)
-	--cz-easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000)
-	--cz-easeInOutCirc: cubic-bezier(0.785, 0.135, 0.150, 0.860)
-	--cz-easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550)
-	--theme-rgb: rgba(23, 113, 194, 100%)
-	@media screen and (min-width: 1025px)
-		--pad-std: 4rem
-
 .light
-	--shadow1: 0 6px 10px rgba(0, 0, 0, 0.06)
-	--shadow2: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
-	--shadow3: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
-	--shadow4: 0 2px 4px rgba(0, 0, 0, 0.02)
-	--shadow5: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
-	--shadow6: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
-	--shadow7: 0 1px 2px rgba(0, 0, 0, 0.04)
-	--shadow8: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02)
-	--shadow9: 0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02)
-	--shadow10: 0 24px 48px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04)
-	--shadow11: 0 40px 80px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.03)
-	--shadow12: 0 0 40px rgba(0, 0, 0, 0.03), 0 0 10px rgba(0, 0, 0, 0.01)
-	--shadow13: 0 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px rgba(0, 0, 0, 0.04)
-	--shadow14: 0 2px 0 rgba(0, 0, 0, 0), 0 4px 4px rgba(0, 0, 0, 0)
-	--shadow-inset-1: inset 0 2px 4px rgba(0, 0, 0, 0.03)
-	--shadow-inset-2: inset 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
-	--color-primary: #070707
-	--color-back: #FFFFFF
-	--color-theme: #1971c2
-	--color-theme-1: #012c6d
-	--color-theme-2: #054370
-	--color-theme-3: #014694
-	--color-theme-4: #4dabf7
-	--color-theme-5: #daf2fc 
-	--color-theme-6: #f3fafd
-	--color-theme-7: #fafeff
-	--color-theme-2: #054370
-	--color-theme-3: #014694
-	--color-theme-4: #4dabf7
-	--color-theme-5: #daf2fc 
-	--color-theme-6: #f3fafd
-	--color-theme-7: #fafeff
-	--color-alt-1: #FAFAFA
-	--color-alt-2: #Efefef
-	--color-alt-3: #f4f4f5
-	--color-alt-4: #F8FAFC
-	--color-grey-1: #d1d1d1
-	--color-grey-2: #a7a7a7
-	--color-grey-3: #878787
-	--color-grey-4: #474747
-	--color-stone: #F9F8F6
-	--color-stone-2: #F8F7F4
-	--color-stone-3: #FBFBF9
-	--color-white: #FFFFFF
-	--color-black: #070707
-	--color-anveshi: #D3633A
-	--color-know: #fff8e0
-	--color-know-2: #fffbf0
-	--color-anveshi-2: #9f401d
-	--color-yellow: #FED766
-	--color-green: #4DA167
-	--color-desb: #2A9134
-	--color-desb2: #38B000
 	--border-main: 1px solid #E7e7e7
 	--border-dark: 1px solid #d7d7d7
 	--border-darker: 1px solid #a7a7a7
-	--header-back: #FFFFFF
-	--header-border: var(--border-main)
-	--theme-back-o50: rgba(255,255,255,0.5)
-	--theme-back-o35: rgba(255,255,255,0.35)
+	--color-theme: #1971C2
+	--color-theme-dark: #083A68
+	--color-theme-light: #4DABF7
+	--color-theme-light2: #DAF2FC
+	--color-theme-alt: #2C8C66
+	--color-primary: #1B1E20
+	--color-back: #FFFFFF
+	--color-grey-0: #C1C1C1
+	--color-grey-1: #A7A7A7
+	--color-grey-2: #676767
+	--color-grey-3: #474747
+	--color-stone-0: #F9F8F6
+	--color-stone-1: #F2F2F1
+	--color-stone-2: #F8F7F4
+	--color-stone-3: #F7F6F3
+	--color-anveshi: #D3633A
+	--color-anveshi-alt: #9F401D
+	--color-designB: #2A9134
+	--color-designB-alt: #38B000
+	--color-border: #E7E7E7
+	--color-border-light: #F1F1F1
+	--color-border-dark: #D1D1D1
 
 .dark
-	--shadow1: 0 6px 10px rgba(0, 0, 0, 0.06)
-	--shadow2: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
-	--shadow3: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
-	--shadow4: 0 2px 4px rgba(0, 0, 0, 0.02)
-	--shadow5: 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
-	--shadow6: 0 20px 40px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03)
-	--shadow7: 0 1px 2px rgba(0, 0, 0, 0.04)
-	--shadow8: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02)
-	--shadow9: 0 12px 24px rgba(0, 0, 0, 0.05), 0 4px 8px rgba(0, 0, 0, 0.02)
-	--shadow10: 0 24px 48px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.04)
-	--shadow11: 0 40px 80px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.03)
-	--shadow12: 0 0 40px rgba(0, 0, 0, 0.03), 0 0 10px rgba(0, 0, 0, 0.01)
-	--shadow13: 0 2px 0 rgba(0, 0, 0, 0.02), 0 4px 4px rgba(0, 0, 0, 0.04)
-	--shadow14: 0 2px 0 rgba(0, 0, 0, 0), 0 4px 4px rgba(0, 0, 0, 0)
-	--shadow-inset-1: inset 0 2px 4px rgba(0, 0, 0, 0.03)
-	--shadow-inset-2: inset 0 8px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)
 	--color-primary: #e2e2e2
 	--color-back: #171717
 	--color-theme: #0479e7
-	--color-theme-2: #0d5284
-	--color-theme-3: #08589f
-	--color-theme-4: #4dabf7
-	--color-theme-5: #daf2fc 
-	--color-theme-6: #f3fafd
-	--color-alt-1: #3f3f3f
-	--color-alt-2: #373737
-	--color-alt-3: #212121
-	--color-alt-4: #2f2f2f
-	--color-grey-1: #272727
-	--color-grey-2: #3f3f3f
-	--color-grey-3: #515151
-	--color-grey-4: #8a8a8a
-	--color-stone: #282826
+	--color-theme-dark: #0d5284
+	--color-theme-dark: #08589f
+	--color-theme-light: #4dabf7
+	--color-theme-light2: #daf2fc 
+	--color-theme-light2: #f3fafd
+	--color-stone-1: #3f3f3f
+	--color-stone-2: #373737
+	--color-stone-3: #212121
+	--color-stone-0: #2f2f2f
+	--color-grey-0: #272727
+	--color-grey-0: #3f3f3f
+	--color-grey-1: #515151
+	--color-grey-2: #8a8a8a
+	--color-stone-1: #282826
 	--color-stone-2: #F8F7F4
 	--color-stone-3: #FBFBF9
 	--color-white: #FFFFFF
 	--color-black: #070707
 	--color-anveshi: #D3633A
-	--color-know: #fff8e0
-	--color-green: #009B72
-	--color-know-2: #fffbf0
-	--color-anveshi-2: #9f401d
+	--color-stone-1: #fff8e0
+	--color-theme-alt: #009B72
+	--color-stone-1-2: #fffbf0
+	--color-anveshi-alt: #9f401d
 	--border-main: 1px solid #272727
 	--border-dark: 1px solid #474747
 	--header-back: #171717
 	--header-border: 1px solid rgba(0,0,0,0.28)
 	--theme-back-o50: rgba(0,0,0,0.5)
 	--theme-back-035: rgba(0,0,0,0.35)
+
+:root
+	--dur-short: 120ms
+	--dur-180: 180ms
+	--dur-320: 320ms
+	--dur-560: 560ms
+	--es-smooth: cubic-bezier(0.22, 1, 0.36, 1)
+	--es-snap: cubic-bezier(0.755, 0.050, 0.855, 0.060)
+	--es-back: cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	--es-in: cubic-bezier(0.42, 0, 1, 1)
+	--es-out: cubic-bezier(0, 0, 0.58, 1)
+	--es-inout: cubic-bezier(0.42, 0, 0.58, 1)
+	--ts-snap: var(--dur-short) var(--es-snap)
+	--ts-card: var(--dur-180) var(--es-back)
 
 .temp
 	--andaman-and-nicobar-islands: #E53935

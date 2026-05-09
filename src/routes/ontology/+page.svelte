@@ -82,7 +82,7 @@
 		display: grid
 		grid-template-columns: 1fr 1fr
 		gap: 1px
-		background: var(--color-grey-1)
+		background: var(--color-grey-0)
 
 	.varga-grid
 		display: grid
@@ -94,7 +94,5 @@
 		@media screen and (min-width: 1201px)
 			grid-template-columns: repeat(4, minmax(0, 1fr))
 
-	.varga-card
-		min-height: 100%
 
 </style>

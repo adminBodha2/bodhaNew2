@@ -86,7 +86,7 @@
 	gap: 1rem
 	transition: background 0.15s ease
 	&:hover
-		background: var(--color-stone)
+		background: var(--color-stone-1)
 	@media screen and (max-width: 1024px)
 		border-left: var(--border-main)
 		border-bottom: var(--border-main)
@@ -125,7 +125,7 @@
 	color: var(--color-theme)
 	transition: color 0.12s ease
 	&:hover
-		color: var(--color-theme-2)
+		color: var(--color-theme-dark)
 
 .link-sep
 	font-size: 0.7rem

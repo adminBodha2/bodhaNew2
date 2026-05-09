@@ -92,7 +92,7 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
-	background: var(--color-grey-4)
+	background: var(--color-grey-2)
 	border: 1px solid #e1e1e1
 	padding: 0.5em 1em
 	box-shadow: 2px 1px 4px rgba(0,0,0,0.2)
@@ -100,7 +100,7 @@
 	cursor: pointer
 	color: #FFFFFF
 	&:active
-		background: var(--color-grey-2)
+		background: var(--color-grey-0)
 	span
 		font-size: 0.9rem
 		text-transform: uppercase

@@ -44,15 +44,15 @@
 				<p class="highlight-text bold">Our Mandate</p>
 				<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 white-grid">
 					<div class="row ycenter cgap16 rgap8 p16 lg:p32 whitecard">
-						<Policy color="var(--color-theme-2)"/>
+						<Policy color="var(--color-theme-dark)"/>
 						<p class="flex-grow paragraph-text tight grey">Provide an Indian cultural lens to policy and institutional design with research in frontier areas.</p>
 					</div>
 					<div class="row ycenter cgap16 whitecard p16 lg:p32">
-						<Concern size={56} color="var(--color-theme-2)"/>
+						<Concern size={56} color="var(--color-theme-dark)"/>
 						<p class="flex-grow paragraph-text tight grey">Ask pertinent questions about the most critical cultural problems today.</p>
 					</div>
 					<div class="row ycenter cgap16 whitecard p16 lg:p32">
-						<Aware color="var(--color-theme-2)"/>
+						<Aware color="var(--color-theme-dark)"/>
 					<p class="flex-grow paragraph-text tight grey">Create immersive cultural experiences to make our youth more culture aware and active.</p>
 					</div>
 				</div>

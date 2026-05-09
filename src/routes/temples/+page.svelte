@@ -768,7 +768,7 @@
 		cursor: pointer
 		&.active
 			color: var(--color-white)
-			background: var(--color-theme-2)
+			background: var(--color-theme-dark)
 		&:hover
 			color: var(--color-white)
 			background: var(--color-theme)

@@ -70,7 +70,7 @@
 	background: var(--color-back)
 	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
 	&:hover
-		background: var(--color-stone)
+		background: var(--color-stone-1)
 		.theme-line
 			transform: scaleX(1.5)
 

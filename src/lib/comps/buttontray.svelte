@@ -113,7 +113,7 @@
 			box-shadow: 2px 3px 7px rgba(0,0,0,0.2)
 
 .mobile-shelf
-	background: var(--color-theme-5)
+	background: var(--color-theme-light2)
 	border: 1px solid #d7d7d7
 	padding: 0.4rem 0.5rem
 	border-radius: 5px
@@ -161,10 +161,10 @@
 			justify-content: center
 			align-items: center
 			&:hover
-				background: var(--color-grey-3)
+				background: var(--color-grey-1)
 				color: #FFFFFF
 			&.active
-				background: var(--color-grey-4)
+				background: var(--color-grey-2)
 				color: #FFFFFF
 
 </style>

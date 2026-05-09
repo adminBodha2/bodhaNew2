@@ -15,8 +15,8 @@
 	width: 40px
 	height: 20px
 	border-radius: 20px
-	background: var(--color-grey-4)
-	border: 2px solid var(--color-grey-4)
+	background: var(--color-grey-2)
+	border: 2px solid var(--color-grey-2)
 	align-items: center
 	padding-left: 2px
 	padding-right: 6px
@@ -36,11 +36,11 @@
 	background: var(--color-back)
 	padding-left: 6px
 	padding-right: 2px
-	border: 2px solid var(--color-grey-3)
+	border: 2px solid var(--color-grey-1)
 	.togglecircle
 		background: var(--color-primary)
 		transform: translateX(16px)
 	.togglecircle
-		background:  var(--color-grey-3)
+		background:  var(--color-grey-1)
 
 </style>

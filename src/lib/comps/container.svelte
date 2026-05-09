@@ -25,13 +25,13 @@
 
 </script>
 
-<div class="pbot64 column" class:maxH={maxH} class:scaledTypo={scaled} class:top-cushion={isTop} class:widebox={!narrow} class:narrowbox={narrow} class:offcolor={offcolor} class:toffcolor={toffcolor}>
+<div class="pbot64 box" class:maxH={maxH} class:scaledTypo={scaled} class:top-cushion={isTop} class:widebox={!narrow} class:narrowbox={narrow} class:offcolor={offcolor} class:toffcolor={toffcolor}>
   {@render children?.()}
 </div>
 
 <style lang="sass">
 
-.pbot64.column.widebox
+.pbot64.box.widebox
 	min-height: calc(100vh - 72px)
 	padding-left: 12px
 	padding-right: 12px
@@ -46,10 +46,10 @@
 		padding-left: 32px
 		padding-right: 32px
 
-.pbot64.column.narrowbox
+.pbot64.box.narrowbox
 	min-height: 100vh
 
-.pbot64.column.narrowbox.maxH
+.pbot64.box.narrowbox.maxH
 	height: 100%
 
 .offcolor

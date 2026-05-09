@@ -145,7 +145,7 @@ h2
 	text-transform: uppercase
 	letter-spacing: 0.08em
 	font-size: 0.75rem
-	color: var(--color-grey-4)
+	color: var(--color-grey-2)
 
 .auth-intro p:not(.eyebrow)
 	font-size: 1.1rem

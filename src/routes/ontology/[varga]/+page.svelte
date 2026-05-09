@@ -80,12 +80,7 @@
 
 <style lang="sass">
 
-	.ontology-section
-		display: flex
-		flex-direction: column
-		row-gap: 1rem
-
-	.node-card
-		min-height: 100%
+.node-card
+	min-height: 100%
 
 </style>

@@ -20,7 +20,7 @@
 			<p class="grey descriptor-text">{excerpt}</p>
 		</div>
 	</a>
-	<div class="column rgap8 card-bottom post-metadata">
+	<div class="box rgap8 card-bottom post-metadata">
 		<div class="row wrap cgap4 rgap4 ycenter">
 			<a class="descriptor-text grey blank tt-u" href="/blog/writers/{author}">{author}</a>
 			{#if words && words !== ' '}
@@ -44,7 +44,7 @@
 	&.slate
 		background: var(--color-back)
 		&:hover
-			background: var(--color-stone)
+			background: var(--color-stone-1)
 
 .card-media
 	display: flex
@@ -81,7 +81,7 @@ img
 
 .card-words
 	font-size: 0.72rem
-	color: var(--color-theme-4)
+	color: var(--color-theme-light)
 
 
 </style>

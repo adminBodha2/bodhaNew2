@@ -42,7 +42,7 @@
 	h2
 		font-variant: small-caps
 		font-weight: 500
-		text-shadow: 2px 2px 3px rgba(0,0,0,0.3)
+		letter-spacing: -0.1rem
 
 	.bob
 		opacity: 0

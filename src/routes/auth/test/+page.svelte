@@ -52,7 +52,7 @@ p:not(.eyebrow)
 	text-transform: uppercase
 	letter-spacing: 0.08em
 	font-size: 0.75rem
-	color: var(--color-grey-4)
+	color: var(--color-grey-2)
 
 .session-box
 	border: var(--border-main)
@@ -61,7 +61,7 @@ p:not(.eyebrow)
 	gap: 0.35rem
 
 span
-	color: var(--color-grey-4)
+	color: var(--color-grey-2)
 	font-size: 0.85rem
 
 strong

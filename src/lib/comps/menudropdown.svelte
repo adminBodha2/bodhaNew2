@@ -39,7 +39,7 @@
     transition: color 0.2s ease
     letter-spacing: -0.5px
     &.active
-      color: var(--color-grey-4)
+      color: var(--color-grey-2)
 
 .chevron
   display: flex
@@ -63,7 +63,7 @@
   border-radius: 4px
   &.open
     grid-template-rows: 1fr
-    border: 1px solid var(--color-grey-2)
+    border: 1px solid var(--color-grey-0)
     padding: 2rem
 
 .menu :global(> *)

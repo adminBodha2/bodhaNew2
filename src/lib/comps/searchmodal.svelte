@@ -145,7 +145,7 @@
 	max-width: 64rem
 	width: 90vw
 	max-height: 80vh
-	border: 2px solid var(--color-alt-2)
+	border: 2px solid var(--color-stone-2)
 	background: var(--color-back)
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.035), 0 1px 0 0 rgba(225, 225, 225, 0.55), 0 6px 14px -6px rgba(0, 0, 0, 0.10), 0 1.5px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 5px 10px -4px rgba(195, 195, 195, 0.42)
 	opacity: 1
@@ -212,7 +212,7 @@ article
 	padding: 0.5rem
 	border-radius: 0.4rem
 	&:hover
-		background: var(--color-alt-3)
+		background: var(--color-stone-3)
 	a
 		text-decoration: none
 		color: inherit

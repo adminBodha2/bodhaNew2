@@ -141,19 +141,3 @@
 		</div>
 </section>
 </Container>
-
-<style lang="sass">
-
-.tray-of-sections
-	@media screen and (max-width: 1024px)
-		display: none
-
-.resource-card
-	display: flex
-	flex-direction: column
-	gap: 0.4rem
-	padding: 1.2rem 1.4rem
-	background: var(--color-back)
-	transition: background 0.15s ease
-
-</style>

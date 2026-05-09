@@ -43,3 +43,9 @@
 @each $name, $width in b.$max-breakpoints
 	@media (max-width: $width)
 		+spacing-utils("#{$name}\\:")
+
+.p16, .p8, .p32, .p64
+	&.notop
+		padding-top: 0
+	&.nobot
+		padding-bottom: 0

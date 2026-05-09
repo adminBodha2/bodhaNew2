@@ -48,7 +48,7 @@
 <Container>
 	<div class="grid grid-cols-1" id="course-header">
 		<div class="grid grid-cols-1 lg:grid-cols-2" id="culprit">
-			<div class="col-span-full lg:col-span-1 sec box rgap32 down" id="top-left">
+			<div class="col-span-full lg:col-span-1 box rgap32 down" id="top-left">
 				<div class="self-top"><Crumb/></div>
 				<div class="box rgap32">
 					<h1 class="source-serif">Introduction to Shri Ram Swarup</h1>
@@ -78,7 +78,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="box is-last growingline sec stack" id="course-details">
+	<div class="box is-last growingline" id="course-details">
 		<Title text="Course Details" />
 		<div class="tab-panel" use:autoAnimate={{ easing: 'ease-in-out' }}>
 		<Menudrop label="Course Details" ariaLabel="Future chapters regions">

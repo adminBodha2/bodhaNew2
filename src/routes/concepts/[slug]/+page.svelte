@@ -99,7 +99,7 @@
 <style lang="sass">
 
 .tags
-	background: var(--color-grey-4)
+	background: var(--color-grey-2)
 
 #node-grid
 	overflow: hidden

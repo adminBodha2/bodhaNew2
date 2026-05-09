@@ -27,7 +27,7 @@
 
 a.cssbuttons-io-button
 	text-decoration: none
-	background: var(--color-theme-2)
+	background: var(--color-theme-dark)
 	color: white
 	font-family: "Google Sans", sans-serif
 	padding: 2px
@@ -54,11 +54,11 @@ a.cssbuttons-io-button
 		width: 21px
 		border-radius: 4px
 		right: 2px
-		transition: all 0.26s var(--cz-easeInOutExpo)
+		transition: all 0.26s cubic-bezier(0.250, 0.100, 0.250, 1.000)
 		svg
 			width: 14px
 			transition: transform 0.3s
-			color: var(--color-theme-2)
+			color: var(--color-theme-dark)
 	&:hover
 		.icon
 			width: calc(100% - 4px)

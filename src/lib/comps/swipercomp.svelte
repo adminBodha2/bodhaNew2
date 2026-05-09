@@ -113,7 +113,7 @@
 <svelte:window bind:innerWidth={iW} />
 
 <div class="swiper-row" class:marquee>
-	<div class="xleft column width100 mobile-rule">
+	<div class="xleft box width100 mobile-rule">
 		<p class="mleft ta-l">Swipe left/right to navigate</p>
 	</div>
 	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
@@ -123,11 +123,11 @@
 	</div>
 	<div class="buttons-and-rule box xleft rgap8">
 		<div class="nav-buttons row ycenter xcenter cgap8 mleft">
-			<button class="nav-button prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
-				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi-2)" stroke="var(--color-anveshi-2)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
+			<button class="prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
+				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi)" stroke="var(--color-anveshi)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
 			</button>
-			<button class="nav-button next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
-				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi-2)" stroke="var(--color-anveshi-2)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
+			<button class="next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
+				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi)" stroke="var(--color-anveshi)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
 			</button>
 		</div>
 		{#if iW <= 1024}
@@ -140,27 +140,27 @@
 
 <style lang="sass">
 
-.nav-button
+button.prev, button.next
 	border: 1px solid #d7d7d7
-	background: var(--color-stone)
+	background: var(--color-grey-3)
 	font-size: 0.85rem
 	font-weight: 500
 	letter-spacing: 0.01rem
 	padding:  0.6em 1em 0.3em 1em
-	border-radius: 8px
+	border-radius: 16px
 	box-shadow: 1px 2px 3px rgba(0,0,0,0.2)
 	transition: background 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), color 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), border 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), box-shadow 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
 	transform-origin: center center
 	&:hover
-		background: var(--color-grey-4)
+		background: var(--color-grey-2)
 		color: #FFF
-		border: 1px solid var(--color-primary)
 		box-shadow: 1px 2px 5px rgba(0,0,0,0)
 	&:active
 		transform: scale(1.1)
 
 .buttons-and-rule
 	width: 100%
+	margin-top: -1rem
 	@media (max-width: 1024px)
 		display: none
 

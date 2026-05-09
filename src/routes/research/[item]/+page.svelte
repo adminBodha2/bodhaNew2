@@ -3,6 +3,7 @@
 	import type { PageData } from './$types';
 	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -39,24 +40,27 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" ogType="article" {jsonld} />
 <Container>
-	<section class="dohero">
+	<Parallax wipe={true}>
 		<WaterRipple src={data.image} class="ripple-motion" {brushSize} />
-	</section>
+	</Parallax>
 	<section class="docgrid">
 		<div class="box docside">
 			<div class="doclist">
 				{#if data.research && data.research.length > 0}
+					<p class="w600 tt-u pbot8">Other Projects</p>
 					{#each data.research as item}
+						{#if item.meta.title !== data.title}
 						<a class="doclink sidebar-text" href={item.linkpath}>
 							{item.meta.title}
 						</a>
+						{/if}
 					{/each}
 				{/if}
 			</div>
 		</div>
 		<div class="docmain rgap32 box pbot32">
 			<div class="labelbox title-area">
-				<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description}>
+				<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description} fullP={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row cgap4 rgap4 wrap">
 						{#each data.tags as tag}

@@ -3,7 +3,7 @@
 	import Arrow from '$lib/icons/shoot-arrow.svelte'
 	export let isTime = false
 
-	let color = 'var(--color-theme-3)'
+	let color = 'var(--color-theme-dark)'
 
 	function handleHoverInOut(newColor:string){
 		color = newColor;
@@ -16,7 +16,7 @@
 
 </script>
 
-<button class="row cgap8 ycenter" on:mouseenter={() => handleHoverInOut('var(--color-theme)')} on:mouseleave={() => handleHoverInOut('var(--color-theme-3)')}> 
+<button class="row cgap8 ycenter" on:mouseenter={() => handleHoverInOut('var(--color-theme)')} on:mouseleave={() => handleHoverInOut('var(--color-theme-dark)')}> 
 	<Arrow color={color} goTime={isTime}/><slot></slot>
 </button>
 

@@ -70,6 +70,8 @@
 <style lang="sass">
 
 a.has-image-background
+	background-size: cover
+	background-position: center center
 	height: 300px
 	max-width: 500px
 	border: var(--border-dark)

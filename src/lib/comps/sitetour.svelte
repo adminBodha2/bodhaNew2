@@ -485,7 +485,7 @@ function setPanelModeAfterNavigation() {
 	background: #FFF
 	border: var(--border-darker)
 	&:hover
-		background: var(--color-grey-4)
+		background: var(--color-grey-2)
 		color: #FFF
 
 .mid-baseline.of-buttons
@@ -531,12 +531,12 @@ button.baselinebutton
 		border-right: none
 	&.active
 		color: #fff
-		background: var(--color-theme-2)
+		background: var(--color-theme-dark)
 		&:hover
-			background: var(--color-theme-2)
+			background: var(--color-theme-dark)
 			color: #FFF
 	&:hover
-		background: var(--color-grey-4)
+		background: var(--color-grey-2)
 		color: #FFF
 	@media screen and (max-width: 1024px)
 		padding: 0.5rem
@@ -636,7 +636,7 @@ button.blank.with-tooltip
 					.nav
 						border: none
 						padding: 2rem 1rem
-						background: var(--color-stone)
+						background: var(--color-stone-1)
 						text-align: left
 						width: 100%
 						border-bottom: var(--border-main)
@@ -718,7 +718,7 @@ button.blank.with-tooltip
 						height: 100%
 						.nav
 							padding: 2rem
-							background: var(--color-stone)
+							background: var(--color-stone-1)
 							border-top: none
 							border-left: none
 							border-right: none

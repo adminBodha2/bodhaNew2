@@ -164,11 +164,6 @@
 
 <style lang="sass">
 
-.postcard
-	background: var(--color-back)
-	&:hover
-		background: var(--color-stone)
-
 .share-row
 	border-top: var(--border-main)
 	padding-top: 2rem
@@ -186,7 +181,7 @@
 .line
 	height: 1px
 	width: 20%
-	background: var(--color-grey-1)
+	background: var(--color-grey-0)
 	@media screen and (max-width: 1024px)
 		display: none
 

@@ -180,7 +180,7 @@
 	flex: 1
 	min-height: 0
 	width: 100%
-	background: var(--color-stone)
+	background: var(--color-stone-1)
 
 :global(.viewport)
 	width: 100%
