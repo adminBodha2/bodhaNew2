@@ -43,55 +43,49 @@
 	<section class="key-image desbodha">
 		<WaterRipple src={imageLink} class="ripple-motion" brushSize={70} />
 	</section>
-	<div class="is-first">
-		<Crumb showT={false} showD={false} />
+	<section class="box wrapper-std rgap64 first-box">
+			<Crumb showT={false} showD={false} />
 		<h1 class="ptop32 anim-flyup"><span class="desb">design</span>Bodha</h1>
 		<h1 class="design-bodha-head">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</h1>
 		<img class="motif anim-flyin-right" style="margin-left: 200px;transform: translateX(-{sY / 7}px) rotate({sY / 2}deg)" src="/images/designbodha/desbodha-motif.webp" alt="designBodha motif" />
-	</div>
-	<div class="bordertop" id="image-panel">
+	</section>
+	<section class="box wrapper-std rgap64 growingline" id="image-panel">
 		<div class="grid grid-cols-1 lg:grid-cols-2 has-background rgap16">
-			<div class="textbox up anim-fadeIn card-padded">
-				<p>In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -</p>
-				<p>
+			<div class="box rgap16 up anim-fadeIn card-padded">
+				<p class="paragraph-text">In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -</p>
+				<p class="paragraph-text">
 					<i>"together creating a world that as individuals none of us would choose."</i>
 				</p>
-				<p>The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
-				<p class="pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
+				<p class="paragraph-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
+				<p class="paragraph-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
 				<a class="primary desb" href="/designbodha/whitepaper-on-dharmic-design"><span>Whitepaper on Dharmic Design</span></a>
 			</div>
 			<div class="box down">
 				<img class="square-image" src="/images/designbodha/db20.webp" alt="yagya" />
 			</div>
 		</div>
-	</div>
-	<div class="bordertop" id="image-panel-2">
-			<img class="showoff" src="/images/designbodha/db17.webp" alt="db-hero"/>
-			<div class="row">
-				<button class="blank xleft ta-l">
-					DESIGN AS YAGYA<br>DESIGN AS KARMA<br>DESIGN AS DHARMA
-				</button>
-			</div>
+	</section>
+	<section class="box wrapper-std rgap64 growingline alternate" id="image-panel-2">
 			<h2 class="thin-heading anim-flyup">Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br>
 				is creatorship grounded in Hindu metaphysics.<br>
 				It redefines <span class="desb">design as a sacred act</span><br>
 				of aligning human creation with the cosmic order.
 			</h2>
 			<div class="width60">
-				<p>It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
+			<p class="paragraph-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
 			</div>
-	</div>
-	<div class="bordertop is-last">
+	</section>
+	<section class="box wrapper-std rgap64 growingline">
 		<Title text="project objectives"/>
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32">
-			<div class="textbox">
+	<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32">
+			<div class="box rgap16">
 				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2"/>
 				<p class="card-title">Phase 1 - Foundation and Taxonomy</p>
 				<p class="rem1">
 					Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.
 				</p>
 			</div>
-			<div class="textbox">
+			<div class="box rgap16">
 				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2"/>
 				<p class="card-title">Phase 2 - Framework Toolkits</p>
 				<p class="rem1">
@@ -99,7 +93,8 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</section>
+
 </Container>
 
 <style lang="sass">
@@ -110,6 +105,17 @@ img.motif2
 	width: 80px
 	box-shadow: 3px 2px 5px rgba(0,0,0,0.2)
 	border-radius: 40px
+	transform-origin: center center
+	transition: box-shadow 900ms ease
+	&:hover
+		box-shadow: 0 0 0 rgba(0,0,0,0)
+		animation: theRotate 900ms infinite alternate
+
+@keyframes theRotate
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
 
 img.square-image
 	object-fit: cover
@@ -129,24 +135,8 @@ h2.thin-heading
 	@media screen and (min-width: 1025px)
 		padding-bottom: 3rem
 
-img.showoff
-	@media screen and (max-width: 1024px)
-		display: none
-
 #image-panel-2
 	position: relative
-	img.showoff
-		position: absolute
-		top: 0
-		right: 0
-		object-fit: cover
-		height: 720px
-		width: 720px
-		animation: lateMover 
-		animation-timeline: view()
-		animation-range-start: cover 30%
-		animation-range-end: cover 100%
-		opacity: 0
 
 #image-panel
 	align-items: center

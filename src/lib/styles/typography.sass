@@ -121,10 +121,15 @@ p.bold
 .site-docs
 	p, ul, ol
 		margin-bottom: 1rem
+		font-size: 1.125rem
+		line-height: 1.5
 	h2
-		font-size: var(--typeH1)
+		font-size: var(--typeBase)
 		margin-bottom: 1rem
 		margin-top: 2.5rem
+	a
+		text-decoration: underline
+		text-decoration-color: var(--color-theme-4)
 
 .whitepaper-page
 	a
@@ -349,15 +354,21 @@ p, pre, li
 	&.w500
 		font-weight: 500
 	&.citation
-		font-size: 14px
+		font-size: 13px
+		font-weight: 500
 	@media (min-width: 1025px)
-		font-size: 17px
 		&.paragraph-text
 			font-size: 1.25rem
 		&.highlight-text
 			font-size: 1.463rem
 		&.card-title
 			font-size: 1.69rem
+
+a.paragraph-text
+	font-size: 1.25rem
+	line-height: 1.4
+	@media (min-width: 1025px)
+		font-size: 1.25rem
 
 .content-highlights
 	pre, p
@@ -391,7 +402,7 @@ a.tag-text
 	font-size: 1.125rem
 	line-height: 1.2
 	@media screen and (min-width: 1025px)
-		font-size: 0.95rem
+		font-size: 1rem
 		letter-spacing: -0.01rem
 
 .text-container
@@ -405,20 +416,23 @@ a.tag-text
 
 .classic-document
 	p, pre, li
-		line-height: 1.6
 		letter-spacing: 0
 		font-weight: 400
 		font-size: var(--typeBase)
 	p, pre
 		margin-bottom: 1.25rem
+		line-height: 1.6
 	li
 		margin-bottom: 0.5rem
+		line-height: 1.32
 	li::marker
 		content: "- "
 	ul, ol
 		margin-top: 0
 		margin-bottom: 1.25rem
 		padding-left: 1rem
+	h5
+		font-size: 1.33rem
 	h3
 		font-size: var(--typeH1)
 		margin-bottom: 1.25rem
@@ -427,11 +441,15 @@ a.tag-text
 		font-size: var(--typeH1)
 		margin-bottom: 1.25rem
 		margin-top: 2.5rem
+	li
+		padding-left: 0
+		margin-left: 0
+	a
+		text-decoration: underline
+		text-decoration-color: var(--color-theme-4)
 	@media screen and (max-width: 1024px)
-		p, pre
+		p, pre, li, h5
 			font-size: 1.20rem
-		li
-			font-size: 1.2rem
 
 small
 	font-size: 11px

@@ -74,16 +74,16 @@ let {
 				{/if}
 				{#if thinkers && thinkers.length > 0}
 					{#each thinkers as item}
-						<a class="blank doclink whitestone" href={item.linkpath}>
-							<p class="rem1 tight grey">{item.meta.title}</p>
+						<a class="doclink sidebar-text" href={item.linkpath}>
+							{item.meta.title}
 						</a>
 					{/each}
 				{/if}
 			</div>
 		</div>
-		<div class="docmain is-first is-last">
-			<div class="labelbox title-area">
-				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
+		<div class="docmain box rgap32">
+			<div class="box title-area">
+				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true} fullP={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap rgap4 cgap4">
 						{#each data.tags as tag}

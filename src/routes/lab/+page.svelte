@@ -40,24 +40,23 @@
 />
 
 <Container>
-<div class="header-margin is-last">
-	<Crumb showT={true} title="Bodha Lab" showD={true} desc={metaDescription}/>
+	<section class="box wrapper-std header-margin rgap32">
+		<Crumb showT={true} title="Bodha Lab" showD={true} desc={metaDescription}/>
 	{#if labItems.length > 0}
 		<div class="grid grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each labItems as item, i}
-			<a class="labelbox box-of-items blank whitestone card-padded" href={item.linkpath}>
+			<a class="box box-of-items blank whitestone p16 rgap8" href={item.linkpath}>
 				<div class="item-meta row ycenter cgap8 xbetween">
-					<p class="citation-big lgrey tt-u">{item.formattedDate}</p>
+					<p class="citation lgrey tt-u">{item.formattedDate}</p>
 				</div>
-				<p class="tight w500">{item.meta.title}</p>
-				<p class="descriptor-text grey tight">{item.meta.excerpt}</p>
-					<p class="tag-pill tt-u">{item.meta.category}</p>
+				<p class="paragraph-text tight w600">{item.meta.title}</p>
+				<p class="grey tight">{item.meta.excerpt}</p>
+					<p class="tag-pill tt-u dead hollow themed">{item.meta.category}</p>
 			</a>
 			{/each}
 		</div>
 	{/if}
-
-</div>
+	</section>
 </Container>
 
 <style lang="sass">

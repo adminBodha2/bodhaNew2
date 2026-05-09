@@ -42,13 +42,13 @@
 />
 
 <Container>
-	<div class="header-margin is-last">
+	<section class="box wrapper-std rgap32 header-margin">
 		<Crumb showT={true} title="Videos" showD={true} desc={metaDescription}/>
 		{#if vids && vids.length > 0}
 		<Swipes slidesPerView={3} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 3,spaceBetween: 8}}}>
 			{#each vids as item}
 				<swiper-slide>
-					<div class="video-card blank">
+					<div class="video-card blank theme-line-parent">
 						<VideoPlayer videoId={item.videoid} title={item.name} loop />
 						<a class="box video-footer rgap8" href={item.link} target="_blank" rel="noreferrer">
 							<p class="w500 tight">{item.name}</p>
@@ -60,7 +60,7 @@
 			{/each}
 		</Swipes>
 		{/if}
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">
@@ -70,7 +70,6 @@
 	background: var(--color-back)
 	transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease
 	&:hover
-		transform: translateY(-2px)
 		background: var(--color-stone)
 		.theme-line
 			transform: scaleX(1.5)

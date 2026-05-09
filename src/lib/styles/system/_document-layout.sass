@@ -4,8 +4,8 @@
 
 a.doclink
 	display: block
-	padding-top: 0.65rem
-	padding-bottom: 0.65rem
+	padding-top: 0.4em
+	padding-bottom: 0.4em
 	padding-right: map.get(t.$space-scale, 8)
 	transition: all 180ms ease-out
 	color: var(--color-grey-3)
@@ -23,6 +23,8 @@ a.doclink
 	.docmain
 		grid-area: mainarea
 		padding-top: 2rem
+		&.no-image
+			padding-top: 6rem
 	.docside
 		grid-area: sidearea
 		border-top: var(--border-dark)
@@ -43,6 +45,8 @@ a.doclink
 			padding-left: map.get(t.$space-scale, 80)
 			padding-bottom: map.get(t.$space-scale, 64)
 			padding-top: 2rem
+			&.no-image
+				padding-top: 7rem
 			.classic-document
 				max-width: t.$doc-main-max-width
 		.docside
@@ -62,6 +66,9 @@ a.doclink
 				a
 					flex: initial
 					max-width: none
+
+.library-book
+	background: var(--color-back)
 
 .docgrid.scrollside
 	@media screen and (min-width: map.get(b.$breakpoints, "lg"))

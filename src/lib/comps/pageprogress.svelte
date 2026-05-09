@@ -41,7 +41,7 @@
 	class="scroll-progress"
 	class:header-hidden={$readerChromeHidden}
 	style="width: {perCent *
-		100}%; background: var(--color-theme); height: 2px"
+		100}%; background: var(--color-theme); height: 6px"
 ></div>
 
 <style lang="sass">

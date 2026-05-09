@@ -81,11 +81,9 @@ export function getOntologyVarga(slug: string): OntologyVarga | undefined {
 			.map((nodeId: string) => {
 				const node = getNode(nodeId);
 				if (!node || !contentTypes.has(node.type)) return null;
-
 				const mapping = explicitVargaMap.mappings.find((item) => item.nodeId === node.id);
 				const classification = mapping?.vargas.find((entry) => entry.slug === slug);
 				if (!classification) return null;
-
 				return {
 					node,
 					href: nodeHref(node),

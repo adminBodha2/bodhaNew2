@@ -61,11 +61,11 @@
 				</div>
 			{/if}
 		</div>
-		<div class="docmain header-margin is-last">
-			<div class="labelbox title-area">
+		<div class="docmain box rgap32 no-image">
+			<div class="box title-area">
 				<Crumb showT={true} title={data.title} showD={true} desc={data.excerpt}/>
 			</div>
-			<div class="doctext labtext classic-document">
+			<div class="doctext classic-document">
 				<data.content />
 			</div>
 		</div>

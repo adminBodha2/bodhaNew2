@@ -39,10 +39,9 @@
 
 <div class={cn("ripple-inner", className)} {...rest}>
 	<div class="carrier">
+		<img class="ripple-fallback" {src} alt="" aria-hidden="true" />
 		{#if SceneComponent}
 			<SceneComponent image={src} {brushSize} />
-		{:else}
-			<img class="ripple-fallback" {src} alt="" aria-hidden="true" />
 		{/if}
 	</div>
 </div>
@@ -69,5 +68,6 @@
 	height: 100%
 	width: 100%
 	object-fit: cover
+	z-index: 0
 
 </style>

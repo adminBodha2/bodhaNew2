@@ -47,7 +47,7 @@
 />
 
 <Container>
-<div class="header-margin is-last">
+<section class="box wrapper-std rgap32 header-margin">
 	<Crumb showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization."/>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 			{#each teamMembers as member}
@@ -58,7 +58,7 @@
 				<div class="member-info">
 					<div class="member-head">
 						<p class="card-title tight">{member.name}</p>
-						<p class="citation-big grey tt-u">{member.role}</p>
+						<p class="citation grey tt-u">{member.role}</p>
 					</div>
 					<p class="descriptor-text grey">{member.bio}</p>
 					{#if member.links.length > 0}
@@ -73,7 +73,7 @@
 			</div>
 			{/each}
 		</div>
-</div>
+</section>
 </Container>
 
 <style lang="sass">

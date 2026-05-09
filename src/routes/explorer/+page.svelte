@@ -5,6 +5,7 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Responsive from '$lib/comps/responsive-menu.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -48,22 +49,22 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 />
 
 <Container>
-<div class="thisbox header-margin is-last">
-	<div class="explorer-heading">
-		<Crumb showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything."/>
-	</div>
-		<div class="section-tray">
-			{#each tabs as tab, i}
-				<button class="tray-btn item" class:active={active === i} onclick={() => (active = i)}>{tab}</button>
-			{/each}
-				<a class="tray-btn item" href="/explorer/graph">View Graph</a>
-		</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid thisgrid" use:autoAnimate>
+	<section class="box wrapper-std rgap32 header-margin">
+		<Crumb showT={true} title="Explorer" showD={true} desc="One-stop explorer for all content and ideas on our website - essays, research projects, books - everything." showRow={true}>
+			<p><a class="linked" href="/concepts">View Graph</a></p>
+		</Crumb>
+		<div class="thisbox box rgap32">
+		<Responsive>
+				{#each tabs as tab, i}
+					<button class="selection-button" class:active={active === i} onclick={() => (active = i)}>{tab}</button>
+				{/each}
+		</Responsive>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid thisgrid" use:autoAnimate>
 		{#if active === 0}
 	 	{#each data.grouped.blogs as node, i (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight w500">{node.title}</p>
-		<p class="descriptor-text grey tight">{node.description}</p>
+		<a class="box p24 number blank rgap8" href={nodeHref(node)}>
+    	<p class="paragraph-text tight w600">{node.title}</p>
+		<p class="grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -75,9 +76,9 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}	
 		{:else if active === 1}
 	 	{#each data.grouped.externalArticles as node, i (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={node.meta.route} target="_blank" rel="noreferrer">
-    	<p class="tight w500">{node.title}</p>
-		<p class="descriptor-text grey tight">{node.description}</p>
+		<a class="box p24 number blank rgap8" href={node.meta.route} target="_blank" rel="noreferrer">
+    	<p class="paragraph-text tight w600">{node.title}</p>
+		<p class="grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
 					{#each node.tags as tag}
@@ -89,8 +90,8 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 2}
 	 	{#each data.grouped.books as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={node.meta.route} target="_blank" rel="noreferrer">
-    	<p class="tight w500">{node.title}</p>
+		<a class="box p24 number blank rgap8" href={node.meta.route} target="_blank" rel="noreferrer">
+    	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -103,8 +104,8 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 3}
 	 	{#each data.grouped.questions as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight w500">{node.title}</p>
+		<a class="box p24 number blank rgap8" href={nodeHref(node)}>
+    	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -117,8 +118,8 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 4}
 	 	{#each data.grouped.projects as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight w500">{node.title}</p>
+		<a class="box p24 number blank rgap8" href={nodeHref(node)}>
+    	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -131,8 +132,8 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 5}
 	 	{#each data.grouped.thinkers as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight w500">{node.title}</p>
+		<a class="box p24 number blank rgap8" href={nodeHref(node)}>
+    	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -145,8 +146,8 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 6}
 	 	{#each data.grouped.schools as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight w500">{node.title}</p>
+		<a class="box p24 number blank rgap8" href={nodeHref(node)}>
+    	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -159,8 +160,8 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 7}
 	 	{#each data.grouped.labs as node (node.id)}
-		<a class="labelbox whitestone tight-padded blank" href={nodeHref(node)}>
-    	<p class="tight w500">{node.title}</p>
+		<a class="box p24 number blank rgap8" href={nodeHref(node)}>
+    	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
 			<div class="row wrap cgap4 self-bottom">
@@ -172,8 +173,9 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 		</a>
   		{/each}
 		{/if}
-	</div>
-</div>
+		</div>
+		</div>
+	</section>
 </Container>
 
 
@@ -181,53 +183,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
 
 .thisbox
 	min-height: 80vh
-
-.section-tray
-	display: grid
-	grid-template-columns: 1fr 1fr
-	border: var(--border-dark)
-	background: var(--color-grey-1)
-	gap: 1px
-	border-radius: 5px
-	overflow: visible
-	.tray-btn
-		grid-column: span 1
-		background: #FFFFFF
-		border: 1px solid var(--color-back)
-		padding: 12px 20px
-		font-size: 1rem
-		box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
-		&:first-child
-			border-radius: 5px 5px 0 0
-		&:last-child
-			border-radius: 0 0 5px 0
-		&:nth-last-child(2)
-			border-radius: 0 0 0 5px
-		&:hover
-			background: var(--color-theme-5)
-			border: 1px solid var(--color-theme-5)
-			box-shadow: none
-		&.active
-			background: linear-gradient(158.19deg, #1971C2 10.95%, #0C365C 85.73%)
-			border: 1px solid var(--color-theme)
-			color: var(--color-back)
-	@media screen and (min-width: 1025px)
-		display: flex
-		flex-direction: row
-		width: max-content
-		.tray-btn
-			background: var(--color-back)
-			border: 1px solid var(--color-back)
-			padding: 12px 20px
-			font-size: 1rem
-			box-shadow: 0 1px 0 rgba(0,0,0,0.03), 0 2px 10px rgba(0,0,0,0.04), 0 4px 4px rgba(0,0,0,0.06)
-			&:first-child
-				border-radius: 5px 0 0 5px
-			&:last-child
-				border-radius: 0 5px 5px 0
-			&:nth-last-child(2)
-				border-radius: 0
-			&:active
-				transform: scale(1.05)
+	align-items: start
+	align-content: start
 
 </style>

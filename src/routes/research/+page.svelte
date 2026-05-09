@@ -4,7 +4,7 @@
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Parallax from '$lib/comps/parallaxfull.svelte'
+	import Parallax from '$lib/comps/parallaxhalf.svelte'
 	import Title from '$lib/comps/page-title.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte'
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
@@ -29,9 +29,10 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld}/>
 
-<Parallax imageLink="/images/key-research.webp" isClass="is50"/>
+
 <Container>
-<section class="box wrapper-std rgap32">
+<Parallax imageLink="/images/key-research.webp"/>
+<section class="box wrapper-std rgap32 first-box">
 	<Crumb showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities."/>
 	<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64 ptop16">
 		<p class="highlight-text">A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles. Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.</p>

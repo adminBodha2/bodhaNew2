@@ -14,10 +14,11 @@
 		centered?: boolean;
 		serifed?: boolean;
 		fullP?: boolean;
+		onblog?:boolean;
 		children?: Snippet;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, desc = ' ', centered = false, serifed = true, fullP = false, children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, onblog = false, desc = ' ', centered = false, serifed = true, fullP = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -27,7 +28,7 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box null{rgap} crumb-outer" class:fullP={fullP} class:xcenter={centered}>
+<div class="box null{rgap} crumb-outer" class:onblog={onblog} class:fullP={fullP} class:xcenter={centered}>
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
 	{/if}
@@ -72,6 +73,9 @@
 .crumb-outer
 	border-bottom: var(--border-dark)
 	padding-bottom: 2rem
+	&.onblog
+		padding-bottom: 0
+		border-bottom: none
 
 .divider
 	font-size: 0.5rem

@@ -114,97 +114,92 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
 
 <Container>
-	<div class="header-margin is-last">
+	<section class="box wrapper-std rgap32 header-margin">
 		<Crumb showT={true} title={templeName} showD={true} desc={crumbDescription} />
-		<article class="box rgap24">
+		<article class="box">
 			{#if displayImage}
 				<section class="box">
 					<img class="fit radius" src={displayImage} alt={templeName} />
 				</section>
 			{/if}
-
 			{#if factItems.length > 0}
-				<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
+				<section class="grid grid-cols-2 lg:grid-cols-4 white-grid">
 					{#each factItems as item}
-						<div class="labelbox card-padded whitestone">
-							<p class="tag-text green tt-u bold tight">{item.label}</p>
-							<p class="tight descriptor-text">{item.value}</p>
+						<div class="box whitestone p16 lg:p24 rgap4">
+							<p class="tag-text anveshi-o tt-u bold tight">{item.label}</p>
+							<p class="tight paragraph-text">{item.value}</p>
 						</div>
 					{/each}
 				</section>
 			{/if}
-
-			{#if categoryTags.length > 0}
-				<section class="row cgap8 ycenter wrap">
-					{#each categoryTags as tag}
-						<p class="tag-pill">{tag}</p>
-					{/each}
-				</section>
-			{/if}
-
 			{#if data.temple.is_anveshi}
-				<section class="box rgap16">
+				<div class="box rgap16">
 					<div class="row cgap16 ycenter">
 						<p class="tag-pill anveshi">In Anveshi</p>
 						{#if anveshiHref}
 							<a class="primary anveshi" href={anveshiHref}><span>View Anveshi Chapter</span></a>
 						{/if}
 					</div>
-				</section>
+				</div>
 			{/if}
-
 			{#if data.temple.description}
-				<section class="box">
-					<p class="tag-text green tt-u bold tight">description</p>
-					<p class="paragraph-text">{data.temple.description}</p>
-				</section>
-			{/if}
-
-			{#if otherDeities.length > 0 || otherDetails.length > 0 || scripturalItems.length > 0}
-				<section class="grid grid-cols-1 lg:grid-cols-2 white-grid">
-					{#if otherDeities.length > 0}
-						<div class="labelbox card-padded whitestone">
-							<p class="tag-text green tt-u bold tight">other deities</p>
-							<ul class="box rgap8">
-								{#each otherDeities as deity}
-									<li class="descriptor-text">{deity}</li>
-								{/each}
-							</ul>
-						</div>
-					{/if}
-
-					{#if otherDetails.length > 0}
-						<div class="labelbox card-padded whitestone">
-							<p class="tag-text green tt-u bold tight">other details</p>
-							<ul class="box rgap8">
-								{#each otherDetails as detail}
-									<li class="descriptor-text">{detail}</li>
-								{/each}
-							</ul>
-						</div>
-					{/if}
-
+			<div class="temple-grid">
+				<div class="temple-side box sm:ptop32">
 					{#if scripturalItems.length > 0}
-						<div class="labelbox card-padded whitestone">
-							<p class="tag-text green tt-u bold tight">scriptural</p>
-							<ul class="box rgap8">
-								{#each scripturalItems as item}
-									<li class="descriptor-text">{item}</li>
+						{#each scripturalItems as item}
+							<div class="sidebar-item box borderbot pbot8 ptop8">
+								<p>{item}</p>
+							</div>
+						{/each}
+					{/if}
+					{#if otherDetails.length > 0}
+						<div class="box facts ptop32 rgap4 sm:rgap8">
+							<p class="paragraph-text w600 pbot8">Facts:</p>
+								{#each otherDetails as detail}
+									<p class="grey">{detail}</p>
 								{/each}
-							</ul>
 						</div>
 					{/if}
-				</section>
-			{/if}
-
-			{#if data.temple.architecture}
-				<section class="box rgap16">
-					<div class="labelbox card-padded whitestone">
-						<p class="tag-text green tt-u bold tight">architecture</p>
-						<p class="tight descriptor-text">{data.temple.architecture}</p>
-					</div>
-				</section>
+				</div>
+				<div class="temple-main box sm:ptop32">
+					<p class="paragraph-text">{data.temple.description}</p>
+	<p class="paragraph-text">{data.temple.description}</p>
+				</div>
+			</div>
 			{/if}
 		</article>
-	</div>
+	</section>
 </Container>
+
+<style lang="sass">
+
+.temple-grid
+	display: grid
+	.temple-side
+		grid-area: side
+	.temple-main
+		grid-area: main
+	grid-template-columns: 1fr
+	grid-template-areas: "side" "main"
+	@media (min-width: 1025px)
+		grid-template-columns: 360px 1fr
+		grid-template-areas: "side main"
+		border-bottom: var(--border-dark)
+		.temple-main
+			border-left: var(--border-dark)
+			padding-left: 4rem
+			padding-top: 4rem
+			padding-bottom: 4rem
+		.temple-side
+			padding-top: 2rem
+			padding-right: 2rem
+			padding-bottom: 2rem
+			position: sticky
+			top: 72px
+			height: calc(100vh - 72px)
+			overflow-y: scroll
+	@media (min-width: 1201px)
+		grid-template-columns: 440px 1fr
+		grid-template-areas: "side main"
+
+</style>

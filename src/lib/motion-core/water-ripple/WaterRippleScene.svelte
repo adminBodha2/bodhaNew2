@@ -177,7 +177,7 @@
 		});
 
 		const imageTexture = new Texture(gl, {
-			image: new Uint8Array([0, 0, 0, 255]),
+			image: new Uint8Array([0, 0, 0, 0]),
 			width: 1,
 			height: 1,
 			format: gl.RGBA,

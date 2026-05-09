@@ -54,7 +54,7 @@
 				{/if}
 			</div>
 		</div>
-		<div class="docmain is-first is-last">
+		<div class="docmain rgap32 box pbot32">
 			<div class="labelbox title-area">
 				<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description}>
 				{#if data.tags && data.tags.length > 0}
@@ -70,27 +70,27 @@
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
-				<section class="box rgap32">
-					<p class="card-title">Related Readings</p>
-					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
+				<div class="box rgap32 bordertop ptop32">
+					<p class="card-title w600">Related Readings</p>
+					<div class="grid grid-cols-2 lg:grid-cols-3 cgap4 rgap4">
 						{#each data.linkedNodes as item (item.nodeId)}
-							<a class="blank textbox whitestone card-padded" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
-								<div class="labelbox">
+							<a class="blank box rgap8 b-main p16 lg:p24 radius ncolor-inv" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
+								<div class="box rgap8">
 									<p class="tag-text lgrey tt-u">{item.node.type}</p>
-									<p class="paragraph-text w500 tight">{item.node.title}</p>
+									<p class="paragraph-text w600 a-hover tight">{item.node.title}</p>
 									{#if item.node.description}
-										<p class="descriptor-text grey tight">{item.node.description}</p>
+										<p class="grey tight">{item.node.description}</p>
 									{/if}
 								</div>
-								<div class="row wrap cgap8 rgap4 self-bottom">
+								<div class="row wrap cgap4 rgap4 self-bottom">
 									{#each item.node.tags as tag}
-										<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-', ' ')}</p>
+										<p class="tag-pill hollow tt-u themed dead">{tag.replaceAll('-', ' ')}</p>
 									{/each}
 								</div>
 							</a>
 						{/each}
 					</div>
-				</section>
+				</div>
 			{/if}
 		</div>
 	</section>

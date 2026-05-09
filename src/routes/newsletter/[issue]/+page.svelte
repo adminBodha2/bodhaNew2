@@ -31,10 +31,11 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
 <Container>
-	<div class="header-margin is-last">
+	<section class="box wrapper-std header-margin rgap32">
 		<Crumb showT={true} title={data.title}/>
-		<div class="pdf-reader">
+		<div class="pdf-reader box rgap16">
+			<p class="paragraph-text">Accompanying <a class="linkedlight" href="/aryavarta/v1-i{data.id}"> Scrolls of Aryavarta digital comic</a>.</p>
 			<PDFReader src={data.pdflink} title={data.title} height="82vh" />
 		</div>
-	</div>
+	</section>
 </Container>

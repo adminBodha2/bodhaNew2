@@ -6,12 +6,12 @@
 </script>
 
 <Container>
-	<div class="header-margin is-last">
+	<section class="box wrapper-std rgap32 header-margin">
 	<Crumb showT={true} title="Site Docs"/>
-	<div class="textbox">
-		<a class="linked" href="/docs/terms-and-conditions">Terms and Conditions</a>
-		<a class="linked" href="/docs/privacy-policy">Privacy Policy</a>
-		<a class="linked" href="/docs/refunds-policy">Refunds Policy</a>
+	<div class="box rgap16">
+		<a class="linked paragraph-text" href="/docs/terms-and-conditions">Terms and Conditions</a>
+		<a class="linked paragraph-text" href="/docs/privacy-policy">Privacy Policy</a>
+		<a class="linked paragraph-text" href="/docs/refunds-policy">Refunds Policy</a>
 	</div>
-	</div>
+	</section>
 </Container>

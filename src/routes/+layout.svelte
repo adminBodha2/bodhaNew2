@@ -21,9 +21,7 @@
 	import SearchModal from '$lib/comps/searchmodal.svelte';
 	import SiteTour from '$lib/comps/sitetour.svelte';
 
-	const pageTransitionTopClass = 'page-transition-top';
-	const pageTransitionDeepClass = 'page-transition-deep';
-	const pageTransitionDeepScrollY = 240;
+	const pageTransitionClass = 'page-transition';
 
 	let { children } = $props();
 	let width = $state(0);
@@ -72,20 +70,14 @@
 		if (!document.startViewTransition) return;
 		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		if (navigation.from?.url.pathname === navigation.to?.url.pathname) return;
-		const isDeepScroll = window.scrollY > pageTransitionDeepScrollY;
-		const transitionClass = isDeepScroll ? pageTransitionDeepClass : pageTransitionTopClass;
 
 		return new Promise((resolve) => {
-			document.documentElement.classList.add(transitionClass);
-			const transition = document.startViewTransition(async () => {
+			document.documentElement.classList.add(pageTransitionClass);
+			document.startViewTransition(async () => {
 				resolve(undefined);
 				await navigation.complete;
-				if (isDeepScroll) {
-					window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-				}
-			});
-			transition.finished.finally(() => {
-				document.documentElement.classList.remove(transitionClass);
+			}).finished.finally(() => {
+				document.documentElement.classList.remove(pageTransitionClass);
 			});
 		});
 	});
@@ -128,42 +120,23 @@ main
 	view-transition-name: page
 	background: var(--color-back)
 
-:global(html.page-transition-top::view-transition-old(page)),
-:global(html.page-transition-top::view-transition-new(page)),
-:global(html.page-transition-deep::view-transition-old(page)),
-:global(html.page-transition-deep::view-transition-new(page))
-	animation: none
-	mix-blend-mode: normal
-
-:global(html.page-transition-top::view-transition-old(page)),
-:global(html.page-transition-deep::view-transition-old(page))
+:global(::view-transition-old(page))
 	z-index: 1
 
-:global(html.page-transition-top::view-transition-new(page)),
-:global(html.page-transition-deep::view-transition-new(page))
+:global(::view-transition-new(page))
 	z-index: 2
-
-:global(html.page-transition-top::view-transition-new(page))
 	animation: page-vertical-wipe 560ms cubic-bezier(0.76, 0, 0.24, 1) both
 
-:global(html.page-transition-deep::view-transition-new(page))
-	animation: page-deep-scroll-reveal 460ms cubic-bezier(0.76, 0, 0.24, 1) both
-
 @media (prefers-reduced-motion: reduce)
-	:global(html.page-transition-top::view-transition-old(page)),
-	:global(html.page-transition-top::view-transition-new(page)),
-	:global(html.page-transition-deep::view-transition-old(page)),
-	:global(html.page-transition-deep::view-transition-new(page))
+	:global(::view-transition-old(page)),
+	:global(::view-transition-new(page))
 		animation: none
 		mix-blend-mode: normal
 
-@keyframes page-vertical-wipe
-	from
-		clip-path: inset(0 100% 0 0)
-	to
-		clip-path: inset(0 0 0 0)
+::view-transition-group(*)
+	animation: none
 
-@keyframes page-deep-scroll-reveal
+@keyframes page-vertical-wipe
 	from
 		clip-path: inset(0 0 100% 0)
 		opacity: 0.92

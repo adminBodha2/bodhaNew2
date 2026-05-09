@@ -4,9 +4,9 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Responsive from '$lib/comps/responsive-menu.svelte'
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import Buttontray from '$lib/comps/buttontray.svelte'
-	import Dropdown from '$lib/comps/responsive-menu.svelte'
 	import { slide } from 'svelte/transition'
 	import { quartInOut, quintOut } from 'svelte/easing'
 
@@ -55,60 +55,54 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container graphing={true}>
-	<div class="header-margin">
-			<div class="labelbox">
-				<Crumb showT={true} title={data.concept.title} showRow={true}>
-				<p class="descriptor-text grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes. All subdomains listed here:</p>
-				</Crumb>
-			</div>
-			<div class="elembox">
-				<Buttontray 
-					options={groups} 
-					onSelect={toggleIsItem} 
-				/>
+	<section class="box wrapper-std header-margin rgap32">
+		<Crumb showT={true} title={data.concept.title} showRow={true}>
+		<p class="grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes.  All concept items in knowledge base here.</p>
+		</Crumb>
+		<Responsive>
+			{#each groups as group, i}
+				<button class="selection-button" class:active={isItem=== i} onclick={() => toggleIsItem(i)}>{group.label}</button>
+			{/each}
+		</Responsive>
+		<div class="box containing-graph">
 				{#each groups as group, i (group.label)}
 					{#if i === isItem}
-						<div class="node-grid">
+						<div class="grid lg:grid-cols-3 xl:grid-cols-4 b-main radius" id="node-grid">
 							{#each group.items as item, j (item.node.id)}
+								<div class="number box">
 								<a
-									class="blank labelbox whitestone card-padded node-card"
+									class="blank box p16 lg:p32 rgap8"
 									href={item.href}
 									target={item.isExternal ? '_blank' : undefined}
 									rel={item.isExternal ? 'noreferrer' : undefined}
 									in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
 								>
-									<p class="paragraph-text w500 tight">{item.node.title}</p>
+									<p class="paragraph-text w600 tight">{item.node.title}</p>
 									{#if item.node.description}
-										<p class="descriptor-text grey tight">{item.node.description}</p>
+										<p class="grey tight">{item.node.description}</p>
 									{/if}
-									<div class="row cgap4 rgap4 wrap ycenter self-bottom bordertop ptop8">
+								</a>
+									<div class="row cgap4 rgap4 wrap ycenter self-bottom bordertop pleft16 lg:pleft32 ptop16 pbot16 tags">
 										{#each item.node.tags as tag}
-											<span class="tag-pill dead tt-u">{tag.replaceAll('-',' ')}</span>
+											<a class="tag-pill hollow tt-u" href="/concepts/{tag}">{tag.replaceAll('-',' ')}</a>
 										{/each}
 									</div>
-								</a>
+								</div>
 							{/each}
 						</div>
 					{/if}
 				{/each}
 			</div>
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">
 
-.node-grid
-	display: grid
-	grid-template-columns: 1fr
-	gap: 1px
-	background: var(--color-grey-1)
-	border: var(--border-main)
-	@media screen and (min-width: 760px)
-		grid-template-columns: repeat(2, minmax(0, 1fr))
-	@media screen and (min-width: 1180px)
-		grid-template-columns: repeat(3, minmax(0, 1fr))
+.tags
+	background: var(--color-grey-4)
 
-.node-card
-	min-height: 100%
+#node-grid
+	overflow: hidden
+	gap: 8px
 
 </style>

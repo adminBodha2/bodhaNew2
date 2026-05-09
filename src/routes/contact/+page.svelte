@@ -47,9 +47,10 @@
 />
 
 <Container>
-	<div class="header-margin is-last">
+	<section class="box wrapper-std header-margin rgap32">
 		<Crumb showT={true} title="Contact Us"/>
-		<p>
+	<div class="box rgap16">
+		<p class="paragraph-text">
 			Write to us at <span class="blue">contact@bodharesearch.in</span><br />
 			or, reach out on social media-
 		</p>
@@ -67,6 +68,7 @@
 				<Linkedin size="24" color={'var(--color-alt'} />
 			</a>
 		</div>
-		<p>For queries on website, to report bugs/broken links etc., please write to sitemaster@bodharesearch.in</p>
+		<p class="paragraph-text">For queries on website, to report bugs/broken links etc., please write to sitemaster@bodharesearch.in</p>
 	</div>
+	</section>
 </Container>

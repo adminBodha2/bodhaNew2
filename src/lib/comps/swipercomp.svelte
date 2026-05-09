@@ -114,7 +114,7 @@
 
 <div class="swiper-row" class:marquee>
 	<div class="xleft column width100 mobile-rule">
-	<p class="mleft ta-l">Swipe left/right to navigate</p>
+		<p class="mleft ta-l">Swipe left/right to navigate</p>
 	</div>
 	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
@@ -123,10 +123,10 @@
 	</div>
 	<div class="buttons-and-rule box xleft rgap8">
 		<div class="nav-buttons row ycenter xcenter cgap8 mleft">
-			<button class="selection-button prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
+			<button class="nav-button prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
 				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi-2)" stroke="var(--color-anveshi-2)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
 			</button>
-			<button class="selection-button next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
+			<button class="nav-button next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
 				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi-2)" stroke="var(--color-anveshi-2)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
 			</button>
 		</div>
@@ -140,14 +140,14 @@
 
 <style lang="sass">
 
-.selection-button
+.nav-button
 	border: 1px solid #d7d7d7
 	background: var(--color-stone)
 	font-size: 0.85rem
 	font-weight: 500
 	letter-spacing: 0.01rem
 	padding:  0.6em 1em 0.3em 1em
-	border-radius: 4px
+	border-radius: 8px
 	box-shadow: 1px 2px 3px rgba(0,0,0,0.2)
 	transition: background 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), color 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), border 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), box-shadow 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
 	transform-origin: center center

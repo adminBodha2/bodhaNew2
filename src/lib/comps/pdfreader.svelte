@@ -169,8 +169,7 @@
 
 .reader
 	width: 100%
-	height: 82vh
-	min-height: 600px
+	height: 72vh
 	display: flex
 	flex-direction: column
 	border: 1px solid rgba(0,0,0,0.1)

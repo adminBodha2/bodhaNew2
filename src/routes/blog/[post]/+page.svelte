@@ -110,15 +110,15 @@
 
 <Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="3px" {ref} />
 <Container>
-<div class="blog-heading header-margin">
-	<div class="elembox blog-title-area xcenter mleft ta-c">
-		<Crumb/>
-		<h1 class="page-title source-serif width80 self-center">{data.title}</h1>
-		<div class="textbox stone-box width60 self-center">
-		<p class="altprim">{data.excerpt}</p>
-		<div class="info row ycenter xcenter mleft">
+<section class="box rgap32 wrapper-std header-margin">
+	<div class="box rgap16 xcenter mleft ta-c ptop32 pbot32">
+		<Crumb onblog={true}/>
+		<h1 class="page-title source-serif width70 self-center">{data.title}</h1>
+		<div class="box rgap16 width90 self-center">
+		<p class="altprim paragraph-text">{data.excerpt}</p>
+		<div class="info row ycenter xcenter mleft cgap8">
 			<div class="line left-line"></div>
-			<p class="descriptor-text"><a class="linked" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
+			<p class="highlight-text"><a class="linkedlight" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
 			<div class="line right-line"></div>
 		</div>
 		<div class="tag-row row self-center">
@@ -131,29 +131,27 @@
 	<div class="box blog-image-area xcenter">
 		<WaterRipple src={metaImage} class="ripple-motion" brushSize={100}/>
 	</div>
-	<div class="article-slate">
 	<article class="blog-article self-center" bind:this={ref}>
 		<data.content />
-		<div class="row share-row ycenter cgap16 xbetween">
-			<Social urlToShare={page.url.href} />
-			<a class="small-button" href="/blog">← Back to Blog</a>
-		</div>
 	</article>
-	</div>
-</div>
-<div class="bordertop">
+		<div class="row share-row ycenter cgap16 xbetween post-article self-center">
+			<Social urlToShare={page.url.href} />
+			<a class="grey-button" href="/blog">← Back to Blog</a>
+		</div>
+</section>
+<section class="box wrapper-std rgap64 growingline">
 	{#if posts && posts.length > 0}
-		<Title text="More Like This"/>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
+		<h2>More Like This</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 cgap4 rgap4">
 			{#each posts as item, i}
-				<a class="postcard blank labelbox card-padded" href={item.linkpath}>
-					<p class="paragraph-text tight bold">{item.meta.title}</p>
-					<p class="descriptor-text grey">{item.meta.excerpt}</p>
+				<a class="box blank p16 rgap8 lg:p24 b-main ncolor-inv" href={item.linkpath}>
+					<p class="paragraph-text tight bold a-hover">{item.meta.title}</p>
+					<p class="grey">{item.meta.excerpt}</p>
 					<div class="box foot self-bottom bordertop ptop8">
-					<p class="tag-text lgrey tt-u">{item.meta.author} | {item.meta.words} words</p>
+					<p class="tag-text grey tt-u">{item.meta.author} | {item.meta.words} words</p>
 					<div class="row of-info mwrap cgap8 rgap8">
 						{#each item.meta.tags as tag}
-							<p class="tag-pill hollow themed tt-u">{tag.replaceAll('-',' ')}</p>
+							<p class="tag-pill hollow themed tt-u dead">{tag.replaceAll('-',' ')}</p>
 						{/each}
 					</div>
 					</div>
@@ -161,7 +159,7 @@
 			{/each}
 		</div>
 	{/if}
-</div>
+</section>
 </Container>
 
 <style lang="sass">
@@ -183,6 +181,7 @@
 		height: 360px
 	@media screen and (min-width: 1025px)
 		height: 800px
+		border-radius: 60px
 
 .line
 	height: 1px
@@ -196,25 +195,16 @@
 	flex-wrap: wrap
 	gap: 6px
 
-.tag-pill
-	font-size: 7.5px
-	font-weight: 700
-	letter-spacing: 0.1em
-	color: var(--text-ghost)
-	padding: 3px 10px
-	border-radius: 100px
-	border: 1px solid rgba(0,0,0,0.08)
-	background: #F5F5F4
-	transition: background 0.12s ease
-	&:hover
-		background: #EEEDE9
-		color: #555
-
 .blog-article
 	width: 100%
-	@media screen and (min-width: 1025px)
-		width: 944px
-		padding: 2rem
+	@media (min-width: 1025px)
+		width: 920px
+		padding: 4rem 2rem 0 2rem
+
+.post-article
+	width: 100%
+	@media (min-width: 1025px)
+		width: 920px
 
 .share-row
 	display: flex

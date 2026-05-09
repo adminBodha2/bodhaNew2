@@ -288,9 +288,6 @@ button.with-tooltip
 	outline: none
 	display: none
 
-.pdf-reader
-	align-items: center
-
 a.svg-hover
 	&:hover
 		svg
@@ -469,15 +466,19 @@ a
 .radius6
 	border-radius: 6px
 
-.number:nth-child(odd)
-	background: #fcfcfc
-	&:hover
-		background: #F9F8F6
+.number:nth-child(3n)
+	background: var(--color-stone)
 
-.number:nth-child(even)
-	background: #f5f5f5
+.number:nth-child(3n+1)
+	background: var(--color-alt-3)
+
+.number:nth-child(3n+2)
+	background: var(--color-stone-2)
+
+a.number
+	transition: background 190ms ease
 	&:hover
-		background: #F9F8F6
+		background: var(--color-back)
 
 .ncolor:nth-child(4n)
 	background: var(--color-stone)
@@ -499,13 +500,22 @@ a.ncolor
 		background: var(--color-back)
 
 .ncolor-inv:nth-child(3n)
+	background: var(--color-back)
 	&:hover
 		background: var(--color-stone)
 
 .ncolor-inv:nth-child(3n+1)
+	background: var(--color-back)
 	&:hover
 		background: var(--color-stone-3)
 
 .ncolor-inv:nth-child(3n+2)
+	background: var(--color-back)
 	&:hover
 		background: var(--color-alt-1)
+
+
+.margin-head
+	margin-top: 64px
+	@media (min-width: 1025px)
+		margin-top: 72px

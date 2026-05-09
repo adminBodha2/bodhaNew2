@@ -14,14 +14,15 @@
 <section class="key-image">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100}/>
 </section>
-	<div class="is-first">
-		<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
+<section class="box wrapper-std first-box">
+	<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
 		<div class="whitepaper-box">
 			<div class="whitepaper-page">
 				<data.content/>
 			</div>
 		</div>
-	</div>
+</section>
+	
 </Container>
 
 <style lang="sass">
@@ -40,8 +41,8 @@
 		border-bottom: var(--border-dark)
 		.whitepaper-page
 			width: 1024px
-			border-left: var(--border-darker)
-			border-right: var(--border-darker)
+			border-left: var(--border-dark)
+			border-right: var(--border-dark)
 			background: var(--color-back)
 			margin-left: auto
 			margin-right: auto
