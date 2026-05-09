@@ -6,7 +6,6 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Responsive from '$lib/comps/responsive-menu.svelte'
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import Buttontray from '$lib/comps/buttontray.svelte'
 	import { slide } from 'svelte/transition'
 	import { quartInOut, quintOut } from 'svelte/easing'
 
