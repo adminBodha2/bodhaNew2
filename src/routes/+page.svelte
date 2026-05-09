@@ -8,6 +8,7 @@
 	import { verticals, publications } from '$lib/utils/localsends';
 	import VideoPlayer from '$lib/comps/custom-video-player.svelte';
 	import Slider from '$lib/svelteanim/components/Slide.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 
 	let { data }: { data: PageData } = $props();
@@ -15,6 +16,8 @@
 	let blogs = $derived(data.blogs ?? []);
 	let vids = $derived(data.vids ?? []);
 	let latestItems = $derived(data.latestItems ?? []);
+	let headReveal = $state<HTMLElement | null>(null);
+	let headVis = useInView(() => headReveal, {threshold: 0.2, once: true});
 	let section = $state<HTMLElement | null>(null);
 	let sectionTwo = $state<HTMLElement | null>(null);
 	let sectionThree = $state<HTMLElement | null>(null);
@@ -39,17 +42,25 @@
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
 <Container>
-	<section class="wrapper-std tight-stack" id="first">
-		<div class="box rgap16">
-			<h1 class="source-serif width60"><span class="blue">Bodha</span> is a think tank and research group,</h1>
-			<p class="highlight-text width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+	<section class="wrapper-std" id="first">
+		<div class="box rgap8" id="introduction" bind:this={headReveal}>
+			<Reveal visible={headVis.visible} duration={400} direction="down" elasticOut>
+				<h1 class="source-serif"><span class="blue">Bodha</span> is a think tank</h1>
+			</Reveal>
+			<Reveal visible={headVis.visible} delay={200} duration={400} direction="down" elasticOut>
+				<h1 class="source-serif">and research group,</h1>
+			</Reveal>
+			<Reveal visible={headVis.visible} delay={600} duration={600} direction="down">
+				<div class="ptop16 lg:ptop32"><p class="highlight-text width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></div>
+			</Reveal>
 		</div>
+		<h2>Our Pillars</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4" bind:this={section}>
 			{#each verticals as item, i}
 				<Slider visible={verticalsInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 200}>
 					<a class="box blank verticals glass-1" href={item.href}>
-						<div class="p8 pbot12"><enhanced:img class="portrait" src={item.image} alt={item.title} /></div>
-						<div class="box rgap8 p16 notop">
+						<div class="p8 pbot16"><enhanced:img class="portrait radius8" src={item.image} alt={item.title} /></div>
+						<div class="box rgap8 p24 notop">
 							<h2 class="card-title source-serif">{item.title}</h2>
 							<p class="grey">{item.desc}</p>
 						</div>
@@ -66,10 +77,10 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4">
 				{#each latestItems as item, i}
 					<Slider visible={secondInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<a class="box rgap8 p16 blank glass-3" href={item.link}>
-							<p class="paragraph-text w500 tight a-hover">{item.title}</p>
+						<a class="box rgap12 p24 blank glass-3" href={item.link}>
+							<p class="card-title tight a-hover">{item.title}</p>
 							<p class="grey">{item.description}</p>
-							<p class="tag-pill tt-u self-bottom dead">{item.badge}</p>
+							<p class="tag-pill tt-u self-bottom hollow themed dead">{item.badge}</p>
 						</a>
 					</Slider>
 				{/each}
@@ -84,7 +95,7 @@
 				<Title text="essays and articles" />
 				<a class="primary" href="/blog"><span>See All</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap4">
 				{#each blogs as item, i}
 					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
 						<div class="box glass-2">
@@ -96,7 +107,7 @@
 								{/if}
 							</div>
 							<a class="blank p16" href={item.linkpath} aria-label="image">
-								<enhanced:img class="fit" src={item.meta.image} alt={item.meta.title} />
+								<enhanced:img class="fit radius8" src={item.meta.image} alt={item.meta.title} />
 							</a>
 							<a class="blank box rgap8 p16 lg:p32 notop" href={item.linkpath}>
 								<p class="card-title tight a-hover">{item.meta.title}</p>
@@ -165,6 +176,11 @@
 </Container>
 
 <style lang="sass">
+
+#introduction
+	@media (min-width: 1025px)
+		padding-top: 3rem
+		padding-bottom: 3rem
 
 .contained.left
 	object-fit: contain

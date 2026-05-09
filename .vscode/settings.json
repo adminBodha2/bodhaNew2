@@ -28,7 +28,7 @@
 	},
 	"editor.defaultFormatter": "svelte.svelte-vscode",
 	"prettier.printWidth": 400,
-	"editor.fontSize": 16,
+	"editor.fontSize": 18,
 	"prettier.tabWidth": 4,
 	"editor.tabSize": 4,
 	"markdown.preview.fontFamily": "\"Google Sans Flex\", sans-serif",

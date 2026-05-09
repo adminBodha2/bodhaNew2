@@ -47,7 +47,7 @@
 />
 
 <Container>
-<section class="box wrapper-std rgap32 header-margin">
+<section class="wrapper-std rgap32 header-margin">
 	<Crumb showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization."/>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 			{#each teamMembers as member}

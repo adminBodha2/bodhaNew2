@@ -24,7 +24,7 @@
 	background: var(--color-back)
 	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
 	&:hover
-		background: var(--color-stone-1)
+		background: var(--color-stone-0)
 
 button.whitestone
 	background: var(--color-back)
@@ -49,17 +49,19 @@ button.whitestone
 .glass-2
 	overflow: hidden
 	border: var(--border-main)
-	border-radius: 8px
-	background: var(--color-stone-2)
+	border-radius: 12px
+	background: var(--color-stone-1)
 	box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0)
 	transition: box-shadow var(--ts-card), border var(--ts-card), background var(--ts-card)
 	&:hover
 		box-shadow: 0 1px 3px rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.04), 0 8px 5px rgba(15,23,42,0.08), 0 20px 8px rgba(15,23,42,0.05)
 		background: var(--color-back)
-		border: var(--border-dark)
+		border: var(--border-darker)
+	@media (max-width: 1024px)
+		border: var(--border-darker)
 
 .glass-3
-	background: var(--color-stone-0)
+	background: var(--color-stone-3)
 	border: 1px solid var(--color-border-light)
 	border-radius: 8px
 	transition: box-shadow var(--ts-snap), background var(--ts-snap), border var(--ts-snap)

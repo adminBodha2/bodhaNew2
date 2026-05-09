@@ -20,7 +20,7 @@
 	let isVisible = useInView(() => reference, { threshold: 0.2, once: true });
 </script>
 
-<div class="row ycenter xleft cgap8 rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
+<div class="row ycenter xleft cgap8 lg:rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
@@ -36,7 +36,7 @@
 <style lang="sass">
 
 	.animatenow.bob
-		@media (min-width: 1201px)
+		@media (min-width: 1025px)
 			animation: fromLeft 1s ease-in-out forwards
 
 	h2
@@ -48,7 +48,8 @@
 		opacity: 0
 		transform: translate(-80px)
 		@media (max-width: 1024px)
-			display: none
+			transform: translate(0)
+			opacity: 1
 
 	.text-animation
 		display: inline-block
