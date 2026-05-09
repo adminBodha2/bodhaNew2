@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import Container from '$lib/comps/wrapper.svelte'
+	import Container from '$lib/comps/wrapper.svelte';
 	import '$lib/styles/system/document-layout.sass';
 	import { libCategories, libPaths } from '$lib/utils/localsends';
 	import libraryItems from '$lib/serving/library-items.json';
@@ -57,11 +57,9 @@
 			openAccordion = currentAccordion;
 		}
 	});
-
 </script>
 
-
-<Container graphing={true}>
+<Container>
 	<section class="docgrid scrollside">
 		<div class="box docside">
 			<div class="doclist">
@@ -70,14 +68,7 @@
 					{#each libCategories as cat}
 						{@const accordionKey = `category:${cat.forLink}`}
 						<div class="accordion-item">
-							<button
-								class="sidebar-button"
-								class:active={openAccordion === accordionKey}
-								type="button"
-								aria-expanded={openAccordion === accordionKey}
-								aria-controls={`library-category-${cat.forLink}`}
-								onclick={() => toggleAccordion(accordionKey)}
-							>
+							<button class="sidebar-button" class:active={openAccordion === accordionKey} type="button" aria-expanded={openAccordion === accordionKey} aria-controls={`library-category-${cat.forLink}`} onclick={() => toggleAccordion(accordionKey)}>
 								<span>{cat.label}</span>
 								<span class="accordion-icon" aria-hidden="true">{openAccordion === accordionKey ? '-' : '+'}</span>
 							</button>
@@ -85,12 +76,7 @@
 								<div class="book-list" id={`library-category-${cat.forLink}`}>
 									{#if booksByCategory[cat.forLink]?.length}
 										{#each booksByCategory[cat.forLink] as book}
-											<a
-												class="book-link"
-												href={book.type === 'aryan-issue' ? book.linkreal : book.linkfinal}
-												target={book.type === 'aryan-issue' ? '_blank' : undefined}
-												rel={book.type === 'aryan-issue' ? 'noreferrer' : undefined}
-											>
+											<a class="book-link" href={book.type === 'aryan-issue' ? book.linkreal : book.linkfinal} target={book.type === 'aryan-issue' ? '_blank' : undefined} rel={book.type === 'aryan-issue' ? 'noreferrer' : undefined}>
 												{book.name}
 											</a>
 										{/each}
@@ -107,14 +93,7 @@
 						{@const pathSlug = path.href.split('/').at(-1)}
 						{@const accordionKey = `path:${pathSlug}`}
 						<div class="accordion-item">
-							<button
-								class="sidebar-button"
-								class:active={openAccordion === accordionKey}
-								type="button"
-								aria-expanded={openAccordion === accordionKey}
-								aria-controls={`library-path-${pathSlug}`}
-								onclick={() => toggleAccordion(accordionKey)}
-							>
+							<button class="sidebar-button" class:active={openAccordion === accordionKey} type="button" aria-expanded={openAccordion === accordionKey} aria-controls={`library-path-${pathSlug}`} onclick={() => toggleAccordion(accordionKey)}>
 								<span>{path.label}</span>
 								<span class="accordion-icon" aria-hidden="true">{openAccordion === accordionKey ? '-' : '+'}</span>
 							</button>

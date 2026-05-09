@@ -38,5 +38,6 @@
 	"editor.parameterHints.enabled": false,
 	"[postcss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"editor.formatOnSave": true
 }

@@ -253,14 +253,14 @@
 				</ResponsiveMenu>
 			</div>
 			{#if futureproj && futureproj.length > 0 && isRegion[7]}
-				<Swipes slidesPerView={4} spaceBetween={16} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 4, spaceBetween: 16 } }}>
+				<Swipes slidesPerView={4} spaceBetween={4} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 4, spaceBetween: 4 } }}>
 					{#each futureproj as item}
 						<swiper-slide>
-							<div class="sub-item box rgap16 swiper-sub">
-								<div class="p8"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
+							<div class="sub-item box rgap16 swiper-sub radius8 overflow-hidden">
+								<div class="p4"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
 								<div class="box rgap8 px16 lg:px24">
-									<p class="paragraph-text bold tt-c">{item.chapter}</p>
-									<p class="grey pbot8">{item.shortdesc}</p>
+									<p class="card-title bold tt-c">{item.chapter}</p>
+									<p class="paragraph-text grey pbot8">{item.shortdesc}</p>
 								</div>
 								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
 									{#if item.region}<p class="tag-pill anveshi tt-u">{item.region}</p>{/if}
@@ -361,15 +361,9 @@
 	flex-direction: column
 	justify-content: flex-start
 	row-gap: 2rem
-	border: var(--border-main)
-	background: var(--color-stone-3)
-	border-radius: 8px
-	@media (max-width: 1024px)
-		padding: 1rem
 	@media (min-width: 1025px)
 		min-height: 80vh
 		row-gap: 2rem
-		padding: 2rem
 
 #testimonials
 	@media (min-width: 1025px)
@@ -388,7 +382,6 @@
 .sub-item
 	border: 1px solid #d7d7d7
 	border-radius: 8px
-	box-shadow: 2px 0px 7px rgba(0,0,0,0.2)
 	background: var(--color-back)
 	&.swiper-sub
 		height: calc(100% - 2rem)
@@ -450,7 +443,6 @@ swiper-slide > *
 	width: 100%
 	height: 240px
 	object-fit: cover
-	box-shadow: 3px 2px 3px rgba(0,0,0,0.2)
 	border-radius: 4px
 
 </style>

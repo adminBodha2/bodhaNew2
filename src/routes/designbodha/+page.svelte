@@ -46,7 +46,7 @@
 	<section class="box wrapper-std rgap64 first-box">
 			<Crumb showT={false} showD={false} />
 		<h1 class="ptop32 anim-flyup"><span class="desb">design</span>Bodha</h1>
-		<h1 class="design-bodha-head">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</h1>
+		<h2 class="card-title thin">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</h2>
 		<img class="motif anim-flyin-right" style="margin-left: 200px;transform: translateX(-{sY / 7}px) rotate({sY / 2}deg)" src="/images/designbodha/desbodha-motif.webp" alt="designBodha motif" />
 	</section>
 	<section class="box wrapper-std rgap64 growingline" id="image-panel">
@@ -66,7 +66,7 @@
 		</div>
 	</section>
 	<section class="box wrapper-std rgap64 growingline alternate" id="image-panel-2">
-			<h2 class="thin-heading anim-flyup">Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br>
+			<h2 class="thin card-title anim-flyup">Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br>
 				is creatorship grounded in Hindu metaphysics.<br>
 				It redefines <span class="desb">design as a sacred act</span><br>
 				of aligning human creation with the cosmic order.
@@ -130,10 +130,6 @@ img.square-image
 	@media screen and (min-width: 1201px)
 		height: 640px
 		width: 640px
-
-h2.thin-heading
-	@media screen and (min-width: 1025px)
-		padding-bottom: 3rem
 
 #image-panel-2
 	position: relative

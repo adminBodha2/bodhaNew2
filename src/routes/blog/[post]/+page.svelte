@@ -6,7 +6,6 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
-	import Title from '$lib/comps/page-title.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';

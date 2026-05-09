@@ -10,14 +10,14 @@
 </script>
 
 
-<Container graphing={true}>
+<Container>
 <section class="key-image">
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100}/>
 </section>
 <section class="box wrapper-std first-box">
 	<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
 		<div class="whitepaper-box">
-			<div class="whitepaper-page">
+			<div class="classic-document">
 				<data.content/>
 			</div>
 		</div>
@@ -35,11 +35,11 @@
 		margin-top: 128px
 
 .whitepaper-box
-	.whitepaper-page
+	.classic-document
 		padding-top: 1rem
 	@media screen and (min-width: 1025px)
 		border-bottom: var(--border-dark)
-		.whitepaper-page
+		.classic-document
 			width: 1024px
 			border-left: var(--border-dark)
 			border-right: var(--border-dark)
