@@ -35,7 +35,7 @@
 
 <Container>
 <Parallax imageLink="/images/key-academy.webp" />
-	<section class="box padded wraps first-box">
+	<section class="wrapper-std first-box">
 		<Crumb showT={true} title="Bodha Academy" showD={true} desc={metaDescription}/>
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap16" bind:this={revealref}>
 			<Reveal visible={revealVis.visible}>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="box padded wraps growingline" bind:this={reference}>
+	<section class="wrapper-std growingline" bind:this={reference}>
 		<Title text="courses" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 			<Slider visible={isVisible.visible} direction="left" outDirection="left" distance={200} duration={400} delay={500}>
@@ -86,7 +86,7 @@
 			</Slider>
 		</div>
 	</section>
-	<section class="box padded wraps growingline alternate is-last">
+	<section class="wrapper-std growingline alternate">
 		<Title text="Academy Scholars"/>
 		<div class="box">
 			{#each posts as item}

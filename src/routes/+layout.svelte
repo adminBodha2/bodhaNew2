@@ -11,7 +11,6 @@
 	import '$lib/styles/system/index.sass';
 	import '$lib/styles/icons.css';
 	import { darkTheme, iW, openSiteTourSelector, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
-	import { elementVisibilityStore } from '$lib/utils/elementVisibility';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
@@ -21,8 +20,6 @@
 
 	let { children } = $props();
 	let width = $state(0);
-	let footerRef = $state<HTMLElement | null>(null);
-	let isFooterVisible = $state(false);
 	let count = $state(0)
 	$effect(() => {
 		$iW = width < 1025;
@@ -46,21 +43,6 @@
 			$searchState = !$searchState;
 		}
 	}
-
-	$effect(() => {
-		if (!footerRef) {
-			isFooterVisible = false;
-			return;
-		}
-		const visibility = elementVisibilityStore(footerRef);
-		const unsubscribe = visibility.isVisible.subscribe((value: boolean) => {
-			isFooterVisible = value;
-		});
-		return () => {
-			unsubscribe();
-			visibility.stop();
-		};
-	});
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -103,7 +85,7 @@
 	<main>
 		{@render children?.()}
 	</main>
-	<footer class="box" bind:this={footerRef}>
+	<footer class="box">
 		<Bottom />
 	</footer>
 	<SearchModal />

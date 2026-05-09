@@ -100,8 +100,8 @@
 			display: block
 	@media screen and (min-width: 1025px)
 		height: 100vh
-		margin-top: 80px
-		border-radius: 64px
+		margin-top: 88px
+		border-radius: 32px
 		&.is100
 			height: calc(100vh - 144px)
 		.parallax-target

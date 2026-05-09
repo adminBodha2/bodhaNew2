@@ -50,7 +50,7 @@
 						{/if}
 					</a>
 				{:else}
-					<a class="blank box rgap8 whitestone p16 lg:p24 b-main radius" href={item.linkfinal}>
+					<a class="blank box rgap8 p16 lg:p24 b-main radius teststone" href={item.linkfinal}>
 						<p class="paragraph-text w600 tight">{item.name}</p>
 						<p class="descriptor-text grey tight">{item.summary}</p>
 						<p class="grey tight">{item.author}</p>

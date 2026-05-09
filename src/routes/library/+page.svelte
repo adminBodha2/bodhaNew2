@@ -4,7 +4,6 @@
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 	import Container from '$lib/comps/wrapper.svelte';
-	import Dropdown from '$lib/comps/responsive-menu.svelte'
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import libraryItems from '$lib/serving/library-items.json';
