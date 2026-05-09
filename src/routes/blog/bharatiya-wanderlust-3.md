@@ -4,8 +4,9 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
-  - history
   - out-of-india-theory
+  - history
+  - shatrubodha
 date: 2024-01-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp
 excerpt: Part 3 - archaeological and genetic evidence for Out-of-India, concluding with a positive reconstruction of what the actual Āryan dispersal looked like and what it means for India's understanding of its civilizational origins.

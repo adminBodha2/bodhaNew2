@@ -5,6 +5,7 @@ author:
 category: Thought Pieces
 tags:
   - modernity
+  - civilizational-consciousness
 excerpt: India walks a tightrope between two dystopias - Orwell's totalitarian surveillance state and Huxley's pleasure-addicted passivity. A Dhārmika reading of both futures and the framework that could thread between them.
 date: 2023-12-20
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/tightrope.webp

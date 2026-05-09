@@ -4,9 +4,9 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
+  - rama
   - festivals
   - civilizational-consciousness
-  - rama
 date: 2022-10-24
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ramas-journey.webp
 excerpt: Rāma's exile and return as inner journey - reading the Rāmāyaṇa as a map of the soul's trajectory - and why Dīpāvalī marks a cosmological reorientation of consciousness.

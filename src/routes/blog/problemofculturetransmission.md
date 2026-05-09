@@ -6,7 +6,7 @@ category: Thought Pieces
 tags:
   - culture
   - hindu-institutions
-  - tradition
+  - svayambodha
 date: 2022-09-12
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/problem-of-culture-transmission.webp
 excerpt: Tradition is a living chain of transmission - an examination of the specific mechanisms by which Hindu civilization has carried its deepest knowledge forward, and where those mechanisms are breaking today.

@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Opening the Navadurgā series - an introduction to the Navarātrī tradition followed by the theology and iconography of Śailaputrī Devī - daughter of the mountain, first of the nine forms, embodiment of primal śakti.
 date: 2024-10-03
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/shailaputri.webp

@@ -5,7 +5,7 @@ author:
 category: Culture Today
 tags:
   - purva-paksha
-  - review
+  - indological-critique
 date: 2023-07-31
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/freedom-of-expression.webp
 excerpt: Why clarity about the nature of prophetic monotheism's claim on speech is a prerequisite for any meaningful Hindu engagement with the politics of free expression - the conceptual tools for a discourse that currently lacks them.

@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Sixth in the Navadurgā series - the theology and iconography of Kātyāyanī Devī - the fierce warrior form born to destroy the demon Mahiṣāsura, and the deity invoked for strength in the face of civilizational threat.
 date: 2024-10-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/katyayani.webp

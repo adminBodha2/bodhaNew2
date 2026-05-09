@@ -4,7 +4,7 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - consciousness
+  - liberation
   - svayambodha
   - shatrubodha
 date: 2024-05-06

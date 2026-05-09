@@ -5,8 +5,8 @@ author:
 category: Thought Pieces
 tags:
   - aesthetics
+  - svayambodha
   - consciousness
-  - culture
 date: 2022-09-25
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/artandmeaningmaking.webp
 excerpt: Hindu aesthetics begins where Western aesthetics ends - the Indian tradition was interested in the effect of art on the soul, beyond the representation of reality, and this difference reveals two fundamentally incompatible metaphysical starting points.

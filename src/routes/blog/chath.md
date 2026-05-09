@@ -6,6 +6,7 @@ category: Culture Today
 tags:
   - festivals
   - tradition
+  - svayambodha
 date: 2022-11-14
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/chath.webp
 excerpt: Chaṭh as lived civilizational memory - a personal account of returning to Bihar for the festival, and what the survival of this demanding, water-centered rite reveals about the deep roots of Hindu devotional practice in the body and the land.

@@ -6,6 +6,7 @@ category: Thought Pieces
 tags:
   - anveshi
   - temple
+  - svayambodha
 date: 2026-03-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/journey-with-anveshi.webp
 excerpt: The origin story of Anveshi, Bodha's structured temple-visit practice - how collective temple-going became a form of civilizational reconnection - and what it reveals about how living tradition actually perpetuates itself.

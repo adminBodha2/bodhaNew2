@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Seventh in the Navadurgā series - the theology and iconography of Kālarātri Devī - the most fearsome form, destroyer of darkness and ignorance, whose terrifying appearance conceals absolute protection for the devotee.
 date: 2024-10-09
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/kalaratri.webp

@@ -6,6 +6,7 @@ category: Thought Pieces
 tags:
   - consciousness
   - modernity
+  - civilizational-consciousness
 excerpt: AI arrives as a non-neutral civilizational event - a comparison of simulation theory, Vedānta, and modern physics asks whether the intelligence emerging from our machines is something the Dhārmika tradition already has a vocabulary for.
 date: 2023-06-02
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/artificialintelligence.webp

@@ -6,7 +6,6 @@ category: Culture Today
 tags:
   - civilizational-consciousness
   - culture
-  - consciousness
 date: 2025-12-09
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bodhameaning.webp
 excerpt: The Bodha logo decoded - how a simple geometric mark encodes the entire civilizational philosophy - the fractal structure of Hindu consciousness expressed in the relationship between square, circle, and the space they share.

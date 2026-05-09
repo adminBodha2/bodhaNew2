@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Eighth in the Navadurgā series - the theology and iconography of Mahāgaurī Devī - the luminous, peaceful form that follows Kālarātri, representing the purity and grace that emerge after the destruction of all that is false.
 date: 2024-10-10
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/mahagauri.webp

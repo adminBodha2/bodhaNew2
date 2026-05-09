@@ -4,7 +4,9 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - consciousness
+  - indological-critique
+  - civilizational-consciousness
+  - svayambodha
 excerpt: Part 2 - continuing the diagnosis of why even well-meaning Western and westernized Indian intellectuals systematically fail to engage with Hinduism - and what a genuine encounter with it would actually require.
 date: 2023-12-27
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/hinduism-in-blindspot.webp

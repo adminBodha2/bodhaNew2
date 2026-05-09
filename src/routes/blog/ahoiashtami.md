@@ -4,8 +4,8 @@ author:
   - Pankaj Saxena
 category: Culture Today
 tags:
-  - ecology
   - festivals
+  - ecology
 date: 2022-10-17
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ahoiashtami.webp
 excerpt: A festival most Hindus have forgotten exists - Ahoi Aṣṭamī as a window into how Hindu civilization transmits ecological and relational wisdom through the devotional practice of mothers, one week before Diwali.

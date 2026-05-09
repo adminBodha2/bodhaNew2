@@ -6,7 +6,7 @@ category: Culture Today
 tags:
   - festivals
   - tradition
-  - mahabharata
+  - svayambodha
 date: 2022-08-19
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/kshetra-shastra-utsava.webp
 excerpt: On the axis connecting festival (utsava), sacred geography (kṣetra), and scripture (śāstra) - how Hindu festivals are to time what temples are to space - gradients of divine access that structure both the year and the land.

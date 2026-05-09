@@ -6,6 +6,7 @@ category: Thought Pieces
 tags:
   - consciousness
   - modernity
+  - civilizational-consciousness
 excerpt: Part 2 - a proactive Dhārmika framework for navigating artificial intelligence - neither uncritical adoption nor reflexive rejection, but a principled engagement grounded in the Indian understanding of consciousness and purpose.
 date: 2023-08-11
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/artificialintelligence.webp

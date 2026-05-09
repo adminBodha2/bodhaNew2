@@ -5,7 +5,7 @@ author:
 category: Thought Pieces
 tags:
   - civilizational-consciousness
-  - consciousness
+  - mahabharata
   - dharma
 date: 2023-10-25
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/culture-and-warfare.webp

@@ -4,6 +4,7 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
+  - rigvedic-history
   - history
   - civilizational-consciousness
 excerpt: Part 3 - the concluding reconstruction of the Dāśarājña - placing the battle in specific historical and geographic context and drawing out its implications for India's deep civilizational memory.

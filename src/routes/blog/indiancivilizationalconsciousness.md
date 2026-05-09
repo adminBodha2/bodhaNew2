@@ -5,6 +5,7 @@ author:
 category: Thought Pieces
 tags:
   - civilizational-consciousness
+  - svayambodha
 date: 2022-08-15
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/indian-civilizational-consciousness.webp
 excerpt: Written on India's 75th Independence Day - a precise exposition of what 'Indian Civilizational Consciousness' actually means - and why it is the necessary foundation for anything India does next.

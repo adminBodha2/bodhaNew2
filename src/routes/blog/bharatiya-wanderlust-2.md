@@ -4,8 +4,9 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
-  - history
   - out-of-india-theory
+  - history
+  - shatrubodha
 date: 2024-01-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp
 excerpt: Part 2 - examining the textual evidence for the Out-of-India model - what the Ṛgveda and comparative philology actually show when read without the Invasion Theory's assumptions baked in from the start.

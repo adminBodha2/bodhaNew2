@@ -5,6 +5,7 @@ author:
 category: Culture Today
 tags:
   - rama
+  - svayambodha
 date: 2024-01-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/return-of-rama.webp
 excerpt: A first-person account of the devotional groundswell preceding the 2024 Ayodhyā pratiṣṭhā - what a spontaneous civilizational awakening looks and feels like from the inside - and what it reveals about the living roots of Hindu consciousness.

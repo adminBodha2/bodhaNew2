@@ -4,6 +4,7 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
+  - rigvedic-history
   - history
   - civilizational-consciousness
 excerpt: Part 1 of a three-part reconstruction of the Dāśarājña (Battle of Ten Kings) as an early datable event in Indian history, reexamining Ṛgveda Maṇḍala 7 using Out-of-India chronological frameworks.

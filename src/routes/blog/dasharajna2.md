@@ -4,6 +4,7 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
+  - rigvedic-history
   - history
   - civilizational-consciousness
 excerpt: Part 2 - a close reading of the textual data in Ṛgveda Maṇḍala 7, parsing the battle's participants, geography, and historical context against established chronologies of Indian lineages.

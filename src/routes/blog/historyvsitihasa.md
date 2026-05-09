@@ -4,6 +4,7 @@ author:
   - Amritanshu Pandey
 category: History and Civilization
 tags:
+  - itihasas
   - history
   - civilizational-consciousness
 date: 2022-09-18

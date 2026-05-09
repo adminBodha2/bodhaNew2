@@ -4,7 +4,8 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - technology
+  - cosmology
+  - modernity
   - consciousness
 date: 2026-05-05
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/14lokas0telescopes.webp

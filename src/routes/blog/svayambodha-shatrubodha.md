@@ -6,6 +6,7 @@ category: Culture Today
 tags:
   - civilizational-consciousness
   - dharma
+  - shatrubodha
 date: 2022-11-13
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/svayambodha-shatrubodha.webp
 excerpt: Hindu civilizational discourse has entered its sophisticated phase - an argument that Svayambodha (self-knowledge) and Shatrubodha (knowledge of the adversary) now constitute a canonical framework.

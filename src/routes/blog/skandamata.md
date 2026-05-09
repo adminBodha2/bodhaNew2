@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Fifth in the Navadurgā series - the theology and iconography of Skandamātā Devī - mother of Skanda (Kārttikeya), the form that holds together the energies of motherhood, courage, and cosmic order.
 date: 2024-10-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/skandamata.webp

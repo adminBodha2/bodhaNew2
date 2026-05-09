@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Fourth in the Navadurgā series - the theology and iconography of Kūṣmāṇḍā Devī - the form who created the universe with her smile, and who is propitiated for health, vitality, and the removal of darkness.
 date: 2024-10-06
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/kushmanda.webp

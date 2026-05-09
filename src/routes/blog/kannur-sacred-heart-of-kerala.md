@@ -5,8 +5,8 @@ author:
 category: Thought Pieces
 tags:
   - anveshi
-  - kerala
-  - tourism
+  - sacred-geography
+  - svayambodha
 date: 2026-05-02
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/kannur-sacred-heart-of-kerala.webp
 excerpt: A deeply personal and evocative travel narrative through Kerala, capturing the transformative beauty of India’s lush southern landscapes. Blending wanderlust, heritage, and introspection, with authentic insights into Kerala’s timeless traditions, temple culture, and scenic charm.

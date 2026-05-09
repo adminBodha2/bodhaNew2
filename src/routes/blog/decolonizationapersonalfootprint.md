@@ -4,8 +4,9 @@ author:
   - Amritanshu Pandey
 category: Thought Pieces
 tags:
-  - decolonization
-  - history
+  - language
+  - sanskrit
+  - svayambodha
 date: 2022-09-02
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/decolonization.webp
 excerpt: Decolonization as daily practice - a personal account of what it actually looks like to replace a colonial operating system of the mind - starting with the words you use, the foods you eat, the festivals you observe.

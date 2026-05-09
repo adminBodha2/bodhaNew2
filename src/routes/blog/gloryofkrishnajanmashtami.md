@@ -6,6 +6,7 @@ category: Culture Today
 tags:
   - mahabharata
   - festivals
+  - svayambodha
 excerpt: A pilgrimage to Mathurā, the city of Kṛṣṇa's birth - how a journey through the geography of the Kṛṣṇa legend becomes a direct encounter with the living presence of the divine in place, available to anyone who knows how to look.
 date: 2023-09-16
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/glory-of-krishna-janmashtami.webp

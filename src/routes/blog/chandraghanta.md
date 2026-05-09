@@ -4,9 +4,9 @@ author:
   - Padmavathy Manavazhahan
 category: Culture Today
 tags:
-  - svayambodha
   - navaratri
-  - devi
+  - devi-mahatmya
+  - svayambodha
 excerpt: Third in the Navadurgā series - the theology and iconography of Candraghaṇṭā Devī - the warrior form whose crescent-bell emblem signals the transition from inner austerity to active, world-facing śakti.
 date: 2024-10-05
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/chandraghanta.webp

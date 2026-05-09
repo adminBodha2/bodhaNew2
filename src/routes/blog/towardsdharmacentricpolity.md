@@ -5,7 +5,8 @@ author:
 category: Culture Today
 tags:
   - festivals
-  - tradition
+  - modern-politics
+  - svayambodha
 date: 2022-09-08
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/towards-dharma-centric-polity.webp
 excerpt: As dharma recedes from both personal life and public governance, what would a genuinely dharma-centric political order look like - and is it achievable within or only beyond the current Indian constitutional framework?
