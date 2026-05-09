@@ -69,6 +69,8 @@
 
 .header-wrapper
 	width: 100%
+	padding-left: 1rem
+	padding-right: 1rem
 	.header-content
 		width: 100%
 	@media (min-width: 1025px)

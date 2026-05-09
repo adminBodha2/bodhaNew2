@@ -9,19 +9,20 @@
 	import Session from '$lib/icons/sessions.svelte';
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Location from '$lib/icons/location.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte'
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
+	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
+	import Tabs from '$lib/comps/Tabs.svelte'
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 	import { Lightbox } from 'svelte-lightbox';
 
 	let { data } = $props();
 
-	let selectedDay = $state(0);
 	let templeStatus = $state(0);
+	let ref = $state<HTMLElement | null>(null)
+	let vis = useInView(() => ref, {threshold: 0.5, once: true})
 	let iW = $state(0);
-
-	function selectDay(index: number) {
-		selectedDay = index;
-	}
 
 	let itins = $derived(data.itins ?? []);
 	let temples = $derived(data.templesList ?? []);
@@ -43,7 +44,7 @@
 				image: metaImage,
 				url: metaUrl,
 				itinerary: itins.map((item: any) => ({
-					name: item.label,
+					name: item.daylabel,
 					description: item.itinerary
 				}))
 			})
@@ -65,22 +66,26 @@
 />
 
 <Container>
-<section class="ripple-image-box">
+<Parallax wipe={true}>
 	<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
-</section>
-	<section class="box wrapper-std first-box rgap32">
+</Parallax>
+	<section class="tight-stack wrapper-std first-box">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
-			<p class="tag-pill anveshi">OPEN NOW!</p>
+			<p class="tag-pill anveshi dead">OPEN NOW!</p>
 			{/if}
 		</Crumb>
-		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 content-highlights">
-			<data.content/>
+		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 content-highlights" bind:this={ref}>
+			<Reveal visible={vis.visible}>
+				<data.content/>
+			</Reveal>
 		</div>
 		{#if data.quote}
+			<Reveal visible={vis.visible} delay={800}>
 			<p class="card-title thin italic source-serif width60 quote-text" style="color: var(--color-anveshi-alt)">{data.quote}</p>
+			</Reveal>
 		{/if}
-		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 col-span-full info-row width60">
+		<div class="grid grid-cols-2 xl:grid-cols-4 col-span-full info-row width60">
 			<div class="box dates p16">
 				<Calendar fill="var(--color-anveshi)"/>
 				<p class="descriptor-text w500 ptop8">{data.dates}</p>
@@ -113,44 +118,27 @@
 		</div>
 		</div>
 	</section>
-	<section class="box wrapper-std growingline rgap64">
+	<section class="wrapper-std growingline">
 		<Title text="Itinerary" anveshi={true}/>
 		{#if itins && itins.length > 0}
-			{#if iW > 1024}
-			<div class="itin-grid radius">
-				<div class="box itin-nav">
-					{#each itins as item, i}
-					<button class="box xleft ta-l itin-button" onclick={() => selectDay(i)} class:active={selectedDay === i}>
-						<p class="tag-text tt-u lgrey">{item.daylabel}</p>
-						<p class="w500">{item.label}</p>
-					</button>
-					{/each}
-				</div>
-				<div class="box itin-item p16 md:p32">
-					{#each itins as item, i}
-					{#if selectedDay === i}
-					<img src="https://www.bodharesearch.in/images/anveshi/day-{i+1}.png" alt="icon" class="icon"/>
-					<pre class="paragraph-text">{item.itinerary}</pre>
-					{/if}
-					{/each}
-				</div>
-			</div>
-			{:else}
-			<div class="box">
-			{#each itins as item, i}
-				<button class="itin-button" onclick={() => selectDay(i)} class:active={selectedDay === i}>
-					<p class="citation-big tt-u lgrey">{item.daylabel}</p>
-					<p class="rem1 w500">{item.label}</p>
-					{#if selectedDay === i}
-					<pre class="paragraph-text ptop8">{item.itinerary}</pre>
-					{/if}
-				</button>
-			{/each}
-			</div>
-			{/if}
+			<Tabs class="anveshi-tabs" items={itins} getValue={(item, index) => `${index}-${item.daylabel}`} getLabel={(item) => `${item.daylabel} - ${item.label}`}>
+				{#snippet children(item, index)}
+					<div class="itin-panel b-main p16 lg:p24 radius8 grid lg:grid-cols-2 gap16 lg:gap32">
+						<div class="up box">
+							<img src={item.itinimage} class="itinimage radius8" alt={item.daylabel}/>
+						</div>
+						<div class="down box">
+							<img src="https://www.bodharesearch.in/images/anveshi/day-{index + 1}.png" alt={item.daylabel} class="icon"/>
+							<pre class="paragraph-text">{item.itinerary}</pre>
+						</div>
+					</div>
+				{/snippet}
+			</Tabs>
 		{/if}
+
+
 	</section>
-	<section class="box wrapper-std growingline alternate rgap64">
+	<section class="wrapper-std growingline alternate">
 		<Title text="Temples" anveshi={true}/>
 		{#if temples && temples.length > 0}
 		<Swipes slidesPerView={templeStatus} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: templeStatus,spaceBetween: 8}}}>
@@ -159,11 +147,11 @@
 					{#if data.templetext}
 						<div class="grid grid-cols-1 lg:grid-cols-2 cgap16 rgap16 temple-descriptions">
 							<div class="up">
-								<Lightbox><enhanced:img class="fit t2 radius" src={item.image} alt={item.temple}/></Lightbox>	
+								<Lightbox><enhanced:img class="fit t2 radius8" src={item.image} alt={item.temple}/></Lightbox>	
 							</div>
-							<div class="box rgap16 down stonecard p16 md:p32">
+							<div class="box rgap16 down lg:pleft16">
 								<p class="highlight-text w500">{item.temple}</p>
-								<p class="pa">{item.description}</p>
+								<p class="paragraph-text grey">{item.description}</p>
 							</div>
 						</div>
 					{:else}
@@ -184,15 +172,38 @@
 
 <style lang="sass">
 
+.itinimage
+	object-fit: cover
+	height: 200px
+	width: 200px
+
+:global(.anveshi-tabs .tab)
+	--tab-active-color: var(--color-anveshi)
+	--tab-hover-color: var(--color-anveshi)
+
+:global(.anveshi-tabs .tab)
+	--tab-color: var(--color-grey-2)
+	--tab-active-color: var(--color-anveshi)
+	--tab-hover-color: var(--color-anveshi)
+
 img.icon
 	object-fit: contain
-	width: 32px
-	height: 32px
+	width: 48px
+	height: 48px
 	margin-bottom: 1rem
+
+.itin-panel
+	display: grid
+	row-gap: 1rem
+	pre
+		white-space: pre-wrap
+		margin: 0
+	@media (min-width: 1025px)
+		grid-template-columns: 200px 1fr
 
 .temple-descriptions
 	@media (min-width: 1025px)
-		grid-template-columns: 500px 1fr
+		grid-template-columns: 600px 1fr
 
 .singular
 	img.temple-image
@@ -201,40 +212,6 @@ img.icon
 		height: 280px
 		@media screen and (min-width: 1025px)
 			height: 240px
-
-.itin-grid
-	@media screen and (min-width: 1025px)
-		display: grid
-		grid-template-columns: 360px 1fr
-		border: var(--border-dark)
-		.itin-nav
-			padding-right: 1rem
-			padding-left: 1rem
-			border-right: var(--border-main)
-		.itin-item
-			background: var(--color-stone-1)
-
-.itin-button
-	background: none
-	border-top: none
-	border-left: none
-	border-right: none
-	border-bottom: var(--border-main)
-	padding-bottom: 1rem
-	padding-top: 1rem
-	&:hover
-		p
-			color: var(--color-anveshi)
-	&.active
-		p
-			color: var(--color-anveshi)
-	&:last-child
-		border-bottom: none
-	@media screen and (max-width: 1024px)
-		display: flex
-		flex-direction: column
-		align-items: flex-start
-		text-align: left
 
 .info-row
 	border-radius: 5px

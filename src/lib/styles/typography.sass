@@ -381,9 +381,9 @@ a.paragraph-text
 
 .content-highlights
 	pre, p
-		font-size: 1.25rem
-		@media (min-width: 721px)
-			font-size: 1.25rem
+		font-size: 1.33rem
+		@media (min-width: 1025px)
+			font-size: 1.463rem
 
 a.tag-text
 	&:hover
@@ -476,81 +476,7 @@ pre
 	word-break: break-word
 	overflow: hidden
 
-//----MODIFIERS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-.italic
-	font-style: italic
-.ta-j
-	text-align: justified
-.ta-c
-	text-align: center
-	@media screen and (max-width: 1024px)
-		&.mleft
-			text-align: left
-.ta-l
-	text-align: left
-.ta-r
-	text-align: right
-	@media screen and (max-width: 1024px)
-		&.mleft
-			text-align: left
-
-.tt-u
-	text-transform: uppercase
-.tt-l
-	text-transform: lowercase
-.tt-c
-	text-transform: capitalize
-.white
-	color: #FFFFFF
-.blue
-	color: var(--color-theme)
-.blue-dark
-	color: var(--color-theme-dark)
-.anveshi-o
-	color: var(--color-anveshi)
-.grey
-	color: #474747
-.altprim
-	color: var(--color-grey-2)
-.lgrey
-	color: var(--color-grey-0)
-.altcolor
-	color: var(--color-grey-2)
-.heading.lgrey
-	color: var(--color-grey-0)
-.green
-	color: var(--color-theme-alt)
-.desb
-	color: var(--color-designB)
-.desb2
-	color: var(--color-designB-alt)
-.w500
-	font-weight: 500
-.w600
-	font-weight: 600
-
 //----LINKS AND BUTTONS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-a
-	text-decoration: none
-	font-family: inherit
-	color: inherit
-	&.linker
-		&:hover
-			text-decoration: underline
-			text-decoration-color: var(--color-theme)
-	&.linked
-		text-decoration: underline
-		text-decoration-color: var(--color-theme-light)
-		&:hover
-			color: var(--color-theme)
-	&.linkonhover
-		color: inherit
-		&:hover
-			color: var(--color-theme)
-	&.linkedlight
-		color: var(--color-theme)
 
 .classic-document
 	img
