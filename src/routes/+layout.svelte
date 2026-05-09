@@ -157,10 +157,10 @@ header
 	transition: top 310ms cubic-bezier(0.000, 0.000, 0.580, 1.000)
 	view-transition-name: header
 	@media screen and (min-width: 1025px)
-		height: 72px
-		margin-bottom: -72px
+		height: 80px
+		margin-bottom: -80px
 		&.reader-hidden
-			top: -72px
+			top: -80px
 	@media screen and (max-width: 1024px)
 		height: 64px
 		margin-bottom: -64px

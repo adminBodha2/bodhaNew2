@@ -467,8 +467,8 @@
 		grid-column: 3
 		grid-row: 1 / 3
 		border-left: var(--border-dark)
-		top: 72px
-		height: calc(100vh - 72px)
+		top: 80px
+		height: calc(100vh - 80px)
 		padding-left: 2rem
 		overflow-y: scroll
 	@media screen and (max-width: 1024px)

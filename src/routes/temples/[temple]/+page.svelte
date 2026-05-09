@@ -195,8 +195,8 @@
 			padding-right: 2rem
 			padding-bottom: 2rem
 			position: sticky
-			top: 72px
-			height: calc(100vh - 72px)
+			top: 80px
+			height: calc(100vh - 80px)
 			overflow-y: scroll
 	@media (min-width: 1201px)
 		grid-template-columns: 440px 1fr

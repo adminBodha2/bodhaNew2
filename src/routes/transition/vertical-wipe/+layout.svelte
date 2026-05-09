@@ -54,7 +54,7 @@
 
 <style lang="sass">
 .wipe-demo-shell
-	min-height: calc(100vh - 72px)
+	min-height: calc(100vh - 80px)
 	background: #050506
 	color: #f7f2e8
 	overflow: clip

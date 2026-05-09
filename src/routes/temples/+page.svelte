@@ -728,7 +728,7 @@
 		margin-top: 0
 		padding-top: 64px
 		@media (min-width: 1025px)
-			padding-top: 72px
+			padding-top: 80px
 
 	.temple-map
 		width: 100%
@@ -736,7 +736,7 @@
 		z-index: 1
 		@media (min-width: 1025px)
 			width: 100%
-			height: calc(100vh - 72px)
+			height: calc(100vh - 80px)
 
 	.stats-row
 		display: flex

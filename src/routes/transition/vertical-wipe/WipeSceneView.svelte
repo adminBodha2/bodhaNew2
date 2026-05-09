@@ -28,12 +28,12 @@
 <style lang="sass">
 .wipe-scene
 	position: relative
-	min-height: calc(100vh - 72px)
+	min-height: calc(100vh - 80px)
 	display: grid
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr)
 	align-items: center
 	gap: 32px
-	padding: 180px max(24px, calc((100vw - 1120px) / 2)) 72px
+	padding: 180px max(24px, calc((100vw - 1120px) / 2)) 80px
 	background: var(--scene-background)
 	overflow: hidden
 
@@ -95,7 +95,7 @@ h1
 	box-shadow: inset 0 0 90px rgba(255,255,255,0.08), 0 42px 120px rgba(0,0,0,0.36)
 	span
 		color: rgba(255,255,255,0.9)
-		font-size: clamp(72px, 12vw, 150px)
+		font-size: clamp(80px, 12vw, 150px)
 		font-weight: 700
 		letter-spacing: 0
 

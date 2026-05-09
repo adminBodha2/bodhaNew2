@@ -106,7 +106,7 @@
 			margin-left: 6px
 
 .nav-link
-	font-size: 15px
+	font-size: 1rem
 	font-family: 'Google Sans', sans-serif
 	font-weight: 500
 	letter-spacing: 0

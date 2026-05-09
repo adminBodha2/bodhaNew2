@@ -89,7 +89,7 @@
 
 .imager
 	overflow: hidden
-	margin-top: 72px
+	margin-top: 80px
 	border-radius: 32px
 	.parallax-target
 		height: 100%
@@ -114,7 +114,7 @@
 	@media screen and (max-width: 1024px)
 		&.is100, &.is50
 			height: 32vh
-			margin-top: 72px
+			margin-top: 80px
 		.parallax-target
 			img,
 			:global(.ripple-motion)

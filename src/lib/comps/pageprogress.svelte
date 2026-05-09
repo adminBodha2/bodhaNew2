@@ -49,7 +49,7 @@
 .scroll-progress
 	width: 100%
 	position: fixed
-	top: 72px
+	top: 80px
 	left: 0
 	z-index: 500
 	transition: top 450ms cubic-bezier(0.000, 0.000, 0.580, 1.000)

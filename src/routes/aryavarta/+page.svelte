@@ -56,6 +56,6 @@
 	height: 400px
 	@media screen and (min-width: 1025px)
 		height: calc(100vh - 144px)
-		margin-top: 72px
+		margin-top: 80px
 
 </style>

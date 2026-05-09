@@ -562,8 +562,8 @@ button.blank.with-tooltip
 	@media screen and (min-width: 1025px)
 		position: fixed
 		right: 0
-		top: 72px
-		height: calc(100vh - 72px)
+		top: 80px
+		height: calc(100vh - 80px)
 		width: 48px
 		background: var(--color-stone-2)
 		border-left: var(--border-main)
