@@ -162,7 +162,7 @@
 								<p class="paragraph-text w600 tight">{item.name}</p>
 								<div class="self-bottom box rgap8">
 									<div class="theme-line"></div>
-									<p class="tag-text lgrey tt-u">{item.channel}</p>
+									<p class="cite lgrey tt-u">{item.channel}</p>
 								</div>
 							</a>
 						</div>

@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Wrapper from '$lib/comps/wrapper.svelte';
 	import type { PageData } from './$types';
-	import Crumb from '$lib/comps/breadcrumb.svelte';
 
 	let { data, form }: { data: PageData; form: Record<string, string> | null } = $props();
 
@@ -14,97 +12,133 @@
 	<title>Auth | Bodha</title>
 </svelte:head>
 
-<Wrapper>
-	<section class="wrapper-std header-margin">
-		<Crumb showT={true} title="Subscribe" showD={true} desc="Subscribe to receive our monthly newsletters, and fortnightly issues of Scrolls of Aryavarta." />
-		<div class="auth-shell box rgap32">
-			<div class="box">
-				<p>{isSignedIn ? 'You are signed in' : 'Sign in or create an account'}</p>
-				<p>{isSignedIn ? 'Your Supabase session is active and available to server routes.' : 'Use email and password, or continue with Google.'}</p>
-				{#if data.error}<p class="notice error">{data.error}</p>{/if}
-				{#if data.message === 'signed-out'}<p class="notice">You have been signed out.</p>{/if}
-				{#if form?.signupMessage}<p class="notice">{form.signupMessage}</p>{/if}
-			</div>
-			{#if isSignedIn}
-				<div class="auth-panel">
-					<p class="label">Current user</p>
-					<p class="user-email">{email}</p>
-					<div class="actions">
-						<a href="/auth/test">Open protected test route</a>
-						<form method="POST" action="?/logout">
-							<button type="submit">Sign out</button>
-						</form>
-					</div>
-					{#if form?.logoutError}
-						<p class="form-error">{form.logoutError}</p>
-					{/if}
-				</div>
-			{:else}
-				<div class="auth-grid">
-					<form class="box auth-panel radius8" method="POST" action="?/login">
-						<input type="hidden" name="next" value={next} />
-						<div class="box self-top">
-							<p class="citation tt-u grey">Email login</p>
-							<p class="highlight-text w600">Existing account</p>
-						</div>
-						<label>
-							<span>Email</span>
-							<input name="email" type="email" autocomplete="email" required />
-						</label>
-						<label>
-							<span>Password</span>
-							<input name="password" type="password" autocomplete="current-password" required />
-						</label>
-						<button class="primary width" type="submit"><span>Log in</span></button>
-						{#if form?.loginError}
-							<p class="form-error">{form.loginError}</p>
-						{/if}
-					</form>
-					<form class="box auth-panel radius8" method="POST" action="?/signup">
-						<input type="hidden" name="next" value={next} />
-						<div class="box self-top">
-							<p class="citation tt-u grey">Create account</p>
-							<p class="highlight-text w600">Email signup</p>
-						</div>
-						<label>
-							<span>Email</span>
-							<input name="email" type="email" autocomplete="email" required />
-						</label>
-						<label>
-							<span>Password</span>
-							<input name="password" type="password" autocomplete="new-password" minlength="6" required />
-						</label>
-						<button class="primary" type="submit"><span>Sign up</span></button>
-						{#if form?.signupError}
-							<p class="form-error">{form.signupError}</p>
-						{/if}
-					</form>
-					<form class="box auth-panel radius8 oauth-panel" method="POST" action="?/google">
-						<input type="hidden" name="next" value={next} />
-						<div class="box self-top">
-							<p class="citation grey tt-u">Google</p>
-							<p class="highlight-text w600">Continue with Google</p>
-						</div>
-						<button class="primary" type="submit"><span>Use Google account</span></button>
-						{#if form?.oauthError}
-							<p class="form-error">{form.oauthError}</p>
-						{/if}
-					</form>
-				</div>
-			{/if}
+<section class="auth-page">
+	<div class="auth-shell">
+		<div class="auth-intro">
+			<p class="eyebrow">Bodha account</p>
+			<h1>{isSignedIn ? 'You are signed in' : 'Sign in or create an account'}</h1>
+			<p>
+				{isSignedIn
+					? 'Your Supabase session is active and available to server routes.'
+					: 'Use email and password, or continue with Google.'}
+			</p>
 		</div>
-	</section>
-</Wrapper>
+
+		{#if data.error}
+			<p class="notice error">{data.error}</p>
+		{/if}
+
+		{#if data.message === 'signed-out'}
+			<p class="notice">You have been signed out.</p>
+		{/if}
+
+		{#if form?.signupMessage}
+			<p class="notice">{form.signupMessage}</p>
+		{/if}
+
+		{#if isSignedIn}
+			<div class="auth-panel">
+				<p class="label">Current user</p>
+				<p class="user-email">{email}</p>
+				<div class="actions">
+					<a href="/auth/test">Open protected test route</a>
+					<form method="POST" action="?/logout">
+						<button type="submit">Sign out</button>
+					</form>
+				</div>
+				{#if form?.logoutError}
+					<p class="form-error">{form.logoutError}</p>
+				{/if}
+			</div>
+		{:else}
+			<div class="auth-grid">
+				<form class="auth-panel" method="POST" action="?/login">
+					<input type="hidden" name="next" value={next} />
+					<div>
+						<p class="label">Email login</p>
+						<h2>Existing account</h2>
+					</div>
+					<label>
+						<span>Email</span>
+						<input name="email" type="email" autocomplete="email" required />
+					</label>
+					<label>
+						<span>Password</span>
+						<input name="password" type="password" autocomplete="current-password" required />
+					</label>
+					<button type="submit">Log in</button>
+					{#if form?.loginError}
+						<p class="form-error">{form.loginError}</p>
+					{/if}
+				</form>
+
+				<form class="auth-panel" method="POST" action="?/signup">
+					<input type="hidden" name="next" value={next} />
+					<div>
+						<p class="label">Create account</p>
+						<h2>Email signup</h2>
+					</div>
+					<label>
+						<span>Email</span>
+						<input name="email" type="email" autocomplete="email" required />
+					</label>
+					<label>
+						<span>Password</span>
+						<input name="password" type="password" autocomplete="new-password" minlength="6" required />
+					</label>
+					<button type="submit">Sign up</button>
+					{#if form?.signupError}
+						<p class="form-error">{form.signupError}</p>
+					{/if}
+				</form>
+
+				<form class="auth-panel oauth-panel" method="POST" action="?/google">
+					<input type="hidden" name="next" value={next} />
+					<div>
+						<p class="label">Google</p>
+						<h2>Continue with Google</h2>
+					</div>
+					<button type="submit">Use Google account</button>
+					{#if form?.oauthError}
+						<p class="form-error">{form.oauthError}</p>
+					{/if}
+				</form>
+			</div>
+		{/if}
+	</div>
+</section>
 
 <style lang="sass">
+.auth-page
+	min-height: 100svh
+	padding: 9rem 1.5rem 5rem
+	background: var(--color-back)
+	color: var(--color-text)
 
-button.primary
-	width: 100%
+.auth-shell
+	width: min(1040px, 100%)
+	margin: 0 auto
+	display: grid
+	gap: 1.5rem
 
 .auth-intro
 	max-width: 680px
 	display: grid
 	gap: 0.75rem
+
+h1,
+h2,
+p
+	margin: 0
+
+h1
+	font-size: clamp(2.2rem, 5vw, 5rem)
+	line-height: 0.95
+	font-weight: 600
+
+h2
+	font-size: 1.25rem
+	line-height: 1.2
 
 .eyebrow,
 .label
@@ -126,7 +160,7 @@ button.primary
 .auth-panel
 	border: var(--border-main)
 	background: var(--color-back)
-	padding: 4rem 1.25rem
+	padding: 1.25rem
 	display: grid
 	gap: 1rem
 	align-content: start
@@ -144,6 +178,17 @@ input
 	color: inherit
 	padding: 0.8rem 0.9rem
 	font: inherit
+
+button,
+a
+	border: var(--border-main)
+	background: var(--color-text)
+	color: var(--color-back)
+	text-decoration: none
+	padding: 0.8rem 1rem
+	font: inherit
+	text-align: center
+	cursor: pointer
 
 a
 	display: inline-flex

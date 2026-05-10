@@ -17,7 +17,9 @@
 	let stateLabel = $derived(data.temple.state?.trim() || 'Unknown');
 	let displayImage = $derived(data.temple.anveshi_image || data.temple.image || '');
 	let coordinates = $derived(formatCoordinates(data.temple.latitude, data.temple.longitude));
-	let anveshiHref = $derived(data.temple.is_anveshi && hasText(data.temple.chapter) ? `/anveshi/${data.temple.chapter}` : '');
+	let anveshiHref = $derived(
+		data.temple.is_anveshi && hasText(data.temple.chapter) ? `/anveshi/${data.temple.chapter}` : ''
+	);
 	let categoryTags = $derived(
 		[
 			data.temple.category,
@@ -49,7 +51,9 @@
 	);
 	let otherDeities = $derived(normalizeItems(data.temple.other_deities, ['deity', 'details']));
 	let otherDetails = $derived(normalizeItems(data.temple.other_details, ['details']));
-	let scripturalItems = $derived(normalizeItems(data.temple.scriptural, ['details', 'reference', 'fact']));
+	let scripturalItems = $derived(
+		normalizeItems(data.temple.scriptural, ['details', 'reference', 'fact'])
+	);
 
 	function hasText(value: unknown): value is string {
 		return typeof value === 'string' && value.trim().length > 0;
@@ -97,7 +101,11 @@
 	}
 
 	function getMetaDescription(temple: PageProps['data']['temple']) {
-		const description = firstText(temple.description, temple.architecture, `Notes on ${temple.temple_name}.`);
+		const description = firstText(
+			temple.description,
+			temple.architecture,
+			`Notes on ${temple.temple_name}.`
+		);
 
 		return description.length > 180 ? `${description.slice(0, 177).trim()}...` : description;
 	}
@@ -118,8 +126,8 @@
 				<section class="grid grid-cols-2 lg:grid-cols-4 white-grid">
 					{#each factItems as item}
 						<div class="box whitestone p16 lg:p24 rgap4">
-							<p class="cite anveshi-o tt-u bold tight">{item.label}</p>
-							<p class="tight body-text">{item.value}</p>
+							<p class="tag-text anveshi-o tt-u bold tight">{item.label}</p>
+							<p class="tight paragraph-text">{item.value}</p>
 						</div>
 					{/each}
 				</section>
@@ -127,7 +135,7 @@
 			{#if data.temple.is_anveshi}
 				<div class="box rgap16">
 					<div class="row cgap16 ycenter">
-						<p class="cite anveshi">In Anveshi</p>
+						<p class="tag-pill anveshi">In Anveshi</p>
 						{#if anveshiHref}
 							<a class="primary anveshi" href={anveshiHref}><span>View Anveshi Chapter</span></a>
 						{/if}
@@ -135,29 +143,29 @@
 				</div>
 			{/if}
 			{#if data.temple.description}
-				<div class="temple-grid">
-					<div class="temple-side box sm:ptop32">
-						{#if scripturalItems.length > 0}
-							{#each scripturalItems as item}
-								<div class="sidebar-item box borderbot pbot8 ptop8">
-									<p>{item}</p>
-								</div>
-							{/each}
-						{/if}
-						{#if otherDetails.length > 0}
-							<div class="box facts ptop32 rgap4 sm:rgap8">
-								<p class="body-text w600 pbot8">Facts:</p>
+			<div class="temple-grid">
+				<div class="temple-side box sm:ptop32">
+					{#if scripturalItems.length > 0}
+						{#each scripturalItems as item}
+							<div class="sidebar-item box borderbot pbot8 ptop8">
+								<p>{item}</p>
+							</div>
+						{/each}
+					{/if}
+					{#if otherDetails.length > 0}
+						<div class="box facts ptop32 rgap4 sm:rgap8">
+							<p class="paragraph-text w600 pbot8">Facts:</p>
 								{#each otherDetails as detail}
 									<p class="grey">{detail}</p>
 								{/each}
-							</div>
-						{/if}
-					</div>
-					<div class="temple-main box sm:ptop32">
-						<p class="body-text">{data.temple.description}</p>
-						<p class="body-text">{data.temple.description}</p>
-					</div>
+						</div>
+					{/if}
 				</div>
+				<div class="temple-main box sm:ptop32">
+					<p class="paragraph-text">{data.temple.description}</p>
+	<p class="paragraph-text">{data.temple.description}</p>
+				</div>
+			</div>
 			{/if}
 		</article>
 	</section>

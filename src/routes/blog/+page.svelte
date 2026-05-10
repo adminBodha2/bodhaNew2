@@ -255,7 +255,7 @@
 									</div>
 								</div>
 								<a class="essay-holder-right blank box rgap16" style="height: 100%" href={post.linkpath}>
-									<p class="body-text bold tight">{post.meta.title}</p>
+									<p class="paragraph-text bold tight">{post.meta.title}</p>
 									<p class="tight lgrey">{post.meta.excerpt}</p>
 									<p class="tag-text tt-u lgrey self-bottom bordertop ptop8">{post.meta.author} | {post.meta.words} words</p>
 								</a>

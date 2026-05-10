@@ -30,17 +30,17 @@
 
 	let jsonld = $derived(
 		stringifyJsonLd(
-			collectionPageJsonLd({
-				name: title,
-				description: metaDescription,
-				url: metaUrl,
-				image: metaImage,
-				items: externalPosts.map((post) => ({
-					name: post.title ?? 'External post',
-					url: post.route,
-					description: post.description ?? ''
-				}))
-			})
+				collectionPageJsonLd({
+					name: title,
+					description: metaDescription,
+					url: metaUrl,
+					image: metaImage,
+					items: externalPosts.map((post) => ({
+						name: post.title ?? 'External post',
+						url: post.route,
+						description: post.description ?? ''
+					}))
+				})
 		)
 	);
 
@@ -65,7 +65,15 @@
 
 <svelte:window onkeydown={onWindowKeydown} />
 
-<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
+<Head
+	{title}
+	{metaDescription}
+	{metaUrl}
+	{metaImage}
+	imWidth="2560"
+	imHeight="1440"
+	{jsonld}
+/>
 
 <Container>
 	<section class="box wrapper-std header-margin">
@@ -78,26 +86,22 @@
 		</Crumb>
 		<div class="blog-wrapper ptop32">
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
-				{#each externalPosts as post}
-					<a class="blank box rgap16 ncolor p16 lg:p32" href={post.route} target="_blank" rel="noreferrer">
-						<p class="cite blue tt-u">{post.platform}</p>
-						<p class="body-text tight bold a-hover">{post.title}</p>
-						<p class="grey tight">{post.description}</p>
-						<div class="row wrap self-bottom rgap4 cgap4">
-							{#each post.tags as tag, i}
-								{#if tag !== ''}
-									<p class="cite hollow tt-u">
-										{#if i > 0}
-											|
-										{/if}
-										{tag.replaceAll('-', ' ')}
-									</p>
-								{/if}
-							{/each}
-						</div>
-					</a>
-				{/each}
-			</div>
+			{#each externalPosts as post}
+				<a class="blank box rgap16 ncolor p16 lg:p32" href={post.route} target="_blank" rel="noreferrer">
+					<p class="tag-text blue tt-u">{post.platform}</p>
+					<p class="paragraph-text tight bold a-hover">{post.title}</p>
+					<p class="grey tight">{post.description}</p> 
+					<div class="row wrap self-bottom rgap4 cgap4">
+						{#each post.tags as tag, i}
+							{#if tag !== ""}
+							<p class="tag-pill hollow tt-u">{#if i > 0} | {/if} {tag.replaceAll('-',' ')}</p>
+							{/if}
+						{/each}
+					</div>
+				</a>
+			{/each}
+		</div>
 		</div>
 	</section>
+	
 </Container>

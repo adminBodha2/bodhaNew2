@@ -5,7 +5,7 @@
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
-	let bookItems = $derived(data.books ?? []);
+	let bookItems = $derived(data.books??[]);
 
 	let title = $derived('Library Path | ' + data.title);
 	let metaDescription = $derived(data.description);
@@ -25,21 +25,32 @@
 	);
 </script>
 
-<Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
+
+<Head
+	{title}
+	{metaDescription}
+	{metaImage}
+	{metaUrl}
+	imWidth="1536"
+	imHeight="1024"
+	{jsonld}
+/>
+
 
 <section class="box library-book rgap32">
-	<Crumb showT={true} title={data.title} showD={true} desc={data.description} />
+<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
 	<div class="grid grid-cols-2 lg:grid-cols-3 rgap4 cgap4">
-		{#each bookItems as item}
+{#each bookItems as item}
 			<a class="blank box rgap8 whitestone p16 lg:p24 b-main radius" href={item.link}>
-				<p class="body-text w600 tight">{item.text}</p>
-				<p class="grey">{item.description}</p>
-				{#if item.author && item.author !== ''}
+					<p class="paragraph-text w600 tight">{item.text}</p>
+					<p class="grey">{item.description}</p>
+					{#if item.author && item.author !== ""}
 					<div class="self-bottom bordertop ptop8">
-						<p class="cite tt-u">{item.author}</p>
+						<p class="tag-text tt-u">{item.author}</p>
 					</div>
-				{/if}
-			</a>
-		{/each}
-	</div>
+					{/if}
+				</a>
+{/each}
+</div>
 </section>
+

@@ -67,74 +67,74 @@
 	<section class="wrapper-std growingline" bind:this={referenceOne}>
 		<Title text="Our Work" />
 		<div class="box rgap4">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4" id="forlinks">
-				<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000}>
-					<a class="box rgap8 p24 lg:p32 glass-1" href="/research">
-						<p class="card-title bold">Research</p>
-						<p class="grey paragraph-text tight">Our primary work stream, with projects in current and upcoming pipelines. We point methodological rigor, authenticity, and emic cultural sensitivity towards issues such as Hindu models of temple management, Hindu views of modernity, and more</p>
-						<p class="blue highlight-text arrow self-bottom">→</p>
-					</a>
-				</Slider>
-				<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={200}>
-					<a class="box rgap8 p24 lg:p32 glass-1" href="/big-questions">
-						<p class="card-title bold">Big Questions</p>
-						<p class="paragraph-text tight grey">With the Big Questions initiative, we're asking provocative questions about the most fundamental problems and open questions that Hindu society faces today.</p>
-						<p class="blue highlight-text arrow self-bottom">→</p>
-					</a>
-				</Slider>
-				<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={400}>
-					<a class="box rgap8 p24 lg:p32 glass-1" href="/academy">
-						<p class="card-title bold">Academy</p>
-						<p class="paragraph-text tight grey">Bodha Academy envisions creating a line of scholars capable of carrying the Hindu intellectural work forward, and runs critical online courses.</p>
-						<p class="blue highlight-text arrow self-bottom">→</p>
-					</a>
-				</Slider>
-				<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={600}>
-					<a class="box rgap8 p24 lg:p32 glass-1" href="/anveshi">
-						<p class="card-title bold">Anveshi</p>
-						<p class="paragraph-text tight grey">Bodha Anveshi is our flagship cultural immersion program, curating sacred tours to unexplored cultural kshetras and trails.</p>
-						<p class="blue highlight-text arrow self-bottom">→</p>
-					</a>
-				</Slider>
-			</div>
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap4" bind:this={referenceTwo}>
-				<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500}>
-					<a class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8" href="/library">
-						<p class="paragraph-text bold">Bodha Open Library</p>
-						<p class="altprim pbot8">The Bodha Open Library features 200+ texts ranging from Puranas and Darshanic texts to papers on Indo-European linguistics, IKS, and more.</p>
-						<div class="theme-line"></div>
-					</a>
-				</Slider>
-				<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={200}>
-					<a class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8" href="/blog">
-						<p class="paragraph-text bold">Essays, Writings</p>
-						<p class="altprim pbot8">Read our essays on culture, history, tradition, and more at our blog, featuring 50+ articles that bring together our writings, research, opinions over the years.</p>
-						<div class="theme-line"></div>
-					</a>
-				</Slider>
-				<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={300}>
-					<a class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8" href="/inspiration">
-						<p class="paragraph-text bold">Our Inspiration</p>
-						<p class="altprim pbot8">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought. We document the schools of thought and thinkers that inspire and inform us.</p>
-						<div class="theme-line"></div>
-					</a>
-				</Slider>
-				<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={400}>
-					<div class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8">
-						<p class="paragraph-text bold">Brand and Logo</p>
-						<p class="altprim pbot8">This essay by our founder explains the <a class="linkedlight" href="meaning behind our logo">meaning behind our logo</a>, and here he outlines the <a class="linkedlight" href="/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs">Bodha pyramid of priorities.</a>.</p>
-						<p class="altprim pbot8">We're passionate about design and development! Learn more about <a class="linkedlight" href="/designbodha">designBodha,</a> and access our <a class="linkedlight" target="_blank" rel="noreferrer" href="https://github.com/adminBodha2/bodhaNew2">website public repo</a> at Github.</p>
-						<div class="theme-line"></div>
-					</div>
-				</Slider>
-			</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4" id="forlinks">
+			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000}>
+				<a class="box rgap8 p24 lg:p32 glass-1" href="/research">
+					<p class="card-title bold">Research</p>
+					<p class="grey paragraph-text tight">Our primary work stream, with projects in current and upcoming pipelines. We point methodological rigor, authenticity, and emic cultural sensitivity towards issues such as Hindu models of temple management, Hindu views of modernity, and more</p>
+					<p class="blue highlight-text arrow self-bottom">→</p>
+				</a>
+			</Slider>
+			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={200}>
+				<a class="box rgap8 p24 lg:p32 glass-1" href="/big-questions">
+					<p class="card-title bold">Big Questions</p>
+					<p class="paragraph-text tight grey">With the Big Questions initiative, we're asking provocative questions about the most fundamental problems and open questions that Hindu society faces today.</p>
+					<p class="blue highlight-text arrow self-bottom">→</p>
+				</a>
+			</Slider>
+			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={400}>
+				<a class="box rgap8 p24 lg:p32 glass-1" href="/academy">
+					<p class="card-title bold">Academy</p>
+					<p class="paragraph-text tight grey">Bodha Academy envisions creating a line of scholars capable of carrying the Hindu intellectural work forward, and runs critical online courses.</p>
+					<p class="blue highlight-text arrow self-bottom">→</p>
+				</a>
+			</Slider>
+			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={600}>
+				<a class="box rgap8 p24 lg:p32 glass-1" href="/anveshi">
+					<p class="card-title bold">Anveshi</p>
+					<p class="paragraph-text tight grey">Bodha Anveshi is our flagship cultural immersion program, curating sacred tours to unexplored cultural kshetras and trails.</p>
+					<p class="blue highlight-text arrow self-bottom">→</p>
+				</a>
+			</Slider>
+		</div>
+		<div class="grid grid-cols-2 lg:grid-cols-4 gap4" bind:this={referenceTwo}>
+			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500}>
+				<a class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8" href="/library">
+					<p class="paragraph-text bold">Bodha Open Library</p>
+					<p class="altprim pbot8">The Bodha Open Library features 200+ texts ranging from Puranas and Darshanic texts to papers on Indo-European linguistics, IKS, and more.</p>
+					<div class="theme-line"></div>
+				</a>
+			</Slider>
+			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={200}>
+				<a class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8" href="/blog">
+					<p class="paragraph-text bold">Essays, Writings</p>
+					<p class="altprim pbot8">Read our essays on culture, history, tradition, and more at our blog, featuring 50+ articles that bring together our writings, research, opinions over the years.</p>
+					<div class="theme-line"></div>
+				</a>
+			</Slider>
+			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={300}>
+				<a class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8" href="/inspiration">
+					<p class="paragraph-text bold">Our Inspiration</p>
+					<p class="altprim pbot8">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought. We document the schools of thought and thinkers that inspire and inform us.</p>
+					<div class="theme-line"></div>
+				</a>
+			</Slider>
+			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={400}>
+				<div class="glass-3 box rgap8 theme-line-parent p16 lg:p32 radius8">
+					<p class="paragraph-text bold">Brand and Logo</p>
+					<p class="altprim pbot8">This essay by our founder explains the <a class="linkedlight" href="meaning behind our logo">meaning behind our logo</a>, and here he outlines the <a class="linkedlight" href="/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs">Bodha pyramid of priorities.</a>.</p>
+					<p class="altprim pbot8">We're passionate about design and development! Learn more about <a class="linkedlight" href="/designbodha">designBodha,</a> and access our <a class="linkedlight" target="_blank" rel="noreferrer" href="https://github.com/adminBodha2/bodhaNew2">website public repo</a> at Github.</p>
+					<div class="theme-line"></div>
+				</div>
+			</Slider>
+		</div>
 		</div>
 	</section>
 	<section class="box wrapper-std rgap64 growingline">
 		<Title text="The Team" />
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 			{#each teamMembers as member, j}
-				<div class="box rgap32 whitestone p16 lg:p32">
+				<div class="box rgap32 whitestone p24 lg:p32">
 					<div class="member-image">
 						<img src={member.image} alt={member.name} />
 					</div>

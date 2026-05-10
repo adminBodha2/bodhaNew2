@@ -30,7 +30,7 @@
 				items: posts.map((post: any) => ({
 					name: post.meta.title,
 					url: post.linkpath
-				}))
+			}))
 			})
 		)
 	);
@@ -60,32 +60,34 @@
 	<section class="box wrapper-std header-margin">
 		<Crumb showT={false} title="Tags | Bodha" showRow={true}>
 			<ResponsiveMenu>
-				<a class="small-button tt-u" href="/blog">Blog</a>
-				<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
-				<a class="small-button tt-u" href="/blog/writers">Writers</a>
-				<a class="small-button tt-u" href="/blog/tags">Tags</a>
+			<a class="small-button tt-u" href="/blog">Blog</a>
+			<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
+			<a class="small-button tt-u" href="/blog/writers">Writers</a>
+			<a class="small-button tt-u" href="/blog/tags">Tags</a>
 			</ResponsiveMenu>
 		</Crumb>
-		<div class="blog-wrapper ptop32">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rgap8 cgap8">
+	<div class="blog-wrapper ptop32">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 rgap8 cgap8">
 				{#each posts as item}
 					<div class="box whitestone b-main radius">
 						<a class="blank blog-image-box p8" href={item.linkpath} aria-label="image">
-							<enhanced:img class="fit" src={item.meta.image} alt={item.meta.title} />
+						<enhanced:img class="fit" src={item.meta.image} alt={item.meta.title}/>
 						</a>
-						<div class="box blog-rest p16">
-							<a class="blank rgap8 box blog-text-box tight-padded" href={item.linkpath}>
-								<p class="body-text w600 tight a-hover">{item.meta.title}</p>
-								<p class="grey tight">{item.meta.excerpt}</p>
-								<p class="cite lgrey tt-u">{item.meta.words} words</p>
-							</a>
-						</div>
-						<div class="row wrap self-bottom bordertop tight-padded rgap4 cgap4 p8 stonecard">
-							<p class="citation tt-u grey">{item.meta.author}</p>
-						</div>
+					<div class="box blog-rest p16">
+						<a class="blank rgap8 box blog-text-box tight-padded" href={item.linkpath}>
+							<p class="paragraph-text w600 tight a-hover">{item.meta.title}</p>
+							<p class="grey tight">{item.meta.excerpt}</p>
+							<p class="tag-text lgrey tt-u">{item.meta.words} words</p>
+						</a>
+					</div>
+					<div class="row wrap self-bottom bordertop tight-padded rgap4 cgap4 p8 stonecard">
+						<p class="citation tt-u grey">{item.meta.author}</p>
+					</div>
 					</div>
 				{/each}
-			</div>
 		</div>
+	</div>
 	</section>
 </Container>
+
+
