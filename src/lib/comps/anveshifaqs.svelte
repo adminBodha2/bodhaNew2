@@ -26,13 +26,13 @@
 			{#each faqs as item, i}
 				<button class="blank box ytop rgap4 ta-l xleft acco-box border{i}" class:openedbox={openIndex === i} use:autoAnimate on:click={() => (openIndex = openIndex === i ? null : i)}>
 					<div class="row ycenter xbetween cgap16 inside-acco radius">
-						<p class="txt-xl">{item.question}</p>
+						<p class="body-text w500">{item.question}</p>
 						{#if iW > 1024}
 							<ChevD fill="var(--color-anveshi)" rotated={openIndex === i} />
 						{/if}
 					</div>
 					{#if openIndex === i}
-						<pre class="txt-lg">{item.answer}</pre>
+						<pre class="altprim">{item.answer}</pre>
 					{/if}
 				</button>
 			{/each}
@@ -61,7 +61,7 @@
 			border: var(--border-dark)
 			padding: 1rem
 	@media screen and (min-width: 1025px)
-		padding: 1.4rem
+		padding: 1rem
 		width: 100%
 		.inside-acco
 			width: 100%
@@ -77,6 +77,7 @@
 pre
 	font-family: var(--fontface-sans)
 	line-height: 1.5
+	font-size: 1.1rem
 	border-radius: 8px
 
 </style>

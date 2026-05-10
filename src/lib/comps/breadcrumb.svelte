@@ -15,11 +15,10 @@
 		serifed?: boolean;
 		fullP?: boolean;
 		onblog?: boolean;
-		singlepad?: boolean;
 		children?: Snippet;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, onblog = false, desc = ' ', centered = false, serifed = true, singlepad = false, fullP = false, children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, onblog = false, desc = ' ', centered = false, serifed = true, fullP = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -29,7 +28,7 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box null{rgap} crumb-outer" class:singlepad class:onblog class:fullP class:xcenter={centered}>
+<div class="box null{rgap} crumb-outer" class:onblog class:fullP class:xcenter={centered}>
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
 	{/if}
@@ -55,10 +54,10 @@
 	</div>
 	<div class="mleft box rgap8" class:pbot8={showRow} class:ta-c={centered}>
 		{#if showT}
-			<h1 class="txt-5xl tt-c ls-2sm lg:ls-4sm" class:source-serif={serifed}>{title}</h1>
+			<h1 class="page-title tt-c tight" class:source-serif={serifed}>{title}</h1>
 		{/if}
 		{#if showD}
-			<p class="txt-bs grey1 tight" class:width60={!centered && !fullP}>{desc}</p>
+			<p class="grey tight" class:width60={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 	{#if showRow}
@@ -77,9 +76,6 @@
 	&.onblog
 		padding-bottom: 0
 		border-bottom: none
-	&.singlepad
-		@media (max-width: 1024px)
-			padding-bottom: 1rem
 
 .divider
 	font-size: 0.5rem

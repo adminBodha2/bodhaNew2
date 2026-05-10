@@ -15,11 +15,11 @@
 	let isVisible = useInView(() => reference, { threshold: 0.2, once: true });
 </script>
 
-<div class="row ycenter xleft cgap8 lg:rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
+<div class="row ycenter xleft cgap8 rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="txt-3xl lg:txt-4xl name hover-animation tt-u ls-2sm" class:animatenow={isVisible.visible}>
+	<h2 class="header-2 name tt-l hover-animation" class:animatenow={isVisible.visible}>
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style:animation-delay={`${(i + 10) * 0.02}s`}>
 				{char === ' ' ? '\u00A0' : char}
@@ -31,15 +31,19 @@
 <style lang="sass">
 
 	.animatenow.bob
-		@media (min-width: 1025px)
+		@media (min-width: 1201px)
 			animation: fromLeft 1s ease-in-out forwards
+
+	h2
+		font-variant: small-caps
+		font-weight: 500
+		letter-spacing: -0.1rem
 
 	.bob
 		opacity: 0
 		transform: translate(-80px)
 		@media (max-width: 1024px)
-			transform: translate(0)
-			opacity: 1
+			display: none
 
 	.text-animation
 		display: inline-block
