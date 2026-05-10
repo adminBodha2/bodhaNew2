@@ -37,51 +37,49 @@
 	<section class="wrapper-std first-box">
 		<Crumb showT={true} title="Bodha Academy" showD={true} desc={metaDescription} />
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap16" bind:this={revealref}>
-			<div>
+			<Reveal visible={revealVis.visible}>
+				<p class="highlight-text col-span-full">Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
+			</Reveal>
+			<div class="box rgap8 col-span-full">
 				<Reveal visible={revealVis.visible}>
-					<p class="txt-xl col-span-full">Modern fault lines in Hindu society stem from a clash of identities created and amplified during the colonial era through academia and allied institutions. We want to correct this through field studies that decolonize research methodology — arriving at a genuinely Indic lens of inquiry.</p>
+					<p class="highlight-text">This is not possible without creating a line of scholars capable of carrying this work forward, to the next decade and beyond to the next generation.</p>
 				</Reveal>
-			</div>
-			<div class="box rgap8">
-				<Reveal visible={revealVis.visible} delay={400}>
-					<p class="txt-xl">This is not possible without creating a line of scholars capable of carrying this work forward, to the next decade and beyond to the next generation.</p>
-				</Reveal>
-				<Reveal visible={revealVis.visible} delay={800}>
-					<p class="txt-xl theme">That is the purpose of Bodha Academy.</p>
+				<Reveal visible={revealVis.visible}>
+					<p class="bold highlight-text">That is the purpose of Bodha Academy.</p>
 				</Reveal>
 			</div>
 		</div>
 	</section>
 	<section class="wrapper-std growingline" bind:this={reference}>
 		<Title text="courses" />
-		<div class="grid grid-cols-1 lg:grid-cols-2">
+		<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 			<Slider visible={isVisible.visible} direction="left" outDirection="left" distance={200} duration={400} delay={500}>
 				<a class="box rgap16 course-item p16 lg:p32" href="/academy/courses/introduction-to-shri-ram-swarup">
 					<div>
-						<img class="size-lg radius8" src="/images/srg-square.webp" alt="Introduction to Shri Ram Swarup" />
+						<img class="size-lg" src="/images/srg-square.webp" alt="Introduction to Shri Ram Swarup" />
 					</div>
-					<div class="box rgap8 p16">
-						<h2 class="txt-3xl a-hover">Introduction to Shri Ram Swarup</h2>
-						<p class="txt-lg grey2">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
+					<div class="box rgap8">
+						<h3>Introduction to Shri Ram Swarup</h3>
+						<p class="body-text grey">Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.</p>
 					</div>
-					<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom px16">
-						<p class="txt-bs">Pankaj Saxena</p>
-						<p class="cite tt-u dead">Concluded</p>
+					<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
+						<p class="altprim tt-u w500">Pankaj Saxena</p>
+						<p class="tag-pill tt-u dead">Concluded</p>
 					</div>
 				</a>
 			</Slider>
 			<Slider visible={isVisible.visible} direction="right" outDirection="right" distance={200} duration={400} delay={500}>
 				<div class="box rgap16 p16 lg:p32">
 					<div>
-						<img class="size-lg radius8" src="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp" alt="Ancient Indian History" />
+						<img class="size-lg" src="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp" alt="Ancient Indian History" />
 					</div>
-					<div class="box rgap8 p16">
-						<h2 class="txt-3xl">Ancient Indian History</h2>
-						<p class="txt-lg grey2">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
+					<div class="box rgap8">
+						<h3>Ancient Indian History</h3>
+						<p class="body-text grey">The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.</p>
 					</div>
-					<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom px16">
-						<p class="txt-bs">Amritanshu Pandey</p>
-						<p class="cite tt-u">Upcoming</p>
+					<div class="row ycenter xbetween mwrap cgap8 rgap8 foot self-bottom">
+						<p class="altprim tt-u w500 dead">Amritanshu Pandey</p>
+						<p class="tag-pill tt-u">Upcoming</p>
 					</div>
 				</div>
 			</Slider>
@@ -94,8 +92,8 @@
 				<div class="person-card">
 					<img class="person-photo" src={item.photo} alt={item.name} />
 					<div class="person-data box rgap8">
-						<p class="headline">{item.name}</p>
-						<p class="txt-lg grey2">{item.description}</p>
+						<p class="card-title tight bold">{item.name}</p>
+						<p class="body-text grey">{item.description}</p>
 					</div>
 				</div>
 			{/each}

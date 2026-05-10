@@ -105,13 +105,13 @@
 	<section class="wrapper-std tight-stack first-box">
 		<Crumb />
 		<div class="box rgap16" use:autoAnimate bind:this={revRef}>
-			<Reveal visible={revVis.visible}><p class="desc col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p></Reveal>
+			<Reveal visible={revVis.visible}><p class="highlight-text col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p></Reveal>
 			<Reveal visible={revVis.visible} delay={300}>
-				<p class="desc width60">
+				<p class="highlight-text width60">
 					The word anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer. Kaśmīr Śaiva darśana tells us that, vimarṣa - Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
 					cosmos, life and existence.
 				</p></Reveal>
-			<Reveal visible={revVis.visible} delay={600}><p class="desc bold">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p></Reveal>
+			<Reveal visible={revVis.visible} delay={600}><p class="highlight-text bold">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p></Reveal>
 			{#if !showText}
 				<button class="hollow-link anveshi" onclick={toggleText}>
 					Read More
@@ -122,17 +122,19 @@
 				<div class="grid col-span-full">
 					<div class="grid grid-cols-1 lg:grid-cols-2 col-span-full rgap16 cgap32">
 						<div class="box textbox">
-							<p class="desc">
+							<p class="highlight-text">
 								A favorite theme of literature is wanderlust—fernweh—the innate urge to go out and discover the world. This desire for discovery is fundamental to human nature: to seek the new, to unravel the hidden, to find joy in the very act of anveṣaṇa. Human history is shaped by such courageous journeys—taken by individuals and communities—that have transformed the course of civilizations.
 							</p>
-							<p class="desc">
+							<p class="highlight-text">
 								This urge is biological; most species possess the instinct to chart new waters and explore unknown territories. Yet, there is a deeper, inner dimension to this impulse. In discovering the world, we also seek to discover the self. In our pursuit of the new, we yearn for the eternal. In our search for change, we long for what is unchanging. In essence, every outer journey becomes an
 								inner anvekṣaṇa.
 							</p>
 						</div>
 						<div class="box">
-							<p class="desc">In Bhāratavarṣa and the Hindu dhārmic tradition, these two seemingly opposing impulses are beautifully harmonized through the tradition of yātrā to sacred kṣetrās—a journey where both the inner and outer quests are fulfilled in ways that are joyful, meaningful, and spiritually elevating.</p>
-							<p class="desc">Anveṣī seeks to contemporize the ancient Indian tradition of yātrā by taking modern seekers to sacred kṣetrās of India - places that are largely unexplored by most of us, yet are rich in architectural, sculptural, and cultural splendor. These are not just historical sites, but living systems that have sustained vibrant cultural traditions for thousands of years.</p>
+							<p class="highlight-text">In Bhāratavarṣa and the Hindu dhārmic tradition, these two seemingly opposing impulses are beautifully harmonized through the tradition of yātrā to sacred kṣetrās—a journey where both the inner and outer quests are fulfilled in ways that are joyful, meaningful, and spiritually elevating.</p>
+							<p class="highlight-text">
+								Anveṣī seeks to contemporize the ancient Indian tradition of yātrā by taking modern seekers to sacred kṣetrās of India - places that are largely unexplored by most of us, yet are rich in architectural, sculptural, and cultural splendor. These are not just historical sites, but living systems that have sustained vibrant cultural traditions for thousands of years.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -155,7 +157,7 @@
 							<span class="openbadge">OPEN NOW</span>
 							<div class="box rgap16">
 								<p class="white w500 tt-u" style="width: max-content">{item.fromto}</p>
-								<h2 class="txt-4xl lg:txt-6xl fw500 white">{item.chapter} Chapter</h2>
+								<h2 class="card-title white">{item.chapter} Chapter</h2>
 								<p class="body-text white">{item.desc}</p>
 								<p class="anveshi-o descriptor-text bold">→</p>
 							</div>
@@ -169,8 +171,8 @@
 	{#if testis && testis.length > 0}
 		<section class="wrapper-std growingline" id="testimonials">
 			<Title text="testimonials" anveshi={true} />
-			<div class="box rgap16">
-				<Mark fade pauseOnHover duration="200s" gap="16px">
+			<div class="box rgap4">
+				<Mark fade pauseOnHover duration="200s" gap="4px">
 					{#each testis as item}
 						<div class="testimonial box rgap8 p16 lg:p24">
 							<Quote />
@@ -179,7 +181,7 @@
 						</div>
 					{/each}
 				</Mark>
-				<Mark fade pauseOnHover reverse={true} duration="200s" gap="16px">
+				<Mark fade pauseOnHover reverse={true} duration="200s" gap="4px">
 					{#each testis as item, i}
 						{#if i > 3}
 							<div class="testimonial box rgap8 p32">
@@ -252,40 +254,39 @@
 				</ResponsiveMenu>
 			</div>
 			{#if futureproj && futureproj.length > 0 && isRegion[7]}
-				<Swipes slidesPerView={3} spaceBetween={4} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 3, spaceBetween: 4 } }}>
+				<Swipes slidesPerView={4} spaceBetween={4} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 4, spaceBetween: 4 } }}>
 					{#each futureproj as item}
 						<swiper-slide>
 							<div class="sub-item box rgap16 swiper-sub radius8 overflow-hidden">
 								<div class="p4"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
 								<div class="box rgap8 px16 lg:px24">
-									<p class="headline tt-c">{item.chapter}</p>
-									<p class="txt-lg grey2 pbot8">{item.shortdesc}</p>
-									{#if item.region}<p class="txt-bs fw500 anveshi-alt tt-u self-bottom">{item.region}</p>{/if}
+									<p class="card-title bold tt-c">{item.chapter}</p>
+									<p class="body-text grey pbot8">{item.shortdesc}</p>
 								</div>
-								{#if item.regopen === true}
-									<div class="row self-bottom ycenter cgap8 bordertop stonecard p16">
-										<p class="txt-lg"><a class="anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a></p>
-									</div>
-								{/if}
+								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
+									{#if item.region}<p class="tag-pill anveshi tt-u">{item.region}</p>{/if}
+									{#if item.regopen === true}
+										<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+									{/if}
+								</div>
 							</div>
 						</swiper-slide>
 					{/each}
 				</Swipes>
 			{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
-				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 rgap16 cgap16" use:autoAnimate>
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 rgap16 cgap16" use:autoAnimate>
 					{#each regionAnveshi as item, i}
 						<div class="sub-item box rgap16">
 							<div class="p8"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
 							<div class="box p16 lg:p32 notop rgap8">
-								<p class="headline tt-c">{item.chapter}</p>
-								<p class="txt-lg grey2 pbot8">{item.shortdesc}</p>
+								<p class="bold body-text tt-c">{item.chapter}</p>
+								<p class="grey">{item.shortdesc}</p>
 							</div>
-
-							{#if item.regopen === true}
-								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
+							<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
+								{#if item.regopen === true}
 									<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
-								</div>
-							{/if}
+								{/if}
+							</div>
 						</div>
 					{/each}
 				</div>

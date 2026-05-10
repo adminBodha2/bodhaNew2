@@ -61,7 +61,7 @@
 					{#if data.tags && data.tags.length > 0}
 						<div class="row wrap cgap4 rgap4">
 							{#each data.tags as tag}
-								<a class="cite tt-u blank" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
+								<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
 							{/each}
 						</div>
 					{/if}
@@ -77,7 +77,7 @@
 						{#each data.linkedNodes as item (item.nodeId)}
 							<a class="blank textbox whitestone p16 lg:p32" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
 								<div class="box rgap16">
-									<p class="cite lgrey tt-u">{item.node.type}</p>
+									<p class="tag-text lgrey tt-u">{item.node.type}</p>
 									<p class="body-text w500 tight">{item.node.title}</p>
 									{#if item.node.description}
 										<p class="descriptor-text grey tight">{item.node.description}</p>
@@ -85,7 +85,7 @@
 								</div>
 								<div class="row wrap cgap8 rgap4 self-bottom ptop32">
 									{#each item.node.tags as tag}
-										<p class="cite hollow tt-u themed">{tag.replaceAll('-', ' ')}</p>
+										<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-', ' ')}</p>
 									{/each}
 								</div>
 							</a>

@@ -116,7 +116,7 @@
 				</div>
 				<div class="tag-row row self-center">
 					{#each data.tags as tag}
-						<a class="cite themed tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+						<a class="tag-pill themed tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 					{/each}
 				</div>
 			</div>
@@ -141,10 +141,10 @@
 						<p class="body-text tight bold a-hover">{item.meta.title}</p>
 						<p class="grey">{item.meta.excerpt}</p>
 						<div class="box foot self-bottom bordertop ptop8">
-							<p class="cite grey tt-u">{item.meta.author} | {item.meta.words} words</p>
+							<p class="tag-text grey tt-u">{item.meta.author} | {item.meta.words} words</p>
 							<div class="row of-info mwrap cgap8 rgap8">
 								{#each item.meta.tags as tag}
-									<p class="cite hollow themed tt-u dead">{tag.replaceAll('-', ' ')}</p>
+									<p class="tag-pill hollow themed tt-u dead">{tag.replaceAll('-', ' ')}</p>
 								{/each}
 							</div>
 						</div>

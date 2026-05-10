@@ -63,7 +63,7 @@
 	<section class="tight-stack wrapper-std first-box">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
-				<p class="cite anveshi dead">OPEN NOW!</p>
+				<p class="tag-pill anveshi dead">OPEN NOW!</p>
 			{/if}
 		</Crumb>
 		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 content-highlights" bind:this={ref}>
@@ -80,22 +80,22 @@
 			<div class="box dates p16">
 				<Calendar fill="var(--color-anveshi)" />
 				<p class="descriptor-text w500 ptop8">{data.dates}</p>
-				<p class="cite grey tt-u">Dates</p>
+				<p class="tag-text grey tt-u">Dates</p>
 			</div>
 			<div class="box price p16">
 				<Rupee fill="var(--color-anveshi)" />
 				<p class="descriptor-text w500 ptop8">{data.price}</p>
-				<p class="cite grey tt-u">Price</p>
+				<p class="tag-text grey tt-u">Price</p>
 			</div>
 			<div class="box duration p16">
 				<Session fill="var(--color-anveshi)" />
 				<p class="descriptor-text w500 ptop8">{data.duration}</p>
-				<p class="cite grey tt-u">Duration</p>
+				<p class="tag-text grey tt-u">Duration</p>
 			</div>
 			<div class="box temples p16">
 				<Location fill="var(--color-anveshi)" />
 				<p class="descriptor-text w500 ptop8">{data.temples}</p>
-				<p class="cite grey tt-u">Temples</p>
+				<p class="tag-text grey tt-u">Temples</p>
 			</div>
 		</div>
 		<div class="box col-span-full">
