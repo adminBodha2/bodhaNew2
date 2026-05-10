@@ -54,7 +54,7 @@
 					<input class="in-toggle" id="check-toggle" type="checkbox" bind:checked={showCount} />
 					<label for="check-toggle"></label>
 				</div>
-				<p class="cite tt-u lgrey">
+				<p class="tag-text tt-u lgrey">
 					{#if showCount}View Alphabetical{:else}View by Count{/if}
 				</p>
 			</div>

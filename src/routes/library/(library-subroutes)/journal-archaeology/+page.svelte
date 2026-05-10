@@ -31,7 +31,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 				{#each groups as item}
 					<a class="blank card-padded whitestone" href={item.linkpath}>
-						<p class="body-text">{item.meta.title}</p>
+						<p class="paragraph-text">{item.meta.title}</p>
 					</a>
 				{/each}
 			</div>
@@ -55,7 +55,7 @@
 								{#each item.items as iss}
 									<div class="box rgap8">
 										<p class="w500 tight">{iss.title}</p>
-										<p class="cite grey tt-u">{iss.authorsText}</p>
+										<p class="tag-text grey tt-u">{iss.authorsText}</p>
 									</div>
 								{/each}
 							</div>
