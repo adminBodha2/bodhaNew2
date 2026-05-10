@@ -14,8 +14,8 @@
 		centered?: boolean;
 		serifed?: boolean;
 		fullP?: boolean;
-		onblog?:boolean;
-		singlepad?:boolean;
+		onblog?: boolean;
+		singlepad?: boolean;
 		children?: Snippet;
 	};
 
@@ -29,14 +29,14 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box null{rgap} crumb-outer" class:singlepad={singlepad} class:onblog={onblog} class:fullP={fullP} class:xcenter={centered}>
+<div class="box null{rgap} crumb-outer" class:singlepad class:onblog class:fullP class:xcenter={centered}>
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
 	{/if}
 	<div class="row ycenter xleft cgap4 rgap8 mwrap crumbrow">
 		<a class="crumb-link row cgap4" class:faded={routeDepth > 1} href="/"
 			><div class="link-arrow" class:gone={routeDepth > 1}>←</div>
-			 Bodha
+			Bodha
 		</a>
 		{#if routeDepth > 1}
 			<span class="divider">\</span>
@@ -55,10 +55,10 @@
 	</div>
 	<div class="mleft box rgap8" class:pbot8={showRow} class:ta-c={centered}>
 		{#if showT}
-			<h1 class="page-title tt-c tight" class:source-serif={serifed}>{title}</h1>
+			<h1 class="txt-5xl tt-c ls-2sm lg:ls-4sm" class:source-serif={serifed}>{title}</h1>
 		{/if}
 		{#if showD}
-			<p class="grey tight" class:width60={!centered && !fullP}>{desc}</p>
+			<p class="txt-bs grey1 tight" class:width60={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 	{#if showRow}

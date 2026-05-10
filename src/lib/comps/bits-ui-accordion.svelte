@@ -5,45 +5,42 @@
 		{
 			value: 'temple-memory',
 			title: 'Temple memory',
-			content:
-				'Anveshi routes can use accordions to hold layered notes without forcing every detail onto the first screen.'
+			content: 'Anveshi routes can use accordions to hold layered notes without forcing every detail onto the first screen.'
 		},
 		{
 			value: 'journey-context',
 			title: 'Journey context',
-			content:
-				'Each panel can carry itinerary context, sthala notes, visiting guidance, or links to deeper research pages.'
+			content: 'Each panel can carry itinerary context, sthala notes, visiting guidance, or links to deeper research pages.'
 		},
 		{
 			value: 'headless-control',
 			title: 'Headless control',
-			content:
-				'Bits UI provides the accessibility and state behavior while the page keeps full control of local Sass styling.'
+			content: 'Bits UI provides the accessibility and state behavior while the page keeps full control of local Sass styling.'
 		}
 	];
 </script>
 
-		<section class="bits-demo box rgap24">
-			<div class="box rgap8">
-				<p class="tag-text green tt-u bold tight">Bits UI Demo</p>
-				<h5 class="tight">Accordion</h5>
-			</div>
-			<Accordion.Root class="accordion-root" type="multiple" value={['temple-memory']}>
-				{#each items as item}
-					<Accordion.Item class="accordion-item" value={item.value}>
-						<Accordion.Header>
-							<Accordion.Trigger class="accordion-trigger">
-								<span>{item.title}</span>
-								<span class="accordion-icon" aria-hidden="true">⌄</span>
-							</Accordion.Trigger>
-						</Accordion.Header>
-						<Accordion.Content class="accordion-content">
-							<p>{item.content}</p>
-						</Accordion.Content>
-					</Accordion.Item>
-				{/each}
-			</Accordion.Root>
-		</section>
+<section class="bits-demo box rgap24">
+	<div class="box rgap8">
+		<p class="cite green tt-u bold tight">Bits UI Demo</p>
+		<h5 class="tight">Accordion</h5>
+	</div>
+	<Accordion.Root class="accordion-root" type="multiple" value={['temple-memory']}>
+		{#each items as item}
+			<Accordion.Item class="accordion-item" value={item.value}>
+				<Accordion.Header>
+					<Accordion.Trigger class="accordion-trigger">
+						<span>{item.title}</span>
+						<span class="accordion-icon" aria-hidden="true">⌄</span>
+					</Accordion.Trigger>
+				</Accordion.Header>
+				<Accordion.Content class="accordion-content">
+					<p>{item.content}</p>
+				</Accordion.Content>
+			</Accordion.Item>
+		{/each}
+	</Accordion.Root>
+</section>
 
 <style lang="sass">
 

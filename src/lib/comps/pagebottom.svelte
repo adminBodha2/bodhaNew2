@@ -3,33 +3,30 @@
 	import Twitter from '$lib/icons/twitter.svelte';
 	import Insta from '$lib/icons/instagram.svelte';
 	import Linkedin from '$lib/icons/linkedin.svelte';
-	import Github from '$lib/icons/github.svelte'
-	import Designed from '$lib/icons/designed.svelte'
-	import Sun from '$lib/icons/sun.svelte'
-	import Moon from '$lib/icons/moon.svelte'
-	import { darkTheme, openSiteTourSelector, toggleTheme } from '$lib/utils/globalstores'
+	import Github from '$lib/icons/github.svelte';
+	import Designed from '$lib/icons/designed.svelte';
+	import Sun from '$lib/icons/sun.svelte';
+	import Moon from '$lib/icons/moon.svelte';
+	import { darkTheme, openSiteTourSelector, toggleTheme } from '$lib/utils/globalstores';
 </script>
 
 <section class="foot-wrap box">
 	<div class="foot-wide-lines"></div>
 	<div class="foot-inner box">
 		<div class="foot-top">
-			<button
-				class="blank foot-scroll"
-				onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-			>
+			<button class="blank foot-scroll" onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
 				<span class="foot-scroll-arrow">↑</span>
 				<span class="foot-scroll-label tt-u">Top</span>
 			</button>
 		</div>
 		<div class="footer-grid">
 			<div class="foot-brand box rgap16">
-				<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo"/></a>
+				<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo" /></a>
 				<p class="light-footer">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="light-footer">Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p> 
+				<p class="light-footer">Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br /><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
 				<div class="row ycenter cgap8">
-				<Designed/>
-				<!--
+					<Designed />
+					<!--
 				<button class="blank" onclick={toggleTheme}>
 					{#if $darkTheme}
 						<Sun/>
@@ -85,19 +82,19 @@
 			</div>
 			<div class="foot-actions">
 				<a class="blank foot-social" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-					<Twitter size=24 color="#FFFFFF" />
+					<Twitter size="24" color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-					<FB size=24 color="#FFFFFF" />
+					<FB size="24" color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-					<Insta size=24 color="#FFFFFF" />
+					<Insta size="24" color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-					<Linkedin size=24 color="#FFFFFF" />
+					<Linkedin size="24" color="#FFFFFF" />
 				</a>
 				<a class="blank foot-social" href="https://github.com/adminBodha2/bodhaNew2" rel="noreferrer" target="_blank">
-					<Github size=24 color="#FFFFFF"/>
+					<Github size="24" color="#FFFFFF" />
 				</a>
 			</div>
 		</div>
@@ -108,6 +105,10 @@
 
 p.light-footer
 	color: #a7a7a7
+
+.foot-brand
+	p.light-footer
+		font-size: 14px
 
 .foot-wrap
 	width: 100%
@@ -179,7 +180,7 @@ p.light-footer
 	row-gap: 4rem
 	margin-left: auto
 	margin-right: auto
-	padding-top: 3rem
+	padding-top: 2	rem
 	@media (max-width: 1024px)
 		padding-left: 1rem
 		padding-right: 1rem

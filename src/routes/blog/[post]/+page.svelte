@@ -9,7 +9,7 @@
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
-	import { mouseStore } from '$lib/utils/mousestore'
+	import { mouseStore } from '$lib/utils/mousestore';
 	import { readerChromeHidden } from '$lib/utils/globalstores';
 
 	const position = mouseStore();
@@ -18,20 +18,14 @@
 	const revealPointerZone = 120;
 
 	interface Props {
-	    data: PageData;
-	    grid?: number;
-		mouseSize?: number,
-		strength?:number,
-		relaxation?:number
+		data: PageData;
+		grid?: number;
+		mouseSize?: number;
+		strength?: number;
+		relaxation?: number;
 	}
 
-	let {
-		data,
-		grid = 64,
-		mouseSize = 0.15,
-		strength = 0.6,
-		relaxation = 0.8,
-	}: Props = $props();
+	let { data, grid = 64, mouseSize = 0.15, strength = 0.6, relaxation = 0.8 }: Props = $props();
 
 	let posts = $derived(data.posts ?? []);
 	let ref = $state<HTMLElement | null>(null);
@@ -103,62 +97,62 @@
 	});
 </script>
 
-<svelte:window bind:scrollY={sY}/>
+<svelte:window bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
 <Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="3px" {ref} />
 <Container>
-<section class="box rgap32 wrapper-std header-margin">
-	<div class="box rgap16 xcenter mleft ta-c ptop32 pbot32">
-		<Crumb onblog={true}/>
-		<h1 class="page-title source-serif width70 self-center">{data.title}</h1>
-		<div class="box rgap16 width90 self-center">
-		<p class="altprim paragraph-text">{data.excerpt}</p>
-		<div class="info row ycenter xcenter mleft cgap8">
-			<div class="line left-line"></div>
-			<p class="highlight-text"><a class="linkedlight" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
-			<div class="line right-line"></div>
+	<section class="box rgap32 wrapper-std header-margin">
+		<div class="box rgap16 xcenter mleft ta-c ptop32 pbot32">
+			<Crumb onblog={true} />
+			<h1 class="page-title source-serif width70 self-center">{data.title}</h1>
+			<div class="box rgap16 width90 self-center">
+				<p class="altprim body-text">{data.excerpt}</p>
+				<div class="info row ycenter xcenter mleft cgap8">
+					<div class="line left-line"></div>
+					<p class="highlight-text"><a class="linkedlight" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
+					<div class="line right-line"></div>
+				</div>
+				<div class="tag-row row self-center">
+					{#each data.tags as tag}
+						<a class="cite themed tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+					{/each}
+				</div>
+			</div>
 		</div>
-		<div class="tag-row row self-center">
-			{#each data.tags as tag}
-			<a class="tag-pill themed tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
-			{/each}
+		<div class="box blog-image-area xcenter">
+			<WaterRipple src={metaImage} class="ripple-motion" brushSize={100} />
 		</div>
-		</div>
-	</div>
-	<div class="box blog-image-area xcenter">
-		<WaterRipple src={metaImage} class="ripple-motion" brushSize={100}/>
-	</div>
-	<article class="blog-article self-center" bind:this={ref}>
-		<data.content />
-	</article>
+		<article class="blog-article self-center" bind:this={ref}>
+			<data.content />
+		</article>
 		<div class="row share-row ycenter cgap16 xbetween post-article self-center">
 			<Social urlToShare={page.url.href} />
 			<a class="grey-button" href="/blog">← Back to Blog</a>
 		</div>
-</section>
-<section class="box wrapper-std rgap64 growingline">
-	{#if posts && posts.length > 0}
-		<h2>More Like This</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 cgap4 rgap4">
-			{#each posts as item, i}
-				<a class="box blank p16 rgap8 lg:p24 b-main ncolor-inv" href={item.linkpath}>
-					<p class="paragraph-text tight bold a-hover">{item.meta.title}</p>
-					<p class="grey">{item.meta.excerpt}</p>
-					<div class="box foot self-bottom bordertop ptop8">
-					<p class="tag-text grey tt-u">{item.meta.author} | {item.meta.words} words</p>
-					<div class="row of-info mwrap cgap8 rgap8">
-						{#each item.meta.tags as tag}
-							<p class="tag-pill hollow themed tt-u dead">{tag.replaceAll('-',' ')}</p>
-						{/each}
-					</div>
-					</div>
-				</a>
-			{/each}
-		</div>
-	{/if}
-</section>
+	</section>
+	<section class="box wrapper-std rgap64 growingline">
+		{#if posts && posts.length > 0}
+			<h2>More Like This</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 cgap4 rgap4">
+				{#each posts as item, i}
+					<a class="box blank p16 rgap8 lg:p24 b-main ncolor-inv" href={item.linkpath}>
+						<p class="body-text tight bold a-hover">{item.meta.title}</p>
+						<p class="grey">{item.meta.excerpt}</p>
+						<div class="box foot self-bottom bordertop ptop8">
+							<p class="cite grey tt-u">{item.meta.author} | {item.meta.words} words</p>
+							<div class="row of-info mwrap cgap8 rgap8">
+								{#each item.meta.tags as tag}
+									<p class="cite hollow themed tt-u dead">{tag.replaceAll('-', ' ')}</p>
+								{/each}
+							</div>
+						</div>
+					</a>
+				{/each}
+			</div>
+		{/if}
+	</section>
 </Container>
 
 <style lang="sass">

@@ -77,7 +77,7 @@
 			{#each libCategories as cat, i}
 				<a class="blank box p24 b-main radius glass-3" href={cat.href}>
 					<div class="box shelf-main">
-						<p class="tag-text tt-u w500 blue">
+						<p class="cite tt-u w500 blue">
 							{#if cat.type === 'arch'}41 issues{:else}{categoryCounts[cat.type]} texts{/if}
 						</p>
 						<p class="card-title w600 tight a-hover ptop8 pbot8">{cat.label}</p>
@@ -120,10 +120,10 @@
 			<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
 				{#each bharatabooks as item}
 					<div class="box rgap8 b-main radius8 p24">
-						<p class="paragraph-text w600 tight">{item.title}</p>
+						<p class="body-text w600 tight">{item.title}</p>
 						<p class="grey tight">{item.description}</p>
 						{#if item.author && item.author !== ''}
-							<p class="tag-text tt-u grey">{item.author}</p>
+							<p class="cite tt-u grey">{item.author}</p>
 						{/if}
 					</div>
 				{/each}
@@ -135,7 +135,7 @@
 		<div class="grid grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each libExternal as res}
 				<a class="blank whitestone box rgap8 p16 lg:p24" href={res.href} target="_blank" rel="noreferrer">
-					<p class="paragraph-text w600 tight a-hover">{res.label} →</p>
+					<p class="body-text w600 tight a-hover">{res.label} →</p>
 					<p class="descriptor-text grey tight">{res.desc}</p>
 				</a>
 			{/each}

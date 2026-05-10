@@ -10,3 +10,19 @@ $max-breakpoints: ("sm": 1024px)
 =respond-down($name)
 	@media (max-width: map.get($max-breakpoints, $name))
 		@content
+
+=sm
+	+respond-down("sm")
+		@content
+
+=md
+	+respond("md")
+		@content
+
+=lg
+	+respond("lg")
+		@content
+
+=xl
+	+respond("xl")
+		@content

@@ -7,7 +7,7 @@
 	import { fly } from 'svelte/transition';
 	import { dismissSiteTour, iW, isLocalSiteTourPreview, loadSiteTourState, resetSiteTour, saveSiteTourProgress, saveSiteTourState, SITE_TOUR_OPEN_EVENT, SITE_TOUR_VERSION, recordSiteVisit, isNewVisitor, type SiteTourId } from '$lib/utils/globalstores';
 	import Icon from '$lib/icons/tour-drawer.svelte';
-	import Menu from '$lib/icons/menu.svelte'
+	import Menu from '$lib/icons/menu.svelte';
 	import Close from '$lib/icons/close.svelte';
 
 	type TourVisibility = 'none' | 'icon' | 'panel';
@@ -36,7 +36,7 @@
 		step_type: 'start';
 	};
 
-type TourPanelMode = 'full' | 'half';
+	type TourPanelMode = 'full' | 'half';
 
 	type SiteTourJsonStep = TourStep | StartStep;
 
@@ -52,28 +52,7 @@ type TourPanelMode = 'full' | 'half';
 	let tourPanelMode = $state<TourPanelMode>('full');
 	let { isFooterVisible = false }: Props = $props();
 
-	const stepCounter = [
-		1,
-		2,
-		3,
-		4,
-		5,
-		6,
-		7,
-		8,
-		9,
-		10,
-		11,
-		12,
-		13,
-		14,
-		15,
-		16,
-		17,
-		18,
-		19,
-		20
-	]
+	const stepCounter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 	const activeSteps = $derived(activeTourId ? tourSteps.filter((step) => step.tour_id === activeTourId).sort((a, b) => a.step_number - b.step_number) : []);
 
@@ -151,31 +130,26 @@ type TourPanelMode = 'full' | 'half';
 	}
 
 	function hasSavedTourStep(savedTourState = loadSiteTourState()) {
-		return Boolean(
-			savedTourState.tour_id &&
-				savedTourState.step_number &&
-				!savedTourState.dismissed &&
-				tourSteps.some((step) => step.tour_id === savedTourState.tour_id && step.step_number === savedTourState.step_number)
-		);
+		return Boolean(savedTourState.tour_id && savedTourState.step_number && !savedTourState.dismissed && tourSteps.some((step) => step.tour_id === savedTourState.tour_id && step.step_number === savedTourState.step_number));
 	}
 
-function openPanelFull() {
-	tourVisibility = 'panel';
-	tourPanelMode = 'full';
-}
-
-function openPanelHalf() {
-	tourVisibility = 'panel';
-	if ( $iW ) {
-		tourPanelMode = 'half';
-	} else {
-		tourPanelMode = 'full'
+	function openPanelFull() {
+		tourVisibility = 'panel';
+		tourPanelMode = 'full';
 	}
-}
 
-function minimizePanelToIcon() {
-	tourVisibility = shouldShowIconWhenClosed() ? 'icon' : 'none';
-}
+	function openPanelHalf() {
+		tourVisibility = 'panel';
+		if ($iW) {
+			tourPanelMode = 'half';
+		} else {
+			tourPanelMode = 'full';
+		}
+	}
+
+	function minimizePanelToIcon() {
+		tourVisibility = shouldShowIconWhenClosed() ? 'icon' : 'none';
+	}
 
 	function showSelector() {
 		tourVisibility = 'panel';
@@ -185,15 +159,15 @@ function minimizePanelToIcon() {
 		resetSiteTour();
 	}
 
-function setPanelModeAfterNavigation() {
-	if ($iW) {
+	function setPanelModeAfterNavigation() {
+		if ($iW) {
+			tourVisibility = 'panel';
+			tourPanelMode = 'half';
+			return;
+		}
 		tourVisibility = 'panel';
-		tourPanelMode = 'half';
-		return;
+		tourPanelMode = 'full';
 	}
-	tourVisibility = 'panel';
-	tourPanelMode = 'full';
-}
 
 	function endTour() {
 		tourVisibility = 'panel';
@@ -231,7 +205,6 @@ function setPanelModeAfterNavigation() {
 		activeStepNumber = firstStep.step_number;
 		await navigateToStep(firstStep);
 	}
-
 
 	async function goNext() {
 		if (!currentStep) return;
@@ -326,155 +299,155 @@ function setPanelModeAfterNavigation() {
 		});
 	}
 
-
 	$effect(() => {
 		if (!$iW) {
 			document.body.style.overflow = '';
-		} else if ( tourVisibility === 'panel' && tourPanelMode === 'half') {
-			document.body.style.overflow = ''
-		} else if ( tourVisibility === 'panel' && tourPanelMode === 'full') {
+		} else if (tourVisibility === 'panel' && tourPanelMode === 'half') {
+			document.body.style.overflow = '';
+		} else if (tourVisibility === 'panel' && tourPanelMode === 'full') {
 			document.body.style.overflow = 'hidden';
 		} else if (tourVisibility !== 'panel') {
 			document.body.style.overflow = '';
 		}
 	});
-
 </script>
 
 {#if tourVisibility === 'panel'}
-		<aside class="tour-card" use:clickOutsideAction={handlePanelClose} class:half={tourPanelMode === 'half'} class:full={tourPanelMode === 'full'} aria-label="Site Tour" in:fly={{ y: 200, duration: 280 }} out:fly={{ y: 200, duration: 240 }}>
-			{#if activeScreen === 'ended'}
-				<div class="textbox top-end">
-					<div class="row ycenter xbetween">
-						<p class="tag-text tt-u bold white">
-							tour ended
-						</p>
+	<aside class="tour-card" use:clickOutsideAction={handlePanelClose} class:half={tourPanelMode === 'half'} class:full={tourPanelMode === 'full'} aria-label="Site Tour" in:fly={{ y: 200, duration: 280 }} out:fly={{ y: 200, duration: 240 }}>
+		{#if activeScreen === 'ended'}
+			<div class="textbox top-end">
+				<div class="row ycenter xbetween">
+					<p class="cite tt-u bold white">tour ended</p>
+				</div>
+			</div>
+			<div class="mid-area just-select">
+				<div class="mid-one ender-mid">
+					<div class="mid-one-main">
+						<div class="row ytop xbetween">
+							<p class="card-title bold blue-dark tight" style="padding-top: 4px">End of Tour</p>
+							<button class="blank" style="margin-bottom: 4px" onclick={closeEndedTour}><Close size={36} color="var(--color-primary)" /></button>
+						</div>
+						<p class="tight pbot8">We hope this tour helped you discover areas of our website relevant to you. Restart this tour any time from 'Site Tour' link in the footer.</p>
+						<button class="small-button variant" onclick={showSelector}>Restart Now</button>
 					</div>
 				</div>
-				<div class="mid-area just-select">
-					<div class="mid-one ender-mid">
-						<div class="mid-one-main">
-							<div class="row ytop xbetween">
-								<p class="card-title bold blue-dark tight" style="padding-top: 4px">End of Tour</p>
-								<button class="blank" style="margin-bottom: 4px" onclick={closeEndedTour}><Close size={36} color="var(--color-primary)" /></button>
-							</div>
-							<p class="tight pbot8">We hope this tour helped you discover areas of our website relevant to you. Restart this tour any time from 'Site Tour' link in the footer.</p>
-							<button class="small-button variant" onclick={showSelector}>Restart Now</button>
+			</div>
+			<div class="labelbox self-bottom">
+				<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
+				<p class="rem1 tight white">
+					Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.
+				</p>
+				<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
+			</div>
+		{/if}
+		{#if activeScreen === 'selector'}
+			<div class="textbox top-end">
+				<div class="row ycenter xbetween">
+					<p class="cite tt-u bold white">bodha site tour</p>
+					<p class="cite tt-u bold white mobilestepcounter">0 / 20</p>
+				</div>
+				<div class="row ybottom stepcounter">
+					<span class="big-number white">0</span><span class="small-number white"> / 20</span>
+				</div>
+			</div>
+			<div class="mid-area just-select">
+				<div class="mid-one selector-mid">
+					<div class="mid-one-main">
+						<div class="row ytop xbetween">
+							<p class="card-title bold blue-dark tight" style="padding-top: 4px">{startScreen?.route_label ?? 'Namaste'}</p>
+							<button class="blank" style="margin-bottom: 4px" onclick={handlePanelClose}><Close size={36} color="var(--color-primary)" /></button>
+						</div>
+						<p class="tight">{startScreen?.route_text ?? 'This tour is designed to introduce and orient you to our website. Please select your exploration route.'}</p>
+						<div class="row cgap8 ptop8 selector-items">
+							<button class="newbutton" onclick={() => startTour('work_first')}
+								><span class="button-decor"></span>
+								<div class="button-content"><span class="button__text">{startScreen?.next_button_label ?? 'Our Work'}</span></div></button>
+							<button class="newbutton" onclick={() => startTour('content_first')}
+								><span class="button-decor"></span>
+								<div class="button-content"><span class="button__text">{startScreen?.secondary_button_label ?? 'Content'}</span></div></button>
+						</div>
+					</div>
+					<div class="nav textbox ycenter">
+						<p class="rem1">This tour functions better on a laptop/PC.</p>
+						<div class="row cgap8">
+							<button class="small-button variant" onclick={endTour}>End</button>
 						</div>
 					</div>
 				</div>
-				<div class="labelbox self-bottom">
-					<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
-					<p class="rem1 tight white">Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.</p>
-					<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
-				</div>
-			{/if}
-			{#if activeScreen === 'selector'}
-				<div class="textbox top-end">
-					<div class="row ycenter xbetween">
-					<p class="tag-text tt-u bold white">
-						bodha site tour
-					</p>
-					<p class="tag-text tt-u bold white mobilestepcounter">0 / 20</p>
-					</div>
-					<div class="row ybottom stepcounter">
-						<span class="big-number white">0</span><span class="small-number white"> / 20</span>
-					</div>
-				</div>
-				<div class="mid-area just-select">
-					<div class="mid-one selector-mid">
-						<div class="mid-one-main">
-							<div class="row ytop xbetween">
-								<p class="card-title bold blue-dark tight" style="padding-top: 4px">{startScreen?.route_label ?? 'Namaste'}</p>
-								<button class="blank" style="margin-bottom: 4px" onclick={handlePanelClose}><Close size={36} color="var(--color-primary)" /></button>
-							</div>
-							<p class="tight">{startScreen?.route_text ?? 'This tour is designed to introduce and orient you to our website. Please select your exploration route.'}</p>
-							<div class="row cgap8 ptop8 selector-items">
-						<button class="newbutton" onclick={() => startTour('work_first')}
-							><span class="button-decor"></span>
-							<div class="button-content"><span class="button__text">{startScreen?.next_button_label ?? 'Our Work'}</span></div></button>
-						<button class="newbutton" onclick={() => startTour('content_first')}
-							><span class="button-decor"></span>
-							<div class="button-content"><span class="button__text">{startScreen?.secondary_button_label ?? 'Content'}</span></div></button>
-							</div>
-						</div>
-						<div class="nav textbox ycenter">
-							<p class="rem1">This tour functions better on a laptop/PC.</p>
-							<div class="row cgap8">
-								<button class="small-button variant" onclick={endTour}>End</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="labelbox self-bottom">
-					<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
-					<p class="rem1 tight white">Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.</p>
-					<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
-				</div>
-			{:else if currentStep}
-				<div class="textbox top-end">
-					<div class="row ycenter xbetween">
-					<p class="tag-text tt-u bold white">
+			</div>
+			<div class="labelbox self-bottom">
+				<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
+				<p class="rem1 tight white">
+					Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.
+				</p>
+				<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
+			</div>
+		{:else if currentStep}
+			<div class="textbox top-end">
+				<div class="row ycenter xbetween">
+					<p class="cite tt-u bold white">
 						{currentStep.page_type}
 					</p>
-					<p class="tag-text tt-u bold white mobilestepcounter">{currentStep.step_number} / {activeSteps.length}</p>
-					</div>
-					<div class="row ybottom stepcounter">
-						<span class="big-number white">{currentStep.step_number}</span><span class="small-number white"> / {activeSteps.length}</span>
-					</div>
-					<button class="small-button variant prev-on-desk" style="margin-top: auto" onclick={goPrev}>← Prev</button>
+					<p class="cite tt-u bold white mobilestepcounter">{currentStep.step_number} / {activeSteps.length}</p>
 				</div>
-				<div class="mid-area">
-					<div class="mid-one">
-						<div class="mid-one-main">
-							<div class="row ytop xbetween">
-								<p class="card-title bold blue-dark tight" style="padding-top: 4px">{currentStep.route_label}</p>
-								<button class="blank" style="margin-bottom: 4px" onclick={handlePanelClose}><Close size={36} color="var(--color-primary)" /></button>
-							</div>
+				<div class="row ybottom stepcounter">
+					<span class="big-number white">{currentStep.step_number}</span><span class="small-number white"> / {activeSteps.length}</span>
+				</div>
+				<button class="small-button variant prev-on-desk" style="margin-top: auto" onclick={goPrev}>← Prev</button>
+			</div>
+			<div class="mid-area">
+				<div class="mid-one">
+					<div class="mid-one-main">
+						<div class="row ytop xbetween">
+							<p class="card-title bold blue-dark tight" style="padding-top: 4px">{currentStep.route_label}</p>
+							<button class="blank" style="margin-bottom: 4px" onclick={handlePanelClose}><Close size={36} color="var(--color-primary)" /></button>
+						</div>
 						{#if currentStep.route_secondary !== ''}
 							<p class="tight">{currentStep.route_text}</p>
 							<p class="tight">{currentStep.route_secondary}</p>
 						{:else}
 							<p class="tight">{currentStep.route_text}</p>
 						{/if}
-						</div>
-						<div class="mid-one-side">
+					</div>
+					<div class="mid-one-side">
 						<button class="nav box ycenter" onclick={goNext}>
-							<p class="tag-text grey">NEXT | {String($iW)} | {tourPanelMode}</p>
+							<p class="cite grey">NEXT | {String($iW)} | {tourPanelMode}</p>
 							<span class="blankbutton">{currentStep.next_button_label} <span class="blue-dark bold">→</span></span>
 						</button>
-							<div class="row cgap8 easy-buttons">
+						<div class="row cgap8 easy-buttons">
 							{#if currentStep.step_number !== 20}
-							<button class="small-button variant" onclick={endTour}>End</button>
+								<button class="small-button variant" onclick={endTour}>End</button>
 							{/if}
 							<button class="small-button variant" onclick={showSelector}>Restart</button>
 							<button class="small-button variant prev-on-mobile" onclick={goPrev}>Previous</button>
 							<button class="small-button variant expand-on-mobile" onclick={openPanelFull}>Expand</button>
-							</div>
 						</div>
 					</div>
-					<div class="mid-baseline of-buttons">
-						{#if currentStep.step_number > 0}
-							{#each stepCounter as number}
-								<button class="baselinebutton" class:active={number === currentStep.step_number} onclick={() => goToStep(number)}>{number}</button>
-							{/each}
-						{/if}
-					</div>
 				</div>
-				<div class="labelbox self-bottom">
-					<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
-					<p class="rem1 tight white">Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.</p>
-					<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
+				<div class="mid-baseline of-buttons">
+					{#if currentStep.step_number > 0}
+						{#each stepCounter as number}
+							<button class="baselinebutton" class:active={number === currentStep.step_number} onclick={() => goToStep(number)}>{number}</button>
+						{/each}
+					{/if}
 				</div>
-			{/if}
-		</aside>
+			</div>
+			<div class="labelbox self-bottom">
+				<p class="rem1 tight white">Click outside or press 'Esc' to close.</p>
+				<p class="rem1 tight white">
+					Re-open this tour anytime with the {#if $iW}menu at screen bottom{:else}icon at bottom-right screen corner{/if}, or through the 'Site Tour' link in the footer.
+				</p>
+				<p class="rem1 tight white">Press Cmd+K/Ctrl+K anytime to initiate Search.</p>
+			</div>
+		{/if}
+	</aside>
 {:else if tourVisibility === 'icon' && !isFooterVisible}
 	<button class="blank with-tooltip" aria-label="Open Site Tour" onclick={openTourPanel}
 		><Icon />
 		<span class="tooltip" role="tooltip"> Open Site Tour </span>
 	</button>
 	<button class="for-mobile" aria-label="Open Site Tour" onclick={openTourPanel}>
-		<Menu color="#FFFFFF" size={32}/>
+		<Menu color="#FFFFFF" size={32} />
 	</button>
 {/if}
 

@@ -25,16 +25,15 @@
 			})
 		)
 	);
-
 </script>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
 <Container>
 	<section class="box wrapper-std header-margin rgap32">
-		<Crumb showT={true} title={data.title}/>
+		<Crumb showT={true} title={data.title} />
 		<div class="pdf-reader box rgap16">
-			<p class="paragraph-text">Accompanying <a class="linkedlight" href="/aryavarta/v1-i{data.id}"> Scrolls of Aryavarta digital comic</a>.</p>
+			<p class="body-text">Accompanying <a class="linkedlight" href="/aryavarta/v1-i{data.id}"> Scrolls of Aryavarta digital comic</a>.</p>
 			<PDFReader src={data.pdflink} title={data.title} height="82vh" />
 		</div>
 	</section>

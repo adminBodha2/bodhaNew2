@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	import { page } from '$app/state';
 	import type { PageData } from './$types';
 	import '$lib/styles/system/document-layout.sass';
@@ -10,14 +9,11 @@
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 
 	interface Props {
-	    data: PageData;
-	    brushSize?: number;
+		data: PageData;
+		brushSize?: number;
 	}
 
-let { 
-    data, 
-    brushSize = 100, 
-}: Props = $props();
+	let { data, brushSize = 100 }: Props = $props();
 
 	let sY = $state(0);
 
@@ -48,19 +44,11 @@ let {
 
 <svelte:window bind:scrollY={sY} />
 
-<Head
-	{title}
-	{metaDescription}
-	{metaImage}
-	{metaUrl}
-	ogType="article"
-	{jsonld}
-/>
-
+<Head {title} {metaDescription} {metaImage} {metaUrl} ogType="article" {jsonld} />
 
 <Container>
 	<section class="dohero">
-		<WaterRipple src={data.image} class="ripple-motion" {brushSize}/>
+		<WaterRipple src={data.image} class="ripple-motion" {brushSize} />
 	</section>
 	<section class="docgrid">
 		<div class="box docside">
@@ -84,13 +72,13 @@ let {
 		<div class="docmain box rgap32">
 			<div class="box title-area">
 				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true} fullP={true}>
-				{#if data.tags && data.tags.length > 0}
-					<div class="row wrap rgap4 cgap4">
-						{#each data.tags as tag}
-							<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
-						{/each}
-					</div>
-				{/if}
+					{#if data.tags && data.tags.length > 0}
+						<div class="row wrap rgap4 cgap4">
+							{#each data.tags as tag}
+								<a class="cite tt-u blank" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
+							{/each}
+						</div>
+					{/if}
 				</Crumb>
 			</div>
 			<div class="doctext classic-document">

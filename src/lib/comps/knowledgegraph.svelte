@@ -130,8 +130,8 @@
 		};
 	});
 
-const baseImage = "/images/demos/night.png";
-	const revealImage = "/images/demos/day.png";
+	const baseImage = '/images/demos/night.png';
+	const revealImage = '/images/demos/day.png';
 
 	let selectedNode = $derived(selectedId ? indexes.pointById.get(selectedId) : undefined);
 	let featuredNodeIdSet = $derived(new Set(featuredNodeIds));
@@ -142,9 +142,7 @@ const baseImage = "/images/demos/night.png";
 	});
 	let topNodes = $derived.by(() => {
 		const points = Array.from(indexes.pointById.values());
-		const featured = points
-			.filter((node) => featuredNodeIdSet.has(node.id))
-			.sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title));
+		const featured = points.filter((node) => featuredNodeIdSet.has(node.id)).sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title));
 
 		if (featured.length) return featured.slice(0, 8);
 
@@ -367,7 +365,7 @@ const baseImage = "/images/demos/night.png";
 					</div>
 				{:else}
 					<p class="citation-big tt-u blue">start here</p>
-					<p class="w500 paragraph-text">Choose a node</p>
+					<p class="w500 body-text">Choose a node</p>
 					<p class="descriptor-text grey">Click any point in the map to reveal its title, tags, and immediate relations.</p>
 					<div class="top-list">
 						{#each topNodes as node}

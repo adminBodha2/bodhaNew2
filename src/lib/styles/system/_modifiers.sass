@@ -2,10 +2,20 @@
 @use 'tokens' as t
 @use 'breakpoints' as b
 
+:root
+	--fontface-sans: 'Google Sans', sans-serif
+	--fontface-sans-flex: 'Google Sans Flex', sans-serif
+	--fontface-serif: 'Source Serif 4', serif
+	--fontface-serif3: 'EB Garamond', serif
+
 html, body
 	box-sizing: border-box
 	padding: 0
 	margin: 0
+	font-family: 'Google Sans', sans-serif
+	color: var(--color-primary)
+	-webkit-font-smoothing: auto
+	-moz-osx-font-smoothing: auto
 
 *, :root
 	box-sizing: border-box
@@ -61,7 +71,7 @@ img.fit
 		height: 320px
 		@media (min-width: 1025px)
 			height: 400px
-	height: 240px
+			height: 240px
 
 img.std
 	object-fit: cover
@@ -90,14 +100,13 @@ img.size-lg
 img.portrait
 	object-fit: cover
 	width: 100%
-	height:280px
+	height: 280px
 	@media (min-width: 1025px)
 		height: 480px
 
 img.contained
 	object-fit: contain
 	height: 240px
-	width: max-content
 
 .theme-line-parent
 	.theme-line
@@ -147,7 +156,7 @@ img.contained
 
 .popup-state
 	.popup-state-dot
-			background: var(--color-theme-alt)
+		background: var(--color-theme-alt)
 
 .popup-coords
 	background: #FFFFFF

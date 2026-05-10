@@ -114,7 +114,7 @@
 
 <div class="swiper-row" class:marquee>
 	<div class="xleft box width100 mobile-rule">
-		<p class="tag-text lgrey mleft ta-l">Swipe left/right to navigate</p>
+		<p class="cite lgrey mleft ta-l">Swipe left/right to navigate</p>
 	</div>
 	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
@@ -131,9 +131,9 @@
 			</button>
 		</div>
 		{#if iW <= 1024}
-			<p class="tag-text anveshi-o">Use buttons to navigate, or swipe left/right.</p>
+			<p class="cite anveshi-o">Use buttons to navigate, or swipe left/right.</p>
 		{:else}
-			<p class="tag-text lgrey">Use buttons or arrow keys to navigate, or drag left/right.</p>
+			<p class="cite lgrey">Use buttons or arrow keys to navigate, or drag left/right.</p>
 		{/if}
 	</div>
 </div>

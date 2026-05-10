@@ -161,7 +161,7 @@
 								</div>
 								<div class="row wrap cgap4 rgap4">
 									{#each postCategories(heroPosts[0]) as category}
-										<span class="tag-pill tt-u">{category}</span>
+										<span class="cite tt-u">{category}</span>
 									{/each}
 								</div>
 							</div>
@@ -174,18 +174,18 @@
 									<enhanced:img class="std radius" src={post.meta.image} alt={post.meta.title} />
 								{/if}
 								<div class="box pbot8">
-									<p class="tag-text tt-u grey">{primaryCategory(post)}</p>
+									<p class="cite tt-u grey">{primaryCategory(post)}</p>
 									<p class="highlight-text bold tight">{post.meta.title}</p>
 									<div class="row wrap cgap4 rgap4 ptop8">
 										{#each (post.meta.tags ?? []).slice(0, 3) as tag, i}
-											<p class="tag-pill hollow themed tt-u dead">
+											<p class="cite hollow themed tt-u dead">
 												{#if i > 0}|
 												{/if}
 												{tag.replaceAll('-', ' ')}
 											</p>
 										{/each}
 									</div>
-									<p class="tag-text lgrey">{post.formattedDate} · {post.meta.words ?? ' '} words</p>
+									<p class="cite lgrey">{post.formattedDate} · {post.meta.words ?? ' '} words</p>
 								</div>
 							</a>
 						{/each}
@@ -193,13 +193,13 @@
 				{/if}
 				<aside class="blog-sidebar lg:ptop32">
 					<section class="sidebar-section" id="external-posts">
-						<a class="tag-text tt-u blue-dark section-titler" href="/blog/external">External posts</a>
+						<a class="cite tt-u blue-dark section-titler" href="/blog/external">External posts</a>
 						<div class="external-list">
 							{#each externalPosts.slice(0, 6) as post}
 								<a class="external-item blank" href={post.route} target="_blank" rel="noreferrer">
 									<div class="box rgap4">
 										<p class="w500 tight">{post.title}</p>
-										<p class="tag-text tt-u lgrey">{post.platform}</p>
+										<p class="cite tt-u lgrey">{post.platform}</p>
 									</div>
 								</a>
 							{/each}
@@ -207,7 +207,7 @@
 					</section>
 					<section class="sidebar-section lg:ptop16 lg:pbot16" id="writers-section">
 						<div class="row xbetween ycenter">
-							<a class="tag-text tt-u blue-dark section-titler" href="/blog/writers">Writers</a>
+							<a class="cite tt-u blue-dark section-titler" href="/blog/writers">Writers</a>
 						</div>
 						<div class="writer-row">
 							{#each allWriters as item}
@@ -218,10 +218,10 @@
 						</div>
 					</section>
 					<section class="sidebar-section lg:ptop16" id="tags-section">
-						<a class="tag-text tt-u blue-dark section-titler" href="/blog/tags">Popular tags</a>
+						<a class="cite tt-u blue-dark section-titler" href="/blog/tags">Popular tags</a>
 						<div class="chip-cloud">
 							{#each tags.slice(0, 8) as item}
-								<a class="tag-pill tt-u" href={tagUrl(item.tag)}>{item.tag.replaceAll('-', ' ')}</a>
+								<a class="cite tt-u" href={tagUrl(item.tag)}>{item.tag.replaceAll('-', ' ')}</a>
 							{/each}
 						</div>
 					</section>
@@ -250,14 +250,14 @@
 									{/if}
 									<div class="row wrap essay-tags rgap4 cgap4">
 										{#each post.meta.tags ?? [] as tag}
-											<a class="tag-pill tt-u" href={tagUrl(tag)}>{tag.replaceAll('-', ' ')}</a>
+											<a class="cite tt-u" href={tagUrl(tag)}>{tag.replaceAll('-', ' ')}</a>
 										{/each}
 									</div>
 								</div>
 								<a class="essay-holder-right blank box rgap16" style="height: 100%" href={post.linkpath}>
-									<p class="paragraph-text bold tight">{post.meta.title}</p>
+									<p class="body-text bold tight">{post.meta.title}</p>
 									<p class="tight lgrey">{post.meta.excerpt}</p>
-									<p class="tag-text tt-u lgrey self-bottom bordertop ptop8">{post.meta.author} | {post.meta.words} words</p>
+									<p class="cite tt-u lgrey self-bottom bordertop ptop8">{post.meta.author} | {post.meta.words} words</p>
 								</a>
 							</article>
 						{/each}

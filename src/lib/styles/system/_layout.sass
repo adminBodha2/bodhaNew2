@@ -1,3 +1,5 @@
+@use '$lib/styles/system/breakpoints' as *
+
 .row,
 .box
 	display: flex
@@ -26,6 +28,9 @@
 		align-items: center
 	&.ybottom
 		align-items: flex-end
+	+lg
+		&.mwrap
+			flex-wrap: wrap
 
 .box
 	&.xleft

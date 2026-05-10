@@ -3,12 +3,12 @@
 	import type { PageData } from './$types';
 	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
-	import Parallax from '$lib/comps/parallaxhalf.svelte'
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
-	import Title from '$lib/comps/page-title.svelte'
+	import Title from '$lib/comps/page-title.svelte';
 
 	interface Props {
 		data: PageData;
@@ -50,9 +50,9 @@
 					<p class="w600 tt-u pbot8">Other Projects</p>
 					{#each data.research as item}
 						{#if item.meta.title !== data.title}
-						<a class="doclink sidebar-text" href={item.linkpath}>
-							{item.meta.title}
-						</a>
+							<a class="doclink sidebar-text" href={item.linkpath}>
+								{item.meta.title}
+							</a>
 						{/if}
 					{/each}
 				{/if}
@@ -61,13 +61,13 @@
 		<div class="docmain rgap32 box pbot32">
 			<div class="labelbox title-area">
 				<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description} fullP={true}>
-				{#if data.tags && data.tags.length > 0}
-					<div class="row cgap4 rgap4 wrap">
-						{#each data.tags as tag}
-							<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
-						{/each}
-					</div>
-				{/if}
+					{#if data.tags && data.tags.length > 0}
+						<div class="row cgap4 rgap4 wrap">
+							{#each data.tags as tag}
+								<a class="cite tt-u blank" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
+							{/each}
+						</div>
+					{/if}
 				</Crumb>
 			</div>
 			<div class="doctext classic-document">
@@ -80,15 +80,15 @@
 						{#each data.linkedNodes as item (item.nodeId)}
 							<a class="blank box rgap8 b-main p16 lg:p24 radius ncolor-inv" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
 								<div class="box rgap8">
-									<p class="tag-text lgrey tt-u">{item.node.type}</p>
-									<p class="paragraph-text w600 a-hover tight">{item.node.title}</p>
+									<p class="cite lgrey tt-u">{item.node.type}</p>
+									<p class="body-text w600 a-hover tight">{item.node.title}</p>
 									{#if item.node.description}
 										<p class="grey tight">{item.node.description}</p>
 									{/if}
 								</div>
 								<div class="row wrap cgap4 rgap4 self-bottom">
 									{#each item.node.tags as tag}
-										<p class="tag-pill hollow tt-u themed dead">{tag.replaceAll('-', ' ')}</p>
+										<p class="cite hollow tt-u themed dead">{tag.replaceAll('-', ' ')}</p>
 									{/each}
 								</div>
 							</a>

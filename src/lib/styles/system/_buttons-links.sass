@@ -2,6 +2,26 @@
 @use 'tokens' as t
 @use 'breakpoints' as b
 
+a
+	text-decoration: none
+	font-family: inherit
+	color: inherit
+	&.linker
+		&:hover
+			text-decoration: underline
+			text-decoration-color: var(--color-theme)
+	&.linked
+		text-decoration: underline
+		text-decoration-color: var(--color-theme-light)
+		&:hover
+			color: var(--color-theme)
+	&.linkonhover
+		color: inherit
+		&:hover
+			color: var(--color-theme)
+	&.linkedlight
+		color: var(--color-theme)
+
 button
 	cursor: pointer
 	font-family: 'Google Sans', sans-serif
@@ -39,7 +59,7 @@ a
 	cursor: pointer
 	border: 1px solid #d7d7d7
 	width: max-content
-	border-radius: 8px
+	border-radius: 5px
 	box-shadow: 2px 3px 8px rgba(0,0,0,0.4)
 	transition: all 0.14s ease-in-out
 	&::after
@@ -115,52 +135,6 @@ a
 		transform: scale(1.05)
 	100%
 		transform: scale(1)
-
-.tag-pill, p.tag-pill, a.tag-pill
-	font-size: 9px
-	font-weight: 600
-	letter-spacing: 0.03em
-	color: var(--color-stone-3)
-	padding: 3px 6px
-	border-radius: 0px
-	border: none
-	background: var(--color-theme)
-	transition: all 0.12s cubic-bezier(0.250, 0.100, 0.250, 1.000)
-	width: max-content
-	transform-origin: center center
-	&:hover
-		background: var(--color-theme-dark)
-		transform: scale(0.95)
-	&.dead
-		&:hover
-			transform: scale(1)
-			background: var(--color-theme)
-	&.anveshi
-		background: var(--color-anveshi)
-		color: var(--color-back)
-		border: none
-		&.dead
-			&:hover
-				background: var(--color-anveshi)
-	&.themed
-		background: var(--color-theme)
-		color: var(--color-back)
-		border: 1px solid var(--color-theme)
-		&:hover
-			background: var(--color-theme-dark)
-			color: var(--color-back)
-	&.hollow
-		padding: 0
-		background: none
-		border: none
-		font-size: 10px
-		color: var(--color-grey-0)
-		&.green
-			color: var(--color-theme-alt)
-		&.themed
-			color: var(--color-theme)
-			background: none
-			border: none
 
 .toggler-std
 	position: relative

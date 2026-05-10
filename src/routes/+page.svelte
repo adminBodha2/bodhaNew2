@@ -8,7 +8,7 @@
 	import { verticals, publications } from '$lib/utils/localsends';
 	import VideoPlayer from '$lib/comps/custom-video-player.svelte';
 	import Slider from '$lib/svelteanim/components/Slide.svelte';
-	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 
 	let { data }: { data: PageData } = $props();
@@ -17,7 +17,7 @@
 	let vids = $derived(data.vids ?? []);
 	let latestItems = $derived(data.latestItems ?? []);
 	let headReveal = $state<HTMLElement | null>(null);
-	let headVis = useInView(() => headReveal, {threshold: 0.2, once: true});
+	let headVis = useInView(() => headReveal, { threshold: 0.2, once: true });
 	let section = $state<HTMLElement | null>(null);
 	let sectionTwo = $state<HTMLElement | null>(null);
 	let sectionThree = $state<HTMLElement | null>(null);
@@ -45,24 +45,24 @@
 	<section class="wrapper-std" id="first">
 		<div class="box rgap8" id="introduction" bind:this={headReveal}>
 			<Reveal visible={headVis.visible} duration={400} direction="down" elasticOut>
-				<h1 class="source-serif"><span class="blue">Bodha</span> is a think tank</h1>
+				<h1 class="txt-5xl lg:txt-7xl ls-2sm lg:ls-4sm lh1 source-serif"><span class="theme">Bodha</span> is a think tank</h1>
 			</Reveal>
 			<Reveal visible={headVis.visible} delay={200} duration={400} direction="down" elasticOut>
-				<h1 class="source-serif">and research group,</h1>
+				<h1 class="txt-5xl lg:txt-7xl ls-3sm lg:ls-4sm lh1 source-serif">and research group,</h1>
 			</Reveal>
 			<Reveal visible={headVis.visible} delay={600} duration={600} direction="down">
-				<div class="ptop16 lg:ptop32"><p class="highlight-text width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></div>
+				<div class="ptop16 lg:ptop32"><p class="txt-xl lg:txt-2xl fw400 width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></div>
 			</Reveal>
 		</div>
-		<h2>Our Pillars</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4" bind:this={section}>
+		<h2 class="txt-3xl">Our Pillars</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" bind:this={section}>
 			{#each verticals as item, i}
 				<Slider visible={verticalsInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 200}>
 					<a class="box blank verticals glass-1" href={item.href}>
-						<div class="p8 pbot16"><enhanced:img class="portrait radius8" src={item.image} alt={item.title} /></div>
-						<div class="box rgap8 p24 notop">
-							<h2 class="card-title source-serif">{item.title}</h2>
-							<p class="grey">{item.desc}</p>
+						<div class="pbot16"><enhanced:img class="portrait radius8" src={item.image} alt={item.title} /></div>
+						<div class="box rgap12 p24 lg:p32 notop">
+							<h2 class="header-2 fw700 source-serif ls-3sm">{item.title}</h2>
+							<p class="txt-bs grey1">{item.desc}</p>
 						</div>
 					</a>
 				</Slider>
@@ -74,13 +74,13 @@
 	{#if latestItems}
 		<section class="wrapper-std growingline" id="latest" bind:this={sectionTwo}>
 			<Title text="Latest at Bodha" />
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 				{#each latestItems as item, i}
 					<Slider visible={secondInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<a class="box rgap12 p24 blank glass-3" href={item.link}>
-							<p class="card-title tight a-hover">{item.title}</p>
-							<p class="grey">{item.description}</p>
-							<p class="tag-pill tt-u self-bottom hollow themed dead">{item.badge}</p>
+						<a class="box rgap12 p32 blank b-main radius8" href={item.link}>
+							<p class="headline-sm a-hover">{item.title}</p>
+							<p class="grey1">{item.description}</p>
+							<p class="cite tt-u self-bottom theme dead">{item.badge}</p>
 						</a>
 					</Slider>
 				{/each}
@@ -93,28 +93,28 @@
 		<section class="wrapper-std growingline alternate" id="blog-posts" bind:this={sectionThree}>
 			<div class="row xbetween ycenter rgap16 mleft mwrap">
 				<Title text="essays and articles" />
-				<a class="primary" href="/blog"><span>See All</span></a>
+				<a class="primary grey" href="/blog"><span>See All</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each blogs as item, i}
 					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
-						<div class="box glass-2">
-							<div class="row cgap4 rgap4 ycenter p16 nobot">
+						<div class="box b-main radius">
+							<div class="row cgap4 rgap4 ycenter p16 nbot">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
-										<a class="tag-pill tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+										<a class="cite tt-u blank theme" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
 									{/each}
 								{/if}
 							</div>
-							<a class="blank p16" href={item.linkpath} aria-label="image">
+							<a class="blank p16 notop" href={item.linkpath} aria-label="image">
 								<enhanced:img class="fit radius8" src={item.meta.image} alt={item.meta.title} />
 							</a>
-							<a class="blank box rgap8 p16 lg:p32 notop" href={item.linkpath}>
-								<p class="card-title tight a-hover">{item.meta.title}</p>
-								<p class="grey">{item.meta.excerpt}</p>
+							<a class="blank box rgap16 p16 lg:p32 notop" href={item.linkpath}>
+								<p class="headline a-hover">{item.meta.title}</p>
+								<p class="grey1">{item.meta.excerpt}</p>
 							</a>
 							<div class="self-bottom bordertop p16" style="background: var(--color-stone-3)">
-								<p class="tag-text altprim tt-u w500">{item.formattedDate} | {item.meta.author} | {item.meta.words} words</p>
+								<p class="txt-sm fw500">{item.formattedDate} | {item.meta.author} | {item.meta.words} words</p>
 							</div>
 						</div>
 					</Slider>
@@ -130,15 +130,13 @@
 			{#each publications as pub, i}
 				<Slider visible={fourthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
 					<div class="books rgap16">
-						<enhanced:img class="contained left" src={pub.image} alt={pub.title} />
+						<img class="portrait contained left" src={pub.image} alt={pub.title} />
 						<div class="box rgap8 p16 lg:p32">
-							<p class="highlight-text bold">{pub.title}</p>
-							<p class="grey">{pub.desc}</p>
+							<p class="headline">{pub.title}</p>
+							<p class="grey1">{pub.desc}</p>
 							<div class="row wrap cgap8 rgap8 mtop8">
 								{#each pub.links as link}
-									<a class="primary grey" href={link.href} target="_blank" rel="noreferrer"
-										><span>{link.label} →</span>
-										</a>
+									<a class="primary grey" href={link.href} target="_blank" rel="noreferrer"><span>{link.label} →</span> </a>
 								{/each}
 							</div>
 						</div>
@@ -153,18 +151,18 @@
 		<section class="wrapper-std growingline alternate" bind:this={sectionFive}>
 			<div class="row xbetween ycenter rgap16 mcol mleft col-span-full">
 				<Title text="recent videos" />
-				<a class="primary" href="/videos"><span>All Videos</span></a>
+				<a class="primary grey" href="/videos"><span>All Videos</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each vids as item, i}
 					<Slider visible={fifthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<div class="box p0 blank whitestone theme-line-parent videobox">
+						<div class="box p0 blank theme-line-parent videobox">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
 							<a class="box rgap8 p16" href={item.link} target="_blank" rel="noreferrer">
-								<p class="paragraph-text w600 tight">{item.name}</p>
+								<p class="headline-sm">{item.name}</p>
 								<div class="self-bottom box rgap8">
-								<div class="theme-line"></div>
-								<p class="tag-text lgrey tt-u">{item.channel}</p>
+									<div class="theme-line"></div>
+									<p class="cite lgrey tt-u">{item.channel}</p>
 								</div>
 							</a>
 						</div>
@@ -184,6 +182,8 @@
 
 .contained.left
 	object-fit: contain
+	margin-right: auto
+	width: 100%
 
 //verticals──────────────────────────────────────
 

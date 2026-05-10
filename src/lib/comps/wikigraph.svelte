@@ -2,9 +2,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import type { GraphEdge, GraphNode } from '$lib/noder/graph';
 
-	type WikiNodeType =
-		| 'domain' | 'wiki' | 'thinker' | 'school' | 'question' | 'project'
-		| 'blog' | 'book' | 'external-article' | 'lab' | 'concept';
+	type WikiNodeType = 'domain' | 'wiki' | 'thinker' | 'school' | 'question' | 'project' | 'blog' | 'book' | 'external-article' | 'lab' | 'concept';
 
 	type GraphLink = {
 		id: string;
@@ -67,44 +65,44 @@
 
 	// ── Colours ────────────────────────────────────────────────────────────────
 	const colorByType: Record<string, string> = {
-		domain:           '#0f172a',   // dark slate — the 13 hub rings
-		wiki:             '#5b21b6',   // violet — synthesised knowledge pages
-		thinker:          '#7c3aed',   // purple
-		school:           '#b45309',   // amber-brown
-		question:         '#d3633a',   // terracotta
-		project:          '#0f766e',   // teal
-		blog:             '#1971c2',   // blue
-		book:             '#0f4c81',   // navy
-		'external-article':'#64748b', // slate
-		lab:              '#334155',   // dark slate
-		concept:          '#374151',
+		domain: '#0f172a', // dark slate — the 13 hub rings
+		wiki: '#5b21b6', // violet — synthesised knowledge pages
+		thinker: '#7c3aed', // purple
+		school: '#b45309', // amber-brown
+		question: '#d3633a', // terracotta
+		project: '#0f766e', // teal
+		blog: '#1971c2', // blue
+		book: '#0f4c81', // navy
+		'external-article': '#64748b', // slate
+		lab: '#334155', // dark slate
+		concept: '#374151'
 	};
 
 	const SEMANTIC_LABEL: Record<string, string> = {
-		authored:    'authored',
-		founded:     'founded',
-		member_of:   'member of',
-		influences:  'influences',
-		investigates:'investigates',
-		draws_on:    'draws on',
+		authored: 'authored',
+		founded: 'founded',
+		member_of: 'member of',
+		influences: 'influences',
+		investigates: 'investigates',
+		draws_on: 'draws on',
 		responds_to: 'responds to',
-		addresses:   'addresses',
-		path_step:   'pathway step',
-		has_topic:   'topic',
+		addresses: 'addresses',
+		path_step: 'pathway step',
+		has_topic: 'topic',
 		supports_project: 'supports project',
-		domain_assignment: 'in domain',
+		domain_assignment: 'in domain'
 	};
 
 	const filterTypes: { label: string; value: WikiNodeType | 'all' }[] = [
-		{ label: 'All',      value: 'all' },
-		{ label: 'Domains',  value: 'domain' },
-		{ label: 'Wiki',     value: 'wiki' },
+		{ label: 'All', value: 'all' },
+		{ label: 'Domains', value: 'domain' },
+		{ label: 'Wiki', value: 'wiki' },
 		{ label: 'Thinkers', value: 'thinker' },
-		{ label: 'Schools',  value: 'school' },
-		{ label: 'Questions',value: 'question' },
+		{ label: 'Schools', value: 'school' },
+		{ label: 'Questions', value: 'question' },
 		{ label: 'Research', value: 'project' },
-		{ label: 'Essays',   value: 'blog' },
-		{ label: 'Books',    value: 'book' },
+		{ label: 'Essays', value: 'blog' },
+		{ label: 'Books', value: 'book' }
 	];
 
 	let graphEl: HTMLDivElement;
@@ -129,7 +127,7 @@
 			// domain_assignment edges inflate degree — weight them less
 			const w = (edge.meta as Record<string, unknown>)?.semantic === 'domain_assignment' ? 0.5 : 1;
 			degreeById.set(edge.from, (degreeById.get(edge.from) ?? 0) + w);
-			degreeById.set(edge.to,   (degreeById.get(edge.to)   ?? 0) + w);
+			degreeById.set(edge.to, (degreeById.get(edge.to) ?? 0) + w);
 			neighborsById.get(edge.from)?.add(edge.to);
 			neighborsById.get(edge.to)?.add(edge.from);
 		}
@@ -140,7 +138,7 @@
 				{
 					...node,
 					degree: degreeById.get(node.id) ?? 0,
-					neighbors: neighborsById.get(node.id) ?? new Set<string>(),
+					neighbors: neighborsById.get(node.id) ?? new Set<string>()
 				}
 			])
 		);
@@ -154,16 +152,13 @@
 	let selectedEdges = $derived.by(() => {
 		if (!selectedId) return [];
 		return edges
-			.filter(e =>
-				(e.from === selectedId || e.to === selectedId) &&
-				(e.meta as Record<string, unknown>)?.semantic !== 'domain_assignment'
-			)
+			.filter((e) => (e.from === selectedId || e.to === selectedId) && (e.meta as Record<string, unknown>)?.semantic !== 'domain_assignment')
 			.slice(0, 12)
-			.map(e => {
+			.map((e) => {
 				const otherId = e.from === selectedId ? e.to : e.from;
 				const direction = e.from === selectedId ? 'out' : 'in';
-				const sem = (e.meta as Record<string, unknown>)?.semantic as string ?? '';
-				const notes = (e.meta as Record<string, unknown>)?.notes as string ?? '';
+				const sem = ((e.meta as Record<string, unknown>)?.semantic as string) ?? '';
+				const notes = ((e.meta as Record<string, unknown>)?.notes as string) ?? '';
 				const otherNode = indexes.pointById.get(otherId);
 				return {
 					semantic: sem || e.type,
@@ -172,7 +167,7 @@
 					otherId,
 					otherTitle: otherNode?.title ?? otherId,
 					otherType: otherNode?.type ?? '',
-					direction,
+					direction
 				};
 			});
 	});
@@ -180,7 +175,7 @@
 	// Top hub nodes for the default panel
 	let topNodes = $derived.by(() => {
 		return Array.from(indexes.pointById.values())
-			.filter(n => ['domain','question','thinker','school'].includes(n.type))
+			.filter((n) => ['domain', 'question', 'thinker', 'school'].includes(n.type))
 			.sort((a, b) => b.degree - a.degree || a.title.localeCompare(b.title))
 			.slice(0, 8);
 	});
@@ -188,13 +183,13 @@
 	// ── Visible graph ─────────────────────────────────────────────────────────
 	function buildVisibleGraph(type: WikiNodeType | 'all', search: string, focusId: string | null) {
 		const norm = search.trim().toLowerCase();
-		const filtered = nodes.filter(node => {
+		const filtered = nodes.filter((node) => {
 			if (type !== 'all' && node.type !== type) return false;
 			if (!norm) return true;
 			return `${node.title} ${node.description ?? ''} ${(node.tags ?? []).join(' ')}`.toLowerCase().includes(norm);
 		});
 
-		const seedIds = new Set(filtered.map(n => n.id));
+		const seedIds = new Set(filtered.map((n) => n.id));
 		const visibleIds = new Set(seedIds);
 
 		if (focusId) {
@@ -208,20 +203,20 @@
 		}
 
 		const graphNodes = Array.from(visibleIds)
-			.map(id => indexes.pointById.get(id))
+			.map((id) => indexes.pointById.get(id))
 			.filter((n): n is GraphPoint => !!n)
 			.slice(0, maxNodes);
 
-		const graphNodeIds = new Set(graphNodes.map(n => n.id));
+		const graphNodeIds = new Set(graphNodes.map((n) => n.id));
 		const graphLinks = edges
-			.filter(e => graphNodeIds.has(e.from) && graphNodeIds.has(e.to))
+			.filter((e) => graphNodeIds.has(e.from) && graphNodeIds.has(e.to))
 			.slice(0, maxLinks)
-			.map(e => ({
+			.map((e) => ({
 				id: e.id,
 				source: e.from,
 				target: e.to,
 				type: e.type,
-				meta: e.meta,
+				meta: e.meta
 			}));
 
 		return { nodes: graphNodes, links: graphLinks as unknown as GraphLink[] };
@@ -235,21 +230,13 @@
 		const isHovered = hoveredId === node.id;
 		const isNeighbor = selectedNode?.neighbors.has(node.id);
 
-		const baseR = isDomain
-			? Math.max(12, Math.min(20, 12 + Math.sqrt(node.degree) * 0.5))
-			: Math.max(5, Math.min(16, 5 + Math.sqrt(node.degree + 1) * 1.1));
+		const baseR = isDomain ? Math.max(12, Math.min(20, 12 + Math.sqrt(node.degree) * 0.5)) : Math.max(5, Math.min(16, 5 + Math.sqrt(node.degree + 1) * 1.1));
 		const radius = baseR + (isSelected ? 5 : isHovered ? 3 : 0);
 
 		// Glow ring
 		ctx.beginPath();
 		ctx.arc(node.x ?? 0, node.y ?? 0, radius + (isDomain ? 6 : 4), 0, 2 * Math.PI);
-		ctx.fillStyle = isSelected
-			? 'rgba(211,99,58,0.18)'
-			: isNeighbor
-				? 'rgba(25,113,194,0.11)'
-				: isDomain
-					? 'rgba(15,23,42,0.07)'
-					: 'rgba(255,255,255,0.6)';
+		ctx.fillStyle = isSelected ? 'rgba(211,99,58,0.18)' : isNeighbor ? 'rgba(25,113,194,0.11)' : isDomain ? 'rgba(15,23,42,0.07)' : 'rgba(255,255,255,0.6)';
 		ctx.fill();
 
 		// Main circle
@@ -275,9 +262,7 @@
 		// Label
 		const showLabel = isSelected || isHovered || isDomain || node.degree > 14 || scale > 1.8;
 		if (showLabel) {
-			const fontSize = isDomain
-				? Math.max(6, 13 / scale)
-				: Math.max(4, 11 / scale);
+			const fontSize = isDomain ? Math.max(6, 13 / scale) : Math.max(4, 11 / scale);
 			const label = node.title.length > 32 ? node.title.slice(0, 29) + '…' : node.title;
 			ctx.font = `${isDomain ? '700' : '500'} ${fontSize}px Google Sans, Arial, sans-serif`;
 			ctx.textAlign = 'center';
@@ -309,7 +294,7 @@
 	}
 
 	function nodeHref(node: GraphPoint) {
-		return (node.meta as Record<string, unknown>)?.route as string | null ?? null;
+		return ((node.meta as Record<string, unknown>)?.route as string | null) ?? null;
 	}
 
 	// ── Lifecycle ─────────────────────────────────────────────────────────────
@@ -320,23 +305,21 @@
 		graph
 			.backgroundColor('rgba(0,0,0,0)')
 			.nodeRelSize(4)
-			.nodeVal(n => {
+			.nodeVal((n) => {
 				if (n.type === 'domain') return 18;
 				return Math.max(1, Math.sqrt(n.degree + 1));
 			})
-			.nodeColor(n => colorByType[n.type] ?? '#1971c2')
-			.nodeLabel(n => `${n.title}<br><span style="opacity:.7">${typeLabel(n.type)}</span>`)
+			.nodeColor((n) => colorByType[n.type] ?? '#1971c2')
+			.nodeLabel((n) => `${n.title}<br><span style="opacity:.7">${typeLabel(n.type)}</span>`)
 			.nodeCanvasObject(renderNode)
 			.nodePointerAreaPaint((node, color, ctx) => {
-				const r = node.type === 'domain'
-					? 18
-					: Math.max(6, Math.min(16, 6 + Math.sqrt(node.degree + 1) * 1.2));
+				const r = node.type === 'domain' ? 18 : Math.max(6, Math.min(16, 6 + Math.sqrt(node.degree + 1) * 1.2));
 				ctx.fillStyle = color;
 				ctx.beginPath();
 				ctx.arc(node.x ?? 0, node.y ?? 0, r, 0, 2 * Math.PI);
 				ctx.fill();
 			})
-			.linkColor(link => {
+			.linkColor((link) => {
 				const src = typeof link.source === 'object' ? link.source.id : link.source;
 				const tgt = typeof link.target === 'object' ? link.target.id : link.target;
 				const active = selectedId && (src === selectedId || tgt === selectedId);
@@ -350,7 +333,7 @@
 				if (sem === 'domain_assignment') return 'rgba(15,23,42,0.06)';
 				return 'rgba(25,113,194,0.1)';
 			})
-			.linkWidth(link => {
+			.linkWidth((link) => {
 				const src = typeof link.source === 'object' ? link.source.id : link.source;
 				const tgt = typeof link.target === 'object' ? link.target.id : link.target;
 				const active = selectedId && (src === selectedId || tgt === selectedId);
@@ -359,7 +342,7 @@
 				return sem === 'domain_assignment' ? 0.3 : 0.5;
 			})
 			.linkCurvature(0)
-			.linkDirectionalParticles(link => {
+			.linkDirectionalParticles((link) => {
 				const src = typeof link.source === 'object' ? link.source.id : link.source;
 				const tgt = typeof link.target === 'object' ? link.target.id : link.target;
 				const active = selectedId && (src === selectedId || tgt === selectedId);
@@ -370,10 +353,14 @@
 			})
 			.linkDirectionalParticleWidth(2)
 			.linkDirectionalParticleSpeed(0.004)
-			.onNodeHover(n => { hoveredId = n?.id ?? null; })
-			.onNodeClick(n => selectNode(n))
-			.onBackgroundClick(() => { selectedId = null; })
-			.showPointerCursor(item => !!item)
+			.onNodeHover((n) => {
+				hoveredId = n?.id ?? null;
+			})
+			.onNodeClick((n) => selectNode(n))
+			.onBackgroundClick(() => {
+				selectedId = null;
+			})
+			.showPointerCursor((item) => !!item)
 			.d3AlphaDecay(0.028)
 			.d3VelocityDecay(0.3);
 
@@ -414,11 +401,7 @@
 			</label>
 			<div class="filter-tray">
 				{#each filterTypes as f}
-					<button
-						class="filter-btn"
-						class:active={activeType === f.value}
-						onclick={() => (activeType = f.value)}
-					>
+					<button class="filter-btn" class:active={activeType === f.value} onclick={() => (activeType = f.value)}>
 						{#if f.value !== 'all'}
 							<i class="dot" style="--c: {colorByType[f.value] ?? '#999'}"></i>
 						{/if}
@@ -440,11 +423,11 @@
 						<p class="node-desc">{selectedNode.description}</p>
 					{/if}
 
-					{#if (selectedNode.meta as Record<string,unknown>)?.domain}
-						<p class="node-meta">Domain: <span>{(selectedNode.meta as Record<string,unknown>).domain as string}</span></p>
+					{#if (selectedNode.meta as Record<string, unknown>)?.domain}
+						<p class="node-meta">Domain: <span>{(selectedNode.meta as Record<string, unknown>).domain as string}</span></p>
 					{/if}
-					{#if (selectedNode.meta as Record<string,unknown>)?.lens}
-						<p class="node-meta">Lens: <span>{(selectedNode.meta as Record<string,unknown>).lens as string}</span></p>
+					{#if (selectedNode.meta as Record<string, unknown>)?.lens}
+						<p class="node-meta">Lens: <span>{(selectedNode.meta as Record<string, unknown>).lens as string}</span></p>
 					{/if}
 
 					{#if selectedEdges.length}
@@ -452,10 +435,12 @@
 							{#each selectedEdges as edge}
 								<div class="edge-item">
 									<span class="edge-label">{edge.label}</span>
-									<button class="edge-target" onclick={() => {
-										const n = indexes.pointById.get(edge.otherId);
-										if (n) selectNode(n);
-									}}>
+									<button
+										class="edge-target"
+										onclick={() => {
+											const n = indexes.pointById.get(edge.otherId);
+											if (n) selectNode(n);
+										}}>
 										<i class="dot sm" style="--c: {colorByType[edge.otherType] ?? '#999'}"></i>
 										{edge.otherTitle}
 									</button>
@@ -476,7 +461,7 @@
 					</div>
 				{:else}
 					<p class="panel-hint tt-u blue">Knowledge map</p>
-					<p class="w500 paragraph-text tight">Click any node to explore</p>
+					<p class="w500 body-text tight">Click any node to explore</p>
 					<p class="descriptor-text grey">13 domain hubs connect {nodes.length} nodes across thinkers, schools, questions, research, and the wiki.</p>
 					<div class="top-list">
 						{#each topNodes as node}
@@ -493,7 +478,7 @@
 
 		<div class="graph-footer">
 			<div class="legend">
-				{#each filterTypes.filter(f => f.value !== 'all') as f}
+				{#each filterTypes.filter((f) => f.value !== 'all') as f}
 					<span class="legend-item">
 						<i class="dot" style="--c: {colorByType[f.value] ?? '#999'}"></i>
 						{f.label}

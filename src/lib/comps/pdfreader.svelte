@@ -9,17 +9,17 @@
 	import { ScrollPluginPackage, Scroller, ScrollStrategy, useScroll, type RenderPageProps } from '@embedpdf/plugin-scroll/svelte';
 	import { RenderPluginPackage, RenderLayer } from '@embedpdf/plugin-render/svelte';
 	import { ZoomPluginPackage, useZoom, ZoomMode, ZoomGestureWrapper } from '@embedpdf/plugin-zoom/svelte';
-	import Prev from '$lib/icons/pdf/prev.svelte'
-	import Next from '$lib/icons/pdf/next.svelte'
-	import Zoomin from '$lib/icons/pdf/zoomin.svelte'
-	import Zoomout from '$lib/icons/pdf/zoomout.svelte'
-	import Double from '$lib/icons/pdf/double.svelte'
-	import External from '$lib/icons/pdf/external.svelte'
-	import Focus from '$lib/icons/pdf/focus.svelte'
-	import Full from '$lib/icons/pdf/full.svelte'
-	import Horizontal from '$lib/icons/pdf/horizontal.svelte'
-	import Single from '$lib/icons/pdf/single.svelte'
-	import Vertical from '$lib/icons/pdf/vertical.svelte'
+	import Prev from '$lib/icons/pdf/prev.svelte';
+	import Next from '$lib/icons/pdf/next.svelte';
+	import Zoomin from '$lib/icons/pdf/zoomin.svelte';
+	import Zoomout from '$lib/icons/pdf/zoomout.svelte';
+	import Double from '$lib/icons/pdf/double.svelte';
+	import External from '$lib/icons/pdf/external.svelte';
+	import Focus from '$lib/icons/pdf/focus.svelte';
+	import Full from '$lib/icons/pdf/full.svelte';
+	import Horizontal from '$lib/icons/pdf/horizontal.svelte';
+	import Single from '$lib/icons/pdf/single.svelte';
+	import Vertical from '$lib/icons/pdf/vertical.svelte';
 
 	// props
 	let {
@@ -63,7 +63,6 @@
 		}),
 		createPluginRegistration(RotatePluginPackage)
 	]);
-
 </script>
 
 {#snippet Toolbar(docId: string)}
@@ -72,23 +71,23 @@
 	{@const spread = useSpread(() => docId)}
 	<div class="toolbar">
 		<div class="row ycenter cgap4 tray1">
-			<button class="pdf-btn" onclick={() => scroll.provides?.scrollToPreviousPage()}><Prev/></button>
-			<p class="tag-text">{scroll.state.currentPage} / {scroll.state.totalPages}</p>
-			<button class="pdf-btn" onclick={() => scroll.provides?.scrollToNextPage()}><Next/></button>
+			<button class="pdf-btn" onclick={() => scroll.provides?.scrollToPreviousPage()}><Prev /></button>
+			<p class="cite">{scroll.state.currentPage} / {scroll.state.totalPages}</p>
+			<button class="pdf-btn" onclick={() => scroll.provides?.scrollToNextPage()}><Next /></button>
 		</div>
 		<div class="row ycenter cgap4 tray2">
-			<button class="pdf-btn" onclick={() => zoom.provides?.zoomOut()}><Zoomout/></button>
-			<p class="tag-text">{Math.round(zoom.state.currentZoomLevel * 100)}%</p>
-			<button class="pdf-btn" onclick={() => zoom.provides?.zoomIn()}><Zoomin/></button>
+			<button class="pdf-btn" onclick={() => zoom.provides?.zoomOut()}><Zoomout /></button>
+			<p class="cite">{Math.round(zoom.state.currentZoomLevel * 100)}%</p>
+			<button class="pdf-btn" onclick={() => zoom.provides?.zoomIn()}><Zoomin /></button>
 		</div>
 		<div class="row ycenter cgap8 tray3">
-			<button class="pdf-btn" onclick={() => zoom.provides?.requestZoom(1)}><Focus/></button>
-			<button class="pdf-btn" onclick={() => spread.provides?.setSpreadMode(SpreadMode.None)}><Single/></button>
-			<button class="pdf-btn" onclick={() => spread.provides?.setSpreadMode(SpreadMode.Odd)}><Double/></button>
-			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Vertical)}><Vertical/></button>
-			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Horizontal)}><Horizontal/></button>
-			<button class="pdf-btn" onclick={() => document.querySelector('.reader')?.requestFullscreen()}><Full/></button>
-		<a class="pdf-btn" href={pdfUrl} target="_blank" rel="noreferrer"><External/></a>
+			<button class="pdf-btn" onclick={() => zoom.provides?.requestZoom(1)}><Focus /></button>
+			<button class="pdf-btn" onclick={() => spread.provides?.setSpreadMode(SpreadMode.None)}><Single /></button>
+			<button class="pdf-btn" onclick={() => spread.provides?.setSpreadMode(SpreadMode.Odd)}><Double /></button>
+			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Vertical)}><Vertical /></button>
+			<button class="pdf-btn" onclick={() => setStrategy(scroll, ScrollStrategy.Horizontal)}><Horizontal /></button>
+			<button class="pdf-btn" onclick={() => document.querySelector('.reader')?.requestFullscreen()}><Full /></button>
+			<a class="pdf-btn" href={pdfUrl} target="_blank" rel="noreferrer"><External /></a>
 		</div>
 	</div>
 {/snippet}
