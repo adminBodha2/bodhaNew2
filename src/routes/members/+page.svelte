@@ -13,6 +13,8 @@
 	let signupConfirmPassword = $state('');
 	let resetPassword = $state('');
 	let resetConfirmPassword = $state('');
+	let showLoginPassword = $state(false);
+	let showSignupPassword = $state(false);
 
 	const signupPasswordMismatch = $derived(Boolean(signupConfirmPassword) && signupPassword !== signupConfirmPassword);
 	const resetPasswordMismatch = $derived(Boolean(resetConfirmPassword) && resetPassword !== resetConfirmPassword);
@@ -92,7 +94,11 @@
 						</label>
 						<label>
 							<span>Password</span>
-							<input name="password" type="password" autocomplete="current-password" required />
+							<input name="password" type={showLoginPassword ? 'text' : 'password'} autocomplete="current-password" required />
+						</label>
+						<label class="checkbox-row">
+							<input type="checkbox" bind:checked={showLoginPassword} />
+							<span>Show password</span>
 						</label>
 						<button type="submit" class="primary"><span>Sign In</span></button>
 					</form>
@@ -120,11 +126,15 @@
 					</label>
 					<label>
 						<span>Password</span>
-						<input name="password" type="password" autocomplete="new-password" minlength="6" bind:value={signupPassword} required />
+						<input name="password" type={showSignupPassword ? 'text' : 'password'} autocomplete="new-password" minlength="6" bind:value={signupPassword} required />
 					</label>
 					<label>
 						<span>Confirm password</span>
-						<input name="confirmPassword" type="password" autocomplete="new-password" minlength="6" bind:value={signupConfirmPassword} required />
+						<input name="confirmPassword" type={showSignupPassword ? 'text' : 'password'} autocomplete="new-password" minlength="6" bind:value={signupConfirmPassword} required />
+					</label>
+					<label class="checkbox-row">
+						<input type="checkbox" bind:checked={showSignupPassword} />
+						<span>Show password</span>
 					</label>
 					{#if signupPasswordMismatch}
 						<p class="form-error">Passwords do not match.</p>
@@ -213,6 +223,17 @@ input
 	color: inherit
 	padding: 0.8rem 0.9rem
 	font: inherit
+
+.checkbox-row
+	display: flex
+	align-items: center
+	gap: 0.6rem
+	width: fit-content
+	cursor: pointer
+	input
+		width: auto
+		margin: 0
+		cursor: pointer
 
 .actions
 	display: flex
