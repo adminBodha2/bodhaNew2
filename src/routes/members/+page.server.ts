@@ -117,7 +117,7 @@ export const actions: Actions = {
 		}
 
 		return {
-			signupMessage: 'Thank you. Please check your email to confirm the account. PLEASE CHECK SPAM FOLDER ALSO.'
+			signupMessage: 'Thank you. You are now subscribed.'
 		};
 	},
 
