@@ -103,7 +103,7 @@
 							<div class="row cgap4 rgap4 ycenter p16 nobot">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
-										<a class="tag-text tt-u blank" href="/blog/tags/{tag}">#{tag.replaceAll('-', ' ')}</a>
+										<a class="txt-xs tt-u w500 theme" href="/blog/tags/{tag}">#{tag.replaceAll('-', ' ')}</a>
 									{/each}
 								{/if}
 							</div>
