@@ -30,6 +30,3 @@ Sacred geography in the IJA links archaeology with pilgrimage, textual memory, r
 3. Kamarupa is a major sacred-geography cluster: The Assam studies collectively reconstruct a religious landscape across textual, sculptural, rock-cut, and community evidence.
 4. Kashmir is treated as a palimpsest: Hindu, Buddhist, Sufi, and Islamic built heritage are presented as successive and interacting layers rather than isolated traditions.
 5. Ritual places often double as archaeological archives: Kalinjar, Chitrakoot, Hajo, and Nalanda preserve sculpture, inscriptions, architecture, and local memory in a single landscape.
-
-
-## Related Articles

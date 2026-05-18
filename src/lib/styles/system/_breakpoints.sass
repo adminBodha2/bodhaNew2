@@ -26,3 +26,12 @@ $max-breakpoints: ("sm": 1024px)
 =xl
 	+respond("xl")
 		@content
+
+=responsive-classes
+	@content("")
+	@each $name, $width in $breakpoints
+		@media (min-width: $width)
+			@content("#{$name}\\:")
+	@each $name, $width in $max-breakpoints
+		@media (max-width: $width)
+			@content("#{$name}\\:")

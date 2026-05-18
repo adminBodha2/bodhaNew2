@@ -34,26 +34,11 @@
 		ariaLabel?: string;
 		variant?: TabsVariant;
 		class?: string;
-		menuLabel?:string;
+		menuLabel?: string;
 		children?: Snippet<[Item, number]>;
 	};
 
-	let {
-		items,
-		value = $bindable(''),
-		getValue,
-		getLabel,
-		isDisabled,
-		activationMode = 'automatic',
-		orientation = 'horizontal',
-		loop = true,
-		disabled = false,
-		ariaLabel = 'Tabs',
-		variant = 'line',
-		class: className = '',
-		menuLabel = 'Open List',
-		children
-	}: Props = $props();
+	let { items, value = $bindable(''), getValue, getLabel, isDisabled, activationMode = 'automatic', orientation = 'horizontal', loop = true, disabled = false, ariaLabel = 'Tabs', variant = 'line', class: className = '', menuLabel = 'Open Itinerary', children }: Props = $props();
 
 	let menuOpen = $state(false);
 	let touchStartX = $state<number | null>(null);
@@ -177,6 +162,7 @@
 </div>
 
 <style lang="sass">
+
 .tabs
 	width: 100%
 	--tab-color: var(--color-grey-2)
@@ -256,10 +242,9 @@
 		border: 0
 		border-bottom: var(--border-main)
 		background: transparent
-		color: var(--tab-color)
+		color: var(--color-primary)
 		font-family: var(--fontface-sans)
-		font-size: 0.85rem
-		font-weight: 500
+		font-size: 1rem
 		line-height: 1
 		padding: 0.75rem 1rem
 		text-align: left

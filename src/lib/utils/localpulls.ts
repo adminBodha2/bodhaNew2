@@ -171,17 +171,17 @@ export function replaceHyphen(thisTag:string){
 
 
   export async function allArch() {
-	const posts = import.meta.glob('/src/routes/library/(library-subroutes)/journal-archaeology/*.md')
+	const posts = import.meta.glob('/src/routes/library/*/journal-archaeology/*.md')
 	const allfiles = { ...posts };
 	const filed = Object.entries(allfiles)
 	const eachfiled = await Promise.all(
 	  filed.map(async ([path, resolver]) => {
 		// @ts-expect-error//why
 		const { metadata } = await resolver()
-		const pathitem = path.replace('/src/routes/library/(library-subroutes)', '/library').slice(11, -3)
+		const slug = path.split('/').pop()?.replace(/\.md$/, '') ?? '';
 		return {
 		  meta: metadata,
-		  linkpath: pathitem
+		  linkpath: `/library/journal-archaeology/${slug}`
 		};
 	  })
 	)

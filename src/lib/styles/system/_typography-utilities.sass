@@ -1,47 +1,174 @@
-.italic
-	font-style: italic
-.ta-j
-	text-align: justify
-.ta-c
-	text-align: center
-	@media screen and (max-width: 1024px)
-		&.mleft
-			text-align: left
-.ta-l
-	text-align: left
-.ta-r
-	text-align: right
-	@media screen and (max-width: 1024px)
-		&.mleft
-			text-align: left
-.tt-u
-	text-transform: uppercase
-.tt-l
-	text-transform: lowercase
-.tt-c
-	text-transform: capitalize
+@use 'tokens' as t
+@use 'breakpoints' as b
 
-.white
-	color: #fff
-.theme
-	color: var(--color-theme)
-.theme-dark
-	color: var(--color-theme-dark)
-.theme-light
-	color: var(--color-theme-light)
-.anveshi-o
-	color: var(--color-anveshi)
-.grey0
-	color: var(--color-grey-0)
-.grey1
-	color: var(--color-grey-1)
-.grey2
-	color: var(--color-grey-2)
-.grey3
-	color: var(--color-grey-3)
-.theme-alt
-	color: var(--color-theme-alt)
-.desb
-	color: var(--color-designB)
-.desb2
-	color: var(--color-designB-alt)
+=type-utils($prefix: "")
+	@each $name, $value in t.$text-sizes
+		.#{$prefix}txt-#{$name}
+			font-size: $value
+	@each $name, $value in t.$font-weights
+		.#{$prefix}w#{$name}
+			font-weight: $value
+	@each $name, $value in t.$line-heights
+		.#{$prefix}lh#{$name}
+			line-height: $value
+	@each $name, $value in t.$letter-spacings
+		.#{$prefix}ls#{$name}p
+			letter-spacing: $value
+		.#{$prefix}ls#{$name}m
+			letter-spacing: -#{$value}
+
+=type-static-utils($prefix: "")
+	.#{$prefix}italic
+		font-style: italic
+	.#{$prefix}ta-j
+		text-align: justify
+	.#{$prefix}ta-c
+		text-align: center
+		@media screen and (max-width: 1024px)
+			&.#{$prefix}mleft
+				text-align: left
+	.#{$prefix}ta-l
+		text-align: left
+	.#{$prefix}ta-r
+		text-align: right
+		@media screen and (max-width: 1024px)
+			&.#{$prefix}mleft
+				text-align: left
+	.#{$prefix}tt-u
+		text-transform: uppercase
+	.#{$prefix}tt-l
+		text-transform: lowercase
+	.#{$prefix}tt-c
+		text-transform: capitalize
+
+	.#{$prefix}white
+		color: #FFFFFF
+	.#{$prefix}theme
+		color: var(--color-theme)
+	.#{$prefix}theme-dark
+		color: var(--color-theme-dark)
+	.#{$prefix}theme-light
+		color: var(--color-theme-light)
+	.#{$prefix}anveshi-o
+		color: var(--color-anveshi)
+	.#{$prefix}grey0
+		color: var(--color-grey-0)
+	.#{$prefix}grey1
+		color: var(--color-grey-1)
+	.#{$prefix}grey2
+		color: var(--color-grey-2)
+	.#{$prefix}grey3
+		color: var(--color-grey-3)
+	.#{$prefix}theme-alt
+		color: var(--color-theme-alt)
+	.#{$prefix}desb
+		color: var(--color-designB)
+	.#{$prefix}desb2
+		color: var(--color-designB-alt)
+
+	.#{$prefix}garamond
+		font-family: 'EB Garamond', serif
+	.#{$prefix}source-serif
+		font-family: 'Source Serif 4', serif
+
+	.#{$prefix}bold
+		font-weight: 700
+
+	.#{$prefix}inherit
+		color: inherit
+
++b.responsive-classes using ($prefix)
+	+type-utils($prefix)
+	+type-static-utils($prefix)
+
+body, html
+	color: var(--color-primary)
+
+small
+	font-size: 10.55px
+
+pre
+	font-family: var(--fontface-sans)
+	box-sizing: border-box
+	white-space: pre-line
+	white-space: -moz-pre-line
+	white-space: -pre-line
+	white-space: -o-pre-line
+	word-wrap: break-word
+	word-break: break-word
+	overflow: hidden
+
+p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
+	margin: 0
+	color: var(--color-primary)
+
+ol
+	padding-left: 0
+
+li
+	color: var(--color-primary)
+	margin-bottom: 0.25rem
+	margin-left: 1.5rem
+	&::marker
+		font-size: 18px
+		color: var(--color-theme)
+
+.classic-document
+	p, pre, li
+		letter-spacing: 0
+		font-weight: 400
+		font-size: calc( var(--txt-xl) * 0.9)
+	p, pre
+		margin-bottom: 1.25rem
+		line-height: 1.6
+	li
+		margin-bottom: 0.5rem
+		line-height: 1.32
+	li::marker
+		content: "- "
+	ul, ol
+		margin-top: 0
+		margin-bottom: 1.25rem
+		padding-left: 1rem
+	h5
+		font-size: 1.33rem
+	h3
+		font-size: var(--txt-xl)
+		margin-bottom: 1.25rem
+		margin-top: 2.5rem
+		font-weight: 500
+	h2
+		font-size: var(--txt-2xl)
+		margin-bottom: 1.25rem
+		margin-top: 2.5rem
+	li
+		padding-left: 0
+		margin-left: 0
+	a
+		text-decoration: underline
+		text-decoration-color: var(--color-theme-light)
+	img
+		margin-bottom: 1.25rem
+		object-fit: contain
+		width: 100%
+		max-height: 400px
+
+.sidebar-text
+	font-size: 1.125rem
+	line-height: 1.2
+	@media screen and (min-width: 1025px)
+		font-size: 1rem
+		letter-spacing: -0.01rem
+
+.highlight-text
+	font-size: var(--txt-lg)
+	line-height: 1.5
+	@media (min-width: 721px)
+		font-size: var(--txt-xl)
+
+.content-highlights
+	pre, p
+		font-size: var(--txt-lg)
+		line-height: 1.5
+		@media (min-width: 721px)
+			font-size: var(--txt-xl)

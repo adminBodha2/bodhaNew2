@@ -114,7 +114,7 @@
 
 <div class="swiper-row" class:marquee>
 	<div class="xleft box width100 mobile-rule">
-		<p class="cite lgrey mleft ta-l">Swipe left/right to navigate</p>
+		<p class="grey1 mleft ta-l">Swipe left/right to navigate</p>
 	</div>
 	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
@@ -131,9 +131,9 @@
 			</button>
 		</div>
 		{#if iW <= 1024}
-			<p class="cite anveshi-o">Use buttons to navigate, or swipe left/right.</p>
+			<p class="anveshi-o">Use buttons to navigate, or swipe left/right.</p>
 		{:else}
-			<p class="cite lgrey">Use buttons or arrow keys to navigate, or drag left/right.</p>
+			<p class="grey0">Use buttons or arrow keys to navigate, or drag left/right.</p>
 		{/if}
 	</div>
 </div>
@@ -142,13 +142,12 @@
 
 button.prev, button.next
 	border: 1px solid #d7d7d7
-	background: var(--color-grey-3)
+	background: var(--color-stone-1)
 	font-size: 0.85rem
 	font-weight: 500
 	letter-spacing: 0.01rem
 	padding:  0.6em 1em 0.3em 1em
-	border-radius: 16px
-	box-shadow: 1px 2px 3px rgba(0,0,0,0.2)
+	border-radius: 6px
 	transition: background 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), color 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), border 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), box-shadow 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
 	transform-origin: center center
 	&:hover

@@ -25,6 +25,3 @@ Gandhari culture in the IJA is represented through Gandhara art, Buddhist sculpt
 2. Museum catalogues are primary evidence: Several Gandhara-related studies depend on collections rather than excavation, making museum-collections central.
 3. Buddhist sculpture links art and ecology: Fauna studies use animal depictions to read biodiversity, symbolic systems, and sculptural conventions.
 4. Sanghol and Sītāgārha broaden the frame: Early historic and early medieval Buddhist art from Punjab and Jharkhand place Gandharan comparison inside a much larger subcontinental Buddhist network.
-
-
-## Related Articles

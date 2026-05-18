@@ -60,6 +60,3 @@ Pottery is the most abundant class of material recovered from nearly every excav
 3. FT-IR analysis of Neolithic pottery (Vol 9, No. 4): First spectroscopic study of Neolithic Kashmir ceramics in the corpus; determines firing technology, mineral composition, and raw material sources, contributing to understanding of early pyrotechnology in the Himalayan foothills.
 4. Ethno-archaeology of potters (Vol 7, No. 3): The living pottery tradition of Kuhibahal village, Subarnapur, Odisha is documented as a direct survivor of ancient ceramic traditions, providing a baseline for interpreting archaeological assemblages.
 5. Budhigarh typological study (Vol 7, No. 3): Establishes a ceramic typology and relative chronology for the Tel river valley region of Kalahandi, contributing to the understanding of Odisha's ceramic sequence outside the Mahanadi valley.
-
-
-## Related Articles

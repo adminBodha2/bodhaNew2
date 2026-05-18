@@ -2,43 +2,32 @@
 @use 'breakpoints' as b
 
 =grid-utils($prefix: "")
+	.#{$prefix}grid
+		display: grid
+		grid-template-columns: minmax(0, 1fr)
+		@media (max-width: 1024px)
+			&.#{$prefix}ordered
+				grid-template-areas: "up" "down"
+				.down,
+				.#{$prefix}down
+					grid-area: down
+				.up,
+				.#{$prefix}up
+					grid-area: up
 	@for $i from 1 through t.$grid-columns
 		.#{$prefix}grid-cols-#{$i}
 			grid-template-columns: repeat(#{$i}, minmax(0, 1fr))
 		.#{$prefix}col-span-#{$i}
 			grid-column: span #{$i}
 
-.grid
-	display: grid
-	grid-template-columns: minmax(0, 1fr)
-	@media (max-width: 1024px)
-		&.ordered
-			grid-template-areas: "up" "down"
-			.down
-				grid-area: down
-			.up
-				grid-area: up
++b.responsive-classes using ($prefix)
+	+grid-utils($prefix)
+	.#{$prefix}col-span-full
+		grid-column: 1 / -1
 
-.col-span-full
-	grid-column: 1 / -1
-
-+grid-utils()
-
-@each $name, $width in b.$breakpoints
-	@media (min-width: $width)
-		+grid-utils("#{$name}\\:")
-		.#{$name}\:col-span-full
-			grid-column: 1 / -1
-
-@each $name, $width in b.$max-breakpoints
-	@media (max-width: $width)
-		+grid-utils("#{$name}\\:")
-		.#{$name}\:col-span-full
-			grid-column: 1 / -1
-
-.white-grid
-	background: #e1e1e1
-	gap: 1px
-	border: 1px solid #e1e1e1
-	border-radius: 8px
-	overflow: hidden
+	.#{$prefix}white-grid
+		background: #e1e1e1
+		gap: 1px
+		border: 1px solid #e1e1e1
+		border-radius: 8px
+		overflow: hidden

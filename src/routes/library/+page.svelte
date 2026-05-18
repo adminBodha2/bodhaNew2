@@ -59,7 +59,7 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
 
 <Container>
-	<Parallax imageLink="/images/key-bol.webp" />
+	<Parallax imageLink="/images/key-bol.webp" wipe={true} />
 	<section class="box wrapper-std rgap32 first-box">
 		<Crumb showT={true} title="Bodha Open Library" showD={true} desc="A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more." />
 		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap32" bind:this={revref}>
@@ -73,27 +73,27 @@
 	</section>
 	<section class="box wrapper-std rgap32 lg:rgap64 growingline">
 		<Title text="Categories" />
-		<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
+		<div class="grid grid-cols-2 lg:grid-cols-4 gap8 lg:gap16">
 			{#each libCategories as cat, i}
-				<a class="blank box p24 b-main radius glass-3" href={cat.href}>
+				<a class="blank box p24 b-main radius glass-2" href={cat.href}>
 					<div class="box shelf-main">
-						<p class="tag-text tt-u w500 blue">
+						<p class="txt-xs tt-u w500 theme">
 							{#if cat.type === 'arch'}41 issues{:else}{categoryCounts[cat.type]} texts{/if}
 						</p>
-						<p class="card-title w600 tight a-hover ptop8 pbot8">{cat.label}</p>
+						<p class="txt-xl lg:txt-2xl w600 a-hover ptop8 pbot8">{cat.label}</p>
 					</div>
-					<p class="tight grey">{cat.desc}</p>
+					<p class="grey2 lh14">{cat.desc}</p>
 				</a>
 			{/each}
 		</div>
 	</section>
 	<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate">
 		<Title text="Curated Reading Paths" />
-		<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
+		<div class="grid grid-cols-2 lg:grid-cols-3 gap8 lg:gap16">
 			{#each libPaths as path, i}
-				<a class="box rgap8 blank b-main radius glass-1 p24" href={path.href}>
-					<p class="card-title w600 tight">{path.label}</p>
-					<p class="grey tight">{path.desc}</p>
+				<a class="blank box p24 b-main radius glass-2" href={path.href}>
+					<p class="txt-xl lg:txt-2xl w600 a-hover pbot8">{path.label}</p>
+					<p class="grey2 lh14">{path.desc}</p>
 				</a>
 			{/each}
 		</div>
@@ -107,7 +107,7 @@
 			</p>
 			<p class="highlight-text">For example, there is no good English language translation of the Rigveda, and problems abound in those that are available. But if Ralph Griffith's work shows how the early European mind understood the text, and how they read it, then the more recent translation by Jamison and Brereton evidences the interpretations that are being pushed now.</p>
 		</div>
-		<p class="grey">Select any section below to view books:</p>
+		<p class="w600 theme">Select any section below to view books:</p>
 		<div class="row cgap8 rgap8 wrap">
 			{#each sections as item, i}
 				<button class="filter-button" onclick={() => toggleSection(item.section)} class:active={item.section === selectedSection}>{item.section}</button>
@@ -117,13 +117,13 @@
 			{/if}
 		</div>
 		{#if bharatabooks}
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap8 lg:gap16">
 				{#each bharatabooks as item}
-					<div class="box rgap8 b-main radius8 p24">
-						<p class="paragraph-text w600 tight">{item.title}</p>
-						<p class="grey tight">{item.description}</p>
+					<div class="box p24 b-main radius">
+						<p class="txt-xl w600 a-hover pbot8">{item.title}</p>
+						<p class="grey2 lh14">{item.description}</p>
 						{#if item.author && item.author !== ''}
-							<p class="tag-text tt-u grey">{item.author}</p>
+							<p class="txt-xs tt-u w500 theme ptop8 self-bottom">{item.author}</p>
 						{/if}
 					</div>
 				{/each}
@@ -135,8 +135,8 @@
 		<div class="grid grid-cols-2 lg:grid-cols-4 white-grid">
 			{#each libExternal as res}
 				<a class="blank whitestone box rgap8 p16 lg:p24" href={res.href} target="_blank" rel="noreferrer">
-					<p class="paragraph-text w600 tight a-hover">{res.label} →</p>
-					<p class="descriptor-text grey tight">{res.desc}</p>
+					<p class="txt-lg w500 a-hover">{res.label} →</p>
+					<p class="grey0">{res.desc}</p>
 				</a>
 			{/each}
 		</div>

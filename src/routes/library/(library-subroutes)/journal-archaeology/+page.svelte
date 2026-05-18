@@ -1,9 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { flip } from 'svelte/animate';
-	import Title from '$lib/comps/page-title.svelte';
 	import { slide } from 'svelte/transition';
 	import { sineIn, sineOut } from 'svelte/easing';
 
@@ -25,37 +23,37 @@
 		The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016. "Full access, no subscriptions, and no limitations." This totals to around 41 issues so far, spread over 11 volumes all available on their <a class="linked" target="_blank" rel="noreferrer" href="https://ijarch.com/">website.</a>
 		Here at Bodha Open Library, we've sifted through each issue, sorted and classified the articles, and present the archive in easy to navigate, explore-friendly forms.
 	</p>
-	<div class="box bordertop ptop32" id="contents">
-		<h2>Themes</h2>
+	<div class="box rgap32 bordertop ptop32" id="contents">
+		<h2 class="txt-2xl w600">Themes</h2>
 		{#if groups && groups.length > 0}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 				{#each groups as item}
-					<a class="blank card-padded whitestone" href={item.linkpath}>
-						<p class="paragraph-text">{item.meta.title}</p>
+					<a class="blank p16 whitestone" href={item.linkpath}>
+						<p class="txt-lg w600 a-hover">{item.meta.title}</p>
 					</a>
 				{/each}
 			</div>
 		{/if}
 	</div>
 	<div class="bordertop box ptop32 rgap32">
-		<h2>All Issues</h2>
+		<h2 class="txt-2xl w600">All Issues</h2>
 		<div class="grid issues ultra">
 			{#each data.issues as item (item.issue)}
 				<div class="box each-issue" class:openeditem={openIssue === item.issue} animate:flip={{ duration: 350, easing: sineOut }}>
 					<button class="blank row xbetween thisdoes" onclick={() => toggleIssue(item.issue)}>
-						<p class="bold tt-u">{item.volumeIssue} | {item.issueMonth}</p>
+						<p class="txt-lg tt-u" class:grey1={openIssue === item.issue}>{item.volumeIssue} | {item.issueMonth}</p>
 						{#if openIssue === item.issue}
 							<a class="golink bold tt-u" href={item.path} target="_blank" rel="noreferrer">READ ISSUE</a>
 						{/if}
 					</button>
 					{#if openIssue === item.issue}
-						<div class="rgap8 box contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 270, axis: 'y', easing: sineIn }}>
-							<p class="grey">{item.description}</p>
+						<div class="rgap16 box contingent" in:slide={{ duration: 320, axis: 'y', easing: sineOut }} out:slide={{ duration: 270, axis: 'y', easing: sineIn }}>
+							<p class="txt-xl lh14">{item.description}</p>
 							<div class="grid grid-cols-1 lg:grid-cols-2 metaitem cgap16 rgap16">
 								{#each item.items as iss}
 									<div class="box rgap8">
-										<p class="w500 tight">{iss.title}</p>
-										<p class="tag-text grey tt-u">{iss.authorsText}</p>
+										<p class="txt-lg w500">{iss.title}</p>
+										<p class="txt-sm tt-c grey1">{iss.authorsText}</p>
 									</div>
 								{/each}
 							</div>

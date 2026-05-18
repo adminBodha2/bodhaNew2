@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	import { teamMembers } from '$lib/utils/localsends';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
@@ -35,45 +34,36 @@
 	});
 </script>
 
-
-<Head
-	{title}
-	{metaDescription}
-	{metaUrl}
-	{metaImage}
-	imWidth="2560"
-	imHeight="1440"
-	{jsonld}
-/>
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-<section class="wrapper-std rgap32 header-margin">
-	<Crumb showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization."/>
+	<section class="wrapper-std rgap32 header-margin">
+		<Crumb showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization." />
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 			{#each teamMembers as member}
-			<div class="member-card">
-				<div class="member-image">
-					<img src={member.image} alt={member.name} />
-				</div>
-				<div class="member-info">
-					<div class="member-head">
-						<p class="card-title tight">{member.name}</p>
-						<p class="citation grey tt-u">{member.role}</p>
+				<div class="member-card">
+					<div class="member-image">
+						<img src={member.image} alt={member.name} />
 					</div>
-					<p class="descriptor-text grey">{member.bio}</p>
-					{#if member.links.length > 0}
-					<div class="member-links">
-						{#each member.links as link, i}
-							{#if i > 0}<span class="link-sep">·</span>{/if}
-							<a class="member-link blank" href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-						{/each}
+					<div class="member-info">
+						<div class="member-head">
+							<p class="txt-xl w600">{member.name}</p>
+							<p class="txt-sm tt-u w500">{member.role}</p>
+						</div>
+						<p class="grey2 lh14">{member.bio}</p>
+						{#if member.links.length > 0}
+							<div class="member-links">
+								{#each member.links as link, i}
+									{#if i > 0}<span class="link-sep">·</span>{/if}
+									<a class="member-link blank" href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+								{/each}
+							</div>
+						{/if}
 					</div>
-					{/if}
 				</div>
-			</div>
 			{/each}
 		</div>
-</section>
+	</section>
 </Container>
 
 <style lang="sass">

@@ -36,6 +36,3 @@ Temple architecture is a major recurring theme in the IJA, addressed through arc
 5. Panchayatana puja: The development of the five-shrine arrangement (Panchayatana) is traced across Shaiva, Shakta, Vaishnava, and Buddhist traditions.
 6. Torana typology: Amar Singh's study catalogues eleven named types of torana (gateway arch) from Sanskrit literature and matches each to surviving examples.
 7. Osian ceilings: The decorated ceilings of Osian temples are classified and their textual basis established, contributing to the understanding of Rajasthani temple workshops.
-
-
-## Related Articles

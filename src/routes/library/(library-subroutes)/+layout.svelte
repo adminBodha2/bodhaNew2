@@ -87,8 +87,7 @@
 							{/if}
 						</div>
 					{/each}
-
-					<p class="sidebar-label">Paths</p>
+					<p class="sidebar-label mtop16">Paths</p>
 					{#each libPaths as path}
 						{@const pathSlug = path.href.split('/').at(-1)}
 						{@const accordionKey = `path:${pathSlug}`}
@@ -115,7 +114,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="docmain box no-image lg:pright64 sm:pbot32">
+		<div class="docmain box no-image sm:pbot32">
 			{@render children?.()}
 		</div>
 	</section>
@@ -125,17 +124,14 @@
 
 .docmain
 	background: var(--color-back)
-	@media (min-width: 1025px)
-		border-right: var(--border-main)
 
 .sidebar-acco
 	gap: 1px
 
 .sidebar-label
 	padding: 1rem 1rem 0.5rem
-	color: var(--color-grey-3)
+	color: var(--color-grey-0)
 	font-size: 0.75rem
-	font-weight: 600
 	letter-spacing: 0
 	text-transform: uppercase
 
@@ -155,12 +151,15 @@
 	text-align: left
 	cursor: pointer
 	transition: background 180ms ease-out, color 180ms ease-out
+	font-size: 1.1rem
 	&:hover
 		background: var(--color-stone-1)
 		color: var(--color-primary)
 	&.active
 		background: var(--color-stone-1)
 		color: var(--color-primary)
+	@media (min-width: 1025px)
+		font-size: 1rem
 
 .accordion-icon
 	flex: 0 0 auto

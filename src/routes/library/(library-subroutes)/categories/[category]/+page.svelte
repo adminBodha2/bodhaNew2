@@ -32,32 +32,32 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
 
 <section class="box library-book rgap32">
-	<Crumb showT={true} title={category.label} showD={true} desc={category.desc} fullP={true}/>
+	<Crumb showT={true} title={category.label} showD={true} desc={category.desc} fullP={true} />
 	{#if books && books.length > 0}
-		<div class="grid grid-cols-2 lg:grid-cols-3 rgap4 cgap4">
+		<div class="grid grid-cols-1 lg:grid-cols-3 white-grid">
 			{#each books as item, i}
 				{#if item.type === 'aryan-issue'}
-					<a class="blank box rgap8 whitestone p16 lg:p24 b-main radius" href={item.linkreal} target="_blank" rel="noreferrer">
-						<p class="paragraph-text w600 tight">{item.name}</p>
-						<p class="grey tight">{item.summary}</p>
-						<p class="citation tt-u altprim w500">{item.author}</p>
+					<a class="blank box rgap16 p24 lg:p32 whitestone" href={item.linkreal} target="_blank" rel="noreferrer">
+						<p class="txt-xl w500">{item.name}</p>
+						<p class="grey1">{item.summary}</p>
+						<p class="txt-sm tt-u w500 grey2">{item.author}</p>
 						{#if item.tags && item.tags.length > 0}
 							<div class="row wrap self-bottom cgap4 rgap4">
 								{#each item.tags as tag}
-									<p class="tag-pill tt-u themed hollow dead">{tag.replaceAll('-', ' ')}</p>
+									<p class="txt-xs tt-u theme w500">{tag.replaceAll('-', ' ')}</p>
 								{/each}
 							</div>
 						{/if}
 					</a>
 				{:else}
-					<a class="blank box rgap8 p16 lg:p24 b-main radius teststone" href={item.linkfinal}>
-						<p class="paragraph-text w600 tight">{item.name}</p>
-						<p class="descriptor-text grey tight">{item.summary}</p>
-						<p class="grey tight">{item.author}</p>
+					<a class="blank box rgap16 p24 lg:p32 whitestone" href={item.linkfinal}>
+						<p class="txt-xl w500">{item.name}</p>
+						<p class="grey1">{item.summary}</p>
+						<p class="txt-sm tt-u w500 grey2">{item.author}</p>
 						{#if item.tags && item.tags.length > 0}
 							<div class="row wrap self-bottom cgap4 rgap4">
 								{#each item.tags as tag}
-									<p class="tag-pill tt-u hollow themed dead">{tag.replaceAll('-', ' ')}</p>
+									<p class="txt-xs tt-u theme w500">{tag.replaceAll('-', ' ')}</p>
 								{/each}
 							</div>
 						{/if}

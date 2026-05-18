@@ -31,6 +31,3 @@ Ochre Colour Pottery (OCP) is a Bronze Age ceramic tradition of the Upper Ganget
 5. Artistic expressions: Copper hoard weapons from OCP contexts carry engraved motifs - geometric patterns, birds, horned figures - that have been connected to the Garuda cult, proto-Shiva iconography, and the Skanda/Murugan deity complex (Vols. 8, No. 1 and 2).
 6. Ring currency: The bangle hoards associated with OCP (Vol 10, No. 2 and No. 3) demonstrate a weight-standard ring economy that anticipates the historical kārṣāpana coin.
 7. Relationship to PGW: The Gazetteer literature consistently positions OCP as preceding the Painted Grey Ware (PGW) horizon, representing the proto-historic substrate into which PGW and eventually NBPW cultures emerged.
-
-
-## Related Articles

@@ -2,7 +2,8 @@
 	import { tick } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import BlogMenu from '$lib/icons/blog-menu.svelte';
-	import { slide } from 'svelte/transition'
+	import autoAnimate from '@formkit/auto-animate';
+	import { slide } from 'svelte/transition';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 
 	type Props = {
@@ -65,15 +66,15 @@
 <svelte:window onkeydown={handleWindowKeydown} />
 
 <div class:open class="responsive-wrapper">
-<div class="responsive-menu" use:clickOutsideAction={closeMenu}>
-	<button class="responsive-menu__trigger" type="button" aria-haspopup="menu" aria-expanded={open} aria-controls="responsive-menu-items" onclick={toggleMenu}>
-		<BlogMenu size="32" color="currentColor" />
-		<span>{buttonText}</span>
-	</button>
-	<nav id="responsive-menu-items" class="responsive-menu__items" class:open aria-label={ariaLabel} bind:this={menuElement} use:closeOnMenuItemClick>
-		{@render children?.()}
-	</nav>
-</div>
+	<div class="responsive-menu" use:clickOutsideAction={closeMenu}>
+		<button class="responsive-menu__trigger cgap16" type="button" aria-haspopup="menu" aria-expanded={open} aria-controls="responsive-menu-items" onclick={toggleMenu}>
+			<BlogMenu size="32" color="var(--color-grey-2)" />
+			<span>{buttonText}</span>
+		</button>
+		<nav id="responsive-menu-items" class="responsive-menu__items" class:open aria-label={ariaLabel} bind:this={menuElement} use:closeOnMenuItemClick>
+			{@render children?.()}
+		</nav>
+	</div>
 </div>
 
 <style lang="sass">
@@ -87,12 +88,11 @@
 	width: 100%
 	display: flex
 	align-items: center
-	justify-content: space-between
-	background: var(--color-stone-1)
+	background: var(--color-back)
 	border: 1px solid #e1e1e1
-	padding: 0.5em 1em
-	box-shadow: 2px 1px 4px rgba(0,0,0,0.2)
-	border-radius: 8px
+	padding: 0.75em 1em
+	box-shadow: 2px 1px 2px rgba(0,0,0,0)
+	border-radius: 4px
 	cursor: pointer
 	&:active
 		background: var(--color-grey-0)
@@ -115,8 +115,8 @@
 		display: flex
 		flex-direction: column
 		gap: 0
-		padding: 1rem
-		border-radius: 8px
+		padding: 1rem 0.5rem
+		border-radius: 4px
 		background: var(--color-back)
 		border: var(--border-darker)
 		box-shadow: 2px 4px 8px rgba(0,0,0,0.2)

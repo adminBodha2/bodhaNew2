@@ -114,6 +114,11 @@ export const libExternal = [
 		{ label: 'Archive.org', href: 'https://archive.org/', desc: 'The original and undefeated repository for all kinds of texts. Most documents in our own library are sourced from this archive.' },
 	];
 
+export const acadCourses = [
+	{ title: 'Introduction to Shri Ram Swarup', image: '/images/srg-square.webp', desc: 'Shri Ram Swarup was one of the greatest Hindu thinkers to come out of India in the last century. This course is an introduction to his works and thoughts, leading learners to a better understanding of Bharatavarsha, Sanatana Dharma, and our place in the scheme of things.', instructor: 'Pankaj Saxena', status: 'concluded', page: true, slug: 'introduction-to-shri-ram-swarup'},
+	{ title: 'Ancient Indian History', image: 'https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/bharatiya-wanderlust.webp', desc: 'The unique story of a culture is captured in its history. But the arbiters of historiography have labeled every culture apart from their own as myth and legend. This course will explore the obfuscated history of Bhāratavarṣa in the light of the Purāṇas, and advance the case for writing and living the true history of this land.', instructor: 'Amritanshu Pandey', status: 'upcoming', page: false, slug: 'ancient-indian-history'}
+]
+
 export const navLinks = [
 	{
 		title: 'Research',

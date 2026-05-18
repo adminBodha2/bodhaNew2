@@ -10,7 +10,6 @@
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Location from '$lib/icons/location.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
-	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 	import Tabs from '$lib/comps/Tabs.svelte';
@@ -57,45 +56,45 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1920" imHeight="1080" {jsonld} />
 
 <Container>
-	<Parallax wipe={true}>
-		<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
-	</Parallax>
+	<Parallax wipe={true} imageLink={data.image} />
+
+	<!--------------introduction with details like date, pricing etc.------------------>
 	<section class="tight-stack wrapper-std first-box">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
-				<p class="tag-pill anveshi dead">OPEN NOW!</p>
+				<p class="txt-sm tt-u anveshi-o">OPEN NOW!</p>
 			{/if}
 		</Crumb>
-		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 content-highlights" bind:this={ref}>
+		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 lg:cgap64 content-highlights" bind:this={ref}>
 			<Reveal visible={vis.visible}>
 				<data.content />
 			</Reveal>
 		</div>
 		{#if data.quote}
 			<Reveal visible={vis.visible} delay={800}>
-				<p class="card-title thin italic source-serif width60 quote-text" style="color: var(--color-anveshi-alt)">{data.quote}</p>
+				<p class="txt-xl md:txt-2xl italic source-serif width80 anveshi-o">{data.quote}</p>
 			</Reveal>
 		{/if}
 		<div class="grid grid-cols-2 xl:grid-cols-4 col-span-full info-row width60">
-			<div class="box dates p16">
+			<div class="box dates p16 lg:p32">
 				<Calendar fill="var(--color-anveshi)" />
-				<p class="descriptor-text w500 ptop8">{data.dates}</p>
-				<p class="tag-text grey tt-u">Dates</p>
+				<p class="txt-bs w500 ptop16 pbot4">{data.dates}</p>
+				<p class="txt-xs grey1 tt-u">Dates</p>
 			</div>
-			<div class="box price p16">
+			<div class="box price p16 lg:p32">
 				<Rupee fill="var(--color-anveshi)" />
-				<p class="descriptor-text w500 ptop8">{data.price}</p>
-				<p class="tag-text grey tt-u">Price</p>
+				<p class="txt-bs w500 ptop16 pbot4">{data.price}</p>
+				<p class="txt-xs grey1 tt-u">Price</p>
 			</div>
-			<div class="box duration p16">
+			<div class="box duration p16 lg:p32">
 				<Session fill="var(--color-anveshi)" />
-				<p class="descriptor-text w500 ptop8">{data.duration}</p>
-				<p class="tag-text grey tt-u">Duration</p>
+				<p class="txt-bs w500 ptop16 pbot4">{data.duration}</p>
+				<p class="txt-xs grey1 tt-u">Duration</p>
 			</div>
-			<div class="box temples p16">
+			<div class="box temples p16 lg:p32">
 				<Location fill="var(--color-anveshi)" />
-				<p class="descriptor-text w500 ptop8">{data.temples}</p>
-				<p class="tag-text grey tt-u">Temples</p>
+				<p class="txt-bs w500 ptop16 pbot4">{data.temples}</p>
+				<p class="txt-xs grey1 tt-u">Temples</p>
 			</div>
 		</div>
 		<div class="box col-span-full">
@@ -109,6 +108,8 @@
 			</div>
 		</div>
 	</section>
+
+	<!--------------itinerary------------------>
 	<section class="wrapper-std growingline">
 		<Title text="Itinerary" anveshi={true} />
 		{#if itins && itins.length > 0}
@@ -116,17 +117,19 @@
 				{#snippet children(item, index)}
 					<div class="itin-panel b-main p16 lg:p24 radius8 grid lg:grid-cols-2 gap16 lg:gap32">
 						<div class="up box">
-							<img src={item.itinimage} class="itinimage radius8" alt={item.daylabel} />
+							<img src={item.itinimage} class="fitted squared radius8" alt={item.daylabel} />
 						</div>
 						<div class="down box">
 							<img src="https://www.bodharesearch.in/images/anveshi/day-{index + 1}.png" alt={item.daylabel} class="icon" />
-							<pre class="body-text">{item.itinerary}</pre>
+							<pre class="highlight-text">{item.itinerary}</pre>
 						</div>
 					</div>
 				{/snippet}
 			</Tabs>
 		{/if}
 	</section>
+
+	<!--------------temples------------------>
 	<section class="wrapper-std growingline alternate">
 		<Title text="Temples" anveshi={true} />
 		{#if temples && temples.length > 0}
@@ -136,11 +139,11 @@
 						{#if data.templetext}
 							<div class="grid grid-cols-1 lg:grid-cols-2 cgap16 rgap16 temple-descriptions">
 								<div class="up">
-									<Lightbox><enhanced:img class="fit t2 radius8" src={item.image} alt={item.temple} /></Lightbox>
+									<Lightbox><img class="fitted herocard radius8" src={item.image} alt={item.temple} /></Lightbox>
 								</div>
 								<div class="box rgap16 down lg:pleft16">
-									<p class="highlight-text w500">{item.temple}</p>
-									<p class="body-text grey">{item.description}</p>
+									<p class="txt-2xl w600">{item.temple}</p>
+									<p class="txt-lg lh14 grey2">{item.description}</p>
 								</div>
 							</div>
 						{:else}
@@ -154,17 +157,14 @@
 			</Swipes>
 		{/if}
 	</section>
+
+	<!--------------faq section------------------>
 	<section class="box wrapper-std growingline">
 		<FAQ />
 	</section>
 </Container>
 
 <style lang="sass">
-
-.itinimage
-	object-fit: cover
-	height: 200px
-	width: 200px
 
 :global(.anveshi-tabs .tab)
 	--tab-active-color: var(--color-anveshi)

@@ -2,6 +2,7 @@ import { browser } from '$app/environment';
 import { cubicOut } from 'svelte/easing';
 import type { TransitionConfig, EasingFunction } from 'svelte/transition';
 import type { SlideDirection, SlideParams } from '../types';
+import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
 
 // Re-export so consumers don't need to reach into svelte/transition
 export type { EasingFunction };
@@ -59,8 +60,8 @@ export function slide(
 	const prefersReducedMotion =
 		browser && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-	if (prefersReducedMotion) {
-		return { duration: 0, delay };
+	if (prefersReducedMotion || areScrollAnimationsDisabled()) {
+		return { duration: 0, delay: 0 };
 	}
 
 	const { x, y } = directionToOffset(direction, distance);

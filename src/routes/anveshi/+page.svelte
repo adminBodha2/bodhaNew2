@@ -15,16 +15,16 @@
 	import Slider from '$lib/svelteanim/components/Slide.svelte';
 	import { useInView } from '$lib/svelteanim';
 	import Scale from '$lib/svelteanim/components/Scale.svelte';
-	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { Lightbox, LightboxGallery, GalleryImage, GalleryThumbnail } from 'svelte-lightbox';
 
 	let { data }: { data: PageData } = $props();
 	let reference = $state<HTMLElement | null>(null);
 	let scaleRef = $state<HTMLElement | null>(null);
 	let isVisible = useInView(() => reference, { threshold: 0.8, once: true });
-	let scaleVis = useInView(() => scaleRef, { threshold: 0.5, once: true})
-	let revRef = $state<HTMLElement | null>(null)
-	let revVis = useInView(() => revRef, { threshold: 0.5, once: true})
+	let scaleVis = useInView(() => scaleRef, { threshold: 0.5, once: true });
+	let revRef = $state<HTMLElement | null>(null);
+	let revVis = useInView(() => revRef, { threshold: 0.5, once: true });
 
 	const title = 'Anveshi | Bodha';
 	const metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
@@ -106,10 +106,11 @@
 		<Crumb />
 		<div class="box rgap16" use:autoAnimate bind:this={revRef}>
 			<Reveal visible={revVis.visible}><p class="highlight-text col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p></Reveal>
-			<Reveal visible={revVis.visible} delay={300}>			<p class="highlight-text width60">
-				The word anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer. Kaśmīr Śaiva darśana tells us that, vimarṣa - Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
-				cosmos, life and existence.
-			</p></Reveal>
+			<Reveal visible={revVis.visible} delay={300}>
+				<p class="highlight-text width60">
+					The word anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer. Kaśmīr Śaiva darśana tells us that, vimarṣa - Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
+					cosmos, life and existence.
+				</p></Reveal>
 			<Reveal visible={revVis.visible} delay={600}><p class="highlight-text bold">We are born <em class="anv-orange">anveshi</em> — seekers by nature.</p></Reveal>
 			{#if !showText}
 				<button class="hollow-link anveshi" onclick={toggleText}>
@@ -151,15 +152,15 @@
 			<Title text="current chapter" anveshi={true} />
 			{#each currproj as item, i}
 				<Slider visible={isVisible.visible} direction="down" outDirection="down" distance={300} duration={500} delay={500}>
-					<a class="box current-anveshi blank" style="background-image: url({item.gallery})" href="/anveshi{item.link}">
-						<div class="box inside-current-anveshi p16 md:p32 ybetween">
-								<span class="openbadge">OPEN NOW</span>
-								<div class="box rgap16">
- 									<p class="white w500 tt-u" style="width: max-content">{item.fromto}</p>
-									<h2 class="card-title white">{item.chapter} Chapter</h2>
-									<p class="paragraph-text white">{item.desc}</p>
-									<p class="anveshi-o descriptor-text bold">→</p>
-								</div>
+					<a class="box current-anveshi blank b-main" style="background-image: url({item.gallery})" href="/anveshi{item.link}">
+						<div class="box inside-current-anveshi p8 md:p16 lg:p32 ybetween">
+							<span class="openbadge">OPEN NOW</span>
+							<div class="box rgap8 lg:rgap16">
+								<p class="txt-lg white tt-u" style="width: max-content">{item.fromto}</p>
+								<h2 class="txt-5xl lg:txt-6xl w550 white">{item.chapter} Chapter</h2>
+								<p class="highlight-text white">{item.desc}</p>
+								<p class="anveshi-o descriptor-text bold">→</p>
+							</div>
 						</div>
 					</a>
 				</Slider>
@@ -167,6 +168,7 @@
 		</section>
 	{/if}
 
+	<!----testimonials--──────────────────────--->
 	{#if testis && testis.length > 0}
 		<section class="wrapper-std growingline" id="testimonials">
 			<Title text="testimonials" anveshi={true} />
@@ -175,8 +177,8 @@
 					{#each testis as item}
 						<div class="testimonial box rgap8 p16 lg:p24">
 							<Quote />
-							<p class="thin italic">{item.content}</p>
-							<p class="anveshi-o citation w500 tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
+							<p class="txt-lg lh14 italic">{item.content}</p>
+							<p class="txt-sm anveshi-o tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
 						</div>
 					{/each}
 				</Mark>
@@ -185,8 +187,8 @@
 						{#if i > 3}
 							<div class="testimonial box rgap8 p32">
 								<Quote />
-								<p class="thin italic">{item.content}</p>
-								<p class="anveshi-o citation w500 tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
+								<p class="txt-lg lh14 italic">{item.content}</p>
+								<p class="txt-sm anveshi-o tt-u self-bottom bordertop ptop16">{item.person} | {item.chapter}</p>
 							</div>
 						{/if}
 					{/each}
@@ -195,6 +197,7 @@
 		</section>
 	{/if}
 
+	<!----future chapters--──────────────────────--->
 	<section class="wrapper-std growingline alternate" id="future-chapters">
 		<Title text="future chapters" anveshi={true} />
 		<div class="area-of-display">
@@ -257,15 +260,16 @@
 					{#each futureproj as item}
 						<swiper-slide>
 							<div class="sub-item box rgap16 swiper-sub radius8 overflow-hidden">
-								<div class="p4"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
+								<div class="p4"><img class="fitted landscape" src={item.gallery} alt={item.chapter} /></div>
 								<div class="box rgap8 px16 lg:px24">
-									<p class="card-title bold tt-c">{item.chapter}</p>
-									<p class="paragraph-text grey pbot8">{item.shortdesc}</p>
+									<p class="txt-2xl w600 tt-c">{item.chapter}</p>
+									<p class="txt-lg lh14 grey2 pbot8">{item.shortdesc}</p>
 								</div>
 								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
-									{#if item.region}<p class="tag-pill anveshi tt-u">{item.region}</p>{/if}
 									{#if item.regopen === true}
 										<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+									{:else}
+										<p class="txt-xs w500 anveshi-o tt-u">{item.region}</p>
 									{/if}
 								</div>
 							</div>
@@ -273,19 +277,19 @@
 					{/each}
 				</Swipes>
 			{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
-				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 rgap16 cgap16" use:autoAnimate>
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap16" use:autoAnimate>
 					{#each regionAnveshi as item, i}
 						<div class="sub-item box rgap16">
-							<div class="p8"><enhanced:img class="anv-future-image" src={item.gallery} alt={item.chapter} /></div>
+							<div class="p8"><img class="fitted landscape" src={item.gallery} alt={item.chapter} /></div>
 							<div class="box p16 lg:p32 notop rgap8">
-								<p class="bold paragraph-text tt-c">{item.chapter}</p>
-								<p class="grey">{item.shortdesc}</p>
+								<p class="txt-2xl w600 tt-c">{item.chapter}</p>
+								<p class="txt-lg lh14 grey2 pbot8">{item.shortdesc}</p>
 							</div>
-							<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
 							{#if item.regopen === true}
-								<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
+									<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+								</div>
 							{/if}
-							</div>
 						</div>
 					{/each}
 				</div>
@@ -293,33 +297,36 @@
 		</div>
 	</section>
 
+	<!----past chapters--──────────────────────--->
 	{#if pastproj && pastproj.length > 0}
 		<section class="wrapper-std growingline" id="past-chapters">
 			<Title text="past chapters" anveshi={true} />
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap4" bind:this={scaleRef}>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16" bind:this={scaleRef}>
 				{#each pastproj as item, i}
 					<Scale visible={scaleVis.visible}>
-					{#if item.pageactive === true}
-						<div class="box past-grid-items blank b-main p8 radius8 ncolor-inv">
-							<Lightbox><enhanced:img class="fit t2 radius" src={item.gallery} alt={item.chapter} /></Lightbox>
-							<a class="box p16" href="/anveshi{item.link}">
-								<p class="highlight-text w600">{item.chapter}</p>
-								<span class="hollow-link anveshi-o">Explore <span class="button-text">→</span></span>
-							</a>
-						</div>
-					{:else}
-						<div class="box past-grid-items blank b-main p8 radius8">
-							<Lightbox><enhanced:img class="fit t2 radius" src={item.gallery} alt={item.chapter} /></Lightbox>
-							<div class="box p16">
-								<p class="highlight-text w600">{item.chapter}</p>
+						{#if item.pageactive === true}
+							<div class="box past-grid-items blank b-main p4 radius8 whitestone">
+								<Lightbox><img class="fitted herocard radius4" src={item.gallery} alt={item.chapter} /></Lightbox>
+								<a class="box p16 rgap8" href="/anveshi{item.link}">
+									<p class="txt-xl w500">{item.chapter}</p>
+									<span class="hollow-link anveshi-o">Explore <span class="button-text">→</span></span>
+								</a>
 							</div>
-						</div>
-					{/if}
+						{:else}
+							<div class="box past-grid-items blank b-main p4 radius8 whitestone">
+								<Lightbox><img class="fitted herocard radius4" src={item.gallery} alt={item.chapter} /></Lightbox>
+								<div class="box p16">
+									<p class="txt-lg w500">{item.chapter}</p>
+								</div>
+							</div>
+						{/if}
 					</Scale>
 				{/each}
 			</div>
 		</section>
 	{/if}
+
+	<!----faq section--──────────────────────--->
 	<section class="wrapper-std growingline" id="faqs">
 		<FAQ />
 	</section>
@@ -334,7 +341,6 @@
 	font-size: 14px
 	color: white
 	font-weight: 600
-	box-shadow: 4px 2px 6px rgba(0,0,0,0.3)
 
 .current-anveshi
 	background-position: center center
@@ -346,13 +352,13 @@
 	.inside-current-anveshi
 		height: 100%
 		width: 100%
-		background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.8) 100%)
+		background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.5) 100%)
 		transition: all 300ms ease
-	&:hover
+	&:hover 
 		.inside-current-anveshi
-			background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%)
+			background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.2) 100%)
 	@media (min-width: 1025px)
-		height: 70vh
+		height: 80vh
 		width: 100%
 
 .area-of-display

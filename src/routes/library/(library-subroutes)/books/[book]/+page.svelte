@@ -30,29 +30,28 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" ogType="book" {jsonld} />
 
-
 <section class="box library-book rgap32">
-<Crumb showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
-	<div class="row cgap8 rgap8 mwrap">
-		{#each data.tags as tag}
-			<a class="tag-pill themed tt-u" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
-		{/each}
-	</div>
-</Crumb>
-<div class="pdf-reader pbot32">
-		<PDFReader src={data.linkcloud} title={data.name} height="82vh" />
-</div>
-{#if relatedBooks && relatedBooks.length > 0}
-<div class="box bordertop ptop32 rgap32">
-	<h2>Related Books</h2>
-		<div class="grid grid-cols-2 lg:grid-cols-3 rgap4 cgap4">
-			{#each relatedBooks as item, i}
-				<a class="blank box rgap8 whitestone p16 lg:p24 b-main radius" href={item.linkfinal2}>
-					<p class="paragraph-text w600 tight a-hover">{item.name}</p>
-					<p class="grey tight">{item.short}</p>
-				</a>
+	<Crumb showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
+		<div class="row cgap8 rgap8 mwrap">
+			{#each data.tags as tag}
+				<a class="txt-sm w500 theme tt-u" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
 			{/each}
 		</div>
-</div>
-{/if}
+	</Crumb>
+	<div class="pdf-reader pbot32">
+		<PDFReader src={data.linkcloud} title={data.name} height="82vh" />
+	</div>
+	{#if relatedBooks && relatedBooks.length > 0}
+		<div class="box bordertop ptop32 rgap32">
+			<h2 class="txt-2xl w600">Related Books</h2>
+			<div class="grid grid-cols-2 lg:grid-cols-3 gap16">
+				{#each relatedBooks as item, i}
+					<a class="blank box rgap8 whitestone p16 lg:p24 b-main radius" href={item.linkfinal2}>
+						<p class="txt-lg w500 a-hover">{item.name}</p>
+						<p class="grey1">{item.short}</p>
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
 </section>

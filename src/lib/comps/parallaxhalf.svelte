@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { onMount } from 'svelte';
+	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 
 	type Props = {
 		imageLink?: string;
@@ -15,13 +16,7 @@
 	let frameId = 0;
 	let reduceMotion = false;
 
-	let {
-		imageLink = '',
-		isClass = 'is100',
-		alt = 'Page hero image',
-		wipe = false,
-		children
-	}: Props = $props();
+	let { imageLink = '', isClass = 'is100', alt = 'Page hero image', wipe = false, children }: Props = $props();
 
 	function isWrapperNearViewport() {
 		if (!wrapperElement) return false;
@@ -78,7 +73,7 @@
 <div bind:this={wrapperElement} class="imager {isClass}">
 	<div bind:this={parallaxElement} class="parallax-target">
 		{#if wipe}
-			{@render children?.()}
+			<WaterRipple src={imageLink} class="ripple-motion" brushSize={100} />
 		{:else}
 			<img src={imageLink} {alt} />
 		{/if}
@@ -90,7 +85,7 @@
 .imager
 	overflow: hidden
 	margin-top: 80px
-	border-radius: 32px
+	border-radius: 4px
 	.parallax-target
 		height: 100%
 		width: 100%
@@ -101,7 +96,7 @@
 	@media screen and (min-width: 1025px)
 		height: 100vh
 		margin-top: 88px
-		border-radius: 32px
+		border-radius: 4px
 		&.is100
 			height: calc(100vh - 144px)
 		.parallax-target

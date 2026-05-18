@@ -2985,5 +2985,78 @@
         ]
       }
     ]
+  },
+  {
+    "issue": 42,
+    "volume": 11,
+    "volumeYear": "2026",
+    "volumeIssue": "Vol 11, No. 2",
+    "description": "This issue brings together Upper Baitarani Valley prehistoric lithics, Rajagala Maha-lena Cave transition evidence in Sri Lanka, Chalcolithic faunal remains from Hetapatti, State Museum Lucknow miniature paintings, Timurid and Mughal legitimacy, Mahabharata imagery on Bengal temple walls, and Manipuri intangible cultural heritage in Bangladesh. It contributes to prehistoric-lithics, excavation-reports, archaeobotany-palaeoenvironment, museum-collections, art-iconography-and-sculpture, temple-architecture, medieval political history, and regional cultural-history topics.",
+    "slug": "vol-11-02",
+    "path": "https://ijarch.com/ija-vol-11-number-2/",
+    "issueMonth": "2026",
+    "items": [
+      {
+        "title": "Recently Discovered Prehistoric Site at Musakhari Locality-II on the Rocky Outcrop of Upper Baitarani Valley, Keonjhar District, Northern Odisha: A Preliminary Observation",
+        "authorsText": "Dr. Nishikanta Dwibedi, Rajashree Puhan & Rajesh Kumar Bagarti",
+        "authors": [
+          "Dr. Nishikanta Dwibedi",
+          "Rajashree Puhan",
+          "Rajesh Kumar Bagarti"
+        ]
+      },
+      {
+        "title": "Human transition from prehistoric and early historic phase in Rajagala Maha-lena cave of Sri Lanka",
+        "authorsText": "E. G. J. Suranga, K. M. A. Kapukotuwa, G. Ranasinghe, M.D.I.K. Abeynayake, Vasant Shinde & Nilesh Jadhav",
+        "authors": [
+          "E. G. J. Suranga",
+          "K. M. A. Kapukotuwa",
+          "G. Ranasinghe",
+          "M.D.I.K. Abeynayake",
+          "Vasant Shinde",
+          "Nilesh Jadhav"
+        ]
+      },
+      {
+        "title": "Animal Remains from the Chalcolithic Contexts at Hetapatti, Prayagraj District, Uttar Pradesh",
+        "authorsText": "P. P. Joglekar, V.D. Misra, J. N. Pal & M.C. Gupta",
+        "authors": [
+          "P. P. Joglekar",
+          "V.D. Misra",
+          "J. N. Pal",
+          "M.C. Gupta"
+        ]
+      },
+      {
+        "title": "Miniature Paintings Kept in State Museum Lucknow, U.P., Part - I",
+        "authorsText": "Vijay Kumar, A. K. Singh & Al Shaz Fatmi",
+        "authors": [
+          "Vijay Kumar",
+          "A. K. Singh",
+          "Al Shaz Fatmi"
+        ]
+      },
+      {
+        "title": "Timurid Legacy and Mughal Sovereignty: Strategies of Conquest and Legitimacy",
+        "authorsText": "Hamid Amin",
+        "authors": [
+          "Hamid Amin"
+        ]
+      },
+      {
+        "title": "Mahabharata on Temple Walls: A Simple Visual Interpretation of a Complex Literary Work",
+        "authorsText": "Dr. Bikas Karmakar",
+        "authors": [
+          "Dr. Bikas Karmakar"
+        ]
+      },
+      {
+        "title": "Portrayal of Manipuri Community and Its Intangible Cultural Heritage in Bangladesh",
+        "authorsText": "Rashedul Alam Prodip",
+        "authors": [
+          "Rashedul Alam Prodip"
+        ]
+      }
+    ]
   }
 ]

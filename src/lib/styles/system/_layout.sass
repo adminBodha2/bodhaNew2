@@ -1,66 +1,90 @@
-@use '$lib/styles/system/breakpoints' as *
+@use 'breakpoints' as *
 
-.row,
-.box
-	display: flex
+=layout-utils($prefix: "")
+	.#{$prefix}row,
+	.#{$prefix}box
+		display: flex
 
-.row
-	flex-direction: row
+	.#{$prefix}row
+		flex-direction: row
 
-.box
-	flex-direction: column
+	.#{$prefix}box
+		flex-direction: column
 
-.wrap
-	flex-wrap: wrap
+	.#{$prefix}wrap
+		flex-wrap: wrap
 
-.row
-	&.xleft
-		justify-content: flex-start
-	&.xcenter
-		justify-content: center
-	&.xright
-		justify-content: flex-end
-	&.xbetween
-		justify-content: space-between
-	&.ytop
-		align-items: flex-start
-	&.ycenter
-		align-items: center
-	&.ybottom
-		align-items: flex-end
-	+lg
-		&.mwrap
+	.row,
+	.#{$prefix}row
+		&.#{$prefix}xleft
+			justify-content: flex-start
+		&.#{$prefix}xcenter
+			justify-content: center
+		&.#{$prefix}xright
+			justify-content: flex-end
+		&.#{$prefix}xbetween
+			justify-content: space-between
+		&.#{$prefix}ytop
+			align-items: flex-start
+		&.#{$prefix}ycenter
+			align-items: center
+		&.#{$prefix}ybottom
+			align-items: flex-end
+
+	.box,
+	.#{$prefix}box
+		&.#{$prefix}xleft
+			align-items: flex-start
+			text-align: left
+		&.#{$prefix}xcenter
+			align-items: center
+		&.#{$prefix}xright
+			align-items: flex-end
+			text-align: right
+		&.#{$prefix}ytop
+			justify-content: flex-start
+		&.#{$prefix}ycenter
+			justify-content: center
+		&.#{$prefix}ybottom
+			justify-content: flex-end
+		&.#{$prefix}ybetween
+			justify-content: space-between
+
+	.#{$prefix}self-bottom
+		margin-top: auto
+
+	.#{$prefix}self-top
+		margin-bottom: auto
+
+	.#{$prefix}flex-shrink-0
+		flex-shrink: 0
+
+	.#{$prefix}flex-grow
+		flex-grow: 1
+
+	@if $prefix != ""
+		.#{$prefix}mwrap
 			flex-wrap: wrap
+		.#{$prefix}mcol
+			flex-direction: column
+		.#{$prefix}mrow
+			flex-direction: row
+		.#{$prefix}mleft
+			justify-content: flex-start
+			text-align: left
+			&.box,
+			&.#{$prefix}box
+				align-items: flex-start
+		.row.#{$prefix}mleft.ycenter,
+		.row.#{$prefix}mleft.#{$prefix}ycenter,
+		.#{$prefix}row.#{$prefix}mleft.#{$prefix}ycenter,
+		.box.#{$prefix}mleft.xcenter,
+		.box.#{$prefix}mleft.#{$prefix}xcenter,
+		.#{$prefix}box.#{$prefix}mleft.#{$prefix}xcenter
+			align-items: flex-start
 
-.box
-	&.xleft
-		align-items: flex-start
-		text-align: left
-	&.xcenter
-		align-items: center
-	&.xright
-		align-items: flex-end
-		text-align: right
-	&.ytop
-		justify-content: flex-start
-	&.ycenter
-		justify-content: center
-	&.ybottom
-		justify-content: flex-end
-	&.ybetween
-		justify-content: space-between
-
-.self-bottom
-	margin-top: auto
-
-.self-top
-	margin-bottom: auto
-
-.flex-shrink-0
-	flex-shrink: 0
-
-.flex-grow
-	flex-grow: 1
++responsive-classes using ($prefix)
+	+layout-utils($prefix)
 
 @media (max-width: 1024px)
 	.mwrap

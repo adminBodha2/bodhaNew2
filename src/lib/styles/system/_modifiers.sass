@@ -2,17 +2,11 @@
 @use 'tokens' as t
 @use 'breakpoints' as b
 
-:root
-	--fontface-sans: 'Google Sans', sans-serif
-	--fontface-sans-flex: 'Google Sans Flex', sans-serif
-	--fontface-serif: 'Source Serif 4', serif
-	--fontface-serif3: 'EB Garamond', serif
-
 html, body
 	box-sizing: border-box
 	padding: 0
 	margin: 0
-	font-family: 'Google Sans', sans-serif
+	font-family: 'Google Sans Flex', sans-serif
 	color: var(--color-primary)
 	-webkit-font-smoothing: auto
 	-moz-osx-font-smoothing: auto
@@ -20,147 +14,171 @@ html, body
 *, :root
 	box-sizing: border-box
 
-.bdr
-	border: 1px solid red
+=modifier-utils($prefix: "")
+	.#{$prefix}bdr
+		border: 1px solid red
 
-.radius
-	border-radius: 5px
+	.#{$prefix}radius
+		border-radius: 5px
 
-.overflow-hidden
-	overflow: hidden
+	.#{$prefix}overflow-hidden
+		overflow: hidden
 
-h1.visually-hidden
-	position: absolute
-	width: 1px
-	height: 1px
-	margin: -1px
-	padding: 0
-	overflow: hidden
-	clip: rect(0, 0, 0, 0)
-	white-space: nowrap
-	border: 0
-	font-size: 12px
+	h1.#{$prefix}visually-hidden
+		position: absolute
+		width: 1px
+		height: 1px
+		margin: -1px
+		padding: 0
+		overflow: hidden
+		clip: rect(0, 0, 0, 0)
+		white-space: nowrap
+		border: 0
+		font-size: 12px
 
-.self-bottom
-	margin-top: auto
+	.#{$prefix}self-bottom
+		margin-top: auto
 
-.self-center
-	@media screen and (min-width: 1025px)
-		margin-left: auto
-		margin-right: auto
+	.#{$prefix}self-center
+		@media screen and (min-width: 1025px)
+			margin-left: auto
+			margin-right: auto
 
-.self-top, img.self-top
-	margin-bottom: auto
+	.#{$prefix}self-top, img.#{$prefix}self-top
+		margin-bottom: auto
 
-.pos-fixed
-	position: fixed
-	left: 2rem
-	top: 6rem
-	z-index: 999
+	.#{$prefix}pos-fixed
+		position: fixed
+		left: 2rem
+		top: 6rem
+		z-index: 999
 
-.flex-shrink-0
-	flex-shrink: 0
-.flex-grow
-	flex-grow: 1
+	.#{$prefix}flex-shrink-0
+		flex-shrink: 0
 
-img.fit
-	object-fit: cover
-	width: 100%
-	&.t2
-		aspect-ratio: 16/9
-		height: 320px
-		@media (min-width: 1025px)
-			height: 400px
+	.#{$prefix}flex-grow
+		flex-grow: 1
+
+	img.fit,
+	img.#{$prefix}fit
+		object-fit: cover
+		width: 100%
+		&.#{$prefix}t2
+			aspect-ratio: 16/9
+			height: 320px
+			@media (min-width: 1025px)
+				height: 400px
+				height: 240px
+
+	img.#{$prefix}std
+		object-fit: cover
+		aspect-ratio: 3/2
+		width: 100%
+		@media (max-width: 1024px)
 			height: 240px
 
-img.std
-	object-fit: cover
-	aspect-ratio: 3/2
-	width: 100%
-	@media (max-width: 1024px)
-		height: 240px
-
-img.square
-	aspect-ratio: 1/1
-	object-fit: contain
-	width: 100%
-	max-height: 300px
-	@media (min-width: 1025px)
-		max-height: 400px
-
-img.size-lg
-	object-fit: cover
-	width: 100%
-	height: 300px
-	@media (min-width: 721px)
-		height: 320px
-	@media (min-width: 1025px)
-		height: 360px
-
-img.portrait
-	object-fit: cover
-	width: 100%
-	height: 280px
-	@media (min-width: 1025px)
-		height: 480px
-
-img.contained
-	object-fit: contain
-	height: 240px
-
-.theme-line-parent
-	.theme-line
-		height: 2px
-		width: 32px
-		background: var(--color-theme)
-		transition: all 0.14s ease
-		transform-origin: left center
-	&:hover
-		.theme-line
-			transform: scaleX(2)
-
-.on-hover
-	svg.svgicon
-		filter: drop-shadow(0px 0px 0px rgb(0 0 0 / 0))
-
-.ripple-motion
-	height: 100%
-	min-height: 5rem
-	width: 100%
-	img
-		object-position: center center
+	img.#{$prefix}square
+		aspect-ratio: 1/1
 		object-fit: cover
 		width: 100%
 		height: 100%
 
-.ripple-image-box
-	width: 100%
-	height: 400px
-	background-size: cover
-	background-fit: center center
-	.ripple-inscreen
-		height: 100%
+	img.#{$prefix}size-lg
+		object-fit: cover
 		width: 100%
-	@media screen and (min-width: 1025px)
-		height: calc(100vh - 144px)
-		margin-top: 80px
+		height: 300px
+		@media (min-width: 721px)
+			height: 320px
+		@media (min-width: 1025px)
+			height: 360px
 
-.motion-vid-wrapper
-	display: flex
-	align-items: center
-	justify-content: center
-	padding: 4rem 2rem
+	img.#{$prefix}portrait
+		object-fit: cover
+		width: 100%
+		height: 280px
+		@media (min-width: 1025px)
+			height: 480px
 
-.popup-temple-name
-	border: 1px solid #FFFFFF
+	img.#{$prefix}contained
+		object-fit: contain
+		height: 240px
 
-.popup-state
-	.popup-state-dot
-		background: var(--color-theme-alt)
+	img.fitted,
+	img.#{$prefix}fitted
+		width: 100%
+		object-fit: cover
+		display: block
+		&.#{$prefix}contain
+			object-fit: contain
+		&.#{$prefix}landscape
+			aspect-ratio: 16/9
+		&.#{$prefix}herocard
+			aspect-ratio: 3/2
+		&.#{$prefix}port
+			aspect-ratio: 3/4
+		&.#{$prefix}squared
+			aspect-ratio: 1/1
 
-.popup-coords
-	background: #FFFFFF
+	.#{$prefix}theme-line-parent
+		.theme-line,
+		.#{$prefix}theme-line
+			height: 2px
+			width: 32px
+			background: var(--color-theme)
+			transition: all 0.14s ease
+			transform-origin: left center
+		&:hover
+			.theme-line,
+			.#{$prefix}theme-line
+				transform: scaleX(2)
 
-.maplibregl-ctrl-group button
-	background: rgba(0,0,0,0.1)
-	color: rgba(255,255,255,1)
+	.#{$prefix}on-hover
+		svg.svgicon
+			filter: drop-shadow(0px 0px 0px rgb(0 0 0 / 0))
+
+	.#{$prefix}ripple-motion
+		height: 100%
+		min-height: 5rem
+		width: 100%
+		img
+			object-position: center center
+			object-fit: cover
+			width: 100%
+			height: 100%
+
+	.#{$prefix}ripple-image-box
+		width: 100%
+		height: 400px
+		background-size: cover
+		background-fit: center center
+		.ripple-inscreen,
+		.#{$prefix}ripple-inscreen
+			height: 100%
+			width: 100%
+		@media screen and (min-width: 1025px)
+			height: calc(100vh - 144px)
+			margin-top: 80px
+
+	.#{$prefix}motion-vid-wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 4rem 2rem
+
+	.#{$prefix}popup-temple-name
+		border: 1px solid #FFFFFF
+
+	.#{$prefix}popup-state
+		.popup-state-dot,
+		.#{$prefix}popup-state-dot
+			background: var(--color-theme-alt)
+
+	.#{$prefix}popup-coords
+		background: #FFFFFF
+
+	.maplibregl-ctrl-group button
+		background: rgba(0,0,0,0.1)
+		color: rgba(255,255,255,1)
+
++b.responsive-classes using ($prefix)
+	+modifier-utils($prefix)

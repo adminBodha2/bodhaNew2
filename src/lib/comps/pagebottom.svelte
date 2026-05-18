@@ -49,8 +49,10 @@
 				<p class="citation light-footer tt-u">learning</p>
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/academy">Academy</a>
+					<!--
 					<a class="foot-link blank white" href="/ontology">Ontology</a>
 					<a class="foot-link blank white" href="/concepts">Concepts</a>
+					-->
 				</div>
 			</div>
 			<div class="foot-col rgap8 lg:rgap16">
@@ -58,7 +60,9 @@
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/blog">Blog</a>
 					<a class="foot-link blank white" href="/library">Open Library</a>
+					<!--
 					<a class="foot-link blank white" href="/explorer">Explorer</a>
+					-->
 					<a class="foot-link blank white" href="/newsletter">Newsletter</a>
 				</div>
 			</div>

@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-05-17T19:42:30.353Z",
+  "page": {
+    "urlPath": "/core/indian-knowledge-systems",
+    "absoluteUrl": "https://www.bodharesearch.in/core/indian-knowledge-systems",
+    "source": "markdown",
+    "routeFamily": "core",
+    "title": "Indian Knowledge Systems",
+    "description": "The integrated body of knowledge produced by Hindu civilization — philosophy, aesthetics, ecology, history, education, and language — rooted in Dhārmika ontology and transmitted through living traditions.",
+    "tags": [],
+    "headings": [
+      "Indian Knowledge Systems",
+      "Wiki Pages",
+      "Source Files",
+      "Big Questions",
+      "Schools of Thought",
+      "Research Projects",
+      "Thinkers",
+      "Blog Articles",
+      "Blog Articles (External)",
+      "Associated Books",
+      "Related Concepts"
+    ],
+    "outgoingLinks": [
+      "../raw/will-save-sanatana-dharma.md",
+      "../raw/core-of-sanatana-dharma.md",
+      "../raw/hindu-institution-generate.md",
+      "../raw/conscilience-school.md",
+      "../raw/cultural-traditionalists-school.md",
+      "../raw/dharampal-svayambodha-school.md",
+      "../raw/narrative-non-fiction-school.md",
+      "../raw/political-traditionalists-school.md",
+      "../raw/swami-vivekananda-school.md",
+      "../raw/artist-in-art.md",
+      "../raw/dharmic-design.md",
+      "../raw/hindu-frameworks-of-education.md",
+      "../raw/hindu-response-to-enlightenment.md",
+      "../raw/ak-saran.md",
+      "../raw/dharampal.md",
+      "../raw/kapila-vatsyayana.md",
+      "../raw/ms-hiriyanna.md",
+      "../raw/ram-swarup.md",
+      "../raw/sk-rama-rao.md",
+      "../raw/wade-davis.md",
+      "../raw/artandmeaningmaking.md",
+      "../raw/chath.md",
+      "../raw/decolonizationapersonalfootprint.md",
+      "../raw/decolonizinglanguage.md",
+      "../raw/four-aphorisms.md",
+      "../raw/fractalmandalaone.md",
+      "../raw/fractalmandalatwo.md",
+      "../raw/grandhistoryone.md",
+      "../raw/historyvsitihasa.md",
+      "../raw/indiancivilizationalconsciousness.md",
+      "../raw/indicenvironmentalism.md",
+      "../raw/questforharmony.md",
+      "../raw/sanskritvsfate.md",
+      "../raw/synaptic-reconnection-1.md",
+      "../raw/synaptic-reconnection-2.md",
+      "../raw/continuous-comprehensive-and-cumulative-the-knowledge-tradition-of-india.md",
+      "../raw/did-brahmins-monopolize-knowledge-in-ancient-india.md",
+      "../raw/dukh-depression-and-journeys-of-life-depression-is-the-absence-of-dukkha-part-i.md",
+      "../raw/hindu-view-of-the-simulation-hypothesis.md",
+      "../raw/how-old-is-the-hindu-temple.md",
+      "../raw/many-meanings-of-the-hindu-temple.md",
+      "../raw/on-what-is-a-hindu-temple.md",
+      "../raw/puranas-as-the-source-for-a-chronology-of-indian-history.md",
+      "../raw/teaching-and-research-the-rot-that-has-set-in.md",
+      "https://drive.google.com/file/d/1RCURhZLxH8kwLZyzjmgCRGP7zOoKMksi/preview",
+      "https://drive.google.com/file/d/1P0-yG9CrDnptJrEeQN6UmL0hzU4j1oRp/preview",
+      "https://drive.google.com/file/d/1uqEwYY1DtB5lGyz8bYNrkqo9NuXZK8on/preview",
+      "https://drive.google.com/file/d/1Nwpm2exAPUtg8Eh8CLTtvSUy1M2ZFTOp/preview",
+      "https://drive.google.com/file/d/1guRUQOcOGyvMAGBJ3mcHTpQPpo9Am1Af/preview",
+      "https://drive.google.com/file/d/1avYnodi1hCBWD6JaZL3ERa_HljqqbP4y/preview",
+      "https://drive.google.com/file/d/1VvhuVLEPlGNd8lL-TLBkbqFvs4G96ZUU/preview",
+      "https://drive.google.com/file/d/135wam3QUzI78yAh1vj2DTc3wjsFT1Q-6/preview",
+      "https://drive.google.com/file/d/1Ny3kgUqHSHBHymUWMHl_9tmLr7vZ9Hyv/preview",
+      "decolonization.md",
+      "sanskrit.md",
+      "purva-paksha.md"
+    ],
+    "discoveredFrom": [
+      "/core/indian-knowledge-systems.md"
+    ],
+    "isDynamic": false,
+    "filePath": "/Users/amrit/Documents/GitHub/bodhaNew2/src/routes/core/indian-knowledge-systems.md",
+    "contentLength": 7781,
+    "frontmatter": {
+      "title": "Indian Knowledge Systems",
+      "description": "The integrated body of knowledge produced by Hindu civilization — philosophy, aesthetics, ecology, history, education, and language — rooted in Dhārmika ontology and transmitted through living traditions."
+    },
+    "sources": [
+      "markdown"
+    ]
+  },
+  "issues": [
+    {
+      "id": "long-description-core-indian-knowledge-systems",
+      "severity": "low",
+      "urlPath": "/core/indian-knowledge-systems",
+      "category": "metadata",
+      "finding": "Description is long: 204 characters.",
+      "evidence": [
+        "/core/indian-knowledge-systems.md"
+      ],
+      "recommendation": "Trim the description to a focused search snippet.",
+      "patchAvailable": true
+    }
+  ]
+}

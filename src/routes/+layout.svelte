@@ -4,10 +4,6 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import '$lib/styles/vars.sass';
-	import '$lib/styles/fontimports.sass';
-	import '$lib/styles/typography.sass';
-	import '$lib/styles/animations.sass'
 	import '$lib/styles/system/index.sass';
 	import '$lib/styles/icons.css';
 	import { darkTheme, iW, openSiteTourSelector, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
@@ -20,7 +16,7 @@
 
 	let { children } = $props();
 	let width = $state(0);
-	let count = $state(0)
+	let count = $state(0);
 	$effect(() => {
 		$iW = width < 1025;
 	});
@@ -51,12 +47,14 @@
 
 		return new Promise((resolve) => {
 			document.documentElement.classList.add(pageTransitionClass);
-			document.startViewTransition(async () => {
-				resolve(undefined);
-				await navigation.complete;
-			}).finished.finally(() => {
-				document.documentElement.classList.remove(pageTransitionClass);
-			});
+			document
+				.startViewTransition(async () => {
+					resolve(undefined);
+					await navigation.complete;
+				})
+				.finished.finally(() => {
+					document.documentElement.classList.remove(pageTransitionClass);
+				});
 		});
 	});
 </script>
@@ -131,7 +129,7 @@ main
 header
 	width: 100%
 	position: sticky
-	background: var(--color-back)
+	background: var(--color-stone-2)
 	top: 0
 	z-index: 999
 	border-bottom: var(--border-main)

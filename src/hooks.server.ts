@@ -8,10 +8,14 @@ export const handle: Handle = async ({ event, resolve }) => {
 			getAll() {
 				return event.cookies.getAll();
 			},
-			setAll(cookiesToSet) {
+			setAll(cookiesToSet, headers) {
 				cookiesToSet.forEach(({ name, value, options }) => {
 					event.cookies.set(name, value, { ...options, path: '/' });
 				});
+
+				if (headers && Object.keys(headers).length > 0) {
+					event.setHeaders(headers);
+				}
 			}
 		}
 	});
@@ -36,6 +40,8 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 		return { session, user };
 	};
+
+	await event.locals.supabase.auth.getSession();
 
 	return resolve(event, {
 		filterSerializedResponseHeaders(name) {

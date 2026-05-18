@@ -36,5 +36,3 @@ Epigraphic studies in the IJA range from detailed publication of new inscription
 5. Bolangir copper plates (Vol 7, No. 4): The 7th-century land-grant records a donation by Mahārāja Bhānu to the Brahmin Ailaśarman, adding to the corpus of post-Gupta records from Odisha.
 6. Buddhist inscriptions at Sītāgārha (Vol 10, No. 2): 22 inscribed pedestals of 9th–10th century Buddhist images excavated from this Jharkhand site expand the corpus of Buddhist epigraphic remains outside established monastic centres.
 7. Akbar's Perso-Arabic seals (Vol 8, No. 2): Study of royal seals reconstructs Akbar's administrative and cultural self-presentation through epigraphic material objects.
-
-## Related Articles

@@ -1,6 +1,7 @@
 import { browser } from '$app/environment';
 import { cubicOut } from 'svelte/easing';
 import type { TransitionConfig, EasingFunction } from 'svelte/transition';
+import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
 
 export interface ScaleParams {
 	/**
@@ -99,8 +100,8 @@ export function scaleIn(
 	const prefersReducedMotion =
 		browser && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-	if (prefersReducedMotion) {
-		return { duration: 0, delay };
+	if (prefersReducedMotion || areScrollAnimationsDisabled()) {
+		return { duration: 0, delay: 0 };
 	}
 
 	const isContents =

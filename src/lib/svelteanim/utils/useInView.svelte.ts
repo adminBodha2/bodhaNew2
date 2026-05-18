@@ -1,4 +1,5 @@
 import { browser } from '$app/environment';
+import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
 
 export interface UseInViewOptions {
 	/**
@@ -66,6 +67,11 @@ export function useInView(
 	let visible = $state(false);
 
 	$effect(() => {
+		if (areScrollAnimationsDisabled()) {
+			visible = true;
+			return;
+		}
+
 		// Bail on the server — IntersectionObserver doesn't exist there.
 		if (!browser) return;
 

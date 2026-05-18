@@ -37,6 +37,3 @@ The IJA has published one of the largest numismatic corpora in any single Indian
 5. Koch Bihar coins (Vol 2, No. 4): The Koch Bihar Palace Museum collection documents the coin series of a northeastern dynasty seldom covered in mainstream numismatic literature.
 6. Ring currency (Vol 10, No. 3): Copper ring-bangles from OCP contexts are demonstrated to follow the tola weight standard, identified as the earliest form of ring currency in the subcontinent.
 7. Mould for fake coins (Vol 6, No. 3): A 2nd–1st century B.C. mould for producing counterfeit punch-marked coins, found at Kaushambi, suggests that once standard punch-mark production ceased, forgery became a documented phenomenon.
-
-
-## Related Articles

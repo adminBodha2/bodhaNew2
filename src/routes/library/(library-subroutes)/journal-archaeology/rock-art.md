@@ -35,6 +35,3 @@ Rock art - cave paintings, petroglyphs, cupules, and engravings - is a significa
 4. Mandana art and rock art continuity (Vol 9, No. 3): The ethno-archaeological study of Mandana floor and wall art among Meena communities in the Chambal basin demonstrates stylistic and conceptual continuities between living folk art traditions and prehistoric rock paintings.
 5. Rock-cut Ganesha in Assam (Vol 7, No. 4): The rock-cut Ganesha images in Kamrup district extend the pan-Indian tradition of rock-cut religious imagery into the Brahmaputra valley.
 6. Iranian comparative material (Vol 4, No. 4): The Tiran petroglyphs are included as comparative material for understanding the wider western Asian rock art traditions that may have connections with northwestern Indian prehistoric imagery.
-
-
-## Related Articles

@@ -10,7 +10,7 @@ duration: 4N 4D
 temples: 31
 slug: badami
 registerLink: https://docs.google.com/forms/d/e/1FAIpQLSfCVk0RSNNCwL_06qcsOmhWs4wQH_Z2OtJ_Pw0gmmo9kh7iMA/viewform
-brochureLink: ''
+brochureLink: https://drive.google.com/file/d/1Nc9uk9S8dH1F-Q_uZO3YZfM9_xBtKE70/view?usp=sharing
 quote: Bodha Anveshi Badami chapter offers a deep study of Hindu temple architecture, sculpture and iconography in its various dimensions. It also aims to explore the dynamic of the living temple eco-systems which remain so vibrant in this part of Bharatavarsha.
 templetext: true
 ---

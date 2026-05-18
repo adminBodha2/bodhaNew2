@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BODHA | Architecting a Hindu Renaissance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&amp;family=Hanken+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdf93",
+                    "secondary-container": "#e1d4fd",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e6e0e9",
+                    "tertiary-fixed-dim": "#e7c365",
+                    "inverse-surface": "#322f35",
+                    "outline": "#7a7582",
+                    "surface-container": "#f2ecf4",
+                    "on-tertiary-fixed": "#241a00",
+                    "primary-container": "#6750a4",
+                    "outline-variant": "#cbc4d2",
+                    "surface": "#fdf7ff",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#cdc0e9",
+                    "on-surface": "#1d1b20",
+                    "primary-fixed-dim": "#cfbcff",
+                    "on-secondary-container": "#645a7d",
+                    "surface-tint": "#6750a4",
+                    "secondary": "#63597c",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fdf7ff",
+                    "on-tertiary-container": "#503d00",
+                    "on-secondary-fixed": "#1f1635",
+                    "on-primary-fixed-variant": "#4f378a",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#4b4263",
+                    "on-primary-container": "#e0d2ff",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f8f2fa",
+                    "inverse-on-surface": "#f5eff7",
+                    "background": "#fdf7ff",
+                    "tertiary": "#765b00",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "primary": "#4f378a",
+                    "on-surface-variant": "#494551",
+                    "secondary-fixed": "#e9ddff",
+                    "on-background": "#1d1b20",
+                    "tertiary-container": "#c9a74d",
+                    "on-primary-fixed": "#22005d",
+                    "surface-variant": "#e6e0e9",
+                    "inverse-primary": "#cfbcff",
+                    "surface-container-high": "#ece6ee",
+                    "surface-dim": "#ded8e0",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#e9ddff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "margin-edge": "48px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Source Serif 4"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg": ["Source Serif 4"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "headline-md": ["Source Serif 4"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["2.5rem", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-lg": ["1.125rem", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .grid-blueprint {
+            background-image: linear-gradient(#E7E7E7 1px, transparent 1px), linear-gradient(90deg, #E7E7E7 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        body {
+            background-color: #ffffff;
+            color: #1d1b20;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 border-b border-outline-variant dark:border-outline bg-surface dark:bg-background z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-edge py-unit max-w-container-max mx-auto h-16">
+<div class="font-display-lg text-headline-md tracking-tighter text-on-surface dark:text-on-background">
+                BODHA
+            </div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="#">ECOSYSTEM</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps" href="#">MANUSCRIPTS</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps" href="#">ARCHITECTURE</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps" href="#">ARCHIVE</a>
+</div>
+<div class="flex items-center space-x-unit">
+<button class="p-2 hover:bg-surface-container-low dark:hover:bg-surface-dim transition-all text-on-surface">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low dark:hover:bg-surface-dim transition-all text-on-surface">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-edge">
+<!-- Hero Section -->
+<section class="grid grid-cols-12 py-section-gap gap-gutter items-start">
+<div class="col-span-12 lg:col-span-7">
+<div class="flex items-center space-x-unit mb-10 opacity-60">
+<span class="material-symbols-outlined text-sm" data-icon="grid_view">grid_view</span>
+<span class="font-label-caps text-label-caps">INITIATIVE.01</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 max-w-2xl">
+                    Architecting a <br/>
+<span class="text-primary">Hindu Renaissance.</span>
+</h1>
+<p class="font-body-lg text-body-lg max-w-xl text-on-surface-variant mb-12">
+                    Engineering a production-ready ecosystem of cultural primitives, philosophical frameworks, and societal architectures. Translating timeless wisdom into scalable, precise digital and physical structures.
+                </p>
+<div class="flex flex-wrap items-center gap-4">
+<button class="bg-inverse-surface text-on-primary px-gutter py-4 font-label-caps text-label-caps flex items-center group">
+                        INITIALIZE SEARCH 
+                        <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="border border-outline-variant px-gutter py-4 font-label-caps text-label-caps hover:bg-surface-container-low transition-all">
+                        READ THE MANIFESTO
+                    </button>
+</div>
+<div class="mt-24 grid grid-cols-2 gap-gutter border-t border-outline-variant pt-gutter opacity-60">
+<div>
+<span class="font-label-caps text-label-caps block mb-1">• SYSTEM STATUS: ACTIVE</span>
+<span class="font-label-caps text-label-caps">LOC: 12.9716° N, 77.5946° E</span>
+</div>
+<div class="flex justify-end space-x-gutter">
+<span class="font-label-caps text-label-caps">D.SYNC</span>
+<span class="font-label-caps text-label-caps">C.CRAFT</span>
+<span class="font-label-caps text-label-caps">V.LABS</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative">
+<div class="aspect-[4/5] overflow-hidden border border-outline-variant p-2">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast photograph of a modern stone sculpture inspired by ancient Indian architecture, set against a stark, minimalist white gallery wall. The lighting is dramatic and directional, creating deep shadows and bright highlights that emphasize the intricate geometric textures. The overall aesthetic is clean, sophisticated, and scholarly, bridging traditional craftsmanship with contemporary structural minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFeRrQ7ayptbbZ7XjDDMiv9CrKsayUqR8N5bWAXUPFMs2OxwuN0A9OBQVxIWPxjejkCI-_EcOBLoRunGAls82eqfVShHFjxtRJLTepJk0Xm68DcYk2HBwaAFCGxxrCXp6d0M7QDZ0bj6XbhgrHyy9_NsxMcyNuvugrOcQfgRi1iimKVtRToktiQnmS982YImOsbQlVP0aMXTlGvwv0HZkBtx0Q7JKgT7vxbHKbuBP1__UKENaWDjyZEq-PZ9H4GBxH2BqKLWPGdK0"/>
+<div class="absolute top-6 left-6 bg-surface px-2 py-1 border border-outline-variant font-label-caps text-[10px]">FIG_01</div>
+</div>
+<div class="mt-4 flex justify-between items-center opacity-40">
+<span class="font-label-caps text-[10px]">ASSET_REF: 7F78131E</span>
+<span class="material-symbols-outlined text-sm" data-icon="open_in_full">open_in_full</span>
+</div>
+</div>
+</section>
+<!-- Active Initiatives (Technical Grid) -->
+<section class="py-section-gap border-t border-outline-variant">
+<div class="flex justify-between items-end mb-gutter">
+<div>
+<span class="font-label-caps text-label-caps opacity-60">02 // FRAMEWORKS</span>
+<h2 class="font-headline-md text-headline-md mt-2">Active Initiatives</h2>
+</div>
+<div class="flex space-x-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-0 border-l border-t border-outline-variant">
+<!-- Grid Items -->
+<div class="border-r border-b border-outline-variant aspect-square flex flex-col items-center justify-center p- gutter hover:bg-surface-container-low transition-all cursor-pointer">
+<span class="font-label-caps text-[10px] self-start mb-auto">01</span>
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="schema">schema</span>
+<span class="font-label-caps text-[11px] tracking-widest uppercase">Aero-Dyn</span>
+</div>
+<div class="border-r border-b border-outline-variant aspect-square flex flex-col items-center justify-center p- gutter hover:bg-surface-container-low transition-all cursor-pointer bg-surface-container-lowest">
+<span class="font-label-caps text-[10px] self-start mb-auto">02</span>
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="center_focus_weak">center_focus_weak</span>
+<span class="font-label-caps text-[11px] tracking-widest uppercase">Thermal</span>
+</div>
+<div class="border-r border-b border-outline-variant aspect-square flex flex-col items-center justify-center p- gutter hover:bg-surface-container-low transition-all cursor-pointer">
+<span class="font-label-caps text-[10px] self-start mb-auto">03</span>
+<div class="font-display-lg text-headline-md font-bold mb-4">V</div>
+<span class="font-label-caps text-[11px] tracking-widest uppercase">V-Grade</span>
+</div>
+<div class="border-r border-b border-outline-variant aspect-square flex flex-col items-center justify-center p- gutter hover:bg-surface-container-low transition-all cursor-pointer">
+<span class="font-label-caps text-[10px] self-start mb-auto">04</span>
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="change_history">change_history</span>
+<span class="font-label-caps text-[11px] tracking-widest uppercase">Delta-V</span>
+</div>
+<div class="border-r border-b border-outline-variant aspect-square flex flex-col items-center justify-center p- gutter hover:bg-surface-container-low transition-all cursor-pointer bg-inverse-surface text-on-primary">
+<span class="font-label-caps text-[10px] self-start mb-auto opacity-60">05</span>
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="token" style="font-variation-settings: 'FILL' 1;">token</span>
+<span class="font-label-caps text-[11px] tracking-widest uppercase">Nexus</span>
+</div>
+<div class="border-r border-b border-outline-variant aspect-square flex flex-col items-center justify-center p- gutter hover:bg-surface-container-low transition-all cursor-pointer">
+<span class="font-label-caps text-[10px] self-start mb-auto">06</span>
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="rebase_edit">rebase_edit</span>
+<span class="font-label-caps text-[11px] tracking-widest uppercase">Signal</span>
+</div>
+</div>
+</section>
+<!-- Recent Publications -->
+<section class="py-section-gap">
+<div class="flex justify-between items-end mb-gutter">
+<div>
+<span class="font-label-caps text-label-caps opacity-60">03 // RESEARCH ARCHIVE</span>
+<h2 class="font-headline-md text-headline-md mt-2">Recent Publications</h2>
+</div>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">VIEW ALL MANUSCRIPTS</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group border border-outline-variant p- gutter hover:border-primary transition-all">
+<div class="relative aspect-square mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A minimalist architectural detail of a high-end research facility. The image shows a corner of a building with clean white concrete lines, large glass panes reflecting a soft blue sky, and a single, perfectly placed potted plant. The lighting is bright and ethereal, capturing the pure white aesthetic of the brand while maintaining a sense of sophisticated intellectual discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUI6nHWamzbdZZkp50ogvwI6jsfbM0bBsf1ncYD0jgQ-2A0jRbipr8Ru9nxGfNfSVkSUC4bF7_BEcGIBuyeNI1YipYzO9Ba8mbhLvFy4ATB_F8fECHI-hf_SPtylDCg0wo0A2kNBVL8DPF5CGB8YhXD61lGj4Xol6ASMGyrvwIwnjwFCFjabquR_ieVQFgJJMC5iyIqK0MeTz6DiSmano7WI2R7ATwlcCq7dHKk7D4_syBNlenr5PjC47NUHQHaZpkMr29FHI-wNQ"/>
+<div class="absolute inset-0 bg-black/5"></div>
+<!-- UI Overlay Element -->
+<div class="absolute top-4 left-4 right-4 bg-surface/90 backdrop-blur p-4 border border-outline-variant">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-[10px]">PROJECT STATUS</span>
+<span class="material-symbols-outlined text-xs opacity-40" data-icon="more_horiz">more_horiz</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="schedule">schedule</span>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 92%"></div>
+</div>
+<span class="font-label-caps text-[10px]">92%</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center space-x-2 opacity-40">
+<span class="font-label-caps text-[10px]">RESEARCH</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-[10px]">DESIGN</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-[10px]">ARCHITECT</span>
+</div>
+<h3 class="font-headline-md text-xl">The Meta-Physical Grid: Structures for Modern Ritual</h3>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">Exploring the convergence of sacred geometry and modern system architecture in the design of next-generation digital environments.</p>
+<div class="pt-4 flex justify-between items-center border-t border-outline-variant">
+<span class="font-label-caps text-[10px] opacity-40">OCT 04, 2025</span>
+<span class="font-label-caps text-[10px] group-hover:text-primary transition-colors">READ MORE</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group border border-outline-variant p- gutter hover:border-primary transition-all">
+<div class="relative aspect-square mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="An expansive, ultra-modern workspace with floor-to-ceiling windows overlooking a misty mountain range. The interior is characterized by a long, polished dark wood table, minimalist seating, and absolute clarity of space. The lighting is diffused and natural, creating a serene, professional mood that aligns with the architectural minimalism of the Bodha brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAGPyU7rqprIKyFXcUHY50vc0J5VWWPH8zxoVBsIefeAJtESyVig9VQiCZ6BsK_5SJ0pZIM-VQwMoUS2GO_EwD33kmdj3rVdbsv_oyzb1jx-GBkmkUmJCFV36gVSLqEQlX8oMczl-WqB5XcUYuwlA62J74ubo4GAuS8q6Vn-H9UUirTBQ98QmtmV6TSSuP8yC9dEQ-jBbJ-h5gsTQc2DshXPFWVwvFyVOfghJS3gPzyHcqjD484sJZNAuFKDo5n6Gift9suM4tlHA"/>
+<div class="absolute inset-0 bg-black/5"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-dim overflow-hidden"></div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-dim overflow-hidden"></div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-dim overflow-hidden"></div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-dim flex items-center justify-center font-label-caps text-[10px]">40+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center space-x-2 opacity-40">
+<span class="font-label-caps text-[10px]">PHILOSOPHY</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-[10px]">PROTOCOL</span>
+</div>
+<h3 class="font-headline-md text-xl">Dharma-Led Interface Design: Towards Mindful UX</h3>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">A comprehensive framework for prioritizing user consciousness and cognitive tranquility over engagement metrics.</p>
+<div class="pt-4 flex justify-between items-center border-t border-outline-variant">
+<span class="font-label-caps text-[10px] opacity-40">SEP 29, 2025</span>
+<span class="font-label-caps text-[10px] group-hover:text-primary transition-colors">READ MORE</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group border border-outline-variant p- gutter hover:border-primary transition-all">
+<div class="relative aspect-square mb-6 overflow-hidden">
+<div class="w-full h-full bg-surface-container-low flex flex-col items-center justify-center p- gutter">
+<span class="material-symbols-outlined text-primary text-6xl opacity-20 mb-4" data-icon="deployed_code">deployed_code</span>
+<div class="text-center">
+<span class="font-label-caps text-[10px] block opacity-40 mb-2 uppercase">System Module</span>
+<span class="font-display-lg text-2xl font-bold tracking-tighter">ZENITH-7</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-inverse-surface text-on-primary p-4 border border-outline">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-[10px]">CORE LIBRARY ACCESS</span>
+<span class="material-symbols-outlined text-sm" data-icon="lock_open">lock_open</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center space-x-2 opacity-40">
+<span class="font-label-caps text-[10px]">CODE</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-[10px]">ARCHITECTURE</span>
+</div>
+<h3 class="font-headline-md text-xl">Open Sourcing the Renaissance: V.2 Implementation</h3>
+<p class="font-body-md text-sm text-on-surface-variant line-clamp-2">Technical documentation on the deployment of Zenith-7, our core design engineering library for rapid ecosystem scaling.</p>
+<div class="pt-4 flex justify-between items-center border-t border-outline-variant">
+<span class="font-label-caps text-[10px] opacity-40">AUG 15, 2025</span>
+<span class="font-label-caps text-[10px] group-hover:text-primary transition-colors">READ MORE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bottom-0 border-t border-outline-variant dark:border-outline bg-surface dark:bg-background mt-section-gap">
+<div class="w-full py-gutter px-margin-edge flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto space-y-gutter md:space-y-0">
+<div class="flex items-center space-x-gutter">
+<div class="font-display-lg text-label-caps font-bold">BODHA.SYS</div>
+<div class="text-on-surface-variant dark:text-outline font-label-caps text-[10px] opacity-60">
+                    © 2024 BODHA RESEARCH INSTITUTE. ALL RIGHTS RESERVED.
+                </div>
+</div>
+<div class="flex items-center space-x-gutter">
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps underline decoration-outline-variant transition-all" href="#">PRIVACY</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps underline decoration-outline-variant transition-all" href="#">TERMS</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps underline decoration-outline-variant transition-all" href="#">MANIFESTO</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps underline decoration-outline-variant transition-all" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Hidden on Mobile) -->
+</body></html>

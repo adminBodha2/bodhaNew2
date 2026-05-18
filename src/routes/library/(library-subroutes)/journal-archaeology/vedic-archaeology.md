@@ -27,6 +27,3 @@ Vedic archaeology in the IJA is not a single excavation horizon but a recurring 
 2. Carbon dates matter: Nigohi AMS dates of 2328–1619 B.C. provide chronological ballast for arguments about copper hoards and late third to early second millennium B.C. cultural formations.
 3. Iconography is used diachronically: The journal often reads early material signs as precursors to later Hindu deity forms; this is most visible in studies of Garuda, horned deity, Skanda/Kartikeya, and Sun worship.
 4. Text and archaeology are paired cautiously but repeatedly: Naimisharanya, Kalika Purana/Yogini Tantra geography, and Kashmir textual traditions show the corpus's interest in grounding sacred literature in landscape evidence.
-
-
-## Related Articles

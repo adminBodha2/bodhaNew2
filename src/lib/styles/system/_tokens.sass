@@ -2,7 +2,141 @@ $space-scale: (0: 0, 4: 0.25rem, 8: 0.5rem, 16: 1rem, 24: 1.5rem, 32: 2rem, 48: 
 
 $grid-columns: 4
 
+$font-weights: (400: 400, 450: 450, 500: 500, 550: 550, 600: 600, 650: 650, 700: 700)
+$line-heights: (10: 1, 11: 1.1, 12: 1.2, 13: 1.3, 14: 1.4, 15: 1.5, 16: 1.6, 18: 1.8)
+$letter-spacings: ("000": 0, "001": 0.01rem, "002": 0.02rem, "003": 0.03rem, "004": 0.04rem, "005": 0.05rem, "006": 0.06rem, "008": 0.08rem, "009": 0.09rem, "010": 0.1rem, "014": 0.14rem)
+$text-sizes: ("00": var(--txt-00), "xs": var(--txt-xs), "sm": var(--txt-sm), "bs": var(--txt-bs), "lg": var(--txt-lg), "xl": var(--txt-xl), "2xl": var(--txt-2xl), "3xl": var(--txt-3xl), "4xl": var(--txt-4xl), "5xl": var(--txt-5xl), "6xl": var(--txt-6xl), "7xl": var(--txt-7xl), "8xl": var(--txt-8xl), "9xl": var(--txt-9xl))
+
 $doc-sidebar-width: 22.5rem
 $doc-main-max-width: 58rem
 $doc-hero-mobile-height: 16rem
 $doc-hero-desktop-height: 45rem
+
+:root
+	--txt-bs: 1rem
+	--txt-scale: 1.17
+	--txt-00: 10.55px
+	--txt-xs: 0.75rem
+	--txt-sm: 0.875rem
+	--txt-lg: calc(var(--txt-bs) * var(--txt-scale))
+	--txt-xl: calc(var(--txt-lg) * var(--txt-scale))
+	--txt-2xl: calc(var(--txt-xl) * var(--txt-scale))
+	--txt-3xl: calc(var(--txt-2xl) * var(--txt-scale))
+	--txt-4xl: calc(var(--txt-3xl) * var(--txt-scale))
+	--txt-5xl: calc(var(--txt-4xl) * var(--txt-scale))
+	--txt-6xl: calc(var(--txt-5xl) * var(--txt-scale))
+	--txt-7xl: calc(var(--txt-6xl) * var(--txt-scale))
+	--txt-8xl: calc(var(--txt-7xl) * var(--txt-scale))
+	--txt-9xl: calc(var(--txt-8xl) * var(--txt-scale))
+	--fontface-sans: 'Google Sans', sans-serif
+	--fontface-sans-flex: 'Google Sans Flex', sans-serif
+	--fontface-serif: 'Source Serif 4', serif
+	--fontface-serif3: 'EB Garamond', serif
+	--dur-short: 120ms
+	--dur-180: 180ms
+	--dur-320: 320ms
+	--dur-560: 560ms
+	--es-smooth: cubic-bezier(0.22, 1, 0.36, 1)
+	--es-snap: cubic-bezier(0.755, 0.050, 0.855, 0.060)
+	--es-back: cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	--es-in: cubic-bezier(0.42, 0, 1, 1)
+	--es-out: cubic-bezier(0, 0, 0.58, 1)
+	--es-inout: cubic-bezier(0.42, 0, 0.58, 1)
+	--ts-snap: var(--dur-short) var(--es-snap)
+	--ts-card: var(--dur-180) var(--es-back)
+	@media (min-width: 721px)
+		--txt-scale: 1.2
+	@media (min-width: 1025px)
+		--txt-scale: 1.2
+
+.light
+	--border-main: 1px solid var(--color-border)
+	--border-dark: 1px solid var(--color-border-dark)
+	--border-darker: 1px solid #a7a7a7
+	--border-light: 1px solid var(--color-border-light)
+	--color-theme: #1971C2
+	--color-theme-dark: #083A68
+	--color-theme-light: #4DABF7
+	--color-theme-light2: #DAF2FC
+	--color-theme-alt: #2C8C66
+	--color-primary: #1B1E20
+	--color-back: #FFFFFF
+	--color-grey-0: #aaaaaa
+	--color-grey-1: #9b9b9b
+	--color-grey-2: #676767
+	--color-grey-3: #474747
+	--color-stone-0: #F9F8F6
+	--color-stone-1: #fbfaf9
+	--color-stone-2: #fafafa
+	--color-stone-3: #F3F5F7
+	--color-anveshi: #D3633A
+	--color-anveshi-alt: #9F401D
+	--color-designB: #2A9134
+	--color-designB-alt: #38B000
+	--color-border: #E7E7E7
+	--color-border-light: #F1F1F1
+	--color-border-dark: #D1D1D1
+
+.dark
+	--border-main: 1px solid var(--color-border)
+	--border-dark: 1px solid var(--color-border-dark)
+	--border-darker: 1px solid #a7a7a7
+	--border-light: 1px solid var(--color-border-light)
+	--color-theme: #1971C2
+	--color-theme-dark: #083A68
+	--color-theme-light: #4DABF7
+	--color-theme-light2: #DAF2FC
+	--color-theme-alt: #2C8C66
+	--color-primary: #FFFFFF
+	--color-back: #1B1E20
+	--color-grey-0: #C1C1C1
+	--color-grey-1: #A7A7A7
+	--color-grey-2: #676767
+	--color-grey-3: #474747
+	--color-stone-0: #F9F8F6
+	--color-stone-1: #fbfaf9
+	--color-stone-2: #fafafa
+	--color-stone-3: #F3F5F7
+	--color-anveshi: #D3633A
+	--color-anveshi-alt: #9F401D
+	--color-designB: #2A9134
+	--color-designB-alt: #38B000
+	--color-border: #272727
+	--color-border-light: #474747
+	--color-border-dark: #1f1f1f
+
+.temp
+	--andaman-and-nicobar-islands: #E53935
+	--andhra-pradesh: #EF5350
+	--arunachal-pradesh: #D81B60
+	--assam: #EC407A
+	--bihar: #8E24AA
+	--chandigarh: #AB47BC
+	--chhattisgarh: #5E35B1
+	--dadra-and-nagar-haveli-and-daman-and-diu: #7E57C2
+	--delhi: #3949AB
+	--gujarat: #5C6BC0
+	--haryana: #1E88E5
+	--himachal-pradesh: #42A5F5
+	--jammu-and-kashmir: #039BE5
+	--jharkhand: #29B6F6
+	--karnataka: #00ACC1
+	--kerala: #26C6DA
+	--lakshadweep: #00897B
+	--madhya-pradesh: #26A69A
+	--maharashtra: #43A047
+	--manipur: #66BB6A
+	--mizoram: #7CB342
+	--nagaland: #9CCC65
+	--not-identified: #757575
+	--odisha: #C0CA33
+	--puducherry: #D4E157
+	--punjab: #FDD835
+	--rajasthan: #FFEE58
+	--sikkim: #FFB300
+	--tamil-nadu: #FFCA28
+	--telangana: #FB8C00
+	--tripura: #FFA726
+	--uttar-pradesh: #F4511E
+	--uttarakhand: #FF7043
+	--west-bengal: #558B2F

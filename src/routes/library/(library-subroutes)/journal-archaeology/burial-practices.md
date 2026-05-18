@@ -32,5 +32,3 @@ Burial practices - inhumation in pits, cist burials, megalithic burials, urn bur
 4. Living megalithic traditions (Vols. 2 and 4): The Munda community of Sundergarh and the Mizo people of Vangchhia both maintain living traditions of erecting memorial stones that provide ethnographic parallels for understanding ancient burial behaviour.
 5. Hero stones (Vols. 8 and 9): The Kerala, Odisha, and Lolab Valley studies document the pan-Indian vīragal (hero stone) tradition, tracing it from the Sangam Age through the 17th century A.D. as a memorial practice associated with warfare and cattle-raiding.
 6. Cist burial petroglyphs (Vol 3, No. 3 and Vol 4, No. 4): The connection between megalithic burial structures and rock art - confirmed at the Tirumala cap-stone megalith - suggests that pictorial communication was part of Iron Age funerary practice.
-
-## Related Articles

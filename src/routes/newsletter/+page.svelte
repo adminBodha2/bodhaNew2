@@ -1,10 +1,9 @@
 <script lang="ts">
-
 	import type { PageData } from './$types';
-	import Container from '$lib/comps/wrapper.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Container from '$lib/comps/wrapper.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import News from '$lib/icons/newsletter.svelte'
+	import News from '$lib/icons/newsletter.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	type NewsLetter = {
@@ -14,9 +13,9 @@
 			date?: string;
 			id?: number;
 			pdflink?: string;
-			image?: string
-		}
-	}
+			image?: string;
+		};
+	};
 
 	let { data }: { data: PageData } = $props();
 	let posts = $derived((data.posts ?? []) as NewsLetter[]);
@@ -39,30 +38,29 @@
 			})
 		)
 	);
-
 </script>
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} {jsonld} />
 
 <Container>
 	<section class="box wrapper-std rgap32 header-margin">
-		<Crumb showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha."/>
+		<Crumb showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha." />
 		<div class="grid lg:grid-cols-2 rgap16 cgap16 borderbot pbot32">
-			<p class="highlight-text">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling. </p>
+			<p class="highlight-text">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling.</p>
 			<p class="highlight-text">Bodha’s work is expanding across research, writing, publishing, design, archives, and public education. Rather than letting these efforts remain scattered across different platforms, this newsletter will serve as a regular monthly record of what we are thinking, building, publishing, and preparing.</p>
 		</div>
 		<div class="grid lg:grid-cols-3">
-		{#each posts as item}
-			<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">
-				<div class="box in-screen p16 lg:p32 ybottom">
-				<News/>
-				<div class="box">
-				<p class="card-title white">{item.meta.title}</p>
-				<p class="tag-text tt-u lgrey">{item.meta.date}</p>
-				</div>
-				</div>
-			</a>
-		{/each}
+			{#each posts as item}
+				<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">
+					<div class="box in-screen rgap16 p16 lg:p32 ybottom">
+						<News />
+						<div class="box rgap8">
+							<p class="txt-2xl w600 white">{item.meta.title}</p>
+							<p class="txt-sm tt-u white">{item.meta.date}</p>
+						</div>
+					</div>
+				</a>
+			{/each}
 		</div>
 	</section>
 </Container>

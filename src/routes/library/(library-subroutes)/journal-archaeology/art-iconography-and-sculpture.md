@@ -28,5 +28,3 @@ Art, iconography, and sculpture are major recurring themes in the IJA, appearing
 3. Regional styles matter: Kashmir, Assam, Odisha, Nepal, Chola Tamil Nadu, Varanasi, and Mathura are treated as distinct visual regions.
 4. Animal imagery opens ecological readings: Buddhist sculpture and museum biodiversity papers use art as evidence for environmental knowledge and symbolic classification.
 5. Terracotta is a bridge category: Terracottas connect domestic life, ritual practice, urbanism, craft production, and museum cataloguing.
-
-## Related Articles

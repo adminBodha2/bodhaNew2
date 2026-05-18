@@ -19,7 +19,7 @@
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="header-2 name tt-l hover-animation" class:animatenow={isVisible.visible}>
+	<h2 class="txt-3xl md:txt-4xl w600 name tt-u hover-animation" class:animatenow={isVisible.visible}>
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style:animation-delay={`${(i + 10) * 0.02}s`}>
 				{char === ' ' ? '\u00A0' : char}
@@ -30,48 +30,43 @@
 
 <style lang="sass">
 
-	.animatenow.bob
-		@media (min-width: 1201px)
-			animation: fromLeft 1s ease-in-out forwards
+.animatenow.bob
+	@media (min-width: 1201px)
+		animation: fromLeft 1s ease-in-out forwards
 
-	h2
-		font-variant: small-caps
-		font-weight: 500
-		letter-spacing: -0.1rem
+.bob
+	opacity: 0
+	transform: translate(-80px)
+	@media (max-width: 1024px)
+		display: none
 
-	.bob
-		opacity: 0
-		transform: translate(-80px)
-		@media (max-width: 1024px)
-			display: none
+.text-animation
+	display: inline-block
+	color: var(--lgrey)
+	opacity: 0
+	transform: translateY(8px)
 
+.animatenow
 	.text-animation
-		display: inline-block
-		color: var(--lgrey)
+		animation-name: flyUp
+		animation-duration: 0.05s
+		animation-timing-function: ease
+		animation-fill-mode: forwards
+
+@keyframes fromLeft
+	0%
+		transform: translateX(-80px)
 		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
+@keyframes flyUp
+	0%
 		transform: translateY(8px)
-
-	.animatenow
-		.text-animation
-			animation-name: flyUp
-			animation-duration: 0.05s
-			animation-timing-function: ease
-			animation-fill-mode: forwards
-
-	@keyframes fromLeft
-		0%
-			transform: translateX(-80px)
-			opacity: 0
-		100%
-			transform: translateX(0)
-			opacity: 1
-
-	@keyframes flyUp
-		0%
-			transform: translateY(8px)
-			opacity: 0
-		100%
-			transform: translateY(0)
-			opacity: 1
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
 
 </style>

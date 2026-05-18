@@ -34,18 +34,11 @@
 		.#{$prefix}gap#{$key}
 			gap: $value
 
-+spacing-utils()
+	.#{$prefix}p16, .#{$prefix}p8, .#{$prefix}p24, .#{$prefix}p32, .#{$prefix}p64
+		&.#{$prefix}notop
+			padding-top: 0
+		&.#{$prefix}nobot
+			padding-bottom: 0
 
-@each $name, $width in b.$breakpoints
-	@media (min-width: $width)
-		+spacing-utils("#{$name}\\:")
-
-@each $name, $width in b.$max-breakpoints
-	@media (max-width: $width)
-		+spacing-utils("#{$name}\\:")
-
-.p16, .p8, .p24, .p32, .p64
-	&.notop
-		padding-top: 0
-	&.nobot
-		padding-bottom: 0
++b.responsive-classes using ($prefix)
+	+spacing-utils($prefix)

@@ -32,6 +32,3 @@ Megalithic traditions appear across a wide geographic sweep in the IJA corpus, f
 4. Sri Lankan cist burials (Vol 3, No. 3): Petrological analysis shows cist slabs are locally sourced, indicating community-scale quarrying organisation rather than long-distance stone transport.
 5. Petroglyphs on megaliths (Vol 7, No. 1 - Vangchhia): Association of petroglyphs with menhirs provides a link between the rock art tradition and megalithic monument building.
 6. Northern extension: The Adhaura survey (Vol 7, No. 2) and the Kaimur/Rohtas burial site (Vol 5, No. 2) extend the megalithic distribution further north than previously documented in this region.
-
-
-## Related Articles

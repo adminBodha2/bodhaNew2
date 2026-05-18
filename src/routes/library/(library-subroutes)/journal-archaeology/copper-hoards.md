@@ -41,5 +41,3 @@ The Indian Journal of Archaeology has given more sustained attention to the copp
 7. Garuda–bird anthropomorphs: Vol 8, No. 1 traces the bird-shaped anthropomorphic copper objects to the Garuda / eagle cult among Indo-European speakers.
 8. Ring currency: Vol 10, No. 3 identifies copper ring-bangles as a weight-based ring currency, with weights in multiples of the tola (11.66 g), providing the semantic origin of the term kārṣāpana (karsha weight).
 9. Military organisation: The settlement-pattern study (Vol 7, No. 2) reconstructs OCP village layout and weapon-arsenal distribution as evidence of organised military capacity.
-
-## Related Articles

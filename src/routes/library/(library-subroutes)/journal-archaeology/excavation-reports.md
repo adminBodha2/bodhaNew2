@@ -55,6 +55,3 @@ The IJA has published a substantial number of excavation reports, ranging from p
 4. Alamgirpur sequence (Vol 8, No. 2): Proposes 2600–2200 B.C. for the Mature Harappan occupation; the sequence continues through Late Harappan, PGW, Early Historical, and Late Medieval, making it one of the longest continuous sequences in the Gangetic plain.
 5. Radhanagar as Toshali (Vol 8, No. 1): Multi-season excavations allow the authors to identify this Odishan site as Mauryan Toshali, one of the provincial capitals mentioned in the Asokan edicts.
 6. Buddhist finds at Gambhirwa Tola (Vol 7, No. 3): Identification of Buddhist stupa remains near Bandhavgarh forest extends the documented distribution of Buddhism into central India's upland regions.
-
-
-## Related Articles

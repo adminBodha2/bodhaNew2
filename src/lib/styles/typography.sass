@@ -1,36 +1,4 @@
 :root
-	--fontface-sans: 'Google Sans', sans-serif
-	--fontface-sans-flex: 'Google Sans Flex', sans-serif
-	--fontface-serif: 'Source Serif 4', serif
-	--fontface-serif3: 'EB Garamond', serif
-
-body, html
-	font-family: var(--fontface-sans)
-	color: var(--color-primary)
-
-pre
-	font-family: var(--fontface-sans)
-
-p, pre, em, caption, cite, small, h6, h5, h4, h3, h2, h1
-	margin: 0
-	color: var(--color-primary)
-
-li
-	color: var(--color-primary)
-
-.garamond
-	font-family: 'EB Garamond', serif
-
-.bold
-	font-weight: 700
-
-p.bold
-	font-weight: 700
-
-.inherit
-	color: inherit
-
-:root
 	--font-scale: 1.25
 	@media screen and (min-width: 1025px)
 		--typeBase: 1.33rem
@@ -59,9 +27,6 @@ p.bold
 		--typePs: 1.093rem
 		--serif-adjust: 1.25
 		--serif-adjust-blog: 1.1
-
-.source-serif
-	font-family: 'Source Serif 4', serif
 
 .blog-article
 	p, pre, li
@@ -138,7 +103,7 @@ p.bold
 		&:hover
 			color: var(--color-theme)
 	p, pre, li
-		font-family: 'Google Sans', sans-serif
+		font-family: 'Google Sans Flex', sans-serif
 		font-size: var(--typeBase)
 		margin-bottom: 1.25rem
 		line-height: 1.5
@@ -148,7 +113,7 @@ p.bold
 		width: 100%
 		border-collapse: collapse
 		margin: 2rem 0
-		font-family: 'Google Sans', sans-serif
+		font-family: 'Google Sans Flex', sans-serif
 	th, td
 		vertical-align: top
 		padding: 0.875rem 1rem
@@ -158,7 +123,7 @@ p.bold
 	th
 		font-weight: 680
 	thead, tbody
-		font-family: 'Google Sans', sans-serif
+		font-family: 'Google Sans Flex', sans-serif
 		text-align: left
 	blockquote
 		margin-left: 0
@@ -210,10 +175,6 @@ p.bold
 //-------------------------HEADER 1--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 h1
-	line-height: 1.1
-	font-size: 2.86rem
-	letter-spacing: -0.06rem
-	font-weight: 690
 	&.thin
 		font-weight: 400
 	&.page-title
@@ -227,12 +188,9 @@ h1
 		letter-spacing: 0.02rem
 		color: #717171
 	@media (min-width: 721px)
-		font-size: 3.5744rem
 		&.page-title
 			font-size: 2.592rem
 	@media (min-width: 1025px)
-		letter-spacing: -0.14rem
-		font-size: 4.468rem
 		&.page-title
 			font-size: 3.11rem
 			letter-spacing: -0.08rem
@@ -243,7 +201,6 @@ h1
 			font-size: calc(var(--typeH6) * 0.8)
 			line-height: 1.2
 	@media (min-width: 1201px)
-		font-size: 5.585rem
 		&.page-title
 			font-size: 3.73rem
 
@@ -283,7 +240,7 @@ h2
 			font-size: var(--typeH4)
 			line-height: 1.3
 		&.header-2
-			font-size: 3rem
+			font-size: 3.5rem
 			letter-spacing: -0.08rem
 
 //-------------------------HEADER 3--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -345,6 +302,10 @@ p, pre, li
 		font-size: 1.25rem
 	&.highlight-text
 		font-size: 1.33rem
+		&.tight
+			line-height: 1.2
+		&.w600
+			font-weight: 600
 	&.card-title
 		font-size: 1.4rem
 		font-weight: 600
@@ -354,7 +315,7 @@ p, pre, li
 	&.tag-text
 		font-size: 11px
 		font-weight: 500
-		font-family: 'Google Sans', sans-serif
+		font-family: 'Google Sans Flex', sans-serif
 		letter-spacing: 0.01rem
 	&.thin
 		font-weight: 400
@@ -368,6 +329,7 @@ p, pre, li
 			font-size: 1.25rem
 		&.highlight-text
 			font-size: 1.463rem
+			line-height: 1.5
 		&.card-title
 			font-size: 1.69rem
 
@@ -384,18 +346,12 @@ a.paragraph-text
 			font-size: 1.463rem
 
 a.tag-text
+	color: var(--color-theme)
+	transition: all 110ms ease
+	letter-spacing: 0
 	&:hover
-		color: var(--color-theme-light)
-
-ol
-	padding-left: 0
-
-li
-	margin-bottom: 0.25rem
-	margin-left: 1.5rem
-	&::marker
-		font-size: 18px
-		color: var(--color-theme)
+		color: var(--color-theme-dark)
+		letter-spacing: -0.005rem
 
 a.tag-text
 	font-size: 0.6rem
@@ -458,21 +414,8 @@ a.tag-text
 		p, pre, li, h5
 			font-size: 1.20rem
 
-small
-	font-size: 11px
-
 a.descriptor-text
 	font-size: 0.9rem
-
-pre
-	box-sizing: border-box
-	white-space: pre-line
-	white-space: -moz-pre-line
-	white-space: -pre-line
-	white-space: -o-pre-line
-	word-wrap: break-word
-	word-break: break-word
-	overflow: hidden
 
 //----LINKS AND BUTTONS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

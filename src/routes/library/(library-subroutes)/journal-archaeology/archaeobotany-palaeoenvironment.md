@@ -27,5 +27,3 @@ Archaeobotany and palaeoenvironmental research in the IJA links pollen, macro-bo
 3. Alamgirpur links Harappan and PGW subsistence: Grain and pulse evidence supports the site's role as a key sequence from indus-valley-civilization into iron-age-india.
 4. Faunal studies broaden site interpretation: Animal bones from Masudpur, Kanispur, and Rukhaegarh show diet, domestication, ecology, and ritual contexts.
 5. Pollen identification is foundational infrastructure: Alka Srivastava's pollen keys supply reference tools for future palaeobotanical analysis in Indian contexts.
-
-## Related Articles

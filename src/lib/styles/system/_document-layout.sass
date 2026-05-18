@@ -2,97 +2,111 @@
 @use 'tokens' as t
 @use 'breakpoints' as b
 
-a.doclink
-	display: block
-	padding-top: 0.4em
-	padding-bottom: 0.4em
-	padding-right: map.get(t.$space-scale, 8)
-	transition: all 180ms ease-out
-	color: var(--color-grey-2)
-	&:hover
-		padding-left: map.get(t.$space-scale, 4)
-		background: var(--color-stone-1)
-		color: var(--color-primary)
-	@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-		padding-right: map.get(t.$space-scale, 24)
-
-.docgrid
-	display: grid
-	grid-template-columns: 1fr
-	grid-template-areas: "mainarea" "sidearea"
-	.docmain
-		grid-area: mainarea
-		padding-top: 2rem
-		&.no-image
-			padding-top: 6rem
-	.docside
-		grid-area: sidearea
-		border-top: var(--border-dark)
-		padding-top: map.get(t.$space-scale, 24)
-		padding-bottom: map.get(t.$space-scale, 24)
-	.doclist
-		display: flex
-		gap: 1px
-		overflow-x: auto
-		padding-bottom: map.get(t.$space-scale, 8)
-		flex-direction: column
-	@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-		display: grid
-		grid-template-columns: t.$doc-sidebar-width minmax(0, 1fr)
-		grid-template-areas: "sidearea mainarea"
-		border-bottom: var(--border-main)
-		.docmain
-			padding-left: map.get(t.$space-scale, 80)
-			padding-bottom: map.get(t.$space-scale, 64)
-			padding-top: 2rem
-			&.no-image
-				padding-top: 7rem
-			.classic-document
-				max-width: t.$doc-main-max-width
-		.docside
-			padding-top: map.get(t.$space-scale, 32)
-			border-right: var(--border-main)
-			border-top: none
-			height: 100%
-			padding-bottom: map.get(t.$space-scale, 16)
-			&.nopad
-				padding-right: 0
-			.doclist
-				flex-direction: column
-				overflow-x: visible
-				position: sticky
-				top: map.get(t.$space-scale, 104)
-				padding-bottom: map.get(t.$space-scale, 16)
-				a
-					flex: initial
-					max-width: none
-
-.library-book
-	background: var(--color-back)
-
-.docgrid.scrollside
-	@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-		.docside
-			.doclist
-				height: calc(100vh - #{map.get(t.$space-scale, 128) + map.get(t.$space-scale, 32)})
-				overflow-y: scroll
-
-.dohero
-	height: t.$doc-hero-mobile-height
-	margin-top: map.get(t.$space-scale, 80)
-	@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-		height: t.$doc-hero-desktop-height
-		margin-top: map.get(t.$space-scale, 128)
-		&.desbodha
-			img
-				object-position: center center
-
-.doctext
-	min-width: 0
-
-.labtext
-	img
-		object-fit: contain
-		height: 25rem
+=document-layout-utils($prefix: "")
+	a.#{$prefix}doclink
+		display: block
+		padding-top: 0.4em
+		padding-bottom: 0.4em
+		padding-right: map.get(t.$space-scale, 8)
+		transition: all 180ms ease-out
+		color: var(--color-grey-2)
+		&:hover
+			padding-left: map.get(t.$space-scale, 4)
+			background: var(--color-stone-1)
+			color: var(--color-primary)
 		@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-			margin-right: auto
+			padding-right: map.get(t.$space-scale, 24)
+
+	.#{$prefix}docgrid
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-areas: "mainarea" "sidearea"
+		.docmain,
+		.#{$prefix}docmain
+			grid-area: mainarea
+			padding-top: 2rem
+			&.#{$prefix}no-image
+				padding-top: 6rem
+		.docside,
+		.#{$prefix}docside
+			grid-area: sidearea
+			border-top: var(--border-dark)
+			padding-top: map.get(t.$space-scale, 32)
+			padding-bottom: map.get(t.$space-scale, 24)
+		.doclist,
+		.#{$prefix}doclist
+			display: flex
+			gap: 1px
+			overflow-x: auto
+			padding-bottom: map.get(t.$space-scale, 8)
+			flex-direction: column
+		@media screen and (min-width: map.get(b.$breakpoints, "lg"))
+			display: grid
+			grid-template-columns: t.$doc-sidebar-width minmax(0, 1fr)
+			grid-template-areas: "sidearea mainarea"
+			border-bottom: var(--border-main)
+			.docmain,
+			.#{$prefix}docmain
+				padding-left: map.get(t.$space-scale, 80)
+				padding-bottom: map.get(t.$space-scale, 64)
+				padding-top: 2rem
+				&.#{$prefix}no-image
+					padding-top: 7rem
+				.classic-document,
+				.#{$prefix}classic-document
+					max-width: t.$doc-main-max-width
+			.docside,
+			.#{$prefix}docside
+				padding-top: map.get(t.$space-scale, 32)
+				border-right: var(--border-main)
+				border-top: none
+				height: 100%
+				padding-bottom: map.get(t.$space-scale, 16)
+				&.#{$prefix}nopad
+					padding-right: 0
+				.doclist,
+				.#{$prefix}doclist
+					flex-direction: column
+					overflow-x: visible
+					position: sticky
+					top: map.get(t.$space-scale, 104)
+					padding-bottom: map.get(t.$space-scale, 16)
+					a
+						flex: initial
+						max-width: none
+
+	.#{$prefix}library-book
+		background: var(--color-back)
+
+	.#{$prefix}docgrid.#{$prefix}scrollside,
+	.docgrid.#{$prefix}scrollside
+		@media screen and (min-width: map.get(b.$breakpoints, "lg"))
+			.docside,
+			.#{$prefix}docside
+				.doclist,
+				.#{$prefix}doclist
+					height: calc(100vh - #{map.get(t.$space-scale, 128) + map.get(t.$space-scale, 32)})
+					overflow-y: scroll
+
+	.#{$prefix}dohero
+		height: t.$doc-hero-mobile-height
+		margin-top: map.get(t.$space-scale, 80)
+		@media screen and (min-width: map.get(b.$breakpoints, "lg"))
+			height: t.$doc-hero-desktop-height
+			margin-top: map.get(t.$space-scale, 128)
+			&.#{$prefix}desbodha
+				img
+					object-position: center center
+
+	.#{$prefix}doctext
+		min-width: 0
+
+	.#{$prefix}labtext
+		img
+			object-fit: contain
+			height: 25rem
+			@media screen and (min-width: map.get(b.$breakpoints, "lg"))
+				margin-right: auto
+
++b.responsive-classes using ($prefix)
+	+document-layout-utils($prefix)

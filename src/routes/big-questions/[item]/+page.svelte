@@ -5,6 +5,7 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 
@@ -38,9 +39,7 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
 <Container>
-	<section class="dohero">
-		<WaterRipple src={data.icon} class="ripple-motion" {brushSize} />
-	</section>
+	<Parallax imageLink={data.icon} wipe={true} />
 	<section class="docgrid">
 		<div class="box docside">
 			{#if data.questions?.length > 0}
@@ -55,37 +54,35 @@
 				</div>
 			{/if}
 		</div>
-		<div class="docmain box rgap32">
-			<div class="box title-area">
-				<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true}>
-					{#if data.tags && data.tags.length > 0}
-						<div class="row wrap cgap4 rgap4">
-							{#each data.tags as tag}
-								<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll('-', ' ')}</a>
-							{/each}
-						</div>
-					{/if}
-				</Crumb>
-			</div>
+		<div class="docmain box rgap32 sm:pbot32">
+			<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true}>
+				{#if data.tags && data.tags.length > 0}
+					<div class="row wrap cgap4 rgap4">
+						{#each data.tags as tag}
+							<a class="txt-sm tt-u theme" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
+						{/each}
+					</div>
+				{/if}
+			</Crumb>
 			<div class="doctext classic-document">
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
 				<section class="box rgap32 bordertop ptop32">
-					<p class="card-title">Related Readings</p>
+					<p class="txt-2xl w600">Related Readings</p>
 					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}
-							<a class="blank textbox whitestone p16 lg:p32" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
+							<a class="blank textbox whitestone p24 lg:p32" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
 								<div class="box rgap16">
-									<p class="tag-text lgrey tt-u">{item.node.type}</p>
-									<p class="body-text w500 tight">{item.node.title}</p>
+									<p class="txt-xs tt-u grey0">{item.node.type}</p>
+									<p class="txt-xl w600">{item.node.title}</p>
 									{#if item.node.description}
-										<p class="descriptor-text grey tight">{item.node.description}</p>
+										<p class="grey0 lh14">{item.node.description}</p>
 									{/if}
 								</div>
 								<div class="row wrap cgap8 rgap4 self-bottom ptop32">
 									{#each item.node.tags as tag}
-										<p class="tag-pill hollow tt-u themed">{tag.replaceAll('-', ' ')}</p>
+										<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-', ' ')}</p>
 									{/each}
 								</div>
 							</a>

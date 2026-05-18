@@ -3,8 +3,8 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Title from '$lib/comps/page-title.svelte'
-	import Parallax from '$lib/comps/parallaxfull.svelte';
+	import Title from '$lib/comps/page-title.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -33,11 +33,10 @@
 	);
 </script>
 
-
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
-<Parallax imageLink="/images/key-bigquestions.webp" isClass="is50" />
 <Container>
+	<Parallax imageLink="/images/key-bigquestions.webp" wipe={true} />
 	<section class="box wrapper-std first-box rgap32">
 		<Crumb showT={true} title="Big Questions" showD={true} desc={metaDescription} />
 		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap32">
@@ -52,53 +51,51 @@
 		</div>
 	</section>
 	<section class="box wrapper-std growingline rgap32 md:rgap64">
-		<Title text="Big Question 2026"/>
-		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16 bq26box sm:p16 radius lg:ptop32 lg:pbot32">
+		<Title text="Big Question 2026" />
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16 bq26box sm:p24 radius lg:ptop32 lg:pbot32">
 			<div class="box down rgap32">
 				<div class="mid-shelf rgap16 box">
-					<h2 class="card-title">Is Hindu Unity Compatible With Indian Diversity?</h2>
-					<p class="paragraph-text pbot8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
+					<h2 class="txt-3xl lg:txt-4xl source-serif lh11 ls004m">Is Hindu Unity Compatible With Indian Diversity?</h2>
+					<p class="highlight-text pbot8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
 					<a class="primary black" href="/big-questions/hindu-unity-and-diversity">
-					<span>Read More →</span>
+						<span>Read More →</span>
 					</a>
 				</div>
 				<div class="bot-shelf box rgap16">
-					<p class="rem1 altprim">This Big Question 2026 is made possible by the generous support of Shri Hari Kiran Vadlamani, the founder of <a class="linked" target="_blank" rel="noreferrer" href="https://cohari.org/">coHari</a>. We are grateful to him for his patronage.</p>
-					<img class="shri-hari-kiran-vadlamani" src="/images/shri-hari-kiran-vadlamani.webp" alt="shri-hari-kiran-vadlamani"/>
+					<p class="txt-lg lh14 grey2">This Big Question 2026 is made possible by the generous support of Shri Hari Kiran Vadlamani, the founder of <a class="linked" target="_blank" rel="noreferrer" href="https://cohari.org/">coHari</a>. We are grateful to him for his patronage.</p>
+					<img class="shri-hari-kiran-vadlamani" src="/images/shri-hari-kiran-vadlamani.webp" alt="shri-hari-kiran-vadlamani" />
 				</div>
 			</div>
 			<a class="blank box up" href="/big-questions/hindu-unity-and-diversity">
-				<img class="std" src="/images/questions/current-big-question.webp" alt="Is Hindu Unity Compatible With Indian Diversity"/>
+				<img class="fitted herocard radius4" src="/images/questions/current-big-question.webp" alt="Is Hindu Unity Compatible With Indian Diversity" />
 			</a>
-		</div>	
+		</div>
 	</section>
 
 	<section class="box wrapper-std growingline alternate rgap48 md:rgap64">
-		<Title text="All Big Questions"/>
-		<div class="grey-graph">
-			{#if questions && questions.length > 0}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rgap16 cgap16 of-questions">
+		<Title text="All Big Questions" />
+		{#if questions && questions.length > 0}
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each questions as item, i}
-					<div class="blank labelbox q-item glass-1">
+					<div class="box glass-1 p8">
 						<a class="p8 blank" href={item.linkpath}>
-							<img class="std" src={item.meta.icon} alt={item.meta.title}/>
+							<img class="fitted landscape radius4" src={item.meta.icon} alt={item.meta.title} />
 						</a>
 						<a class="onhover box rgap16 p16 blank" href={item.linkpath}>
-							<p class="card-title tight">{item.meta.title}</p>
-							<p class="grey descriptor-text">{item.meta.description}</p>
+							<p class="txt-xl lg:txt-2xl w600 a-hover">{item.meta.title}</p>
+							<p class="grey1 txt-lg">{item.meta.description}</p>
 						</a>
-							{#if item.meta.tags}
-								<div class="row wrap cgap4 rgap4 p16 bordertop self-bottom">
-									{#each item.meta.tags as tag}
-										<a class="tag-pill tt-u blank" href="/concepts/{tag}">{tag.replaceAll("-"," ")}</a>
-									{/each}
-								</div>
-							{/if}
+						{#if item.meta.tags}
+							<div class="row wrap cgap4 rgap4 p16 bordertop self-bottom">
+								{#each item.meta.tags as tag}
+									<a class="txt-xs w500 tt-u theme" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
+								{/each}
+							</div>
+						{/if}
 					</div>
 				{/each}
 			</div>
 		{/if}
-		</div>
 	</section>
 </Container>
 
