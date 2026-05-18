@@ -28,21 +28,16 @@
 	};
 
 	onMount(() => {
-	window.addEventListener('scroll', handleScroll);
-	return () => {
-		window.removeEventListener('scroll', handleScroll);
-	};
-});
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<div
-	class="scroll-progress"
-	class:header-hidden={$readerChromeHidden}
-	style="width: {perCent *
-		100}%; background: var(--color-theme); height: 6px"
-></div>
+<div class="scroll-progress" class:header-hidden={$readerChromeHidden} style="width: {perCent * 100}%; background: var(--color-theme); height: 4px"></div>
 
 <style lang="sass">
 

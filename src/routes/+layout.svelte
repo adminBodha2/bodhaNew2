@@ -10,7 +10,6 @@
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
-	import SiteTour from '$lib/comps/sitetour.svelte';
 
 	const pageTransitionClass = 'page-transition';
 

@@ -1,0 +1,157 @@
+.snm-root
+	--snm-background: #ffffff
+	--snm-text: #161616
+	--snm-muted-text: rgba(22, 22, 22, 0.64)
+	--snm-hover: rgba(22, 22, 22, 0.06)
+	--snm-active: rgba(22, 22, 22, 0.1)
+	--snm-border: rgba(22, 22, 22, 0.12)
+	--snm-ring: rgba(22, 22, 22, 0.24)
+	--snm-shadow: 0 12px 32px rgba(0, 0, 0, 0.12)
+	--snm-radius: 8px
+	--snm-speed: 160ms
+
+	position: relative
+	display: inline-flex
+	color: var(--snm-text)
+	font: inherit
+
+.snm-list
+	display: flex
+	align-items: center
+	gap: 0.125rem
+	list-style: none
+	margin: 0
+	padding: 0
+
+.snm-item
+	position: relative
+
+.snm-trigger
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: 0.25rem
+	min-height: 2.25rem
+	padding: 0 0.875rem
+	border: 0
+	border-radius: var(--snm-radius)
+	background: transparent
+	color: inherit
+	font: inherit
+	font-size: 0.875rem
+	line-height: 1
+	text-decoration: none
+	white-space: nowrap
+	cursor: pointer
+	transition: background-color var(--snm-speed) ease, color var(--snm-speed) ease
+
+	&:hover,
+	&:focus-visible,
+	&[data-state="open"],
+	&[data-active="true"]
+		background: var(--snm-hover)
+		outline: none
+
+	&:focus-visible
+		box-shadow: 0 0 0 3px var(--snm-ring)
+
+	&:disabled,
+	&[data-disabled="true"]
+		opacity: 0.45
+		pointer-events: none
+
+.snm-trigger-link
+	cursor: pointer
+
+.snm-chevron
+	width: 0.875rem
+	height: 0.875rem
+	flex: 0 0 auto
+	transition: transform var(--snm-speed) ease
+
+.snm-trigger[data-state="open"] .snm-chevron
+	transform: rotate(180deg)
+
+.snm-panel
+	position: absolute
+	top: calc(100% + 0.375rem)
+	left: 0
+	z-index: 40
+	display: grid
+	gap: 0.125rem
+	min-width: 13rem
+	padding: 0.375rem
+	border: 1px solid var(--snm-border)
+	border-radius: var(--snm-radius)
+	background: var(--snm-background)
+	box-shadow: var(--snm-shadow)
+	animation: snm-open var(--snm-speed) ease
+
+.snm-link
+	display: grid
+	gap: 0.125rem
+	padding: 0.625rem 0.75rem
+	border-radius: calc(var(--snm-radius) - 2px)
+	color: inherit
+	text-decoration: none
+	outline: none
+	transition: background-color var(--snm-speed) ease
+
+	&:hover,
+	&:focus-visible,
+	&[data-active="true"]
+		background: var(--snm-active)
+
+	&:focus-visible
+		box-shadow: 0 0 0 3px var(--snm-ring)
+
+	&[data-disabled="true"]
+		opacity: 0.45
+		pointer-events: none
+
+.snm-link-label
+	font-size: 0.875rem
+	font-weight: 500
+	line-height: 1.25
+
+.snm-link-description
+	color: var(--snm-muted-text)
+	font-size: 0.75rem
+	line-height: 1.35
+
+@keyframes snm-open
+	from
+		opacity: 0
+		transform: translateY(-4px)
+	to
+		opacity: 1
+		transform: translateY(0)
+
+@media (max-width: 700px)
+	.snm-root
+		display: block
+		width: 100%
+
+	.snm-list
+		align-items: stretch
+		flex-direction: column
+
+	.snm-trigger
+		justify-content: space-between
+		width: 100%
+
+	.snm-panel
+		position: static
+		margin: 0.25rem 0 0.5rem
+		box-shadow: none
+
+@media (prefers-color-scheme: dark)
+	.snm-root
+		--snm-background: #111111
+		--snm-text: #f7f7f7
+		--snm-muted-text: rgba(247, 247, 247, 0.62)
+		--snm-hover: rgba(247, 247, 247, 0.08)
+		--snm-active: rgba(247, 247, 247, 0.12)
+		--snm-border: rgba(247, 247, 247, 0.14)
+		--snm-ring: rgba(247, 247, 247, 0.24)
+		--snm-shadow: 0 12px 32px rgba(0, 0, 0, 0.34)

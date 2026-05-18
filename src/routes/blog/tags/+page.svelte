@@ -48,13 +48,13 @@
 				<a class="small-button tt-u" href="/blog/writers">Writers</a>
 			</ResponsiveMenu>
 		</Crumb>
-		<div class="blog-wrapper ptop32 rgap32 box">
+		<div class="blog-wrapper rgap32 box">
 			<div class="row cgap8 ycenter">
 				<div class="toggler-std">
 					<input class="in-toggle" id="check-toggle" type="checkbox" bind:checked={showCount} />
 					<label for="check-toggle"></label>
 				</div>
-				<p class="tag-text tt-u lgrey">
+				<p class="txt-xs tt-u w500 grey1">
 					{#if showCount}View Alphabetical{:else}View by Count{/if}
 				</p>
 			</div>

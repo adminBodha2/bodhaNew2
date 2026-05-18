@@ -9,26 +9,19 @@
 	const metaImage = DEFAULT_IMAGE;
 </script>
 
-<Head
-	{title}
-	{metaDescription}
-	{metaImage}
-	{metaUrl}
-	imWidth="2560"
-	imHeight="1440"
-/>
+<Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="2560" imHeight="1440" />
 
 <Container>
-	<div class="header-margin">
+	<section class="wrapper-std header-margin">
 		<div class="labelbox">
-		<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
-		<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>
-		<div class="row cgap16 rgap16 mwrap ycenter pbot32">
-			<button class="blank" onclick={() => history.back()}><p class="blue">← Back to Previous Page</p></button>
+			<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
+			<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>
+			<div class="row cgap16 rgap16 mwrap ycenter pbot32">
+				<button class="blank" onclick={() => history.back()}><p class="blue">← Back to Previous Page</p></button>
+			</div>
+			<img src="/images/error.gif" alt="error" />
 		</div>
-		<img src="/images/error.gif" alt="error"/>
-		</div>
-	</div>
+	</section>
 </Container>
 
 <style lang="sass">

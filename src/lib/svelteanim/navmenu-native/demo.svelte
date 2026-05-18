@@ -1,11 +1,11 @@
 <script lang="ts">
-	import * as NavigationMenu from './index.js'
+	import * as NavigationMenu from './index.js';
 </script>
 
 <NavigationMenu.Root>
 	<NavigationMenu.List>
 		<NavigationMenu.Item>
-			<NavigationMenu.Trigger>Products</NavigationMenu.Trigger>
+			<NavigationMenu.Trigger>RESEARCH</NavigationMenu.Trigger>
 			<NavigationMenu.Content>
 				<NavigationMenu.Link href="/products/web">Web</NavigationMenu.Link>
 				<NavigationMenu.Link href="/products/mobile">Mobile</NavigationMenu.Link>

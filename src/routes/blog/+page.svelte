@@ -5,7 +5,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import '$lib/styles/system/blog.sass';
-	import BlogMenu from '$lib/icons/blog-menu.svelte';
+	import Title from '$lib/comps/page-title.svelte';
 	import ResponsiveMenu from '$lib/comps/responsive-menu-2.svelte';
 	import ResponsiveMenu2 from '$lib/comps/responsive-menu-2.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -130,7 +130,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="box wrapper-std header-margin">
+	<section class="wrapper-std header-margin" style="row-gap: 0">
 		<Crumb showT={false} title="Bodha Blog" showRow={true}>
 			<ResponsiveMenu>
 				<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
@@ -139,146 +139,149 @@
 			</ResponsiveMenu>
 		</Crumb>
 		<div class="blog-wrapper">
-			<div class="editorial-layout">
-				{#if heroPosts.length > 0}
-					<section class="lead-panel lg:ptop32">
-						<a class="featured-essay blank" href={heroPosts[0].linkpath}>
-							{#if heroPosts[0].meta.image}
-								<enhanced:img class="featured-essay-image" src={heroPosts[0].meta.image} alt={heroPosts[0].meta.title} />
+			<!-------------latest 3 posts---------------------------------->
+			{#if heroPosts.length > 0}
+				<section class="lead-panel lg:ptop32">
+					<a class="featured-essay blank" href={heroPosts[0].linkpath}>
+						{#if heroPosts[0].meta.image}
+							<img class="fitted herocard" src={heroPosts[0].meta.image} alt={heroPosts[0].meta.title} />
+						{/if}
+						<div class="featured-overlay"></div>
+						<div class="featured-copy box p32 rgap16">
+							<p class="white lh14">{heroPosts[0].meta.excerpt}</p>
+							<h2 class="txt-3xl lg:txt-4xl w600 white">{heroPosts[0].meta.title}</h2>
+							<div class="row wrap cgap8 rgap8 ycenter">
+								{#each authors(heroPosts[0]) as author}
+									<p class="citation white">{author} |</p>
+								{/each}
+								<p class="citation white">{heroPosts[0].formattedDate} |</p>
+								{#if heroPosts[0].meta.words}
+									<p class="citation white">{heroPosts[0].meta.words} words</p>
+								{/if}
+							</div>
+							<div class="row wrap cgap4 rgap4">
+								{#each postCategories(heroPosts[0]) as category}
+									<span class="tag-pill tt-u">{category}</span>
+								{/each}
+							</div>
+						</div>
+					</a>
+				</section>
+				<section class="highlight-panel lg:ptop32" aria-label="Highlighted essays">
+					{#each heroPosts.slice(1) as post, i}
+						<a class="box rgap16 blank hc{i}" class:with-image={i === 0} href={post.linkpath}>
+							{#if i === 0 && post.meta.image}
+								<img class="fitted landscape radius4" src={post.meta.image} alt={post.meta.title} />
 							{/if}
-							<div class="featured-overlay"></div>
-							<div class="featured-copy">
-								<p class="white width90 desc">{heroPosts[0].meta.excerpt}</p>
-								<h2 class="card-title white">{heroPosts[0].meta.title}</h2>
-								<div class="row wrap cgap8 rgap8 ycenter">
-									{#each authors(heroPosts[0]) as author}
-										<p class="citation white">{author} |</p>
-									{/each}
-									<p class="citation white">{heroPosts[0].formattedDate} |</p>
-									{#if heroPosts[0].meta.words}
-										<p class="citation white">{heroPosts[0].meta.words} words</p>
-									{/if}
-								</div>
-								<div class="row wrap cgap4 rgap4">
-									{#each postCategories(heroPosts[0]) as category}
-										<span class="tag-pill tt-u">{category}</span>
+							<div class="box pbot8">
+								<p class="txt-xs tt-u w500 theme">{primaryCategory(post)}</p>
+								<p class="txt-xl w600 ptop8 pbot8 a-hover">{post.meta.title}</p>
+								<div class="row wrap cgap4 rgap4 ptop8">
+									{#each (post.meta.tags ?? []).slice(0, 3) as tag, i}
+										<p class="txt-00 tt-u w500 grey0">
+											{#if i > 0}|
+											{/if}
+											{tag.replaceAll('-', ' ')}
+										</p>
 									{/each}
 								</div>
+								<p class="txt-xs tt-u w500 grey2 ptop4">{post.formattedDate} · {post.meta.words ?? ' '} words</p>
 							</div>
 						</a>
-					</section>
-					<section class="highlight-panel lg:ptop32" aria-label="Highlighted essays">
-						{#each heroPosts.slice(1) as post, i}
-							<a class="box rgap16 blank hc{i}" class:with-image={i === 0} href={post.linkpath}>
-								{#if i === 0 && post.meta.image}
-									<enhanced:img class="std radius" src={post.meta.image} alt={post.meta.title} />
-								{/if}
-								<div class="box pbot8">
-									<p class="tag-text tt-u grey">{primaryCategory(post)}</p>
-									<p class="highlight-text bold tight">{post.meta.title}</p>
-									<div class="row wrap cgap4 rgap4 ptop8">
-										{#each (post.meta.tags ?? []).slice(0, 3) as tag, i}
-											<p class="tag-pill hollow themed tt-u dead">
-												{#if i > 0}|
-												{/if}
-												{tag.replaceAll('-', ' ')}
-											</p>
-										{/each}
-									</div>
-									<p class="tag-text lgrey">{post.formattedDate} · {post.meta.words ?? ' '} words</p>
+					{/each}
+				</section>
+			{/if}
+
+			<!-------------sidebar with external posts, writers, tags---------------------------------->
+			<aside class="blog-sidebar lg:ptop32">
+				<section class="sidebar-section" id="external-posts">
+					<a class="txt-xs tt-u grey0 section-titler" href="/blog/external">External posts →</a>
+					<div class="external-list">
+						{#each externalPosts.slice(0, 5) as post}
+							<a class="external-item blank" href={post.route} target="_blank" rel="noreferrer">
+								<div class="box rgap8">
+									<p class="txt-lg w600 lh12">{post.title}</p>
+									<p class="txt-00 tt-u w500 theme">{post.platform}</p>
 								</div>
 							</a>
 						{/each}
-					</section>
-				{/if}
-				<aside class="blog-sidebar lg:ptop32">
-					<section class="sidebar-section" id="external-posts">
-						<a class="tag-text tt-u blue-dark section-titler" href="/blog/external">External posts</a>
-						<div class="external-list">
-							{#each externalPosts.slice(0, 6) as post}
-								<a class="external-item blank" href={post.route} target="_blank" rel="noreferrer">
-									<div class="box rgap4">
-										<p class="w500 tight">{post.title}</p>
-										<p class="tag-text tt-u lgrey">{post.platform}</p>
-									</div>
-								</a>
-							{/each}
-						</div>
-					</section>
-					<section class="sidebar-section lg:ptop16 lg:pbot16" id="writers-section">
-						<div class="row xbetween ycenter">
-							<a class="tag-text tt-u blue-dark section-titler" href="/blog/writers">Writers</a>
-						</div>
-						<div class="writer-row">
-							{#each allWriters as item}
-								<a class="writer-avatar blank" href={item.link}>
-									<img class="writer-av" src={item.image} alt={item.writer} />
-								</a>
-							{/each}
-						</div>
-					</section>
-					<section class="sidebar-section lg:ptop16" id="tags-section">
-						<a class="tag-text tt-u blue-dark section-titler" href="/blog/tags">Popular tags</a>
-						<div class="chip-cloud">
-							{#each tags.slice(0, 8) as item}
-								<a class="tag-pill tt-u" href={tagUrl(item.tag)}>{item.tag.replaceAll('-', ' ')}</a>
-							{/each}
-						</div>
-					</section>
-				</aside>
-				<section class="article-panel lg:ptop32 lg:pbot32">
-					<div class="row xbetween-mleft ycenter mcol mleft cgap8 rgap8">
-						<p class="highlight-text w500">Essays by Category</p>
-
-						<ResponsiveMenu2>
-							<button class="small-button" class:active={selectedCategory === 'All'} onclick={() => selectCategory('All')}>
-								All <span>{posts.length}</span>
-							</button>
-							{#each categories as item}
-								<button class="small-button" class:active={selectedCategory === item.category} onclick={() => selectCategory(item.category)}>
-									{item.category} <span>{item.count}</span>
-								</button>
-							{/each}
-						</ResponsiveMenu2>
 					</div>
-					<div class="article-grid radius">
-						{#each visibleArticlePosts as post}
-							<article class="essay-holder p8 lg:p16 ncolor-inv">
-								<div class="essay-holder-left">
-									{#if post.meta.image}
-										<enhanced:img class="essay-holder-image" src={post.meta.image} alt={post.meta.title} />
-									{/if}
-									<div class="row wrap essay-tags rgap4 cgap4">
-										{#each post.meta.tags ?? [] as tag}
-											<a class="tag-pill tt-u" href={tagUrl(tag)}>{tag.replaceAll('-', ' ')}</a>
-										{/each}
-									</div>
-								</div>
-								<a class="essay-holder-right blank box rgap16" style="height: 100%" href={post.linkpath}>
-									<p class="paragraph-text bold tight">{post.meta.title}</p>
-									<p class="tight lgrey">{post.meta.excerpt}</p>
-									<p class="tag-text tt-u lgrey self-bottom bordertop ptop8">{post.meta.author} | {post.meta.words} words</p>
-								</a>
-							</article>
+				</section>
+				<section class="sidebar-section lg:ptop16 lg:pbot16" id="writers-section">
+					<a class="txt-xs tt-u grey0 section-titler" href="/blog/writers">Writers →</a>
+					<div class="writer-row">
+						{#each allWriters as item}
+							<a class="writer-avatar blank" href={item.link}>
+								<img class="writer-av" src={item.image} alt={item.writer} />
+							</a>
 						{/each}
 					</div>
-					{#if hasMoreArticles}
-						<div class="load-more-wrap">
-							<button class="load-more-button" type="button" onclick={loadMoreArticles}>
-								Load more articles
-								<span>{Math.min(visibleArticleCount, articlePosts.length)} / {articlePosts.length}</span>
-							</button>
-						</div>
-					{/if}
 				</section>
-			</div>
+				<section class="sidebar-section lg:ptop16" id="tags-section">
+					<a class="txt-xs tt-u grey0 section-titler" href="/blog/tags">Popular Tags →</a>
+					<div class="chip-cloud">
+						{#each tags.slice(0, 8) as item}
+							<a class="txt-xs tt-u w500 theme" href={tagUrl(item.tag)}>{item.tag.replaceAll('-', ' ')}</a>
+						{/each}
+					</div>
+				</section>
+			</aside>
 		</div>
+	</section>
+	<!-------------all posts, by category---------------------------------->
+	<section class="wrapper-std tightpads">
+		<Title text="All Articles" />
+		<ResponsiveMenu2>
+			<button class="small-button tt-u" class:active={selectedCategory === 'All'} onclick={() => selectCategory('All')}>
+				All <span> - {posts.length}</span>
+			</button>
+			{#each categories as item}
+				<button class="small-button tt-u" class:active={selectedCategory === item.category} onclick={() => selectCategory(item.category)}>
+					{item.category} <span> - {item.count}</span>
+				</button>
+			{/each}
+		</ResponsiveMenu2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
+			{#each visibleArticlePosts as post}
+				<article class="box b-main radius8 glass-2">
+					<div class="p8 box rgap8">
+						{#if post.meta.image}
+							<img class="fitted landscape radius4" src={post.meta.image} alt={post.meta.title} />
+						{/if}
+					</div>
+					<a class="blank box rgap16 p16" style="height: 100%" href={post.linkpath}>
+						<p class="txt-2xl w600">{post.meta.title}</p>
+						<p class="lh14 grey1">{post.meta.excerpt}</p>
+					</a>
+					<div class="box self-bottom bordertop ptop8 rgap4 p16">
+						<p class="txt-sm tt-u w500">{post.meta.author} | {post.meta.words} words</p>
+						<div class="row wrap essay-tags rgap4 cgap4">
+							{#each post.meta.tags ?? [] as tag}
+								<a class="txt-xs theme w500 tt-u" href={tagUrl(tag)}>#{tag.replaceAll('-', ' ')}</a>
+							{/each}
+						</div>
+					</div>
+				</article>
+			{/each}
+		</div>
+		{#if hasMoreArticles}
+			<div class="load-more-wrap">
+				<button class="load-more-button" type="button" onclick={loadMoreArticles}>
+					Load more articles
+					<span>{Math.min(visibleArticleCount, articlePosts.length)} / {articlePosts.length}</span>
+				</button>
+			</div>
+		{/if}
 	</section>
 </Container>
 
 <style lang="sass">
 
 #external-posts
+	@media (min-width: 1025px)
+		.section-titler.grey0
+			&:hover
+				color: var(--color-theme)
 	@media (max-width: 1024px)
 		gap: 0
 		padding-top: 0
@@ -296,7 +299,7 @@
 		padding: 2rem 1rem
 		border-radius: 8px
 
-.editorial-layout
+.blog-wrapper
 	display: grid
 	align-items: start
 	@media screen and (min-width: 1025px)
@@ -319,17 +322,17 @@
 	border-radius: 8px
 	@media screen and (min-width: 1025px)
 		height: 520px
-		.featured-copy h2.card-title
+		.featured-copy h2
 			transition: transform 0.28s ease
-		.featured-copy p.desc
+		.featured-copy p.lh14.white
 			opacity: 0
 		&:hover
-			.featured-copy p.desc
+			.featured-copy p.lh14.white
 				opacity: 1
 			.featured-overlay
 				background: linear-gradient(0deg, rgba(0,0,0,0.94), rgba(0,0,0,0.52) 48%, rgba(0,0,0,0.3))
 
-.featured-essay-image
+.fitted.herocard
 	position: absolute
 	inset: 0
 	width: 100%
@@ -347,15 +350,9 @@
 .featured-copy
 	position: relative
 	z-index: 1
-	display: flex
-	flex-direction: column
 	justify-content: flex-end
-	gap: 0.5rem
-	padding: 1rem
 	p
 		transition: opacity 0.28s ease
-	@media screen and (min-width: 1025px)
-		padding: 2rem
 
 .highlight-panel
 	display: grid
@@ -395,12 +392,9 @@
 .article-grid
 	display: grid
 	gap: 1px
-	background: var(--color-stone-2)
-	border: var(--border-dark)
 	overflow: hidden
 	@media screen and (min-width: 1025px)
 		grid-template-columns: repeat(2, minmax(0, 1fr))
-		background: var(--color-back)
 	@media screen and (max-width: 1024px)
 		border: none
 		gap: 1rem
@@ -413,8 +407,6 @@
 	@media screen and (min-width: 1025px)
 		grid-template-columns: 200px 1fr
 		margin-bottom: 0
-		.essay-holder-right
-			padding-left: 1.3rem
 
 .essay-holder-image
 	width: 100%
@@ -495,7 +487,7 @@
 
 .external-list
 	display: grid
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: 1fr
 	@media (min-width: 1025px)
 		display: flex
 		flex-direction: column

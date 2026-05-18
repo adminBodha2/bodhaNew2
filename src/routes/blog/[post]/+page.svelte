@@ -6,6 +6,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
+	import Title from '$lib/comps/page-title.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
@@ -101,22 +102,22 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
-<Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="3px" {ref} />
+<Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="2px" {ref} />
 <Container>
 	<section class="box rgap32 wrapper-std header-margin">
 		<div class="box rgap16 xcenter mleft ta-c ptop32 pbot32">
 			<Crumb onblog={true} />
-			<h1 class="page-title source-serif width70 self-center">{data.title}</h1>
+			<h1 class="txt-4xl md:txt-6xl lg:txt-8xl source-serif width90 lh12 self-center">{data.title}</h1>
 			<div class="box rgap16 width90 self-center">
-				<p class="altprim body-text">{data.excerpt}</p>
-				<div class="info row ycenter xcenter mleft cgap8">
+				<p class="txt-lg lh14">{data.excerpt}</p>
+				<div class="info row ycenter lg:xcenter cgap8">
 					<div class="line left-line"></div>
 					<p class="highlight-text"><a class="linkedlight" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
 					<div class="line right-line"></div>
 				</div>
 				<div class="tag-row row self-center">
 					{#each data.tags as tag}
-						<a class="tag-pill themed tt-u blank" href="/blog/tags/{tag}">{tag.replaceAll('-', ' ')}</a>
+						<a class="txt-sm tt-u w500 theme" href="/blog/tags/{tag}">#{tag.replaceAll('-', ' ')}</a>
 					{/each}
 				</div>
 			</div>
@@ -129,22 +130,25 @@
 		</article>
 		<div class="row share-row ycenter cgap16 xbetween post-article self-center">
 			<Social urlToShare={page.url.href} />
-			<a class="grey-button" href="/blog">← Back to Blog</a>
+			<a class="primary" href="/blog"><span>← Back to Blog</span></a>
 		</div>
 	</section>
 	<section class="box wrapper-std rgap64 growingline">
 		{#if posts && posts.length > 0}
-			<h2>More Like This</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 cgap4 rgap4">
+			<Title text="More Like This" />
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each posts as item, i}
-					<a class="box blank p16 rgap8 lg:p24 b-main ncolor-inv" href={item.linkpath}>
-						<p class="body-text tight bold a-hover">{item.meta.title}</p>
-						<p class="grey">{item.meta.excerpt}</p>
-						<div class="box foot self-bottom bordertop ptop8">
-							<p class="tag-text grey tt-u">{item.meta.author} | {item.meta.words} words</p>
+					<a class="box blank p16 rgap8 p8 b-main radius8" href={item.linkpath}>
+						<img class="fitted landscape radius4" src={item.meta.image} alt={item.meta.title} />
+						<div class="box p16 rgap16">
+							<p class="txt-xl w600 lh14 a-hover">{item.meta.title}</p>
+							<p class="grey1 lh14">{item.meta.excerpt}</p>
+						</div>
+						<div class="box foot self-bottom bordertop ptop16 rgap4">
+							<p class="txt-sm tt-u grey2">{item.meta.author} | {item.meta.words} words</p>
 							<div class="row of-info mwrap cgap8 rgap8">
 								{#each item.meta.tags as tag}
-									<p class="tag-pill hollow themed tt-u dead">{tag.replaceAll('-', ' ')}</p>
+									<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-', ' ')}</p>
 								{/each}
 							</div>
 						</div>
