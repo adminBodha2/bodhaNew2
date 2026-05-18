@@ -42,11 +42,6 @@
 
 <Parallax imageLink="/images/heroimage2.webp" isClass="is100" />
 
-<div class="pos-fixed">
-	<button onclick={toggleAnim}>
-		{$animState ? 'Turn animations off' : 'Turn animations on'}
-	</button>
-</div>
 <Container>
 	<section class="wrapper-std">
 		<div class="box rgap16 lg:rgap32 ycenter" bind:this={headReveal} id="introduction">
