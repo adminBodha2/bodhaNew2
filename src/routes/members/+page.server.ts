@@ -24,6 +24,14 @@ function redirectPath(formData: FormData, fallback = '/members/signed-in') {
 	return next.startsWith('/') && !next.startsWith('//') ? next : fallback;
 }
 
+function authErrorMessage(message: string) {
+	if (message.toLowerCase().includes('email rate limit')) {
+		return 'We have reached the temporary email sending limit. Please try again later, or continue with Google if you need access now.';
+	}
+
+	return message;
+}
+
 export const load: PageServerLoad = async ({ locals, url }) => {
 	const { session, user } = await locals.safeGetSession();
 
@@ -48,7 +56,7 @@ export const actions: Actions = {
 		const { error } = await locals.supabase.auth.signInWithPassword(credentials);
 
 		if (error) {
-			return fail(400, { loginError: error.message });
+			return fail(400, { loginError: authErrorMessage(error.message) });
 		}
 
 		throw redirect(303, redirectPath(formData));
@@ -77,7 +85,7 @@ export const actions: Actions = {
 		});
 
 		if (error) {
-			return fail(400, { signupError: error.message });
+			return fail(400, { signupError: authErrorMessage(error.message) });
 		}
 
 		return {
@@ -99,7 +107,7 @@ export const actions: Actions = {
 		});
 
 		if (error) {
-			return fail(400, { oauthError: error.message });
+			return fail(400, { oauthError: authErrorMessage(error.message) });
 		}
 
 		if (!data.url) {
@@ -124,7 +132,7 @@ export const actions: Actions = {
 		});
 
 		if (error) {
-			return fail(400, { resetError: error.message });
+			return fail(400, { resetError: authErrorMessage(error.message) });
 		}
 
 		return {
@@ -152,7 +160,7 @@ export const actions: Actions = {
 		const { error } = await locals.supabase.auth.updateUser({ password });
 
 		if (error) {
-			return fail(400, { updatePasswordError: error.message });
+			return fail(400, { updatePasswordError: authErrorMessage(error.message) });
 		}
 
 		throw redirect(303, '/members?message=password-updated');
@@ -162,7 +170,7 @@ export const actions: Actions = {
 		const { error } = await locals.supabase.auth.signOut();
 
 		if (error) {
-			return fail(400, { logoutError: error.message });
+			return fail(400, { logoutError: authErrorMessage(error.message) });
 		}
 
 		throw redirect(303, '/members?message=signed-out');
