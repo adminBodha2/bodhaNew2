@@ -50,6 +50,7 @@
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/academy">Academy</a>
 					<a class="foot-link blank white" href="/wiki">Knowledge Base</a>
+					<a class="foot-link blank white" href="/wiki/temples">Hindu Temples</a>
 					<!--
 					<a class="foot-link blank white" href="/ontology">Ontology</a>
 					<a class="foot-link blank white" href="/concepts">Concepts</a>

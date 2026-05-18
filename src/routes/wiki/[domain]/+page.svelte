@@ -29,40 +29,33 @@
 				{/if}
 			</div>
 		</Crumb>
-		<div class="section-grid">
+		<div class="box rgap32">
 			{#each data.sections as section}
-				<section class="domain-section">
-					<div class="section-head">
-						<h2>{section.title}</h2>
-						<span>{section.items.length}</span>
-					</div>
-					{#if section.items.length}
-						<div class="item-list">
-							{#each section.items as item}
-								<article class="domain-card">
-									<div class="card-main">
-										{#if item.href}
-											<a href={item.href}>{item.title}</a>
-										{:else}
-											<h3>{item.title}</h3>
-										{/if}
-										{#if item.authors.length}
-											<p class="meta-line">{item.authors.join(', ')}</p>
-										{/if}
-										{#if item.description}
-											<p class="description">{item.description}</p>
-										{/if}
-									</div>
+				<div class="domain-section">
+					<h2 class="txt-2xl w600">{section.title}</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+						{#each section.items as item}
+							<article class="box whitestone p32">
+								<div class="box">
 									{#if item.lens}
-										<span class="lens">{item.lens}</span>
+										<p class="txt-xs tt-u w500 theme">{item.lens}</p>
 									{/if}
-								</article>
-							{/each}
-						</div>
-					{:else}
-						<p class="empty-note">No connected {section.title.toLowerCase()} yet.</p>
-					{/if}
-				</section>
+									{#if item.href}
+										<a class="txt-xl w500 ptop8 pbot16" href={item.href}>{item.title}</a>
+									{:else}
+										<h3 class="txt-xl w500 ptop8 pbot16">{item.title}</h3>
+									{/if}
+									{#if item.description}
+										<p class="grey1 lh14 pbot16">{item.description}</p>
+									{/if}
+									{#if item.authors.length}
+										<p class="txt-sm tt-u w500 grey2">{item.authors.join(', ')}</p>
+									{/if}
+								</div>
+							</article>
+						{/each}
+					</div>
+				</div>
 			{/each}
 		</div>
 	</section>
@@ -75,94 +68,8 @@
 	flex-wrap: wrap
 	gap: 7px
 
-.section-grid
-	display: grid
-	gap: 24px
-
 .domain-section
 	display: grid
 	gap: 12px
 
-.section-head
-	display: flex
-	align-items: baseline
-	justify-content: space-between
-	gap: 16px
-	border-bottom: var(--border-main)
-	padding-bottom: 8px
-	h2
-		margin: 0
-		color: var(--color-black)
-		font-size: clamp(1.35rem, 3vw, 2rem)
-		font-weight: 700
-		letter-spacing: 0
-	span
-		color: var(--domain-color)
-		font-size: 0.86rem
-		font-weight: 800
-
-.item-list
-	display: grid
-	grid-template-columns: repeat(2, minmax(0, 1fr))
-	gap: 10px
-	@media (max-width: 760px)
-		grid-template-columns: 1fr
-
-.domain-card
-	display: flex
-	align-items: flex-start
-	justify-content: space-between
-	gap: 12px
-	border: var(--border-main)
-	border-radius: 7px
-	padding: 14px
-	background: var(--color-back)
-
-.card-main
-	display: grid
-	gap: 5px
-	min-width: 0
-	a,
-	h3
-		margin: 0
-		color: var(--color-black)
-		font-size: 0.98rem
-		font-weight: 700
-		line-height: 1.25
-		letter-spacing: 0
-		text-decoration: none
-	a:hover
-		color: var(--domain-color)
-
-.meta-line,
-.description
-	margin: 0
-	line-height: 1.4
-
-.meta-line
-	color: var(--domain-color)
-	font-size: 0.78rem
-	font-weight: 700
-
-.description
-	color: var(--color-grey-1)
-	font-size: 0.84rem
-
-.lens
-	flex: 0 0 auto
-	border-radius: 999px
-	padding: 4px 7px
-	background: color-mix(in srgb, var(--domain-color) 10%, transparent)
-	color: var(--color-grey-2)
-	font-size: 0.68rem
-	font-weight: 700
-	text-transform: uppercase
-
-.empty-note
-	margin: 0
-	border: var(--border-main)
-	border-radius: 7px
-	padding: 14px
-	color: var(--color-grey-1)
-	background: var(--color-stone-1-2)
 </style>

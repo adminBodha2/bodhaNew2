@@ -40,6 +40,8 @@ type ListedNode = {
 	href: string | null;
 	authors: string[];
 	lens: string | null;
+	route: string | null;
+	source: string | null;
 };
 
 type Section = {
@@ -59,7 +61,6 @@ const sectionOrder = [
 	{ key: 'project', title: 'Research' },
 	{ key: 'blog', title: 'Essays' },
 	{ key: 'book', title: 'Books' },
-	{ key: 'wiki', title: 'Knowledge Pages' }
 ];
 
 function routeFor(node: WikiNode) {
@@ -75,7 +76,9 @@ function listedNode(node: WikiNode): ListedNode {
 		description: node.description ?? '',
 		href: routeFor(node),
 		authors: node.meta?.author ?? [],
-		lens: node.meta?.lens || null
+		lens: node.meta?.lens || null,
+		route: node.meta?.route || null,
+		source: node.meta?.source || null
 	};
 }
 
@@ -103,7 +106,7 @@ export const load: PageLoad = ({ params }) => {
 		key,
 		title,
 		items: connected.filter((node) => node.type === key).map(listedNode)
-	}));
+	})).filter((section) => section.items.length > 0);
 
 	const domains = nodes
 		.filter((node) => node.type === 'domain')
