@@ -1,4 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit';
+import type { EmailOtpType } from '@supabase/supabase-js';
 import type { Actions, PageServerLoad } from './$types';
 
 function readCredentials(formData: FormData) {
@@ -33,6 +34,33 @@ function authErrorMessage(message: string) {
 }
 
 export const load: PageServerLoad = async ({ locals, url }) => {
+	const code = url.searchParams.get('code');
+	const tokenHash = url.searchParams.get('token_hash');
+	const type = url.searchParams.get('type') as EmailOtpType | null;
+
+	if (code) {
+		const { error } = await locals.supabase.auth.exchangeCodeForSession(code);
+
+		if (!error) {
+			throw redirect(303, '/members?message=confirmed');
+		}
+
+		throw redirect(303, '/members?error=Authentication%20callback%20failed');
+	}
+
+	if (tokenHash && type) {
+		const { error } = await locals.supabase.auth.verifyOtp({
+			type,
+			token_hash: tokenHash
+		});
+
+		if (!error) {
+			throw redirect(303, '/members?message=confirmed');
+		}
+
+		throw redirect(303, '/members?error=Authentication%20callback%20failed');
+	}
+
 	const { session, user } = await locals.safeGetSession();
 
 	return {
