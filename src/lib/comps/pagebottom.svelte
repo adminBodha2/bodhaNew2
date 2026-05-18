@@ -20,21 +20,21 @@
 			</button>
 		</div>
 		<div class="footer-grid">
-			<div class="foot-brand box rgap16">
+			<div class="foot-brand box rgap16 sm:pbot16">
 				<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo" /></a>
 				<p class="light-footer">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="light-footer"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a> Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br /><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
-				<div class="row ycenter cgap8">
+				<p class="light-footer"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a> <br />Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
+				<div class="row ycenter cgap16">
 					<Designed />
-					<!--
-				<button class="blank" onclick={toggleTheme}>
-					{#if $darkTheme}
-						<Sun/>
-					{:else}
-						<Moon/>
-					{/if}
-				</button>
-				-->
+					<button class="blank" onclick={toggleTheme}>
+						{#if $darkTheme}
+							<Sun />
+							<p class="txt-xs white pleft8">Light Mode</p>
+						{:else}
+							<Moon />
+							<p class="txt-xs white pleft8">Dark Mode</p>
+						{/if}
+					</button>
 				</div>
 			</div>
 			<div class="foot-col rgap8 lg:rgap16">
@@ -49,6 +49,7 @@
 				<p class="txt-00 light-footer tt-u">learning</p>
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/academy">Academy</a>
+					<a class="foot-link blank white" href="/wiki">Knowledge Base</a>
 					<!--
 					<a class="foot-link blank white" href="/ontology">Ontology</a>
 					<a class="foot-link blank white" href="/concepts">Concepts</a>
@@ -239,7 +240,7 @@ p.light-footer
 
 .foot-scroll-arrow
 	font-size: 1rem
-	color: var(--color-theme-dark)
+	color: var(--color-theme)
 	line-height: 1
 	transition: transform 180ms ease
 
@@ -247,7 +248,7 @@ p.light-footer
 	font-size: 8px
 	font-weight: 700
 	letter-spacing: 0.1em
-	color: var(--color-theme-dark)
+	color: var(--color-theme)
 
 .footer-grid
 	display: grid

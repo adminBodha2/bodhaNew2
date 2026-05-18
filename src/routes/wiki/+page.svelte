@@ -33,31 +33,23 @@
 		</div>
 		<div class="box rgap24 bordertop ptop32">
 			<h2 class="txt-2xl w600">Understanding the Wiki</h2>
-			<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
-				<div class="box rgap16">
-					<p class="highlight-text">All content is group along two paths - type of content, and theme.</p>
-					<p class="highlight-text"><span class="theme">Types:</span> essays/articles, books, thinkers, schools, questions, research. Of these, the final 4 groups classify content along Bodha's internal research work.</p>
-					<p class="highlight-text"><span class="theme">Domains:</span> thematic classification used across the website.</p>
-					<p class="highlight-text">Use the graph view below to explore, or navigate by structured pages. <span class="w600">Explore our repository of 200+ Hindu temples <a class="linkedlight" href="/wiki/temples">here.</a></span></p>
-					<p class="highlight-text">Explore our <a class="linkedlight" href="/wiki/iks-publications">IKS publications repository.</a></p>
+			<div class="grid grid-cols-1 lg:grid-cols-3 cgap64 rgap16">
+				<div class="box rgap16 col-span-1">
+					<p class="txt-lg">All content is group along two paths - type of content, and theme.</p>
+					<p class="txt-lg"><span class="theme">Types:</span> essays/articles, books, thinkers, schools, questions, research. Of these, the final 4 groups classify content along Bodha's internal research work.</p>
+					<p class="txt-lg"><span class="theme">Domains:</span> thematic classification used across the website.</p>
+					<p class="txt-lg">Use the graph view below to explore, or navigate by structured pages. <span class="w600">Explore our repository of 200+ Hindu temples <a class="linkedlight" href="/wiki/temples">here.</a></span></p>
+					<p class="txt-lg">Explore our <a class="linkedlight" href="/wiki/iks-publications">IKS publications repository.</a></p>
 				</div>
-				<div class="box rgap16">
-					<p class="highlight-text w600">Domains:</p>
-					<p class="txt-lg lh15">
-						Arts and Aesthetics<br />
-						Civilizational Consciousness<br />
-						Darshanas and Philosophy<br />
-						Dharmashastra and Polity<br />
-						Festivals and Living Tradition<br />
-						History and Civilizational Recovery<br />
-						Indology and Civilizational Critique<br />
-						Indian Knowledge Systems<br />
-						Language and Sanskrit<br />
-						Puranas and Itihasa<br />
-						Sacred Geography and Temples<br />
-						Sindhu-Sarasvati and Origins<br />
-						Shruti and the Vedic World
-					</p>
+				<div class="box rgap16 col-span-2">
+					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
+						{#each data.domains as domain}
+							<a href="/wiki/{domain.slug}" class="blank box whitestone p16 rgap8">
+								<p class="txt-lg w600">{domain.title}</p>
+								<p class="grey1">{domain.description}</p>
+							</a>
+						{/each}
+					</div>
 				</div>
 			</div>
 		</div>

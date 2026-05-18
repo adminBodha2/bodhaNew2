@@ -90,6 +90,9 @@
 
 <style lang="sass">
 
+.app-box
+	background: var(--color-back)
+
 main
 	transition: background-size 0.35s ease
 	view-transition-name: page

@@ -54,7 +54,7 @@
 				</Reveal>
 			</div>
 			<Reveal visible={headVis.visible} delay={600} duration={600} direction="down">
-				<p class="txt-2xl md:txt-3xl width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+				<p class="txt-2xl md:txt-3xl lh15 width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 			</Reveal>
 		</div>
 	</section>

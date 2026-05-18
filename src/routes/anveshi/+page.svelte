@@ -386,7 +386,7 @@
 		background: linear-gradient(154.4deg, #F8F7F4 6.75%, #F9F8F6 89.88%)
 	
 .sub-item
-	border: 1px solid #d7d7d7
+	border: 1px solid var(--color-border-dark)
 	border-radius: 8px
 	background: var(--color-back)
 	&.swiper-sub

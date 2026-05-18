@@ -65,16 +65,16 @@
 
 	// ── Colours ────────────────────────────────────────────────────────────────
 	const colorByType: Record<string, string> = {
-		domain: '#0f172a', // dark slate — the 13 hub rings
-		wiki: '#5b21b6', // violet — synthesised knowledge pages
-		thinker: '#7c3aed', // purple
-		school: '#b45309', // amber-brown
-		question: '#d3633a', // terracotta
-		project: '#0f766e', // teal
-		blog: '#1971c2', // blue
-		book: '#0f4c81', // navy
-		'external-article': '#64748b', // slate
-		lab: '#334155', // dark slate
+		domain: '#D9480F', // dark slate — the 13 hub rings
+		wiki: '#F59F00', // violet — synthesised knowledge pages
+		thinker: '#15AABF', // purple
+		school: '#22B8CF', // amber-brown
+		question: '#7048E8', // terracotta
+		project: '#F03E3E', // teal
+		blog: '#2F9E44', // blue
+		book: '#0CA678', // navy
+		'external-article': '#66A80F', // slate
+		lab: '#3BC9DB', // dark slate
 		concept: '#374151'
 	};
 
@@ -394,10 +394,9 @@
 
 <section class="wiki-graph" aria-label="Bodha knowledge graph">
 	<div class="graph-shell">
-		<div class="graph-toolbar">
+		<div class="graph-toolbar row mcol ycenter">
 			<label class="search-control">
-				<p class="rem1 grey">Search nodes</p>
-				<input bind:value={query} type="search" placeholder="dharma, Aurobindo, temple, karma…" />
+				<input bind:value={query} type="search" placeholder="Search. Ex- dharma, Aurobindo, temple, karma…" />
 			</label>
 			<div class="filter-tray">
 				{#each filterTypes as f}
@@ -410,31 +409,26 @@
 				{/each}
 			</div>
 		</div>
-
 		<div class="graph-stage">
 			<div class="graph-canvas" bind:this={graphEl}></div>
-
-			<aside class="node-panel">
+			<aside class="node-panel box">
 				{#if selectedNode}
-					<p class="node-type-label">{typeLabel(selectedNode.type)}</p>
-					<h3 class="node-title">{selectedNode.title}</h3>
-
+					<p class="txt-xs tt-u grey0 w500 pbot8">{typeLabel(selectedNode.type)}</p>
+					<h3 class="txt-lg w600 pbot8">{selectedNode.title}</h3>
 					{#if selectedNode.description}
-						<p class="node-desc">{selectedNode.description}</p>
+						<p class="grey1 pbot8">{selectedNode.description}</p>
 					{/if}
-
 					{#if (selectedNode.meta as Record<string, unknown>)?.domain}
-						<p class="node-meta">Domain: <span>{(selectedNode.meta as Record<string, unknown>).domain as string}</span></p>
+						<p class="txt-00 tt-u w500 theme">Domain: <span>{(selectedNode.meta as Record<string, unknown>).domain as string}</span></p>
 					{/if}
 					{#if (selectedNode.meta as Record<string, unknown>)?.lens}
-						<p class="node-meta">Lens: <span>{(selectedNode.meta as Record<string, unknown>).lens as string}</span></p>
+						<p class="txt-00 tt-u w500 theme">Lens: <span>{(selectedNode.meta as Record<string, unknown>).lens as string}</span></p>
 					{/if}
-
 					{#if selectedEdges.length}
-						<div class="edge-list">
+						<div class="edge-list box rgap16">
 							{#each selectedEdges as edge}
 								<div class="edge-item">
-									<span class="edge-label">{edge.label}</span>
+									<span class="txt-00 tt-u w500 grey0">{edge.label}</span>
 									<button
 										class="edge-target"
 										onclick={() => {
@@ -442,7 +436,7 @@
 											if (n) selectNode(n);
 										}}>
 										<i class="dot sm" style="--c: {colorByType[edge.otherType] ?? '#999'}"></i>
-										{edge.otherTitle}
+										<p class="txt-bs">{edge.otherTitle}</p>
 									</button>
 									{#if edge.notes}
 										<p class="edge-notes">{edge.notes}</p>
@@ -451,7 +445,6 @@
 							{/each}
 						</div>
 					{/if}
-
 					<div class="panel-actions">
 						{#if nodeHref(selectedNode)}
 							<a href={nodeHref(selectedNode)} class="btn-primary">Open</a>
@@ -460,9 +453,9 @@
 						<button class="btn-secondary" onclick={resetView}>Reset</button>
 					</div>
 				{:else}
-					<p class="panel-hint tt-u blue">Knowledge map</p>
-					<p class="w500 body-text tight">Click any node to explore</p>
-					<p class="descriptor-text grey">13 domain hubs connect {nodes.length} nodes across thinkers, schools, questions, research, and the wiki.</p>
+					<p class="txt-xs tt-u grey0 pbot8">Knowledge map</p>
+					<p class="txt-lg w600 pbot8">Click any node to explore</p>
+					<p class="grey1">13 domain hubs connect {nodes.length} nodes across thinkers, schools, questions, research, and the wiki.</p>
 					<div class="top-list">
 						{#each topNodes as node}
 							<button class="top-node-btn" onclick={() => selectNode(node)}>
@@ -475,7 +468,6 @@
 				{/if}
 			</aside>
 		</div>
-
 		<div class="graph-footer">
 			<div class="legend">
 				{#each filterTypes.filter((f) => f.value !== 'all') as f}
@@ -498,33 +490,27 @@
 
 .wiki-graph
 	display: grid
-	margin-bottom: 48px
 
 .graph-shell
-	border: 1px solid rgba(7,7,7,0.1)
-	border-radius: 10px
+	border: var(--border-main)
+	border-radius: 8px
 	overflow: hidden
-	background: rgba(248,247,244,0.9)
+	background: var(--color-stone-2)
 	background-image: linear-gradient(135deg, rgba(255,255,255,0.97), rgba(248,247,244,0.9)), radial-gradient(circle at 14% 14%, rgba(211,99,58,0.1), transparent 26%), radial-gradient(circle at 86% 10%, rgba(25,113,194,0.1), transparent 28%), radial-gradient(circle at 50% 90%, rgba(91,33,182,0.06), transparent 32%)
-	box-shadow: 0 24px 48px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03)
 
 .graph-toolbar
-	display: grid
 	gap: 14px
 	padding: 16px
-	border-bottom: 1px solid rgba(7,7,7,0.08)
-	background: rgba(255,255,255,0.75)
+	border-bottom: var(--border-main)
+	background: var(--color-back)
 	backdrop-filter: blur(20px)
-	@media (min-width: 960px)
-		grid-template-columns: minmax(260px, 380px) 1fr
-		align-items: end
 
 .search-control
 	display: grid
 	gap: 6px
 	input
 		width: 100%
-		border: 1px solid rgba(7,7,7,0.12)
+		border: var(--border-main)
 		border-radius: 6px
 		background: var(--color-back)
 		padding: 11px 13px
@@ -544,17 +530,17 @@
 		display: inline-flex
 		align-items: center
 		gap: 5px
-		border: 1px solid rgba(7,7,7,0.1)
+		border: var(--border-main)
 		border-radius: 999px
 		background: var(--color-back)
 		padding: 6px 12px
 		color: var(--color-grey-2)
 		font-size: 0.78rem
-		font-weight: 650
+		font-weight: 500
 		cursor: pointer
 		transition: all 0.15s
 		&:hover
-			border-color: rgba(7,7,7,0.2)
+			border: var(--border-dark)
 			color: var(--color-black)
 		&.active
 			border-color: var(--color-theme)
@@ -592,51 +578,15 @@
 		max-height: none
 		margin: 0 12px 12px
 
-.node-type-label
-	margin: 0 0 6px !important
-	color: var(--color-anveshi) !important
-	font-size: 0.68rem !important
-	font-weight: 800
-	text-transform: uppercase
-	letter-spacing: 0.12em
-
-.node-title
-	margin: 0 0 10px !important
-	font-size: 1.05rem
-	line-height: 1.3
-	color: var(--color-black)
-
-.node-desc
-	color: var(--color-grey-2)
-	font-size: 0.84rem
-	line-height: 1.55
-	margin: 0 0 10px !important
-
-.node-meta
-	font-size: 0.76rem
-	color: var(--color-grey-2)
-	margin: 0 0 4px !important
-	span
-		color: var(--color-black)
-		font-weight: 600
-
 .edge-list
 	margin-top: 14px
 	display: grid
-	gap: 8px
 	border-top: 1px solid rgba(7,7,7,0.07)
 	padding-top: 12px
 
 .edge-item
 	display: grid
 	gap: 3px
-
-.edge-label
-	font-size: 0.65rem
-	font-weight: 800
-	text-transform: uppercase
-	letter-spacing: 0.1em
-	color: var(--color-grey-1)
 
 .edge-target
 	display: inline-flex
@@ -685,12 +635,6 @@
 	color: var(--color-grey-2)
 	&:hover
 		color: var(--color-black)
-
-.panel-hint
-	font-size: 0.7rem !important
-	font-weight: 800 !important
-	letter-spacing: 0.1em !important
-	margin-bottom: 8px !important
 
 .top-list
 	display: grid

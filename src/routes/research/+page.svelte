@@ -103,6 +103,7 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
+	color: var(--color-primary)
 	transition: all 220ms cubic-bezier(0.22, 1, 0.36, 1)
 	&:hover
 		background: var(--color-back)
