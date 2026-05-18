@@ -73,13 +73,16 @@
 					<p class="highlight-text notice error">{data.error}</p>
 				{/if}
 				{#if form?.signupMessage}
-					<p class="highlight-text notice">{form.signupMessage}</p>
+					<p class="highlight-text theme notice">{form.signupMessage}</p>
 				{/if}
 				{#if data.message === 'signed-out'}
 					<p class="highlight-text theme notice">You have been signed out.</p>
 				{/if}
 				{#if data.message === 'password-updated'}
 					<p class="highlight-text theme notice">Your password has been updated.</p>
+				{/if}
+				{#if data.message === 'confirmed'}
+					<p class="highlight-text theme notice">Thank you for confirming. You are now subscribed, and will receive our monthly newsletters and fortnightly releases of Scrolls of Aryavarta directly in your email inbox.</p>
 				{/if}
 				<p class="highlight-text width70">Namaste, please sign in or create an account. By subscribing to Bodha you will receive our monthly newsletters and fortnightly releases of Scrolls of Aryavarta directly in your email inbox.</p>
 			</div>

@@ -65,7 +65,7 @@ export const actions: Actions = {
 	signup: async ({ request, locals, url }) => {
 		const formData = await request.formData();
 		const credentials = readCredentials(formData);
-		const next = redirectPath(formData);
+		const next = '/members?message=confirmed';
 		const emailRedirectTo = new URL('/members/callback', url.origin);
 		emailRedirectTo.searchParams.set('next', next);
 
@@ -89,7 +89,7 @@ export const actions: Actions = {
 		}
 
 		return {
-			signupMessage: 'Check your email to confirm the account, then return here to sign in.'
+			signupMessage: 'Thank you. Please check your email to confirm the account.'
 		};
 	},
 
