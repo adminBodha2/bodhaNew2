@@ -4,8 +4,8 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import PDFReader from '$lib/comps/pdfreader.svelte';
-	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import { absoluteUrl, absoluteImage, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -30,9 +30,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
 <Container>
-	<section class="key-image">
-		<WaterRipple src={data.image} class="ripple-motion" brushSize={100} />
-	</section>
+	<Parallax imageLink={data.image} wipe={true} />
 	<section class="box wrapper-std first-box rgap32">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
 			<div class="box">
@@ -41,6 +39,9 @@
 		</Crumb>
 		<div class="width70 content-highlights">
 			<data.content />
+		</div>
+		<div class="box rgap8">
+			<p class="txt-lg theme">To receive the fortnightly issues in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
 		</div>
 		<div class="pdf-reader">
 			<PDFReader src={data.pdflink} title={data.title} height="82vh" />

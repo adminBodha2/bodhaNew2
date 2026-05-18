@@ -23,6 +23,7 @@
 			<div class="foot-brand box rgap16">
 				<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo" /></a>
 				<p class="light-footer">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
+				<p class="light-footer"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a></p>
 				<p class="light-footer">Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br /><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
 				<div class="row ycenter cgap8">
 					<Designed />

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
-	import Title from '$lib/comps/page-title.svelte'
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
@@ -39,62 +39,57 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container graphing={true}>
-	<section class="key-image desbodha">
-		<WaterRipple src={imageLink} class="ripple-motion" brushSize={70} />
-	</section>
-	<section class="box wrapper-std rgap64 first-box">
-			<Crumb showT={false} showD={false} />
-		<h1 class="ptop32 anim-flyup"><span class="desb">design</span>Bodha</h1>
-		<h2 class="card-title thin">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</h2>
+<Container>
+	<Parallax {imageLink} wipe={true} />
+	<section class="wrapper-std">
+		<Crumb showT={false} showD={false} />
+		<h1 class="txt-8xl w600 anim-flyup"><span class="desb">design</span>Bodha</h1>
+		<p class="highlight-text">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</p>
 		<img class="motif anim-flyin-right" style="margin-left: 200px;transform: translateX(-{sY / 7}px) rotate({sY / 2}deg)" src="/images/designbodha/desbodha-motif.webp" alt="designBodha motif" />
-	</section>
-	<section class="box wrapper-std rgap64 growingline" id="image-panel">
-		<div class="grid grid-cols-1 lg:grid-cols-2 has-background rgap16">
-			<div class="box rgap16 up anim-fadeIn card-padded">
-				<p class="paragraph-text">In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -</p>
-				<p class="paragraph-text">
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
+			<div class="box rgap16">
+				<p class="highlight-text">
+					In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -
+				</p>
+				<p class="highlight-text">
 					<i>"together creating a world that as individuals none of us would choose."</i>
 				</p>
-				<p class="paragraph-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
-				<p class="paragraph-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
+			</div>
+			<div class="box rgap16">
+				<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
+				<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
 				<a class="primary desb" href="/designbodha/whitepaper-on-dharmic-design"><span>Whitepaper on Dharmic Design</span></a>
 			</div>
-			<div class="box down">
-				<img class="square-image" src="/images/designbodha/db20.webp" alt="yagya" />
-			</div>
 		</div>
 	</section>
-	<section class="box wrapper-std rgap64 growingline alternate" id="image-panel-2">
-			<h2 class="thin card-title anim-flyup">Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br>
-				is creatorship grounded in Hindu metaphysics.<br>
-				It redefines <span class="desb">design as a sacred act</span><br>
-				of aligning human creation with the cosmic order.
-			</h2>
-			<div class="width60">
-			<p class="paragraph-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
-			</div>
-	</section>
-	<section class="box wrapper-std rgap64 growingline">
-		<Title text="project objectives"/>
-	<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32">
+	<section class="wrapper-std growingline">
+		<Title text="project objectives" />
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap24">
 			<div class="box rgap16">
-				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2"/>
-				<p class="card-title">Phase 1 - Foundation and Taxonomy</p>
-				<p class="rem1">
-					Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.
+				<p class="txt-2xl lg:txt-3xl w500">
+					Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
+					is creatorship grounded in Hindu metaphysics.<br />
+					It redefines <span class="desb">design as a sacred act</span><br />
+					of aligning human creation with the cosmic order.
 				</p>
 			</div>
 			<div class="box rgap16">
-				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2"/>
-				<p class="card-title">Phase 2 - Framework Toolkits</p>
-				<p class="rem1">
-					Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.
-				</p>
+				<p class="highlight-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
+			</div>
+		</div>
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32">
+			<div class="box rgap16">
+				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2" />
+				<p class="txt-xl w600">Phase 1 - Foundation and Taxonomy</p>
+				<p class="txt-lg grey1 lh14">Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.</p>
+			</div>
+			<div class="box rgap16">
+				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2" />
+				<p class="txt-xl w600">Phase 2 - Framework Toolkits</p>
+				<p class="txt-lg grey1 lh14">Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.</p>
 			</div>
 		</div>
 	</section>
-
 </Container>
 
 <style lang="sass">
@@ -116,35 +111,6 @@ img.motif2
 		transform: rotate(0deg)
 	100%
 		transform: rotate(360deg)
-
-img.square-image
-	object-fit: cover
-	object-position: center center
-	width: 100%
-	height: 320px
-	@media screen and (min-width: 1025px)
-		height: 360px
-		width: 360px
-		margin-left: 64px
-		margin-top: 64px
-	@media screen and (min-width: 1201px)
-		height: 640px
-		width: 640px
-
-#image-panel-2
-	position: relative
-
-#image-panel
-	align-items: center
-	justify-content: center
-	@media screen and (min-width: 1025px)
-		height: 100vh
-		padding: 3rem
-
-.anim-fadeIn
-	@media screen and (min-width: 1025px)
-		animation: fadeIn 400s
-		animation-timeline: view()
 
 @keyframes lateMover
 	0%
@@ -202,12 +168,5 @@ img.motif
 	100%
 		opacity: 1
 		transform: translateY(0)
-
-.key-image
-	height: 440px
-	margin-top: 80px
-	@media screen and (min-width: 1025px)
-		height: 720px
-		margin-top: 128px
 
 </style>

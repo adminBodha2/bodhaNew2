@@ -49,6 +49,9 @@
 			<p class="highlight-text">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling.</p>
 			<p class="highlight-text">Bodha’s work is expanding across research, writing, publishing, design, archives, and public education. Rather than letting these efforts remain scattered across different platforms, this newsletter will serve as a regular monthly record of what we are thinking, building, publishing, and preparing.</p>
 		</div>
+		<div class="box rgap8">
+			<p class="txt-lg theme">To receive the monthly newsletters in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
+		</div>
 		<div class="grid lg:grid-cols-3">
 			{#each posts as item}
 				<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">

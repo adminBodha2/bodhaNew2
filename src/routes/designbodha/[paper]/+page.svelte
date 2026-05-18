@@ -1,38 +1,26 @@
 <script lang="ts">
-
-	import Container from '$lib/comps/wrapper.svelte'
-	import Crumb from '$lib/comps/breadcrumb.svelte'
+	import Container from '$lib/comps/wrapper.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
-	import Head from '$lib/comps/headcomponent.svelte'
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
 
 	let { data } = $props();
-
 </script>
 
-
 <Container>
-<section class="key-image">
-	<WaterRipple src={data.image} class="ripple-motion" brushSize={100}/>
-</section>
-<section class="box wrapper-std first-box">
-	<Crumb showT={true} title={data.title} showD={true} desc={data.description}/>
+	<Parallax imageLink={data.image} wipe={true} />
+	<section class="box wrapper-std first-box">
+		<Crumb showT={true} title={data.title} showD={true} desc={data.description} />
 		<div class="whitepaper-box">
 			<div class="classic-document">
-				<data.content/>
+				<data.content />
 			</div>
 		</div>
-</section>
-	
+	</section>
 </Container>
 
 <style lang="sass">
-
-.key-image
-	height: 200px
-	margin-top: 80px
-	@media screen and (min-width: 1025px)
-		height: 620px
-		margin-top: 128px
 
 .whitepaper-box
 	.classic-document
