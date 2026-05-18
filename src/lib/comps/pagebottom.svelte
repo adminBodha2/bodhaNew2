@@ -23,8 +23,7 @@
 			<div class="foot-brand box rgap16">
 				<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo" /></a>
 				<p class="light-footer">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="light-footer"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a></p>
-				<p class="light-footer">Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br /><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
+				<p class="light-footer"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a> Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <br /><a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
 				<div class="row ycenter cgap8">
 					<Designed />
 					<!--
@@ -39,7 +38,7 @@
 				</div>
 			</div>
 			<div class="foot-col rgap8 lg:rgap16">
-				<p class="citation light-footer tt-u">pillars</p>
+				<p class="txt-00 light-footer tt-u">pillars</p>
 				<div class="foot-links box rgap16">
 					<a class="foot-link blank white" href="/research">Research</a>
 					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
@@ -47,7 +46,7 @@
 				</div>
 			</div>
 			<div class="foot-col rgap8 lg:rgap16">
-				<p class="citation light-footer tt-u">learning</p>
+				<p class="txt-00 light-footer tt-u">learning</p>
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/academy">Academy</a>
 					<!--
@@ -57,7 +56,7 @@
 				</div>
 			</div>
 			<div class="foot-col rgap8 lg:rgap16">
-				<p class="citation light-footer tt-u">Readings</p>
+				<p class="txt-00 light-footer tt-u">Readings</p>
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/blog">Blog</a>
 					<a class="foot-link blank white" href="/library">Open Library</a>
@@ -68,7 +67,7 @@
 				</div>
 			</div>
 			<div class="foot-col rgap8 lg:rgap16">
-				<p class="citation light-footer tt-u">Other</p>
+				<p class="txt-00 light-footer tt-u">Other</p>
 				<div class="foot-links rgap16">
 					<a class="foot-link blank white" href="/about">About</a>
 					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
@@ -182,10 +181,10 @@ p.light-footer
 	width: 100%
 	overflow: hidden
 	padding: 1rem
-	row-gap: 4rem
+	row-gap: 2rem
 	margin-left: auto
 	margin-right: auto
-	padding-top: 2	rem
+	padding-top: 3rem
 	@media (max-width: 1024px)
 		padding-left: 1rem
 		padding-right: 1rem
@@ -274,7 +273,7 @@ p.light-footer
 	.footer-logo
 		object-fit: contain
 		opacity: 0.9
-		height: 64px
+		height: 48px
 		margin-right: auto
 
 
@@ -292,26 +291,12 @@ p.light-footer
 	flex-direction: column
 
 .foot-link
-	font-size: 1rem
+	font-size: 0.9rem
 	font-weight: 400
 	transition: color 0.12s ease
 	text-transform: uppercase
 	&:hover
 		color: var(--color-theme)
-
-button.footer-btn
-	background: none
-	border: none
-	color: #FFFFFF
-	display: flex
-	flex-direction: column
-	text-align: left
-	padding-left: 0
-	@media screen and (min-width: 1025px)
-		text-align: right
-		align-items: flex-end
-		width: 100%
-		padding-right: 0
 
 // ── BOTTOM BAR ────────────────────────────────────────────
 

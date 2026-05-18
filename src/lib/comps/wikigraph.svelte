@@ -225,7 +225,7 @@
 	// ── Rendering ─────────────────────────────────────────────────────────────
 	function renderNode(node: GraphPoint, ctx: CanvasRenderingContext2D, scale: number) {
 		const color = colorByType[node.type] ?? '#1971c2';
-		const isDomain = node.type === 'domain';
+		const isDomain = (node.type as string) === 'domain';
 		const isSelected = selectedId === node.id;
 		const isHovered = hoveredId === node.id;
 		const isNeighbor = selectedNode?.neighbors.has(node.id);
@@ -306,14 +306,14 @@
 			.backgroundColor('rgba(0,0,0,0)')
 			.nodeRelSize(4)
 			.nodeVal((n) => {
-				if (n.type === 'domain') return 18;
+				if ((n.type as string) === 'domain') return 18;
 				return Math.max(1, Math.sqrt(n.degree + 1));
 			})
 			.nodeColor((n) => colorByType[n.type] ?? '#1971c2')
 			.nodeLabel((n) => `${n.title}<br><span style="opacity:.7">${typeLabel(n.type)}</span>`)
 			.nodeCanvasObject(renderNode)
 			.nodePointerAreaPaint((node, color, ctx) => {
-				const r = node.type === 'domain' ? 18 : Math.max(6, Math.min(16, 6 + Math.sqrt(node.degree + 1) * 1.2));
+				const r = (node.type as string) === 'domain' ? 18 : Math.max(6, Math.min(16, 6 + Math.sqrt(node.degree + 1) * 1.2));
 				ctx.fillStyle = color;
 				ctx.beginPath();
 				ctx.arc(node.x ?? 0, node.y ?? 0, r, 0, 2 * Math.PI);
@@ -341,7 +341,7 @@
 				if (active) return sem === 'domain_assignment' ? 0.8 : 1.8;
 				return sem === 'domain_assignment' ? 0.3 : 0.5;
 			})
-			.linkCurvature(0)
+			.linkCurvature(() => 0)
 			.linkDirectionalParticles((link) => {
 				const src = typeof link.source === 'object' ? link.source.id : link.source;
 				const tgt = typeof link.target === 'object' ? link.target.id : link.target;
