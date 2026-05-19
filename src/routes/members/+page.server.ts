@@ -33,6 +33,10 @@ function authErrorMessage(message: string) {
 	return message;
 }
 
+function unknownAuthError(error: unknown) {
+	return error instanceof Error ? authErrorMessage(error.message) : 'Something went wrong. Please try again.';
+}
+
 export const load: PageServerLoad = async ({ locals, url }) => {
 	const code = url.searchParams.get('code');
 	const tokenHash = url.searchParams.get('token_hash');
@@ -105,12 +109,16 @@ export const actions: Actions = {
 			return fail(400, { signupError: 'Passwords do not match.' });
 		}
 
-		const { error } = await locals.supabase.auth.signUp({
-			...credentials,
-			options: {
-				emailRedirectTo: emailRedirectTo.toString()
-			}
-		});
+		const { error } = await locals.supabase.auth
+			.signUp({
+				...credentials,
+				options: {
+					emailRedirectTo: emailRedirectTo.toString()
+				}
+			})
+			.catch((error: unknown) => {
+				return { error: { message: unknownAuthError(error) } };
+			});
 
 		if (error) {
 			return fail(400, { signupError: authErrorMessage(error.message) });
