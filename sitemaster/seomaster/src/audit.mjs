@@ -3,7 +3,7 @@ import { TOPIC_CLUSTERS } from './config.mjs';
 export function auditInventory(inventory, options = {}) {
 	const issues = [];
 	for (const item of inventory) {
-		issues.push(...auditPageItem(item));
+		issues.push(...auditPageItem(item, inventory));
 	}
 
 	issues.push(...auditDiscoverability(inventory));
@@ -42,7 +42,7 @@ export function auditSinglePage(inventory, urlPath) {
 	return {
 		generatedAt: new Date().toISOString(),
 		page: item,
-		issues: auditPageItem(item)
+		issues: auditPageItem(item, inventory)
 	};
 }
 
@@ -62,8 +62,8 @@ export function auditTopic(inventory, topicKey) {
 	}
 
 	const matches = inventory
-		.filter((item) => isRankablePage(item.urlPath) && !isExternalPage(item))
-		.map((item) => ({ item, score: topicScore(item, cluster.terms) }))
+		.filter((item) => isRankablePage(item.urlPath) && !isExternalPage(item) && !item.isVirtualConcrete)
+		.map((item) => ({ item, score: scoreTopicPage(item, cluster.terms) }))
 		.filter((entry) => entry.score > 0)
 		.sort((a, b) => b.score - a.score);
 
@@ -97,8 +97,11 @@ export function auditTopic(inventory, topicKey) {
 		}
 	}
 
+	const hasDiscoverablePrimaryHub = cluster.primaryHub
+		? inventory.some((item) => item.urlPath === cluster.primaryHub)
+		: false;
 	const topMatches = matches.slice(0, 12).map(({ item, score }) => `${item.urlPath} (${score})`);
-	if (topMatches.length > 0) {
+	if (topMatches.length > 0 && !hasDiscoverablePrimaryHub) {
 		issues.push({
 			id: `topic-${topicKey}-top-pages`,
 			severity: 'low',
@@ -114,26 +117,28 @@ export function auditTopic(inventory, topicKey) {
 	return issues;
 }
 
-function auditPageItem(item) {
+function auditPageItem(item, inventory = []) {
 	const issues = [];
 	const title = item.title || item.html?.title || '';
 	const description = item.description || item.html?.description || '';
 
-	if (item.isEndpoint || item.isRedirect || !isRankablePage(item.urlPath)) {
+	if (item.isEndpoint || item.isRedirect || item.isVirtualConcrete || !isRankablePage(item.urlPath)) {
 		return issues;
 	}
 
 	if (item.isDynamic && !item.absoluteUrl) {
-		issues.push({
-			id: `dynamic-route-pattern-${slugId(item.urlPath)}`,
-			severity: 'low',
-			urlPath: item.urlPath,
-			category: 'technical',
-			finding: 'Dynamic route pattern found without concrete page URLs in the current inventory.',
-			evidence: item.discoveredFrom,
-			recommendation: 'Concrete pages for this dynamic route should appear through sitemap, search, or live crawl if they are meant to rank.',
-			patchAvailable: false
-		});
+		if (!hasConcreteDynamicMatches(item.urlPath, inventory)) {
+			issues.push({
+				id: `dynamic-route-pattern-${slugId(item.urlPath)}`,
+				severity: 'low',
+				urlPath: item.urlPath,
+				category: 'technical',
+				finding: 'Dynamic route pattern found without concrete page URLs in the current inventory.',
+				evidence: item.discoveredFrom,
+				recommendation: 'Concrete pages for this dynamic route should appear through sitemap, search, or live crawl if they are meant to rank.',
+				patchAvailable: false
+			});
+		}
 		return issues;
 	}
 
@@ -178,11 +183,42 @@ function auditPageItem(item) {
 	return issues;
 }
 
+function hasConcreteDynamicMatches(routePattern, inventory) {
+	const matcher = dynamicRouteMatcher(routePattern);
+	if (!matcher) return false;
+
+	return inventory.some((item) =>
+		!item.isDynamic &&
+		!item.isEndpoint &&
+		isRankablePage(item.urlPath) &&
+		matcher.test(item.urlPath)
+	);
+}
+
+function dynamicRouteMatcher(routePattern) {
+	if (!routePattern?.includes('[') && !routePattern?.includes('*')) return null;
+
+	const segments = routePattern.split('/').filter(Boolean);
+	const pattern = segments
+		.map((segment) => {
+			if (segment === '*') return '/[^/]+';
+			if (/^\[\[\.\.\.[^\]]+\]\]$/.test(segment)) return '(?:/.+)?';
+			if (/^\[\.\.\.[^\]]+\]$/.test(segment)) return '/.+';
+			if (/^\[[^\]]+\]$/.test(segment)) return '/[^/]+';
+			return `/${escapeRegExp(segment)}`;
+		})
+		.join('');
+
+	return new RegExp(`^${pattern || '/'}$`);
+}
+
 function auditDiscoverability(inventory) {
 	const issues = [];
 	const byPath = new Map(inventory.map((item) => [item.urlPath, item]));
 	const concreteLocal = inventory.filter((item) =>
 		!item.isDynamic &&
+		!item.isEndpoint &&
+		!item.isVirtualConcrete &&
 		(item.sources.includes('markdown') || item.sources.includes('route-file')) &&
 		!item.sources.includes('sitemap') &&
 		!item.sources.includes('sitemap-code') &&
@@ -227,13 +263,16 @@ function auditDiscoverability(inventory) {
 	return issues;
 }
 
-function isRankablePage(urlPath) {
+export function isRankablePage(urlPath) {
 	if (!urlPath) return false;
 	if (urlPath.startsWith('/api/')) return false;
 	if (urlPath.includes('/auth')) return false;
+	if (urlPath === '/members/callback' || urlPath === '/members/signed-in') return false;
 	if (urlPath.startsWith('/transition')) return false;
 	if (urlPath.startsWith('/test-')) return false;
 	if (urlPath.startsWith('/site-docs')) return false;
+	if (urlPath === '/docs/[item]') return false;
+	if (urlPath === '/wiki/temples/[temple]') return false;
 	if (urlPath.startsWith('/docs/privacy') || urlPath.startsWith('/docs/refunds') || urlPath.startsWith('/docs/terms')) {
 		return false;
 	}
@@ -241,7 +280,7 @@ function isRankablePage(urlPath) {
 	return true;
 }
 
-function isExternalPage(item) {
+export function isExternalPage(item) {
 	const value = item.absoluteUrl || item.urlPath || '';
 	return /^https?:\/\//.test(value) && !value.includes('bodharesearch.in');
 }
@@ -264,7 +303,7 @@ function summarize(inventory, issues) {
 	};
 }
 
-function topicScore(item, terms) {
+export function scoreTopicPage(item, terms) {
 	const haystack = [
 		item.urlPath,
 		item.title,
@@ -299,4 +338,8 @@ function countBy(items, key) {
 
 function slugId(value) {
 	return String(value || 'root').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase() || 'root';
+}
+
+function escapeRegExp(value) {
+	return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

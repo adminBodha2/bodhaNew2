@@ -1,5 +1,6 @@
 ---
 title: Pottery and Ceramics
+description: "Pottery is the most abundant class of material recovered from nearly every excavation in the corpus and is addressed both through dedicated ceramic studies."
 type: wiki
 tags: 
   - ochre-colour-pottery

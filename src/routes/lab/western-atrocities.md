@@ -1,5 +1,5 @@
 ---
-title: Western Atrocities
+title: Western Atrocities | Colonial Violence, Genocide, and Historical Memory
 category: Working Notes
 date: 2025-12-08
 excerpt: 'A compilation of atrocities committed by Western countries over the centuries.'

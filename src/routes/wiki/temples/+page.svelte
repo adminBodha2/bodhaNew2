@@ -2,13 +2,20 @@
 
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
-	import Optimizer from '$lib/comps/seo-optimizer.svelte'
+	import Optimizer from '$lib/comps/seo-optimizer.svelte';
+	import Container from '$lib/comps/wrapper.svelte';
+	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
 	import type { GeoJSONSource, Map as MapLibreMap } from 'maplibre-gl';
 	import type { PageProps } from './$types';
 	import type { FeatureCollection } from 'geojson';
-	import '$lib/styles/maplibre-gl.css'
+	import '$lib/styles/maplibre-gl.css';
 	import temples from '$lib/serving/db-hindu-temples.json';
- 	let { data }: PageProps = $props();
+	import seoTopicLinks from '$lib/generated/seo-topic-links.json';
+	let { data }: PageProps = $props();
+
+	const title = 'Hindu Temples Wiki Map | Bodha';
+	const metaDescription = 'Explore Bodha wiki entries for Hindu temples across Bharat, with temple locations, deities, states, and sacred geography.';
 
 	//each temple carries this data on the page
 	type Temple = {
@@ -66,7 +73,7 @@
 			is_anveshi: boolean;
 			image: string | null;
 			chapter: string | null;
-			description: string | null
+			description: string | null;
 		};
 	};
 
@@ -77,12 +84,7 @@
 	};
 
 	//base background for the map
-	const CARTO_DARK_TILES = [
-		'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-		'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-		'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-		'https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
-	];
+	const CARTO_DARK_TILES = ['https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', 'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', 'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', 'https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'];
 
 	//adding geoson to show correct political boundaries of india
 	const INDIA_BOUNDARY_SOURCE = '/maps/india-boundary.geojson';
@@ -144,10 +146,7 @@
 	let mapReady = $state(false);
 
 	const validTemples = (temples as Temple[])
-		.filter(
-			(temple): temple is Temple & { latitude: number; longitude: number } =>
-				typeof temple.latitude === 'number' && typeof temple.longitude === 'number'
-		)
+		.filter((temple): temple is Temple & { latitude: number; longitude: number } => typeof temple.latitude === 'number' && typeof temple.longitude === 'number')
 		.map((temple) => ({
 			...temple,
 			mapKey: `${temple.slug}:${temple.latitude}:${temple.longitude}`,
@@ -159,16 +158,12 @@
 
 	let selectedStates = $state<string[]>([...states]);
 
-	const visibleTemples = $derived(
-		validTemples.filter(
-			(temple) =>
-				selectedStates.includes(temple.displayState) &&
-				(!showAnveshiOnly || temple.is_anveshi)
-		)
-	);
+	const visibleTemples = $derived(validTemples.filter((temple) => selectedStates.includes(temple.displayState) && (!showAnveshiOnly || temple.is_anveshi)));
 
 	const visibleCount = $derived(visibleTemples.length);
 	const anveshiCount = $derived(validTemples.filter((temple) => temple.is_anveshi).length);
+	const templeTopic = seoTopicLinks.topics['hindu-temple'];
+	const relatedTemplePages = $derived(templeTopic?.supportingPages ?? []);
 
 	const searchResults = $derived(
 		searchQuery.trim().length < 2
@@ -176,11 +171,7 @@
 			: visibleTemples
 					.filter((temple) => {
 						const query = searchQuery.toLowerCase().trim();
-						return (
-							temple.temple_name.toLowerCase().includes(query) ||
-							temple.displayState.toLowerCase().includes(query) ||
-							(temple.main_deity?.toLowerCase().includes(query) ?? false)
-						);
+						return temple.temple_name.toLowerCase().includes(query) || temple.displayState.toLowerCase().includes(query) || (temple.main_deity?.toLowerCase().includes(query) ?? false);
 					})
 					.slice(0, 12)
 	);
@@ -254,10 +245,7 @@
 			return;
 		}
 
-		const x = Math.min(
-			Math.max(markerX, edgePadding + popupWidth / 2),
-			shellWidth - edgePadding - popupWidth / 2
-		);
+		const x = Math.min(Math.max(markerX, edgePadding + popupWidth / 2), shellWidth - edgePadding - popupWidth / 2);
 		const spaceAbove = markerY - edgePadding;
 		const spaceBelow = shellHeight - markerY - edgePadding;
 		const anchor = spaceAbove < 260 && spaceBelow > spaceAbove ? 'below' : 'above';
@@ -281,7 +269,7 @@
 			return `/anveshi/${temple.chapter}`;
 		}
 
-		return `/temples/${temple.slug}`;
+		return `/wiki/temples/${temple.slug}`;
 	}
 
 	function findTempleByMapKey(mapKey: string) {
@@ -289,9 +277,7 @@
 	}
 
 	function toggleState(state: string) {
-		selectedStates = selectedStates.includes(state)
-			? selectedStates.filter((item) => item !== state)
-			: [...selectedStates, state];
+		selectedStates = selectedStates.includes(state) ? selectedStates.filter((item) => item !== state) : [...selectedStates, state];
 		refreshTempleSource();
 	}
 
@@ -437,66 +423,66 @@
 			if (!mounted || !maplibre) return;
 
 			mapInstance = new maplibre.Map({
-			container: mapEl,
-			center: [78.9629, 22.5937],
-			zoom: 4,
-			minZoom: 1,
-			maxZoom: 16,
-			attributionControl: false,
+				container: mapEl,
+				center: [78.9629, 22.5937],
+				zoom: 4,
+				minZoom: 1,
+				maxZoom: 16,
+				attributionControl: false,
 				style: {
 					version: 8,
 					sources: {
-					cartoDark: {
-						type: 'raster',
-						tiles: CARTO_DARK_TILES,
-						tileSize: 256,
-						attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
-					},
+						cartoDark: {
+							type: 'raster',
+							tiles: CARTO_DARK_TILES,
+							tileSize: 256,
+							attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+						},
 						indiaBoundary: {
 							type: 'geojson',
 							data: EMPTY_BOUNDARY
 						}
 					},
-				layers: [
-					{
-						id: 'background',
-						type: 'background',
-						paint: {
-							'background-color': '#07080a'
-						}
-					},
-					{
-						id: 'carto-dark',
-						type: 'raster',
-						source: 'cartoDark',
-						paint: {
-							'raster-opacity': 0.92
-						}
-					},
-					{
-						id: 'india-boundary-fill',
-						type: 'fill',
-						source: 'indiaBoundary',
-						paint: {
-							'fill-color': '#111117',
-							'fill-opacity': 0.08
-						}
-					},
-					{
-						id: 'india-boundary-glow',
-						type: 'line',
-						source: 'indiaBoundary',
-						paint: {
-							'line-color': '#474747',
-							'line-opacity': 1,
-							'line-width': 2,
-							'line-blur': 2
-						}
-					},
-					{
-						id: 'india-boundary-line',
-						type: 'line',
-						source: 'indiaBoundary',
+					layers: [
+						{
+							id: 'background',
+							type: 'background',
+							paint: {
+								'background-color': '#07080a'
+							}
+						},
+						{
+							id: 'carto-dark',
+							type: 'raster',
+							source: 'cartoDark',
+							paint: {
+								'raster-opacity': 0.92
+							}
+						},
+						{
+							id: 'india-boundary-fill',
+							type: 'fill',
+							source: 'indiaBoundary',
+							paint: {
+								'fill-color': '#111117',
+								'fill-opacity': 0.08
+							}
+						},
+						{
+							id: 'india-boundary-glow',
+							type: 'line',
+							source: 'indiaBoundary',
+							paint: {
+								'line-color': '#474747',
+								'line-opacity': 1,
+								'line-width': 2,
+								'line-blur': 2
+							}
+						},
+						{
+							id: 'india-boundary-line',
+							type: 'line',
+							source: 'indiaBoundary',
 							paint: {
 								'line-color': '#474747',
 								'line-opacity': 0.12,
@@ -507,77 +493,76 @@
 				}
 			});
 
-				map = mapInstance;
-				mapInstance.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-left');
+			map = mapInstance;
+			mapInstance.addControl(new maplibre.NavigationControl({ showCompass: false }), 'top-left');
 			mapInstance.addControl(
-			new maplibre.AttributionControl({
-				compact: true,
-				customAttribution: 'Boundary overlay: Bharat Maps source'
-			}),
-			'bottom-right'
+				new maplibre.AttributionControl({
+					compact: true,
+					customAttribution: 'Boundary overlay: Bharat Maps source'
+				}),
+				'bottom-right'
 			);
 
-				const setupTempleMap = () => {
-					if (!mapInstance) return;
-					const activeMap = mapInstance;
+			const setupTempleMap = () => {
+				if (!mapInstance) return;
+				const activeMap = mapInstance;
 
-					loadBoundaryOverlay(activeMap);
-					addTempleLayers(activeMap);
+				loadBoundaryOverlay(activeMap);
+				addTempleLayers(activeMap);
 
-					activeMap.on('click', 'temple-clusters', async (event) => {
-						const feature = activeMap.queryRenderedFeatures(event.point, {
-							layers: ['temple-clusters']
-						})[0];
-						const clusterId = feature?.properties?.cluster_id;
-						const coordinates = (feature?.geometry as { coordinates?: [number, number] } | undefined)
-							?.coordinates;
-						const source = activeMap.getSource('temples') as GeoJSONSource | undefined;
+				activeMap.on('click', 'temple-clusters', async (event) => {
+					const feature = activeMap.queryRenderedFeatures(event.point, {
+						layers: ['temple-clusters']
+					})[0];
+					const clusterId = feature?.properties?.cluster_id;
+					const coordinates = (feature?.geometry as { coordinates?: [number, number] } | undefined)?.coordinates;
+					const source = activeMap.getSource('temples') as GeoJSONSource | undefined;
 
-						if (!source || clusterId === undefined || !coordinates) return;
+					if (!source || clusterId === undefined || !coordinates) return;
 
-						const zoom = await source.getClusterExpansionZoom(clusterId);
-						activeMap.easeTo({
-							center: coordinates,
-							zoom,
-							duration: 650
-						});
+					const zoom = await source.getClusterExpansionZoom(clusterId);
+					activeMap.easeTo({
+						center: coordinates,
+						zoom,
+						duration: 650
 					});
+				});
 
-					activeMap.on('click', 'temple-points', (event) => {
-						const mapKey = event.features?.[0]?.properties?.mapKey;
-						if (typeof mapKey !== 'string') return;
+				activeMap.on('click', 'temple-points', (event) => {
+					const mapKey = event.features?.[0]?.properties?.mapKey;
+					if (typeof mapKey !== 'string') return;
 
-						const temple = findTempleByMapKey(mapKey);
-						if (temple) showTemplePopup(temple);
+					const temple = findTempleByMapKey(mapKey);
+					if (temple) showTemplePopup(temple);
+				});
+
+				activeMap.on('click', (event) => {
+					const clickedTempleFeature = activeMap.queryRenderedFeatures(event.point, {
+						layers: ['temple-points']
+					})[0];
+
+					if (!clickedTempleFeature) closeTemplePopup();
+				});
+
+				activeMap.on('move', syncActivePopupPoint);
+				activeMap.on('resize', syncActivePopupPoint);
+
+				for (const layerId of ['temple-clusters', 'temple-points']) {
+					activeMap.on('mouseenter', layerId, () => {
+						activeMap.getCanvas().style.setProperty('cursor', 'pointer');
 					});
-
-					activeMap.on('click', (event) => {
-						const clickedTempleFeature = activeMap.queryRenderedFeatures(event.point, {
-							layers: ['temple-points']
-						})[0];
-
-						if (!clickedTempleFeature) closeTemplePopup();
+					activeMap.on('mouseleave', layerId, () => {
+						activeMap.getCanvas().style.setProperty('cursor', '');
 					});
-
-					activeMap.on('move', syncActivePopupPoint);
-					activeMap.on('resize', syncActivePopupPoint);
-
-					for (const layerId of ['temple-clusters', 'temple-points']) {
-						activeMap.on('mouseenter', layerId, () => {
-							activeMap.getCanvas().style.setProperty('cursor', 'pointer');
-						});
-						activeMap.on('mouseleave', layerId, () => {
-							activeMap.getCanvas().style.setProperty('cursor', '');
-						});
-					}
-				};
-
-				if (mapInstance.isStyleLoaded()) {
-					setupTempleMap();
-				} else {
-					mapInstance.once('style.load', setupTempleMap);
 				}
+			};
+
+			if (mapInstance.isStyleLoaded()) {
+				setupTempleMap();
+			} else {
+				mapInstance.once('style.load', setupTempleMap);
 			}
+		}
 
 		initialiseMap();
 
@@ -591,144 +576,83 @@
 	});
 </script>
 
-<Optimizer
-  title={data.seo.title}
-  description={data.seo.description}
-  url={data.seo.url}
-  siteUrl="https://www.bodharesearch.in"
-  siteName="Bodha"
-  image={data.seo.image}
-  imageAlt={data.seo.imageAlt}
-  type="article"
-  publishedDate={data.seo.publishedDate}
-  tags={data.seo.tags}
-  breadcrumbs={data.seo.breadcrumbs}
-  noindex={false}
-  author="designBodha"
-  twitterCreator="@BodhaResearch"
-/>
+<Optimizer {title} description={metaDescription} url={data.seo.url} siteUrl="https://www.bodharesearch.in" siteName="Bodha" image={data.seo.image} imageAlt={data.seo.imageAlt} type="article" publishedDate={data.seo.publishedDate} tags={data.seo.tags} breadcrumbs={data.seo.breadcrumbs} noindex={false} author="designBodha" twitterCreator="@BodhaResearch" />
 
-<section class="temple-map-shell">
-	<div bind:this={mapEl} class="temple-map"></div>
-	{#if activeTemple && popupPlacement}
-		<div
-			class="temple-popup"
-			class:below={popupPlacement.anchor === 'below'}
-			class:center={popupPlacement.anchor === 'center'}
-			style={`left:${popupPlacement.x}px;top:${popupPlacement.y}px;--popup-max-height:${popupPlacement.maxHeight}px`}
-			role="dialog"
-			aria-label={activeTemple.temple_name}
-		>
-			<button
-				type="button"
-				class="temple-popup-close"
-				aria-label="Close temple popup"
-				onclick={closeTemplePopup}
-			>
-				x
-			</button>
-			<a class="popup-temple-link" href={templeHref(activeTemple)}>
-				{#if activeTemple.displayImage}
-					<img class="fit" src={activeTemple.displayImage} alt={activeTemple.temple_name}/>
-				{/if}
-				<div class="popup-temple-name">{activeTemple.temple_name}</div>
-				{#if activeTemple.is_anveshi}
-					<div class="popup-badge">In Anveshi</div>
-				{/if}
-				{#if getTempleDescription(activeTemple)}
-					<p class="popup-story">{getTempleDescription(activeTemple).slice(0,80)}... <span style="color: #F18100">(Go to Page)</span></p>
-				{/if}
-			</a>
-		</div>
-	{/if}
-	<div class="stats-panel">
-		<div class="stats-row">
-			<div>
-				<strong>{states.length}</strong>
-				<span>States</span>
-			</div>
-			<div>
-				<strong>{visibleCount}</strong>
-				<span>TEMPLES</span>
-			</div>
-		</div>
-		<p class="smalltext">
-			Temples base data from <a class="linked" href="https://github.com/rishabhmodi03/hindu-temples" target="_blank" rel="noreferrer">
-				Hindu temples repo by Rishabh Modi.
-			</a>
-			Locations are approximate. Data cleaning underway. To contribute, write to sitemaster@bodharesearch.in
-		</p>
-	</div>
-	<div class="filter-panel" bind:this={filterPanelEl}>
-		<div class="filter-buttons">
-			<button
-				type="button"
-				class="filter-toggle"
-				class:active={showAnveshiOnly}
-				onclick={toggleAnveshiTemples}
-			>
-				Anveshi Temples ({anveshiCount})
-			</button>
-			<button type="button" class="filter-toggle" onclick={() => (filterOpen = !filterOpen)}>
-				States
-			</button>
-		</div>
-		{#if filterOpen}
-			<div class="filter-dropdown">
-				<div class="filter-actions">
-					<button type="button" onclick={selectAllStates}>Select All</button>
-					<button type="button" onclick={clearStates}>Deselect All</button>
+<Container>
+	<section class="wrapper-std header-margin">
+		<Crumb showT={true} title="Hindu Temples" showD={true} desc={metaDescription} showRow={true}>
+			<div class="box rgap4">
+				<p class="txt-sm grey0">
+					Temples base data from <a class="linked" href="https://github.com/rishabhmodi03/hindu-temples" target="_blank" rel="noreferrer"> Hindu temples repo by Rishabh Modi. </a>
+					Locations are approximate. Data cleaning underway. To contribute, write to sitemaster@bodharesearch.in
+				</p>
+				<div class="row cgap8">
+					<p class="txt-xs w500 tt-u"><span class="theme">{states.length}</span> States</p>
+					<p class="txt-xs w500 tt-u"><span class="theme">{visibleCount}</span> Temples</p>
 				</div>
-
-				{#each states as state}
-					<button type="button" class="filter-item" onclick={() => toggleState(state)}>
-						<span class:checked={selectedStates.includes(state)}>
-							{selectedStates.includes(state) ? '✓' : ''}
-						</span>
-						<i style={`background:${templeColor(state)}`}></i>
-						{state}
-					</button>
-				{/each}
 			</div>
-		{/if}
-	</div>
-	<div class="temple-data-attribution">
-		<p>
-			Temples base data from <a class="linked" href="https://github.com/rishabhmodi03/hindu-temples" target="_blank" rel="noreferrer">
-				Hindu temples repo by Rishabh Modi.
-			</a>
-			Locations are approximate. Data cleaning underway. To contribute, write to sitemaster@bodharesearch.in
-		</p>
-	</div>
-</section>
+		</Crumb>
+		<div class="box rgap16">
+			<div class="filter-panel" bind:this={filterPanelEl}>
+				<div class="filter-buttons">
+					<button type="button" class="selection-button" class:active={showAnveshiOnly} onclick={toggleAnveshiTemples}>
+						Anveshi Temples ({anveshiCount})
+					</button>
+					<button type="button" class="selection-button" onclick={() => (filterOpen = !filterOpen)}> States </button>
+				</div>
+				{#if filterOpen}
+					<div class="filter-dropdown">
+						<div class="filter-actions">
+							<button type="button" onclick={selectAllStates}>Select All</button>
+							<button type="button" onclick={clearStates}>Deselect All</button>
+						</div>
+
+						{#each states as state}
+							<button type="button" class="filter-item" onclick={() => toggleState(state)}>
+								<span class:checked={selectedStates.includes(state)}>
+									{selectedStates.includes(state) ? '✓' : ''}
+								</span>
+								<i style={`background:${templeColor(state)}`}></i>
+								{state}
+							</button>
+						{/each}
+					</div>
+				{/if}
+			</div>
+			<div class="temple-map-shell">
+				<div bind:this={mapEl} class="temple-map"></div>
+				{#if activeTemple && popupPlacement}
+					<div class="temple-popup" class:below={popupPlacement.anchor === 'below'} class:center={popupPlacement.anchor === 'center'} style={`left:${popupPlacement.x}px;top:${popupPlacement.y}px;--popup-max-height:${popupPlacement.maxHeight}px`} role="dialog" aria-label={activeTemple.temple_name}>
+						<button type="button" class="temple-popup-close" aria-label="Close temple popup" onclick={closeTemplePopup}> x </button>
+						<a class="popup-temple-link" href={templeHref(activeTemple)}>
+							{#if activeTemple.displayImage}
+								<img class="fit" src={activeTemple.displayImage} alt={activeTemple.temple_name} />
+							{/if}
+							<div class="popup-temple-name">{activeTemple.temple_name}</div>
+							{#if activeTemple.is_anveshi}
+								<div class="popup-badge">In Anveshi</div>
+							{/if}
+							{#if getTempleDescription(activeTemple)}
+								<p class="popup-story">{getTempleDescription(activeTemple).slice(0, 80)}... <span style="color: #F18100">(Go to Page)</span></p>
+							{/if}
+						</a>
+					</div>
+				{/if}
+			</div>
+		</div>
+	</section>
+	<HubRelatedLinks title="Related Paths" items={relatedTemplePages} />
+</Container>
 
 <style lang="sass">
-
-	.temple-data-attribution
-		position: fixed
-		top: 80px
-		left: 8px
-		background: rgba(0,0,0,0.1)
-		padding: 1rem
-		z-index: 999
-		width: 300px
-		p
-			font-size: 12px
-			color: #878787
-		@media (max-width: 1024px)
-			top: 64px
-			width: calc(100% - 3rem)
-			left: 3rem
 
 	.temple-map-shell
 		position: relative
 		min-height: 100vh
+		border-radius: 4px
 		background: var(--color-back)
 		overflow: hidden
 		margin-top: 0
-		padding-top: 64px
-		@media (min-width: 1025px)
-			padding-top: 80px
 
 	.temple-map
 		width: 100%
@@ -738,51 +662,21 @@
 			width: 100%
 			height: calc(100vh - 80px)
 
-	.stats-row
-		display: flex
-		gap: 16px
-		div
-			display: grid
-			gap: 3px
-			text-align: center
-
 	.filter-panel
-		position: absolute
-		right: 4rem
-		bottom: 3rem
+		position: relative
 		z-index: 4
-
-	.filter-buttons
-		display: flex
-		justify-content: flex-end
-		gap: 8px
-
-	.filter-toggle
-		border: 1px solid rgba(255,255,255,0.2)
-		border-radius: 4px
-		padding: 8px 16px
-		font-size: 12px
-		color: #d7d7d7
-		background: rgba(0,0,0,0.1)
-		backdrop-filter: blur(10px)
-		cursor: pointer
-		&.active
-			color: var(--color-white)
-			background: var(--color-theme-dark)
-		&:hover
-			color: var(--color-white)
-			background: var(--color-theme)
+		width: max-content
 
 	.filter-dropdown
 		position: absolute
-		right: 0
-		bottom: calc(100% + 8px)
-		width: min(280px, calc(100vw - 48px))
-		max-height: 420px
+		left: 0
+		top: 64px
+		width: 100%
+		max-height: 620px
 		overflow: auto
 		padding: 10px
-		border: 1px solid rgba(255,255,255,0.2)
-		border-radius: 12px
+		border: 1px solid #474747
+		border-radius: 4px
 		background: rgba(0,0,0,0.1)
 		backdrop-filter: blur(10px)
 
@@ -929,47 +823,7 @@
 		font-size: 12px
 		line-height: 1.45
 
-	.stats-panel
-		position: absolute
-		left: 24px
-		bottom: 24px
-		z-index: 4
-		display: flex
-		flex-direction: row
-		gap: 10px
-		padding: 14px 18px
-		border: 1px solid rgba(255, 255, 255, 0.08)
-		border-radius: 12px
-		background: rgba(10, 10, 15, 0.74)
-		backdrop-filter: blur(16px)
-		align-items: center
-		strong
-			color: #fff
-			font-size: 22px
-			line-height: 1
-		span
-			color: #8b8078
-			font-size: 10px
-			text-transform: uppercase
-			letter-spacing: 0.08em
-		p.smalltext
-			color: #878787
-			font-size: 12px
-			width: 300px
-			padding-left: 1rem
-
 	@media screen and (max-width: 720px)
-		.stats-panel
-			width: calc(100% - 16px)
-			left: 8px
-			bottom: 8px
-			padding: 0.5rem
-			p.smalltext
-				padding-left: 0.5rem
-				width: 100%
-		.filter-panel
-			right: 16px
-			bottom: 8rem
 		:global(.maplibregl-ctrl-top-left)
 			left: 16px
 

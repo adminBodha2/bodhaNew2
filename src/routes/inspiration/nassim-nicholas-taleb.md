@@ -3,7 +3,7 @@ title: Nassim Nicholas Taleb
 image: /images/thinkers/nassim-taleb.webp
 type: thinker
 id: 8
-description: The philosopher of fragility who argues that modern civilization traded a robust, decentralized wisdom tradition for brittle expert systems - and that this trade is actively destroying us while we congratulate ourselves on progress.
+description: "The philosopher of fragility who argues that modern civilization traded a robust, decentralized wisdom tradition for brittle expert systems"
 tags:
   - modernity
   - purva-paksha

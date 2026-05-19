@@ -3,7 +3,7 @@ title: Sri Aurobindo’s School
 image: /images/schools/sri-aurobindo-school.webp
 type: school
 id: 2
-description: Sri Aurobindo's synthesis - the spiritual evolution of consciousness as the framework within which India's civilizational mission - and humanity's future - can be understood, making it the most philosophically ambitious Hindu response to modernity.
+description: "Sri Aurobindo's synthesis - the spiritual evolution of consciousness as the framework within which India's civilizational mission"
 tags:
   - civilizational-consciousness
   - modernity

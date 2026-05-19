@@ -3,7 +3,7 @@ title: Alexander Solzhenitsyn
 image: /images/thinkers/alexander-s.webp
 type: thinker
 id: 6
-description: The man who survived the Soviet gulag and wrote its testimony - Solzhenitsyn's warning that Western atheist materialism produces the same totalitarian logic as communism remains unrefuted by anyone who has read him carefully.
+description: "The man who survived the Soviet gulag and wrote its testimony - Solzhenitsyn's warning that Western atheist materialism produces the same totalitarian logic."
 tags:
   - purva-paksha
 ---

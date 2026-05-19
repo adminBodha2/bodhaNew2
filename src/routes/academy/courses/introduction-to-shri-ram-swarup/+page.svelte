@@ -14,7 +14,7 @@
 	import type { ComponentProps } from 'svelte';
 
 	const title = 'Introduction to Shri Ram Swarup | Bodha Courses';
-	const metaDescription = 'Online course on the works and thoughts of Shri Ram Swarup.';
+	const metaDescription = 'A Bodha Academy course introducing Shri Ram Swarup, his Hindu thought, purva paksha, yoga sadhana, and civilizational reading of Bharatavarsha.';
 	const metaUrl = absoluteUrl('/academy/courses/introduction-to-shri-ram-swarup');
 	const metaImage = absoluteImage('/images/intro-to-srs.webp');
 

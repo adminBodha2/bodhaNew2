@@ -1,6 +1,6 @@
 ---
-title: Kullu Chapter
-description: Come explore the sacred kshetras of the Kullu valley in Himachal Pradesh. Come to experience the divine here, and the festivals organized to celebrate that divine. Come to Bodha Anveshi — Kullu Chapter to experience Himachal in a way you have never before.
+title: Kullu Chapter | Bodha Anveshi Himachal Kshetra Tour
+description: "Explore the sacred kshetras, deities, and festivals of Himachal Pradesh through Bodha Anveshi's Kullu chapter."
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/kullu/12.webp
 id: 1
 isOpen: false

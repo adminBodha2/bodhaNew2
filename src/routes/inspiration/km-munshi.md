@@ -1,9 +1,9 @@
 ---
-title: KM Munshi
+title: KM Munshi | Itihasa, Indian Culture, and Civilizational Renewal
 image: /images/thinkers/km-munshi.webp
 type: thinker
 id: 20
-description: Freedom fighter, novelist, and founder of Bharatiya Vidya Bhavan, Munshi spent his life reconstructing the cultural and historical memory that colonial education had systematically razed - the Somnath restoration was as much an act of historiography as politics.
+description: "Freedom fighter, novelist, and founder of Bharatiya Vidya Bhavan, Munshi spent his life reconstructing the cultural and historical memory that colonial."
 tags:
   - history
   - civilizational-consciousness

@@ -1,5 +1,6 @@
 ---
 title: Towards Dharma-centric Polity - Lokmanya Tilak and the Universalization of Gaṇeśa Utsava
+description: "An inquiry into what a dharma-centric political order would require within or beyond India current framework."
 author:
   - Pankaj Saxena
 category: Culture Today

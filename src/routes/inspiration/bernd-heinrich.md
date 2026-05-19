@@ -1,9 +1,9 @@
 ---
-title: Bernd Heinrich
+title: Bernd Heinrich | Ecology, Nature Writing, and Dharmic Environmental Thought
 image: /images/thinkers/bernd-heinrich.webp
 type: thinker
 id: 12
-description: A naturalist-scientist who lives in a self-cultivated forest and finds philosophical principle in ravens and bees - Heinrich bridges the split between scientific observation and the kind of meaning-making that Hindu tradition never had to artificially construct.
+description: "A naturalist-scientist who lives in a self-cultivated forest and finds philosophical principle in ravens and bees"
 tags:
   - ecology
 ---

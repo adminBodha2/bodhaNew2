@@ -14,16 +14,16 @@ npm run seo:topic -- hindu-temple
 The direct Node commands also work:
 
 ```bash
-node tools/bodha-seo/src/cli.mjs audit
-node tools/bodha-seo/src/cli.mjs audit --live --limit 25
-node tools/bodha-seo/src/cli.mjs page /core/indian-knowledge-systems
-node tools/bodha-seo/src/cli.mjs topic hindu-temple
+node sitemaster/seomaster/src/cli.mjs audit
+node sitemaster/seomaster/src/cli.mjs audit --live --limit 25
+node sitemaster/seomaster/src/cli.mjs page /core/indian-knowledge-systems
+node sitemaster/seomaster/src/cli.mjs topic hindu-temple
 ```
 
 Reports are written to:
 
 ```text
-reports/seo/
+sitemaster/seomaster/reports/
 ```
 
 Default commands do not edit code. Patch/apply behavior will be added only after the audit engine is useful and reviewable.

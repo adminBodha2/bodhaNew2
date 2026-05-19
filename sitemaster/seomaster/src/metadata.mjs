@@ -111,7 +111,7 @@ export function parseFrontmatter(source) {
 			continue;
 		}
 
-		const listMatch = line.match(/^-\s*(.+)$/);
+		const listMatch = line.match(/^\s*-\s*(.+)$/);
 		if (listMatch && currentKey) {
 			if (!Array.isArray(data[currentKey])) data[currentKey] = [];
 			data[currentKey].push(unquote(listMatch[1].trim()));

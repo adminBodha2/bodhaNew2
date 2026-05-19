@@ -1,5 +1,5 @@
 ---
-title: "Modernity"
+title: "Modernity | Hindu Values, Technology, AI, and Civilizational Critique"
 description: "The civilizational challenge of modernity — artificial intelligence, surveillance, consumerism, and Enlightenment rationalism evaluated through the lens of Hindu values."
 ---
 

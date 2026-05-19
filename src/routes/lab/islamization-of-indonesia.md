@@ -2,7 +2,7 @@
 title: Islamization of Indonesia
 category: Working Notes
 date: 2025-12-10
-excerpt: 'A brief compilation on how Hindu Indonesia was Islamized.'
+excerpt: 'A working compilation on how Hindu Indonesia was Islamized through conquest, suppression of Hindu kingdoms, cultural change, and the survival of Bali.'
 ---
 
 The transformation of Indonesia from Hindu civilization to Muslim-majority nation was not the peaceful, trade-driven process often portrayed. Historical evidence reveals military conquest of Hindu kingdoms, systematic suppression of Hindu practice, forced flight of populations, and ongoing persecution. As Dang Hyang Nirartha, a Javanese Brahmin sage who fled to Bali in 1489, explained - he *"never returned to Java, because Hinduism in Java had been suppressed by Islam."*<sup>1</sup>

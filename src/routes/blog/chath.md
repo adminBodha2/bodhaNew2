@@ -1,5 +1,6 @@
 ---
 title: Chaṭh - a Living Tradition and Cultural Homecoming
+description: "A personal account of Chhath in Bihar and what the festival reveals about Hindu devotion, water, body, and land."
 author:
   - Akshay Jha
 category: Culture Today

@@ -59,7 +59,7 @@
 	let visibleArticlePosts = $derived(articlePosts.slice(0, visibleArticleCount));
 	let hasMoreArticles = $derived(visibleArticleCount < articlePosts.length);
 
-	const title = 'Blog | Bodha';
+	const title = 'Bodha Blog | Hindu Culture, Dharma, IKS, and Civilizational Essays';
 	const metaDescription = 'Essays on Hindu culture, history, festivals, civilizational thought, and more.';
 	const metaUrl = absoluteUrl('/blog');
 	const metaImage = absoluteImage('/images/bodhacover.png');

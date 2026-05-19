@@ -1,6 +1,6 @@
 ---
-title: "Shatrubodha"
-description: "Knowledge of the civilizational adversary — rigorous analysis of the ideological and geopolitical forces threatening Hindu civilization, from Abrahamic expansion to cultural colonialism."
+title: "Shatrubodha | Hindu Civilizational Threat Analysis and Strategy"
+description: "Knowledge of civilizational adversaries and the ideological forces threatening Hindu society, culture, and continuity."
 ---
 
 # Shatrubodha

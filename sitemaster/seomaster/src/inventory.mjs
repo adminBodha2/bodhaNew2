@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { absoluteUrl, routeFamily, ROUTES_DIR, SITE_URL } from './config.mjs';
+import { absoluteUrl, REPO_ROOT, routeFamily, ROUTES_DIR, SITE_URL } from './config.mjs';
 import { pathExists, readText, walkFiles } from './fs-utils.mjs';
 import { extractHtmlMetadata, extractMarkdownMetadata, extractSvelteMetadata } from './metadata.mjs';
 
@@ -9,6 +9,7 @@ export async function collectInventory(options = {}) {
 	records.push(...await collectRouteFiles());
 	records.push(...await collectMarkdownFiles());
 	records.push(...await collectLocalSitemapHints());
+	records.push(...await collectDerivedConcreteRoutes());
 
 	if (options.live) {
 		records.push(...await collectLiveSitemap());
@@ -91,17 +92,19 @@ async function collectLocalSitemapHints() {
 
 	const source = await readText(file);
 	const records = [];
+	const wikiMetadata = await loadWikiDomainMetadata();
 	const routeMatches = [...source.matchAll(/\{\s*path:\s*['"]([^'"]+)['"][\s\S]*?\}/g)];
 	for (const match of routeMatches) {
 		const urlPath = match[1];
+		const metadata = wikiMetadata.get(urlPath);
 		records.push({
 			urlPath,
 			absoluteUrl: absoluteUrl(urlPath),
 			source: 'sitemap-code',
 			routeFamily: routeFamily(urlPath),
-			title: '',
-			description: '',
-			tags: [],
+			title: metadata?.title ?? '',
+			description: metadata?.description ?? '',
+			tags: metadata?.tags ?? [],
 			headings: [],
 			outgoingLinks: [],
 			discoveredFrom: ['src/routes/sitemap.xml/+server.ts'],
@@ -111,22 +114,185 @@ async function collectLocalSitemapHints() {
 
 	const globHints = [...source.matchAll(/import\.meta\.glob\(['"]\/src\/routes\/([^*]+)\*\.md['"]\)/g)].map((m) => m[1]);
 	for (const hint of globHints) {
-		records.push({
-			urlPath: `/${hint.replace(/\/$/, '')}/*`,
-			absoluteUrl: '',
-			source: 'sitemap-code',
-			routeFamily: routeFamily(`/${hint}`),
-			title: '',
-			description: '',
-			tags: [],
-			headings: [],
-			outgoingLinks: [],
-			discoveredFrom: ['src/routes/sitemap.xml/+server.ts'],
-			isDynamic: true
-		});
+		const globDir = path.join(ROUTES_DIR, hint);
+		const globFiles = await walkFiles(globDir, (candidate) => candidate.endsWith('.md'));
+		for (const globFile of globFiles) {
+			const urlPath = routePathFromFile(globFile);
+			records.push({
+				urlPath,
+				absoluteUrl: absoluteUrl(urlPath),
+				source: 'sitemap-code',
+				routeFamily: routeFamily(urlPath),
+				title: '',
+				description: '',
+				tags: [],
+				headings: [],
+				outgoingLinks: [],
+				discoveredFrom: ['src/routes/sitemap.xml/+server.ts'],
+				isDynamic: false
+			});
+		}
+	}
+
+	if (/\bblogContentPaths\(\)/.test(source)) {
+		const blogFiles = await walkFiles(path.join(ROUTES_DIR, 'blog'), (candidate) => candidate.endsWith('.md'));
+		for (const blogFile of blogFiles) {
+			const urlPath = routePathFromFile(blogFile);
+			records.push({
+				urlPath,
+				absoluteUrl: absoluteUrl(urlPath),
+				source: 'sitemap-code',
+				routeFamily: routeFamily(urlPath),
+				title: '',
+				description: '',
+				tags: [],
+				headings: [],
+				outgoingLinks: [],
+				discoveredFrom: ['src/routes/sitemap.xml/+server.ts', 'src/lib/utils/blogpulls.ts:blogContentPaths'],
+				isDynamic: false
+			});
+		}
 	}
 
 	return records;
+}
+
+async function collectDerivedConcreteRoutes() {
+	return [
+		...await collectBlogTagRoutes(),
+		...await collectBlogWriterRoutes(),
+		...await collectConceptRoutes(),
+		...await collectLibraryCategoryRoutes(),
+		...await collectOntologyRoutes()
+	];
+}
+
+async function collectBlogTagRoutes() {
+	const tags = new Set();
+	const files = await walkFiles(path.join(ROUTES_DIR, 'blog'), (candidate) => candidate.endsWith('.md'));
+
+	for (const file of files) {
+		const meta = extractMarkdownMetadata(await readText(file));
+		for (const tag of meta.tags || []) {
+			if (tag) tags.add(tag);
+		}
+	}
+
+	return [...tags].map((tag) => routeRecord({
+		urlPath: `/blog/tags/${encodeURIComponent(tag)}`,
+		source: 'sitemap-code',
+		title: tag,
+		tags: [tag],
+		discoveredFrom: ['src/routes/sitemap.xml/+server.ts', 'src/lib/utils/blogpulls.ts:tagsWithCountsAlphabetical']
+	}));
+}
+
+async function collectBlogWriterRoutes() {
+	const writers = new Set();
+	const files = await walkFiles(path.join(ROUTES_DIR, 'blog'), (candidate) => candidate.endsWith('.md'));
+
+	for (const file of files) {
+		const meta = extractMarkdownMetadata(await readText(file));
+		for (const author of arrayValue(meta.frontmatter?.author)) {
+			if (author) writers.add(author);
+		}
+	}
+
+	return [...writers].map((writer) => routeRecord({
+		urlPath: `/blog/writers/${encodeURIComponent(writer)}`,
+		source: 'sitemap-code',
+		title: writer,
+		discoveredFrom: ['src/routes/sitemap.xml/+server.ts', 'src/lib/utils/blogpulls.ts:writersWithCountsAlphabetical']
+	}));
+}
+
+async function collectConceptRoutes() {
+	const file = path.join(REPO_ROOT, 'src/lib/data/edges.json');
+	if (!await pathExists(file)) return [];
+
+	const edges = JSON.parse(await readText(file));
+	const slugs = new Set();
+	for (const edge of Array.isArray(edges) ? edges : []) {
+		for (const id of [edge?.from, edge?.to]) {
+			if (typeof id === 'string' && id.startsWith('concept:')) {
+				slugs.add(id.replace(/^concept:/, ''));
+			}
+		}
+	}
+
+	return [...slugs].map((slug) => routeRecord({
+		urlPath: `/concepts/${encodeURIComponent(slug)}`,
+		source: 'route-derived',
+		title: slug.replace(/-/g, ' '),
+		discoveredFrom: ['src/lib/data/edges.json']
+	}));
+}
+
+async function collectLibraryCategoryRoutes() {
+	const file = path.join(REPO_ROOT, 'src/lib/utils/localsends.ts');
+	if (!await pathExists(file)) return [];
+
+	const source = await readText(file);
+	const paths = [...source.matchAll(/href:\s*['"](\/library\/categories\/[^'"]+)['"]/g)]
+		.map((match) => match[1]);
+
+	return paths.map((urlPath) => routeRecord({
+		urlPath,
+		source: 'route-derived',
+		title: urlPath.split('/').pop()?.replace(/-/g, ' ') || '',
+		discoveredFrom: ['src/lib/utils/localsends.ts:libCategories']
+	}));
+}
+
+async function collectOntologyRoutes() {
+	const file = path.join(REPO_ROOT, 'src/lib/ontology/node-varga-map.json');
+	if (!await pathExists(file)) return [];
+
+	const data = JSON.parse(await readText(file));
+	const slugs = Object.keys(data?.byVarga || {});
+	return slugs.map((slug) => routeRecord({
+		urlPath: `/ontology/${encodeURIComponent(slug)}`,
+		source: 'sitemap-code',
+		title: slug.replace(/-/g, ' '),
+		discoveredFrom: ['src/routes/sitemap.xml/+server.ts', 'src/lib/ontology:getAkVargas']
+	}));
+}
+
+function routeRecord({ urlPath, source, title = '', description = '', tags = [], discoveredFrom = [] }) {
+	return {
+		urlPath,
+		absoluteUrl: absoluteUrl(urlPath),
+		source,
+		routeFamily: routeFamily(urlPath),
+		title,
+		description,
+		tags,
+		headings: [],
+		outgoingLinks: [],
+		discoveredFrom,
+		isDynamic: false,
+		isVirtualConcrete: true
+	};
+}
+
+async function loadWikiDomainMetadata() {
+	const file = path.join(REPO_ROOT, 'src/lib/data/wiki-graph.json');
+	if (!await pathExists(file)) return new Map();
+
+	const graph = JSON.parse(await readText(file));
+	const nodes = Array.isArray(graph.nodes) ? graph.nodes : [];
+	return new Map(
+		nodes
+			.filter((node) => node?.type === 'domain' && typeof node.slug === 'string')
+			.map((node) => [
+				`/wiki/${node.slug}`,
+				{
+					title: stringValue(node.title),
+					description: stringValue(node.description),
+					tags: arrayValue(node.tags)
+				}
+			])
+	);
 }
 
 async function collectLiveSitemap() {
@@ -296,6 +462,7 @@ function mergeInventory(records) {
 		existing.isRedirect ||= record.isRedirect;
 		existing.hasHeadComponent ||= record.hasHeadComponent;
 		existing.hasSvelteHead ||= record.hasSvelteHead;
+		existing.isVirtualConcrete &&= record.isVirtualConcrete;
 	}
 
 	return [...map.values()].sort((a, b) => a.urlPath.localeCompare(b.urlPath));

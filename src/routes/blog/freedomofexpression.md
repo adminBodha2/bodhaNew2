@@ -1,5 +1,6 @@
 ---
 title: Freedom of Expression
+description: "A Hindu engagement with free expression, prophetic monotheism, speech, and the conceptual tools missing from debate."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

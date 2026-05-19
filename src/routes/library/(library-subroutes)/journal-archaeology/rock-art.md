@@ -1,5 +1,6 @@
 ---
-title: Rock Art
+title: Rock Art | Indian Prehistory, Cave Paintings, and Archaeological Evidence
+description: "Rock art in the IJA corpus, covering cave paintings, petroglyphs, cupules, engravings, and regional archaeological evidence."
 type: wiki
 tags: 
   - megalithic-culture

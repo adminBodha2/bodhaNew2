@@ -1,5 +1,6 @@
 ---
 title: Indic Environmentalism - A Balance between Tradition and Innovation
+description: "A Dharmic ecological argument for nature, sustainability, and Sanatana Dharma beyond Western environmentalism."
 author:
   - Akshay Jha
 category: Culture Today

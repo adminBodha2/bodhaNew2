@@ -1,5 +1,5 @@
 ---
-title: "Ecology"
+title: "Ecology | Dharmic Environmentalism and Indic Ecological Thought"
 description: "The Dhārmika relationship with the natural world — Indic environmentalism, Gaia theory, and the civilizational imperative to live within natural law."
 ---
 

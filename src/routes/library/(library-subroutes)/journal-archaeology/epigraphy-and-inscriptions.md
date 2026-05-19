@@ -1,5 +1,6 @@
 ---
 title: Epigraphy and Inscriptions
+description: "Epigraphic studies in the IJA range from detailed publication of new inscriptions to comprehensive catalogues of inscriptions at individual sites and in museum."
 type: wiki
 tags: 
   - temple-architecture

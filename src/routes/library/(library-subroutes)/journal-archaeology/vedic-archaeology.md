@@ -1,5 +1,6 @@
 ---
-title: Vedic Archaeology
+title: Vedic Archaeology | Indian Archaeology, Vedic Culture, and Early History
+description: "Vedic archaeology in the IJA is not a single excavation horizon but a recurring interpretive field connecting ochre-colour-pottery, copper-hoards, Sinauli."
 type: wiki
 tags: 
   - ochre-colour-pottery

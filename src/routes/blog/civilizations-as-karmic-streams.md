@@ -1,5 +1,6 @@
 ---
 title: Civilizations as Kārmika Streams
+description: "An essay reframing civilizations as karmic streams: living entities shaped by collective action across deep time."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

@@ -37,6 +37,7 @@ export async function load({ params }: { params: { item: string } }) {
 		image,
 		icon,
 		id,
+		item: params.item,
 		description,
 		tags,
 		questions,

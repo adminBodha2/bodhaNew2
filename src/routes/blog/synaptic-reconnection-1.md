@@ -1,5 +1,6 @@
 ---
 title: Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 1
+description: "Part 1 on rebuilding Dharmic consciousness after decolonization through ontology, epistemology, and teleology."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

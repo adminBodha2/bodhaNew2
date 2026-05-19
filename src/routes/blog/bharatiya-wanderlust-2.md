@@ -1,5 +1,6 @@
 ---
 title: Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 2
+description: "Part 2 of the Out-of-India series, examining what the Rigveda and comparative philology show beyond invasion assumptions."
 author:
   - Amritanshu Pandey
 category: History and Civilization

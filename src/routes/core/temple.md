@@ -1,5 +1,5 @@
 ---
-title: "Temple"
+title: "Hindu Temple | Sacred Architecture, Dharma, and Community Institution"
 description: "The Hindu temple as civilization — sacred architecture, institutional governance, cultural transmission, and the living center of community life across India."
 ---
 

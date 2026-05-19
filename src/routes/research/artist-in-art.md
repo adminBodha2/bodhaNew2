@@ -1,8 +1,8 @@
 ---
-title: The Artist in Art
+title: The Artist in Art | Hindu Aesthetics and Purva Paksha of Western Art
 type: purva paksha of western institutions
 image: /images/research/10.webp
-description: What happens when Western art criticism is turned inside out and evaluated through Hindu aesthetics? This project reverses the colonial critical gaze - applying Hindu aesthetic frameworks as the dominant lens to examine Western art's evolution, theory, and unspoken assumptions.
+description: "A research project applying Hindu aesthetic frameworks to Western art criticism, theory, and assumptions."
 tags:
   - aesthetics
   - purva-paksha

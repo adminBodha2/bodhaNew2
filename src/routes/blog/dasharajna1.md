@@ -1,5 +1,6 @@
 ---
 title: Dāśarājña Recontextualized - Part 1
+description: "Part 1 of a reconstruction of the Dasharajna, rereading Rigveda Mandala 7 through Out-of-India chronology."
 author:
   - Amritanshu Pandey
 category: History and Civilization

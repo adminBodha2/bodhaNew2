@@ -1,5 +1,6 @@
 ---
 title: History is Ontic but Itihāsa is Ontologic – a Fractal Maṇḍala Essay
+description: "The methodological difference between history and itihasa, and why India needs its own way of narrating the past."
 author:
   - Amritanshu Pandey
 category: History and Civilization

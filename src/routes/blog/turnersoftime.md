@@ -1,5 +1,6 @@
 ---
 title: Turners of Time - How Hindu Festivals Rotate the Year
+description: "Holi and Hindu festivals as turners of time, linking seasonal rhythm, ecological wisdom, and cosmic experience."
 author:
   - Pankaj Saxena
 category: Culture Today

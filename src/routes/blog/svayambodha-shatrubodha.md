@@ -1,5 +1,6 @@
 ---
 title: Svayambodha and Śatrubodha - Two Wheels of Civilization
+description: "An argument for Svayambodha and Shatrubodha as a canonical framework for Hindu civilizational discourse."
 author:
   - Pankaj Saxena
 category: Culture Today

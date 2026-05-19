@@ -8,6 +8,7 @@
 
 <svelte:head>
 	<title>Members Area | Bodha</title>
+	<meta name="description" content="Access the Bodha members area for newsletters, Scrolls of Aryavarta releases, account details, and subscriber-only updates." />
 </svelte:head>
 
 <Container>

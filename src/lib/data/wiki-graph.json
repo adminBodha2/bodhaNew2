@@ -201,11 +201,11 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education",
 			"type": "domain",
-			"title": "Knowledge Systems & Education",
-			"slug": "knowledge-systems-and-education",
-			"description": "Indian Knowledge Systems — the Amarakosha as classification structure, Hindu mathematics and science, the 64 kalas, and the civilizational approach to knowledge organization and transmission.",
+			"title": "Indian Knowledge Systems and Education",
+			"slug": "indian-knowledge-systems-and-education",
+				"description": "Indian Knowledge Systems across Amarakosha, Hindu mathematics, science, the 64 kalas, and civilizational learning.",
 			"tags": [
 				"indian-knowledge-systems",
 				"knowledge-representation",
@@ -1871,7 +1871,7 @@
 				"source": "library",
 				"author": [],
 				"route": null,
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -1911,7 +1911,7 @@
 					"Sri Swami Sivananda"
 				],
 				"route": null,
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -1993,7 +1993,7 @@
 				"source": "library",
 				"author": [],
 				"route": null,
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -3083,7 +3083,7 @@
 					"MD Srinivas"
 				],
 				"route": null,
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -3575,7 +3575,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/lab/library-additions-20dec",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -3765,7 +3765,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/research/hindu-frameworks-of-education",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -3936,7 +3936,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/big-questions/core-of-sanatana-dharma",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -4050,7 +4050,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/big-questions/practice-but-not-proven",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": "civilizational-consciousness"
 			}
 		},
@@ -4107,7 +4107,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/inspiration/conscilience-school",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -4126,7 +4126,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/inspiration/cultural-traditionalists-school",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -4259,7 +4259,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/inspiration/ak-saran",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": "svayambodha"
 			}
 		},
@@ -4335,7 +4335,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/inspiration/dharampal",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": "svayambodha"
 			}
 		},
@@ -4411,7 +4411,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/inspiration/kapila-vatsyayana",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -4468,7 +4468,7 @@
 				"source": "library",
 				"author": [],
 				"route": "/inspiration/ms-hiriyanna",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": ""
 			}
 		},
@@ -5178,7 +5178,7 @@
 				"source": "wiki",
 				"author": [],
 				"route": "/wiki/indian-knowledge-systems",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": "svayambodha"
 			}
 		},
@@ -5640,7 +5640,7 @@
 				"source": "wiki",
 				"author": [],
 				"route": "/wiki/wisdom-knowledge-and-education",
-				"domain": "knowledge-systems-and-education",
+				"domain": "indian-knowledge-systems-and-education",
 				"lens": "civilizational-consciousness"
 			}
 		},
@@ -6236,8 +6236,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--blog:dharmikagene",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--blog:dharmikagene",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "blog:dharmikagene",
 			"type": "HAS_TAG",
 			"meta": {
@@ -6996,8 +6996,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--book:bol-64-arts-in-ancient-india",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--book:bol-64-arts-in-ancient-india",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "book:bol-64-arts-in-ancient-india",
 			"type": "HAS_TAG",
 			"meta": {
@@ -7016,8 +7016,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--book:bol-advanced-textbook-of-hindu-religion-and-ethics",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--book:bol-advanced-textbook-of-hindu-religion-and-ethics",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "book:bol-advanced-textbook-of-hindu-religion-and-ethics",
 			"type": "HAS_TAG",
 			"meta": {
@@ -7046,8 +7046,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--book:bol-all-about-hinduism",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--book:bol-all-about-hinduism",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "book:bol-all-about-hinduism",
 			"type": "HAS_TAG",
 			"meta": {
@@ -7096,8 +7096,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--book:bol-elementary-textbook-of-hindu-ethics",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--book:bol-elementary-textbook-of-hindu-ethics",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "book:bol-elementary-textbook-of-hindu-ethics",
 			"type": "HAS_TAG",
 			"meta": {
@@ -7766,8 +7766,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--book:bol-on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--book:bol-on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "book:bol-on-the-nature-of-mathematics-and-scientific-knowledge-in-indian-tradition",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8036,8 +8036,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--lab:library-additions-20dec",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--lab:library-additions-20dec",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "lab:library-additions-20dec",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8146,8 +8146,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--project:hindu-frameworks-of-education",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--project:hindu-frameworks-of-education",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "project:hindu-frameworks-of-education",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8276,8 +8276,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--question:core-of-sanatana-dharma",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--question:core-of-sanatana-dharma",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "question:core-of-sanatana-dharma",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8336,8 +8336,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--question:practice-but-not-proven",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--question:practice-but-not-proven",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "question:practice-but-not-proven",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8396,8 +8396,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--school:conscilience-school",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--school:conscilience-school",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "school:conscilience-school",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8406,8 +8406,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--school:cultural-traditionalists-school",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--school:cultural-traditionalists-school",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "school:cultural-traditionalists-school",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8496,8 +8496,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--thinker:ak-saran",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--thinker:ak-saran",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "thinker:ak-saran",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8556,8 +8556,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--thinker:dharampal",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--thinker:dharampal",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "thinker:dharampal",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8616,8 +8616,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--thinker:kapila-vatsyayana",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--thinker:kapila-vatsyayana",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "thinker:kapila-vatsyayana",
 			"type": "HAS_TAG",
 			"meta": {
@@ -8666,8 +8666,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--thinker:ms-hiriyanna",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--thinker:ms-hiriyanna",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "thinker:ms-hiriyanna",
 			"type": "HAS_TAG",
 			"meta": {
@@ -9076,8 +9076,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--wiki:cultural-memory-and-tradition",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--wiki:cultural-memory-and-tradition",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "wiki:cultural-memory-and-tradition",
 			"type": "HAS_TAG",
 			"meta": {
@@ -9296,8 +9296,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--wiki:indian-knowledge-systems",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--wiki:indian-knowledge-systems",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "wiki:indian-knowledge-systems",
 			"type": "HAS_TAG",
 			"meta": {
@@ -9716,8 +9716,8 @@
 			}
 		},
 		{
-			"id": "domain:knowledge-systems-and-education--domain--wiki:wisdom-knowledge-and-education",
-			"from": "domain:knowledge-systems-and-education",
+			"id": "domain:indian-knowledge-systems-and-education--domain--wiki:wisdom-knowledge-and-education",
+			"from": "domain:indian-knowledge-systems-and-education",
 			"to": "wiki:wisdom-knowledge-and-education",
 			"type": "HAS_TAG",
 			"meta": {

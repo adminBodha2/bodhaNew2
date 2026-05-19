@@ -1,5 +1,5 @@
 ---
-title: "Devi"
+title: "Devi | Shakti Worship, Navadurga, and Hindu Goddess Traditions"
 description: "The Goddess in her manifold forms — the devotional and cosmological tradition of Shakti worship, explored through the nine Navadurgā manifestations of Navarātrī."
 ---
 

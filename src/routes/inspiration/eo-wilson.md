@@ -1,9 +1,9 @@
 ---
-title: EO Wilson
+title: EO Wilson | Biodiversity, Ecology, and Civilizational Environmental Thought
 image: /images/thinkers/ivan-illich.webp
 type: thinker
 id: 11
-description: The founding sociobiologist whose work on eusociality, biodiversity, and genetic altruism carries the closest Western scientific approximation to the Hindu understanding that human beings are embedded in a larger order - not above it.
+description: "The founding sociobiologist whose work on eusociality, biodiversity, and genetic altruism carries the closest Western scientific approximation to the Hindu."
 tags:
   - svayambodha
   - ecology

@@ -1,5 +1,5 @@
 ---
-title: "Decolonization"
+title: "Decolonization | Hindu Epistemic Sovereignty and Indian Knowledge Systems"
 description: "The recovery of India's native ontology, epistemology, and teleology — replacing the colonial operating system of the mind with a framework rooted in the Dhārmika tradition."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Festivals"
+title: "Hindu Festivals | Utsavas, Culture, Ecology, and Sacred Time"
 description: "Hindu utsavas as temporal gradients of the divine — cultural, ecological, and metaphysical events that structure time and transmit civilizational wisdom across generations."
 ---
 

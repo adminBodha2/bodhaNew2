@@ -1,5 +1,6 @@
 ---
-title: Gandhari Culture
+title: Gandhari Culture | Indian Archaeology, Northwest Traditions, and Art History
+description: "Gandhari culture in the IJA is represented through Gandhara art, Buddhist sculpture, seals, museum antiquities, and the wider northwest-to-north-India exchange."
 type: wiki
 tags: 
   - art-iconography-and-sculpture

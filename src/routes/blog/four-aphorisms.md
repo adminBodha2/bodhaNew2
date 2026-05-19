@@ -1,5 +1,6 @@
 ---
 title: Caturasūtra - Four Aphorisms
+description: "Four compact aphorisms for understanding Indian civilizational consciousness and orienting a larger intellectual project."
 author:
   - Amritanshu Pandey
 category: History and Civilization

@@ -1,9 +1,9 @@
 ---
-title: Ram Swarup
+title: Ram Swarup | Hindu Thought, Purva Paksha, and Sanatana Dharma
 image: /images/thinkers/ram-swarup.webp
 type: thinker
 id: 1
-description: The thinker who explained what the Vedic gods actually are, how polytheism works as a philosophical system, and why the prophetic monotheist critique of Hinduism fundamentally misunderstands what it is attacking - essential reading before any encounter with missionary argument.
+description: "The thinker who explained what the Vedic gods actually are, how polytheism works as a philosophical system, and why the prophetic monotheist critique."
 tags:
   - purva-paksha
   - shatrubodha

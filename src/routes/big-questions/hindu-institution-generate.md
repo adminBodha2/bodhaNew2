@@ -3,7 +3,7 @@ title: What Hindu Institution Will Generate All Others
 image: /images/bgicons/generate.png
 icon: /images/questions/4.webp
 id: 4
-description: Which single Hindu institution - the Hindu state, the gurukula, or the temple - could regenerate all others if everything else were lost? A question of civilizational triage and generative capacity.
+description: "Which Hindu institution could regenerate civilizational life if everything else were lost: state, gurukula, temple, or something else?"
 tags:
   - civilizational-consciousness
   - hindu-institutions

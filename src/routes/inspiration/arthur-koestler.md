@@ -1,9 +1,9 @@
 ---
-title: Arthur Koestler
+title: Arthur Koestler | Consciousness, Creativity, and Civilizational Inquiry
 image: /images/thinkers/arthur-koestler.webp
 type: thinker
 id: 14
-description: A Communist turned anti-Communist who witnessed both fascism and Stalinism firsthand - Koestler's intellectual trajectory maps the 20th century's ideological catastrophes and anticipates the civilizational questions that follow when every utopia collapses.
+description: "A Communist turned anti-Communist who witnessed both fascism and Stalinism firsthand - Koestler's intellectual trajectory maps the 20th century's ideological."
 tags:
   - consciousness
   - purva-paksha

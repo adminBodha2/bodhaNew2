@@ -1,9 +1,9 @@
 ---
-title: Robert Ardrey
+title: Robert Ardrey | Human Nature, Culture, and Civilizational Inquiry
 image: /images/thinkers/robert-ardrey.webp
 type: thinker
 id: 13
-description: A playwright turned evolutionary anthropologist who argued that human territorial, hierarchical, and aggressive behavior has deep biological roots - demolishing the blank-slate assumptions that underpin liberal social engineering, decades before it became acceptable to say so.
+description: "A playwright turned evolutionary anthropologist who argued that human territorial, hierarchical, and aggressive behavior has deep biological roots"
 tags:
   - ecology
 ---

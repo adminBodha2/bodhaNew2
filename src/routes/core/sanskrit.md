@@ -1,5 +1,5 @@
 ---
-title: "Sanskrit"
+title: "Sanskrit | Indian Knowledge Systems, Dharma, and Civilizational Language"
 description: "The root language of Indian civilizational consciousness — its role in encoding dharmic knowledge, its displacement by colonial languages, and the imperative of its revival."
 ---
 

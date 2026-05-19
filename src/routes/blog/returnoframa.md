@@ -1,5 +1,6 @@
 ---
-title: राम आयेंगे!
+title: Ram Ayenge | Ayodhya Rama Temple Devotion and Hindu Awakening
+description: "A first-person account of the devotional awakening before the 2024 Ayodhya pran pratishta."
 author:
   - Pankaj Saxena
 category: Culture Today

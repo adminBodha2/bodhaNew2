@@ -1,5 +1,6 @@
 ---
 title: The Problem of Culture Transmission
+description: "An examination of how Hindu civilization transmits knowledge, and where those mechanisms are breaking today."
 author:
   - Pankaj Saxena
 category: Thought Pieces

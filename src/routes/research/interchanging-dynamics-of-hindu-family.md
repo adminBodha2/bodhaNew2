@@ -2,7 +2,7 @@
 title: Interchanging Dynamics of the Hindu Family
 type: institutional design
 image: /images/research/4.webp
-description: How has the Hindu family - long considered the basic unit of Hindu society rather than the individual - actually changed from its classical model? A field study introducing statistical and sociological rigor to questions that have been answered, until now, only by anecdote.
+description: "A field study of how the Hindu family has changed from its classical model in modern Indian society."
 tags:
   - hindu-institutions
 ---

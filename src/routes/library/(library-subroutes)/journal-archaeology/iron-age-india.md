@@ -1,5 +1,6 @@
 ---
-title: Iron Age India
+title: Iron Age India | Archaeology, Settlement, Technology, and Early History
+description: "Iron Age India appears in the IJA through megalithic burials, Painted Grey Ware and Northern Black Polished Ware sequences, fortified settlements, early."
 type: wiki
 tags: 
   - burial-practices

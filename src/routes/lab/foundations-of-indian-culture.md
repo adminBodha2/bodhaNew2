@@ -2,7 +2,7 @@
 title: Foundations of Indian Culture
 category: Books
 date: 2025-11-20
-excerpt: 'Notes from two books on the foundations of Indian culture.'
+excerpt: 'Notes from GC Pande and KM Munshi on the foundations of Indian culture, continuity, rta, spiritual praxis, symbolism, and civilizational memory.'
 ---
 
 **Book 1 - Foundations of Indian Culture, by Shri GC Pande**

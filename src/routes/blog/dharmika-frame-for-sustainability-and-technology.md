@@ -1,5 +1,6 @@
 ---
 title: A Dharmika Frame for Sustainability and Technology
+description: "The Samudra Manthana as a Dharmic framework for technology, resource extraction, and sustainable cooperation."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

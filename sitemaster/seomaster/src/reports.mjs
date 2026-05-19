@@ -91,6 +91,10 @@ function topicMarkdown(topicKey, issues) {
 		lines.push(formatIssue(issue));
 	}
 
+	if (issues.length === 0) {
+		lines.push('No actionable topic issues found.');
+	}
+
 	return `${lines.join('\n')}\n`;
 }
 
@@ -123,4 +127,3 @@ function sortedIssues(issues) {
 		return a.urlPath.localeCompare(b.urlPath);
 	});
 }
-

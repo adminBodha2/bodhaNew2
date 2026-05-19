@@ -1,5 +1,6 @@
 ---
 title: Ahoi Aṣtamī – How Hindu Dharma Teaches Deep Ecology through Festivals
+description: "Ahoi Ashtami as a window into how Hindu civilization transmits ecological and relational wisdom through mothers devotional practice."
 author:
   - Pankaj Saxena
 category: Culture Today

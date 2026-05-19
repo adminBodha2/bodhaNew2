@@ -1,5 +1,6 @@
 ---
 title: The Difference Between Us - on One-life vs. Multiple-life Metaphysics
+description: "The one-life versus multiple-life metaphysical divide between Hindu and Abrahamic worldviews, and why it matters."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

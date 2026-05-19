@@ -1,5 +1,6 @@
 ---
 title: The Battle Against Hindus in Manipur
+description: "A civilizational reading of the Manipur conflict, missionary conversion, Meitei Hindu identity, and the limits of ethnic analysis."
 author:
   - Pankaj Saxena
 category: Culture Today

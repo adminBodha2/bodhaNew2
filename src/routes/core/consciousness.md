@@ -1,6 +1,6 @@
 ---
-title: "Consciousness"
-description: "The primacy of consciousness as the ground of reality — the metaphysical foundation shared by Vedanta and modern inquiry into mind, artificial intelligence, and the nature of experience."
+title: "Consciousness | Vedanta, Hindu Metaphysics, and Philosophy of Mind"
+description: "The primacy of consciousness as the ground of reality, linking Vedanta with modern inquiry into mind, AI, and experience."
 ---
 
 # Consciousness

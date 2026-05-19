@@ -1,5 +1,6 @@
 ---
 title: Hinduism in the Blind Spot - Part 2
+description: "Part 2 on why Western and westernized intellectuals struggle to encounter Hinduism seriously and directly."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

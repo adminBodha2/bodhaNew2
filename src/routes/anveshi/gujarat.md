@@ -1,5 +1,5 @@
 ---
-title: Gujarat Chapter
+title: Gujarat Chapter | Bodha Anveshi Sacred Geography Tour
 description: The land that was one of the first to be destroyed in the path of Islamic invaders, and yet somehow survived.
 image: https://www.bodharesearch.in/images/anveshi/gujarathero.webp
 id: 4

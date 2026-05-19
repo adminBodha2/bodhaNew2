@@ -1,7 +1,7 @@
 ---
 title: Whitepaper on Dharmic Design
 id: 1
-description: This whitepaper asserts that modern design, in its obsession with anthropocentric convenience, has lost its ethical and cosmic tether. To rectify this, we propose a shift toward Dharmic Design.
+description: "A whitepaper proposing Dharmic Design as an ethical, cosmic alternative to modern design centered only on convenience."
 image: /images/designbodha/db5.webp
 ---
 

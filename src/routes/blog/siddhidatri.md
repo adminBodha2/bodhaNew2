@@ -1,5 +1,6 @@
 ---
 title: Siddhidātrī | Navadurgā - Part 9
+description: "The theology and iconography of Siddhidatri Devi, the final Navadurga form and granter of siddhis."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

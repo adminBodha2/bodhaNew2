@@ -1,9 +1,9 @@
 ---
-title: Theodore Dalrymple
+title: Theodore Dalrymple | Modernity, Culture, and Social Critique
 image: /images/thinkers/theodore-dalrymple.webp
 type: thinker
 id: 7
-description: A prison doctor who documented from the inside the cultural wreckage produced by Western progressivism - his clinical observations are the evidence base for what political traditionalists argue at the level of theory.
+description: "A prison doctor who documented from the inside the cultural wreckage produced by Western progressivism"
 tags:
   - modernity
   - purva-paksha

@@ -2,7 +2,7 @@
 title: The Battle for Dharma in North-East
 type: policy and strategic affairs
 image: /images/research/6.webp
-description: What has large-scale conversion and demographic change done to the Dhārmika civilizational fabric of Northeast India? A deep policy study of how missionary activity and political isolation have severed the region from the rest of Bhārata - and what reversal requires.
+description: "A policy study on conversion, demographic change, and the Dharmic civilizational fabric of Northeast India."
 tags:
   - north-east-india
   - shatrubodha

@@ -1,6 +1,6 @@
 ---
-title: "Itihāsa"
-description: "India's ontological approach to history — encoding perennial truths within historical narrative, contrasted with the Western positivist tradition that reduces the past to bare events."
+title: "Itihasa | Indian History, Ramayana, Mahabharata, and Dharma"
+description: "India's truth-centered approach to history, contrasting itihasa with event-centered Western historiography."
 ---
 
 # Itihāsa

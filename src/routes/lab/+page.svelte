@@ -8,7 +8,7 @@
 
 	let labItems = $derived(data.labItems ?? []);
 
-	const title = 'Lab | Bodha';
+	const title = 'Bodha Lab | Working Notes on Dharma, IKS, Modernity, and Culture';
 	const metaDescription = 'Working notes, ongoing inquiries, opinions, and deep research published as they develop.';
 	const metaUrl = absoluteUrl('/lab');
 	const metaImage = absoluteImage('/images/bodhacover.png');

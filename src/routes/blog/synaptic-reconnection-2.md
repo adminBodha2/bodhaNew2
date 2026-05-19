@@ -1,5 +1,6 @@
 ---
 title: Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 2
+description: "Part 2 on the conceptual structures needed to rebuild Dharmic consciousness after colonial education."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

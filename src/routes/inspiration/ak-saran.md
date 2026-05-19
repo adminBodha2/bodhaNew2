@@ -1,9 +1,9 @@
 ---
-title: AK Saran
+title: AK Saran | Indian Sociology, Tradition, and Civilizational Thought
 image: /images/thinkers/ak-saran.webp
 type: thinker
 id: 9
-description: A rare Indian sociologist who refused to think inside British intellectual frameworks - his is one of the few attempts to develop a genuinely Hindu social science, reading the tradition from within rather than against Western categories.
+description: "A rare Indian sociologist who refused to think inside British intellectual frameworks"
 tags:
   - indian-knowledge-systems
   - svayambodha

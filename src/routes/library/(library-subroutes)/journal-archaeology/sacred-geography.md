@@ -1,5 +1,6 @@
 ---
-title: Sacred Geography
+title: Sacred Geography | Indian Archaeology, Pilgrimage, Temples, and Landscape
+description: "Sacred geography in the IJA links archaeology with pilgrimage, textual memory, ritual landscapes, temple clusters, water bodies, rock art locations, and living."
 type: wiki
 tags: 
   - temple-architecture

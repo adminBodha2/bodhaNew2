@@ -2,7 +2,7 @@
 title: On Meso-American History
 category: Opinions
 date: 2025-11-10
-excerpt: 'Some thoughts on representations of Mesoamerica and its history.'
+excerpt: 'Notes on Mesoamerican history, Aztec sacrifice, migration narratives, colonial framing, and comparisons with Aryan invasion debates in India.'
 ---
 
 A brilliant [podcast](https://www.youtube.com/watch?v=l5x-YcFsK24) on Aztec and Mesoamerican history featuring Luke Caverns raises two interesting questions:

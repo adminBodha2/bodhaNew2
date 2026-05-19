@@ -1,5 +1,6 @@
 ---
-title: The Dhārmika Gene
+title: The Dharmika Gene | Dharma, Culture, and Civilizational Consciousness
+description: "A re-articulation of Dharma as civilizational inheritance, encoding Bharatiya culture, cosmos, and obligation."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

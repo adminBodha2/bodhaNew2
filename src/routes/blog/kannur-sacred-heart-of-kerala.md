@@ -1,5 +1,6 @@
 ---
 title: Kannur - Discovering the Sacred Heart of Kerala through Bodha Anveshi
+description: "A travel narrative through Kannur and Kerala, exploring Hindu temple culture, landscape, heritage, and memory."
 author:
   - Pankaj Saxena
 category: Thought Pieces

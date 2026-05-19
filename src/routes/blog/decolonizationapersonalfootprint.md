@@ -1,5 +1,6 @@
 ---
 title: Decolonization - A Personal Footprint and Some Ramp Ways
+description: "A personal account of decolonization as daily practice, from language and food to festivals and habits of mind."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

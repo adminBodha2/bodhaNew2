@@ -2,7 +2,7 @@
 title: Hindu Response to Enlightenment
 type: purva paksha of western institutions
 image: /images/research/9.webp
-description: Where does Enlightenment rationalism reveal its own metaphysical blind spots - and what does Hindu philosophy offer in response? A civilizational dialogue contrasting Western secular universalism with Vedantic metaphysical plurality, proposing a Hindu diagnostic rather than a defensive rejection.
+description: "A civilizational dialogue between Enlightenment rationalism and Hindu metaphysical plurality."
 tags:
   - civilizational-consciousness
   - purva-paksha

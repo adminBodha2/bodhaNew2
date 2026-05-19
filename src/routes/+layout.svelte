@@ -131,7 +131,7 @@ main
 header
 	width: 100%
 	position: sticky
-	background: var(--color-stone-2)
+	background: var(--color-back)
 	top: 0
 	z-index: 999
 	border-bottom: var(--border-main)

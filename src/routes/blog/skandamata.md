@@ -1,5 +1,6 @@
 ---
 title: Skandamātā | Navadurgā - Part 5
+description: "The theology and iconography of Skandamata Devi, mother of Skanda and Navadurga form of courage and order."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

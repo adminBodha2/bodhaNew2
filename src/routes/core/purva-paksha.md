@@ -1,6 +1,6 @@
 ---
-title: "Purva Paksha"
-description: "The classical Indian method of rigorous intellectual engagement with opposing positions — applied by Bodha to Western institutions, Abrahamic theologies, and Enlightenment epistemology."
+title: "Purva Paksha | Hindu Method, Civilizational Critique, and Shatrubodha"
+description: "The classical Indian method of rigorously studying opposing views, applied to Western institutions, theology, and epistemology."
 ---
 
 # Purva Paksha

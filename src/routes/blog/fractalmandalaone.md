@@ -1,5 +1,6 @@
 ---
 title: Fractal Maṇḍala 1- the Macrohistoric Case for India's Civilizational Primacy
+description: "Part 1 of the Fractal Mandala model of Indian civilizational consciousness: coherent, layered, and self-similar."
 author:
   - Amritanshu Pandey
 category: History and Civilization

@@ -1,5 +1,5 @@
 ---
-title: Badami Chapter
+title: Badami Chapter | Bodha Anveshi Hindu Temple Architecture Tour
 description: Karnataka is a world on its own. And Badami is a good representative of the rich diversity of its cultural heritage.
 image: https://www.bodharesearch.in/images/anveshi/badamihero.webp
 id: 3

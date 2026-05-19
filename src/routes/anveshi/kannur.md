@@ -1,6 +1,6 @@
 ---
-title: Kannur Chapter
-description: In the northern corner of Kerala, hidden in a sea of Muslim majority neighborhoods, is the district of Kannur — an ancient Hindu town with a cluster of Hindu temples that are a continuing, centuries old tradition, even now.
+title: Kannur Chapter | Bodha Anveshi Kerala Hindu Temple Tour
+description: "Explore Kannur as an ancient Hindu temple town in northern Kerala, where living temple traditions continue amid a changing cultural landscape."
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/kannur/kannurhero.webp
 id: 2
 isOpen: false

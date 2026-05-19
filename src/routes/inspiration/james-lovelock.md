@@ -1,9 +1,9 @@
 ---
-title: James Lovelock
+title: James Lovelock | Gaia Theory, Ecology, and Dharmic Environmentalism
 image: /images/thinkers/james-lovelock.webp
 type: thinker
 id: 15
-description: The scientist who revived the idea that Earth is a self-regulating living system and named it Gaia - which is less a metaphor than a description of something Hindu cosmology had always held without needing a laboratory to prove it.
+description: "The scientist who revived the idea that Earth is a self-regulating living system and named it Gaia"
 tags:
   - ecology
 ---

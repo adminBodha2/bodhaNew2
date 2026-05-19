@@ -2,7 +2,7 @@
 title: Dangs - Anatomy of Religious Terror
 type: policy and strategic affairs
 image: /images/research/8.webp
-description: What does the full anatomy of forced conversion look like in an Indian tribal district - and who bears the cost? A ground-level documentation of missionary operations in Dangs, Gujarat, tracing the cultural and social consequences for the Adivasi communities most affected.
+description: "A ground-level study of forced conversion in Dangs, Gujarat, and its consequences for Adivasi communities."
 tags:
   - north-east-india
   - shatrubodha

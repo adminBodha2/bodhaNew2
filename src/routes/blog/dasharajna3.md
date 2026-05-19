@@ -1,5 +1,6 @@
 ---
 title: Dāśarājña Recontextualized - Part 3
+description: "Part 3 of the Dasharajna series, placing the battle in historical and geographic context for Indian memory."
 author:
   - Amritanshu Pandey
 category: History and Civilization

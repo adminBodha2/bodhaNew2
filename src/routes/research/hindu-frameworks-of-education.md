@@ -2,7 +2,7 @@
 title: Hindu Frameworks of Education
 type: institutional design
 image: /images/research/3.webp
-description: What living models of traditional Hindu education still survive in India - and what do they demonstrate about the alternative to Western schooling? Field studies of surviving gurukulas, pathshalas, and vidyalayas documenting how Indian Knowledge Systems are transmitted in practice today.
+description: "Field studies of surviving gurukulas, pathshalas, and vidyalayas that transmit Indian Knowledge Systems today."
 tags:
   - indian-knowledge-systems
   - hindu-institutions

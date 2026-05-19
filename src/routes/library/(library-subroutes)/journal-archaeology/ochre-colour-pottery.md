@@ -1,5 +1,6 @@
 ---
 title: Ochre Colour Pottery (OCP)
+description: "Ochre Colour Pottery (OCP) is a Bronze Age ceramic tradition of the Upper Gangetic Plain and adjacent areas, dating broadly to the late third to early second."
 type: wiki
 tags: 
   - copper-hoards

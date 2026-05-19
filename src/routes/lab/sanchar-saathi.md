@@ -1,8 +1,8 @@
 ---
-title: Sanchar Sathi
+title: Sanchar Saathi | Telecom Security, Privacy, and Indian Digital Policy
 category: Opinions
 date: 2025-12-03
-excerpt: 'Opinions on the Sanchar Sathi app mandated by the government.'
+excerpt: 'Opinion notes on the Sanchar Saathi app, telecom cyber security, privacy concerns, government mandate language, and Indian digital policy.'
 ---
 
 To begin, it's not actually mandatory. The Telecom minister, Jyotiraditya Scindia clarifies-

@@ -1,5 +1,6 @@
 ---
 title: Hinduism in the Blind Spot - Part 1
+description: "Part 1 on why secular liberal frameworks often fail to understand Hinduism on its own civilizational terms."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

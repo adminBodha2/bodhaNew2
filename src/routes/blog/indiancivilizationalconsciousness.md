@@ -1,5 +1,6 @@
 ---
 title: Indian Civilizational Consciousness
+description: "An Independence Day essay defining Indian civilizational consciousness and why India needs it for what comes next."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

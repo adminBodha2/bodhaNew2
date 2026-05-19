@@ -19,7 +19,7 @@
 	let reveal2 = $state<HTMLElement | null>(null);
 	let vis2 = useInView(() => reveal2, { threshold: 0.5, once: true });
 
-	const title = 'Research | Bodha';
+	const title = 'Bodha Research | Hindu Culture, IKS, Policy, and Ethnography';
 	const metaDescription = "Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities.";
 	const metaUrl = absoluteUrl('/research');
 	const metaImage = absoluteImage('/images/key-research.webp');

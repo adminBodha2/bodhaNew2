@@ -13,8 +13,8 @@
 	import Concern from '$lib/icons/concern.svelte';
 	import Aware from '$lib/icons/aware.svelte';
 
-	const title = 'About | Bodha';
-	const metaDescription = 'About Bodha, its work, method, and purpose.';
+	const title = 'About Bodha | Hindu Research, IKS, Policy, and Cultural Work';
+	const metaDescription = 'Learn about Bodha, a Hindu research group working across Indian Knowledge Systems, policy, education, cultural experiences, and public thought.';
 	const metaUrl = absoluteUrl('/about');
 	const metaImage = absoluteImage('/images/bodhacover.png');
 	let referenceOne = $state<HTMLElement | null>(null);

@@ -1,5 +1,6 @@
 ---
 title: Art, Iconography, and Sculpture
+description: "Art, iconography, and sculpture are major recurring themes in the IJA, appearing through temple sculpture, Buddhist and Jain imagery, terracotta catalogues."
 type: wiki
 tags: 
   - museum-collections

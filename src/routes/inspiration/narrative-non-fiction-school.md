@@ -3,7 +3,7 @@ title: School of Narrative Non-fiction
 image: /images/schools/narrative-non-fiction-school.webp
 type: school
 id: 8
-description: India is a civilization that transmits knowledge through story - this school recovers that epistemic mode and applies it to contemporary civilizational questions through long-form narrative that neither academia nor journalism can produce.
+description: "India is a civilization that transmits knowledge through story - this school recovers that epistemic mode and applies it to contemporary civilizational."
 tags:
   - aesthetics
   - history

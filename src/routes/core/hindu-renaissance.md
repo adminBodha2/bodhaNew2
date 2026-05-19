@@ -1,5 +1,5 @@
 ---
-title: "Hindu Renaissance"
+title: "Hindu Renaissance | Civilizational Renewal, Dharma, and IKS"
 description: "The civilizational renewal of Hindu society through cultural depth, institutional rebuilding, and philosophical clarity — the overarching aspiration driving Bodha's work."
 ---
 

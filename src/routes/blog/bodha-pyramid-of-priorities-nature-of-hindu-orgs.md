@@ -1,5 +1,6 @@
 ---
 title: Bodha, the Pyramid of Priorities and the Nature of Hindu Organizations
+description: "Why Hindu organizational diversity may be a strength, and what it means for Sanatana Dharma and civilizational strategy."
 author:
   - Pankaj Saxena
 category: Thought Pieces

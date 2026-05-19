@@ -1,5 +1,6 @@
 ---
 title: Kūṣmāṇḍā | Navadurgā - Part 4
+description: "The theology and iconography of Kushmanda Devi, the Navadurga form who creates with her smile and removes darkness."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

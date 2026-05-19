@@ -1,5 +1,6 @@
 ---
-title: Copper Hoards
+title: Copper Hoards | Indian Archaeology, Chalcolithic Finds, and Metal Culture
+description: "The Indian Journal of Archaeology has given more sustained attention to the copper hoard phenomenon than to any other single topic in the corpus."
 type: wiki
 tags: 
   - ochre-colour-pottery

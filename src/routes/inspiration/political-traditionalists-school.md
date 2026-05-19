@@ -3,7 +3,7 @@ title: School of Political Traditionalists
 image: /images/schools/political-traditionalists-school.webp
 type: school
 id: 5
-description: A school of Hindu conservatism drawing on Burke, Scruton, and Indian classical statecraft to argue for civilizational continuity over ideological reinvention - increasingly influential in post-Nehruvian policy but insufficiently read outside political circles.
+description: "A school of Hindu conservatism drawing on Burke, Scruton, and Indian classical statecraft to argue for civilizational continuity over ideological reinvention"
 tags:
   - civilizational-consciousness
 ---

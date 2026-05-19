@@ -1,6 +1,6 @@
 ---
-title: "Out-of-India Theory"
-description: "The hypothesis that Indo-European languages and culture originated in India — a civilizationally significant challenge to the Aryan Invasion Theory, argued through linguistic, genetic, and archaeological evidence."
+title: "Out-of-India Theory | Vedic Origins, Aryan Debate, and Indian History"
+description: "The Out-of-India theory and its challenge to Aryan invasion models through linguistic, genetic, and archaeological evidence."
 ---
 
 # Out-of-India Theory

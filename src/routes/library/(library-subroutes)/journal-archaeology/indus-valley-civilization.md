@@ -1,5 +1,6 @@
 ---
 title: Indus Valley Civilization (IVC / Harappan)
+description: "The Indus Valley Civilization, including its Mature, Late, and post-urban phases, appears across a range of articles in the IJA corpus, addressed through site."
 type: wiki
 tags: 
   - ochre-colour-pottery

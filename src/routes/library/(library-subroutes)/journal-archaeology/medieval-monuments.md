@@ -1,5 +1,6 @@
 ---
-title: Medieval Monuments
+title: Medieval Monuments | Indian Archaeology, Architecture, and Heritage Studies
+description: "Medieval monuments - forts, mosques, tombs, gardens, bridges, baolis, and palace structures"
 type: wiki
 tags: 
   - temple-architecture

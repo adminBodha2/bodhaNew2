@@ -1,5 +1,6 @@
 ---
-title: Burial Practices
+title: Burial Practices | Indian Archaeology, Mortuary Sites, and Funerary Evidence
+description: "Burial practices - inhumation in pits, cist burials, megalithic burials, urn burials, chariot burials, and hero-stone memorials"
 type: wiki
 tags: 
   - megalithic-culture

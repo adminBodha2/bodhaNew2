@@ -1,5 +1,6 @@
 ---
-title: Regional Surveys
+title: Regional Surveys | Indian Archaeological Landscapes, Sites, and Field Reports
+description: "Regional surveys and gazetteers form one of the strongest documentary strands in the IJA corpus, mapping archaeological landscapes at district, river-valley."
 type: wiki
 tags: 
   - excavation-reports

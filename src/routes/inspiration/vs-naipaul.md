@@ -1,9 +1,9 @@
 ---
-title: VS Naipaul
+title: VS Naipaul | Colonialism, Civilization, and Indian Cultural Memory
 image: /images/thinkers/vs-naipaul.webp
 type: thinker
 id: 5
-description: The Nobel laureate who traveled the colonized world and wrote what he actually saw - cultures wrecked by Islam, deformed by colonialism, and unable to recover because they've internalized their conquerors' self-image - a diagnosis as unwelcome now as when he made it.
+description: "The Nobel laureate who traveled the colonized world and wrote what he actually saw - cultures wrecked by Islam, deformed by colonialism, and unable to recover."
 tags:
   - civilizational-consciousness
   - decolonization

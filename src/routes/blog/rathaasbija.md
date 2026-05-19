@@ -1,5 +1,6 @@
 ---
 title: Ratha as a Bīja of Civilizational DNA, a Fractal Maṇḍala Essay
+description: "The Hindu ratha as a bija: a seed form encoding Dharmic worldview, iconography, and philosophical argument."
 author:
   - Amritanshu Pandey
 category: History and Civilization

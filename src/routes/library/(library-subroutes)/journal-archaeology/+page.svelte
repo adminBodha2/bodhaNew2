@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 	import { flip } from 'svelte/animate';
 	import { slide } from 'svelte/transition';
 	import { sineIn, sineOut } from 'svelte/easing';
@@ -10,15 +12,30 @@
 	let openIssue = $state<number | null>(null);
 	let scroY = $state(0);
 	let parallaxY = $derived(scroY / 6);
+	const title = 'Indian Journal of Archaeology | Bodha Open Library';
+	const metaDescription = 'A curated Bodha Open Library index of Indian Journal of Archaeology issues, themes, articles, and research areas.';
+	const metaUrl = absoluteUrl('/library/journal-archaeology');
+	const metaImage = absoluteImage('/images/key-bol.webp');
+	const jsonld = stringifyJsonLd(
+		webPageJsonLd({
+			name: title,
+			description: metaDescription,
+			url: metaUrl,
+			image: metaImage,
+			type: 'CollectionPage'
+		})
+	);
 	function toggleIssue(issue: number) {
 		openIssue = openIssue === issue ? null : issue;
 	}
 </script>
 
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
+
 <svelte:window bind:scrollY={scroY} />
 
 <section class="box library-book rgap32">
-	<Crumb showT={true} title="Indian Journal of Archaeology" />
+	<Crumb showT={true} title="Indian Journal of Archaeology" showD={true} desc={metaDescription} />
 	<p class="highlight-text">
 		The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016. "Full access, no subscriptions, and no limitations." This totals to around 41 issues so far, spread over 11 volumes all available on their <a class="linked" target="_blank" rel="noreferrer" href="https://ijarch.com/">website.</a>
 		Here at Bodha Open Library, we've sifted through each issue, sorted and classified the articles, and present the archive in easy to navigate, explore-friendly forms.

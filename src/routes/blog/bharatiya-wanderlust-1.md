@@ -1,5 +1,6 @@
 ---
 title: Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 1
+description: "Part 1 of a critique of Aryan Invasion and Migration Theory through textual, genetic, archaeological, and civilizational evidence."
 author:
   - Amritanshu Pandey
 category: History and Civilization

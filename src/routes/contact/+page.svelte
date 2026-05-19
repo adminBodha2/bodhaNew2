@@ -8,7 +8,7 @@
 	import Linkedin from '$lib/icons/linkedin.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
-	const title = 'Contact | Bodha';
+	const title = 'Contact Bodha Research | Hindu, Dharma, and IKS Collaboration';
 	const metaDescription = 'Contact Bodha Research for queries, collaborations, website issues, and social media updates.';
 	const metaUrl = absoluteUrl('/contact');
 	const metaImage = absoluteImage('/images/bodhacover.png');

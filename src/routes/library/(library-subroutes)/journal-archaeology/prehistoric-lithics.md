@@ -1,5 +1,6 @@
 ---
-title: Prehistoric Lithics
+title: Prehistoric Lithics | Stone Tools, Prehistory, and Indian Archaeology
+description: "Prehistoric lithic studies in the IJA document Palaeolithic, Mesolithic, microlithic, pebble-cobble, core-flake, chert, and drill-bit assemblages across Odisha."
 type: wiki
 tags: 
   - rock-art

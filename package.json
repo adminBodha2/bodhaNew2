@@ -13,9 +13,10 @@
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"build:graph": "tsx src/lib/serving/build-graph.ts",
-		"seo:audit": "node tools/bodha-seo/src/cli.mjs audit",
-		"seo:page": "node tools/bodha-seo/src/cli.mjs page",
-		"seo:topic": "node tools/bodha-seo/src/cli.mjs topic"
+		"seo:audit": "node sitemaster/seomaster/src/cli.mjs audit",
+		"seo:page": "node sitemaster/seomaster/src/cli.mjs page",
+		"seo:topic": "node sitemaster/seomaster/src/cli.mjs topic",
+		"seo:topic-links": "node sitemaster/seomaster/src/cli.mjs topic-links"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.3.3",

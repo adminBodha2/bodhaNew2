@@ -1,5 +1,6 @@
 ---
 title: Art and Meaning Making
+description: "How Hindu aesthetics differs from Western aesthetics by asking what art does to the soul, not only how it represents reality."
 author:
   - Pankaj Saxena
 category: Thought Pieces

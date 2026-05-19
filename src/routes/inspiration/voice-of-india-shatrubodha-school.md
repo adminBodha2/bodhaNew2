@@ -3,7 +3,7 @@ title: Voice of India School of Śatrubodha
 image: /images/schools/voice-of-india-shatrubodha.webp
 type: school
 id: 3
-description: The school that insists on Śatrubodha - knowing your adversary clearly - as the precondition for Hindu survival; its critique of prophetic monotheism as structurally incompatible with a pluralist civilization remains the most rigorous analysis in this space.
+description: "The school that insists on Śatrubodha - knowing your adversary clearly"
 tags:
   - purva-paksha
   - shatrubodha

@@ -1,5 +1,6 @@
 ---
 title: Kālarātri | Navadurgā - Part 7
+description: "The theology and iconography of Kalaratri Devi, the fierce Navadurga form who destroys darkness and protects devotees."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

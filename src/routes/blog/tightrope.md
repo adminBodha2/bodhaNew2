@@ -1,5 +1,6 @@
 ---
 title: Walking the Tightrope Between Big Brother and Soma
+description: "A Dharmic reading of Orwell, Huxley, surveillance, pleasure, and the future India must avoid."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

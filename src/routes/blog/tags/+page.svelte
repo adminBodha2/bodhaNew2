@@ -12,8 +12,8 @@
 	let tagsC = $derived(data.tagsC ?? []);
 	let showCount = $state(false);
 
-	const title = 'Tags | Bodha Blog';
-	const metaDescription = 'All content tags at the Bodha website.';
+	const title = 'Bodha Blog Tags | Hindu Culture, Dharma, IKS, and Civilizational Themes';
+	const metaDescription = 'Browse Bodha blog essays by tags across Hindu culture, Dharma, Indian knowledge systems, temples, festivals, history, and civilizational thought.';
 	const metaUrl = absoluteUrl('/blog/tags');
 	const metaImage = absoluteImage('/images/bodhacover.png');
 

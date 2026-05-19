@@ -2,7 +2,7 @@
 title: Bangladesh Riots Dec 2025 Report
 category: Working Notes
 date: 2025-12-20
-excerpt: 'A report on the ongoing riots and lynchings in Bangladesh.'
+excerpt: 'A working report on Bangladesh riots, anti-Hindu violence, lynchings, media attacks, and political unrest after the December 2025 crisis.'
 ---
 
 <img src="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/misc/ethniccleansong.jpeg" class="headimage" alt="ethnic cleansing of hindus in bangladesh"/>

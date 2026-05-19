@@ -5,9 +5,11 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
+	import seoTopicLinks from '$lib/generated/seo-topic-links.json';
 
 	interface Props {
 		data: PageData;
@@ -33,6 +35,8 @@
 			})
 		)
 	);
+	const dharmaTopic = seoTopicLinks.topics.dharma;
+	const relatedDharmaPages = $derived(dharmaTopic?.supportingPages ?? []);
 </script>
 
 <svelte:window bind:scrollY={sY} />
@@ -44,7 +48,7 @@
 		<div class="box docside">
 			{#if data.questions?.length > 0}
 				<div class="doclist">
-					{#each data.questions as item}
+					{#each data.questions as item (item.linkpath)}
 						{#if item.meta.title !== data.title}
 							<a class="doclink sidebar-text" href={item.linkpath}>
 								{item.meta.title}
@@ -58,7 +62,7 @@
 			<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap cgap4 rgap4">
-						{#each data.tags as tag}
+						{#each data.tags as tag (tag)}
 							<a class="txt-sm tt-u theme" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
 						{/each}
 					</div>
@@ -81,7 +85,7 @@
 									{/if}
 								</div>
 								<div class="row wrap cgap8 rgap4 self-bottom ptop32">
-									{#each item.node.tags as tag}
+									{#each item.node.tags as tag (tag)}
 										<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-', ' ')}</p>
 									{/each}
 								</div>
@@ -92,4 +96,7 @@
 			{/if}
 		</div>
 	</section>
+	{#if data.item === 'core-of-sanatana-dharma'}
+		<HubRelatedLinks title="Related Dharma Research" items={relatedDharmaPages} />
+	{/if}
 </Container>

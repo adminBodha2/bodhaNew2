@@ -6,7 +6,7 @@
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
-	const title = 'Bodha Courses';
+	const title = 'Bodha Courses | Hindu Thinkers, IKS, and Indic Thought';
 	const metaDescription = 'Online courses covering the most important Indian thinkers and schools of thought, from an Indic point of view.';
 	const metaUrl = absoluteUrl('/academy/courses');
 	const metaImage = absoluteImage('/images/key-academy.webp');

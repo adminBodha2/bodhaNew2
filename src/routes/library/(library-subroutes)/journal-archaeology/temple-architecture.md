@@ -1,5 +1,6 @@
 ---
-title: Temple Architecture
+title: Temple Architecture | Indian Archaeology, Sacred Art, and Hindu Monuments
+description: "Temple architecture is a major recurring theme in the IJA, addressed through architectural surveys, iconographic studies, sculpture catalogues, and textual analysis."
 type: wiki
 tags: 
   - epigraphy-and-inscriptions

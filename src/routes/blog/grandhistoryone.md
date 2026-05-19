@@ -1,5 +1,6 @@
 ---
 title: Grand History, Part 1
+description: "A macro-history of consciousness and civilization, from pre-linguistic origins to major civilizational streams."
 author:
   - Amritanshu Pandey
 category: History and Civilization

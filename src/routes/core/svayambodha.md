@@ -1,5 +1,5 @@
 ---
-title: "Svayambodha"
+title: "Svayambodha | Hindu Civilizational Self-Knowledge and IKS"
 description: "Self-knowledge of Hindu civilization — knowing who we are, what we have built, and what we stand for; one of Bodha's two foundational intellectual imperatives."
 ---
 

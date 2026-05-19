@@ -3,7 +3,7 @@ title: School of Conscilience
 image: /images/schools/conscilience-school.webp
 type: school
 id: 7
-description: This school holds that the West's divorce between sciences and humanities is a civilizational pathology - and that the Indian knowledge tradition, which never separated the two, offers a working model of their reintegration.
+description: "This school holds that the West's divorce between sciences and humanities is a civilizational pathology"
 tags:
   - indian-knowledge-systems
   - tags

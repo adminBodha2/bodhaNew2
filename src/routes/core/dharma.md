@@ -1,5 +1,5 @@
 ---
-title: "Dharma"
+title: "Dharma | Hindu Civilizational Order, Ethics, and Sanatana Thought"
 description: "The cosmic and moral order that sustains all life — the practical, ethical, and metaphysical principle at the heart of Hindu civilization and Bodha's cultural work."
 ---
 

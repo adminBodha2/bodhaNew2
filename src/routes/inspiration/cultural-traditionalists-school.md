@@ -3,7 +3,7 @@ title: School of Cultural Traditionalists
 image: /images/schools/cultural-traditionalists-school.webp
 type: school
 id: 6
-description: The oldest living school in India - scholars who see themselves as contemporary interpreters of the same tradition that produced the Upanishads and the Nāṭyaśāstra - treating metaphysics, aesthetics, and philosophy as one continuous project rather than separate departments.
+description: "The oldest living school in India - scholars who see themselves as contemporary interpreters of the same tradition that produced the Upanishads and the Nāṭyaśāstra"
 tags:
   - indian-knowledge-systems
 ---

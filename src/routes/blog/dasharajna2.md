@@ -1,5 +1,6 @@
 ---
 title: Dāśarājña Recontextualized - Part 2
+description: "Part 2 of the Dasharajna series, reading Rigveda Mandala 7 for participants, geography, and historical context."
 author:
   - Amritanshu Pandey
 category: History and Civilization

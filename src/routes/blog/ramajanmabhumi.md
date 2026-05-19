@@ -1,5 +1,6 @@
 ---
 title: Śrī Rāma Comes Back to Ayodhyā
+description: "The Ram Janmabhumi movement as sacred geography, civilizational memory, and the permanence of divine presence."
 author:
   - Pankaj Saxena
 category: Culture Today

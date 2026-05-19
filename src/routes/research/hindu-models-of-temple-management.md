@@ -2,7 +2,7 @@
 title: Hindu Models of Temple Management
 type: institutional design
 image: /images/research/1.webp
-description: How did the traditional Hindu temple function as a self-governing civilizational institution - and what would it take to recover that from state-imposed bureaucratic management? Research building the case for culture-sensitive temple governance by documenting indigenous models of administration.
+description: "Research on traditional Hindu temple governance and indigenous models of temple administration."
 tags:
   - hindu-institutions
   - temple

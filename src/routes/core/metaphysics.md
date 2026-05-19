@@ -1,5 +1,5 @@
 ---
-title: "Metaphysics"
+title: "Metaphysics | Hindu Philosophy, Vedanta, Karma, and Consciousness"
 description: "The Indian philosophical tradition's account of ultimate reality — from Vedantic non-dualism to the law of karma, contrasted with Western materialist ontology."
 ---
 

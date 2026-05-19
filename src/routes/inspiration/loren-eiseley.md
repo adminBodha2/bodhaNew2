@@ -1,9 +1,9 @@
 ---
-title: Loren Eiseley
+title: Loren Eiseley | Nature Writing, Ecology, and Human Meaning
 image: /images/thinkers/loren-eiseley.webp
 type: thinker
 id: 2
-description: An anthropologist who wrote like a poet and thought like a mystic - Eiseley's meditations on time, evolution, and consciousness are the closest Western science has come to the Hindu sense of cosmic scale and existential wonder without borrowing the vocabulary.
+description: "An anthropologist who wrote like a poet and thought like a mystic - Eiseley's meditations on time, evolution, and consciousness are the closest Western science."
 tags:
   - ecology
   - modernity

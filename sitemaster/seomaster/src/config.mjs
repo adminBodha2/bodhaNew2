@@ -3,7 +3,7 @@ import path from 'node:path';
 export const SITE_URL = 'https://www.bodharesearch.in';
 export const REPO_ROOT = path.resolve(process.cwd());
 export const ROUTES_DIR = path.join(REPO_ROOT, 'src/routes');
-export const REPORT_DIR = path.join(REPO_ROOT, 'reports/seo');
+export const REPORT_DIR = path.join(REPO_ROOT, 'sitemaster/seomaster/reports');
 
 export const ROUTE_FAMILIES = [
 	'blog',
@@ -17,7 +17,6 @@ export const ROUTE_FAMILIES = [
 	'core',
 	'lab',
 	'anveshi',
-	'temples',
 	'wiki',
 	'ontology',
 	'videos'
@@ -25,7 +24,8 @@ export const ROUTE_FAMILIES = [
 
 export const TOPIC_CLUSTERS = {
 	'hindu-temple': {
-		label: 'Hindu Temple',
+		label: 'Temple / Hindu Temple',
+		primaryHub: '/wiki/temples',
 		terms: [
 			'hindu temple',
 			'temple',
@@ -43,12 +43,14 @@ export const TOPIC_CLUSTERS = {
 			'saptapuri',
 			'temple architecture'
 		],
-		expectedHubs: ['/temples', '/core/temple', '/research/temples-of-madhya-pradesh']
+		expectedHubs: ['/wiki/temples', '/core/temple', '/research/temples-of-madhya-pradesh']
 	},
 	'indian-knowledge-systems': {
-		label: 'Indian Knowledge Systems',
+		label: 'Indian Knowledge Systems / Education',
+		primaryHub: '/wiki/indian-knowledge-systems-and-education',
 		terms: [
 			'indian knowledge systems',
+			'indian knowledge systems and education',
 			'iks',
 			'sanskrit',
 			'shastra',
@@ -60,9 +62,12 @@ export const TOPIC_CLUSTERS = {
 			'mimamsa',
 			'gurukula',
 			'traditional education',
+			'hindu education',
+			'civilizational learning',
 			'dharampal'
 		],
 		expectedHubs: [
+			'/wiki/indian-knowledge-systems-and-education',
 			'/core/indian-knowledge-systems',
 			'/library/paths/indian-knowledge-systems',
 			'/research/hindu-frameworks-of-education'
@@ -70,6 +75,7 @@ export const TOPIC_CLUSTERS = {
 	},
 	dharma: {
 		label: 'Dharma',
+		primaryHub: '/big-questions/core-of-sanatana-dharma',
 		terms: [
 			'dharma',
 			'sanatana dharma',
@@ -82,7 +88,7 @@ export const TOPIC_CLUSTERS = {
 			'hindu family',
 			'polity'
 		],
-		expectedHubs: ['/core/dharma', '/core/sanatana-dharma']
+		expectedHubs: ['/big-questions/core-of-sanatana-dharma', '/core/dharma', '/core/sanatana-dharma']
 	}
 };
 
@@ -97,4 +103,3 @@ export function routeFamily(urlPath) {
 	const first = clean.split('/').filter(Boolean)[0];
 	return first || 'home';
 }
-

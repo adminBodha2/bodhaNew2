@@ -1,9 +1,9 @@
 ---
-title: MS Hiriyanna
+title: MS Hiriyanna | Indian Philosophy, Vedanta, and Dharma
 image: /images/thinkers/ms-hiriyanna.webp
 type: thinker
 id: 16
-description: The definitive modern scholar of Indian philosophy - his systematic expositions of the darshanas remain the clearest English-language entry point into Hindu metaphysics and epistemology - rigorous without being reductive.
+description: "The definitive modern scholar of Indian philosophy - his systematic expositions of the darshanas remain the clearest English-language entry point into Hindu."
 tags:
   - indian-knowledge-systems
   - aesthetics

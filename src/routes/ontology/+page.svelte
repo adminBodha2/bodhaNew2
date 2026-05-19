@@ -7,7 +7,7 @@
 
 	let { data }: { data: PageData } = $props();
 
-	const title = 'Ontology | Bodha';
+	const title = 'Bodha Ontology | Amarakosha Varga Map for IKS and Dharma Research';
 	const metaDescription = 'An Amarakosha-based ontology for Bodha nodes, arranged by varga and linked to essays, books, thinkers, schools, and questions.';
 	const metaUrl = absoluteUrl('/ontology');
 	const metaImage = absoluteImage('/images/bodhacover.png');

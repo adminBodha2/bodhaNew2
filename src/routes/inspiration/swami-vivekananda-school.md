@@ -3,7 +3,7 @@ title: Swami Vivekananda's School
 image: /images/schools/swami-vivekananda-school.webp
 type: school
 id: 1
-description: The school that launched Hindu renaissance - Vivekananda's reading of Vedanta as both universal philosophy and basis for Hindu action produced the template every subsequent Hindu revivalist movement has worked with, consciously or not.
+description: "The school that launched Hindu renaissance - Vivekananda's reading of Vedanta as both universal philosophy and basis for Hindu action produced the template."
 tags:
   - consciousness
   - hindu-renaissance

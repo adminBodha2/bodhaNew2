@@ -1,5 +1,6 @@
 ---
 title: Śailaputrī | Navadurgā - Part 1
+description: "An introduction to Navaratri through Shailaputri Devi, the first Navadurga form and embodiment of primal shakti."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

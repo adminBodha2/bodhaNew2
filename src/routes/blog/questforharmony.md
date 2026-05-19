@@ -1,5 +1,6 @@
 ---
-title: Quest for Harmony
+title: Quest for Harmony | Indian Culture, Dharma, and Civilizational Balance
+description: "Bodha founding essay on harmony as a rigorous civilizational imperative for India cultural redemption."
 author:
   - Pankaj Saxena
 category: Thought Pieces

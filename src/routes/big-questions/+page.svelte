@@ -12,7 +12,7 @@
 	let questions = $derived(data.questions ?? []);
 
 	const title = 'Bodha — Big Questions';
-	const metaDescription = 'Hindu consciousness is awakening across the nation. Bodha aids this process by asking provocative questions about the most fundamental problems and open questions that Hindu society faces today — issues that are not settled, perennially asked by every Hindu generation, and novel dilemmas of our time.';
+	const metaDescription = "Bodha asks foundational questions facing Hindu society today, from civilizational renewal to Dharma, institutions, culture, and modernity.";
 	const metaUrl = absoluteUrl('/big-questions');
 	const metaImage = absoluteImage('/images/key-bigquestions.webp');
 

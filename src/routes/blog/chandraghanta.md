@@ -1,5 +1,6 @@
 ---
 title: Candraghaṇṭā | Navadurgā - Part 3
+description: "The theology and iconography of Chandraghanta Devi, the warrior Navadurga form of world-facing shakti."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

@@ -1,9 +1,9 @@
 ---
-title: Wade Davis
+title: Wade Davis | Ethnography, Ecology, and Cultural Knowledge Systems
 image: /images/thinkers/wade-davis.webp
 type: thinker
 id: 4
-description: An ethnobotanist who spent decades living with indigenous peoples across the world and documented what is actually lost when a language or culture dies - not diversity as abstraction, but irreplaceable knowledge systems encoded over millennia.
+description: "An ethnobotanist who spent decades living with indigenous peoples across the world and documented what is actually lost when a language or culture dies"
 tags:
   - culture
   - ecology

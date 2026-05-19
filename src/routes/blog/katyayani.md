@@ -1,5 +1,6 @@
 ---
 title: Kātyāyanī | Navadurgā - Part 6
+description: "The theology and iconography of Katyayani Devi, the warrior Navadurga form invoked for strength against threat."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

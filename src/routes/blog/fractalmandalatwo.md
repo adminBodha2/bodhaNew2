@@ -1,5 +1,6 @@
 ---
 title: Fractal Maṇḍala 2- the Macrohistoric Case for India's Civilizational Primacy
+description: "Part 2 of the Fractal Mandala framework and its implications for Hindu knowledge, culture, institutions, and cosmos."
 author:
   - Amritanshu Pandey
 category: History and Civilization

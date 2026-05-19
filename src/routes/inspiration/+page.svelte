@@ -11,7 +11,7 @@
 	let schools = $derived(data.schools ?? []);
 	let thinkers = $derived(data.thinkers ?? []);
 
-	const title = 'Inspiration | Bodha';
+	const title = 'Bodha Inspiration | Hindu Thinkers, IKS, Ecology, and Civilizational Thought';
 	const metaDescription = 'The thinkers and schools of thought that shape our method, questions, and the longer continuum of inquiry we work within.';
 	const metaUrl = absoluteUrl('/inspiration');
 	const metaImage = absoluteImage('/images/key-inspiration.webp');

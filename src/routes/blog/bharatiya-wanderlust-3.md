@@ -1,5 +1,6 @@
 ---
 title: Bhāratīya Wanderlust - A Defence of the Out-of-India Model (OIT), Part 3
+description: "Part 3 of the Out-of-India series, reading archaeological and genetic evidence for Aryan dispersal from India."
 author:
   - Amritanshu Pandey
 category: History and Civilization

@@ -1,5 +1,6 @@
 ---
 title: Culture and Warfare - Finding Balance Through Dharma
+description: "A Dharmic argument on culture, barbarism, warfare, and why Dharma is needed to distinguish civilization from collapse."
 author:
   - Pankaj Saxena
 category: Thought Pieces

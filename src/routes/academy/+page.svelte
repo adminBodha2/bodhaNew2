@@ -25,7 +25,7 @@
 	let isVisible = useInView(() => reference, { threshold: 1, once: true });
 	let revealref = $state<HTMLElement | null>(null);
 	let revealVis = useInView(() => revealref, { threshold: 0.2, once: true });
-	const title = 'Academy | Bodha';
+	const title = 'Bodha Academy | Indic Research Methodology and Hindu Thought';
 	const metaDescription = 'Training scholars in Indic research methodology and anthropology. Introducing the highest Hindu ideas and traditions to the next generation.';
 	const metaUrl = absoluteUrl('/academy');
 	const metaImage = absoluteImage('/images/key-academy.webp');

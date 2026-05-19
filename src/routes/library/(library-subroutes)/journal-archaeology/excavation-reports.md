@@ -1,5 +1,6 @@
 ---
-title: Excavation Reports
+title: Excavation Reports | Indian Archaeological Sites, Fieldwork, and Discoveries
+description: "The IJA has published a substantial number of excavation reports, ranging from preliminary season reports to comprehensive multi-period site analyses."
 type: wiki
 tags: 
   - pottery-and-ceramics

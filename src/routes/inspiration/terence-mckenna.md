@@ -1,9 +1,9 @@
 ---
-title: Terence McKenna
+title: Terence McKenna | Consciousness, Culture, and Metaphysical Inquiry
 image: /images/thinkers/terence.webp
 type: thinker
 id: 19
-description: A psychedelic philosopher whose stoned-ape hypothesis, archaic revival, and novelty theory sit at the fringe of respectable discourse but ask the right questions - why did human consciousness change so dramatically, and what exactly is it moving toward?
+description: "A psychedelic philosopher whose stoned-ape hypothesis, archaic revival, and novelty theory sit at the fringe of respectable discourse but ask the right questions"
 tags:
   - consciousness
   - modernity

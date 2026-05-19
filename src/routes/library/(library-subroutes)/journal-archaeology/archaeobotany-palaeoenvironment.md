@@ -1,5 +1,6 @@
 ---
 title: Archaeobotany and Palaeoenvironment
+description: "Archaeobotany and palaeoenvironmental research in the IJA links pollen, macro-botanical remains, fauna, climate records, crop histories, and environmental."
 type: wiki
 tags: 
   - indus-valley-civilization

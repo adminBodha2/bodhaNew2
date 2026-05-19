@@ -1,5 +1,5 @@
 ---
-title: "Sanatana Dharma"
+title: "Sanatana Dharma | Hindu Philosophy, Dharma, and Civilizational Thought"
 description: "The eternal law — the philosophical, spiritual, and civilizational foundation of Hindu tradition and the animating principle of Bodha's entire research mission."
 ---
 

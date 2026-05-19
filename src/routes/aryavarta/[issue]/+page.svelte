@@ -48,14 +48,3 @@
 		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-
-.key-image
-	width: 100%
-	height: 400px
-	@media screen and (min-width: 1025px)
-		height: calc(100vh - 144px)
-		margin-top: 72px
-
-</style>

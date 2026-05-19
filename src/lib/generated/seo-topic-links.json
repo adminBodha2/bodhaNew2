@@ -1,0 +1,436 @@
+{
+  "generatedAt": "2026-05-19T23:24:03.518Z",
+  "source": "sitemaster/seomaster",
+  "topics": {
+    "hindu-temple": {
+      "key": "hindu-temple",
+      "label": "Temple / Hindu Temple",
+      "hub": "/wiki/temples",
+      "hubAbsoluteUrl": "https://www.bodharesearch.in/wiki/temples",
+      "terms": [
+        "hindu temple",
+        "temple",
+        "mandir",
+        "mandira",
+        "kshetra",
+        "tirtha",
+        "pilgrimage",
+        "sacred geography",
+        "deity",
+        "murti",
+        "jyotirlinga",
+        "shakti pitha",
+        "char dham",
+        "saptapuri",
+        "temple architecture"
+      ],
+      "supportingPages": [
+        {
+          "urlPath": "/anveshi/badami",
+          "absoluteUrl": "https://www.bodharesearch.in/anveshi/badami",
+          "title": "Badami Chapter | Bodha Anveshi Hindu Temple Architecture Tour",
+          "description": "Karnataka is a world on its own. And Badami is a good representative of the rich diversity of its cultural heritage.",
+          "score": 3,
+          "routeFamily": "anveshi",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/anveshi",
+          "absoluteUrl": "https://www.bodharesearch.in/anveshi",
+          "title": "Bodha Anveshi | Sacred Hindu Temple Journeys and Kshetra Tours",
+          "description": "Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.",
+          "score": 3,
+          "routeFamily": "anveshi",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/library/journal-archaeology/sacred-geography",
+          "absoluteUrl": "https://www.bodharesearch.in/library/journal-archaeology/sacred-geography",
+          "title": "Sacred Geography | Indian Archaeology, Pilgrimage, Temples, and Landscape",
+          "description": "Sacred geography in the IJA links archaeology with pilgrimage, textual memory, ritual landscapes, temple clusters, water bodies, rock art locations, and living.",
+          "score": 3,
+          "routeFamily": "library",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/inspiration/sk-rama-rao",
+          "absoluteUrl": "https://www.bodharesearch.in/inspiration/sk-rama-rao",
+          "title": "SK Ramachandra Rao | Hindu Temple, Iconography, and Sacred Art",
+          "description": "A Karnataka polymath whose encyclopedic work on Hindu iconography and temple architecture reveals the metaphysical logic embedded in every sculptural form.",
+          "score": 3,
+          "routeFamily": "inspiration",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/research/hindu-models-of-temple-management",
+          "absoluteUrl": "https://www.bodharesearch.in/research/hindu-models-of-temple-management",
+          "title": "Hindu Models of Temple Management",
+          "description": "Research on traditional Hindu temple governance and indigenous models of temple administration.",
+          "score": 2,
+          "routeFamily": "research",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/core/temple",
+          "absoluteUrl": "https://www.bodharesearch.in/core/temple",
+          "title": "Hindu Temple | Sacred Architecture, Dharma, and Community Institution",
+          "description": "The Hindu temple as civilization — sacred architecture, institutional governance, cultural transmission, and the living center of community life across India.",
+          "score": 2,
+          "routeFamily": "core",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/kannur-sacred-heart-of-kerala",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/kannur-sacred-heart-of-kerala",
+          "title": "Kannur - Discovering the Sacred Heart of Kerala through Bodha Anveshi",
+          "description": "A travel narrative through Kannur and Kerala, exploring Hindu temple culture, landscape, heritage, and memory.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/anveshi/kannur",
+          "absoluteUrl": "https://www.bodharesearch.in/anveshi/kannur",
+          "title": "Kannur Chapter | Bodha Anveshi Kerala Hindu Temple Tour",
+          "description": "Explore Kannur as an ancient Hindu temple town in northern Kerala, where living temple traditions continue amid a changing cultural landscape.",
+          "score": 2,
+          "routeFamily": "anveshi",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/kshetrashastrautsava",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/kshetrashastrautsava",
+          "title": "Kṣetra, Śāstra, Utsava",
+          "description": "On festivals, sacred geography, and scripture, and how Hindu time and space structure access to the divine.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/gloryofkrishnajanmashtami",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/gloryofkrishnajanmashtami",
+          "title": "Recollection: The Glory of Śrī Kṛṣṇa Janmāṣṭamī",
+          "description": "A pilgrimage to Mathura and an encounter with Krishna Janmashtami, sacred geography, and living divine presence.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        }
+      ]
+    },
+    "indian-knowledge-systems": {
+      "key": "indian-knowledge-systems",
+      "label": "Indian Knowledge Systems / Education",
+      "hub": "/wiki/indian-knowledge-systems-and-education",
+      "hubAbsoluteUrl": "https://www.bodharesearch.in/wiki/indian-knowledge-systems-and-education",
+      "terms": [
+        "indian knowledge systems",
+        "indian knowledge systems and education",
+        "iks",
+        "sanskrit",
+        "shastra",
+        "darshana",
+        "ayurveda",
+        "ganita",
+        "vyakarana",
+        "nyaya",
+        "mimamsa",
+        "gurukula",
+        "traditional education",
+        "hindu education",
+        "civilizational learning",
+        "dharampal"
+      ],
+      "supportingPages": [
+        {
+          "urlPath": "/library/paths/darshanas-and-philosophy",
+          "absoluteUrl": "https://www.bodharesearch.in/library/paths/darshanas-and-philosophy",
+          "title": "Darshanas and Philosophy",
+          "description": "Works on the major schools of Indian philosophy, including Nyaya, Vaisheshika, Sankhya, Yoga, Mimamsa, Vedanta, and Shaiva thought.",
+          "score": 3,
+          "routeFamily": "library",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/about",
+          "absoluteUrl": "https://www.bodharesearch.in/about",
+          "title": "About Bodha | Hindu Research, IKS, Policy, and Cultural Work",
+          "description": "Learn about Bodha, a Hindu research group working across Indian Knowledge Systems, policy, education, cultural experiences, and public thought.",
+          "score": 2,
+          "routeFamily": "about",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/tags",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/tags",
+          "title": "Bodha Blog Tags | Hindu Culture, Dharma, IKS, and Civilizational Themes",
+          "description": "Browse Bodha blog essays by tags across Hindu culture, Dharma, Indian knowledge systems, temples, festivals, history, and civilizational thought.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/writers",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/writers",
+          "title": "Bodha Blog Writers | Essays on Hindu Culture, Dharma, and IKS",
+          "description": "Browse Bodha essays by writer across Hindu culture, Dharma, Indian knowledge systems, temples, history, festivals, and civilizational thought.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/inspiration/dharampal",
+          "absoluteUrl": "https://www.bodharesearch.in/inspiration/dharampal",
+          "title": "Dharampal | Indian Knowledge Systems, Decolonization, and Svayambodha",
+          "description": "The historian who went back to British colonial archives and proved that India had thriving educational and industrial systems before colonization destroyed them",
+          "score": 2,
+          "routeFamily": "inspiration",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/research/hindu-frameworks-of-education",
+          "absoluteUrl": "https://www.bodharesearch.in/research/hindu-frameworks-of-education",
+          "title": "Hindu Frameworks of Education",
+          "description": "Field studies of surviving gurukulas, pathshalas, and vidyalayas that transmit Indian Knowledge Systems today.",
+          "score": 2,
+          "routeFamily": "research",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/library",
+          "absoluteUrl": "https://www.bodharesearch.in/library",
+          "title": "Open Library | Bodha",
+          "description": "A collection of readings in Hindu culture and history, philosophical systems, Indian knowledge systems (IKS), scriptures, and more.",
+          "score": 2,
+          "routeFamily": "library",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/core/sanskrit",
+          "absoluteUrl": "https://www.bodharesearch.in/core/sanskrit",
+          "title": "Sanskrit | Indian Knowledge Systems, Dharma, and Civilizational Language",
+          "description": "The root language of Indian civilizational consciousness — its role in encoding dharmic knowledge, its displacement by colonial languages, and the imperative of its revival.",
+          "score": 2,
+          "routeFamily": "core",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/concepts/vrikshayurveda",
+          "absoluteUrl": "https://www.bodharesearch.in/concepts/vrikshayurveda",
+          "title": "vrikshayurveda",
+          "description": "",
+          "score": 2,
+          "routeFamily": "concepts",
+          "sources": [
+            "route-derived"
+          ]
+        },
+        {
+          "urlPath": "/blog",
+          "absoluteUrl": "https://www.bodharesearch.in/blog",
+          "title": "Bodha Blog | Hindu Culture, Dharma, IKS, and Civilizational Essays",
+          "description": "Essays on Hindu culture, history, festivals, civilizational thought, and more.",
+          "score": 1,
+          "routeFamily": "blog",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        }
+      ]
+    },
+    "dharma": {
+      "key": "dharma",
+      "label": "Dharma",
+      "hub": "/big-questions/core-of-sanatana-dharma",
+      "hubAbsoluteUrl": "https://www.bodharesearch.in/big-questions/core-of-sanatana-dharma",
+      "terms": [
+        "dharma",
+        "sanatana dharma",
+        "dharmic",
+        "hindu ethics",
+        "hindu law",
+        "purushartha",
+        "seva",
+        "dana",
+        "hindu family",
+        "polity"
+      ],
+      "supportingPages": [
+        {
+          "urlPath": "/blog/indicenvironmentalism",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/indicenvironmentalism",
+          "title": "Indic Environmentalism - A Balance between Tradition and Innovation",
+          "description": "A Dharmic ecological argument for nature, sustainability, and Sanatana Dharma beyond Western environmentalism.",
+          "score": 3,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs",
+          "title": "Bodha, the Pyramid of Priorities and the Nature of Hindu Organizations",
+          "description": "Why Hindu organizational diversity may be a strength, and what it means for Sanatana Dharma and civilizational strategy.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/cultureandwarfare",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/cultureandwarfare",
+          "title": "Culture and Warfare - Finding Balance Through Dharma",
+          "description": "A Dharmic argument on culture, barbarism, warfare, and why Dharma is needed to distinguish civilization from collapse.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/designbodha",
+          "absoluteUrl": "https://www.bodharesearch.in/designbodha",
+          "title": "designBodha | Dharmic Design, Regenerative Creation, and Hindu Ethics",
+          "description": "designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines.",
+          "score": 2,
+          "routeFamily": "designbodha",
+          "sources": [
+            "route-file",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/lab/dharma-as-design",
+          "absoluteUrl": "https://www.bodharesearch.in/lab/dharma-as-design",
+          "title": "Dharma as Design | Dharmic Creativity, Design Ethics, and Rta",
+          "description": "An essay on creativity, design, dharma, rta, and how human making can align with cosmic order, ethics, and civilizational responsibility.",
+          "score": 2,
+          "routeFamily": "lab",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/library/paths/hinduism-overview",
+          "absoluteUrl": "https://www.bodharesearch.in/library/paths/hinduism-overview",
+          "title": "Hinduism Overview | Sanatana Dharma, Hindu Texts, and Core Traditions",
+          "description": "Broad introductory works that summarize Hindu tradition as a whole, including its beliefs, practices, worldview, and civilizational continuity.",
+          "score": 2,
+          "routeFamily": "library",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/blog/synaptic-reconnection-2",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/synaptic-reconnection-2",
+          "title": "Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 2",
+          "description": "Part 2 on the conceptual structures needed to rebuild Dharmic consciousness after colonial education.",
+          "score": 2,
+          "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/inspiration/ram-swarup",
+          "absoluteUrl": "https://www.bodharesearch.in/inspiration/ram-swarup",
+          "title": "Ram Swarup | Hindu Thought, Purva Paksha, and Sanatana Dharma",
+          "description": "The thinker who explained what the Vedic gods actually are, how polytheism works as a philosophical system, and why the prophetic monotheist critique.",
+          "score": 2,
+          "routeFamily": "inspiration",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/core/sanatana-dharma",
+          "absoluteUrl": "https://www.bodharesearch.in/core/sanatana-dharma",
+          "title": "Sanatana Dharma | Hindu Philosophy, Dharma, and Civilizational Thought",
+          "description": "The eternal law — the philosophical, spiritual, and civilizational foundation of Hindu tradition and the animating principle of Bodha's entire research mission.",
+          "score": 2,
+          "routeFamily": "core",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/core/sanskrit",
+          "absoluteUrl": "https://www.bodharesearch.in/core/sanskrit",
+          "title": "Sanskrit | Indian Knowledge Systems, Dharma, and Civilizational Language",
+          "description": "The root language of Indian civilizational consciousness — its role in encoding dharmic knowledge, its displacement by colonial languages, and the imperative of its revival.",
+          "score": 2,
+          "routeFamily": "core",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        }
+      ]
+    }
+  }
+}

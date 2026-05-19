@@ -2,7 +2,7 @@
 title: New Additions to Library - Dec 25
 category: Working Notes
 date: 2025-12-20
-excerpt: 'Notice on new texts added to the Bodha Library.'
+excerpt: 'A Bodha Library update listing new Hindu religion, ethics, and sectarian history texts added for readers and researchers in December.'
 ---
 
 We have added the following texts to Bodha Library-

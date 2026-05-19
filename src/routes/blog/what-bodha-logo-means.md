@@ -1,5 +1,6 @@
 ---
 title: What the Bodha Logo Means - The Square, the Circle and the Eye of Wisdom
+description: "The Bodha logo decoded as a geometric expression of Hindu consciousness, fractal structure, square, and circle."
 author:
   - Pankaj Saxena
 category: Culture Today

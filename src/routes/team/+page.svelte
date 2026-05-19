@@ -5,8 +5,8 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
-	const title = 'Team | Bodha';
-	const metaDescription = 'Meet the founders and team behind Bodha Research.';
+	const title = 'Bodha Team | Hindu Research, IKS, Culture, and Policy Scholars';
+	const metaDescription = 'Meet the founders, researchers, writers, and collaborators behind Bodha Research and its work on Hindu culture, IKS, policy, and civilization.';
 	const metaUrl = absoluteUrl('/team');
 	const metaImage = absoluteImage('/images/bodhacover.png');
 

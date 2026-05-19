@@ -1,9 +1,9 @@
 ---
-title: Dharampal
+title: Dharampal | Indian Knowledge Systems, Decolonization, and Svayambodha
 image: /images/thinkers/dharampal.webp
 type: thinker
 id: 10
-description: The historian who went back to British colonial archives and proved that India had thriving educational and industrial systems before colonization destroyed them - his work is the empirical foundation for any serious claim about what India actually lost.
+description: "The historian who went back to British colonial archives and proved that India had thriving educational and industrial systems before colonization destroyed them"
 tags:
   - indian-knowledge-systems
   - decolonization

@@ -2,7 +2,7 @@
 title: Temples of Madhya Pradesh
 type: institutional design
 image: /images/research/2.webp
-description: What do three hundred surviving ancient temple sites of Madhya Pradesh reveal about the full range of Hindu sacred architecture - and what was lost to medieval destruction? A deep architectural and sculptural study of ten major temple clusters, making the grammar of Hindu temple-building legible.
+description: "A study of ancient temple sites in Madhya Pradesh and the grammar of Hindu sacred architecture."
 tags:
   - temple
 ---

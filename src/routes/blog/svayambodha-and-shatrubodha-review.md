@@ -1,5 +1,6 @@
 ---
 title: Book Review | Svayambodha and Shatrubodha
+description: "A review of Pankaj Saxenas Svayambodha and Shatrubodha and its vocabulary for Hindu civilizational thought."
 author:
   - Amritanshu Pandey
 category: Culture Today

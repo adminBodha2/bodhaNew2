@@ -17,8 +17,8 @@
 
 	let writers = $derived((data.writers ?? []) as Writer[]);
 
-	const title = 'Writers | Bodha';
-	const metaDescription = 'Browse posts at Bodha by writer.';
+	const title = 'Bodha Blog Writers | Essays on Hindu Culture, Dharma, and IKS';
+	const metaDescription = 'Browse Bodha essays by writer across Hindu culture, Dharma, Indian knowledge systems, temples, history, festivals, and civilizational thought.';
 	const metaUrl = absoluteUrl('/blog/writers');
 	const metaImage = absoluteImage('/images/bodhacover.png');
 

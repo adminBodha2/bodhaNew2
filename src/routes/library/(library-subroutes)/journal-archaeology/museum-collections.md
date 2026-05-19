@@ -1,5 +1,6 @@
 ---
-title: Museum Collections
+title: Museum Collections | Indian Archaeology, Artefacts, and Heritage Catalogues
+description: "Museum and private collection catalogues are a major documentary engine of the IJA, preserving copper hoards, coins, terracottas, seals, sealings, sculptures."
 type: wiki
 tags: 
   - copper-hoards

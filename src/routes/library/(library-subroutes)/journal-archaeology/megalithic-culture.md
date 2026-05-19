@@ -1,5 +1,6 @@
 ---
-title: Megalithic Culture
+title: Megalithic Culture | Indian Archaeology, Burial Sites, and Iron Age Evidence
+description: "Megalithic traditions appear across a wide geographic sweep in the IJA corpus, from Kerala, Vidarbha, and Sri Lanka in the south and centre, to Jharkhand, Bihar."
 type: wiki
 tags: 
   - burial-practices

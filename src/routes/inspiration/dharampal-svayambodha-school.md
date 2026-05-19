@@ -3,7 +3,7 @@ title: Dharampal School of Svayambodha
 image: /images/schools/dharampal-svayambodha-school.webp
 type: school
 id: 4
-description: Built on Dharampal's archival discoveries about pre-colonial India, this school argues that Svayambodha - self-knowledge grounded in India's actual historical capacities - is the precondition for any viable Indian future, not a romantic luxury.
+description: "Built on Dharampal's archival discoveries about pre-colonial India, this school argues that Svayambodha"
 tags:
   - hindu-institutions
   - history

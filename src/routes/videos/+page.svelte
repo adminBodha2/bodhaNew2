@@ -10,7 +10,7 @@
 
 	let vids = $derived(data.vids ?? []);
 
-	const title = 'Videos | Bodha';
+	const title = 'Bodha Videos | Hindu Culture, Dharma, IKS Talks, and Podcasts';
 	const metaDescription = 'Collected talks, podcasts, conference sessions, and more by members of the Bodha team.';
 	const metaUrl = absoluteUrl('/videos');
 	const metaImage = absoluteImage('/images/bodhacover.png');

@@ -1,5 +1,6 @@
 ---
 title: Mahāgaurī | Navadurgā - Part 8
+description: "The theology and iconography of Mahagauri Devi, the luminous Navadurga form of purity after destruction of falsehood."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

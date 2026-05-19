@@ -1,5 +1,6 @@
 ---
 title: Artificial Intelligence is Here - Part 2, from Now to Henceforth
+description: "A proactive Dharmic framework for engaging artificial intelligence without uncritical adoption or reflexive rejection."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

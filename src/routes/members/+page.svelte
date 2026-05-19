@@ -28,7 +28,8 @@
 </script>
 
 <svelte:head>
-	<title>Members | Bodha</title>
+	<title>Bodha Members | Newsletter, Aryavarta Releases, and Subscriber Access</title>
+	<meta name="description" content="Sign in or create a Bodha member account to access newsletters, Scrolls of Aryavarta releases, and member-only updates." />
 </svelte:head>
 
 <Container>

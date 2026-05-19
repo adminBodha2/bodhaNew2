@@ -1,5 +1,6 @@
 ---
 title: Decolonizing Language
+description: "How Farsi, Arabic, Turkish, and English shaped North Indian languages, and what linguistic decolonization requires."
 author:
   - Pankaj Saxena
 category: Culture Today

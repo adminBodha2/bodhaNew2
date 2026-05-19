@@ -26,7 +26,7 @@
 	let revRef = $state<HTMLElement | null>(null);
 	let revVis = useInView(() => revRef, { threshold: 0.5, once: true });
 
-	const title = 'Anveshi | Bodha';
+	const title = 'Bodha Anveshi | Sacred Hindu Temple Journeys and Kshetra Tours';
 	const metaDescription = 'Anveshi features guided tours to beautiful and hitherto unexplored temples and kshetras of Bharatavarsha.';
 	const metaUrl = absoluteUrl('/anveshi');
 	const metaImage = absoluteImage('/images/key-anveshi.webp');

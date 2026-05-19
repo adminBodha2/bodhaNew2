@@ -1,5 +1,6 @@
 ---
 title: Sanskṛta vs. FATE Languages
+description: "The struggle between Sanskrit and FATE languages for India cognitive, expressive, and civilizational inheritance."
 author:
   - Pankaj Saxena
 category: Culture Today

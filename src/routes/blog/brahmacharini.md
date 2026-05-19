@@ -1,5 +1,6 @@
 ---
 title: Brahmacāriṇī | Navadurgā - Part 2
+description: "The theology and iconography of Brahmacharini Devi, the Navadurga form of austerity, renunciation, and spiritual discipline."
 author:
   - Padmavathy Manavazhahan
 category: Culture Today

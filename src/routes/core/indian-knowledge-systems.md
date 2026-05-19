@@ -1,6 +1,6 @@
 ---
 title: "Indian Knowledge Systems"
-description: "The integrated body of knowledge produced by Hindu civilization — philosophy, aesthetics, ecology, history, education, and language — rooted in Dhārmika ontology and transmitted through living traditions."
+description: "An introduction to Indian Knowledge Systems across philosophy, ecology, education, aesthetics, history, language, and living traditions."
 ---
 
 # Indian Knowledge Systems

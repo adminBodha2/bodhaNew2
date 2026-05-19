@@ -1,5 +1,6 @@
 ---
 title: 14 Lokas and 0 Telescopes - The Cosmos SETI Cannot Scan
+description: "Hindu cosmology and the UAP question, read through lokas, vimanas, devatas, tantra, and consciousness as cosmic life."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

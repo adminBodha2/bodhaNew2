@@ -1,5 +1,5 @@
 ---
-title: Hinduism Overview
+title: Hinduism Overview | Sanatana Dharma, Hindu Texts, and Core Traditions
 description: Broad introductory works that summarize Hindu tradition as a whole, including its beliefs, practices, worldview, and civilizational continuity.
 ---
 

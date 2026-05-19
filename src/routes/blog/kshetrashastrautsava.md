@@ -1,5 +1,6 @@
 ---
 title: Kṣetra, Śāstra, Utsava
+description: "On festivals, sacred geography, and scripture, and how Hindu time and space structure access to the divine."
 author:
   - Pankaj Saxena
 category: Culture Today

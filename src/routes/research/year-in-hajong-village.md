@@ -2,7 +2,7 @@
 title: A Year in Hajong Village
 type: policy and strategic affairs
 image: /images/research/7.webp
-description: How does a small Hindu tribal community in a Christian-majority region preserve its religious and cultural identity under conversion pressure? An ethnographic documentation of Hajong festivals, rituals, and livelihoods in Meghalaya's Garo Hills - a community invisible to most academic and policy discourse.
+description: "An ethnographic study of Hajong Hindu festivals, rituals, and identity in Meghalaya's Garo Hills."
 tags:
   - north-east-india
 ---

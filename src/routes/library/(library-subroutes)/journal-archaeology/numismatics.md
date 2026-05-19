@@ -1,5 +1,6 @@
 ---
-title: Numismatics
+title: Numismatics | Indian Coins, Epigraphy, Trade, and Archaeological Evidence
+description: "The IJA has published one of the largest numismatic corpora in any single Indian archaeology journal, with coin catalogues and hoard reports appearing in nearly."
 type: wiki
 tags: 
   - epigraphy-and-inscriptions

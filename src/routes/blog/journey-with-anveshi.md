@@ -1,5 +1,6 @@
 ---
 title: My Journey with Anveshi
+description: "The origin of Anveshi as a structured temple-visit practice and a form of civilizational reconnection."
 author:
   - Pankaj Saxena
 category: Thought Pieces

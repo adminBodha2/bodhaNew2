@@ -1,5 +1,5 @@
 ---
-title: "Karma"
+title: "Karma | Hindu Philosophy of Action, Consequence, and Liberation"
 description: "The universal law of action and consequence across lifetimes — the cosmological framework shaping Hindu understanding of history, civilization, suffering, and liberation."
 ---
 

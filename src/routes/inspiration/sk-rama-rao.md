@@ -1,9 +1,9 @@
 ---
-title: SK Ramachandra Rao
+title: SK Ramachandra Rao | Hindu Temple, Iconography, and Sacred Art
 image: /images/thinkers/sk-r-rao.webp
 type: thinker
 id: 18
-description: A Karnataka polymath whose encyclopedic work on Hindu iconography and temple architecture reveals the metaphysical logic embedded in every sculptural form and spatial arrangement - the temple not as monument but as cosmological diagram made stone.
+description: "A Karnataka polymath whose encyclopedic work on Hindu iconography and temple architecture reveals the metaphysical logic embedded in every sculptural form."
 tags:
   - consciousness
   - temple

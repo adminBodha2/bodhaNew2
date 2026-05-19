@@ -1,8 +1,8 @@
 ---
-title: Dharma as Design
+title: Dharma as Design | Dharmic Creativity, Design Ethics, and Rta
 category: Opinions
 date: 2024-12-12
-excerpt: 'Some views on creativity and design.'
+excerpt: 'An essay on creativity, design, dharma, rta, and how human making can align with cosmic order, ethics, and civilizational responsibility.'
 ---
 
 All human beings are creative.

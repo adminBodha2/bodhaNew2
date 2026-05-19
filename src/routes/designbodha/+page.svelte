@@ -11,7 +11,7 @@
 
 	let imageLink = $state('/images/designbodha/key-desbodha.webp');
 
-	const title = 'designBodha | Bodha';
+	const title = 'designBodha | Dharmic Design, Regenerative Creation, and Hindu Ethics';
 	const metaDescription = 'designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines.';
 	const metaUrl = absoluteUrl('/designbodha');
 	const metaImage = absoluteImage('/images/designbodha/key-desbodha.webp');

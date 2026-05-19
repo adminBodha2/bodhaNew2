@@ -3,7 +3,13 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
-	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
+	import Head from '$lib/comps/headcomponent.svelte';
+	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+
+	const title = 'Scrolls of Aryavarta | Bodha';
+	const metaDescription = 'A creative project in cultural storytelling through digital comics, recreating legends, triumphs, struggles, and tragedies from Indian history.';
+	const metaUrl = absoluteUrl('/aryavarta');
+	const metaImage = absoluteImage('/images/heroes/key-soa.webp');
 
 	type Comic = {
 		linkpath: string;
@@ -20,7 +26,38 @@
 
 	let { data }: { data: PageData } = $props();
 	let posts = $derived((data.posts ?? []) as Comic[]);
+
+	function toJsonLdItem(post: Comic): { name: string; description?: string; url: string } | null {
+		const name = post.meta.title?.trim();
+		if (!name) return null;
+
+		return {
+			name,
+			...(post.meta.description ? { description: post.meta.description } : {}),
+			url: post.linkpath
+		};
+	}
+
+	let jsonldItems = $derived(
+		posts
+			.map(toJsonLdItem)
+			.filter((item): item is { name: string; description?: string; url: string } => item !== null)
+	);
+
+	let jsonld = $derived(
+		stringifyJsonLd(
+			collectionPageJsonLd({
+				name: title,
+				description: metaDescription,
+				url: metaUrl,
+				image: metaImage,
+				items: jsonldItems
+			})
+		)
+	);
 </script>
+
+<Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
 <Container>
 	<Parallax imageLink="/images/heroes/key-soa.webp" wipe={true} />

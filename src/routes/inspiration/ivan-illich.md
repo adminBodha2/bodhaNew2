@@ -1,9 +1,9 @@
 ---
-title: Ivan Illich
+title: Ivan Illich | Modernity, Institutions, and Civilizational Critique
 image: /images/thinkers/eo-wilson.webp
 type: thinker
 id: 3
-description: The sharpest institutional critic the West produced - his dissections of schooling, medicine, and economic growth argue that modern institutions systematically destroy the autonomous competence they claim to produce - a critique that hits differently once you've read Dharampal.
+description: "The sharpest institutional critic the West produced - his dissections of schooling, medicine, and economic growth argue that modern institutions systematically."
 tags:
   - purva-paksha
   - svayambodha

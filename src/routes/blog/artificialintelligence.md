@@ -1,5 +1,6 @@
 ---
 title: Artificial Intelligence is Here - Part 1, from Before to Now
+description: "A Dharmic reading of artificial intelligence through simulation theory, Vedanta, modern physics, and consciousness."
 author:
   - Amritanshu Pandey
 category: Thought Pieces

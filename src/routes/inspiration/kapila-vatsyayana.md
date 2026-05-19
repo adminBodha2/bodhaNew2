@@ -1,9 +1,9 @@
 ---
-title: Kapila Vatsyayana
+title: Kapila Vatsyayana | Indian Art, Aesthetics, and Knowledge Systems
 image: /images/thinkers/kapila-v.webp
 type: thinker
 id: 17
-description: Six decades of scholarship on the philosophy underlying every Indian art form - dance, architecture, painting, sculpture - Vatsyayana built the most comprehensive modern account of how Hindu arts form a unified system of knowledge, not a collection of disciplines.
+description: "Six decades of scholarship on the philosophy underlying every Indian art form - dance, architecture, painting, sculpture"
 tags:
   - indian-knowledge-systems
   - aesthetics
