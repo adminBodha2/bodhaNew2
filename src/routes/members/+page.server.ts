@@ -116,9 +116,7 @@ export const actions: Actions = {
 			return fail(400, { signupError: authErrorMessage(error.message) });
 		}
 
-		return {
-			signupMessage: 'Thank you. You are now subscribed.'
-		};
+		throw redirect(303, '/members?message=signed-up');
 	},
 
 	google: async ({ request, locals, url }) => {
