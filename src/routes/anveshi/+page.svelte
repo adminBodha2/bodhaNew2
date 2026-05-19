@@ -445,10 +445,4 @@ swiper-slide > *
 .anv-readless
 	margin-top: 0.25rem
 
-.anv-future-image
-	width: 100%
-	height: 240px
-	object-fit: cover
-	border-radius: 4px
-
 </style>

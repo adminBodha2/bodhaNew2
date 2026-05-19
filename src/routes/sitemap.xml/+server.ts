@@ -1,6 +1,5 @@
 import { blogContentPaths, tagsWithCountsAlphabetical, writersWithCountsAlphabetical } from '$lib/utils/blogpulls';
 import { getAkVargas } from '$lib/ontology';
-import tagData from '$lib/serving/tag-index.json';
 
 const BASE = 'https://www.bodharesearch.in';
 
@@ -64,7 +63,6 @@ export async function GET() {
 		writersWithCountsAlphabetical(),
 	]);
 
-	const siteTagPaths   = Object.keys(tagData).map(tag => `/tags/${tag}`);
 	const blogTagPaths   = blogTags.map(t => `/blog/tags/${t.tag}`);
 	const writerPaths    = writers.map(w => `/blog/writers/${encodeURIComponent(w.writer)}`);
 	const ontologyPaths  = getAkVargas().map(varga => `/ontology/${varga.slug}`);
@@ -84,7 +82,6 @@ export async function GET() {
 		...ontologyPaths.map(p  => ({ path: p, priority: '0.6', changefreq: 'monthly' })),
 		...blogTagPaths.map(p    => ({ path: p, priority: '0.5', changefreq: 'weekly'  })),
 		...writerPaths.map(p     => ({ path: p, priority: '0.5', changefreq: 'monthly' })),
-		...siteTagPaths.map(p    => ({ path: p, priority: '0.5', changefreq: 'weekly'  })),
 	];
 
 	const today = new Date().toISOString().split('T')[0];

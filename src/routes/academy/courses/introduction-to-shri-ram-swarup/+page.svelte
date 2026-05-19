@@ -244,10 +244,6 @@
 	@media (min-width: 1025px)
 		padding-right: 2rem
 
-img.square.ins
-	max-width: 300px
-	border-radius: 50px
-
 .tab-panel
 	row-gap: 3rem
 	display: flex

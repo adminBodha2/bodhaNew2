@@ -1,18 +1,63 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+const ignoredLocalPaths = new Set([
+	'/_vercel/insights/script.js',
+	'/_vercel/speed-insights/script.js'
+]);
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+const ignoredConsolePatterns = [
+	'Failed to load resource:',
+	'TypeError: Failed to fetch'
+];
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('public sitemap pages render without missing local assets', async ({ page, request, baseURL }) => {
+	test.setTimeout(120_000);
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+	if (!baseURL) throw new Error('baseURL is not configured');
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+	const base = new URL(baseURL);
+	const sitemap = await request.get('/sitemap.xml');
+	expect(sitemap.ok()).toBeTruthy();
+
+	const xml = await sitemap.text();
+	const paths = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)]
+		.map((match) => new URL(match[1]).pathname)
+		.filter((path, index, all) => all.indexOf(path) === index);
+
+	expect(paths.length).toBeGreaterThan(0);
+
+	const failures: string[] = [];
+
+	page.on('console', (message) => {
+		if (message.type() === 'error') {
+			const text = message.text();
+			if (
+				!ignoredConsolePatterns.some((pattern) => text.includes(pattern)) &&
+				![...ignoredLocalPaths].some((path) => text.includes(path))
+			) {
+				failures.push(`console error: ${text}`);
+			}
+		}
+	});
+
+	page.on('pageerror', (error) => {
+		failures.push(`page error: ${error.message}`);
+	});
+
+	page.on('response', (response) => {
+		const url = new URL(response.url());
+		if (url.origin === base.origin && response.status() >= 400 && !ignoredLocalPaths.has(url.pathname)) {
+			failures.push(`${response.status()} ${url.pathname}`);
+		}
+	});
+
+	for (const path of paths) {
+		failures.length = 0;
+
+		const response = await page.goto(path, { waitUntil: 'domcontentloaded' });
+		expect(response?.ok(), `${path} returned ${response?.status()}`).toBeTruthy();
+
+		await expect(page.locator('body')).toBeVisible();
+		expect(failures, `Failures on ${path}`).toEqual([]);
+	}
 });
