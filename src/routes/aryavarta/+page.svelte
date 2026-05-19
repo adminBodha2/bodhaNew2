@@ -51,11 +51,4 @@
 .comic-card
 	border: var(--border-dark)
 
-.key-image
-	width: 100%
-	height: 400px
-	@media screen and (min-width: 1025px)
-		height: calc(100vh - 144px)
-		margin-top: 80px
-
 </style>

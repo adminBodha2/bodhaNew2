@@ -12,6 +12,7 @@
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import { mouseStore } from '$lib/utils/mousestore';
 	import { readerChromeHidden } from '$lib/utils/globalstores';
+	import '$lib/styles/system/blog.sass';
 
 	const position = mouseStore();
 	const readerModeStart = 900;
