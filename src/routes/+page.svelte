@@ -46,15 +46,15 @@
 	<section class="wrapper-std">
 		<div class="box rgap16 lg:rgap32 ycenter" bind:this={headReveal} id="introduction">
 			<div class="box">
-				<Reveal visible={headVis.visible} duration={700} direction="down" elasticIn>
-					<h1 class="txt-6xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
+				<Reveal visible={headVis.visible} duration={600} direction="left">
+					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
 				</Reveal>
-				<Reveal visible={headVis.visible} delay={400} duration={700} direction="down" elasticOut>
-					<h1 class="txt-6xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif">and research group,</h1>
+				<Reveal visible={headVis.visible} delay={200} duration={600} direction="right">
+					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif">and research group,</h1>
 				</Reveal>
 			</div>
-			<Reveal visible={headVis.visible} delay={600} duration={600} direction="down">
-				<p class="txt-2xl md:txt-3xl lh15 width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
+			<Reveal visible={headVis.visible} delay={800} duration={300} direction="down">
+				<p class="txt-xl md:txt-2xl lg:txt-3xl lh15 width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
 			</Reveal>
 		</div>
 	</section>
@@ -63,11 +63,11 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" bind:this={section}>
 			{#each verticals as item, i}
 				<Slider visible={verticalsInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 200}>
-					<a class="box blank verticals glass-1" href={item.href}>
-						<div class="radius8 overflow-hidden p8"><img class="fitted sm:herocard md:port" src={item.image} alt={item.title} /></div>
-						<div class="box rgap16 ptop24 pbot32 px32">
-							<h2 class="txt-4xl source-serif">{item.title}</h2>
-							<p class="txt-lg grey1">{item.desc}</p>
+					<a class="box blank verticals radius4 overflow-hidden" href={item.href}>
+						<div class="overflow-hidden"><img class="fitted sm:herocard md:port" src={item.image} alt={item.title} /></div>
+						<div class="box rgap16 ptop24 pbot32 px16 lg:px24">
+							<h2 class="txt-4xl source-serif ls002m lg:ls004m a-hover">{item.title}</h2>
+							<p class="txt-lg grey1 lh14">{item.desc}</p>
 						</div>
 					</a>
 				</Slider>
@@ -81,9 +81,9 @@
 				{#each latestItems as item, i}
 					<Slider visible={secondInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
 						<a class="box p24 md:p32 blank whitestone" href={item.link}>
-							<p class="txt-00 w500 italic tt-u theme">{item.badge}</p>
-							<p class="txt-xl lh12 w600 a-hover ptop8 pbot16">{item.title}</p>
-							<p class="grey1">{item.description}</p>
+							<p class="txt-xs w500 tt-u grey1">{item.badge}</p>
+							<h3 class="txt-2xl lh12 w660 source-serif a-hover ptop8 pbot16 ls001m">{item.title}</h3>
+							<p class="grey2 lh14">{item.description}</p>
 						</a>
 					</Slider>
 				{/each}
@@ -96,27 +96,28 @@
 				<Title text="essays and articles" />
 				<a class="primary" href="/blog"><span>See All</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16" bind:this={sectionThree}>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid" bind:this={sectionThree}>
 				{#each blogs as item, i}
 					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
-						<div class="box glass-2 p8">
-							<div class="row cgap4 rgap4 ycenter p16 nobot">
+						<div class="box whitecard">
+							<div class="row cgap4 rgap4 ycenter p16 ">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
 										<a class="txt-xs tt-u w500 theme" href="/blog/tags/{tag}">#{tag.replaceAll('-', ' ')}</a>
 									{/each}
 								{/if}
 							</div>
-							<a class="blank p16" href={item.linkpath} aria-label="image">
-								<img class="fitted landscape radius8" src={item.meta.image} alt={item.meta.title} />
+							<a class="blank" href={item.linkpath} aria-label="image">
+								<img class="fitted landscape" src={item.meta.image} alt={item.meta.title} />
 							</a>
-							<a class="blank box rgap8 p16 lg:p32 notop" href={item.linkpath}>
-								<p class="txt-2xl w600 lh14 a-hover">{item.meta.title}</p>
-								<p class="grey1">{item.meta.excerpt}</p>
+							<a class="blank box rgap24 p16 lg:p32" href={item.linkpath}>
+								<h3 class="txt-2xl lg:txt-3xl source-serif w660 lh12 a-hover">{item.meta.title}</h3>
+								<p class="grey2 lh14">{item.meta.excerpt}</p>
+								<div class="box rgap4 self-bottom">
+									<p class="tt-u txt-sm w600">{item.meta.author}</p>
+									<p class="tt-u txt-xs w500 grey1">{item.formattedDate} | {item.meta.words} words</p>
+								</div>
 							</a>
-							<div class="self-bottom bordertop p16">
-								<p class="tt-u txt-xs w500">{item.formattedDate} | {item.meta.author} | {item.meta.words} words</p>
-							</div>
 						</div>
 					</Slider>
 				{/each}
@@ -187,7 +188,7 @@
 	&::after
 		position: absolute
 		right: 0
-		bottom: -1px
+		bottom: 1px
 		content: " "
 		width: 0
 		height: 2px
