@@ -39,9 +39,9 @@
 	{#if !$iW}
 		<nav class="row ycenter tray">
 			{#each navLinks as link}
-				<a class="nav-link blank tt-u" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
+				<a class="nav-link blank" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
 			{/each}
-			<button class="blank" onclick={toggleSearch}><Search /></button>
+			<button class="blank nav-link" onclick={toggleSearch}>search</button>
 		</nav>
 	{:else}
 		<div class="row ycenter cgap16">
@@ -106,14 +106,16 @@
 			margin-left: 6px
 
 .nav-link
-	font-size: 1rem
+	font-size: 18px
 	font-family: 'Google Sans', sans-serif
 	font-weight: 500
-	letter-spacing: 0
+	letter-spacing: -0.02rem
 	color: var(--color-primary)
 	padding: 4px 6px
 	border-radius: 2px
 	transition: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
+	text-transform: lowercase
+	font-variant: small-caps
 	&:hover
 		color: var(--color-back)
 		background: var(--color-theme)

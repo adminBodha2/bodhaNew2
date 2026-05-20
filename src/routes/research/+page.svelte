@@ -35,8 +35,8 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
-<Container>
 	<Parallax imageLink="/images/key-research.webp" wipe={true} />
+<Container>
 	<section class="wrapper-std tight-stack first-box">
 		<Crumb showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities." />
 		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64 ptop16" bind:this={revealRef}>

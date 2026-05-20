@@ -158,10 +158,10 @@
 						<div class="box blank whitestone theme-line-parent">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
 							<a class="box rgap8 lg:rgap16 p24" href={item.link} target="_blank" rel="noreferrer">
-								<p class="txt-xl w500">{item.name}</p>
-								<div class="self-bottom box rgap8">
+								<p class="txt-lg w500">{item.name}</p>
+								<div class="self-bottom box rgap4">
 									<div class="theme-line"></div>
-									<p class="txt-sm grey0 tt-u">{item.channel}</p>
+									<p class="txt-xs grey1 tt-u">{item.channel}</p>
 								</div>
 							</a>
 						</div>
