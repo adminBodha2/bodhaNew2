@@ -35,7 +35,7 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
-	<Parallax imageLink="/images/key-research.webp" wipe={true} />
+<Parallax imageLink="/images/key-research.webp" wipe={true} />
 <Container>
 	<section class="wrapper-std tight-stack first-box">
 		<Crumb showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities." />

@@ -104,7 +104,7 @@
 				width: 100%
 	@media screen and (max-width: 1024px)
 		&.is100, &.is50
-			height: 32vh
+			height: 40vh
 		.parallax-target
 			img,
 			:global(.ripple-motion)

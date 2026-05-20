@@ -59,10 +59,10 @@
 	<!-----title and description row - adds title, description - set variables showT and showD to true, define in title and desc ---->
 	<div class="mleft box rgap16" class:pbot16={showRow} class:ta-c={centered}>
 		{#if showT}
-			<h1 class="txt-4xl md:txt-5xl ls001m lg:txt-6xl md:ls007m lh11 w700" class:source-serif={serifed}>{title}</h1>
+			<h1 class="txt-5xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 w700" class:source-serif={serifed}>{title}</h1>
 		{/if}
 		{#if showD}
-			<p class="grey0" class:width80={!centered && !fullP}>{desc}</p>
+			<p class="txt-lg lh14 grey2" class:width80={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 
