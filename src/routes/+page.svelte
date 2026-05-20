@@ -17,6 +17,7 @@
 	let blogs = $derived(data.blogs ?? []);
 	let vids = $derived(data.vids ?? []);
 	let latestItems = $derived(data.latestItems ?? []);
+	let wikiItems = $derived(data.wikiOpeners ?? []);
 	let headReveal = $state<HTMLElement | null>(null);
 	let headVis = useInView(() => headReveal, { threshold: 0.2, once: true });
 	let section = $state<HTMLElement | null>(null);
@@ -110,8 +111,8 @@
 							<a class="blank" href={item.linkpath} aria-label="image">
 								<img class="fitted landscape" src={item.meta.image} alt={item.meta.title} />
 							</a>
-							<a class="blank box rgap24 p16 lg:p32" href={item.linkpath}>
-								<h3 class="txt-2xl lg:txt-3xl source-serif w660 lh12 a-hover">{item.meta.title}</h3>
+							<a class="blank box rgap16 lg:rgap24 p16 lg:p32" href={item.linkpath}>
+								<h3 class="txt-3xl source-serif w660 lh12 a-hover">{item.meta.title}</h3>
 								<p class="grey2 lh14">{item.meta.excerpt}</p>
 								<div class="box rgap4 self-bottom">
 									<p class="tt-u txt-sm w600">{item.meta.author}</p>
@@ -131,9 +132,9 @@
 				<Slider visible={fourthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
 					<div class="books rgap16">
 						<img class="fitted port contain" src={pub.image} alt={pub.title} />
-						<div class="box rgap8 p16 lg:p32">
-							<p class="txt-2xl w600 lh14">{pub.title}</p>
-							<p class="grey1">{pub.desc}</p>
+						<div class="box rgap16 p16 lg:p32">
+							<p class="source-serif txt-2xl lg:txt-3xl w650 lh14 ls001m">{pub.title}</p>
+							<p class="grey2 txt-lg lh14">{pub.desc}</p>
 							<div class="row wrap cgap8 rgap8 mtop8">
 								{#each pub.links as link}
 									<a class="primary grey" href={link.href} target="_blank" rel="noreferrer"><span>{link.label} →</span> </a>
@@ -151,13 +152,13 @@
 				<Title text="recent videos" />
 				<a class="primary" href="/videos"><span>All Videos</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16" bind:this={sectionFive}>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid" bind:this={sectionFive}>
 				{#each vids as item, i}
 					<Slider visible={fifthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<div class="box p0 blank whitestone theme-line-parent videobox">
+						<div class="box blank whitestone theme-line-parent">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
-							<a class="box rgap8 p16" href={item.link} target="_blank" rel="noreferrer">
-								<p class="txt-lg w550">{item.name}</p>
+							<a class="box rgap8 lg:rgap16 p24" href={item.link} target="_blank" rel="noreferrer">
+								<p class="txt-xl w500">{item.name}</p>
 								<div class="self-bottom box rgap8">
 									<div class="theme-line"></div>
 									<p class="txt-sm grey0 tt-u">{item.channel}</p>
@@ -168,6 +169,30 @@
 				{/each}
 			</div>
 		{/if}
+	</section>
+	<section class="wrapper-std growingline alternate">
+		<Title text="Knowledge Base"/>
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
+			<div>
+				<p class="highlight-text">
+					We're nerds about knowledge bases, wikis, and repositories. The Bodha Knowledge Base is an experimental, continually improving build that brings together various concepts, content, and sub-respositories yoked and classified in ways that facilitate learning, discovery, exploration.
+				</p>
+			</div>
+			<div class="box rgap16">
+				<p class="highlight-text">Rather than a single web page or subroute, the knowledge base is a mesh running across our website.
+					Start at <a class="linked w500" href="/wiki">wiki home</a>, is a grounding point for the entire network...
+				</p>
+				<p class="highlight-text">Or choose any of the following ways to begin exploring -</p>
+			</div>
+		</div>
+		<div class="grid md:grid-cols-2 lg:grid-cols-4 white-grid">
+			{#each wikiItems as item}
+				<a class="blank box whitestone p24 lg:p32 rgap8 lg:rgap16" href={item.link}>
+					<p class="txt-xl w600 a-hover">{item.label}</p>
+					<p class="lh14 grey1">{item.description}</p>
+				</a>
+			{/each}
+		</div>
 	</section>
 </Container>
 
@@ -207,13 +232,5 @@
 		display: grid
 		grid-template-columns: 160px 1fr
 		align-items: center
-
-
-// ── VIDEOS ────────────────────────────────────────────────
-
-.videobox
-	border: var(--border-main)
-	border-radius: 8px
-	overflow: hidden
 
 </style>
