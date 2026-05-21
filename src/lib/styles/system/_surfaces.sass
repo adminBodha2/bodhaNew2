@@ -1,149 +1,143 @@
-@use 'breakpoints' as b
+.blank
+	text-decoration: none
+	color: inherit
 
-=surface-utils($prefix: "")
-	.#{$prefix}blank
-		text-decoration: none
-		color: inherit
+.bordertop
+	border-top: var(--border-main)
 
-	.#{$prefix}bordertop
-		border-top: var(--border-main)
+.borderbot
+	border-bottom: var(--border-main)
 
-	.#{$prefix}borderbot
-		border-bottom: var(--border-main)
+.radius
+	border-radius: 5px
 
-	.#{$prefix}radius
-		border-radius: 5px
+.radius4
+	border-radius: 4px
 
-	.#{$prefix}radius4
-		border-radius: 4px
+.radius8
+	border-radius: 8px
 
-	.#{$prefix}radius8
-		border-radius: 8px
+.whitecard
+	background: var(--color-back)
 
-	.#{$prefix}whitecard
-		background: var(--color-back)
+.whitestone
+	background: var(--color-back)
+	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	&:hover
+		background: var(--color-stone-0)
 
-	.#{$prefix}whitestone
-		background: var(--color-back)
-		transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
-		&:hover
-			background: var(--color-stone-0)
-
-	button.#{$prefix}whitestone
-		background: var(--color-back)
-		transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
-		&:hover
-			background: var(--color-stone-1)
-
-	.#{$prefix}stonecard
+button.whitestone
+	background: var(--color-back)
+	transition: all 0.125s cubic-bezier(0.190, 1.000, 0.220, 1.000)
+	&:hover
 		background: var(--color-stone-1)
 
-	.#{$prefix}glass-1
-		border: var(--border-main)
+.stonecard
+	background: var(--color-stone-1)
+
+.glass-1
+	border: var(--border-main)
+	background: var(--color-back)
+	transition: all 160ms cubic-bezier(0.22, 1, 0.36, 1)
+	box-shadow: 3px 3px 4px rgba(15, 23, 42, 0), -3px -3px 4px rgba(15, 23, 42, 0), inset 0 -1px 0 rgba(255,255,255,0)
+	&:hover
+		box-shadow: 1px 1px 2px rgba(15, 23, 42, 0.08), -2px -1px 2px rgba(15, 23, 42, 0.04), inset 0 -1px 0 rgba(255,255,255,0.15)
+		border: var(--border-dark)
+		background: var(--color-stone-2)
+
+.glass-2
+	overflow: hidden
+	border: var(--border-main)
+	border-radius: 8px
+	background: var(--color-back)
+	box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0)
+	transition: all 180ms cubic-bezier(0.22, 1, 0.36, 1)
+	&:hover
+		box-shadow: 0 1px 3px rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.04), 0 3px 5px rgba(15,23,42,0.08), 0 10px 8px rgba(15,23,42,0.05)
 		background: var(--color-back)
-		transition: all 160ms cubic-bezier(0.22, 1, 0.36, 1)
-		box-shadow: 3px 3px 4px rgba(15, 23, 42, 0), -3px -3px 4px rgba(15, 23, 42, 0), inset 0 -1px 0 rgba(255,255,255,0)
-		&:hover
-			box-shadow: 1px 1px 2px rgba(15, 23, 42, 0.08), -2px -1px 2px rgba(15, 23, 42, 0.04), inset 0 -1px 0 rgba(255,255,255,0.15)
-			border: var(--border-dark)
-			background: var(--color-stone-2)
+		border: var(--border-darker)
 
-	.#{$prefix}glass-2
-		overflow: hidden
-		border: var(--border-main)
-		border-radius: 8px
+.glass-3
+	background: var(--color-stone-1)
+	border: var(--border-light)
+	border-radius: 8px
+	transition: box-shadow var(--ts-snap), background var(--ts-snap), border var(--ts-snap)
+	box-shadow: 3px 1px 2px rgba(5,5,55,0), 0 -1px 2px rgba(33,33,33,0)
+	&:hover
 		background: var(--color-back)
-		box-shadow: 0 0px 0 rgba(255,255,255,0) inset, 0 0px 0 rgba(0,0,0,0) inset, 0 0px 0px rgba(15,23,42,0), 0 6px 18px rgba(15,23,42,0)
-		transition: all 180ms cubic-bezier(0.22, 1, 0.36, 1)
-		&:hover
-			box-shadow: 0 1px 3px rgba(255,255,255,0.95), 0 -1px 0 rgba(0,0,0,0.04), 0 3px 5px rgba(15,23,42,0.08), 0 10px 8px rgba(15,23,42,0.05)
-			background: var(--color-back)
-			border: var(--border-darker)
+		border: var(--border-main)
+		box-shadow: 2px 0px 4px rgba(0,0,0,0.1), 0 0 0 rgba(0,0,0,0)
 
-	.#{$prefix}glass-3
-		background: var(--color-stone-1)
-		border: var(--border-light)
-		border-radius: 8px
-		transition: box-shadow var(--ts-snap), background var(--ts-snap), border var(--ts-snap)
-		box-shadow: 3px 1px 2px rgba(5,5,55,0), 0 -1px 2px rgba(33,33,33,0)
-		&:hover
-			background: var(--color-back)
-			border: var(--border-main)
-			box-shadow: 2px 0px 4px rgba(0,0,0,0.1), 0 0 0 rgba(0,0,0,0)
-
-	.#{$prefix}person-card
-		display: flex
-		flex-direction: column
-		row-gap: 1rem
+.person-card
+	display: flex
+	flex-direction: column
+	row-gap: 1rem
+	img
+		object-fit: cover
+		width: 200px
+		height: 200px
+		border-radius: 100px
+	@media (min-width: 1025px)
+		flex-direction: row
+		column-gap: 2rem
 		img
-			object-fit: cover
-			width: 200px
-			height: 200px
-			border-radius: 100px
-		@media (min-width: 1025px)
-			flex-direction: row
-			column-gap: 2rem
-			img
-				flex-shrink: 0
+			flex-shrink: 0
 
-	.#{$prefix}number:nth-child(3n)
+.number:nth-child(3n)
+	background: var(--color-stone-1)
+
+.number:nth-child(3n+1)
+	background: var(--color-stone-3)
+
+.number:nth-child(3n+2)
+	background: var(--color-stone-2)
+
+a.number
+	transition: background 190ms ease
+	&:hover
+		background: var(--color-back)
+
+.ncolor:nth-child(4n)
+	background: var(--color-stone-1)
+
+.ncolor:nth-child(4n+1)
+	background: var(--color-stone-2)
+
+.ncolor:nth-child(4n+2)
+	background: var(--color-stone-3)
+
+.ncolor:nth-child(4n+3)
+	background: var(--color-stone-3)
+
+.ncolor
+	transition: background 190ms ease
+
+a.ncolor
+	&:hover
+		background: var(--color-back)
+
+.ncolor-inv:nth-child(3n)
+	background: var(--color-back)
+	&:hover
 		background: var(--color-stone-1)
 
-	.#{$prefix}number:nth-child(3n+1)
+.ncolor-inv:nth-child(3n+1)
+	background: var(--color-back)
+	&:hover
 		background: var(--color-stone-3)
 
-	.#{$prefix}number:nth-child(3n+2)
-		background: var(--color-stone-2)
-
-	a.#{$prefix}number
-		transition: background 190ms ease
-		&:hover
-			background: var(--color-back)
-
-	.#{$prefix}ncolor:nth-child(4n)
+.ncolor-inv:nth-child(3n+2)
+	background: var(--color-back)
+	&:hover
 		background: var(--color-stone-1)
 
-	.#{$prefix}ncolor:nth-child(4n+1)
-		background: var(--color-stone-2)
+.grey-graph
+	background: var(--color-stone-1)
+	padding: 1rem
+	border-radius: 8px
+	border: var(--border-main)
+	@media (min-width: 1025px)
+		padding: 2rem
 
-	.#{$prefix}ncolor:nth-child(4n+2)
-		background: var(--color-stone-3)
-
-	.#{$prefix}ncolor:nth-child(4n+3)
-		background: var(--color-stone-3)
-
-	.#{$prefix}ncolor
-		transition: background 190ms ease
-
-	a.#{$prefix}ncolor
-		&:hover
-			background: var(--color-back)
-
-	.#{$prefix}ncolor-inv:nth-child(3n)
-		background: var(--color-back)
-		&:hover
-			background: var(--color-stone-1)
-
-	.#{$prefix}ncolor-inv:nth-child(3n+1)
-		background: var(--color-back)
-		&:hover
-			background: var(--color-stone-3)
-
-	.#{$prefix}ncolor-inv:nth-child(3n+2)
-		background: var(--color-back)
-		&:hover
-			background: var(--color-stone-1)
-
-	.#{$prefix}grey-graph
-		background: var(--color-stone-1)
-		padding: 1rem
-		border-radius: 8px
-		border: var(--border-main)
-		@media (min-width: 1025px)
-			padding: 2rem
-
-	.#{$prefix}b-main
-		border: var(--border-main)
-
-+b.responsive-classes using ($prefix)
-	+surface-utils($prefix)
+.b-main
+	border: var(--border-main)

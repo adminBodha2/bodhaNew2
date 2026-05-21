@@ -2,151 +2,147 @@
 @use 'tokens' as t
 @use 'breakpoints' as b
 
-=blog-utils($prefix: "")
-	.#{$prefix}blog-wrapper
+.blog-wrapper
+	padding-top: map.get(t.$space-scale, 0)
+	@media screen and (min-width: map.get(b.$breakpoints, "lg"))
 		padding-top: map.get(t.$space-scale, 0)
-		@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-			padding-top: map.get(t.$space-scale, 0)
 
-	.#{$prefix}blog-article
-		a
-			color: var(--color-theme)
-			&:hover
-				text-decoration: underline
-		img
-			object-fit: cover
-			width: 100%
-			margin-bottom: 1.25rem
-			&.constrained
-				object-fit: contain
-				max-height: 600px
-
-	.#{$prefix}mobile-selection-menu,
-	.#{$prefix}mobile-category-menu
-		display: none
-		position: relative
-		z-index: 20
-
-	.#{$prefix}mobile-menu-trigger
+.blog-article
+	a
+		color: var(--color-theme)
+		&:hover
+			text-decoration: underline
+	img
+		object-fit: cover
 		width: 100%
-		display: flex
-		align-items: center
-		justify-content: space-between
-		gap: map.get(t.$space-scale, 16)
-		border: var(--border-dark)
-		border-radius: 5px
-		background: var(--color-grey-2)
+		margin-bottom: 1.25rem
+		&.constrained
+			object-fit: contain
+			max-height: 600px
+
+.mobile-selection-menu,
+.mobile-category-menu
+	display: none
+	position: relative
+	z-index: 20
+
+.mobile-menu-trigger
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: map.get(t.$space-scale, 16)
+	border: var(--border-dark)
+	border-radius: 5px
+	background: var(--color-grey-2)
+	color: var(--color-back)
+	font-family: var(--fontface-sans)
+	font-weight: 700
+	letter-spacing: 0.02rem
+	text-transform: uppercase
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06)
+	padding: 0.75em 1em
+	span
+		font-size: 0.8rem
+	&:hover
+		background: var(--color-theme-dark)
+
+.category-trigger
+	background: var(--color-back)
+	color: var(--color-primary)
+	&:hover
 		color: var(--color-back)
-		font-family: var(--fontface-sans)
-		font-weight: 700
-		letter-spacing: 0.02rem
-		text-transform: uppercase
-		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06)
-		padding: 0.75em 1em
-		span
-			font-size: 0.8rem
-		&:hover
-			background: var(--color-theme-dark)
 
-	.#{$prefix}category-trigger
-		background: var(--color-back)
-		color: var(--color-primary)
-		&:hover
-			color: var(--color-back)
+.menu-state
+	font-size: 0.66rem
+	font-weight: 600
+	opacity: 0.72
 
-	.#{$prefix}menu-state
-		font-size: 0.66rem
-		font-weight: 600
-		opacity: 0.72
+.item-note
+	color: var(--color-grey-0)
+	font-size: 0.68rem
+	font-weight: 600
 
-	.#{$prefix}item-note
-		color: var(--color-grey-0)
-		font-size: 0.68rem
-		font-weight: 600
+.mobile-menu-scrim
+	position: fixed
+	inset: 0
+	z-index: 18
+	border: none
+	background: rgba(0,0,0,0.18)
+	backdrop-filter: blur(2px)
 
-	.#{$prefix}mobile-menu-scrim
-		position: fixed
-		inset: 0
-		z-index: 18
-		border: none
-		background: rgba(0,0,0,0.18)
-		backdrop-filter: blur(2px)
-
-	.#{$prefix}mobile-menu-content
-		position: absolute
-		top: calc(100% + 0.55rem)
-		left: 0
-		right: 0
-		z-index: 21
-		display: flex
+.mobile-menu-content
+	position: absolute
+	top: calc(100% + 0.55rem)
+	left: 0
+	right: 0
+	z-index: 21
+	display: flex
+	flex-direction: column
+	border: var(--border-dark)
+	border-radius: 7px
+	background: var(--color-back)
+	box-shadow: 0 18px 45px rgba(0,0,0,0.18)
+	transform-origin: top center
+	animation: menuIn 0.14s ease-out
+	@media (max-width: 1024px)
 		flex-direction: column
-		border: var(--border-dark)
-		border-radius: 7px
-		background: var(--color-back)
-		box-shadow: 0 18px 45px rgba(0,0,0,0.18)
-		transform-origin: top center
-		animation: menuIn 0.14s ease-out
-		@media (max-width: 1024px)
-			flex-direction: column
-			padding: 1rem
+		padding: 1rem
 
-	.#{$prefix}mobile-menu-arrow
-		position: absolute
-		top: -6px
-		left: 22px
-		width: 12px
-		height: 12px
-		border-left: var(--border-dark)
-		border-top: var(--border-dark)
-		background: var(--color-back)
-		transform: rotate(45deg)
+.mobile-menu-arrow
+	position: absolute
+	top: -6px
+	left: 22px
+	width: 12px
+	height: 12px
+	border-left: var(--border-dark)
+	border-top: var(--border-dark)
+	background: var(--color-back)
+	transform: rotate(45deg)
 
-	.#{$prefix}mobile-menu-item
-		display: flex
-		align-items: center
-		justify-content: space-between
-		gap: map.get(t.$space-scale, 16)
-		border: none
-		border-radius: 4px
-		background: transparent
-		color: var(--color-primary)
-		font-family: var(--fontface-sans)
-		font-size: 0.82rem
-		font-weight: 650
-		line-height: 1.1
-		text-align: left
-		text-transform: uppercase
-		transition: background 0.08s ease, color 0.08s ease
-		&:hover,
-		&:focus-visible
-			outline: none
-			background: var(--color-stone-1)
-			color: var(--color-theme-dark)
-		&.#{$prefix}active
-			background: var(--color-theme-light2)
-			color: var(--color-theme-dark)
+.mobile-menu-item
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: map.get(t.$space-scale, 16)
+	border: none
+	border-radius: 4px
+	background: transparent
+	color: var(--color-primary)
+	font-family: var(--fontface-sans)
+	font-size: 0.82rem
+	font-weight: 650
+	line-height: 1.1
+	text-align: left
+	text-transform: uppercase
+	transition: background 0.08s ease, color 0.08s ease
+	&:hover,
+	&:focus-visible
+		outline: none
+		background: var(--color-stone-1)
+		color: var(--color-theme-dark)
+	&.active
+		background: var(--color-theme-light2)
+		color: var(--color-theme-dark)
 
-	.#{$prefix}blog-image-box
+.blog-image-box
+	img
+		object-fit: cover
+		width: 100%
+		height: 10rem
+	@media screen and (min-width: map.get(b.$breakpoints, "lg"))
 		img
-			object-fit: cover
-			width: 100%
-			height: 10rem
-		@media screen and (min-width: map.get(b.$breakpoints, "lg"))
-			img
-				height: 12.5rem
+			height: 12.5rem
 
-	@media screen and (max-width: 1024px)
-		.#{$prefix}selection-row,
-		.#{$prefix}category-selection
-			display: none
-		.#{$prefix}mobile-selection-menu,
-		.#{$prefix}mobile-category-menu
-			display: block
-		.#{$prefix}mobile-category-menu
-			width: 100%
-
-+b.responsive-classes using ($prefix)
-	+blog-utils($prefix)
+@media screen and (max-width: 1024px)
+	.selection-row,
+	.category-selection
+		display: none
+	.mobile-selection-menu,
+	.mobile-category-menu
+		display: block
+	.mobile-category-menu
+		width: 100%
 
 @keyframes menuIn
 	from

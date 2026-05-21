@@ -1,24 +1,18 @@
-@use 'breakpoints' as b
-
-=animation-utils($prefix: "")
-	.#{$prefix}growingline
-		position: relative
+.growingline
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		width: 0
+		height: 1px
+		background: var(--color-border-dark)
+		animation: lineDraw
+		animation-timeline: view()
+	&.alternate
 		&::before
-			content: ""
-			position: absolute
-			top: 0
-			width: 0
-			height: 1px
-			background: var(--color-border-dark)
-			animation: lineDraw
+			animation: revDraw
 			animation-timeline: view()
-		&.#{$prefix}alternate
-			&::before
-				animation: revDraw
-				animation-timeline: view()
-
-+b.responsive-classes using ($prefix)
-	+animation-utils($prefix)
 
 @keyframes revDraw
 	0%

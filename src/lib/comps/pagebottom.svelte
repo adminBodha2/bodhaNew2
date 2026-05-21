@@ -12,76 +12,79 @@
 
 <section class="foot-wrap box">
 	<div class="foot-wide-lines"></div>
-	<div class="foot-inner box">
+	<div class="foot-inner">
 		<div class="foot-top">
 			<button class="blank foot-scroll" onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
 				<span class="foot-scroll-arrow">↑</span>
 				<span class="foot-scroll-label tt-u">Top</span>
 			</button>
 		</div>
-		<div class="footer-grid">
-			<div class="foot-brand box rgap16 sm:pbot16">
-				<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo" /></a>
-				<p class="light-footer">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
-				<p class="light-footer"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a> <br />Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
-				<div class="row ycenter cgap16">
-					<Designed />
-					<button class="blank" onclick={toggleTheme}>
-						{#if $darkTheme}
-							<Sun />
-							<p class="txt-xs white pleft8">Light Mode</p>
-						{:else}
-							<Moon />
-							<p class="txt-xs white pleft8">Dark Mode</p>
-						{/if}
-					</button>
-				</div>
+		<div class="secondblock box rgap8 lg:rgap32">
+		<div class="textline1 box rgap8">
+			<a href="/"><img class="footer-logo" src="/images/bodha-logo-light.webp" alt="bodha logo" /></a>
+			<p class="sm:txt-sm light-footer lh16">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
+		</div>
+		<div class="textline2 box rgap16">
+			<p class="sm:txt-sm light-footer lh16"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a> <br />Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
+			<div class="row ycenter cgap16">
+				<Designed />
+				<button class="blank" onclick={toggleTheme}>
+					{#if $darkTheme}
+						<Sun />
+					{:else}
+						<Moon />
+					{/if}
+					<p class="txt-xs pleft8" style="color: #c1c1c1">Toggle Theme</p>
+				</button>
 			</div>
-			<div class="foot-col rgap8 lg:rgap16">
-				<p class="txt-00 light-footer tt-u">pillars</p>
-				<div class="foot-links box rgap16">
-					<a class="foot-link blank white" href="/research">Research</a>
-					<a class="foot-link blank white" href="/anveshi">Anveshi</a>
-					<a class="foot-link blank white" href="/big-questions">Big Questions</a>
-				</div>
+		</div>
+		</div>
+		<div class="bigblock grid grid-cols-2 lg:grid-cols-4">
+		<div class="box foot-col rgap16 grid1">
+			<p class="txt-xs light-footer tt-u">pillars</p>
+			<div class="foot-links box">
+				<a class="foot-link blank white" href="/research">Research</a>
+				<a class="foot-link blank white" href="/anveshi">Anveshi</a>
+				<a class="foot-link blank white" href="/big-questions">Big Questions</a>
 			</div>
-			<div class="foot-col rgap8 lg:rgap16">
-				<p class="txt-00 light-footer tt-u">learning</p>
-				<div class="foot-links rgap16">
-					<a class="foot-link blank white" href="/academy">Academy</a>
-					<a class="foot-link blank white" href="/wiki">Knowledge Base</a>
-					<a class="foot-link blank white" href="/wiki/temples">Hindu Temples</a>
-					<!--
+		</div>
+		<div class="box foot-col rgap16 grid2">
+			<p class="txt-xs light-footer tt-u">learning</p>
+			<div class="foot-links box">
+				<a class="foot-link blank white" href="/academy">Academy</a>
+				<a class="foot-link blank white" href="/wiki">Knowledge Base</a>
+				<a class="foot-link blank white" href="/wiki/temples">Hindu Temples</a>
+				<!--
 					<a class="foot-link blank white" href="/ontology">Ontology</a>
 					<a class="foot-link blank white" href="/concepts">Concepts</a>
 					-->
-				</div>
-			</div>
-			<div class="foot-col rgap8 lg:rgap16">
-				<p class="txt-00 light-footer tt-u">Readings</p>
-				<div class="foot-links rgap16">
-					<a class="foot-link blank white" href="/blog">Blog</a>
-					<a class="foot-link blank white" href="/library">Open Library</a>
-					<!--
-					<a class="foot-link blank white" href="/explorer">Explorer</a>
-					-->
-					<a class="foot-link blank white" href="/newsletter">Newsletter</a>
-				</div>
-			</div>
-			<div class="foot-col rgap8 lg:rgap16">
-				<p class="txt-00 light-footer tt-u">Other</p>
-				<div class="foot-links rgap16">
-					<a class="foot-link blank white" href="/about">About</a>
-					<a class="foot-link blank white" href="/inspiration">Inspiration</a>
-					<a class="foot-link blank white" href="/lab">Lab</a>
-					<a class="foot-link blank white" href="/aryavarta">Aryavarta</a>
-					<!--
-					<button type="button" class="foot-link footer-btn" onclick={openSiteTourSelector}>Site Tour</button>
-					-->
-				</div>
 			</div>
 		</div>
-		<div class="foot-bottom">
+		<div class="box foot-col rgap16 grid3">
+			<p class="txt-xs light-footer tt-u">Readings</p>
+			<div class="foot-links box">
+				<a class="foot-link blank white" href="/blog">Blog</a>
+				<a class="foot-link blank white" href="/library">Open Library</a>
+				<!--
+					<a class="foot-link blank white" href="/explorer">Explorer</a>
+					-->
+				<a class="foot-link blank white" href="/newsletter">Newsletter</a>
+			</div>
+		</div>
+		<div class="box foot-col rgap16 grid4">
+			<p class="txt-xs light-footer tt-u">Other</p>
+			<div class="foot-links box">
+				<a class="foot-link blank white" href="/about">About</a>
+				<a class="foot-link blank white" href="/inspiration">Inspiration</a>
+				<a class="foot-link blank white" href="/lab">Lab</a>
+				<a class="foot-link blank white" href="/aryavarta">Aryavarta</a>
+				<!--
+					<button type="button" class="foot-link footer-btn" onclick={openSiteTourSelector}>Site Tour</button>
+					-->
+			</div>
+		</div>
+		</div>
+		<div class="foot-bottom self-bottom">
 			<div class="foot-legal">
 				<p class="lgrey">© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/docs/terms-and-conditions">T&C</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds</a></p>
 				<p class="lgrey">Svayambodha Centre For Culture Studies Foundation</p>
@@ -109,12 +112,14 @@
 
 <style lang="sass">
 
+.bigblock
+	@media (max-width: 1024px)
+		row-gap: 2rem
+		padding-top: 1rem
+		padding-bottom: 1rem
+
 p.light-footer
 	color: #a7a7a7
-
-.foot-brand
-	p.light-footer
-		font-size: 14px
 
 .foot-wrap
 	width: 100%
@@ -138,9 +143,9 @@ p.light-footer
 		background: rgba(255,255,255,.12)
 		pointer-events: none
 	@media (max-width: 1024px)
-		height: calc(100vh - 64px)
-		padding-left: 1rem
-		padding-right: 1rem
+		min-height: 100vh
+		padding-left: 0.5rem
+		padding-right: 0.5rem
 		&::after
 			top: 2rem
 	@media (min-width: 1025px)
@@ -177,37 +182,56 @@ p.light-footer
 
 .foot-inner
 	z-index: 2
-	border-right: 1px solid rgba(255,255,255,0.1)
-	border-left: 1px solid rgba(255,255,255,0.1)
 	height: 100%
 	width: 100%
-	overflow: hidden
-	padding: 1rem
-	row-gap: 2rem
 	margin-left: auto
 	margin-right: auto
-	padding-top: 3rem
 	@media (max-width: 1024px)
+		border-left: 1px solid rgba(255,255,255,0.1)
+		border-right: 1px solid rgba(255,255,255,0.1)
 		padding-left: 1rem
 		padding-right: 1rem
-		height: 100%
-		row-gap: 2rem
+		row-gap: 1.5rem
+		margin-top: auto
+		margin-bottom: auto
 	@media (min-width: 1025px)
+		border-left: 1px solid rgba(255,255,255,0.1)
+		border-right: 1px solid rgba(255,255,255,0.1)
 		width: 992px
-		row-gap: 2rem
-		padding-top: 6rem
+		row-gap: 4rem
 		padding-left: 2rem
 		padding-right: 2rem
 	@media (min-width: 1201px)
 		width: 1168px
-		row-gap: 3rem
-		padding-top: 8rem
+		row-gap: 6rem
 		padding-left: 4rem
 		padding-right: 4rem
 	@media (min-width: 1441px)
 		width: 1408px
 	@media (min-width: 1601px)
 		width: 1472px
+
+.foot-inner
+	display: flex
+	flex-direction: column
+	height: 100%
+	@media (min-width: 1025px)
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: "top top top top top top" "secondblock secondblock bigblock bigblock bigblock bigblock" "bottom bottom bottom bottom bottom bottom"
+		align-content: center
+
+.foot-top
+	grid-area: top
+
+.secondblock
+	grid-area: secondblock
+
+.bigblock
+	grid-area: bigblock
+
+.foot-bottom
+	grid-area: bottom
 
 .foot-top
 	display: flex
@@ -241,7 +265,7 @@ p.light-footer
 
 .foot-scroll-arrow
 	font-size: 1rem
-	color: var(--color-theme)
+	color: #1971C2
 	line-height: 1
 	transition: transform 180ms ease
 
@@ -249,34 +273,15 @@ p.light-footer
 	font-size: 8px
 	font-weight: 700
 	letter-spacing: 0.1em
-	color: var(--color-theme)
-
-.footer-grid
-	display: grid
-	grid-template-columns: 1fr 1fr
-	.foot-brand
-		grid-column: span 2
-	row-gap: 2rem
-	@media (min-width: 1025px)
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-		.foot-brand
-			grid-column: span 3
-			grid-row: span 2
-	@media (min-width: 1201px)
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-		.foot-brand
-			grid-column: span 3
+	color: #1971C2
 
 // ── TOP ROW ───────────────────────────────────────────────
 
-.foot-brand
-	display: flex
-	flex-direction: column
-	.footer-logo
-		object-fit: contain
-		opacity: 0.9
-		height: 48px
-		margin-right: auto
+.footer-logo
+	object-fit: contain
+	opacity: 0.9
+	height: 48px
+	margin-right: auto
 
 
 // ── LINK GRID ─────────────────────────────────────────────
@@ -291,6 +296,7 @@ p.light-footer
 .foot-links
 	display: flex
 	flex-direction: column
+	row-gap: 12px
 
 .foot-link
 	font-size: 0.9rem
@@ -308,23 +314,16 @@ p.light-footer
 	justify-content: space-between
 	gap: 1rem
 	flex-wrap: wrap
-	margin-top: auto
-	padding-bottom: 3rem
-	@media screen and (max-width: 1024px)
+	@media (max-width: 1024px)
 		flex-direction: column
 		align-items: flex-start
+		justify-self: flex-end
 		margin-top: auto
-	@media (min-width: 721px)
-		padding-bottom: 4rem
-	@media (min-width: 1025px)
-		padding-bottom: 6rem
-	@media (min-width: 1201px)
-		padding-bottom: 8rem
 
 .foot-legal
 	display: flex
 	flex-direction: column
-	gap: 3px
+	gap: 4px
 	p
 		font-size: 13px
 		color: #aaa

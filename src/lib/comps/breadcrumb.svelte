@@ -28,7 +28,7 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box null{rgap} crumb-outer" class:onblog class:fullP class:xcenter={centered}>
+<div class="box crumb-outer" class:onblog class:fullP class:xcenter={centered}>
 	<!-----adds page title as h1 tag for seo and semantic markup. automatically added if showT is false. defined by title on pages----->
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
@@ -57,19 +57,23 @@
 	</div>
 
 	<!-----title and description row - adds title, description - set variables showT and showD to true, define in title and desc ---->
-	<div class="mleft box rgap16" class:pbot16={showRow} class:ta-c={centered}>
+	<div class="mleft box rgap16" class:ta-c={centered}>
 		{#if showT}
 			<h1 class="txt-5xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 w700" class:source-serif={serifed}>{title}</h1>
 		{/if}
-		{#if showD}
-			<p class="txt-lg lh14 grey2" class:width80={!centered && !fullP}>{desc}</p>
+		{#if showRow}
+		<div class="box rgap32">
+			<div class="whitecard box width60"><p class="txt-bs lg:txt-lg lh14 grey3">{desc}</p></div>
+			<div class="box whitecard">
+				{@render children?.()}
+			</div>
+		</div>
+		{:else}
+		<p class="txt-bs lg:txt-lg lh14 grey3" class:width50={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 
 	<!-----optional row to add more data in page header area, like tags, buttons, text anything. set showRow to true and then add on page ---->
-	{#if showRow}
-		{@render children?.()}
-	{/if}
 
 	<!---a bottom border and padding of 2rem is automatically added to component via styling of crumb-outer below----->
 </div>
@@ -81,10 +85,19 @@
 
 .crumb-outer
 	border-bottom: var(--border-main)
-	padding-bottom: 2rem
+	padding-top: 3rem
+	padding-bottom: 3rem
+	row-gap: 1rem
 	&.onblog
-		padding-bottom: 0
-		border-bottom: none
+		padding-top: 0rem
+		padding-bottom: 2rem
+	@media (min-width: 1025px)
+		padding-bottom: 5rem
+		padding-top: 4rem
+		row-gap: 2rem
+		&.onblog
+			padding-top: 2rem
+			padding-bottom: 2rem
 
 .divider
 	font-size: 0.5rem
