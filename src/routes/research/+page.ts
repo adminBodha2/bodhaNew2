@@ -4,6 +4,7 @@ import { allResearch } from '$lib/utils/localpulls';
 type ResearchEntry = {
 	linkpath: string;
 	meta: {
+		id?: number | string;
 		title: string;
 		type?: string;
 		image?: string;
@@ -35,6 +36,20 @@ function titleCase(value: string) {
 		.join(' ');
 }
 
+function compareByResearchId(a: ResearchEntry, b: ResearchEntry) {
+	const aId = Number(a.meta.id);
+	const bId = Number(b.meta.id);
+
+	if (Number.isFinite(aId) && Number.isFinite(bId)) {
+		return aId - bId;
+	}
+
+	if (Number.isFinite(aId)) return -1;
+	if (Number.isFinite(bId)) return 1;
+
+	return a.meta.title.localeCompare(b.meta.title);
+}
+
 export const load: PageLoad = async () => {
 	const research = (await allResearch()) as ResearchEntry[];
 	const grouped = new Map<string, ResearchEntry[]>();
@@ -57,10 +72,12 @@ export const load: PageLoad = async () => {
 				title: meta.title,
 				image: meta.image,
 				order: meta.order,
-				items: items.map((item) => ({
-					label: item.meta.title,
-					href: item.linkpath
-				}))
+				items: [...items]
+					.sort(compareByResearchId)
+					.map((item) => ({
+						label: item.meta.title,
+						href: item.linkpath
+					}))
 			};
 		})
 		.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));

@@ -6,6 +6,7 @@ description: "Field studies of surviving gurukulas, pathshalas, and vidyalayas t
 tags:
   - indian-knowledge-systems
   - hindu-institutions
+id: 1
 ---
 
 India has continuity of traditions and institutions. That is why it is a living system. This stands as true in the field of education. Though mainstream education in India today might be a pale imitation of the West, its ancient institutions are still alive, albeit in a reduced form, as are the Indian Knowledge Systems (IKS). There are still gurukulas, pathshalas, vidyalayas, and agraharas which are run on ancient models, which are still functioning almost exactly like they were in ancient India. And there is still the vast knowledge of IKS - awaiting its induction into the education of all Indians.

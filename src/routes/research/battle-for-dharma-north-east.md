@@ -6,6 +6,7 @@ description: "A policy study on conversion, demographic change, and the Dharmic 
 tags:
   - north-east-india
   - shatrubodha
+id: 6
 ---
 
 The North East of India has long been a conduit for connecting India to the rest of the world on its East, having a distinct dharmic culture of its own. The Northeast as it is commonly known, is home to some of the most distinctive tribal cultures in the world. Although distinct in nature, their customs and traditions are inextricably linked to that of the rest of India, and strongly represent the diversity part of the famous axiom: ‘Unity in Diversity’, that marks India’s identity. Bauddha dharma, Vaishnava dharma, Shakta and many other indigenous religious-traditions have characterized NE India for centuries.

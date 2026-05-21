@@ -5,11 +5,15 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
+	import { useInView } from '$lib/svelteanim';
 
 	let { data } = $props();
 
 	let schools = $derived(data.schools ?? []);
 	let thinkers = $derived(data.thinkers ?? []);
+	let ref = $state<HTMLElement | null>(null);
+	let visref = useInView(() => ref, { threshold: 0.6, once: true})
 
 	const title = 'Bodha Inspiration | Hindu Thinkers, IKS, Ecology, and Civilizational Thought';
 	const metaDescription = 'The thinkers and schools of thought that shape our method, questions, and the longer continuum of inquiry we work within.';
@@ -34,17 +38,23 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1920" imHeight="1080" {jsonld} />
 
+<Parallax imageLink="/images/key-inspiration.webp" wipe={true} />
 <Container>
-	<Parallax imageLink="/images/key-inspiration.webp" wipe={true} />
-	<section class="box wrapper-std rgap32 first-box">
-		<Crumb showT={true} title="Inspiration" showD={true} desc="Thinkers and schools of thought that continue to shape our method, our questions, and the intellectual company we keep." />
+	<Crumb showT={true} title="Inspiration" showD={true} desc="Thinkers and schools of thought that continue to shape our method, our questions, and the intellectual company we keep." />
+	<section class="wrapper-std" bind:this={ref}>
+		<Reveal visible={visref.visible} direction="left" duration={800}>
 		<div class="box rgap4">
 			<p class="txt-2xl theme source-serif italic">"The human mind, in its progress, marches knowledge to knowledge, renews and enlarges previous knowledge."</p>
 			<p class="grey0">Sri Aurobindo</p>
 		</div>
+		</Reveal>
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap16">
-			<p class="highlight-text">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world.</p>
+			<Reveal visible={visref.visible} delay={800}>
+				<p class="highlight-text">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought, by thinkers who asked difficult questions, and by traditions that refined ways of seeing the world.</p>
+			</Reveal>
+			<Reveal visible={visref.visible} delay={1000}>
 			<p class="highlight-text">We do not treat these figures and schools as authorities to be followed uncritically, but as companions in inquiry. Some agree, some sharply disagree, and that tension is part of what keeps the page alive.</p>
+			</Reveal>
 		</div>
 	</section>
 	<section class="box wrapper-std rgap64 growingline">

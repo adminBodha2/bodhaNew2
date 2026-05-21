@@ -5,6 +5,7 @@ image: /images/research/4.webp
 description: "A field study of how the Hindu family has changed from its classical model in modern Indian society."
 tags:
   - hindu-institutions
+id: 3
 ---
 
 Much is said about the pros and cons of family in India, both joint and nuclear. But very few attempts have been made to study Hindu family as it is now, in its various dimensions and along with all the problems that plague it in many ways. Is the Hindu family no longer living a life as it was supposed to do in the classical Hindu era? Has it deviated from the model life given in the shastras? And if so, then is it Hindu any longer? Are there any ways possible in which it can evolve into new ways and yet maintain the core and the soul of being Hindu?

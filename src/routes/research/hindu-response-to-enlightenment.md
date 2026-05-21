@@ -7,6 +7,7 @@ tags:
   - civilizational-consciousness
   - purva-paksha
   - indian-knowledge-systems
+id: 10
 ---
 
 The European Enlightenment is widely regarded as the philosophical foundation of modern secular values, privileging reason, individual autonomy, scientific rationality, and the desacralization of political and moral authority. These values now shape global norms of governance, education, ethics, and public life. This research undertakes a critical examination of Enlightenment ideals from a Hindu philosophical perspective, envisioned as a civilizational dialogue between two distinct metaphysical worldviews.
