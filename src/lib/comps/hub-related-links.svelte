@@ -28,7 +28,7 @@
 </script>
 
 {#if visibleItems.length}
-	<section class="wrapper-std growingline" aria-label={title}>
+	<section class="wrapper-std" aria-label={title}>
 		<Title text={title} {anveshi} />
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid related-links">
 			{#each visibleItems as page (itemHref(page))}
@@ -37,7 +37,7 @@
 					{#if page.description}
 						<p class="grey1 lh14">{page.description}</p>
 					{/if}
-					<p class="txt-xs w500 tt-u theme self-bottom ptop8 bordertop">{page.routeFamily}</p>
+					<p class="txt-xs w500 tt-u theme self-bottom">{page.routeFamily}</p>
 				</a>
 			{/each}
 		</div>

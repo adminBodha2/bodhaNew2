@@ -8,8 +8,8 @@
 	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 	import seoTopicLinks from '$lib/generated/seo-topic-links.json';
+	import Title from '$lib/comps/page-title.svelte';
 
 	interface Props {
 		data: PageData;
@@ -42,28 +42,31 @@
 <svelte:window bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
-<Container>
 	<Parallax imageLink={data.icon} wipe={true} />
+<Container>
 	<section class="docgrid">
 		<div class="box docside">
-			{#if data.questions?.length > 0}
-				<div class="doclist">
-					{#each data.questions as item (item.linkpath)}
-						{#if item.meta.title !== data.title}
-							<a class="doclink sidebar-text" href={item.linkpath}>
-								{item.meta.title}
-							</a>
-						{/if}
-					{/each}
-				</div>
-			{/if}
+			<nav class="doclist">
+				{#if data.questions?.length > 0}
+					<p class="txt-sm tt-u w500 grey0 pbot16">Other Big Questions</p>
+					<div class="box rgap16">
+						{#each data.questions as item (item.linkpath)}
+							{#if item.meta.title !== data.title}
+								<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
+									{item.meta.title}
+								</a>
+							{/if}
+						{/each}
+					</div>
+				{/if}
+			</nav>
 		</div>
-		<div class="docmain box rgap32 sm:pbot32">
-			<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true}>
+		<div class="docmain rgap32 box pbot32">
+			<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true} onblog={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row wrap cgap4 rgap4">
 						{#each data.tags as tag (tag)}
-							<a class="txt-sm tt-u theme" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
+							<a class="standard-pill" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
 						{/each}
 					</div>
 				{/if}
@@ -72,21 +75,21 @@
 				<data.content />
 			</div>
 			{#if data.linkedNodes?.length > 0}
-				<section class="box rgap32 bordertop ptop32">
-					<p class="txt-2xl w600">Related Readings</p>
+				<section class="box rgap32 bordertop ptop64">
+					<Title text="Related Readings" sizeType={true}/>
 					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 						{#each data.linkedNodes as item (item.nodeId)}
-							<a class="blank textbox whitestone p24 lg:p32" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
+							<a class="blank box rgap16 lg:rgap24 p24 lg:p32 whitestone" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
 								<div class="box rgap16">
-									<p class="txt-xs tt-u grey0">{item.node.type}</p>
-									<p class="txt-xl w600">{item.node.title}</p>
+									<p class="txt-xs theme w500 tt-u">{item.node.type.replaceAll('-',' ')}</p>
+									<p class="a-hover txt-xl w600">{item.node.title}</p>
 									{#if item.node.description}
-										<p class="grey0 lh14">{item.node.description}</p>
+										<p class="grey1 lh14">{item.node.description}</p>
 									{/if}
 								</div>
 								<div class="row wrap cgap8 rgap4 self-bottom ptop32">
 									{#each item.node.tags as tag (tag)}
-										<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-', ' ')}</p>
+										<p class="txt-00 tt-u w500 grey0">{tag.replaceAll('-', ' ')}</p>
 									{/each}
 								</div>
 							</a>
@@ -97,6 +100,6 @@
 		</div>
 	</section>
 	{#if data.item === 'core-of-sanatana-dharma'}
-		<HubRelatedLinks title="Related Dharma Research" items={relatedDharmaPages} />
+		<HubRelatedLinks title="Further Readings" items={relatedDharmaPages} />
 	{/if}
 </Container>

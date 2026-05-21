@@ -46,10 +46,10 @@
 				{#if data.research && data.research.length > 0}
 					<p class="txt-sm tt-u w500 grey0 pbot16">Other Projects</p>
 					<div class="box rgap16">
-								{#each data.research as item}
-						{#if item.meta.title !== data.title}
+						{#each data.research as item}
+							{#if item.meta.title !== data.title}
 							<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
-								{item.meta.title}
+							{item.meta.title}
 							</a>
 						{/if}
 					{/each}
@@ -93,22 +93,3 @@
 		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-
-.standard-pill
-	background: linear-gradient(to right, #414141, #777777)
-	color: white
-	text-transform: uppercase
-	font-size: 11px
-	font-weight: 500
-	letter-spacing: 0.03rem
-	font-family: 'Google Sans Flex', sans-serif
-	padding: 5px 8px
-	border-radius: 2px
-	transition: all 110ms ease-out
-	&:hover
-		background: linear-gradient(to right, #485563, #014694, #1971C2)
-		letter-spacing: 0.02rem
-
-</style>
