@@ -59,7 +59,7 @@
 	<!-----title and description row - adds title, description - set variables showT and showD to true, define in title and desc ---->
 	<div class="mleft box rgap16" class:ta-c={centered}>
 		{#if showT}
-			<h1 class="txt-5xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 w700" class:source-serif={serifed}>{title}</h1>
+			<h1 class="txt-5xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 w700 tt-c" class:source-serif={serifed}>{title}</h1>
 		{/if}
 		{#if showRow}
 		<div class="box rgap32">
@@ -79,6 +79,9 @@
 </div>
 
 <style lang="sass">
+
+h1
+	word-break: break-word
 
 .crumbrow
 	padding-bottom: 8px

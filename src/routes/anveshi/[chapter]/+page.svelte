@@ -11,6 +11,7 @@
 	import Location from '$lib/icons/location.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
+	import Slide from '$lib/svelteanim/components/Slide.svelte';
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 	import Tabs from '$lib/comps/Tabs.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
@@ -20,7 +21,9 @@
 
 	let templeStatus = $state(0);
 	let ref = $state<HTMLElement | null>(null);
+	let slref = $state<HTMLElement | null>(null);
 	let vis = useInView(() => ref, { threshold: 0.5, once: true });
+	let slvis = useInView(() => ref, { threshold: 0.9, once: true});
 	let iW = $state(0);
 
 	let itins = $derived(data.itins ?? []);
@@ -55,49 +58,59 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1920" imHeight="1080" {jsonld} />
 
+<Parallax wipe={true} imageLink={data.image} />
 <Container>
-	<Parallax wipe={true} imageLink={data.image} />
-
-	<!--------------introduction with details like date, pricing etc.------------------>
-	<section class="tight-stack wrapper-std first-box">
-		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={data.isOpen}>
+		<Crumb showT={true} title='{data.slug} Chapter' showD={true} desc={data.description} showRow={data.isOpen}>
 			{#if data.isOpen}
-				<p class="txt-sm tt-u anveshi-o">OPEN NOW!</p>
+				<p class="txt-xl w600 tt-u anveshi-o">OPEN NOW!</p>
 			{/if}
 		</Crumb>
+	<!--------------introduction with details like date, pricing etc.------------------>
+	<section class="wrapper-std">
 		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 lg:cgap64 content-highlights" bind:this={ref}>
-			<Reveal visible={vis.visible}>
+			<Reveal visible={vis.visible} duration={500}>
 				<data.content />
 			</Reveal>
 		</div>
 		{#if data.quote}
-			<Reveal visible={vis.visible} delay={800}>
-				<p class="txt-xl md:txt-2xl italic source-serif width80 anveshi-o">{data.quote}</p>
+			<Reveal visible={vis.visible} delay={700}>
+				<p class="txt-xl md:txt-2xl lg:txt-3xl lh15 italic source-serif width80 anveshi-o">{data.quote}</p>
 			</Reveal>
 		{/if}
-		<div class="grid grid-cols-2 xl:grid-cols-4 col-span-full info-row width60">
+	</section>
+	<section class="wrapper-std growingline alternate">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap32">
+		<div class="grid grid-cols-2 xl:grid-cols-4 col-span-2 info-row" bind:this={slref}>
+			<Slide visible={slvis.visible} duration={500} direction="down">
 			<div class="box dates p16 lg:p32">
 				<Calendar fill="var(--color-anveshi)" />
 				<p class="txt-bs w500 ptop16 pbot4">{data.dates}</p>
 				<p class="txt-xs grey1 tt-u">Dates</p>
 			</div>
+			</Slide>
+			<Slide visible={slvis.visible} duration={400} delay={250} direction="down">
 			<div class="box price p16 lg:p32">
 				<Rupee fill="var(--color-anveshi)" />
 				<p class="txt-bs w500 ptop16 pbot4">{data.price}</p>
 				<p class="txt-xs grey1 tt-u">Price</p>
 			</div>
+			</Slide>
+			<Slide visible={slvis.visible} duration={300} delay={400} direction="down">
 			<div class="box duration p16 lg:p32">
 				<Session fill="var(--color-anveshi)" />
 				<p class="txt-bs w500 ptop16 pbot4">{data.duration}</p>
 				<p class="txt-xs grey1 tt-u">Duration</p>
 			</div>
+			</Slide>
+			<Slide visible={slvis.visible} duration={200} delay={650} direction="down">
 			<div class="box temples p16 lg:p32">
 				<Location fill="var(--color-anveshi)" />
 				<p class="txt-bs w500 ptop16 pbot4">{data.temples}</p>
 				<p class="txt-xs grey1 tt-u">Temples</p>
 			</div>
+			</Slide>
 		</div>
-		<div class="box col-span-full">
+		<div class="box col-span-1">
 			<div class="row cgap16 ycenter">
 				{#if data.isOpen}
 					<a class="primary anveshi" href={data.registerLink} target="_blank" rel="noreferrer"><span>Register Now</span></a>
@@ -107,43 +120,41 @@
 				{/if}
 			</div>
 		</div>
-	</section>
-
-	<!--------------itinerary------------------>
-	<section class="wrapper-std growingline">
-		<Title text="Itinerary" anveshi={true} />
+		</div>
+		<div class="box rgap32">
 		{#if itins && itins.length > 0}
 			<Tabs class="anveshi-tabs" items={itins} getValue={(item, index) => `${index}-${item.daylabel}`} getLabel={(item) => `${item.daylabel} - ${item.label}`}>
 				{#snippet children(item, index)}
-					<div class="itin-panel b-main p16 lg:p24 radius8 grid lg:grid-cols-2 gap16 lg:gap32">
-						<div class="up box">
-							<img src={item.itinimage} class="fitted squared radius8" alt={item.daylabel} />
+					<div class="itin-panel grid lg:grid-cols-2 gap16 lg:gap32">
+						<div class="up sm:row lg:box cgap16">
+							<img src={item.itinimage} class="fitted squared itinkey" alt={item.daylabel} />
+							<img src="https://www.bodharesearch.in/images/anveshi/day-{index + 1}.png" alt={item.daylabel} class="icon onmob" />
 						</div>
 						<div class="down box">
-							<img src="https://www.bodharesearch.in/images/anveshi/day-{index + 1}.png" alt={item.daylabel} class="icon" />
+							<img src="https://www.bodharesearch.in/images/anveshi/day-{index + 1}.png" alt={item.daylabel} class="icon ondesk" />
 							<pre class="highlight-text">{item.itinerary}</pre>
 						</div>
 					</div>
 				{/snippet}
 			</Tabs>
 		{/if}
+		</div>
 	</section>
-
 	<!--------------temples------------------>
-	<section class="wrapper-std growingline alternate">
+	<section class="wrapper-std growingline">
 		<Title text="Temples" anveshi={true} />
 		{#if temples && temples.length > 0}
 			<Swipes slidesPerView={templeStatus} spaceBetween={8} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: templeStatus, spaceBetween: 8 } }}>
 				{#each temples as item}
 					<swiper-slide>
 						{#if data.templetext}
-							<div class="grid grid-cols-1 lg:grid-cols-2 cgap16 rgap16 temple-descriptions">
+							<div class="grid grid-cols-1 lg:grid-cols-2 cgap16 temple-descriptions b-main">
 								<div class="up">
-									<Lightbox><img class="fitted herocard radius8" src={item.image} alt={item.temple} /></Lightbox>
+									<img class="fitted herocard h-also" src={item.image} alt={item.temple} />
 								</div>
-								<div class="box rgap16 down lg:pleft16">
-									<p class="txt-2xl w600">{item.temple}</p>
-									<p class="txt-lg lh14 grey2">{item.description}</p>
+								<div class="box rgap16 down p24 lg:p32">
+									<p class="source-serif txt-3xl w650">{item.temple}</p>
+									<p class="txt-lg lh14 grey3">{item.description}</p>
 								</div>
 							</div>
 						{:else}
@@ -180,6 +191,18 @@ img.icon
 	width: 48px
 	height: 48px
 	margin-bottom: 1rem
+	&.onmob
+		@media (min-width: 1025px)
+			display: none
+	&.ondesk
+		@media (max-width: 1024px)
+			display: none
+
+img.itinkey
+	@media (max-width: 1024px)
+		object-fit: contain
+		width: 48px
+		height: 48px		
 
 .itin-panel
 	display: grid

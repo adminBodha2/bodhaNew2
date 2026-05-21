@@ -113,28 +113,17 @@
 <svelte:window bind:innerWidth={iW} />
 
 <div class="swiper-row" class:marquee>
-	<div class="xleft box width100 mobile-rule">
-		<p class="grey1 mleft ta-l">Swipe left/right to navigate</p>
+	<div class="box xleft ta-l width100">
+		{#if iW <= 1024}
+			<p class="grey2">Use buttons to navigate, or swipe left/right.</p>
+		{:else}
+			<p class="grey2">Use buttons or arrow keys to navigate, or drag left/right.</p>
+		{/if}
 	</div>
 	<div class="swiper-frame" role="region" onpointerenter={pauseMarquee} onpointerleave={resumeMarquee}>
 		<swiper-container bind:this={swiperEl} init="false">
 			{@render children?.()}
 		</swiper-container>
-	</div>
-	<div class="buttons-and-rule box xleft rgap8">
-		<div class="nav-buttons row ycenter xcenter cgap8 mleft">
-			<button class="prev" onclick={() => swiperEl?.swiper?.slidePrev()} title="swiper previous button">
-				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi)" stroke="var(--color-anveshi)" xmlns="http://www.w3.org/2000/svg"><path d="M8 12L14 6V18L8 12Z" /></svg>
-			</button>
-			<button class="next" onclick={() => swiperEl?.swiper?.slideNext()} title="swiper next button">
-				<svg viewBox="0 0 24 24" height="32" width="32" fill="var(--color-anveshi)" stroke="var(--color-anveshi)" xmlns="http://www.w3.org/2000/svg"><path d="M16 12L10 18V6L16 12Z" /></svg>
-			</button>
-		</div>
-		{#if iW <= 1024}
-			<p class="anveshi-o">Use buttons to navigate, or swipe left/right.</p>
-		{:else}
-			<p class="grey0">Use buttons or arrow keys to navigate, or drag left/right.</p>
-		{/if}
 	</div>
 </div>
 
