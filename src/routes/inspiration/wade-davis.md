@@ -1,5 +1,5 @@
 ---
-title: Wade Davis | Ethnography, Ecology, and Cultural Knowledge Systems
+title: Wade Davis
 image: /images/thinkers/wade-davis.webp
 type: thinker
 id: 4

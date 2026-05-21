@@ -47,39 +47,41 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} ogType="article" {jsonld} />
 
+<Parallax imageLink={metaImage} wipe={true} />
 <Container>
-	<Parallax imageLink="/images/key-inspiration.webp" wipe={true} />
 	<section class="docgrid">
 		<div class="box docside">
-			<div class="doclist">
+			<nav class="doclist">
 				{#if schools && schools.length > 0}
+					<div class="box rgap16">
 					{#each schools as item}
-						<a class="doclink sidebar-text" href={item.linkpath}>
+						<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
 							{item.meta.title}
 						</a>
 					{/each}
+					</div>
 				{/if}
 				{#if thinkers && thinkers.length > 0}
+					<div class="box rgap16">
 					{#each thinkers as item}
-						<a class="doclink sidebar-text" href={item.linkpath}>
+						<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
 							{item.meta.title}
 						</a>
 					{/each}
+					</div>
 				{/if}
-			</div>
+			</nav>
 		</div>
-		<div class="docmain box rgap32">
-			<div class="box title-area">
-				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true} fullP={true}>
+		<div class="docmain rgap32 box pbot32">
+				<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true} fullP={true} onblog={true}>
 					{#if data.tags && data.tags.length > 0}
 						<div class="row wrap rgap4 cgap4">
 							{#each data.tags as tag}
-								<a class="txt-sm tt-u theme" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
+								<a class="standard-pill" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
 							{/each}
 						</div>
 					{/if}
 				</Crumb>
-			</div>
 			<div class="doctext classic-document">
 				<data.content />
 			</div>

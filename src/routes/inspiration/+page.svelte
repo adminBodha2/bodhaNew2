@@ -6,6 +6,7 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
+	import Blur from '$lib/svelteanim/components/Blur.svelte'
 	import { useInView } from '$lib/svelteanim';
 
 	let { data } = $props();
@@ -14,6 +15,10 @@
 	let thinkers = $derived(data.thinkers ?? []);
 	let ref = $state<HTMLElement | null>(null);
 	let visref = useInView(() => ref, { threshold: 0.6, once: true})
+	let ref2 = $state<HTMLElement | null>(null);
+	let ref3 = $state<HTMLElement | null>(null);
+	let visref2 = useInView(() => ref2, { threshold: 0.6, once: true})
+	let visref3 = useInView(() => ref3, { threshold: 0.6, once: true})
 
 	const title = 'Bodha Inspiration | Hindu Thinkers, IKS, Ecology, and Civilizational Thought';
 	const metaDescription = 'The thinkers and schools of thought that shape our method, questions, and the longer continuum of inquiry we work within.';
@@ -60,14 +65,16 @@
 	<section class="box wrapper-std rgap64 growingline">
 		<Title text="Schools of Thought" />
 		{#if schools.length > 0}
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
-				{#each schools as item}
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap4" bind:this={ref2}>
+				{#each schools as item, i}
+					<Blur visible={visref2.visible} delay={100 * i}>
 					<a class="inspiration-card blank" href={item.linkpath}>
 						<img class="card-image" src={item.meta.image} alt={item.meta.title} />
 						<div class="card-overlay">
 							<p class="txt-xl white">{item.meta.title}</p>
 						</div>
 					</a>
+					</Blur>
 				{/each}
 			</div>
 		{/if}
@@ -75,14 +82,16 @@
 	<section class="box wrapper-std rgap64 growingline alternate">
 		<Title text="Thinkers" />
 		{#if thinkers.length > 0}
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap4">
-				{#each thinkers as item}
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap4" bind:this={ref3}>
+				{#each thinkers as item, i}
+					<Blur visible={visref3.visible} delay={100 * i}>
 					<a class="inspiration-card blank" href={item.linkpath}>
 						<img class="card-image" src={item.meta.image} alt={item.meta.title} />
 						<div class="card-overlay">
 							<p class="txt-xl white">{item.meta.title}</p>
 						</div>
 					</a>
+					</Blur>
 				{/each}
 			</div>
 		{/if}

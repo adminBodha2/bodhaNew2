@@ -1,5 +1,5 @@
 ---
-title: Dharampal | Indian Knowledge Systems, Decolonization, and Svayambodha
+title: Dharampal
 image: /images/thinkers/dharampal.webp
 type: thinker
 id: 10

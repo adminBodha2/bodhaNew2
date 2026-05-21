@@ -14,6 +14,7 @@
 
 	let { data }: { data: PageData } = $props();
 	let researchAreas = $derived(data.researchAreas ?? []);
+	let researchItems = $derived(data.research ?? []);
 	let revealRef = $state<HTMLElement | null>(null);
 	let revealVis = useInView(() => revealRef, { threshold: 0.4, once: true });
 	let reveal2 = $state<HTMLElement | null>(null);

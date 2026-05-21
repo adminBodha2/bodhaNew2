@@ -1,5 +1,5 @@
 ---
-title: EO Wilson | Biodiversity, Ecology, and Civilizational Environmental Thought
+title: EO Wilson
 image: /images/thinkers/ivan-illich.webp
 type: thinker
 id: 11

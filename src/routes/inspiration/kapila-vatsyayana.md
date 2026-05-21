@@ -1,5 +1,5 @@
 ---
-title: Kapila Vatsyayana | Indian Art, Aesthetics, and Knowledge Systems
+title: Kapila Vatsyayana
 image: /images/thinkers/kapila-v.webp
 type: thinker
 id: 17

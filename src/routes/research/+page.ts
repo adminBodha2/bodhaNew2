@@ -8,6 +8,7 @@ type ResearchEntry = {
 		title: string;
 		type?: string;
 		image?: string;
+		description?: string;
 	};
 };
 
@@ -83,6 +84,7 @@ export const load: PageLoad = async () => {
 		.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
 
 	return {
-		researchAreas
+		researchAreas,
+		research
 	};
 };

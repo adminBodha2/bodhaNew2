@@ -1,5 +1,5 @@
 ---
-title: Ivan Illich | Modernity, Institutions, and Civilizational Critique
+title: Ivan Illich
 image: /images/thinkers/eo-wilson.webp
 type: thinker
 id: 3

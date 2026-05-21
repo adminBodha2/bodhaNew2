@@ -1,5 +1,5 @@
 ---
-title: KM Munshi | Itihasa, Indian Culture, and Civilizational Renewal
+title: KM Munshi
 image: /images/thinkers/km-munshi.webp
 type: thinker
 id: 20

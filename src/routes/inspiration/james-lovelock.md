@@ -1,5 +1,5 @@
 ---
-title: James Lovelock | Gaia Theory, Ecology, and Dharmic Environmentalism
+title: James Lovelock
 image: /images/thinkers/james-lovelock.webp
 type: thinker
 id: 15

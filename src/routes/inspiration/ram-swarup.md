@@ -1,5 +1,5 @@
 ---
-title: Ram Swarup | Hindu Thought, Purva Paksha, and Sanatana Dharma
+title: Ram Swarup
 image: /images/thinkers/ram-swarup.webp
 type: thinker
 id: 1

@@ -1,5 +1,5 @@
 ---
-title: Bernd Heinrich | Ecology, Nature Writing, and Dharmic Environmental Thought
+title: Bernd Heinrich
 image: /images/thinkers/bernd-heinrich.webp
 type: thinker
 id: 12
