@@ -90,7 +90,9 @@
 		display: flex;
 		flex-shrink: 0;
 		justify-content: space-around;
-		gap: var(--gap);
+		gap: 1px;
+		background: var(--color-border);
+		border: var(--border-main);
 		min-width: 100%;
 		animation: marquee-left var(--duration) linear infinite;
 	}

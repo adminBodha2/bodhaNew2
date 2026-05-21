@@ -88,6 +88,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
 <div class="box screener-wrap">
+	<h1 class="visually-hidden">{title}</h1>
 	<div class="screener" style:transform={`translateY(${screenerY}px)`}>
 		<div class="box rgap24 inscreen xcenter ybottom">
 			<div class="even-in box rgap24 xcenter" style:margin-bottom={`calc(${screenerY / 10}rem + 2rem)`}>
@@ -102,8 +103,7 @@
 </div>
 <Container>
 	<!-- ── INTRO ─────────────────────────────────────────── -->
-	<section class="wrapper-std tight-stack first-box">
-		<Crumb />
+	<section class="wrapper-std">
 		<div class="box rgap16" use:autoAnimate bind:this={revRef}>
 			<Reveal visible={revVis.visible}><p class="highlight-text col-span-full">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p></Reveal>
 			<Reveal visible={revVis.visible} delay={300}>
@@ -172,8 +172,8 @@
 	{#if testis && testis.length > 0}
 		<section class="wrapper-std growingline" id="testimonials">
 			<Title text="testimonials" anveshi={true} />
-			<div class="box rgap4">
-				<Mark fade pauseOnHover duration="200s" gap="4px">
+			<div class="box rgap1">
+				<Mark fade pauseOnHover duration="200s" gap="1px">
 					{#each testis as item}
 						<div class="testimonial box rgap8 p16 lg:p24">
 							<Quote />
@@ -182,7 +182,7 @@
 						</div>
 					{/each}
 				</Mark>
-				<Mark fade pauseOnHover reverse={true} duration="200s" gap="4px">
+				<Mark fade pauseOnHover reverse={true} duration="200s" gap="1px">
 					{#each testis as item, i}
 						{#if i > 3}
 							<div class="testimonial box rgap8 p32">
@@ -256,40 +256,39 @@
 				</ResponsiveMenu>
 			</div>
 			{#if futureproj && futureproj.length > 0 && isRegion[7]}
-				<Swipes slidesPerView={4} spaceBetween={4} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 8 }, 1024: { slidesPerView: 4, spaceBetween: 4 } }}>
+				<Swipes slidesPerView={4} spaceBetween={0} pagination={false} breakpoints={{ 0: { slidesPerView: 1, spaceBetween: 0 }, 1024: { slidesPerView: 4, spaceBetween: 0 } }}>
 					{#each futureproj as item}
 						<swiper-slide>
-							<div class="sub-item box rgap16 swiper-sub radius8 overflow-hidden">
-								<div class="p4"><img class="fitted landscape" src={item.gallery} alt={item.chapter} /></div>
-								<div class="box rgap8 px16 lg:px24">
-									<p class="txt-2xl w600 tt-c">{item.chapter}</p>
+							<div class="sub-item box rgap16 swiper-sub overflow-hidden">
+								<div><img class="fitted landscape" src={item.gallery} alt={item.chapter} /></div>
+								<div class="box rgap8 px24 lg:px32">
+									<div class="row ycenter cgap16">
+										<p class="source-serif txt-2xl w650 tt-c">{item.chapter}</p>
+										{#if item.regopen === true}
+											<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+										{/if}
+									</div>
 									<p class="txt-lg lh14 grey2 pbot8">{item.shortdesc}</p>
 								</div>
-								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
-									{#if item.regopen === true}
-										<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
-									{:else}
-										<p class="txt-xs w500 anveshi-o tt-u">{item.region}</p>
-									{/if}
-								</div>
+								<p class="txt-xs w500 anveshi-o tt-u pleft24 lg:pleft32 pbot24">{item.region}</p>
 							</div>
 						</swiper-slide>
 					{/each}
 				</Swipes>
 			{:else if !isRegion[7] && regionAnveshi && regionAnveshi.length > 0}
-				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap16" use:autoAnimate>
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 white-grid" use:autoAnimate>
 					{#each regionAnveshi as item, i}
-						<div class="sub-item box rgap16">
-							<div class="p8"><img class="fitted landscape" src={item.gallery} alt={item.chapter} /></div>
-							<div class="box p16 lg:p32 notop rgap8">
-								<p class="txt-2xl w600 tt-c">{item.chapter}</p>
-								<p class="txt-lg lh14 grey2 pbot8">{item.shortdesc}</p>
-							</div>
-							{#if item.regopen === true}
-								<div class="row self-bottom ycenter p16 lg:p24 cgap8 bordertop stonecard">
-									<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+						<div class="box whitecard">
+							<div><img class="fitted landscape" src={item.gallery} alt={item.chapter} /></div>
+								<div class="box rgap8 p24 lg:p32">
+									<div class="row ycenter cgap16">
+										<p class="source-serif txt-2xl w650 tt-c">{item.chapter}</p>
+										{#if item.regopen === true}
+											<a class="hollow-link anveshi" href="/anveshi{item.link}">Open Now <span class="button-text">→</span></a>
+										{/if}
+									</div>
+									<p class="txt-lg lh14 grey2 pbot8">{item.shortdesc}</p>
 								</div>
-							{/if}
 						</div>
 					{/each}
 				</div>
@@ -301,20 +300,20 @@
 	{#if pastproj && pastproj.length > 0}
 		<section class="wrapper-std growingline" id="past-chapters">
 			<Title text="past chapters" anveshi={true} />
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16" bind:this={scaleRef}>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid" bind:this={scaleRef}>
 				{#each pastproj as item, i}
 					<Scale visible={scaleVis.visible}>
 						{#if item.pageactive === true}
-							<div class="box past-grid-items blank b-main p4 radius8 whitestone">
-								<Lightbox><img class="fitted herocard radius4" src={item.gallery} alt={item.chapter} /></Lightbox>
-								<a class="box p16 rgap8" href="/anveshi{item.link}">
+							<div class="box past-grid-items blank whitestone">
+								<Lightbox><img class="fitted herocard" src={item.gallery} alt={item.chapter} /></Lightbox>
+								<a class="box p24 lg:p32 rgap8" href="/anveshi{item.link}">
 									<p class="txt-xl w500">{item.chapter}</p>
 									<span class="hollow-link anveshi-o">Explore <span class="button-text">→</span></span>
 								</a>
 							</div>
 						{:else}
-							<div class="box past-grid-items blank b-main p4 radius8 whitestone">
-								<Lightbox><img class="fitted herocard radius4" src={item.gallery} alt={item.chapter} /></Lightbox>
+							<div class="box past-grid-items blank whitestone">
+								<Lightbox><img class="fitted herocard" src={item.gallery} alt={item.chapter} /></Lightbox>
 								<div class="box p16">
 									<p class="txt-lg w500">{item.chapter}</p>
 								</div>
@@ -377,8 +376,6 @@
 
 .testimonial
 	background: var(--color-back)
-	border: var(--border-dark)
-	border-radius: 8px
 	height: 100%
 	width: 400px
 	transition: all 120ms ease
@@ -386,12 +383,13 @@
 		background: linear-gradient(154.4deg, #F8F7F4 6.75%, #F9F8F6 89.88%)
 	
 .sub-item
-	border: 1px solid var(--color-border-dark)
-	border-radius: 8px
 	background: var(--color-back)
-	&.swiper-sub
-		height: calc(100% - 2rem)
-		margin-bottom: 2rem
+	border-top: var(--border-main)
+	border-bottom: var(--border-main)
+	border-left: var(--border-main)
+	border-right: none
+	&:last-child
+		border-right: var(--border-main)
 
 swiper-slide
 	height: auto

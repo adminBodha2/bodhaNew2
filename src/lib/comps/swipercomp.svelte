@@ -141,13 +141,13 @@
 <style lang="sass">
 
 button.prev, button.next
-	border: 1px solid #d7d7d7
-	background: var(--color-stone-1)
+	border: none
 	font-size: 0.85rem
 	font-weight: 500
 	letter-spacing: 0.01rem
-	padding:  0.6em 1em 0.3em 1em
-	border-radius: 6px
+	padding: 0
+	background: var(--color-back)
+	border-radius: 64px
 	transition: background 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), color 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), border 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000), box-shadow 80ms cubic-bezier(0.390, 0.575, 0.565, 1.000)
 	transform-origin: center center
 	&:hover
@@ -159,7 +159,6 @@ button.prev, button.next
 
 .buttons-and-rule
 	width: 100%
-	margin-top: -1rem
 	@media (max-width: 1024px)
 		display: none
 
@@ -183,8 +182,6 @@ button.prev, button.next
 	width: min(100%, 1660px)
 	margin: 0 auto
 	overflow: hidden
-	padding-top: 1rem
-	padding-bottom: 1rem !important
 
 swiper-container
 	width: 100%
