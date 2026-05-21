@@ -29,19 +29,19 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} />
 
-<Container>
 	<Parallax imageLink={data.image} wipe={true} />
-	<section class="box wrapper-std first-box rgap32">
+<Container>
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} showRow={true}>
 			<div class="box">
 				<p class="grey">Vol. {data.volume}, Issue {data.issue} | {data.date}</p>
 			</div>
 		</Crumb>
+	<section class="wrapper-std">
 		<div class="width70 content-highlights">
 			<data.content />
 		</div>
 		<div class="box rgap8">
-			<p class="txt-lg theme">To receive the fortnightly issues in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
+			<p class="txt-lg">To receive the fortnightly issues in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
 		</div>
 		<div class="pdf-reader">
 			<PDFReader src={data.pdflink} title={data.title} height="82vh" />
