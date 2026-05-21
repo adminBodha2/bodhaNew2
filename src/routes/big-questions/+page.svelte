@@ -111,6 +111,7 @@
 .question-holder
 	.question-image
 		filter: saturate(1%)
+		transition: all 280ms ease-in
 	&:hover
 		.question-image
 			filter: saturate(100%)

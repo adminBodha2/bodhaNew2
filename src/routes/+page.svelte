@@ -207,6 +207,8 @@
 .verticals
 	position: relative
 	&:hover
+		img.fitted
+			filter: saturate(100%)
 		&::after
 			width: 100%
 			left: 0
@@ -220,6 +222,9 @@
 		border-radius: 8px
 		background: var(--color-theme)
 		transition: width 200ms ease
+	img.fitted
+		filter: saturate(1%)
+		transition: all 340ms ease-in-out
 
 // ── PUBLICATIONS ──────────────────────────────────────────
 
