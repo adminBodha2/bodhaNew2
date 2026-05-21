@@ -35,59 +35,64 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<Heading title={data.node.title} />
-	<div class="header-margin is-last">
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32 left">
-			<div class="labelbox sidebox">
-				<Crumb/>
-				<h2 class="card-title source-serif">{data.node.title}</h2>
-				<p class="tight rem1 grey">{data.node.description}</p>
-				{#if data.node.meta?.author?.length}
-					<p class="grey">By {data.node.meta.author.join(', ')}</p>
-				{/if}
-				{#if data.node.tags}
-					<div class="row ycenter wrap cgap8 rgap8 ptop8">
-						{#each data.node.tags as tag}
-							<a class="tag-pill accented tt-u" href="/tags/{tag}">{tag.replaceAll('-',' ')}</a>
-						{/each}
-					</div>
-				{/if}
-			</div>
-			<div class="box mainbox">
-				{#if data.concepts.length}
-					<div class="grid grid-cols-2 lg:grid-cols-3 white-grid">
-						{#each data.concepts as concept (concept.id)}
-							<a class="blank card-padded whitestone" href={conceptHref(concept)}>
-								<p class="w500">{concept.title}</p>
-							</a>
-						{/each}
-					</div>
-				{/if}
-{#if data.akVargas.length}
-  <p class="descriptor-text">Amarakosha Categories</p>
-  <div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
-    {#each data.akVargas as node (node.id)}
-      <p><a href={nodeHref(node)}>{node.title}</a></p>
-    {/each}
-  </div>
-{/if}
-				{#if data.related.length}
-					<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
-						{#each data.related as node (node.id)}
-							<p>
-								<a href={nodeHref(node)}>{node.title}</a>
-							</p>
-						{/each}
-					</div>
-				{/if}
-				{#if data.referencedBy.length}
-					<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
-						{#each data.referencedBy as node (node.id)}
-							<p><a href={nodeHref(node)}>{node.title}</a></p>
-						{/each}
-					</div>
-				{/if}
-			</div>
+	<section class="wrapper-std">
+		<Crumb showT={true} title={data.node.title} showD={true} desc={data.node.description} />
+		<div class="box rgap16">
+		<p class="highlight-text">WIP - under construction.</p>
+		<a class="theme txt-lg" href="/explorer">← Back to Explorer</a>
 		</div>
-	</div>
+	</section>
 </Container>
+
+<!--
+	<div class="box">
+		{#if data.node.meta?.author?.length}
+			<p class="grey">By {data.node.meta.author.join(', ')}</p>
+		{/if}
+		{#if data.node.tags}
+			<div class="row ycenter wrap cgap8 rgap8 ptop8">
+				{#each data.node.tags as tag}
+					<a class="tag-pill accented tt-u" href="/tags/{tag}">{tag.replaceAll('-',' ')}</a>
+				{/each}
+			</div>
+		{/if}
+	</div>
+	<div class="box mainbox">
+		{#if data.concepts.length}
+			<h4>Concepts</h4>
+			<div class="grid grid-cols-2 lg:grid-cols-3 white-grid">
+				{#each data.concepts as concept (concept.id)}
+					<a class="blank card-padded whitestone" href={conceptHref(concept)}>
+						<p class="w500">{concept.title}</p>
+					</a>
+				{/each}
+			</div>
+		{/if}
+		{#if data.akVargas.length}
+			<h4>Ama</h4>
+			<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
+				{#each data.akVargas as node (node.id)}
+					<p><a href={nodeHref(node)}>{node.title}</a></p>
+				{/each}
+			</div>
+		{/if}
+		{#if data.related.length}
+			<h4>Related</h4>
+			<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
+				{#each data.related as node (node.id)}
+					<p>
+						<a href={nodeHref(node)}>{node.title}</a>
+					</p>
+				{/each}
+			</div>
+		{/if}
+		{#if data.referencedBy.length}
+						<h4>Referenced</h4>
+			<div class="grid grid-cols-1 lg:grid-cols-3 cgap16 rgap16">
+				{#each data.referencedBy as node (node.id)}
+					<p><a href={nodeHref(node)}>{node.title}</a></p>
+				{/each}
+			</div>
+		{/if}
+	</div>
+-->

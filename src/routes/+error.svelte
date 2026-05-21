@@ -13,11 +13,11 @@
 
 <Container>
 	<section class="wrapper-std header-margin">
-		<div class="labelbox">
-			<p class="status sm">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
-			<p>If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>
+		<div class="box rgap16">
+			<p class="status highlight-text">{page.status} | Sorry, {page.error?.message ?? ''}!</p>
+			<p class="txt-lg">If you feel this link should exist, or to report a broken link in general, please write to us at <span class="w500">sitemaster@bodharesearch.in</span></p>
 			<div class="row cgap16 rgap16 mwrap ycenter pbot32">
-				<button class="blank" onclick={() => history.back()}><p class="blue">← Back to Previous Page</p></button>
+				<button class="blank" onclick={() => history.back()}><p class="theme txt-lg">← Back to Previous Page</p></button>
 			</div>
 			<img src="/images/error.gif" alt="error" />
 		</div>

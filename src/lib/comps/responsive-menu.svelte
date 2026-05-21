@@ -77,11 +77,14 @@
 
 <style lang="sass">
 
+.responsive-wrapper
+	@media (max-width: 1024px)
+		width: 100%
+
 .responsive-menu
 	border: var(--border-main)
 	position: relative
 	z-index: 20
-	width: max-content
 	border-radius: 4px
 	@media (max-width: 1024px)
 		width: 100%
@@ -89,6 +92,7 @@
 		border-radius: 0
 	@media (min-width: 1025px)
 		overflow: hidden
+		width: max-content
 
 .responsive-menu__trigger
 	width: 100%
@@ -107,30 +111,47 @@
 		display: none
 
 .responsive-menu__items
-	display: none
-	transition: all 250ms ease
+	position: absolute
+	top: calc(100% + 0.45rem)
+	left: 0
+	right: 0
+	z-index: 24
+	display: flex
+	flex-direction: column
+	gap: 0.5rem
+	padding: 1rem 0.5rem
+	border-radius: 2px
+	background: var(--color-back)
+	border: var(--border-dark)
+	box-shadow: 2px 4px 8px rgba(0,0,0,0.2)
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+	transform: translateY(-0.35rem) scale(0.98)
+	transform-origin: top center
+	transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms
+	will-change: opacity, transform
 	&.open
-		position: absolute
-		top: calc(100% + 0.45rem)
-		left: 0
-		right: 0
-		z-index: 24
-		display: flex
-		flex-direction: column
-		gap: 0
-		padding: 1rem 0.5rem
-		border-radius: 6px
-		background: var(--color-back)
-		border: var(--border-darker)
-		box-shadow: 2px 4px 8px rgba(0,0,0,0.2)
-		transition: all 250ms ease
+		opacity: 1
+		visibility: visible
+		pointer-events: auto
+		transform: translateY(0) scale(1)
+		transition-delay: 0s
 	@media (min-width: 1025px)
 		position: static
 		display: flex
 		flex-direction: row
 		align-items: center
 		gap: 1px
+		padding: 0
 		background: var(--color-border)
+		border: none
+		box-shadow: none
+		opacity: 1
+		visibility: visible
+		pointer-events: auto
+		transform: none
+		transition: none
 		&.open
 			position: static
 			display: flex
