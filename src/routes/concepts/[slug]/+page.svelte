@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageProps } from './$types';
 	import { page } from '$app/state';
-	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Responsive from '$lib/comps/responsive-menu.svelte'
@@ -9,7 +8,7 @@
 	import { slide } from 'svelte/transition'
 	import { quartInOut, quintOut } from 'svelte/easing'
 
-	let { data }: { data: PageData } = $props();
+	let { data }: PageProps = $props();
 
 	const groups = $derived([
 		{ label: 'Essays', items: data.grouped.blogs },
@@ -41,10 +40,10 @@
 				description: metaDescription,
 				url: metaUrl,
 				image: metaImage,
-				items: data.relatedNodes.map((item) => ({
-					name: item.node.title,
-					description: item.node.description,
-					url: item.href
+		items: data.relatedNodes.map((item) => ({
+					name: item.title,
+					description: item.description,
+					url: item.meta?.route ?? metaUrl
 				}))
 			})
 		)
@@ -53,47 +52,45 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<Container graphing={true}>
-	<section class="box wrapper-std header-margin rgap32">
-		<Crumb showT={true} title={data.concept.title} showRow={true}>
-		<p class="grey">{data.conceptTree.length} subdomains nested under this concept, connecting to {data.count} nodes.  All concept items in knowledge base here.</p>
-		</Crumb>
-		<Responsive>
-			{#each groups as group, i}
-				<button class="selection-button" class:active={isItem=== i} onclick={() => toggleIsItem(i)}>{group.label}</button>
-			{/each}
-		</Responsive>
-		<div class="box containing-graph">
-				{#each groups as group, i (group.label)}
-					{#if i === isItem}
-						<div class="grid lg:grid-cols-3 xl:grid-cols-4 b-main radius" id="node-grid">
-							{#each group.items as item, j (item.node.id)}
-								<div class="number box">
-								<a
-									class="blank box p16 lg:p32 rgap8"
-									href={item.href}
-									target={item.isExternal ? '_blank' : undefined}
-									rel={item.isExternal ? 'noreferrer' : undefined}
-									in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
-								>
-									<p class="paragraph-text w600 tight">{item.node.title}</p>
-									{#if item.node.description}
-										<p class="grey tight">{item.node.description}</p>
-									{/if}
-								</a>
-									<div class="row cgap4 rgap4 wrap ycenter self-bottom bordertop pleft16 lg:pleft32 ptop16 pbot16 tags">
-										{#each item.node.tags as tag}
-											<a class="tag-pill hollow tt-u" href="/concepts/{tag}">{tag.replaceAll('-',' ')}</a>
-										{/each}
-									</div>
-								</div>
-							{/each}
+<section class="box wrapper-std header-margin rgap32">
+	<Crumb showT={true} title={data.concept.title} showRow={true}>
+		<p class="grey">{data.count} nodes connected to this wiki domain.</p>
+	</Crumb>
+	<Responsive>
+		{#each groups as group, i}
+			<button class="selection-button" class:active={isItem=== i} onclick={() => toggleIsItem(i)}>{group.label}</button>
+		{/each}
+	</Responsive>
+	<div class="box containing-graph">
+		{#each groups as group, i (group.label)}
+			{#if i === isItem}
+				<div class="grid lg:grid-cols-3 xl:grid-cols-4 b-main radius" id="node-grid">
+					{#each group.items as item, j (item.id)}
+						<div class="number box">
+							<a
+								class="blank box p16 lg:p32 rgap8"
+								href={item.href}
+								target={item.isExternal ? '_blank' : undefined}
+								rel={item.isExternal ? 'noreferrer' : undefined}
+								in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
+							>
+								<p class="paragraph-text w600 tight">{item.title}</p>
+								{#if item.description}
+									<p class="grey tight">{item.description}</p>
+								{/if}
+							</a>
+							<div class="row cgap4 rgap4 wrap ycenter self-bottom bordertop pleft16 lg:pleft32 ptop16 pbot16 tags">
+								{#each item.tags as tag}
+									<a class="tag-pill hollow tt-u" href="/concepts/{tag}">{tag.replaceAll('-',' ')}</a>
+								{/each}
+							</div>
 						</div>
-					{/if}
-				{/each}
-			</div>
-	</section>
-</Container>
+					{/each}
+				</div>
+			{/if}
+		{/each}
+	</div>
+</section>
 
 <style lang="sass">
 

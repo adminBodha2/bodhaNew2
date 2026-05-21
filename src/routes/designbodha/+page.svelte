@@ -4,17 +4,24 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
+	import Blur from '$lib/svelteanim/components/Blur.svelte';
+	import { useInView } from '$lib/svelteanim';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	let iW = $state(0);
 	let sY = $state(0);
+	let ref = $state<HTMLElement | null>(null);
+	let ref2 = $state<HTMLElement | null>(null);
+	let vis = useInView(() => ref, { threshold: 0.7, once: true });
+	let vis2 = useInView(() => ref2, { threshold: 0.7, once: true });
 
-	let imageLink = $state('/images/designbodha/key-desbodha.webp');
+	let imageLink = $state('/images/heroes/key-designbodha.webp');
 
 	const title = 'designBodha | Dharmic Design, Regenerative Creation, and Hindu Ethics';
 	const metaDescription = 'designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines.';
 	const metaUrl = absoluteUrl('/designbodha');
-	const metaImage = absoluteImage('/images/designbodha/key-desbodha.webp');
+	const metaImage = absoluteImage('/images/heroes/key-designbodha.webp');
 
 	const jsonld = stringifyJsonLd(
 		webPageJsonLd({
@@ -28,9 +35,9 @@
 
 	$effect(() => {
 		if (iW < 1025) {
-			imageLink = '/images/designbodha/key-desbodha-mb.webp';
+			imageLink = '/images/heroes/key-designbodha.webp';
 		} else if (iW > 1024) {
-			imageLink = '/images/designbodha/key-desbodha.webp';
+			imageLink = '/images/heroes/key-designbodha.webp';
 		}
 	});
 </script>
@@ -39,54 +46,60 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
+<Parallax {imageLink} wipe={true} />
 <Container>
-	<Parallax {imageLink} wipe={true} />
+	<Crumb showT={true} title="designBodha" showD={true} desc="designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines." />
 	<section class="wrapper-std">
-		<Crumb showT={false} showD={false} />
-		<h1 class="txt-8xl w600 anim-flyup"><span class="desb">design</span>Bodha</h1>
-		<p class="highlight-text">an initiative for <span class="desb2">dharmic design</span> - ethical, harmonious and regenerative creation across disciplines.</p>
 		<img class="motif anim-flyin-right" style="margin-left: 200px;transform: translateX(-{sY / 7}px) rotate({sY / 2}deg)" src="/images/designbodha/desbodha-motif.webp" alt="designBodha motif" />
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
-			<div class="box rgap16">
-				<p class="highlight-text">
-					In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -
-				</p>
-				<p class="highlight-text">
-					<i>"together creating a world that as individuals none of us would choose."</i>
-				</p>
-			</div>
-			<div class="box rgap16">
-				<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
-				<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
-				<a class="primary desb" href="/designbodha/whitepaper-on-dharmic-design"><span>Whitepaper on Dharmic Design</span></a>
-			</div>
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16" bind:this={ref}>
+			<Reveal visible={vis.visible} duration={500} delay={100}>
+				<div class="box rgap16">
+					<p class="highlight-text">
+						In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -
+					</p>
+					<p class="highlight-text">
+						<i>"together creating a world that as individuals none of us would choose."</i>
+					</p>
+				</div>
+			</Reveal>
+			<Reveal visible={vis.visible} duration={500} delay={400}>
+				<div class="box rgap16">
+					<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
+					<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
+					<a class="primary desb" href="/designbodha/monograph-on-dharmic-design"><span>Monograph on Dharmic Design</span></a>
+				</div>
+			</Reveal>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="project objectives" />
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap24">
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap24" bind:this={ref2}>
 			<div class="box rgap16">
-				<p class="txt-2xl lg:txt-3xl w500">
-					Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
-					is creatorship grounded in Hindu metaphysics.<br />
-					It redefines <span class="desb">design as a sacred act</span><br />
-					of aligning human creation with the cosmic order.
-				</p>
+				<Reveal visible={vis2.visible} duration={600}>
+					<p class="txt-2xl lg:txt-3xl w500">
+						Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
+						is creatorship grounded in Hindu metaphysics.<br />
+						It redefines <span class="desb">design as a sacred act</span><br />
+						of aligning human creation with the cosmic order.
+					</p>
+				</Reveal>
+				<Reveal visible={vis2.visible} duration={400} delay={600}>
+					<p class="highlight-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
+				</Reveal>
 			</div>
-			<div class="box rgap16">
-				<p class="highlight-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
-			</div>
-		</div>
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap32 rgap32">
-			<div class="box rgap16">
-				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2" />
-				<p class="txt-xl w600">Phase 1 - Foundation and Taxonomy</p>
-				<p class="txt-lg grey1 lh14">Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.</p>
-			</div>
-			<div class="box rgap16">
-				<img class="motif2" src="/images/designbodha/desb-motif2.webp" alt="motif2" />
-				<p class="txt-xl w600">Phase 2 - Framework Toolkits</p>
-				<p class="txt-lg grey1 lh14">Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.</p>
+			<div class="grid grid-cols-1 white-grid">
+				<Blur visible={vis2.visible} delay={1300}>
+				<div class="box rgap16 whitecard p24 lg:p32">
+					<p class="txt-xl w600">Phase 1 - Foundation and Taxonomy</p>
+					<p class="txt-lg grey1 lh14">Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.</p>
+				</div>
+				</Blur>
+				<Blur visible={vis2.visible} delay={1500}>
+				<div class="box rgap16 whitecard p24 lg:p32">
+					<p class="txt-xl w600">Phase 2 - Framework Toolkits</p>
+					<p class="txt-lg grey1 lh14">Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.</p>
+				</div>
+				</Blur>
 			</div>
 		</div>
 	</section>
@@ -94,79 +107,13 @@
 
 <style lang="sass">
 
-img.motif2
-	object-fit: contain
-	height: 80px
-	width: 80px
-	box-shadow: 3px 2px 5px rgba(0,0,0,0.2)
-	border-radius: 40px
-	transform-origin: center center
-	transition: box-shadow 900ms ease
-	&:hover
-		box-shadow: 0 0 0 rgba(0,0,0,0)
-		animation: theRotate 900ms infinite alternate
-
-@keyframes theRotate
-	0%
-		transform: rotate(0deg)
-	100%
-		transform: rotate(360deg)
-
-@keyframes lateMover
-	0%
-		opacity: 0
-		transform: translateX(200px) translateY(-100px)
-	100%
-		opacity: 1
-		transform: translateX(0) translateY(0)
-
-@keyframes delayIn
-	0%
-		opacity: 0
-		transform: translateX(0)
-	100%
-		opacity: 1
-		transform: translateX(200px)
-
-@keyframes fadeIn
-	0%
-		opacity: 0
-		transform: translateY(250px) translateX(-100px)
-	100%
-		opacity: 1
-		transform: translateY(50px) translateX(-24px)
-
-@keyframes flyInRight
-	0%
-		opacity: 0
-		transform: translateX(-200px)
-	60%
-		opacity: 1
-		transform: translateX(200px)
-	100%
-		opacity: 0
-		transform: translateX(400px)
-
 img.motif
 	object-fit: contain
 	width: 128px
 	height: 128px
 	transform-origin: center center
-
-.anim-flyup
-	@media screen and (min-width: 1025px)
-		animation: headFlyUp 800ms
-		animation-timeline: view()
-
-@keyframes headFlyUp
-	0%
-		opacity: 0
-		transform: translateY(160px)
-	90%
-		opacity: 1
-		transform: translateY(30px)
-	100%
-		opacity: 1
-		transform: translateY(0)
+	@media (max-width: 1024px)
+		width: 88px
+		height: 88px
 
 </style>

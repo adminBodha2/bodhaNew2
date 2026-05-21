@@ -4,8 +4,7 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import KnowledgeGraph from '$lib/comps/knowledgegraph.svelte';
-	import { fly } from 'svelte/transition'
+	import WikiGraph from '$lib/comps/wikigraph.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -30,7 +29,7 @@
 <Container>
 <div class="header-margin is-last thisbox">
 	<Crumb showT={true} title="Graph Explore" showD={true} desc="Trace how essays, questions, thinkers, schools, books, and concepts pull on each other. Select a node to follow its nearby constellation."/>
-	<KnowledgeGraph nodes={data.graph.nodes} edges={data.graph.edges} />
+	<WikiGraph nodes={data.graph.nodes} edges={data.graph.edges} />
 </div>
 </Container>
 </div>

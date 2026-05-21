@@ -47,28 +47,26 @@
 />
 
 <Container>
-	<section class="box wrapper-std header-margin rgap32">
-		<Crumb showT={true} title="Contact Us"/>
-	<div class="box rgap16">
-		<p class="paragraph-text">
+	<section class="wrapper-std">
+<Crumb showT={true} title="Contact Us" thinBot={true}/>
+		<p class="highlight-text">
 			Write to us at <span class="blue">contact@bodharesearch.in</span><br />
 			or, reach out on social media-
 		</p>
 		<div class="row cgap16 ycenter">
 			<a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-				<Twitter size="24" color={'var(--color-alt'} />
+				<Twitter size="24" color={'var(--color-theme-dark'} />
 			</a>
 			<a class="blank" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-				<FB size="24" color={'var(--color-alt'} />
+				<FB size="24" color={'var(--color-theme-dark'} />
 			</a>
 			<a class="blank" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-				<Insta size="24" color={'var(--color-alt'} />
+				<Insta size="24" color={'var(--color-theme-dark'} />
 			</a>
 			<a class="blank" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-				<Linkedin size="24" color={'var(--color-alt'} />
+				<Linkedin size="24" color={'var(--color-theme-dark'} />
 			</a>
 		</div>
-		<p class="paragraph-text">For queries on website, to report bugs/broken links etc., please write to sitemaster@bodharesearch.in</p>
-	</div>
+		<p class="highlight-text">For queries on website, to report bugs/broken links etc., please write to sitemaster@bodharesearch.in</p>
 	</section>
 </Container>

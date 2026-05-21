@@ -16,10 +16,11 @@
 		fullP?: boolean;
 		onblog?: boolean;
 		isSolo?:boolean;
+		thinBot?:boolean;
 		children?: Snippet;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, onblog = false, desc = ' ', centered = false, isSolo=false, serifed = true, fullP = false, children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, onblog = false, desc = ' ', centered = false, isSolo=false, serifed = true, thinBot = false, fullP = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -29,7 +30,7 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box crumb-outer" class:isSolo={isSolo} class:onblog class:fullP class:xcenter={centered}>
+<div class="box crumb-outer" class:isSolo={isSolo} class:onblog class:fullP class:xcenter={centered} class:thinBot={thinBot}>
 	<!-----adds page title as h1 tag for seo and semantic markup. automatically added if showT is false. defined by title on pages----->
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
@@ -98,6 +99,8 @@ h1
 	&.isSolo
 		padding-bottom: 0
 		padding-top: 2rem
+	&.thinBot
+		padding-bottom: 2rem
 	@media (min-width: 1025px)
 		padding-bottom: 5rem
 		padding-top: 4rem
@@ -108,6 +111,8 @@ h1
 		&.isSolo
 			padding-bottom: 0
 			padding-top: 1rem
+		&.thinBot
+			padding-bottom: 2rem
 
 .divider
 	font-size: 0.5rem

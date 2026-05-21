@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-	import type { GraphEdge, GraphNode } from '$lib/noder/graph';
+	import type { WikiGraphEdge, WikiGraphNode } from '$lib/wiki-graph';
 
 	type WikiNodeType = 'domain' | 'wiki' | 'thinker' | 'school' | 'question' | 'project' | 'blog' | 'book' | 'external-article' | 'lab' | 'concept';
 
@@ -8,11 +8,11 @@
 		id: string;
 		source: string | GraphPoint;
 		target: string | GraphPoint;
-		type: GraphEdge['type'];
-		meta: GraphEdge['meta'] & { semantic?: string; notes?: string };
+		type: WikiGraphEdge['type'];
+		meta: WikiGraphEdge['meta'];
 	};
 
-	type GraphPoint = GraphNode & {
+	type GraphPoint = WikiGraphNode & {
 		degree: number;
 		neighbors: Set<string>;
 		x?: number;
@@ -55,13 +55,14 @@
 	};
 
 	type Props = {
-		nodes: GraphNode[];
-		edges: GraphEdge[];
+		nodes: WikiGraphNode[];
+		edges: WikiGraphEdge[];
 		maxNodes?: number;
 		maxLinks?: number;
+		layout?: 'overlay' | 'split';
 	};
 
-	let { nodes, edges, maxNodes = 300, maxLinks = 1400 }: Props = $props();
+	let { nodes, edges, maxNodes = 300, maxLinks = 1400, layout = 'overlay' }: Props = $props();
 
 	// ── Colours ────────────────────────────────────────────────────────────────
 	const colorByType: Record<string, string> = {
@@ -392,7 +393,7 @@
 	});
 </script>
 
-<section class="wiki-graph" aria-label="Bodha knowledge graph">
+<section class="wiki-graph" class:split={layout === 'split'} aria-label="Bodha knowledge graph">
 	<div class="graph-shell">
 		<div class="graph-toolbar row mcol ycenter">
 			<label class="search-control">
@@ -411,63 +412,63 @@
 		</div>
 		<div class="graph-stage">
 			<div class="graph-canvas" bind:this={graphEl}></div>
-			<aside class="node-panel box">
-				{#if selectedNode}
-					<p class="txt-xs tt-u grey0 w500 pbot8">{typeLabel(selectedNode.type)}</p>
-					<h3 class="txt-lg w600 pbot8">{selectedNode.title}</h3>
-					{#if selectedNode.description}
-						<p class="grey1 pbot8">{selectedNode.description}</p>
-					{/if}
-					{#if (selectedNode.meta as Record<string, unknown>)?.domain}
-						<p class="txt-00 tt-u w500 theme">Domain: <span>{(selectedNode.meta as Record<string, unknown>).domain as string}</span></p>
-					{/if}
-					{#if (selectedNode.meta as Record<string, unknown>)?.lens}
-						<p class="txt-00 tt-u w500 theme">Lens: <span>{(selectedNode.meta as Record<string, unknown>).lens as string}</span></p>
-					{/if}
-					{#if selectedEdges.length}
-						<div class="edge-list box rgap16">
-							{#each selectedEdges as edge}
-								<div class="edge-item">
-									<span class="txt-00 tt-u w500 grey0">{edge.label}</span>
-									<button
-										class="edge-target"
-										onclick={() => {
-											const n = indexes.pointById.get(edge.otherId);
-											if (n) selectNode(n);
-										}}>
-										<i class="dot sm" style="--c: {colorByType[edge.otherType] ?? '#999'}"></i>
-										<p class="txt-bs">{edge.otherTitle}</p>
-									</button>
-									{#if edge.notes}
-										<p class="edge-notes">{edge.notes}</p>
-									{/if}
-								</div>
-							{/each}
-						</div>
-					{/if}
-					<div class="panel-actions">
-						{#if nodeHref(selectedNode)}
-							<a href={nodeHref(selectedNode)} class="btn-primary">Open</a>
-						{/if}
-						<button class="btn-secondary" onclick={() => (selectedId = null)}>Clear</button>
-						<button class="btn-secondary" onclick={resetView}>Reset</button>
-					</div>
-				{:else}
-					<p class="txt-xs tt-u grey0 pbot8">Knowledge map</p>
-					<p class="txt-lg w600 pbot8">Click any node to explore</p>
-					<p class="grey1">13 domain hubs connect {nodes.length} nodes across thinkers, schools, questions, research, and the wiki.</p>
-					<div class="top-list">
-						{#each topNodes as node}
-							<button class="top-node-btn" onclick={() => selectNode(node)}>
-								<i class="dot" style="--c: {colorByType[node.type] ?? '#999'}"></i>
-								<span>{node.title}</span>
-								<small>{Math.round(node.degree)} links</small>
-							</button>
+		</div>
+		<aside class="node-panel box">
+			{#if selectedNode}
+				<p class="txt-xs tt-u grey0 w500 pbot8">{typeLabel(selectedNode.type)}</p>
+				<h3 class="txt-lg w600 pbot8">{selectedNode.title}</h3>
+				{#if selectedNode.description}
+					<p class="grey1 pbot8">{selectedNode.description}</p>
+				{/if}
+				{#if (selectedNode.meta as Record<string, unknown>)?.domain}
+					<p class="txt-00 tt-u w500 theme">Domain: <span>{(selectedNode.meta as Record<string, unknown>).domain as string}</span></p>
+				{/if}
+				{#if (selectedNode.meta as Record<string, unknown>)?.lens}
+					<p class="txt-00 tt-u w500 theme">Lens: <span>{(selectedNode.meta as Record<string, unknown>).lens as string}</span></p>
+				{/if}
+				{#if selectedEdges.length}
+					<div class="edge-list box rgap16">
+						{#each selectedEdges as edge}
+							<div class="edge-item">
+								<span class="txt-00 tt-u w500 grey0">{edge.label}</span>
+								<button
+									class="edge-target"
+									onclick={() => {
+										const n = indexes.pointById.get(edge.otherId);
+										if (n) selectNode(n);
+									}}>
+									<i class="dot sm" style="--c: {colorByType[edge.otherType] ?? '#999'}"></i>
+									<p class="txt-bs">{edge.otherTitle}</p>
+								</button>
+								{#if edge.notes}
+									<p class="edge-notes">{edge.notes}</p>
+								{/if}
+							</div>
 						{/each}
 					</div>
 				{/if}
-			</aside>
-		</div>
+				<div class="panel-actions">
+					{#if nodeHref(selectedNode)}
+						<a href={nodeHref(selectedNode)} class="btn-primary">Open</a>
+					{/if}
+					<button class="btn-secondary" onclick={() => (selectedId = null)}>Clear</button>
+					<button class="btn-secondary" onclick={resetView}>Reset</button>
+				</div>
+			{:else}
+				<p class="txt-xs tt-u grey0 pbot8">Knowledge map</p>
+				<p class="txt-lg w600 pbot8">Click any node to explore</p>
+				<p class="grey1">13 domain hubs connect {nodes.length} nodes across thinkers, schools, questions, research, and the wiki.</p>
+				<div class="top-list">
+					{#each topNodes as node}
+						<button class="top-node-btn" onclick={() => selectNode(node)}>
+							<i class="dot" style="--c: {colorByType[node.type] ?? '#999'}"></i>
+							<span>{node.title}</span>
+							<small>{Math.round(node.degree)} links</small>
+						</button>
+					{/each}
+				</div>
+			{/if}
+		</aside>
 		<div class="graph-footer">
 			<div class="legend">
 				{#each filterTypes.filter((f) => f.value !== 'all') as f}
@@ -492,6 +493,7 @@
 	display: grid
 
 .graph-shell
+	position: relative
 	border: var(--border-main)
 	border-radius: 8px
 	overflow: hidden
@@ -560,10 +562,10 @@
 .node-panel
 	position: absolute
 	right: 14px
-	top: 14px
+	top: 78px
 	z-index: 2
 	width: min(340px, calc(100% - 28px))
-	max-height: calc(100% - 28px)
+	max-height: calc(100% - 92px)
 	overflow-y: auto
 	border: 1px solid rgba(7,7,7,0.09)
 	border-radius: 8px
@@ -577,6 +579,60 @@
 		width: auto
 		max-height: none
 		margin: 0 12px 12px
+
+.wiki-graph.split
+	.graph-shell
+		display: grid
+		grid-template-columns: minmax(0, 1fr) minmax(300px, 380px)
+		grid-template-rows: auto minmax(0, 1fr) auto
+		align-items: stretch
+		height: clamp(620px, calc(100vh - 180px), 820px)
+		background-image: none
+	.graph-toolbar
+		grid-column: 1
+		grid-row: 1
+	.graph-stage
+		grid-column: 1
+		grid-row: 2
+		min-height: 0
+		border-right: var(--border-main)
+	.graph-canvas
+		height: 100%
+	.node-panel
+		position: static
+		grid-column: 2
+		grid-row: 1 / 4
+		z-index: 1
+		width: auto
+		min-height: 0
+		max-height: 100%
+		overflow-y: auto
+		border: none
+		border-radius: 0
+		box-shadow: none
+		background: var(--color-back)
+		backdrop-filter: none
+		padding: 32px
+	.graph-footer
+		grid-column: 1
+		grid-row: 3
+		border-right: var(--border-main)
+	@media (max-width: 900px)
+		.graph-shell
+			display: block
+			height: auto
+		.graph-stage
+			min-height: auto
+			border-right: none
+		.graph-canvas
+			height: 540px
+		.node-panel
+			border-top: var(--border-main)
+			min-height: 0
+			max-height: min(520px, 70vh)
+			padding: 18px
+		.graph-footer
+			border-right: none
 
 .edge-list
 	margin-top: 14px

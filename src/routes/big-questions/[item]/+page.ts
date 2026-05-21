@@ -1,6 +1,6 @@
 import { allQuestions } from '$lib/utils/localpulls';
 import researchPaths from '$lib/serving/research-paths.json';
-import { getNodeByRoute, getConceptsForNode, getNode } from '$lib/graph';
+import { getNode, getNodeByRoute, nodeHref } from '$lib/wiki-graph';
 
 export async function load({ params }: { params: { item: string } }) {
 	const post = await import(`../${params.item}.md`);
@@ -9,9 +9,6 @@ export async function load({ params }: { params: { item: string } }) {
 	const questions = await allQuestions();
 	const graphRoute = `/big-questions/${params.item}`;
 	const graphNode = getNodeByRoute(graphRoute);
-	const concepts = graphNode
-		? getConceptsForNode(graphNode.id)
-  		: [];
 	const researchPath = researchPaths.find((path) => {
 		return path.id === params.item || path.questionNodeId === graphNode?.id;
 	});
@@ -24,8 +21,8 @@ export async function load({ params }: { params: { item: string } }) {
 			return {
 				nodeId: step.nodeId,
 				note: step.note,
-				href: node.meta.route || `/explorer/${encodeURIComponent(node.id)}`,
-				isExternal: node.meta.route?.startsWith('http') ?? false,
+				href: nodeHref(node),
+				isExternal: nodeHref(node).startsWith('http'),
 				node
 			};
 		})
@@ -41,7 +38,6 @@ export async function load({ params }: { params: { item: string } }) {
 		description,
 		tags,
 		questions,
-		concepts,
 		researchPath,
 		linkedNodes
 	};

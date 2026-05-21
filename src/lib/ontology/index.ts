@@ -1,8 +1,14 @@
 import nodeVargaMap from '$lib/ontology/node-varga-map.json';
-import { getNode, getOutgoing, nodeById, nodes } from '$lib/graph';
-import type { GraphNode, NodeType } from '$lib/noder/graph';
+import { getNode, nodeHref, type WikiGraphNode } from '$lib/wiki-graph';
 
 type NodeVargaMap = {
+	vargas: Array<{
+		slug: string;
+		label: string;
+		devanagari?: string;
+		iast?: string;
+		description: string;
+	}>;
 	byVarga: Record<string, string[]>;
 	mappings: Array<{
 		nodeId: string;
@@ -16,19 +22,8 @@ type NodeVargaMap = {
 
 const explicitVargaMap = nodeVargaMap as NodeVargaMap;
 
-const contentTypes = new Set<NodeType>([
-	'blog',
-	'question',
-	'project',
-	'thinker',
-	'school',
-	'lab',
-	'external-article',
-	'book'
-]);
-
 export interface OntologyNode {
-	node: GraphNode;
+	node: WikiGraphNode;
 	href: string;
 	isExternal: boolean;
 	classification: {
@@ -38,18 +33,10 @@ export interface OntologyNode {
 }
 
 export interface OntologyVarga {
-	varga: GraphNode;
-	concepts: GraphNode[];
+	varga: WikiGraphNode;
+	concepts: WikiGraphNode[];
 	content: OntologyNode[];
 	counts: Record<string, number>;
-}
-
-export function nodeHref(node: GraphNode) {
-	return node.meta.route || `/explorer/${encodeURIComponent(node.id)}`;
-}
-
-export function isExternalNode(node: GraphNode) {
-	return nodeHref(node).startsWith('http');
 }
 
 function sortByTitle<T extends { title: string }>(items: T[]) {
@@ -65,29 +52,44 @@ function sortOntologyNodes(items: OntologyNode[]) {
 	});
 }
 
+function vargaNode(varga: NodeVargaMap['vargas'][number]): WikiGraphNode {
+	return {
+		id: `ak-varga:${varga.slug}`,
+		type: 'wiki',
+		title: varga.label,
+		slug: varga.slug,
+		description: varga.description,
+		tags: [],
+		meta: {
+			source: 'node-varga-map',
+			route: `/ontology/${varga.slug}`
+		}
+	};
+}
+
 export function getAkVargas() {
-	return sortByTitle(nodes.filter((node) => node.type === 'ak-varga'));
+	return sortByTitle(explicitVargaMap.vargas.map(vargaNode));
 }
 
 export function getOntologyVarga(slug: string): OntologyVarga | undefined {
-	const varga = getNode(`ak-varga:${slug}`);
-	if (!varga || varga.type !== 'ak-varga') return undefined;
+	const varga = explicitVargaMap.vargas.find((item) => item.slug === slug);
+	if (!varga) return undefined;
 
-	const concepts = getOutgoing(varga.id)
-		.map((edge) => nodeById.get(edge.to))
-		.filter((node): node is GraphNode => !!node && node.type === 'concept');
 	const content = sortOntologyNodes(
 		(explicitVargaMap.byVarga[slug] || [])
 			.map((nodeId: string) => {
 				const node = getNode(nodeId);
-				if (!node || !contentTypes.has(node.type)) return null;
+				if (!node) return null;
+
 				const mapping = explicitVargaMap.mappings.find((item) => item.nodeId === node.id);
 				const classification = mapping?.vargas.find((entry) => entry.slug === slug);
 				if (!classification) return null;
+
+				const href = nodeHref(node);
 				return {
 					node,
-					href: nodeHref(node),
-					isExternal: isExternalNode(node),
+					href,
+					isExternal: href.startsWith('http'),
 					classification: {
 						confidence: classification.confidence,
 						reason: classification.reason
@@ -102,8 +104,8 @@ export function getOntologyVarga(slug: string): OntologyVarga | undefined {
 	}, {});
 
 	return {
-		varga,
-		concepts: sortByTitle(concepts),
+		varga: vargaNode(varga),
+		concepts: [],
 		content,
 		counts
 	};

@@ -42,7 +42,7 @@
 				<Crumb/>
 				<h2 class="card-title source-serif">{data.node.title}</h2>
 				<p class="tight rem1 grey">{data.node.description}</p>
-				{#if data.node.meta.author?.length}
+				{#if data.node.meta?.author?.length}
 					<p class="grey">By {data.node.meta.author.join(', ')}</p>
 				{/if}
 				{#if data.node.tags}
@@ -76,9 +76,6 @@
 						{#each data.related as node (node.id)}
 							<p>
 								<a href={nodeHref(node)}>{node.title}</a>
-								{#if node.type === 'ak-varga'}
-									<span class="descriptor-text grey">(Amarakosha)</span>
-								{/if}
 							</p>
 						{/each}
 					</div>

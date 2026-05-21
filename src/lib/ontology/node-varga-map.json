@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-04-28T18:18:42.855Z",
-  "source": "/Users/amrit/Downloads/nodes.json",
+  "source": "src/lib/data/wiki-graph.json",
   "method": "deterministic-keyword-first-pass",
   "note": "First-pass Amarakosha varga classification. Review confidence and reason fields before treating as canonical.",
   "vargas": [

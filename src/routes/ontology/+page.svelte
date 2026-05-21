@@ -59,7 +59,7 @@
 						</p>
 					{/if}
 					<div class="row wrap ycenter cgap8 rgap8 self-bottom">
-						<p class="tag-pill tt-u hollow themed dead">{item.varga.tags.length} concepts</p>
+						<p class="tag-pill tt-u hollow themed dead">{item.varga.tags?.length ?? 0} concepts</p>
 						<p class="tag-pill tt-u hollow themed dead">{item.content.length} nodes</p>
 					</div>
 				</a>

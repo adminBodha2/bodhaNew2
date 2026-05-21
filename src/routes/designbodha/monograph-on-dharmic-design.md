@@ -1,13 +1,13 @@
 ---
-title: Whitepaper on Dharmic Design
+title: Monograph on Dharmic Design
 id: 1
-description: "A whitepaper proposing Dharmic Design as an ethical, cosmic alternative to modern design centered only on convenience."
+description: "A monograph proposing Dharmic Design as an ethical, cosmic alternative to modern design centered only on convenience."
 image: /images/designbodha/db5.webp
 ---
 
 The contemporary global landscape is characterized by a deepening *crisis of design* - a systemic failure born of reductionist, linear, and utilitarian paradigms. While the industrial and digital revolutions have yielded unprecedented technical efficiency, they have simultaneously birthed a triad of existential threats - ecological collapse, driven by an extractive logic; digital toxicity, fueled by manipulative engagement metrics that prioritize profit over cognitive health; and a profound ontological alienation, where the built environment and digital interfaces are decoupled from the human spirit and natural order.
 
-This whitepaper asserts that modern design, in its obsession with anthropocentric convenience, has lost its ethical and cosmic tether. To rectify this, we propose a shift toward Dharmic Design. Rooted in the philosophical pillars of Ṛta (cosmic order) and Dharma (ethical duty), Dharmic Design offers a sophisticated, non-Western framework for innovation. By transitioning from design as an act of control to design as an act of alignment, we can move beyond mere sustainability toward a regenerative, "satvik" future. This whitepaper outlines the philosophical bedrock, historical precedents, and actionable methodologies required to operationalize dharma as a universal design standard for the 21st century.
+This monograph asserts that modern design, in its obsession with anthropocentric convenience, has lost its ethical and cosmic tether. To rectify this, we propose a shift toward Dharmic Design. Rooted in the philosophical pillars of Ṛta (cosmic order) and Dharma (ethical duty), Dharmic Design offers a sophisticated, non-Western framework for innovation. By transitioning from design as an act of control to design as an act of alignment, we can move beyond mere sustainability toward a regenerative, "satvik" future. This monograph outlines the philosophical bedrock, historical precedents, and actionable methodologies required to operationalize dharma as a universal design standard for the 21st century.
 
 To understand the necessity of a Dharmic approach, it is essential to contrast it with the dominant Western design paradigms that have shaped our modern infrastructure and digital ecosystems.
 

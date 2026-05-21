@@ -7,12 +7,9 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Responsive from '$lib/comps/responsive-menu.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
+	import { nodeHref } from '$lib/wiki-graph';
 
 	let { data }: { data: PageData } = $props();
-
-function nodeHref(node: { id: string; meta?: { route?: string } }) {
-  return node.meta?.route || `/explorer/${encodeURIComponent(node.id)}`;
-}
 
 	const title = 'Knowledge Explorer | Bodha';
 	const metaDescription = 'Explore articles, texts, thinkers, schools, and questions across the Bodha knowledge base.';
@@ -76,7 +73,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}	
 		{:else if active === 1}
 	 	{#each data.grouped.externalArticles as node, i (node.id)}
-		<a class="box p24 number blank rgap8" href={node.meta.route} target="_blank" rel="noreferrer">
+		<a class="box p24 number blank rgap8" href={nodeHref(node)} target="_blank" rel="noreferrer">
     	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
@@ -90,7 +87,7 @@ function nodeHref(node: { id: string; meta?: { route?: string } }) {
   		{/each}
 		{:else if active === 2}
 	 	{#each data.grouped.books as node (node.id)}
-		<a class="box p24 number blank rgap8" href={node.meta.route} target="_blank" rel="noreferrer">
+		<a class="box p24 number blank rgap8" href={nodeHref(node)} target="_blank" rel="noreferrer">
     	<p class="paragraph-text tight w600">{node.title}</p>
 		<p class="descriptor-text grey tight">{node.description}</p>
 		{#if node.tags && node.tags.length > 0}
