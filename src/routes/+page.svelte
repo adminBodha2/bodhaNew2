@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import type { PageData } from './$types';
 	import { DEFAULT_IMAGE, SITE_URL, organizationJsonLd, stringifyJsonLd, websiteJsonLd } from '$lib/utils/seo';
 	import Container from '$lib/comps/wrapper.svelte';
+import { StackingWords } from "$lib/motion-core";
+import RevealingLines from "$lib/motion-core/stacking-words/RevealingLines.svelte";
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -10,9 +13,13 @@
 	import Slider from '$lib/svelteanim/components/Slide.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
+	import type { ComponentProps } from "svelte";
 	import { animState, toggleAnim } from '$lib/utils/globalstores';
 
-	let { data }: { data: PageData } = $props();
+type Props = Partial<ComponentProps<typeof StackingWords>>;
+
+	let { data, scrub = 1.234, stagger = 0.21 }: { data: PageData } & Props = $props();
+	let scrollElement = $state<HTMLElement | null>(null);
 
 	let blogs = $derived(data.blogs ?? []);
 	let vids = $derived(data.vids ?? []);
@@ -47,16 +54,14 @@
 	<section class="wrapper-std">
 		<div class="box rgap16 lg:rgap32 ycenter" bind:this={headReveal} id="introduction">
 			<div class="box">
-				<Reveal visible={headVis.visible} duration={600} direction="left">
+				<StackingWords>
 					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
-				</Reveal>
-				<Reveal visible={headVis.visible} delay={200} duration={600} direction="right">
-					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif">and research group,</h1>
-				</Reveal>
+				</StackingWords>
+				<StackingWords>
+					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh13 source-serif">and research group,</h1>
+				</StackingWords>
 			</div>
-			<Reveal visible={headVis.visible} delay={800} duration={300} direction="down">
-				<p class="txt-xl md:txt-2xl lg:txt-3xl lh15 width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p>
-			</Reveal>
+<RevealingLines><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></RevealingLines>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">

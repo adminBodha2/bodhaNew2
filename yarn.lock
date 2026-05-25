@@ -2070,7 +2070,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     flexsearch: "npm:^0.8.212"
     force-graph: "npm:^1.51.4"
-    gsap: "npm:^3.14.2"
+    gsap: "npm:^3.15.0"
     leaflet: "npm:^1.9.4"
     leaflet.markercluster: "npm:^1.5.3"
     maplibre-gl: "npm:^5.24.0"
@@ -2755,7 +2755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gsap@npm:*, gsap@npm:^3.14.2":
+"gsap@npm:*, gsap@npm:^3.15.0":
   version: 3.15.0
   resolution: "gsap@npm:3.15.0"
   checksum: 10c0/5d86de72cb0bd6b20502c34c329a83a7d679979731bb465164407b7a5225aa61d612beee740eea36258622897c116cd2ca35320d530b7cf68bad62522361fcf7
