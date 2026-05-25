@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Parallax from '$lib/comps/parallaxhalf-new.svelte';
+	import Revealing from '$lib/motion-core/stacking-words/RevealingLines.svelte'
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
@@ -11,9 +12,7 @@
 
 	let iW = $state(0);
 	let sY = $state(0);
-	let ref = $state<HTMLElement | null>(null);
 	let ref2 = $state<HTMLElement | null>(null);
-	let vis = useInView(() => ref, { threshold: 0.7, once: true });
 	let vis2 = useInView(() => ref2, { threshold: 0.7, once: true });
 
 	let imageLink = $state('/images/heroes/key-designbodha.webp');
@@ -51,31 +50,59 @@
 	<Crumb showT={true} title="designBodha" showD={true} desc="designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines." />
 	<section class="wrapper-std">
 		<img class="motif anim-flyin-right" style="margin-left: 200px;transform: translateX(-{sY / 7}px) rotate({sY / 2}deg)" src="/images/designbodha/desbodha-motif.webp" alt="designBodha motif" />
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16" bind:this={ref}>
-			<Reveal visible={vis.visible} duration={500} delay={100}>
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 				<div class="box rgap16">
+					<div>
+					<Revealing>
 					<p class="highlight-text">
 						In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -
 					</p>
+					</Revealing>
+					</div>
+					<div>
+					<Revealing>
 					<p class="highlight-text">
 						<i>"together creating a world that as individuals none of us would choose."</i>
 					</p>
+					</Revealing>
+					</div>
 				</div>
-			</Reveal>
-			<Reveal visible={vis.visible} duration={500} delay={400}>
+			
 				<div class="box rgap16">
-					<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
-					<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
-					<a class="primary desb" href="/designbodha/monograph-on-dharmic-design"><span>Monograph on Dharmic Design</span></a>
+					<Reveal>
+						<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
+					</Reveal>
+					<Reveal>
+						<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
+					</Reveal>
 				</div>
-			</Reveal>
+
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
-		<Title text="project objectives" />
+		<Title text="explore designbodha" />
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
+			<div class="box rgap16">
+					<p class="txt-xl lg:txt-2xl w500">
+						Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
+						is creatorship grounded in Hindu metaphysics. It redefines <span class="desb">design as a sacred act</span> of aligning human creation with the cosmic order.
+					</p>
+					<a class="txt-xl" href="/designbodha/monograph-on-dharmic-design">Read our Monograph on Dharmic Design</a>
+			</div>
+			<div class="box">
+				<p class="txt-xl lg:txt-2xl w500">The Pramana Library</p>
+			<p class="txt-xl">The Pramana</p>
+			</div>
+			<div class="box">
+				<p>3</p>
+			</div>
+			<div class="box">
+			<p>4</p>
+			</div>
+		</div>
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap24" bind:this={ref2}>
 			<div class="box rgap16">
-				<Reveal visible={vis2.visible} duration={600}>
+				<Reveal>
 					<p class="txt-2xl lg:txt-3xl w500">
 						Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
 						is creatorship grounded in Hindu metaphysics.<br />
@@ -83,7 +110,7 @@
 						of aligning human creation with the cosmic order.
 					</p>
 				</Reveal>
-				<Reveal visible={vis2.visible} duration={400} delay={600}>
+				<Reveal>
 					<p class="highlight-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
 				</Reveal>
 			</div>

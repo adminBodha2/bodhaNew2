@@ -29,28 +29,28 @@ export const verticals = [
 	{
 		title: 'Research',
 		href: '/research',
-		image: '/images/key-research-portrait.webp',
+		image: '/images/key-research.webp',
 		desc: 'Focused research on institutions, policy, culture, and the lived structure of Hindu civilization.',
 		kicker: 'research'
 	},
 	{
 		title: 'Bodha Anveshi',
 		href: '/anveshi',
-		image: '/images/key-anveshi-portrait.webp',
+		image: '/images/key-anveshi.webp',
 		desc: 'Immersive temple and kshetra journeys through places where civilizational memory still breathes.',
 		kicker: 'culture'
 	},
 	{
 		title: 'Academy',
 		href: '/academy',
-		image: '/images/key-academy-portrait.webp',
+		image: '/images/key-academy.webp',
 		desc: 'Training, transmission, and the patient cultivation of thinkers rooted in Indic methods.',
 		kicker: 'learning'
 	},
 	{
 		title: 'Big Questions',
 		href: '/big-questions',
-		image: '/images/key-bigquestions-portrait.webp',
+		image: '/images/key-bigquestions.webp',
 		desc: 'Major questions that shape the contemporary Hindu condition and the path beyond confusion.',
 		kicker: 'research'
 	}
