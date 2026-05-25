@@ -20,7 +20,7 @@
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<h2 class="txt-3xl w600 name tt-u hover-animation" class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
+	<h2 class="txt-2xl w600 name tt-u hover-animation" class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
 		{#each text.split('') as char, i}
 			<span class="text-animation char-{i}" style:animation-delay={`${(i + 10) * 0.02}s`}>
 				{char === ' ' ? '\u00A0' : char}

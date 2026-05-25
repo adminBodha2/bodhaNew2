@@ -85,10 +85,10 @@
 		.header-content
 			width: 1408px
 	@media (min-width: 1601px)
-		padding-left: 4rem
-		padding-right: 4rem
+		padding-left: 2rem
+		padding-right: 2rem
 		.header-content
-			width: 1472px
+			width: 1536px
 
 .header-content
 	margin-left: auto
@@ -108,10 +108,10 @@
 .nav-link
 	font-size: 18px
 	font-family: 'Google Sans', sans-serif
-	font-weight: 500
+	font-weight: 400
 	letter-spacing: -0.02rem
 	color: var(--color-primary)
-	padding: 4px 6px
+	padding: 1px 6px 2px 6px
 	border-radius: 2px
 	transition: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
 	text-transform: lowercase

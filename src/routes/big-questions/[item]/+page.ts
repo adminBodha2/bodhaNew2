@@ -2,6 +2,8 @@ import { allQuestions } from '$lib/utils/localpulls';
 import researchPaths from '$lib/serving/research-paths.json';
 import { getNode, getNodeByRoute, nodeHref } from '$lib/wiki-graph';
 
+const uniqueTags = (tags: string[] = []) => [...new Set(tags.filter((tag) => tag.length > 0))];
+
 export async function load({ params }: { params: { item: string } }) {
 	const post = await import(`../${params.item}.md`);
 	const { title, image, icon, id, description, tags } = post.metadata;
@@ -23,7 +25,10 @@ export async function load({ params }: { params: { item: string } }) {
 				note: step.note,
 				href: nodeHref(node),
 				isExternal: nodeHref(node).startsWith('http'),
-				node
+				node: {
+					...node,
+					tags: uniqueTags(node.tags)
+				}
 			};
 		})
 		.filter((step) => step !== null) ?? [];
@@ -36,7 +41,7 @@ export async function load({ params }: { params: { item: string } }) {
 		id,
 		item: params.item,
 		description,
-		tags,
+		tags: uniqueTags(tags),
 		questions,
 		researchPath,
 		linkedNodes

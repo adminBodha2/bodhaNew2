@@ -114,7 +114,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="docmain box no-image sm:pbot32">
+		<div class="docmain sm:pbot32">
 			{@render children?.()}
 		</div>
 	</section>

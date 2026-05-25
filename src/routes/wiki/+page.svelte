@@ -13,15 +13,15 @@
 	const title = 'Knowledge Wiki | Bodha';
 	const metaDescription = 'An interactive map of the Bodha knowledge base — thinkers, schools, questions, wiki pages, and research nodes, connected by the relationships between them.';
 	const metaUrl = absoluteUrl('/wiki');
-	const metaImage = absoluteImage('/images/bodhacover.png');
+	const metaImage = absoluteImage('/images/heroes/key-wiki.webp');
 </script>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
 
-<Container>
 	<Parallax imageLink="/images/heroes/key-wiki.webp" wipe={true} />
-	<section class="wrapper-std first-box">
-		<Crumb showT={true} title="Bodha Knowledge Wiki" showD={true} desc="An interactive map of the Bodha knowledge base. Nodes are thinkers, schools, questions, wiki pages, and research projects. Edges show how they connect — who draws on whom, what addresses what, which schools a thinker belongs to." />
+<Container>
+<Crumb showT={true} title="Bodha Knowledge Wiki" showD={true} desc="An interactive map of the Bodha knowledge base. Nodes are thinkers, schools, questions, wiki pages, and research projects. Edges show how they connect — who draws on whom, what addresses what, which schools a thinker belongs to." />
+	<section class="wrapper-std">
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div class="box rgap16">
 				<p class="highlight-text">At Bodha, we're nerds about archives, knowledge bases, wikis, and repositories. Our ambition is to create a platform for discovery, learning, and research of all things itihasa, Bharata, Dharma, and the Indian Knowledge Systems (IKS).</p>
@@ -39,7 +39,7 @@
 					<p class="txt-lg"><span class="theme">Types:</span> essays/articles, books, thinkers, schools, questions, research. Of these, the final 4 groups classify content along Bodha's internal research work.</p>
 					<p class="txt-lg"><span class="theme">Domains:</span> thematic classification used across the website.</p>
 					<p class="txt-lg">Use the graph view below to explore, or navigate by structured pages. <span class="w600">Explore our repository of 200+ Hindu temples <a class="linkedlight" href="/wiki/temples">here.</a></span></p>
-					<p class="txt-lg">Explore our <a class="linkedlight" href="/wiki/iks-publications">IKS publications repository.</a></p>
+					<p class="txt-lg">Explore our <a class="linkedlight" href="/wiki/indian-knowledge-systems-and-education">IKS publications repository.</a></p>
 				</div>
 				<div class="box rgap16 col-span-2">
 					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">

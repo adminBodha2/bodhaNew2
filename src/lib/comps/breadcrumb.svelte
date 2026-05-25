@@ -17,10 +17,13 @@
 		onblog?: boolean;
 		isSolo?:boolean;
 		thinBot?:boolean;
+		thinTop?:boolean;
+		sidebarSoloPad2?:boolean;
+		libraryType?:boolean;
 		children?: Snippet;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, onblog = false, desc = ' ', centered = false, isSolo=false, serifed = true, thinBot = false, fullP = false, children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, libraryType = false, onblog = false, desc = ' ', centered = false, sidebarSoloPad2 = false, isSolo=false, serifed = true, thinBot = false, thinTop = false, fullP = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -30,7 +33,7 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box crumb-outer" class:isSolo={isSolo} class:onblog class:fullP class:xcenter={centered} class:thinBot={thinBot}>
+<div class="box crumb-outer" class:isSolo={isSolo} class:onblog class:fullP class:xcenter={centered} class:thinBot={thinBot} class:thinTop={thinTop} class:sidebarSolo={sidebarSoloPad2}>
 	<!-----adds page title as h1 tag for seo and semantic markup. automatically added if showT is false. defined by title on pages----->
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
@@ -61,7 +64,11 @@
 	<!-----title and description row - adds title, description - set variables showT and showD to true, define in title and desc ---->
 	<div class="mleft box rgap16" class:ta-c={centered}>
 		{#if showT}
-			<h1 class="txt-5xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 w700 tt-c" class:source-serif={serifed}>{title}</h1>
+			{#if libraryType}
+			<h1 class="w600 txt-2xl lg:txt-3xl">{title}</h1>
+			{:else}
+			<h1 class="txt-4xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 tt-c" class:w700={serifed} class:w500={!serifed} class:source-serif={serifed}>{title}</h1>
+			{/if}
 		{/if}
 		{#if showRow}
 		<div class="box rgap32">
@@ -101,6 +108,11 @@ h1
 		padding-top: 2rem
 	&.thinBot
 		padding-bottom: 2rem
+	&.thinTop
+		padding-top: 4rem
+	&.sidebarSolo
+		padding-bottom: 2rem
+		padding-top: 4rem
 	@media (min-width: 1025px)
 		padding-bottom: 5rem
 		padding-top: 4rem
@@ -112,6 +124,12 @@ h1
 			padding-bottom: 0
 			padding-top: 1rem
 		&.thinBot
+			padding-bottom: 2rem
+		&.thinTop
+			padding-top: 6rem
+		&.sidebarSolo
+			padding-top: 6rem
+			row-gap: 1rem
 			padding-bottom: 2rem
 
 .divider

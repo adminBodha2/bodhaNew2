@@ -48,23 +48,23 @@
 
 <Container>
 	<section class="docgrid">
-		<div class="box docside">
+		<div class="docside">
 			{#if labitems && labitems.length > 0}
-				<div class="doclist">
+				<nav class="doclist">
+					<div class="box rgap16">
 					{#each labitems as item}
 						{#if item.meta.title !== data.title}
-							<a class="doclink sidebar-text" href={item.linkpath}>
+							<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
 								{item.meta.title}
 							</a>
 						{/if}
 					{/each}
-				</div>
+					</div>
+				</nav>
 			{/if}
 		</div>
-		<div class="docmain box rgap32 no-image">
-			<div class="box title-area">
-				<Crumb showT={true} title={data.title} showD={true} desc={data.excerpt}/>
-			</div>
+		<div class="docmain">
+			<Crumb showT={true} title={data.title} showD={true} desc={data.excerpt} thinTop={true}/>
 			<div class="doctext classic-document">
 				<data.content />
 			</div>

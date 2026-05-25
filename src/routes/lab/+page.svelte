@@ -32,28 +32,19 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="box wrapper-std header-margin rgap32">
+	<section class="wrapper-std">
 		<Crumb showT={true} title="Bodha Lab" showD={true} desc={metaDescription} />
 		{#if labItems.length > 0}
-			<div class="grid grid-cols-2 lg:grid-cols-4 white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 				{#each labItems as item, i}
-					<a class="box box-of-items blank whitestone p16 rgap8" href={item.linkpath}>
-						<div class="item-meta row ycenter cgap8 xbetween">
-							<p class="txt-sm tt-u w500 grey1">{item.formattedDate}</p>
-						</div>
-						<p class="txt-xl w500">{item.meta.title}</p>
-						<p class="grey0">{item.meta.excerpt}</p>
-						<p class="txt-xs tt-u theme self-bottom">{item.meta.category}</p>
+					<a class="box blank whitestone p24 lg:p32 rgap16" href={item.linkpath}>
+						<p class="txt-xs tt-u w500 grey1">{item.formattedDate}</p>
+						<p class="txt-lg w500">{item.meta.title}</p>
+						<p class="grey1">{item.meta.excerpt}</p>
+						<p class="txt-00 w500 tt-u theme self-bottom">{item.meta.category}</p>
 					</a>
 				{/each}
 			</div>
 		{/if}
 	</section>
 </Container>
-
-<style lang="sass">
-
-.item-meta
-	flex-wrap: wrap
-
-</style>

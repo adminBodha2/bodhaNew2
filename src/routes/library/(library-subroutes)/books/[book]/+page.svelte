@@ -30,11 +30,11 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" ogType="book" {jsonld} />
 
-<section class="box library-book rgap32">
-	<Crumb showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
+<section class="box rgap32">
+	<Crumb libraryType={true} sidebarSoloPad2={true} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 		<div class="row cgap8 rgap8 mwrap">
 			{#each data.tags as tag}
-				<a class="txt-sm w500 theme tt-u" href="/concepts/{tag}">#{tag.replaceAll('-', ' ')}</a>
+				<p class="txt-xs tt-u w500 theme">#{tag.replaceAll('-', ' ')}</p>
 			{/each}
 		</div>
 	</Crumb>
@@ -42,11 +42,11 @@
 		<PDFReader src={data.linkcloud} title={data.name} height="82vh" />
 	</div>
 	{#if relatedBooks && relatedBooks.length > 0}
-		<div class="box bordertop ptop32 rgap32">
-			<h2 class="txt-2xl w600">Related Books</h2>
-			<div class="grid grid-cols-2 lg:grid-cols-3 gap16">
+		<div class="box bordertop ptop64 rgap32">
+			<Title text="Related Books" sizeType={true}/>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
 				{#each relatedBooks as item, i}
-					<a class="blank box rgap8 whitestone p16 lg:p24 b-main radius" href={item.linkfinal2}>
+					<a class="blank box whitestone p24 lg:p32 rgap16" href={item.linkfinal2}>
 						<p class="txt-lg w500 a-hover">{item.name}</p>
 						<p class="grey1">{item.short}</p>
 					</a>

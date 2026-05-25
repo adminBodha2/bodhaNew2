@@ -155,8 +155,8 @@ p.light-footer
 		&::after
 			top: 4rem
 	@media (min-width: 1601px)
-		padding-left: 4rem
-		padding-right: 4rem
+		padding-left: 2rem
+		padding-right: 2rem
 		&::after
 			top: 6rem
 

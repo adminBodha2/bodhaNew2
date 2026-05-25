@@ -31,14 +31,14 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
 
-<section class="box library-book rgap32">
-	<Crumb showT={true} title={category.label} showD={true} desc={category.desc} fullP={true} />
+<section class="box rgap32">
+<Crumb serifed={false} showT={true} title={category.label} showD={true} desc={category.desc} fullP={true} sidebarSoloPad2={true}/>
 	{#if books && books.length > 0}
 		<div class="grid grid-cols-1 lg:grid-cols-3 white-grid">
 			{#each books as item, i}
 				{#if item.type === 'aryan-issue'}
 					<a class="blank box rgap16 p24 lg:p32 whitestone" href={item.linkreal} target="_blank" rel="noreferrer">
-						<p class="txt-xl w500">{item.name}</p>
+						<p class="txt-lg w500">{item.name}</p>
 						<p class="grey1">{item.summary}</p>
 						<p class="txt-sm tt-u w500 grey2">{item.author}</p>
 						{#if item.tags && item.tags.length > 0}
@@ -51,13 +51,13 @@
 					</a>
 				{:else}
 					<a class="blank box rgap16 p24 lg:p32 whitestone" href={item.linkfinal}>
-						<p class="txt-xl w500">{item.name}</p>
+						<p class="txt-lg w500">{item.name}</p>
 						<p class="grey1">{item.summary}</p>
 						<p class="txt-sm tt-u w500 grey2">{item.author}</p>
 						{#if item.tags && item.tags.length > 0}
 							<div class="row wrap self-bottom cgap4 rgap4">
 								{#each item.tags as tag}
-									<p class="txt-xs tt-u theme w500">{tag.replaceAll('-', ' ')}</p>
+									<p class="txt-00 tt-u theme w500">{tag.replaceAll('-', ' ')}</p>
 								{/each}
 							</div>
 						{/if}

@@ -60,10 +60,10 @@
 		.content-wrapper
 			width: 1408px
 	@media screen and (min-width: 1601px)
-		padding-left: 4rem
-		padding-right: 4rem
+		padding-left: 2rem
+		padding-right: 2rem
 		.content-wrapper
-			width: 1472px
+			width: 1536px
 
 
 </style>

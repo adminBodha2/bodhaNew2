@@ -84,7 +84,7 @@
 			{#each libCategories as cat, i}
 				<Blur visible={visref2.visible} duration={250} delay={i * 100}>
 				<a class="blank box rgap8 p24 lg:p32 whitestone" href={cat.href}>
-					<p class="txt-xl w600 a-hover pbot8">{cat.label}</p>
+					<p class="txt-lg w600 a-hover pbot8">{cat.label}</p>
 					<p class="grey2 lh14">{cat.desc}</p>
 						<p class="txt-xs tt-u w500 theme">
 							{#if cat.type === 'arch'}41 issues{:else}{categoryCounts[cat.type]} texts{/if}
@@ -100,7 +100,7 @@
 			{#each libPaths as path, i}
 				<Blur visible={visref3.visible} duration={500} delay={i * 150}>
 				<a class="blank box rgap8 p24 lg:p32 whitestone" href={path.href}>
-					<p class="txt-xl w600 a-hover pbot8">{path.label}</p>
+					<p class="txt-lg w600 a-hover pbot8">{path.label}</p>
 					<p class="grey2 lh14">{path.desc}</p>
 				</a>
 				</Blur>

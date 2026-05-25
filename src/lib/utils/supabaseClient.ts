@@ -198,12 +198,17 @@ export async function anveshiTestimonials(){
 }
 
 
-export async function bharata1000(group:string){
-	const { data, error } = await supabase
-	.from('db-bharata1000')
-	.select()
-	.eq('section', group)
-	.order('id')
+export async function bharata1000(group?: string){
+	let query = supabase
+		.from('db-bharata1000')
+		.select()
+		.order('id')
+
+	if (group && group.length > 0) {
+		query = query.eq('section', group)
+	}
+
+	const { data, error } = await query
 	if (error) throw new Error(error.message)
 	return data	
 }
