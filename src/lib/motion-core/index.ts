@@ -4,4 +4,5 @@ export { default as FluidImageReveal } from "./fluid-image-reveal/FluidImageReve
 export { default as InteractiveGrid } from "./interactive-grid/InteractiveGrid.svelte";
 export { default as RevealingLines } from "./stacking-words/RevealingLines.svelte";
 export { default as StackingWords } from "./stacking-words/StackingWords.svelte";
+export { default as TextScramble } from "./text-scramble/TextScramble.svelte";
 export { default as WaterRipple } from "./water-ripple/WaterRipple.svelte";

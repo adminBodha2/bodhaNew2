@@ -10,6 +10,7 @@
 		scrub?: boolean | number;
 		ease?: string;
 		fromOpacity?: number;
+		stagger?: number;
 		scrollElement?: string | HTMLElement | null;
 		[prop: string]: unknown;
 	}
@@ -22,6 +23,7 @@
 		scrub = 1,
 		ease = "power3.out",
 		fromOpacity = 0,
+		stagger = 0.1,
 		scrollElement,
 		...restProps
 	}: Props = $props();
@@ -65,6 +67,7 @@
 		const triggerScrub = scrub;
 		const lineEase = ease;
 		const lineFromOpacity = fromOpacity;
+		const lineStagger = stagger;
 		const resolvedScroller =
 			typeof scrollElement === "string"
 				? document.querySelector<HTMLElement>(scrollElement)
@@ -100,22 +103,23 @@
 					onSplit: (self: any) => {
 						killLineTweens();
 
-						(self.lines ?? []).forEach((line: HTMLElement) => {
-							gsap.set(line, { opacity: lineFromOpacity });
-							const tween = gsap.to(line, {
-								ease: lineEase,
-								opacity: 1,
-								scrollTrigger: {
-									trigger: line,
-									start: triggerStart,
-									end: triggerEnd,
-									scrub: triggerScrub,
-									scroller: triggerScroller,
-									invalidateOnRefresh: true,
-								},
-							});
-							lineTweens.push(tween);
+						const lines = (self.lines ?? []) as HTMLElement[];
+						gsap.set(lines, { opacity: lineFromOpacity });
+
+						const tween = gsap.to(lines, {
+							ease: lineEase,
+							opacity: 1,
+							stagger: lineStagger,
+							scrollTrigger: {
+								trigger: wrapperRef,
+								start: triggerStart,
+								end: triggerEnd,
+								scrub: triggerScrub,
+								scroller: triggerScroller,
+								invalidateOnRefresh: true,
+							},
 						});
+						lineTweens.push(tween);
 
 						ScrollTrigger.refresh();
 					},
