@@ -19,7 +19,7 @@
 		class: className = "",
 		start = "top 90%",
 		end = "top 30%",
-		scrub = 3,
+		scrub = 1,
 		ease = "power3.out",
 		fromOpacity = 0,
 		scrollElement,

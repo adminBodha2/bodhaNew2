@@ -1,22 +1,20 @@
 <script lang="ts">
-	import { onMount } from "svelte";
 	import type { PageData } from './$types';
 	import { DEFAULT_IMAGE, SITE_URL, organizationJsonLd, stringifyJsonLd, websiteJsonLd } from '$lib/utils/seo';
 	import Container from '$lib/comps/wrapper.svelte';
-import { StackingWords } from "$lib/motion-core";
-import RevealingLines from "$lib/motion-core/stacking-words/RevealingLines.svelte";
+	import { StackingWords } from '$lib/motion-core';
+	import RevealingLines from '$lib/motion-core/stacking-words/RevealingLines.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import { verticals, publications } from '$lib/utils/localsends';
 	import VideoPlayer from '$lib/comps/custom-video-player.svelte';
 	import Slider from '$lib/svelteanim/components/Slide.svelte';
-	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
-	import type { ComponentProps } from "svelte";
+	import type { ComponentProps } from 'svelte';
 	import { animState, toggleAnim } from '$lib/utils/globalstores';
 
-type Props = Partial<ComponentProps<typeof StackingWords>>;
+	type Props = Partial<ComponentProps<typeof StackingWords>>;
 
 	let { data, scrub = 1.234, stagger = 0.21 }: { data: PageData } & Props = $props();
 	let scrollElement = $state<HTMLElement | null>(null);
@@ -61,7 +59,7 @@ type Props = Partial<ComponentProps<typeof StackingWords>>;
 					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh13 source-serif">and research group,</h1>
 				</StackingWords>
 			</div>
-<RevealingLines><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></RevealingLines>
+			<RevealingLines><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></RevealingLines>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
@@ -106,7 +104,7 @@ type Props = Partial<ComponentProps<typeof StackingWords>>;
 				{#each blogs as item, i}
 					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
 						<div class="box whitecard">
-							<div class="row cgap4 rgap4 ycenter p16 ">
+							<div class="row cgap4 rgap4 ycenter p16">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
 										<a class="txt-xs tt-u w500 theme" href="/blog/tags/{tag}">#{tag.replaceAll('-', ' ')}</a>
@@ -176,17 +174,13 @@ type Props = Partial<ComponentProps<typeof StackingWords>>;
 		{/if}
 	</section>
 	<section class="wrapper-std growingline alternate">
-		<Title text="Knowledge Base"/>
+		<Title text="Knowledge Base" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div>
-				<p class="highlight-text">
-					We're nerds about knowledge bases, wikis, and repositories. The Bodha Knowledge Base is an experimental, continually improving build that brings together various concepts, content, and sub-respositories yoked and classified in ways that facilitate learning, discovery, exploration.
-				</p>
+				<p class="highlight-text">We're nerds about knowledge bases, wikis, and repositories. The Bodha Knowledge Base is an experimental, continually improving build that brings together various concepts, content, and sub-respositories yoked and classified in ways that facilitate learning, discovery, exploration.</p>
 			</div>
 			<div class="box rgap16">
-				<p class="highlight-text">Rather than a single web page or subroute, the knowledge base is a mesh running across our website.
-					Start at <a class="linked w500" href="/wiki">wiki home</a>, is a grounding point for the entire network...
-				</p>
+				<p class="highlight-text">Rather than a single web page or subroute, the knowledge base is a mesh running across our website. Start at <a class="linked w500" href="/wiki">wiki home</a>, is a grounding point for the entire network...</p>
 				<p class="highlight-text">Or choose any of the following ways to begin exploring -</p>
 			</div>
 		</div>
