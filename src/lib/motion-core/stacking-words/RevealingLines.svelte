@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { SplitText } from "gsap/SplitText";
-	import { onMount } from "svelte";
 	import type { Snippet } from "svelte";
-	import { registerPluginOnce } from "../helpers/gsap";
 	import { cn } from "../utils/cn";
 
 	interface Props {
@@ -32,8 +27,10 @@
 	}: Props = $props();
 
 	let wrapperRef: HTMLElement | null = null;
-	let splitInstance: SplitText | null = null;
-	let lineTweens: gsap.core.Tween[] = [];
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let splitInstance: any = null;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let lineTweens: any[] = [];
 
 	const attachWrapperRef = (node: HTMLElement) => {
 		wrapperRef = node;
@@ -43,10 +40,6 @@
 			}
 		};
 	};
-
-	onMount(() => {
-		registerPluginOnce(ScrollTrigger, SplitText);
-	});
 
 	function killLineTweens() {
 		lineTweens.forEach((tween) => tween.kill());
@@ -82,9 +75,15 @@
 			resolvedScroller instanceof HTMLElement ? resolvedScroller : window;
 
 		let cancelled = false;
-		let ctx: gsap.Context | null = null;
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		let ctx: any = null;
 
 		const init = async () => {
+			const { gsap } = await import("gsap");
+			const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+			const { SplitText } = await import("gsap/SplitText");
+			gsap.registerPlugin(ScrollTrigger, SplitText);
+
 			await waitForLayout();
 			if (cancelled || !wrapperRef) return;
 
@@ -98,10 +97,10 @@
 					aria: "hidden",
 					autoSplit: true,
 					linesClass: "revealing-lines-line",
-					onSplit: (self) => {
+					onSplit: (self: any) => {
 						killLineTweens();
 
-						(self.lines ?? []).forEach((line) => {
+						(self.lines ?? []).forEach((line: HTMLElement) => {
 							gsap.set(line, { opacity: lineFromOpacity });
 							const tween = gsap.to(line, {
 								ease: lineEase,

@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { SplitText } from "gsap/SplitText";
-	import { onMount } from "svelte";
 	import type { Snippet } from "svelte";
-	import { registerPluginOnce } from "../helpers/gsap";
 	import { cn } from "../utils/cn";
 
 	interface Props {
@@ -61,8 +56,10 @@
 	}: Props = $props();
 
 	let wrapperRef: HTMLElement | null = null;
-	let splitInstance: SplitText | null = null;
-	let lineTweens: gsap.core.Tween[] = [];
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let splitInstance: any = null;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let lineTweens: any[] = [];
 	const OFFSCREEN_MARGIN_PX = 8;
 
 	const attachWrapperRef = (node: HTMLElement) => {
@@ -74,9 +71,7 @@
 		};
 	};
 
-	onMount(() => {
-		registerPluginOnce(ScrollTrigger, SplitText);
-	});
+	// No onMount needed — plugins registered inside $effect after dynamic import
 
 	function killLineTweens() {
 		lineTweens.forEach((tween) => tween.kill());
@@ -112,9 +107,15 @@
 			resolvedScroller instanceof HTMLElement ? resolvedScroller : window;
 
 		let cancelled = false;
-		let ctx: gsap.Context | null = null;
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		let ctx: any = null;
 
 		const init = async () => {
+			const { gsap } = await import("gsap");
+			const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+			const { SplitText } = await import("gsap/SplitText");
+			gsap.registerPlugin(ScrollTrigger, SplitText);
+
 			await waitForLayout();
 			if (cancelled || !wrapperRef) return;
 
@@ -128,7 +129,7 @@
 					aria: "hidden",
 					autoSplit: true,
 					linesClass: "stacking-words-line",
-					onSplit: (self) => {
+					onSplit: (self: any) => {
 						killLineTweens();
 
 						const words = (self.words ?? []) as HTMLElement[];
@@ -143,7 +144,7 @@
 							});
 						});
 
-						(self.lines ?? []).forEach((line) => {
+						(self.lines ?? []).forEach((line: HTMLElement) => {
 							const tween = gsap.to(
 								line.querySelectorAll(".stacking-words-word"),
 								{
