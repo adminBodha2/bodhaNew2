@@ -106,16 +106,15 @@
 			margin-left: 6px
 
 .nav-link
-	font-size: 18px
-	font-family: 'Google Sans', sans-serif
-	font-weight: 400
+	font-size: 15px
+	font-family: var(--fontface-sans)
+	font-weight: 500
 	letter-spacing: -0.02rem
 	color: var(--color-primary)
 	padding: 1px 6px 2px 6px
 	border-radius: 2px
 	transition: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
-	text-transform: lowercase
-	font-variant: small-caps
+	text-transform: uppercase
 	&:hover
 		color: var(--color-back)
 		background: var(--color-theme)

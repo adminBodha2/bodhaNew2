@@ -20,8 +20,10 @@
 		$iW = width < 1025;
 	});
 
-	injectSpeedInsights();
-	injectAnalytics({ mode: dev ? 'development' : 'production' });
+	if (!dev) {
+		injectSpeedInsights();
+		injectAnalytics({ mode: 'production' });
+	}
 
 	function handleKeydown(e: KeyboardEvent) {
 		const isMod = e.metaKey || e.ctrlKey;
@@ -62,17 +64,19 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1XN2X1V5S"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
+	{#if !dev}
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1XN2X1V5S"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-		gtag('config', 'G-F1XN2X1V5S');
-	</script>
+			gtag('config', 'G-F1XN2X1V5S');
+		</script>
+	{/if}
 </svelte:head>
 
 <div class="app-box" class:light={!$darkTheme} class:dark={$darkTheme} class:mobile={$iW} class:desk={!$iW}>

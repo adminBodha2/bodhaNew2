@@ -6,14 +6,10 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
-	import Blur from '$lib/svelteanim/components/Blur.svelte';
-	import { useInView } from '$lib/svelteanim';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	let iW = $state(0);
 	let sY = $state(0);
-	let ref2 = $state<HTMLElement | null>(null);
-	let vis2 = useInView(() => ref2, { threshold: 0.7, once: true });
 
 	let imageLink = $state('/images/heroes/key-designbodha.webp');
 
@@ -67,7 +63,6 @@
 					</Revealing>
 					</div>
 				</div>
-			
 				<div class="box rgap16">
 					<Reveal>
 						<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
@@ -76,57 +71,33 @@
 						<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
 					</Reveal>
 				</div>
-
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="explore designbodha" />
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
+		<div class="grid grid-cols-1 lg:grid-cols-3 cgap64 rgap32">
 			<div class="box rgap16">
-					<p class="txt-xl lg:txt-2xl w500">
-						Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
-						is creatorship grounded in Hindu metaphysics. It redefines <span class="desb">design as a sacred act</span> of aligning human creation with the cosmic order.
+					<p class="txt-xl lg:txt-2xl w600">
+						Dharmic design, that is - <span class="desb">design-by-ṛta</span>, is creatorship grounded in Hindu metaphysics. It redefines <span class="desb">design as a sacred act</span> of aligning human creation with the cosmic order.
 					</p>
-					<a class="txt-xl" href="/designbodha/monograph-on-dharmic-design">Read our Monograph on Dharmic Design</a>
+					<a class="txt-xl desb" href="/designbodha/monograph-on-dharmic-design">Read our Monograph on Dharmic Design</a>
 			</div>
-			<div class="box">
-				<p class="txt-xl lg:txt-2xl w500">The Pramana Library</p>
-			<p class="txt-xl">The Pramana</p>
-			</div>
-			<div class="box">
-				<p>3</p>
-			</div>
-			<div class="box">
-			<p>4</p>
-			</div>
-		</div>
-		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap24" bind:this={ref2}>
 			<div class="box rgap16">
-				<Reveal>
-					<p class="txt-2xl lg:txt-3xl w500">
-						Dharmic design, that is - <span class="desb">design-by-ṛta</span>,<br />
-						is creatorship grounded in Hindu metaphysics.<br />
-						It redefines <span class="desb">design as a sacred act</span><br />
-						of aligning human creation with the cosmic order.
-					</p>
-				</Reveal>
-				<Reveal>
-					<p class="highlight-text">It is the conscious practice of shaping material and digital realities in alignment with cosmic rhythms; the intentional harmonization of human creativity with natural order - ensuring that every created artifact contributes to balance, truth, and the long-term well-being of the interconnected web of life.</p>
-				</Reveal>
+				<p class="txt-xl lg:txt-2xl w600">The Pramana Library</p>
+			<p class="txt-lg">The Pramana Library is a set of cognitive and communicative concepts from the Sanskrit intellectual traditions, for designers, researchers, and people building and leading with AI.</p>
+			<p class="txt-lg">Each card here names a move you can make in your work - a question you can ask, a discrimination you can draw - that the available English vocabulary does not give you a clean way to name.</p>
+			<a class="txt-lg desb w500" href="/designbodha/pramana-library">Explore</a>
 			</div>
-			<div class="grid grid-cols-1 white-grid">
-				<Blur visible={vis2.visible} delay={1300}>
-				<div class="box rgap16 whitecard p24 lg:p32">
-					<p class="txt-xl w600">Phase 1 - Foundation and Taxonomy</p>
-					<p class="txt-lg grey1 lh14">Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.</p>
+			<div class="box rgap16">
+				<p class="txt-xl lg:txt-2xl w600">Design by Dharma Roadmap</p>
+				<div class="box">
+					<p class="txt-lg w500">Phase 1 - Foundation and Taxonomy</p>
+					<p class="txt-lg">Establish a common language - the dharmic design lexicon mapping modern design terms. Publish second whitepaper - defining the core terminology and philosophical boundaries.</p>
 				</div>
-				</Blur>
-				<Blur visible={vis2.visible} delay={1500}>
-				<div class="box rgap16 whitecard p24 lg:p32">
-					<p class="txt-xl w600">Phase 2 - Framework Toolkits</p>
-					<p class="txt-lg grey1 lh14">Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.</p>
+				<div class="box">
+					<p class="txt-lg w500">Phase 2 - Framework Toolkits</p>
+					<p class="txt-lg">Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.</p>
 				</div>
-				</Blur>
 			</div>
 		</div>
 	</section>

@@ -265,7 +265,7 @@
 		if (showLabel) {
 			const fontSize = isDomain ? Math.max(6, 13 / scale) : Math.max(4, 11 / scale);
 			const label = node.title.length > 32 ? node.title.slice(0, 29) + '…' : node.title;
-			ctx.font = `${isDomain ? '700' : '500'} ${fontSize}px Google Sans, Arial, sans-serif`;
+			ctx.font = `${isDomain ? '700' : '500'} ${fontSize}px General Sans, Arial, sans-serif`;
 			ctx.textAlign = 'center';
 			ctx.textBaseline = 'top';
 			// Shadow for legibility

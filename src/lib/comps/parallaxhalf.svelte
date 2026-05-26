@@ -70,6 +70,7 @@
 	});
 </script>
 
+<div class="shell-wrap">
 <div bind:this={wrapperElement} class="imager {isClass}">
 	<div bind:this={parallaxElement} class="parallax-target">
 		{#if wipe}
@@ -79,11 +80,42 @@
 		{/if}
 	</div>
 </div>
+</div>
 
 <style lang="sass">
 
+.shell-wrap
+	width: 100%
+	padding-left: 1rem
+	padding-right: 1rem
+	aspect-ratio: 16/9
+	.imager
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+	@media (min-width: 1025px)
+		padding-left: 1rem
+		padding-right: 1rem
+		aspect-ratio: 16/8
+		.imager
+			width: 992px
+	@media (min-width: 1201px)
+		aspect-ratio: 16/7
+		.imager
+			width: 1168px
+	@media (min-width: 1441px)
+		aspect-ratio: 16/6
+		.imager
+			width: 1408px
+	@media (min-width: 1601px)
+		padding-left: 2rem
+		padding-right: 2rem
+		.imager
+			width: 1536px
+
 .imager
 	overflow: hidden
+	height: 100%
 	.parallax-target
 		height: 100%
 		width: 100%
@@ -92,9 +124,6 @@
 		img
 			display: block
 	@media screen and (min-width: 1025px)
-		height: 100vh
-		&.is100
-			height: 100vh
 		.parallax-target
 			img,
 			:global(.ripple-motion)
@@ -103,8 +132,6 @@
 				height: 100%
 				width: 100%
 	@media screen and (max-width: 1024px)
-		&.is100, &.is50
-			height: 40vh
 		.parallax-target
 			img,
 			:global(.ripple-motion)

@@ -28,10 +28,8 @@
 		...restProps
 	}: Props = $props();
 
-	let wrapperRef: HTMLElement | null = null;
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let wrapperRef = $state<HTMLElement | null>(null);
 	let splitInstance: any = null;
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let lineTweens: any[] = [];
 
 	const attachWrapperRef = (node: HTMLElement) => {
@@ -78,7 +76,6 @@
 			resolvedScroller instanceof HTMLElement ? resolvedScroller : window;
 
 		let cancelled = false;
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let ctx: any = null;
 
 		const init = async () => {
@@ -88,7 +85,7 @@
 			gsap.registerPlugin(ScrollTrigger, SplitText);
 
 			await waitForLayout();
-			if (cancelled || !wrapperRef) return;
+			if (cancelled) return;
 
 			ctx?.revert();
 			ctx = null;
@@ -96,7 +93,7 @@
 			killLineTweens();
 
 			ctx = gsap.context(() => {
-				splitInstance = SplitText.create(wrapperRef, {
+				splitInstance = SplitText.create(node, {
 					aria: "hidden",
 					autoSplit: true,
 					linesClass: "revealing-lines-line",
@@ -111,7 +108,7 @@
 							opacity: 1,
 							stagger: lineStagger,
 							scrollTrigger: {
-								trigger: wrapperRef,
+								trigger: node,
 								start: triggerStart,
 								end: triggerEnd,
 								scrub: triggerScrub,
@@ -127,7 +124,7 @@
 					type: "lines",
 				});
 
-				gsap.set(wrapperRef, { autoAlpha: 1 });
+				gsap.set(node, { autoAlpha: 1 });
 			}, node);
 		};
 

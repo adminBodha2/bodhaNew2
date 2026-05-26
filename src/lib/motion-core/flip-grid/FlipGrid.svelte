@@ -1,8 +1,4 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-	import { gsap } from "gsap";
-	import { Flip } from "gsap/Flip";
-	import { registerPluginOnce } from "../helpers/gsap";
 	import { cn } from "../utils/cn";
 
 	import type { Snippet } from "svelte";
@@ -53,8 +49,10 @@
 		...props
 	}: Props = $props();
 
-	let container: HTMLElement | undefined;
-	let state: Flip.FlipState | null = null;
+	let container = $state<HTMLElement | undefined>();
+	let flipState = $state<unknown>(null);
+	let gsapInstance = $state<any>(null);
+	let flipPlugin = $state<any>(null);
 
 	const attachContainer = (node: HTMLElement) => {
 		container = node;
@@ -74,18 +72,35 @@
 		return baseStyle;
 	});
 
-	onMount(() => {
-		registerPluginOnce(Flip);
+	$effect(() => {
+		let cancelled = false;
+
+		const init = async () => {
+			const { gsap } = await import("gsap");
+			const { Flip } = await import("gsap/Flip");
+			gsap.registerPlugin(Flip);
+
+			if (cancelled) return;
+
+			gsapInstance = gsap;
+			flipPlugin = Flip;
+		};
+
+		void init();
+
+		return () => {
+			cancelled = true;
+		};
 	});
 
 	$effect.pre(() => {
 		void className;
 		void computedStyle;
 
-		if (container) {
+		if (container && flipPlugin) {
 			const items = container.querySelectorAll(".flip-grid-item");
 			if (items.length > 0) {
-				state = Flip.getState([...items, container]);
+				flipState = flipPlugin.getState([...items, container] as Element[]);
 			}
 		}
 	});
@@ -94,28 +109,32 @@
 		void className;
 		void computedStyle;
 
-		if (state && container) {
-			const items = container.querySelectorAll(".flip-grid-item");
+		if (flipState && container && flipPlugin && gsapInstance) {
+			const currentState = flipState;
+			const currentContainer = container;
+			const currentGsap = gsapInstance;
+			const currentFlip = flipPlugin;
+			const items = currentContainer.querySelectorAll(".flip-grid-item");
 
-			Flip.from(state, {
-				targets: [...items, container],
+			currentFlip.from(currentState, {
+				targets: [...items, currentContainer] as Element[],
 				duration,
 				ease,
 				stagger,
 				absolute: ".flip-grid-item",
-				onEnter: (elements) => {
-					gsap.fromTo(
+				onEnter: (elements: Element[]) => {
+					currentGsap.fromTo(
 						elements,
 						{ opacity: 0, scale: 0 },
 						{ opacity: 1, scale: 1, duration, ease },
 					);
 				},
-				onLeave: (elements) => {
-					gsap.to(elements, { opacity: 0, scale: 0, duration, ease });
+				onLeave: (elements: Element[]) => {
+					currentGsap.to(elements, { opacity: 0, scale: 0, duration, ease });
 				},
 			});
 
-			state = null;
+			flipState = null;
 		}
 	});
 </script>

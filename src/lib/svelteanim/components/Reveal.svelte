@@ -34,7 +34,7 @@
 		...rest
 	}: Props = $props();
 
-	let wrapperRef: HTMLElement | null = null;
+	let wrapperRef = $state<HTMLElement | null>(null);
 
 	function hiddenClipPath(dir: RevealDirection): string {
 		switch (dir) {
@@ -54,6 +54,10 @@
 			case 'down': return 'inset(0% 0 0 0)';
 			case 'diagonal': return `polygon(0% 0%, ${100 + s}% 0%, 100% 100%, 0% 100%)`;
 		}
+	}
+
+	function clampScrollPosition(value: string): string {
+		return value.startsWith('clamp(') || value.includes('max') ? value : `clamp(${value})`;
 	}
 
 	const attachWrapperRef = (node: HTMLElement) => {
@@ -83,12 +87,12 @@
 					: window;
 
 		let cancelled = false;
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let ctx: any = null;
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let splitInstance: any = null;
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let lineTweens: any[] = [];
+		let resizeObserver: ResizeObserver | null = null;
+		let refreshFrame = 0;
+		let refreshAfterLoad: (() => void) | null = null;
 
 		function killLineTweens() {
 			lineTweens.forEach((t) => t.kill());
@@ -111,13 +115,19 @@
 			ctx = null;
 			splitInstance?.revert();
 			killLineTweens();
+			resizeObserver?.disconnect();
+			resizeObserver = null;
+
+			const refreshSoon = () => {
+				cancelAnimationFrame(refreshFrame);
+				refreshFrame = requestAnimationFrame(() => ScrollTrigger.refresh());
+			};
 
 			ctx = gsap.context(() => {
 				splitInstance = SplitText.create(target, {
 					aria: 'hidden',
 					autoSplit: true,
 					linesClass: 'reveal-comp-line',
-					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					onSplit: (self: any) => {
 						killLineTweens();
 
@@ -130,8 +140,8 @@
 							stagger: lineStagger,
 							scrollTrigger: {
 								trigger: target,
-								start: triggerStart,
-								end: triggerEnd,
+								start: clampScrollPosition(triggerStart),
+								end: clampScrollPosition(triggerEnd),
 								scrub: triggerScrub,
 								scroller: resolvedScroller,
 								invalidateOnRefresh: true,
@@ -147,12 +157,28 @@
 
 				gsap.set(target, { autoAlpha: 1 });
 			}, node);
+
+			refreshAfterLoad = refreshSoon;
+			window.addEventListener('load', refreshAfterLoad, { once: true });
+
+			if ('ResizeObserver' in window) {
+				resizeObserver = new ResizeObserver(refreshSoon);
+				resizeObserver.observe(document.body);
+				resizeObserver.observe(document.documentElement);
+				resizeObserver.observe(target);
+			}
+
+			refreshSoon();
 		};
 
 		void init();
 
 		return () => {
 			cancelled = true;
+			if (refreshAfterLoad) window.removeEventListener('load', refreshAfterLoad);
+			cancelAnimationFrame(refreshFrame);
+			resizeObserver?.disconnect();
+			resizeObserver = null;
 			ctx?.revert();
 			ctx = null;
 			killLineTweens();
@@ -168,8 +194,7 @@
 	</div>
 {/if}
 
-<style>
-	:global(.reveal-comp-line) {
+<style lang="sass">
+	:global(.reveal-comp-line)
 		display: block;
-	}
 </style>

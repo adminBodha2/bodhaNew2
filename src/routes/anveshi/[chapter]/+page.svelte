@@ -15,7 +15,6 @@
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 	import Tabs from '$lib/comps/Tabs.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
-	import { Lightbox } from 'svelte-lightbox';
 
 	let { data } = $props();
 
@@ -67,13 +66,13 @@
 		</Crumb>
 	<!--------------introduction with details like date, pricing etc.------------------>
 	<section class="wrapper-std">
-		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 lg:cgap64 content-highlights" bind:this={ref}>
-			<Reveal visible={vis.visible} duration={500}>
+		<div class="grid grid-cols-1 md:grid-cols-2 rgap16 md:cgap32 lg:cgap64 content-highlights">
+			<Reveal>
 				<data.content />
 			</Reveal>
 		</div>
 		{#if data.quote}
-			<Reveal visible={vis.visible} delay={700}>
+			<Reveal>
 				<p class="txt-xl md:txt-2xl lg:txt-3xl lh15 italic source-serif width80 anveshi-o">{data.quote}</p>
 			</Reveal>
 		{/if}

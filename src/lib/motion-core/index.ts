@@ -1,3 +1,4 @@
+export { default as Carousel } from "./carousel/Carousel.svelte";
 export { default as FlipGrid } from "./flip-grid/FlipGrid.svelte";
 export { default as FlipGridItem } from "./flip-grid/FlipGridItem.svelte";
 export { default as FluidImageReveal } from "./fluid-image-reveal/FluidImageReveal.svelte";

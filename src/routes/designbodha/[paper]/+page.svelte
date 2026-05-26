@@ -28,8 +28,6 @@
 		border-bottom: var(--border-dark)
 		.classic-document
 			width: 1024px
-			border-left: var(--border-dark)
-			border-right: var(--border-dark)
 			background: var(--color-back)
 			margin-left: auto
 			margin-right: auto

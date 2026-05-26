@@ -1,0 +1,39 @@
+---
+title: A Dharmic Lens to Civilizational Theory
+description: "A redefinition of civilization and its pursuit, rooted in a dharmic way of things."
+author:
+  - Amritanshu Pandey
+category: Newsletter
+tags:
+  - civilizational consciousness
+excerpt: A redefinition of civilization and its pursuit, rooted in a dharmic way of things.
+date: 2026-05-24
+image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/dharmic-lens-civilizational-theory.webp
+words: "1126"
+---
+
+Scaling paradigms - whether Huntington's civilizational hierarchies, Kardashev's energy metrics, or Silicon Valley's disruption imperative - share a set of foundational assumptions: that progress moves linearly upward, that nature exists to be extracted, and that expansion is self-justifying. These are not incidental features. They are the operating logic.
+
+The ecological counter-argument is not new, but it has sharpened. Deep ecology, developed by Arne Næss and extended through Aldo Leopold's land ethic, insists that living systems have intrinsic value that cannot be subordinated to human utility. Leopold's concept of "thinking like a mountain" - long-term ecological reasoning that transcends human timescales - arose directly from watching wolves hunted to extinction and watching hillsides collapse into rivers afterward. He watched what happens when a landscape loses its balance. His conclusion was that treating land as commodity eventually destroys the commodity and everything else.
+
+Postcolonial analysis adds a second layer. Edward Said's work on Orientalism showed how civilizational hierarchies were not neutral scholarly categories but instruments of imperial justification. Aníbal Quijano extended this into what he called a "colonial matrix of power" - the arrangement of global hierarchies through the assumption that Western knowledge is universal knowledge. The point indigenous scholars like Linda Tuhiwai Smith have pressed is that complex cultural systems cannot be reduced to extractable data without distorting them beyond recognition. The modern world did not develop in a vacuum: it developed through systematic plunder of older worlds. That fact does not disappear because scaling models omit it.
+
+Contemporary decolonial practice takes concrete forms. Bolivia's constitutional recognition of sumak kawsay - living well, not living more - and Ecuador's legal rights of nature provisions are institutional attempts to embed alternative values into governance. Indigenous-led conservation, covering 22% of global land, protects 80% of the world's biodiversity. These are not utopian proposals. They are existing arrangements, functioning now.
+
+The Dhārmika philosophical tradition offers something different from a critique: a positive framework built at the level of language itself. Saṃskṛti, the Sanskrit word for civilization, combines sam (together, wholly, complete) with kṛti (making, creation) - civilization as collective, conscious, careful making. Western "culture" and "civilization" carry connotations of external acquisition or imposed order. Saṃskṛti does not. It implies that civilization is something communities do together, not something that happens to them.
+
+Dharma cuts deeper. Its root, dhṛ, means to hold, bear, sustain, support. Pāṇini defines the root as avadhvamsana - the staving off of disintegration. The opposing term, dhvamsana, means disintegration itself. What this etymology encodes is a view of existence as a continuous push and pull between coherence and collapse. The potter's wheel makes the point precisely: a clay blob left spinning under centrifugal force will fly apart. The potter's hands do not force the clay into shape; they hold the conditions under which shape becomes possible. That is Dharma - not law in the legislative sense, but the ongoing effort to maintain order against entropy.
+
+The Mahābhārata defines it plainly: Dharma sustains society, maintains social order, and ensures the welfare of living beings. The Śānti Parva dedicates over 350 chapters to its application in governance, economics, and social life. The Arthaśāstra demonstrates it in statecraft, where the ruler's first obligation is the welfare of subjects and the health of the land they inhabit.
+
+The Dhārmika framework also provides a direct account of why the present civilizational crisis exists. The puruṣārthas - the four primary callings of human life - are listed as dharma, artha, kāma, and mokṣa, and the ordering is not incidental. Ethical order grounds all action; material pursuit and desire operate within those constraints; liberation is the horizon. When artha and kāma are maximized without that grounding - which is precisely the operating logic of modern economic growth - the result is accumulation without limit, desire without direction, and no principle capable of calling a halt. The puruṣārthas name the mechanism of the current meta-crisis more precisely than most contemporary analysis does.
+
+Contemporary Japanese environmental historian Yasuda Yoshinori offers a bridge between these traditions and empirical history. His definition is worth taking seriously: civilization begins to arise when a people achieves accord with their local environment. His research distinguishes between forest-protecting civilizations, which developed in relationship with forested ecosystems over long periods, and forest-dominating civilizations, which cleared and extracted. The historical record is direct: Mesopotamia, the Maya, and other civilizations that degraded their ecological foundations did not survive. Japan's Jomon culture, which maintained sustainable forest management for millennia, did.
+
+The implication cuts against universalist development models. Local ecological adaptation is not an obstacle to be overcome by scaling solutions. It is the precondition for long-term civilizational viability. Homo sapiens has existed for at least 300,000 years. A planet approaching ecological catastrophe is a phenomenon of the last two centuries. The ancient majority of human existence was not civilizationally deficient - it was organized around the sustaining logic that contemporary environmental science is now painstakingly reconstructing.
+
+Climate disruption, mass extinction, and social fragmentation are not external shocks to a system otherwise functioning well. They are the outcomes of an economic model requiring roughly 3% annual growth - doubling the economy every 23 years - operating on a planet with fixed regenerative capacity. Ecological footprint accounting has been explicit about this: current middle-class consumption patterns require 1.7 Earths to sustain globally. The system is not approaching a limit. It has exceeded one.
+
+Bhutan's Gross National Happiness framework demonstrates that measuring differently changes what gets optimized. Nine domains - psychological wellbeing, health, cultural diversity, ecological resilience, governance quality, community vitality, time use, living standards, and education - assessed through national surveys every three years, produce development outcomes with low environmental impact. This is not a thought experiment. Bhutan has been running it.
+
+The choice between scaling and sustaining is not primarily about technology or policy instruments. It is about the questions asked at the beginning. Scaling asks: how much can we extract, and how fast? Sustaining asks: what can communities hold across generations, and how do we maintain balance within ecological limits? The Dhārmika tradition, the land ethics of Leopold, the indigenous governance systems that currently protect most of the world's remaining biodiversity - these converge on a single recognition: civilizational maturity is not measured by the scale of what a society consumes, but by the depth of what it knows how to hold.

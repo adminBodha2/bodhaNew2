@@ -15,8 +15,6 @@
 	let { data }: { data: PageData } = $props();
 	let researchAreas = $derived(data.researchAreas ?? []);
 	let researchItems = $derived(data.research ?? []);
-	let revealRef = $state<HTMLElement | null>(null);
-	let revealVis = useInView(() => revealRef, { threshold: 0.4, once: true });
 	let reveal2 = $state<HTMLElement | null>(null);
 	let vis2 = useInView(() => reveal2, { threshold: 0.5, once: true });
 
@@ -30,7 +28,7 @@
 			description: metaDescription,
 			url: metaUrl,
 			image: metaImage
-		})
+		})	
 	);
 </script>
 
@@ -40,14 +38,14 @@
 <Container>
 	<Crumb showT={true} title="Research" showD={true} desc="Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities." />
 	<section class="wrapper-std">
-		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64 ptop16" bind:this={revealRef}>
-			<Reveal visible={revealVis.visible} duration={600}>
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64 ptop16">
+			<Reveal>
 				<p class="highlight-text">
 					A standing complaint of Hindu society is that India’s policy does not take into account Hindu cultural sensibilities. Research at Bodha looks to provide policy inputs gleaned from extensive multidisciplinary research in culture studies, particularly in ethnography, anthropology, and sociology. India is a living civilization whose soul resides in its practices and not just in principles.
 					Shying away from dogmas, it has always coupled theories with practices and experiences. Any recommendation which seeks to push India’s policy closer to Hindu culture has to come from wisdom gleaned with authenticity, based upon extremely rigorous but culture sensitive research methodology.
 				</p>
 			</Reveal>
-			<Reveal visible={revealVis.visible} duration={400} delay={400}>
+			<Reveal start="top 60%">
 				<p class="highlight-text">
 					Our goal is to make experimental methodology central to policy recommendations so that policy in future India is conducive to India’s culture and also practical and capable of competing with global forces. A key component of this is cultural furtherance in education and education policy, giving us a clear mandate to develop work in service of the Indian Knowledge Systems, through
 					case-studies, curriculum development, and more.
@@ -65,7 +63,7 @@
 							<img class="fitted herocard" src={area.image} alt={area.title} />
 						</div>
 						<div class="area-inner-body box p16 lg:p32 rgap16">
-							<h2 class="source-serif txt-3xl w690">{area.title}</h2>
+							<h2 class="txt-3xl w690">{area.title}</h2>
 							<div class="area-inner-body-links box">
 								{#each area.items as item, i}
 									<div class="project-holder">

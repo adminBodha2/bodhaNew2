@@ -227,3 +227,21 @@ export async function scrollsofA(){
 	)
 	return eachfiled.sort((a, b) => b.meta.id - a.meta.id);
 }
+
+export async function pramanaCards(){
+	const posts = import.meta.glob('/src/routes/designbodha/pramana-library/*.md')
+	const allfiles = { ...posts };
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async ([path,resolver]) => {
+			//@ts-expect-error//why
+			const {metadata} = await resolver()
+			const pathitem = path.slice(11,-3)
+			return {
+				meta: metadata,
+				linkpath: pathitem
+			};
+		})
+	)
+	return eachfiled
+}

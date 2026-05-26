@@ -1,5 +1,5 @@
 ---
-title: "Recollection: The Glory of Śrī Kṛṣṇa Janmāṣṭamī"
+title: Recollection - The Glory of Śrī Kṛṣṇa Janmāṣṭamī
 description: "A pilgrimage to Mathura and an encounter with Krishna Janmashtami, sacred geography, and living divine presence."
 author:
   - Pankaj Saxena

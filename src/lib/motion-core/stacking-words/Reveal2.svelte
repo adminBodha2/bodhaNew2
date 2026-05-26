@@ -26,12 +26,9 @@
         ...restProps
     }: Props = $props();
 
-    let wrapperRef: HTMLElement | null = null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let wrapperRef = $state<HTMLElement | null>(null);
     let splitInstanceLines: any = null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let splitInstanceWords: any = null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let lineTweens: any[] = [];
 
     const attachWrapperRef = (node: HTMLElement) => {
@@ -77,7 +74,6 @@
             resolvedScroller instanceof HTMLElement ? resolvedScroller : window;
 
         let cancelled = false;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let ctx: any = null;
 
         const init = async () => {
@@ -87,7 +83,7 @@
             gsap.registerPlugin(ScrollTrigger, SplitText);
 
             await waitForLayout();
-            if (cancelled || !wrapperRef) return;
+            if (cancelled) return;
 
             ctx?.revert();
             ctx = null;
@@ -97,7 +93,7 @@
 
             ctx = gsap.context(() => {
                 // 1. First split by lines to create the outer overflow-hidden wrappers
-                splitInstanceLines = SplitText.create(wrapperRef, {
+                splitInstanceLines = SplitText.create(node, {
                     aria: "hidden",
                     autoSplit: true,
                     linesClass: "reveal-mask",
@@ -123,7 +119,7 @@
                             yPercent: 0,
                             stagger: lineStagger,
                             scrollTrigger: {
-                                trigger: wrapperRef,
+                                trigger: node,
                                 start: triggerStart,
                                 end: triggerEnd,
                                 scrub: triggerScrub,
@@ -137,7 +133,7 @@
                     }
                 });
 
-                gsap.set(wrapperRef, { autoAlpha: 1 });
+                gsap.set(node, { autoAlpha: 1 });
             }, node);
         };
 

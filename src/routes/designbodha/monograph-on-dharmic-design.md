@@ -11,14 +11,7 @@ This monograph asserts that modern design, in its obsession with anthropocentric
 
 To understand the necessity of a Dharmic approach, it is essential to contrast it with the dominant Western design paradigms that have shaped our modern infrastructure and digital ecosystems.
 
-| Dimension             | Western / Reductionist Paradigm                                                                                            | Dharmic / Integrative Paradigm                                                                                                                    |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Philosophical Root    | Anthropocentric: Design centers on human desire and immediate user convenience, often at the expense of the periphery. | Cosmocentric: Design centers on the individual's resonance with the cosmic order (Ṛta), recognizing the self as a microcosm of the whole. |
-| Temporal Logic        | Linear: Focused on the immediate product lifecycle, quarterly growth, and planned obsolescence.                        | Cyclic / Karmic: Focused on the eternal recurrence of cause and effect; designs are evaluated by their multi-generational impact.             |
-| Material Relationship | Extractive: Nature is viewed as a resource "inventory" to be managed, optimized, and consumed.                         | Elemental (Pancha Bhuta): Nature is an extension of the self; materials are sacred constituents to be harmonized, not just used.              |
-| Primary Metric        | Utility & Profit: Success is measured by efficiency, friction-reduction, and ROI.                                      | Balance & Harmony (Samatva): Success is measured by the restoration of equilibrium and collective welfare (Lokasangraha).                 |
-| Ethical Framework     | Rights-Based / Legalistic: Adherence to external regulations, safety standards, and user rights.                       | Duty-Based (Dharma): Adherence to internal ethical responsibility; design is viewed as a moral act with karmic consequence.                   |
-| Digital Intent        | Attention-Driven: Uses "dark patterns" and neuro-hacking to maximize time-on-device for data extraction.               | Cognitive Purity (Sattvic): Prioritizes mental clarity (Chitta-Shuddhi), transparency (Satya), and non-harm (Ahimsa).             |
+<img src="/images/designbodha/monograph-table.webp" alt="table comparing dominant vs dharmic paradigms"/>
 
 The current design orthodoxy suffers from an architectural and digital tamas - state of inertia and ignorance regarding systemic consequences:
 1. Ecological Fragmentation: By treating the environment as an "externality," modern architecture and product design have disrupted the Pancha Bhuta (the five elements). This has resulted in a built environment that is often bio-antagonistic, requiring massive energy inputs to remain habitable.

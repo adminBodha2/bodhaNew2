@@ -49,10 +49,8 @@
 		...restProps
 	}: ComponentProps = $props();
 
-	let wrapperRef: HTMLSpanElement | undefined;
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let wrapperRef = $state<HTMLSpanElement | undefined>();
 	let splitInstance: any = null;
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let hoverTimeline: any = null;
 
 	const attachWrapperRef = (node: HTMLSpanElement) => {
@@ -87,13 +85,16 @@
 		hoverTimeline = null;
 		splitInstance?.revert();
 
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		let cancelled = false;
+		let cleanupListeners: (() => void) | null = null;
 		let ctx: any = null;
 
 		const init = async () => {
 			const { gsap } = await import("gsap");
 			const { SplitText } = await import("gsap/SplitText");
 			gsap.registerPlugin(SplitText);
+
+			if (cancelled) return;
 
 			const createScrambleTimeline = (nodes: HTMLElement[]) => {
 				if (!nodes.length) return null;
@@ -167,7 +168,7 @@
 				target.addEventListener("mouseenter", handleEnter);
 				target.addEventListener("mouseleave", handleLeave);
 
-				return () => {
+				cleanupListeners = () => {
 					target.removeEventListener("mouseenter", handleEnter);
 					target.removeEventListener("mouseleave", handleLeave);
 				};
@@ -177,7 +178,12 @@
 		void init();
 
 		return () => {
+			cancelled = true;
+			cleanupListeners?.();
+			cleanupListeners = null;
 			ctx?.revert();
+			ctx = null;
+			hoverTimeline?.kill();
 			hoverTimeline = null;
 			splitInstance?.revert();
 			splitInstance = null;

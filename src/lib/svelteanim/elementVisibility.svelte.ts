@@ -1,5 +1,6 @@
 // ── Components ────────────────────────────────────────────────────────────────
 export { default as Slide }  from './components/Slide.svelte';
+export { default as Slide2 } from './components/Slide2.svelte';
 export { default as Reveal } from './components/Reveal.svelte';
 export { default as Scale }  from './components/Scale.svelte';
 export { default as Blur }   from './components/Blur.svelte';

@@ -72,13 +72,13 @@
 		{/if}
 		{#if showRow}
 		<div class="box rgap32">
-			<div class="whitecard box width60"><p class="txt-bs lg:txt-lg lh14 grey3">{desc}</p></div>
+			<div class="whitecard box width60"><p class="txt-bs lg:txt-lg lh14 grey2">{desc}</p></div>
 			<div class="box whitecard">
 				{@render children?.()}
 			</div>
 		</div>
 		{:else}
-		<p class="txt-bs lg:txt-lg lh14 grey3" class:width50={!centered && !fullP}>{desc}</p>
+		<p class="txt-bs lg:txt-lg lh14 grey2" class:width50={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 
