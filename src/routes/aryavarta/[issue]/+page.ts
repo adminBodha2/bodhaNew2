@@ -1,6 +1,6 @@
 export async function load({ params } : { params: { issue: string } }) {
 	const post = await import (`../${params.issue}.md`);
-	const { title, volume, issue, description, id, image, date, pdflink } = post.metadata;
+	const { title, volume, issue, description, id, image, date, pdflink, pdfhindi } = post.metadata;
 	const content = post.default;
 	return {
 		content,
@@ -11,6 +11,7 @@ export async function load({ params } : { params: { issue: string } }) {
 		id,
 		image,
 		date,
-		pdflink
+		pdflink,
+		pdfhindi
 	}
 }

@@ -4,6 +4,8 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	const title = 'Scrolls of Aryavarta | Bodha';
@@ -63,29 +65,41 @@
 <Container>
 <Crumb showT={true} title="Scrolls of Aryavarta" showD={true} desc="A creative project in cultural storytelling through digital comics, recreating legends, triumphs, struggles, and tragedies from Indian history." />
 	<section class="wrapper-std">
-		<div class="box rgap8">
-			<p class="txt-lg">To receive the fortnightly issues in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
+			<div class="box rgap16">
+			<Reveal>
+				<p class="highlight-text">
+					Scrolls of Aryavarta is an exercise in creative cultural storytelling, to recreate the Bharata that once was, or could have been. Featuring digital comics exploring different facets of Indian history.
+				</p>
+			</Reveal>
+			<Reveal>
+				<p class="highlight-text">New issue every fortnight. <span class="w600">To receive in your inbox, <a href="/members" class="linked">please subscribe.</a></span></p>
+			</Reveal>
+			</div>
+			<div class="box rgap16">
+			<Reveal>
+				<p class="highlight-text">
+					Currently running Volume 1 - The Story of Islamic Imperialism in India, based on the works of Shri Sita Ram Goel, narrating what historian Will Durant called the “bloodiest chapter in human history."
+				</p>
+			</Reveal>
+			<Reveal>
+				<p class="highlight-text"><a class="linked" href="/blog/about-scrolls-of-aryavarta">Read more</a> about Scrolls of Aryavarta.</p>
+			</Reveal>
+			</div>
 		</div>
+		<Slide targetSelector=".comic-item">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 cgap16 rgap16">
 			{#each posts as item}
-				<a class="blank box comic-card whitestone" href={item.linkpath}>
-					<img class="fitted herocard" src={item.meta.image} alt={item.meta.title} />
-					<div class="box comic-data-main p24 lg:p32 rgap16">
-						<p class="txt-2xl w600 a-hover">{item.meta.title}</p>
+				<a class="blank box rgap24 whitestone b-main std-pad comic-item" href={item.linkpath}>
+					<div><img class="fitted landscape" src={item.meta.image} alt={item.meta.title} /></div>
+					<div class="box gap16">
+						<p class="txt-xl lg:txt-2xl w600 a-hover">{item.meta.title}</p>
 						<p class="grey1 txt-lg">{item.meta.description}</p>
-					</div>
-					<div class="self-bottom bordertop px24 lg:px32 py8">
 						<p class="txt-xs w500 tt-u">Vol. {item.meta.volume}, Issue {item.meta.issue} | {item.meta.date}</p>
 					</div>
 				</a>
 			{/each}
 		</div>
+		</Slide>
 	</section>
 </Container>
-
-<style lang="sass">
-
-.comic-card
-	border: var(--border-dark)
-
-</style>

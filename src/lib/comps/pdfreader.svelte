@@ -25,11 +25,13 @@
 	let {
 		src,
 		title = 'PDF Reader',
-		height = '82vh'
+		height = '82vh',
+		doubleSpread = false
 	}: {
 		src: string;
 		title?: string;
 		height?: string;
+		doubleSpread?: boolean;
 	} = $props();
 
 	let scrollStrategy = $state(ScrollStrategy.Vertical);
@@ -59,7 +61,7 @@
 			maxZoom: 4
 		}),
 		createPluginRegistration(SpreadPluginPackage, {
-			defaultSpreadMode: SpreadMode.None
+			defaultSpreadMode: doubleSpread ? SpreadMode.Odd : SpreadMode.None
 		}),
 		createPluginRegistration(RotatePluginPackage)
 	]);
