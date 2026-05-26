@@ -53,7 +53,7 @@
 		start = 'top 90%',
 		end = 'bottom 40%',
 		scrub = true,
-		replay = false,
+		replay = true,
 		targetSelector,
 		scrollElement,
 		display = 'block',

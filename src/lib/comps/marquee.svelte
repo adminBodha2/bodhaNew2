@@ -58,7 +58,7 @@
 <style>
 	.marquee {
 		display: flex;
-		gap: var(--gap);
+		gap: 1rem;
 		overflow: hidden;
 	}
 
@@ -90,9 +90,7 @@
 		display: flex;
 		flex-shrink: 0;
 		justify-content: space-around;
-		gap: 1px;
-		background: var(--color-border);
-		border: var(--border-main);
+		gap: 1rem;
 		min-width: 100%;
 		animation: marquee-left var(--duration) linear infinite;
 	}

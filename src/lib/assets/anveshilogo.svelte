@@ -52,25 +52,25 @@ svg {
   stroke-dasharray: 337.1178894042969px;
   fill: transparent;
   transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.1s,
-                fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s;
+                fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.18s;
 }
 
 svg.active .svg-elem-1 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-2 {
   stroke-dashoffset: 351.0233154296875px;
   stroke-dasharray: 351.0233154296875px;
   fill: transparent;
-  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.34s,
-                fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.18s,
+                fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.18s;
 }
 
 svg.active .svg-elem-2 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-3 {
@@ -78,12 +78,12 @@ svg .svg-elem-3 {
   stroke-dasharray: 312.43212890625px;
   fill: transparent;
   transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s,
-                fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s;
+                fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.18s;
 }
 
 svg.active .svg-elem-3 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-4 {
@@ -96,7 +96,7 @@ svg .svg-elem-4 {
 
 svg.active .svg-elem-4 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-5 {
@@ -109,7 +109,7 @@ svg .svg-elem-5 {
 
 svg.active .svg-elem-5 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-6 {
@@ -122,7 +122,7 @@ svg .svg-elem-6 {
 
 svg.active .svg-elem-6 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-7 {
@@ -135,7 +135,7 @@ svg .svg-elem-7 {
 
 svg.active .svg-elem-7 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-8 {
@@ -161,7 +161,7 @@ svg .svg-elem-9 {
 
 svg.active .svg-elem-9 {
   stroke-dashoffset: 0;
-  fill: #FFFFFF;
+  fill: #080808;
 }
 
 svg .svg-elem-10 {

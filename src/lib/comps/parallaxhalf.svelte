@@ -88,7 +88,7 @@
 	width: 100%
 	padding-left: 1rem
 	padding-right: 1rem
-	aspect-ratio: 16/9
+	aspect-ratio: 16/12
 	.imager
 		width: 100%
 		margin-left: auto
@@ -96,7 +96,7 @@
 	@media (min-width: 1025px)
 		padding-left: 1rem
 		padding-right: 1rem
-		aspect-ratio: 16/8
+		aspect-ratio: 16/10
 		.imager
 			width: 992px
 	@media (min-width: 1201px)
@@ -104,7 +104,7 @@
 		.imager
 			width: 1168px
 	@media (min-width: 1441px)
-		aspect-ratio: 16/6
+		aspect-ratio: 17/7
 		.imager
 			width: 1408px
 	@media (min-width: 1601px)

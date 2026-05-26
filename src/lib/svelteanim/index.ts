@@ -4,6 +4,7 @@ export { default as Slide2 } from './components/Slide2.svelte';
 export { default as Reveal } from './components/Reveal.svelte';
 export { default as Scale }  from './components/Scale.svelte';
 export { default as Blur }   from './components/Blur.svelte';
+export { default as Spring } from './components/Spring.svelte';
 
 // ── Raw transition functions ──────────────────────────────────────────────────
 // Use these directly with Svelte's in:/out: directives for full control.
@@ -11,6 +12,8 @@ export { slide }   from './transitions/slide.js';
 export { reveal }  from './transitions/reveal.js';
 export { scaleIn } from './transitions/scale.js';
 export { blurIn }  from './transitions/blur.js';
+export { springIn, springOut } from './transitions/spring.js';
+export type { SpringParams } from './transitions/spring.js';
 
 // ── Composables ───────────────────────────────────────────────────────────────
 export { useInView } from './utils/useInView.svelte.js';
