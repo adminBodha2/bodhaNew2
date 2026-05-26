@@ -12,18 +12,11 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Reveal from '$lib/motion-core/stacking-words/RevealingLines.svelte';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
-	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
-	import Tabs from '$lib/comps/Tabs.svelte';
-	import * as Carousel from '$lib/svelteanim/carousel-native/index';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
 
 	let templeStatus = $state(0);
-	let ref = $state<HTMLElement | null>(null);
-	let slref = $state<HTMLElement | null>(null);
-	let vis = useInView(() => ref, { threshold: 0.5, once: true });
-	let slvis = useInView(() => ref, { threshold: 0.9, once: true });
 	let iW = $state(0);
 
 	let itins = $derived(data.itins ?? []);
