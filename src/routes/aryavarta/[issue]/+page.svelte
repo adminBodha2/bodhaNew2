@@ -69,23 +69,3 @@
 		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-
-.main-btn
-	padding: 0.4rem 1rem
-	border: var(--border-dark)
-	border-radius: 4px
-	background: var(--color-stone-3)
-	font-size: 0.9rem
-	cursor: pointer
-	color: var(--color-primary)
-	transition: background 0.15s, color 0.15s
-	&:hover
-		background: var(--color-theme)
-		color: #FFFFFF
-	&.active
-		background: var(--color-theme-dark)
-		color: var(--color-back)
-		border-color: var(--color-theme-dark)
-</style>

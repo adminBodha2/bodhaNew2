@@ -6,7 +6,7 @@
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import '$lib/styles/system/index.sass';
 	import '$lib/styles/icons.css';
-	import { darkTheme, iW, openSiteTourSelector, searchState, readerChromeHidden, toggleTheme } from '$lib/utils/globalstores';
+	import { darkTheme, iW, openSiteTourSelector, searchState, toggleTheme } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
@@ -70,7 +70,7 @@ onNavigate((navigation) => {
 </svelte:head>
 
 <div class="app-box" class:light={!$darkTheme} class:dark={$darkTheme} class:mobile={$iW} class:desk={!$iW}>
-	<header class="row ycenter" class:reader-hidden={$readerChromeHidden}>
+	<header class="row ycenter">
 		<Header />
 	</header>
 	<main>
@@ -117,13 +117,9 @@ header
 	@media screen and (min-width: 1025px)
 		height: 80px
 		margin-bottom: -80px
-		&.reader-hidden
-			top: -80px
 	@media screen and (max-width: 1024px)
 		height: 64px
 		margin-bottom: -64px
-		&.reader-hidden
-			top: 0
 
 footer
 	width: 100%

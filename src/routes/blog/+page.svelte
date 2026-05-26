@@ -3,7 +3,10 @@
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import PageHead from '$lib/comps/page-header-one.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
+	import autoAnimate from '@formkit/auto-animate';
+	import { staggerAnimatePlugin } from '$lib/svelteanim/utils/staggerPlugin';
 	import '$lib/styles/system/blog.sass';
 	import Title from '$lib/comps/page-title.svelte';
 	import ResponsiveMenu from '$lib/comps/responsive-menu-2.svelte';
@@ -54,8 +57,9 @@
 	let externalPosts = $derived(((data.externalPosts ?? []) as ExternalPost[]).slice(0, 6));
 	let tags = $derived(((data.tags ?? []) as TagCount[]).slice(0, 18));
 	let heroPosts = $derived(posts.slice(0, 3));
+	let secondLPosts = $derived(posts.slice(3, 6));
 	let gridPosts = $derived(posts.filter((post) => selectedCategory === 'All' || postCategories(post).includes(selectedCategory)));
-	let articlePosts = $derived(gridPosts.filter((post) => !heroPosts.some((hero) => hero.linkpath === post.linkpath)));
+	let articlePosts = $derived(gridPosts);
 	let visibleArticlePosts = $derived(articlePosts.slice(0, visibleArticleCount));
 	let hasMoreArticles = $derived(visibleArticleCount < articlePosts.length);
 
@@ -130,84 +134,97 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="wrapper-std header-margin" style="row-gap: 0">
-		<Crumb showT={false} title="Bodha Blog" showRow={true}>
-			<ResponsiveMenu>
-				<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
-				<a class="small-button tt-u" href="/blog/writers">Writers</a>
-				<a class="small-button tt-u" href="/blog/tags">Tags</a>
-			</ResponsiveMenu>
-		</Crumb>
-		<div class="blog-wrapper">
-			<!-------------latest 3 posts---------------------------------->
-			{#if heroPosts.length > 0}
-				<section class="lead-panel lg:ptop32">
-					<a class="featured-essay blank" href={heroPosts[0].linkpath}>
-						{#if heroPosts[0].meta.image}
-							<img class="fitted herocard" src={heroPosts[0].meta.image} alt={heroPosts[0].meta.title} />
-						{/if}
-						<div class="featured-overlay"></div>
-						<div class="featured-copy box p32 rgap16">
-							<p class="white lh14">{heroPosts[0].meta.excerpt}</p>
-							<h2 class="txt-3xl lg:txt-4xl w600 white">{heroPosts[0].meta.title}</h2>
-							<div class="row wrap cgap8 rgap8 ycenter">
-								{#each authors(heroPosts[0]) as author}
-									<p class="citation white">{author} |</p>
-								{/each}
-								<p class="citation white">{heroPosts[0].formattedDate} |</p>
-								{#if heroPosts[0].meta.words}
-									<p class="citation white">{heroPosts[0].meta.words} words</p>
+	<PageHead title="Blog | Bodha" />
+	<section class="wrapper-std header-margin" style="row-gap: 2rem">
+		<ResponsiveMenu>
+			<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
+			<a class="small-button tt-u" href="/blog/writers">Writers</a>
+			<a class="small-button tt-u" href="/blog/tags">Tags</a>
+		</ResponsiveMenu>
+		<div class="blog-bucket">
+			<div class="mainarea">
+				<div class="heroposts">
+					{#if heroPosts.length > 0}
+						<div class="featured">
+							<a class="featured-essay blank" href={heroPosts[0].linkpath}>
+								{#if heroPosts[0].meta.image}
+									<img class="fitted herocard" src={heroPosts[0].meta.image} alt={heroPosts[0].meta.title} />
 								{/if}
-							</div>
-							<div class="row wrap cgap4 rgap4">
-								{#each postCategories(heroPosts[0]) as category}
-									<span class="tag-pill tt-u">{category}</span>
-								{/each}
-							</div>
-						</div>
-					</a>
-				</section>
-				<section class="highlight-panel lg:ptop32" aria-label="Highlighted essays">
-					{#each heroPosts.slice(1) as post, i}
-						<a class="box rgap16 blank hc{i}" class:with-image={i === 0} href={post.linkpath}>
-							{#if i === 0 && post.meta.image}
-								<img class="fitted landscape radius4" src={post.meta.image} alt={post.meta.title} />
-							{/if}
-							<div class="box pbot8">
-								<p class="txt-xs tt-u w500 theme">{primaryCategory(post)}</p>
-								<p class="txt-xl w600 ptop8 pbot8 a-hover">{post.meta.title}</p>
-								<div class="row wrap cgap4 rgap4 ptop8">
-									{#each (post.meta.tags ?? []).slice(0, 3) as tag, i}
-										<p class="txt-00 tt-u w500 grey0">
-											{#if i > 0}|
-											{/if}
-											{tag.replaceAll('-', ' ')}
-										</p>
-									{/each}
+								<div class="featured-overlay"></div>
+								<div class="featured-copy box p16 md:p24 lg:p32 rgap16">
+									<h2 class="txt-2xl md:txt-3xl lg:txt-4xl w500 white">{heroPosts[0].meta.title}</h2>
+									<p class="sm:txt-sm white lh14">{heroPosts[0].meta.excerpt}</p>
+									<div class="row wrap cgap8 rgap8 ycenter">
+										{#each authors(heroPosts[0]) as author}
+											<p class="citation white">{author} |</p>
+										{/each}
+										<p class="citation white">{heroPosts[0].formattedDate} |</p>
+										{#if heroPosts[0].meta.words}
+											<p class="citation white">{heroPosts[0].meta.words} words</p>
+										{/if}
+									</div>
+									<div class="row wrap cgap4 rgap4">
+										{#each postCategories(heroPosts[0]) as category}
+											<p class="txt-xs w500 white tt-u">{category}</p>
+										{/each}
+									</div>
 								</div>
-								<p class="txt-xs tt-u w500 grey2 ptop4">{post.formattedDate} · {post.meta.words ?? ' '} words</p>
-							</div>
-						</a>
-					{/each}
-				</section>
-			{/if}
-
-			<!-------------sidebar with external posts, writers, tags---------------------------------->
-			<aside class="blog-sidebar lg:ptop32">
-				<section class="sidebar-section" id="external-posts">
+							</a>
+						</div>
+						<div class="highlight2 box rgap16 lg:rgap32" aria-label="Highlighted essays">
+							{#each heroPosts.slice(1) as post, i}
+								<a class="box rgap8 blank" class:with-image={i === 0} href={post.linkpath}>
+									{#if i === 0 && post.meta.image}
+										<img class="fitted landscape pbot8" src={post.meta.image} alt={post.meta.title} />
+									{/if}
+									<div class="box pbot8">
+										<p class="txt-xs tt-u w500 theme">{primaryCategory(post)}</p>
+										<p class="txt-xl w600 ptop8 pbot8 a-hover lh11">{post.meta.title}</p>
+										<div class="row wrap cgap4 rgap4 ptop8">
+											{#each (post.meta.tags ?? []).slice(0, 3) as tag, i}
+												<p class="txt-00 tt-u w500 grey0">
+													{#if i > 0}|
+													{/if}
+													{tag.replaceAll('-', ' ')}
+												</p>
+											{/each}
+										</div>
+										<p class="txt-xs tt-u w500 grey2 ptop4">{post.formattedDate} · {post.meta.words ?? ' '} words</p>
+									</div>
+								</a>
+							{/each}
+						</div>
+					{/if}
+				</div>
+				<div class="otherposts grid grid-cols-1 lg:grid-cols-3 rgap32 cgap16 lg:cgap48">
+					{#if secondLPosts.length > 0}
+						{#each secondLPosts as item}
+							<a class="box blank rgap8 lg:rgap16" href={item.linkpath}>
+								<img class="fitted" src={item.meta.image} alt={item.meta.title} style="aspect-ratio: 16/6"/>
+								<div class="box rgap8">
+									<p class="txt-lg w600 a-hover">{item.meta.title}</p>
+									<p class="txt-xs tt-u w500 grey1">{item.meta.author}</p>
+								</div>
+							</a>
+						{/each}
+					{/if}
+				</div>
+			</div>
+			<div class="sidearea">
+				<div class="sidebar-section" id="external-posts">
 					<a class="txt-xs tt-u grey0 section-titler" href="/blog/external">External posts →</a>
 					<div class="external-list">
 						{#each externalPosts.slice(0, 5) as post}
 							<a class="external-item blank" href={post.route} target="_blank" rel="noreferrer">
 								<div class="box rgap8">
-									<p class="txt-lg w600 lh12">{post.title}</p>
+									<p class="w600 lh12">{post.title}</p>
 									<p class="txt-00 tt-u w500 theme">{post.platform}</p>
 								</div>
 							</a>
 						{/each}
 					</div>
-				</section>
-				<section class="sidebar-section lg:ptop16 lg:pbot16" id="writers-section">
+				</div>
+				<div class="sidebar-section lg:ptop16 lg:pbot16" id="writers-section">
 					<a class="txt-xs tt-u grey0 section-titler" href="/blog/writers">Writers →</a>
 					<div class="writer-row">
 						{#each allWriters as item}
@@ -216,41 +233,44 @@
 							</a>
 						{/each}
 					</div>
-				</section>
-				<section class="sidebar-section lg:ptop16" id="tags-section">
+				</div>
+				<div class="sidebar-section lg:ptop16" id="tags-section">
 					<a class="txt-xs tt-u grey0 section-titler" href="/blog/tags">Popular Tags →</a>
 					<div class="chip-cloud">
 						{#each tags.slice(0, 8) as item}
 							<a class="txt-xs tt-u w500 theme" href={tagUrl(item.tag)}>{item.tag.replaceAll('-', ' ')}</a>
 						{/each}
 					</div>
-				</section>
-			</aside>
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-------------all posts, by category---------------------------------->
-	<section class="wrapper-std tightpads">
+	<section class="wrapper-std growingline" id="all-articles">
 		<Title text="All Articles" />
+		<Slide targetSelector=".small-button">
 		<ResponsiveMenu2>
 			<button class="small-button tt-u" class:active={selectedCategory === 'All'} onclick={() => selectCategory('All')}>
-				All <span> - {posts.length}</span>
+				All
 			</button>
 			{#each categories as item}
 				<button class="small-button tt-u" class:active={selectedCategory === item.category} onclick={() => selectCategory(item.category)}>
-					{item.category} <span> - {item.count}</span>
+					{item.category}
 				</button>
 			{/each}
 		</ResponsiveMenu2>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
-			{#each visibleArticlePosts as post}
-				<article class="box b-main radius8 glass-2">
-					<div class="p8 box rgap8">
+		</Slide>
+		<Slide targetSelector=".blog-item" start="top 95%" end="bottom: 70%">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" use:autoAnimate={staggerAnimatePlugin({ stagger: 80, duration: 300 })}>
+			{#each visibleArticlePosts as post (post.linkpath)}
+				<article class="box b-main blog-item">
+					<div class="p8">
 						{#if post.meta.image}
 							<img class="fitted landscape radius4" src={post.meta.image} alt={post.meta.title} />
 						{/if}
 					</div>
 					<a class="blank box rgap16 p16" style="height: 100%" href={post.linkpath}>
-						<p class="txt-2xl w600">{post.meta.title}</p>
+						<p class="txt-xl w600">{post.meta.title}</p>
 						<p class="lh14 grey1">{post.meta.excerpt}</p>
 					</a>
 					<div class="box self-bottom bordertop ptop8 rgap4 p16">
@@ -264,6 +284,7 @@
 				</article>
 			{/each}
 		</div>
+		</Slide>
 		{#if hasMoreArticles}
 			<div class="load-more-wrap">
 				<button class="load-more-button" type="button" onclick={loadMoreArticles}>
@@ -272,10 +293,62 @@
 				</button>
 			</div>
 		{/if}
+
 	</section>
 </Container>
 
 <style lang="sass">
+
+.blog-bucket
+	display: grid
+	grid-template-columns: 1fr
+	grid-template-rows: 1fr
+	column-gap: 3rem
+	row-gap: 2rem
+	grid-auto-flow: row
+	grid-template-areas: "mainarea" "sidearea"
+	@media (min-width: 1025px)
+		grid-template-columns: 1fr 1fr 1fr 0.8fr
+		grid-template-areas: "mainarea mainarea mainarea sidearea"
+		column-gap: 2rem
+	@media (min-width: 1201px)
+		column-gap: 3rem
+
+.mainarea
+	display: flex
+	flex-direction: column
+	row-gap: 2rem
+	grid-area: mainarea
+	@media (min-width: 1025px)
+		row-gap: 2rem
+	@media (min-width: 1201px)
+		column-gap: 3rem
+
+.heroposts
+	grid-area: heroposts
+	display: grid
+	column-gap: 3rem
+	grid-template-columns: 1fr
+	grid-template-areas: "featured" "highlight2"
+	row-gap: 2rem
+	@media (min-width: 1025px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: "featured featured highlight2"
+		column-gap: 2rem
+	@media (min-width: 1201px)
+		column-gap: 3rem
+
+.featured
+	grid-area: featured
+
+.highlight2
+	grid-area: highlight2
+
+.otherposts
+	grid-area: otherposts
+
+.sidearea
+	grid-area: sidearea
 
 #external-posts
 	@media (min-width: 1025px)
@@ -286,11 +359,8 @@
 		gap: 0
 		padding-top: 0
 		.section-titler
-			padding-top: 1rem
 			padding-left: 1rem
 			padding-bottom: 1rem
-			background: var(--color-grey-2)
-			color: #FFFFFF
 			&:hover
 				color: var(--color-theme)
 
@@ -299,38 +369,24 @@
 		padding: 2rem 1rem
 		border-radius: 8px
 
-.blog-wrapper
-	display: grid
-	align-items: start
-	@media screen and (min-width: 1025px)
-		grid-template-columns: 2fr 1fr 1fr
-		column-gap: 2rem
-		row-gap: 1px
-		border-bottom: var(--border-dark)
-	@media screen and (max-width: 1024px)
-		gap: 1rem
-		padding-top: 1rem
-
-.lead-panel, .highlight-panel, .article-panel, .blog-sidebar
-	background: var(--color-back)
-
 .featured-essay
 	position: relative
 	display: flex
-	height: 660px
+	height: 440px
 	overflow: hidden
-	border-radius: 8px
+	border-radius: 2px
+	.featured-overlay
+		background: linear-gradient(0deg, rgba(0,0,0,0.94), rgba(0,0,0,0.62) 58%, rgba(0,0,0,0.39))
+		transition: all 360ms ease
+		position: absolute
+		inset: 0
 	@media screen and (min-width: 1025px)
-		height: 520px
-		.featured-copy h2
-			transition: transform 0.28s ease
-		.featured-copy p.lh14.white
-			opacity: 0
+		height: 100%
+		.featured-overlay
+			background: linear-gradient(0deg, rgba(0,0,0,0.94), rgba(0,0,0,0.52) 48%, rgba(0,0,0,0.3))
 		&:hover
-			.featured-copy p.lh14.white
-				opacity: 1
 			.featured-overlay
-				background: linear-gradient(0deg, rgba(0,0,0,0.94), rgba(0,0,0,0.52) 48%, rgba(0,0,0,0.3))
+				opacity: 0.5
 
 .fitted.herocard
 	position: absolute
@@ -341,79 +397,12 @@
 	transition: transform 0.28s ease
 	filter: grayscale(0.2)
 
-.featured-overlay
-	position: absolute
-	inset: 0
-	background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0) 48%, rgba(0,0,0,0.9))
-	transition: opacity 0.28s ease
-
 .featured-copy
 	position: relative
 	z-index: 1
 	justify-content: flex-end
 	p
 		transition: opacity 0.28s ease
-
-.highlight-panel
-	display: grid
-	gap: 1px
-	@media screen and (min-width: 1025px)
-		min-height: 520px
-		grid-template-rows: auto 1fr
-		row-gap: 1rem
-	@media screen and (max-width: 1024px)
-		gap: 1rem
-
-.highlight-card
-	display: grid
-	overflow: hidden
-	&.with-image
-		grid-template-rows: 160px auto
-	@media screen and (min-width: 1025px)
-		&.with-image
-			grid-template-rows: 200px auto
-
-.hc0
-	border-bottom: var(--border-main)
-	@media screen and (max-width: 1024px)
-		padding-bottom: 1rem
-
-.article-panel
-	display: flex
-	flex-direction: column
-	gap: 1rem
-	min-width: 0
-	@media screen and (min-width: 1025px)
-		grid-column: 1 / 3
-		border-top: var(--border-dark)
-		margin-top: 2rem
-		gap: 2rem
-
-.article-grid
-	display: grid
-	gap: 1px
-	overflow: hidden
-	@media screen and (min-width: 1025px)
-		grid-template-columns: repeat(2, minmax(0, 1fr))
-	@media screen and (max-width: 1024px)
-		border: none
-		gap: 1rem
-
-.essay-holder
-	display: grid
-	grid-template-columns: 1fr
-	margin-bottom: 2rem	
-	row-gap: 1rem
-	@media screen and (min-width: 1025px)
-		grid-template-columns: 200px 1fr
-		margin-bottom: 0
-
-.essay-holder-image
-	width: 100%
-	object-fit: cover
-	transition: transform 0.28s ease
-	@media (max-width: 1024px)
-		margin-bottom: 1rem
 
 .load-more-wrap
 	display: flex
@@ -447,43 +436,15 @@
 		span
 			color: var(--color-back)
 
-.blog-sidebar
-	display: flex
-	flex-direction: column
-	gap: 1px
-	background: var(--color-back)
-	position: sticky
-	top: 6rem
-	min-width: 0
-	@media screen and (min-width: 1025px)
-		grid-column: 3
-		grid-row: 1 / 3
-		border-left: var(--border-dark)
-		top: 80px
-		height: calc(100vh - 80px)
-		padding-left: 2rem
-		overflow-y: scroll
-	@media screen and (max-width: 1024px)
-		position: static
-		background: transparent
-		border: none
-		gap: 1rem
-
 .sidebar-section
 	gap: 1rem
 	display: flex
 	flex-direction: column
 	background: var(--color-back)
 	border-bottom: var(--border-dark)
-	@media screen and (max-width: 1024px)
-		border: var(--border-main)
 	@media screen and (min-width: 1025px)
 		&:last-child
 			border-bottom: none
-
-.latest-list
-	display: flex
-	flex-direction: column
 
 .external-list
 	display: grid
@@ -491,21 +452,6 @@
 	@media (min-width: 1025px)
 		display: flex
 		flex-direction: column
-
-.latest-item
-	display: grid
-	grid-template-columns: 48px 1fr
-	gap: 0.8rem
-	border-top: var(--border-main)
-	background: var(--color-back)
-	transition: background 0.08s ease
-	&:hover
-		background: var(--color-stone-1)
-
-.latest-number
-	font-size: 2rem
-	line-height: 1
-	color: var(--color-theme-dark)
 
 .external-item
 	gap: 0.8rem
@@ -544,24 +490,5 @@
 	&:hover
 		img
 			filter: grayscale(0)
-
-.writer-chip
-	display: inline-flex
-	align-items: center
-	gap: 5px
-	width: max-content
-	max-width: 100%
-	border: 1px solid var(--color-grey-0)
-	border-radius: 3px
-	background: var(--color-grey-2)
-	color: var(--color-stone-3)
-	font-size: 0.68rem
-	font-weight: 600
-	line-height: 1.1
-	text-transform: uppercase
-	transition: all 0.08s ease
-	&:hover
-		background: var(--color-theme-dark)
-		color: var(--color-back)
 
 </style>

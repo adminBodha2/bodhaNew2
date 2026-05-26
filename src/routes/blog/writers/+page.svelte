@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/wrapper.svelte';
-	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import PageHead from '$lib/comps/page-header-one.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import ResponsiveMenu from '$lib/comps/responsive-menu-2.svelte';
 	import '$lib/styles/system/blog.sass';
@@ -42,14 +42,14 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="box wrapper-std header-margin">
-		<Crumb showT={false} title="Writers | Bodha" showRow={true}>
-			<ResponsiveMenu>
-				<a class="small-button tt-u" href="/blog">Blog</a>
-				<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
-				<a class="small-button tt-u" href="/blog/tags">Tags</a>
-			</ResponsiveMenu>
-		</Crumb>
+	<PageHead title="Writers at Our Blog | Bodha" />
+	<section class="wrapper-std header-margin" style="row-gap: 2rem">
+		<ResponsiveMenu>
+			<a class="small-button tt-u" href="/blog">BLOG</a>
+			<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
+			<a class="small-button tt-u active" href="/blog/writers">Writers</a>
+			<a class="small-button tt-u" href="/blog/tags">Tags</a>
+		</ResponsiveMenu>
 		<div class="blog-wrapper">
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
 				{#each writers as post}

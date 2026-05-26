@@ -1,0 +1,66 @@
+[
+  {
+    "id": "svayambodha",
+    "name": "Svayambodha",
+    "description": "Content oriented toward Hindu self-knowledge, internal recovery, and the project of understanding India on its own terms. The inward-facing lens — civilizational self-possession.",
+    "color": "#16A34A",
+    "keywords": [
+      "svayambodha",
+      "hindu-renaissance",
+      "civilizational-recovery",
+      "decolonization",
+      "indigenous-education",
+      "intellectual-freedom",
+      "civilizational-self-understanding",
+      "indigenous-reclamation",
+      "rediscovering-india"
+    ]
+  },
+  {
+    "id": "shatrubodha",
+    "name": "Śatrubodha",
+    "description": "Content that analyses threats, hostile ideologies, and adversarial forces — Islamic supremacism, missionary activity, Marxist historiography, breaking-India networks. The outward-facing analytical lens.",
+    "color": "#DC2626",
+    "keywords": [
+      "shatrubodha",
+      "temple-destruction",
+      "religious-conflict",
+      "north-east-india",
+      "northeast-india",
+      "breaking-india",
+      "conversion-pressure",
+      "missionary-activity"
+    ]
+  },
+  {
+    "id": "civilizational-consciousness",
+    "name": "Civilizational Consciousness",
+    "description": "Content that reads its subject through a civilizational frame — asking not just what happened but what it means for Bharata as a living civilisation. Applies across all domains.",
+    "color": "#2563EB",
+    "keywords": [
+      "civilizational-consciousness",
+      "civilizational-future",
+      "civilizational-ethos",
+      "civilizational-thought",
+      "civilizational-crisis",
+      "karma",
+      "dharma"
+    ]
+  },
+  {
+    "id": "purva-paksha",
+    "name": "Pūrva-pakṣa",
+    "description": "Content that engages Western, rival, or adversarial thought seriously on its own terms before critiquing it. The classical method of philosophical engagement — understand before you refute.",
+    "color": "#9333EA",
+    "keywords": [
+      "purva-paksha",
+      "indological-critique",
+      "scholarly-critique",
+      "academic-critique",
+      "intellectual-history",
+      "comparative-religion",
+      "heidegger",
+      "technology-critique"
+    ]
+  }
+]

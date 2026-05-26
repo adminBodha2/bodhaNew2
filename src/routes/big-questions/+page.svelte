@@ -8,6 +8,7 @@
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte'
 	import Blur from '$lib/svelteanim/components/Blur.svelte'
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { useInView } from '$lib/svelteanim';
 
 	let { data }: { data: PageData } = $props();
@@ -46,14 +47,16 @@
 <Container>
 <Crumb showT={true} title="Big Questions" showD={true} desc={metaDescription} />
 	<section class="wrapper-std">
-		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64" bind:this={ref}>
-			<Reveal>
-			<div class="box">
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap64">
+			<div class="box rgap16">
+				<Reveal>
 				<p class="highlight-text">Hindu society today sits at the cusp of great change. Hindu consciousness is awakening across the nation and awareness of civilizational issues is rising. Established mentalities about Hindu society, dharma, and culture are being challenged, status quos are being quashed, and new paradigms are coming into force. An intellectual renaissance is underway.</p>
+				</Reveal>
+				<Reveal>
 				<p class="highlight-text">Bodha wants to aid the process by asking provocative questions about some of the most fundamental problems and open questions that Hindu society faces today. There are issues that are not settled, questions that are perennially asked by every Hindu generation, and novel dilemmas that we face today.</p>
+				</Reveal>
 			</div>
-			</Reveal>
-			<Reveal>
+			<Reveal start="top 68%">
 			<p class="highlight-text">
 				In our Big Question series, we will ask one significant question every year at Bodha, and go to great scholars, activists, thinkers, leaders and stakeholders of Hindu cultural renaissance. Their answers will be compiled and published as a book with an introduction about the question, and the problem that it addresses. By this, at Bodha, we intend to initiate great intellectual churn in
 				Hindu society, leading to narrative building which will aid the reestablishment of a correct Hindu worldview rooted in facts and history.
@@ -63,13 +66,13 @@
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="Big Question 2026" />
-		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16 bq26box lg:ptop32 lg:pbot32" bind:this={ref2}>
-			<Blur visible={vis2.visible}>
-			<div class="box down lg:rgap32">
+		<Blur targetSelector=".blur-item">
+		<div class="grid grid-cols-1 lg:grid-cols-2 rgap16 cgap16 bq26box lg:ptop32 lg:pbot32">
+			<div class="box down lg:rgap32 blur-item">
 				<div class="mid-shelf rgap16 box sm:p16">
-					<h2 class="txt-3xl lg:txt-4xl source-serif lh11 ls004m">Is Hindu Unity Compatible With Indian Diversity?</h2>
+					<h2 class="txt-3xl lg:txt-4xl lh11 ls004m w600">Is Hindu Unity Compatible With Indian Diversity?</h2>
 					<p class="highlight-text pbot8">For 2026, the Big Question we are tackling is, in a sense, the question of India vs. Bharata. Can Hindus unite without flattening the diversity that defines India? Are unity and diversity complementary, or in fundamental tension?</p>
-					<a class="primary black" href="/big-questions/hindu-unity-and-diversity">
+					<a class="primary themed" href="/big-questions/hindu-unity-and-diversity">
 						<span>Read More →</span>
 					</a>
 				</div>
@@ -78,31 +81,29 @@
 					<img class="shri-hari-kiran-vadlamani" src="/images/shri-hari-kiran-vadlamani.webp" alt="shri-hari-kiran-vadlamani" />
 				</div>
 			</div>
-			</Blur>
-			<Blur visible={vis2.visible} delay={300}>
-			<a class="blank box up" href="/big-questions/hindu-unity-and-diversity">
+			<a class="blank box up blur-item" href="/big-questions/hindu-unity-and-diversity">
 				<img class="fitted herocard" src="/images/questions/current-big-question.webp" alt="Is Hindu Unity Compatible With Indian Diversity" />
 			</a>
-			</Blur>
 		</div>
+		</Blur>
 	</section>
 	<section class="wrapper-std growingline alternate">
 		<Title text="All Big Questions" />
+		<Slide targetSelector=".question-holder">
 		{#if questions && questions.length > 0}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each questions as item, i}
-					<div class="box whitecard rgap24 question-holder">
-						<a class="blank p8" href={item.linkpath}>
-							<img class="question-image fitted landscape" src={item.meta.icon} alt={item.meta.title} />
-						</a>
-						<a class="onhover box rgap16 px16 pbot32 lg:px32 lg:pbot32 blank" href={item.linkpath}>
+					<a class="box whitestone question-holder b-main" href={item.linkpath}>
+						<div class="p8"><img class="question-image fitted landscape" src={item.meta.icon} alt={item.meta.title} /></div>
+						<div class="box rgap16 std-pad">
 							<p class="txt-2xl lg:txt-2xl w600 lh12 a-hover">{item.meta.title}</p>
 							<p class="grey2 txt-lg lh14">{item.meta.description}</p>
-						</a>
-					</div>
+						</div>
+					</a>
 				{/each}
 			</div>
 		{/if}
+		</Slide>
 	</section>
 </Container>
 

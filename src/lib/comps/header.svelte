@@ -5,10 +5,9 @@
 	import Close from '$lib/icons/close.svelte';
 	import Mobilemenu from '$lib/comps/mobilemenu.svelte';
 	import { menuState, toggleMenuState, toggleSearch, darkTheme, iW } from '$lib/utils/globalstores';
-	import { navLinks } from '$lib/utils/localsends'
+	import { navLinks } from '$lib/utils/localsends';
 
 	let scro = $state(0);
-	let wid = $state(0);
 
 	let firstSubroute = $derived.by(() => {
 		const parts = page.url.pathname.split('/').filter(Boolean);
@@ -16,18 +15,18 @@
 	});
 
 	$effect(() => {
-		if ($menuState && $iW ) {
+		if ($menuState && $iW) {
 			document.body.style.overflow = 'hidden';
-		} else  {
+		} else {
 			document.body.style.overflow = '';
 		}
 	});
 </script>
 
-<svelte:window bind:scrollY={scro} bind:innerWidth={wid}/>
+<svelte:window bind:scrollY={scro} />
 
 <section class="header-wrapper">
-<div class="row ycenter xbetween header-content">
+	<div class="row ycenter xbetween header-content">
 		<a class="blank row ycenter logoholder" href="/">
 			{#if $darkTheme}
 				<img class="rotator dark" src="/images/rotator-d.png" alt="rotator" style="transform: rotate({scro / 8}deg)" />
@@ -37,36 +36,63 @@
 				<img class="rest" src="/images/rest.png" alt="rest" />
 			{/if}
 		</a>
-	{#if wid > 1024}
-		<nav class="row ycenter tray">
+
+		<!-- Desktop nav — hidden on mobile via CSS, never causes a JS flash -->
+		<nav class="row ycenter tray" aria-label="Main navigation">
 			{#each navLinks as link}
-				<a class="nav-link blank" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
+				<a class="navbar-link" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
 			{/each}
-			<button class="blank nav-link" onclick={toggleSearch}>search</button>
+			<button class="navbar-link" onclick={toggleSearch}>search</button>
 		</nav>
-	{:else}
-		<div class="row ycenter cgap16">
+
+		<!-- Mobile tray — hidden on desktop via CSS -->
+		<div class="row ycenter cgap16 mobile-tray">
 			{#if !$menuState}
 				<button class="blank" onclick={toggleSearch}>
 					<Search />
 				</button>
 			{/if}
 			<button class="blank" onclick={toggleMenuState}>
-				{#if $menuState === true}
+				{#if $menuState}
 					<Close />
 				{:else}
 					<Menu />
 				{/if}
 			</button>
 		</div>
+	</div>
+
+	{#if $menuState}
+		<Mobilemenu />
 	{/if}
-</div>
-{#if $menuState && wid <= 1024}
-	<Mobilemenu />
-{/if}
 </section>
 
 <style lang="sass">
+
+.navbar-link
+	text-transform: uppercase
+	font-size: 16px
+	font-weight: 500
+	letter-spacing: -0.02rem
+	position: relative
+	transition: all 110ms ease
+	background: none
+	border: none
+	padding: 0
+	&:after
+		content: " "
+		position: absolute
+		bottom: 0
+		right: 0
+		height: 2px
+		background: var(--color-theme)
+		width: 0
+		transition: all 110ms ease
+	&:hover
+		color: var(--color-theme)
+		&:after
+			width: 100%
+			left: 0
 
 .header-wrapper
 	width: 100%
@@ -95,34 +121,19 @@
 	margin-left: auto
 	margin-right: auto
 
+// CSS controls which nav is shown — no JS, no flash
 .tray
+	display: none
 	column-gap: 4px
-	@media screen and (min-width: 1201px)
-		column-gap: 8px
-		button.blank
-			margin-left: 8px
-	@media screen and (min-width: 1025px) and (max-width: 1200px)
-		column-gap: 4px
-		button.blank
-			margin-left: 6px
+	@media (min-width: 1025px)
+		display: flex
+	@media (min-width: 1201px)
+		column-gap: 12px
 
-.nav-link
-	font-size: 15px
-	font-family: var(--fontface-sans)
-	font-weight: 500
-	letter-spacing: -0.02rem
-	color: var(--color-primary)
-	padding: 1px 6px 2px 6px
-	border-radius: 2px
-	transition: all 140ms cubic-bezier(0.2, 1.8, 0.4, 1)
-	text-transform: uppercase
-	&:hover
-		color: var(--color-back)
-		background: var(--color-theme)
-	&.active
-		color: var(--color-theme)
-		&:hover
-			color: var(--color-back)
+.mobile-tray
+	display: flex
+	@media (min-width: 1025px)
+		display: none
 
 .logoholder
 	transition: all 0.1s ease

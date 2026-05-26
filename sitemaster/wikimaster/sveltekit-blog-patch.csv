@@ -1,0 +1,46 @@
+slug,change_type,old_tags,new_tags,reason
+ahoiashtami,domain-fix,"ecology, festivals","festivals, ecology",ecology first → D1=civ-consciousness; reorder: festivals first → D1=festivals-and-living-tradition
+brahmacharini,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same fix as Śailaputrī
+chandraghanta,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+dasharajna1,domain-fix,"history, civilizational-consciousness","rigvedic-history, history, civilizational-consciousness","add rigvedic-history first → D1=sindhu-sarasvati-and-origins (Battle of Ten Kings is Rigvedic history, not generic)"
+dasharajna2,domain-fix,"history, civilizational-consciousness","rigvedic-history, history, civilizational-consciousness",same
+dasharajna3,domain-fix,"history, civilizational-consciousness","rigvedic-history, history, civilizational-consciousness",same
+historyvsitihasa,domain-fix,"history, civilizational-consciousness","itihasa, history, civilizational-consciousness","add itihasa first → D1=puranas-and-itihasa; post is philosophy-of-itihasa argument, not generic history"
+kalaratri,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+katyayani,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+kushmanda,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+mahagauri,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+ramasjourney,domain-fix,"festivals, civilizational-consciousness, rama","rama, festivals, civilizational-consciousness","put rama first → D1=puranas-and-itihasa; this is a Ramayana essay with Dipavali frame, not primarily a festival post"
+siddhidatri,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+skandamata,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",same
+shailaputri,domain-fix,"svayambodha, navaratri, devi","navaratri, devi-mahatmya, svayambodha",svayambodha first → D1=civ-consciousness; navaratri first → D1=festivals-and-living-tradition; devi-mahatmya → D2=puranas-and-itihasa
+bharatiya-wanderlust-1,domain-fix+add-lens,"history, out-of-india-theory","out-of-india-theory, history, shatrubodha",out-of-india-theory first → D1=sindhu-sarasvati-and-origins; add shatrubodha: defending OIT against AIT is paradigmatic shatrubodha
+bharatiya-wanderlust-2,domain-fix+add-lens,"history, out-of-india-theory","out-of-india-theory, history, shatrubodha",same
+bharatiya-wanderlust-3,domain-fix+add-lens,"history, out-of-india-theory","out-of-india-theory, history, shatrubodha",same
+sanskritvsfate,domain-fix+add-lens,"aesthetics, sanskrit","sanskrit, aesthetics, shatrubodha",put sanskrit first → D1=language-and-sanskrit; FATE = adversarial framing → shatrubodha lens
+hinduisminblindspot1,add-lens+domain,consciousness,"indological-critique, civilizational-consciousness, svayambodha",replace vague consciousness; indological-critique → D1=indology-and-civilizational-critique; svayambodha lens
+hinduisminblindspot2,add-lens+domain,consciousness,"indological-critique, civilizational-consciousness, svayambodha",same
+towardsdharmacentricpolity,add-lens+domain,"festivals, tradition","festivals, modern-politics, tradition, svayambodha",add modern-politics → D2=dharmashastra-and-polity (Tilak mobilisation); svayambodha
+turnersoftime,add-lens+domain,festivals,"festivals, cyclical-time, svayambodha",add cyclical-time → D2=puranas-and-itihasa (Puranic time cycles); svayambodha
+kannur-sacred-heart-of-kerala,add-lens+tag-quality,"anveshi, kerala, tourism","anveshi, sacred-geography, svayambodha",drop kerala and tourism (no keyword value); add sacred-geography; svayambodha
+artandmeaningmaking,add-lens,"aesthetics, consciousness, culture","aesthetics, svayambodha, consciousness",Hindu aesthetics begins where Western aesthetics ends — civilizational self-knowledge → svayambodha
+chath,add-lens,"festivals, tradition","festivals, tradition, svayambodha",festival survival as civilizational memory and homecoming → svayambodha
+decolonizinglanguage,add-lens,"language, sanskrit","language, sanskrit, svayambodha",reclaiming Sanskrit cognitive inheritance from colonial languages → svayambodha
+indiancivilizationalconsciousness,add-lens,civilizational-consciousness,"civilizational-consciousness, svayambodha",the essay is explicitly about self-knowledge and inner orientation
+kshetrashastrautsava,add-lens,"festivals, tradition, mahabharata","festivals, mahabharata, tradition, svayambodha",add svayambodha — essay on the three pillars of Hindu civilizational life
+journey-with-anveshi,add-lens,"anveshi, temple","anveshi, temple, svayambodha",Anveshi as conscious civilizational reclamation of temple practice → svayambodha
+gloryofkrishnajanmashtami,add-lens,"mahabharata, festivals","mahabharata, festivals, svayambodha",pilgrimage to Mathura as devotional civilizational act → svayambodha
+problemofculturetransmission,add-lens,"culture, hindu-institutions, tradition","culture, hindu-institutions, tradition, svayambodha",cultural transmission as civilizational self-preservation → svayambodha
+ramajanmabhumi,add-lens,rama,"rama, svayambodha, shatrubodha",Ram Janmabhumi = civilizational recovery (svayambodha) + direct response to Islamic iconoclasm (shatrubodha)
+returnoframa,add-lens,rama,"rama, svayambodha",devotional account of Ayodhya pratishtha groundswell → svayambodha
+14-lokas-0-telescopes,tag-quality,"technology, consciousness","cosmology, modernity, consciousness","replace technology (maps only to civ-consciousness) with cosmology → D1=puranas-and-itihasa (lokas, vimanas, devatas are Puranic cosmology)"
+artificialintelligence,tag-quality,"consciousness, modernity","consciousness, modernity, civilizational-consciousness","add civilizational-consciousness — post argues for dharmic AI framework, not just philosophy"
+artificialintelligencetwo,tag-quality,"consciousness, modernity","consciousness, modernity, civilizational-consciousness",same as Part 1
+svayambodha-and-shatrubodha-review,tag-quality,"history, shatrubodha, review","shatrubodha, indological-critique, svayambodha",drop history (wrong primary) and review (noise); explicit civilizational discourse tags
+four-aphorisms,tag-quality,"consciousness, history, civilizational-consciousness","civilizational-consciousness, consciousness",drop history — not a history post; four aphorisms are philosophical/civilizational
+cultureandwarfare,tag-quality,"civilizational-consciousness, consciousness, dharma","civilizational-consciousness, mahabharata, dharma",replace vague consciousness with mahabharata → D2=puranas-and-itihasa (post draws heavily on Mahabharata)
+freedomofexpression,tag-quality,"purva-paksha, review","purva-paksha, indological-critique",drop review (noise); add indological-critique to make domain explicit
+svayambodha-shatrubodha,tag-quality,"civilizational-consciousness, dharma","civilizational-consciousness, dharma, shatrubodha",add shatrubodha — the essay is about both wheels; shatrubodha should appear as explicit L2
+difference-between-us,tag-quality,"consciousness, svayambodha, shatrubodha","liberation, svayambodha, shatrubodha",replace consciousness with liberation → D1=darshanas-and-philosophy (rebirth/moksha is the liberation question)
+tightrope,tag-quality,modernity,"modernity, civilizational-consciousness",add civilizational-consciousness — Orwell/Huxley framed through dharmic lens deserves both tags
+what-bodha-logo-means,tag-quality,"civilizational-consciousness, culture, consciousness","civilizational-consciousness, culture",drop redundant consciousness — civ-consciousness already covers the philosophical dimension

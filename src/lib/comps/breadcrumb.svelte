@@ -21,9 +21,10 @@
 		sidebarSoloPad2?:boolean;
 		libraryType?:boolean;
 		children?: Snippet;
+		noBorder?:boolean;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, libraryType = false, onblog = false, desc = ' ', centered = false, sidebarSoloPad2 = false, isSolo=false, serifed = true, thinBot = false, thinTop = false, fullP = false, children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, libraryType = false, onblog = false, desc = ' ', centered = false, sidebarSoloPad2 = false, isSolo=false, serifed = true, thinBot = false, thinTop = false, noBorder = false, fullP = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -33,7 +34,7 @@
 	let thirdSegment = $derived(routeSegments[2]);
 </script>
 
-<div class="box crumb-outer" class:isSolo={isSolo} class:onblog class:fullP class:xcenter={centered} class:thinBot={thinBot} class:thinTop={thinTop} class:sidebarSolo={sidebarSoloPad2}>
+<div class="box crumb-outer" class:isSolo={isSolo} class:borderbot={!noBorder} class:onblog class:fullP class:xcenter={centered} class:thinBot={thinBot} class:thinTop={thinTop} class:sidebarSolo={sidebarSoloPad2}>
 	<!-----adds page title as h1 tag for seo and semantic markup. automatically added if showT is false. defined by title on pages----->
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
@@ -92,7 +93,6 @@ h1
 	padding-bottom: 8px
 
 .crumb-outer
-	border-bottom: var(--border-main)
 	padding-top: 2rem
 	padding-bottom: 2rem
 	row-gap: 1rem
@@ -115,7 +115,9 @@ h1
 		row-gap: 2rem
 		&.onblog
 			padding-top: 2rem
-			padding-bottom: 2rem
+			padding-bottom: 0
+			width: 100%
+			align-items: center
 		&.isSolo
 			padding-bottom: 0
 			padding-top: 1rem

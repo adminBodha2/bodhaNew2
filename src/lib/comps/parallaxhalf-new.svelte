@@ -1,102 +1,141 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import type { Snippet } from 'svelte';
-	import { onMount } from 'svelte';
+	import {
+		areMotionAnimationsDisabled,
+		waitForMotionLayout
+	} from '$lib/svelteanim/motionPreference.svelte';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
 
-	type Props = {
-		imageLink?: string;
-		isClass?: string;
+	interface Props {
+		/** Image URL */
+		src?: string;
+		/** Image alt text */
 		alt?: string;
+		/** Use WaterRipple interactive effect instead of plain image */
 		wipe?: boolean;
+		/** Extra class on the inner frame */
+		isClass?: string;
+		/**
+		 * Parallax intensity as a percentage of the element height.
+		 * The image travels this far in each direction (total range = 2×speed).
+		 * Default: 20
+		 */
+		speed?: number;
 		children?: Snippet;
+		[key: string]: unknown;
+	}
+
+	let {
+		src = '',
+		alt = 'Page hero image',
+		wipe = true,
+		isClass = 'is100',
+		speed = 40,
+		children,
+		...rest
+	}: Props = $props();
+
+	let shellRef = $state<HTMLElement | null>(null);
+	let imageRef = $state<HTMLElement | null>(null);
+	let ctx: any = null;
+
+	const attachShell = (node: HTMLElement) => {
+		shellRef = node;
+		return () => { if (shellRef === node) shellRef = null; };
 	};
 
-	let wrapperElement = $state<HTMLDivElement>();
-	let parallaxElement = $state<HTMLDivElement>();
-	let frameId = 0;
-	let reduceMotion = false;
+	const attachImage = (node: HTMLElement) => {
+		imageRef = node;
+		return () => { if (imageRef === node) imageRef = null; };
+	};
 
-	let { imageLink = '', isClass = 'is100', alt = 'Page hero image', wipe = false, children }: Props = $props();
+	$effect(() => {
+		if (!browser) return;
+		const shell = shellRef;
+		const image = imageRef;
+		if (!shell || !image) return;
 
-	function isWrapperNearViewport() {
-		if (!wrapperElement) return false;
+		ctx?.revert();
+		ctx = null;
 
-		const rect = wrapperElement.getBoundingClientRect();
-		const margin = window.innerHeight * 1.2;
-		return rect.bottom >= -margin && rect.top <= window.innerHeight + margin;
-	}
+		// Disable parallax if user prefers reduced motion — image stays centred
+		if (areMotionAnimationsDisabled()) return;
 
-	function renderParallax() {
-		frameId = 0;
-		if (!parallaxElement || reduceMotion || !isWrapperNearViewport()) return;
+		const parallaxSpeed = speed;
+		let cancelled = false;
 
-		parallaxElement.style.transform = `translateY(${window.scrollY / 2}px)`;
-	}
+		const init = async () => {
+			try {
+				const { gsap } = await import('gsap');
+				const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+				gsap.registerPlugin(ScrollTrigger);
 
-	function scheduleParallax() {
-		if (frameId || reduceMotion) return;
-		frameId = requestAnimationFrame(renderParallax);
-	}
+				await waitForMotionLayout();
+				if (cancelled) return;
 
-	onMount(() => {
-		if (!wrapperElement || !parallaxElement) return;
-
-		const parallaxTarget = parallaxElement;
-		const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-		const updateMotionPreference = () => {
-			reduceMotion = mediaQuery.matches;
-			if (reduceMotion) {
-				if (frameId) {
-					cancelAnimationFrame(frameId);
-					frameId = 0;
-				}
-				parallaxTarget.style.transform = '';
-				return;
+				ctx = gsap.context(() => {
+					// Image starts pulled up, ends pulled down — container clips the overflow.
+					gsap.fromTo(
+						image,
+						{ yPercent: -parallaxSpeed },
+						{
+							yPercent: parallaxSpeed,
+							ease: 'none',
+							scrollTrigger: {
+								trigger: shell,
+								start: 'top bottom',
+								end: 'bottom top',
+								scrub: true,
+								invalidateOnRefresh: true
+							}
+						}
+					);
+				}, shell);
+			} catch {
+				if (cancelled) return;
+				ctx?.revert();
+				ctx = null;
 			}
-			scheduleParallax();
 		};
 
-		updateMotionPreference();
-		window.addEventListener('scroll', scheduleParallax, { passive: true });
-		window.addEventListener('resize', scheduleParallax);
-		mediaQuery.addEventListener('change', updateMotionPreference);
+		void init();
 
 		return () => {
-			window.removeEventListener('scroll', scheduleParallax);
-			window.removeEventListener('resize', scheduleParallax);
-			mediaQuery.removeEventListener('change', updateMotionPreference);
-			if (frameId) cancelAnimationFrame(frameId);
+			cancelled = true;
+			ctx?.revert();
+			ctx = null;
 		};
 	});
 </script>
 
-<div class="shell-wrap">
-<div bind:this={wrapperElement} class="imager {isClass}">
-	<div bind:this={parallaxElement} class="parallax-target">
-		{#if wipe}
-			<WaterRipple src={imageLink} class="ripple-motion" brushSize={100} />
-		{:else}
-			<img src={imageLink} {alt} />
-		{/if}
+<div class="shell-wrap" {@attach attachShell} {...rest}>
+	<div class="imager {isClass}">
+		<div class="parallax-inner" {@attach attachImage} style="height:{100 + 2 * speed}%;margin-top:-{speed}%">
+			{#if wipe}
+				<WaterRipple {src} class="ripple-fill" brushSize={100} />
+			{:else}
+				<img {src} {alt} />
+			{/if}
+		</div>
 	</div>
-</div>
+	{#if children}
+		{@render children()}
+	{/if}
 </div>
 
 <style lang="sass">
 
 .shell-wrap
 	width: 100%
-	padding-left: 1rem
-	padding-right: 1rem
-	aspect-ratio: 16/9
+	padding-inline: 1rem
+	aspect-ratio: 16/12
 	.imager
 		width: 100%
-		margin-left: auto
-		margin-right: auto
+		margin-inline: auto
 	@media (min-width: 1025px)
-		padding-left: 1rem
-		padding-right: 1rem
 		aspect-ratio: 16/8
+		height: 100vh
 		.imager
 			width: 992px
 	@media (min-width: 1201px)
@@ -108,39 +147,28 @@
 		.imager
 			width: 1408px
 	@media (min-width: 1601px)
-		padding-left: 2rem
-		padding-right: 2rem
+		padding-inline: 2rem
 		.imager
 			width: 1536px
 
 .imager
 	overflow: hidden
 	height: 100%
-	.parallax-target
-		height: 100%
+
+.parallax-inner
+	width: 100%
+	will-change: transform
+	backface-visibility: hidden
+	img,
+	:global(.ripple-fill)
+		display: block
 		width: 100%
-		will-change: transform
-		backface-visibility: hidden
-		img
-			display: block
-	@media screen and (min-width: 1025px)
-		.parallax-target
-			img,
-			:global(.ripple-motion)
-				object-fit: cover
-				object-position: center center
-				height: 100%
-				width: 100%
-	@media screen and (max-width: 1024px)
-		.parallax-target
-			img,
-			:global(.ripple-motion)
-				object-fit: cover
-				object-position: center center
-				width: 100%
-				height: 100%
-	@media (prefers-reduced-motion: reduce)
-		.parallax-target
-			transform: none !important
+		height: 100%
+		object-fit: cover
+		object-position: center center
+
+@media (prefers-reduced-motion: reduce)
+	.parallax-inner
+		transform: none !important
 
 </style>

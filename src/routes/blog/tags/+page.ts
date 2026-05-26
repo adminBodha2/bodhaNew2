@@ -1,5 +1,6 @@
 import { tagsWithCounts, tagsWithCountsAlphabetical } from '$lib/utils/blogpulls';
 
+
 export async function load() {
 	const [tags, tagsC] = await Promise.all([
 		tagsWithCountsAlphabetical(),
@@ -8,6 +9,6 @@ export async function load() {
 
 	return {
 		tags,
-		tagsC
+		tagsC,
 	};
 }

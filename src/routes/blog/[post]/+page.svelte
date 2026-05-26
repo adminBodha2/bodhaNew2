@@ -7,6 +7,8 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Social from '$lib/comps/socialshare.svelte';
 	import Title from '$lib/comps/page-title.svelte';
+	import Card from '$lib/comps/blog-card.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import Pageprogress from '$lib/comps/pageprogress.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
@@ -31,6 +33,7 @@
 
 	let posts = $derived(data.posts ?? []);
 	let ref = $state<HTMLElement | null>(null);
+	let headings = $state<{ id: string; text: string; level: number }[]>([]);
 	let sY = $state(0);
 	let lastScrollY = $state(0);
 	let upwardScrollDistance = $state(0);
@@ -94,6 +97,20 @@
 		lastScrollY = sY;
 	});
 
+	$effect(() => {
+		if (!ref) return;
+		const seen = new Map<string, number>();
+		headings = Array.from(ref.querySelectorAll('h2, h3')).map((el) => {
+			const text = el.textContent ?? '';
+			const base = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
+			const count = seen.get(base) ?? 0;
+			seen.set(base, count + 1);
+			const id = count === 0 ? base : `${base}-${count}`;
+			el.id = id;
+			return { id, text, level: parseInt(el.tagName[1]) };
+		});
+	});
+
 	onDestroy(() => {
 		readerChromeHidden.set(false);
 	});
@@ -105,12 +122,12 @@
 
 <Pageprogress --thispagebackground="var(--color-theme)" --thispageheight="2px" {ref} />
 <Container>
-	<section class="box rgap32 wrapper-std header-margin">
+	<section class="wrapper-std header-margin">
 		<div class="box rgap16 xcenter mleft ta-c ptop32 pbot32">
-			<Crumb onblog={true} />
-			<h1 class="txt-4xl md:txt-6xl lg:txt-8xl source-serif width90 lh12 self-center">{data.title}</h1>
-			<div class="box rgap16 width90 self-center">
-				<p class="txt-lg lh14">{data.excerpt}</p>
+			<Crumb noBorder={true} onblog={true} />
+			<h1 class="txt-4xl md:txt-6xl lg:txt-9xl source-serif w700 width90 lh12 ls009m self-center">{data.title}</h1>
+			<div class="box rgap16 width80 self-center">
+				<p class="txt-xl lh14">{data.excerpt}</p>
 				<div class="info row ycenter lg:xcenter cgap8">
 					<div class="line left-line"></div>
 					<p class="highlight-text"><a class="linkedlight" href="/blog/writers/{data.author}">{data.author}</a> | {data.words} words | {formattedDate}</p>
@@ -126,7 +143,20 @@
 		<div class="box blog-image-area xcenter">
 			<WaterRipple src={metaImage} class="ripple-motion" brushSize={100} />
 		</div>
+
 		<article class="blog-article self-center" bind:this={ref}>
+		<!--
+		{#if headings.length >= 2}
+			<nav class="toc box rgap16" aria-label="On this page">
+				<p class="txt-sm tt-u grey1">In this Essay</p>
+				<div class="box rgap16">
+					{#each headings as h}
+						<a class="txt-lg stix-two" href="#{h.id}" onclick={(e) => { e.preventDefault(); document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth' }); }}>{h.text}</a>
+					{/each}
+				</div>
+			</nav>
+		{/if}
+		-->
 			<data.content />
 		</article>
 		<div class="row share-row ycenter cgap16 xbetween post-article self-center">
@@ -134,28 +164,23 @@
 			<a class="primary" href="/blog"><span>← Back to Blog</span></a>
 		</div>
 	</section>
-	<section class="box wrapper-std rgap64 growingline">
+	<section class="wrapper-std growingline">
 		{#if posts && posts.length > 0}
 			<Title text="More Like This" />
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
+			<Slide targetSelector=".slide-item">
+			<div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap16">
 				{#each posts as item, i}
-					<a class="box blank p16 rgap8 p8 b-main radius8" href={item.linkpath}>
-						<img class="fitted landscape radius4" src={item.meta.image} alt={item.meta.title} />
-						<div class="box p16 rgap16">
-							<p class="txt-xl w600 lh14 a-hover">{item.meta.title}</p>
-							<p class="grey1 lh14">{item.meta.excerpt}</p>
-						</div>
-						<div class="box foot self-bottom bordertop ptop16 rgap4">
-							<p class="txt-sm tt-u grey2">{item.meta.author} | {item.meta.words} words</p>
-							<div class="row of-info mwrap cgap8 rgap8">
+					<Card
+						image={item.meta.image} title={item.meta.title} desc={item.meta.excerpt} author={item.meta.author} words={item.meta.words}>
+							<div class="row wrap essay-tags rgap4 cgap4">
 								{#each item.meta.tags as tag}
 									<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-', ' ')}</p>
 								{/each}
 							</div>
-						</div>
-					</a>
+					</Card>
 				{/each}
 			</div>
+			</Slide>
 		{/if}
 	</section>
 </Container>
@@ -169,12 +194,11 @@
 
 .blog-image-area
 	overflow: hidden
-	border-radius: 5px
+	border-radius: 2px
 	@media screen and (max-width: 1024px)
 		height: 360px
 	@media screen and (min-width: 1025px)
 		height: 800px
-		border-radius: 60px
 
 .line
 	height: 1px

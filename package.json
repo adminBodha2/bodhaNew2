@@ -16,7 +16,9 @@
     "seo:audit": "node sitemaster/seomaster/src/cli.mjs audit",
     "seo:page": "node sitemaster/seomaster/src/cli.mjs page",
     "seo:topic": "node sitemaster/seomaster/src/cli.mjs topic",
-    "seo:topic-links": "node sitemaster/seomaster/src/cli.mjs topic-links"
+    "seo:topic-links": "node sitemaster/seomaster/src/cli.mjs topic-links",
+    "workbench": "node scripts/launch-workbench.js",
+    "seo:manager": "node scripts/launch-workbench.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
