@@ -70,11 +70,38 @@
 	});
 </script>
 
+<div class="shell-wrap">
 <div bind:this={wrapperElement} class="imager {isClass}">
   <img bind:this={imageElement} src={imageLink} {alt}/>
 </div>
+</div>
 
 <style lang="sass">
+
+.shell-wrap
+	width: 100%
+	padding-left: 1rem
+	padding-right: 1rem
+	.imager
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+	@media (min-width: 1025px)
+		padding-left: 1rem
+		padding-right: 1rem
+		.imager
+			width: 992px
+	@media (min-width: 1201px)
+		.imager
+			width: 1168px
+	@media (min-width: 1441px)
+		.imager
+			width: 1408px
+	@media (min-width: 1601px)
+		padding-left: 2rem
+		padding-right: 2rem
+		.imager
+			width: 1536px
 
 .imager
 	overflow: hidden

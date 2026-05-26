@@ -1,56 +1,69 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import type { Snippet } from 'svelte';
-	import type { EasingFunction } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-	import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
+	import {
+		areMotionAnimationsDisabled,
+		revealMotionElement,
+		waitForMotionLayout
+	} from '../motionPreference.svelte';
 	import type { SlideDirection } from '../types';
 	import { directionToOffset } from '../transitions/slide';
 
 	interface Props {
-		/** Controls whether the element is in the DOM and triggers in/out animations. */
-		visible?: boolean;
-		/** Direction the element slides from on enter. Default: 'left' */
+		/** Direction the element slides from. Default: 'down' */
 		direction?: SlideDirection;
-		/**
-		 * Override the exit direction. When omitted the element exits back
-		 * the same way it entered. Useful for page-transition-style effects.
-		 */
-		outDirection?: SlideDirection;
-		/** Distance in pixels to slide. Default: 100 */
+		/** Distance in pixels to slide. Default: 80 */
 		distance?: number;
-		/** Animation duration in ms. Default: 300 */
+		/** Animation duration in ms. Default: 700 */
 		duration?: number;
 		/** Delay before the animation starts, in ms. Default: 0 */
 		delay?: number;
-		/** Easing function. Default: quintOut */
-		easing?: EasingFunction;
-		/** Whether to also fade opacity during the slide. Default: true */
+		/** Stagger between targets in ms. Default: 120 */
+		stagger?: number;
+		/** GSAP ease string. Default: 'power3.out' */
+		ease?: string;
+		/** Whether to fade opacity during the slide. Default: true */
 		opacity?: boolean;
+		/** ScrollTrigger start position. Default: 'top 85%' */
+		start?: string;
+		/** ScrollTrigger end position. Used only when scrub is enabled. */
+		end?: string;
+		/** ScrollTrigger scrub value. Default: false */
+		scrub?: boolean | number;
+		/** When true, reverse when scrolling back. Default: false */
+		replay?: boolean;
+		/** Optional targets inside the wrapper. Defaults to direct children. */
+		targetSelector?: string;
+		/** Optional scroll container selector or element. Defaults to window. */
+		scrollElement?: string | HTMLElement | null;
+		/** Wrapper display mode. Default: 'block' for reliable ScrollTrigger geometry. */
+		display?: string;
 		children: Snippet;
-		/** Extra attributes forwarded to the wrapper element (class, id, aria-*, data-*, ...) */
 		[key: string]: unknown;
 	}
 
 	let {
-		visible = true,
-		direction = 'left',
-		outDirection,
-		distance = 100,
-		duration = 300,
+		direction = 'down',
+		distance = 160,
+		duration = 600,
 		delay = 0,
-		easing = quintOut,
+		stagger = 120,
+		ease = 'power3.out',
 		opacity = true,
+		start = 'top 90%',
+		end = 'bottom 40%',
+		scrub = true,
+		replay = false,
+		targetSelector,
+		scrollElement,
+		display = 'block',
 		children,
 		...rest
 	}: Props = $props();
 
 	let wrapperRef = $state<HTMLElement | null>(null);
-	let renderOverride = $state<boolean | null>(null);
-	let previousVisible = $state<boolean | null>(null);
-	const rendered = $derived(renderOverride ?? visible);
-	let activeTween: { kill: () => void } | null = null;
-	let animationRun = 0;
+	let tween: any = null;
+	let ctx: any = null;
 
 	const attachWrapperRef = (node: HTMLElement) => {
 		wrapperRef = node;
@@ -59,106 +72,130 @@
 		};
 	};
 
-	function getAnimationTarget(node: HTMLElement): HTMLElement | null {
-		return (node.firstElementChild as HTMLElement | null) ?? node;
+	function getTargets(node: HTMLElement): HTMLElement[] {
+		const selected = targetSelector
+			? Array.from(node.querySelectorAll<HTMLElement>(targetSelector))
+			: Array.from(node.children).filter(
+					(child): child is HTMLElement => child instanceof HTMLElement
+				);
+
+		if (selected.length > 0) return selected;
+
+		const fallback = node.firstElementChild;
+		return fallback instanceof HTMLElement ? [fallback] : [node];
 	}
 
-	function prefersReducedMotion(): boolean {
-		return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	function clearTargets(targets: HTMLElement[]) {
+		targets.forEach((target) => {
+			revealMotionElement(target);
+			target.style.transform = '';
+			target.style.willChange = '';
+		});
 	}
-
-	function clearInlineAnimationStyles(target: HTMLElement) {
-		target.style.transform = '';
-		if (opacity) target.style.opacity = '';
-		target.style.visibility = '';
-	}
-
-	function setOffset(target: HTMLElement, slideDirection: SlideDirection, alpha: number) {
-		const { x, y } = directionToOffset(slideDirection, distance);
-		target.style.transform = `translate(${x}px, ${y}px)`;
-		if (opacity) target.style.opacity = String(alpha);
-	}
-
-	$effect.pre(() => {
-		if (visible) {
-			renderOverride = null;
-		} else if (previousVisible === true) {
-			renderOverride = true;
-		}
-		previousVisible = visible;
-	});
 
 	$effect(() => {
-		if (!browser || !rendered) return;
+		if (!browser) return;
 
 		const node = wrapperRef;
 		if (!node) return;
 
-		const target = getAnimationTarget(node);
-		if (!target) {
-			if (!visible) renderOverride = false;
+		const targets = getTargets(node);
+
+		tween?.kill();
+		tween = null;
+		ctx?.revert();
+		ctx = null;
+
+		if (areMotionAnimationsDisabled()) {
+			clearTargets(targets);
 			return;
 		}
-		const animationTarget = target;
 
-		const run = ++animationRun;
-		const entering = visible;
-		const slideDirection = entering ? direction : (outDirection ?? direction);
-		const { x, y } = directionToOffset(slideDirection, distance);
-
-		activeTween?.kill();
-		activeTween = null;
-
-		if (prefersReducedMotion() || areScrollAnimationsDisabled()) {
-			clearInlineAnimationStyles(target);
-			if (!entering) renderOverride = false;
-			return;
-		}
+		const slideDirection = direction;
+		const slideDistance = distance;
+		const animationDuration = duration / 1000;
+		const animationDelay = delay / 1000;
+		const targetStagger = stagger / 1000;
+		const animationEase = ease;
+		const fade = opacity;
+		const triggerStart = start;
+		const triggerEnd = end;
+		const triggerScrub = scrub;
+		const toggleActions = replay ? 'play reverse play reverse' : 'play none none none';
+		const resolvedScroller =
+			typeof scrollElement === 'string'
+				? document.querySelector<HTMLElement>(scrollElement)
+				: scrollElement instanceof HTMLElement
+					? scrollElement
+					: null;
+		const triggerScroller =
+			resolvedScroller instanceof HTMLElement ? resolvedScroller : window;
 
 		let cancelled = false;
 
-		async function animate() {
-			const { gsap } = await import('gsap');
-			if (cancelled || run !== animationRun) return;
+		const init = async () => {
+			try {
+				const { gsap } = await import('gsap');
+				const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+				gsap.registerPlugin(ScrollTrigger);
 
-			if (entering) {
-				setOffset(animationTarget, slideDirection, 0);
+				await waitForMotionLayout();
+				if (cancelled) return;
+
+				const { x, y } = directionToOffset(slideDirection, slideDistance);
+
+				ctx = gsap.context(() => {
+					gsap.set(targets, {
+						autoAlpha: fade ? 0 : 1,
+						x,
+						y,
+						willChange: 'transform, opacity'
+					});
+
+					tween = gsap.to(targets, {
+						autoAlpha: fade ? 1 : undefined,
+						x: 0,
+						y: 0,
+						duration: animationDuration,
+						delay: animationDelay,
+						ease: animationEase,
+						stagger: targetStagger,
+						clearProps: 'transform,opacity,visibility,willChange',
+						scrollTrigger: {
+							trigger: node,
+							start: triggerStart,
+							end: triggerEnd,
+							scrub: triggerScrub,
+							scroller: triggerScroller,
+							toggleActions,
+							once: !replay && !triggerScrub,
+							invalidateOnRefresh: true
+						}
+					});
+				}, node);
+			} catch {
+				if (cancelled) return;
+				ctx?.revert();
+				ctx = null;
+				tween?.kill();
+				tween = null;
+				clearTargets(targets);
 			}
+		};
 
-			activeTween = gsap.to(animationTarget, {
-				x: entering ? 0 : x,
-				y: entering ? 0 : y,
-				autoAlpha: opacity ? (entering ? 1 : 0) : undefined,
-				duration: duration / 1000,
-				delay: delay / 1000,
-				ease: easing,
-				onComplete: () => {
-					if (run !== animationRun) return;
-					activeTween = null;
-
-					if (entering) {
-						clearInlineAnimationStyles(animationTarget);
-					} else {
-						renderOverride = false;
-					}
-				}
-			});
-		}
-
-		void animate();
+		void init();
 
 		return () => {
 			cancelled = true;
-			if (run === animationRun) {
-				activeTween?.kill();
-				activeTween = null;
-			}
+			ctx?.revert();
+			ctx = null;
+			tween?.kill();
+			tween = null;
+			clearTargets(targets);
 		};
 	});
 </script>
 
-{#if rendered}
-	<div {...rest} style:display="contents" {@attach attachWrapperRef}>
-		{@render children()}
-	</div>
-{/if}
+<div {...rest} style:display={display} {@attach attachWrapperRef}>
+	{@render children()}
+</div>

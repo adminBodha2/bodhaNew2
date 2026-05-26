@@ -3,6 +3,7 @@ export { default as FlipGrid } from "./flip-grid/FlipGrid.svelte";
 export { default as FlipGridItem } from "./flip-grid/FlipGridItem.svelte";
 export { default as FluidImageReveal } from "./fluid-image-reveal/FluidImageReveal.svelte";
 export { default as InteractiveGrid } from "./interactive-grid/InteractiveGrid.svelte";
+export { default as StackingLetters } from "./stacking-words/StackingLetters.svelte";
 export { default as RevealingLines } from "./stacking-words/RevealingLines.svelte";
 export { default as StackingWords } from "./stacking-words/StackingWords.svelte";
 export { default as TextScramble } from "./text-scramble/TextScramble.svelte";

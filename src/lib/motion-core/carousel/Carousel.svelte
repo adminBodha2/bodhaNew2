@@ -11,6 +11,7 @@
 
 <script lang="ts">
 	import { onDestroy, onMount, untrack } from "svelte";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 	import { cn } from "../utils/cn";
 
 	type Props = {
@@ -92,7 +93,7 @@
 		currentAnim?.kill();
 		currentAnim = null;
 
-		if (duration === 0 || !gsapInstance) {
+		if (duration === 0 || !gsapInstance || areMotionAnimationsDisabled()) {
 			setX(target);
 			handleAnimationComplete();
 			return;
@@ -232,6 +233,7 @@
 
 	$effect(() => {
 		if (!autoplay || itemsForRender.length <= 1) return;
+		if (areMotionAnimationsDisabled()) return;
 		if (pauseOnHover && isHovered) return;
 
 		const id = setInterval(() => {
@@ -245,9 +247,17 @@
 		let cancelled = false;
 
 		const init = async () => {
-			const { gsap } = await import("gsap");
-			if (!cancelled) {
-				gsapInstance = gsap;
+			if (areMotionAnimationsDisabled()) return;
+
+			try {
+				const { gsap } = await import("gsap");
+				if (!cancelled) {
+					gsapInstance = gsap;
+				}
+			} catch {
+				if (!cancelled) {
+					gsapInstance = null;
+				}
 			}
 		};
 

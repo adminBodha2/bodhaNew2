@@ -13,6 +13,8 @@
 		padding-bottom: 2rem
 	&.tight-stack
 		row-gap: 0
+	&.min100vh
+		justify-content: center
 	@media (min-width: 1025px)
 		padding-top: 5rem
 		padding-bottom: 5rem
@@ -20,3 +22,13 @@
 		&.tightpads
 			padding-top: 2rem
 			padding-bottom: 2rem
+
+.min100vh
+	min-height: 100vh
+
+.std-pad
+	padding: 1rem
+	@media (min-width: 721px)
+		padding: 1.5rem
+	@media (min-width: 1025px)
+		padding: 2rem

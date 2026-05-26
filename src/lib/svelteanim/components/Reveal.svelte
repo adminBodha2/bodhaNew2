@@ -1,6 +1,11 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import type { RevealDirection } from '../transitions/reveal.js';
+	import {
+		areMotionAnimationsDisabled,
+		revealMotionElement,
+		waitForMotionLayout
+	} from '../motionPreference.svelte';
 
 	interface Props {
 		visible?: boolean;
@@ -73,6 +78,11 @@
 		// display:contents means the clip-path must go on the first rendered child
 		const target = (node.firstElementChild as HTMLElement | null) ?? node;
 
+		if (areMotionAnimationsDisabled()) {
+			revealMotionElement(target);
+			return;
+		}
+
 		const dir = direction;
 		const s = slant;
 		const triggerStart = start;
@@ -100,75 +110,85 @@
 		}
 
 		const init = async () => {
-			const { gsap } = await import('gsap');
-			const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-			const { SplitText } = await import('gsap/SplitText');
-			gsap.registerPlugin(ScrollTrigger, SplitText);
+			try {
+				const { gsap } = await import('gsap');
+				const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+				const { SplitText } = await import('gsap/SplitText');
+				gsap.registerPlugin(ScrollTrigger, SplitText);
 
-			await document.fonts.ready;
-			await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
-			await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+				await waitForMotionLayout();
 
-			if (cancelled) return;
+				if (cancelled) return;
 
-			ctx?.revert();
-			ctx = null;
-			splitInstance?.revert();
-			killLineTweens();
-			resizeObserver?.disconnect();
-			resizeObserver = null;
+				ctx?.revert();
+				ctx = null;
+				splitInstance?.revert();
+				killLineTweens();
+				resizeObserver?.disconnect();
+				resizeObserver = null;
 
-			const refreshSoon = () => {
-				cancelAnimationFrame(refreshFrame);
-				refreshFrame = requestAnimationFrame(() => ScrollTrigger.refresh());
-			};
+				const refreshSoon = () => {
+					cancelAnimationFrame(refreshFrame);
+					refreshFrame = requestAnimationFrame(() => ScrollTrigger.refresh());
+				};
 
-			ctx = gsap.context(() => {
-				splitInstance = SplitText.create(target, {
-					aria: 'hidden',
-					autoSplit: true,
-					linesClass: 'reveal-comp-line',
-					onSplit: (self: any) => {
-						killLineTweens();
+				ctx = gsap.context(() => {
+					splitInstance = SplitText.create(target, {
+						aria: 'hidden',
+						autoSplit: true,
+						linesClass: 'reveal-comp-line',
+						onSplit: (self: any) => {
+							killLineTweens();
 
-						const lines = (self.lines ?? []) as HTMLElement[];
-						gsap.set(lines, { clipPath: hiddenClipPath(dir) });
+							const lines = (self.lines ?? []) as HTMLElement[];
+							gsap.set(lines, { clipPath: hiddenClipPath(dir) });
 
-						const tween = gsap.to(lines, {
-							clipPath: revealedClipPath(dir, s),
-							ease: 'none',
-							stagger: lineStagger,
-							scrollTrigger: {
-								trigger: target,
-								start: clampScrollPosition(triggerStart),
-								end: clampScrollPosition(triggerEnd),
-								scrub: triggerScrub,
-								scroller: resolvedScroller,
-								invalidateOnRefresh: true,
-							}
-						});
-						lineTweens.push(tween);
+							const tween = gsap.to(lines, {
+								clipPath: revealedClipPath(dir, s),
+								ease: 'none',
+								stagger: lineStagger,
+								scrollTrigger: {
+									trigger: target,
+									start: clampScrollPosition(triggerStart),
+									end: clampScrollPosition(triggerEnd),
+									scrub: triggerScrub,
+									scroller: resolvedScroller,
+									invalidateOnRefresh: true,
+								}
+							});
+							lineTweens.push(tween);
 
-						ScrollTrigger.refresh();
-					},
-					tag: 'span',
-					type: 'lines',
-				});
+							ScrollTrigger.refresh();
+						},
+						tag: 'span',
+						type: 'lines',
+					});
 
-				gsap.set(target, { autoAlpha: 1 });
-			}, node);
+					gsap.set(target, { autoAlpha: 1 });
+				}, node);
 
-			refreshAfterLoad = refreshSoon;
-			window.addEventListener('load', refreshAfterLoad, { once: true });
+				refreshAfterLoad = refreshSoon;
+				window.addEventListener('load', refreshAfterLoad, { once: true });
 
-			if ('ResizeObserver' in window) {
-				resizeObserver = new ResizeObserver(refreshSoon);
-				resizeObserver.observe(document.body);
-				resizeObserver.observe(document.documentElement);
-				resizeObserver.observe(target);
+				if ('ResizeObserver' in window) {
+					resizeObserver = new ResizeObserver(refreshSoon);
+					resizeObserver.observe(document.body);
+					resizeObserver.observe(document.documentElement);
+					resizeObserver.observe(target);
+				}
+
+				refreshSoon();
+			} catch {
+				if (cancelled) return;
+				ctx?.revert();
+				ctx = null;
+				killLineTweens();
+				splitInstance?.revert();
+				splitInstance = null;
+				resizeObserver?.disconnect();
+				resizeObserver = null;
+				revealMotionElement(target);
 			}
-
-			refreshSoon();
 		};
 
 		void init();

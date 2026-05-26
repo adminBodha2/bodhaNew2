@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Arrow from '$lib/icons/arrow-right.svelte';
 	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
+	import StackingLetters from '$lib/motion-core/stacking-words/StackingLetters.svelte';
 	import Scramble from '$lib/motion-core/text-scramble/TextScramble.svelte'
 
 	type Props = {
@@ -17,20 +18,19 @@
 	let isVisible = useInView(() => reference, { threshold: 0.2, once: true });
 </script>
 
-<div class="row ycenter xleft cgap8 rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
+<div class="title-wrap row ycenter xleft cgap8 rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<Scramble>	<h2 class="txt-2xl w600 name tt-u hover-animation" class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
-		{#each text.split('') as char, i}
-			<span class="text-animation char-{i}" style:animation-delay={`${(i + 10) * 0.02}s`}>
-				{char === ' ' ? '\u00A0' : char}
-			</span>
-		{/each}
-	</h2></Scramble>
+	<StackingLetters direction="left">	<Scramble>	<h2 class="txt-2xl w600 name" class:tt-u={!sizeType} class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
+		{text}
+	</h2></Scramble></StackingLetters>
 </div>
 
 <style lang="sass">
+
+.title-wrap
+	overflow-x: hidden
 
 .animatenow.bob
 	@media (min-width: 1201px)
@@ -47,13 +47,6 @@
 	color: var(--lgrey)
 	opacity: 0
 	transform: translateY(8px)
-
-.animatenow
-	.text-animation
-		animation-name: flyUp
-		animation-duration: 0.05s
-		animation-timing-function: ease
-		animation-fill-mode: forwards
 
 @keyframes fromLeft
 	0%

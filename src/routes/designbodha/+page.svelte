@@ -68,7 +68,7 @@
 						<p class="highlight-text">The boom in creatorship has given us the power of the gods, without the requisite wisdom of the gods. In turn, disruptive innovation, accelerationism, and values-agnostic design have put us in confrontation with the meta-crises.</p>
 					</Reveal>
 					<Reveal>
-						<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank and initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
+						<p class="highlight-text pbot8"><span class="desb">design</span>Bodha is a think-tank initiative to embed dharmic design in creatorship. Our whitepaper and this document is a call to designers, creators, product developers, and more.</p>
 					</Reveal>
 				</div>
 		</div>

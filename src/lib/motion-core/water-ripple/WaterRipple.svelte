@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onMount } from "svelte";
 	import { cn } from "../utils/cn";
 	import type Scene from "./WaterRippleScene.svelte";
 	import type { ComponentProps } from "svelte";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 
 	type SceneProps = ComponentProps<typeof Scene>;
 
@@ -31,9 +31,30 @@
 	}: Props = $props();
 
 	let SceneComponent = $state<typeof Scene | null>(null);
+	const motionDisabled = $derived(areMotionAnimationsDisabled());
 
-	onMount(async () => {
-		SceneComponent = (await import("./WaterRippleScene.svelte")).default;
+	$effect(() => {
+		if (motionDisabled) {
+			SceneComponent = null;
+			return;
+		}
+
+		let cancelled = false;
+
+		const init = async () => {
+			try {
+				const module = await import("./WaterRippleScene.svelte");
+				if (!cancelled) SceneComponent = module.default;
+			} catch {
+				if (!cancelled) SceneComponent = null;
+			}
+		};
+
+		void init();
+
+		return () => {
+			cancelled = true;
+		};
 	});
 </script>
 

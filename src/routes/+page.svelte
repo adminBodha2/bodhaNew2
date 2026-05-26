@@ -8,11 +8,10 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import { verticals, publications } from '$lib/utils/localsends';
 	import VideoPlayer from '$lib/comps/custom-video-player.svelte';
-	import Slider from '$lib/svelteanim/components/Slide.svelte';
-	import Slide from '$lib/svelteanim/components/Slide2.svelte'
-	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import type { ComponentProps } from 'svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
+	import ReadingT from '$lib/icons/readingT.svelte'
 	import { animState, toggleAnim } from '$lib/utils/globalstores';
 
 	type Props = Partial<ComponentProps<typeof StackingWords>>;
@@ -23,17 +22,6 @@
 	let vids = $derived(data.vids ?? []);
 	let latestItems = $derived(data.latestItems ?? []);
 	let wikiItems = $derived(data.wikiOpeners ?? []);
-	let headReveal = $state<HTMLElement | null>(null);
-	let section = $state<HTMLElement | null>(null);
-	let sectionTwo = $state<HTMLElement | null>(null);
-	let sectionThree = $state<HTMLElement | null>(null);
-	let sectionFour = $state<HTMLElement | null>(null);
-	let sectionFive = $state<HTMLElement | null>(null);
-	const verticalsInView = useInView(() => section, { threshold: 0.2, once: true });
-	const secondInView = useInView(() => sectionTwo, { threshold: 0.5, once: true });
-	const thirdInView = useInView(() => sectionThree, { threshold: 0.5, once: true });
-	const fourthInView = useInView(() => sectionFour, { threshold: 0.5, once: true });
-	const fifthInView = useInView(() => sectionFive, { threshold: 0.6, once: true });
 
 	const title = 'Bodha - Cultural Think Tank';
 	const metaDescription = 'Bodha is a think tank and research group focused on contemporary issues of cultural concern, to inform core areas of policy with wisdom derived from Hindu traditions.';
@@ -49,7 +37,7 @@
 
 <Container>
 	<section class="wrapper-std">
-		<div class="box rgap16 lg:rgap32 ycenter" bind:this={headReveal} id="introduction">
+		<div class="box rgap16 lg:rgap32 ycenter" id="introduction">
 			<div class="box">
 				<StackingWords>
 					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
@@ -58,51 +46,69 @@
 					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh13 source-serif">and research group,</h1>
 				</StackingWords>
 			</div>
-			<Reveal><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that thicken the Hindu renaissance.</p></Reveal>
+			<Reveal><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that strengthen Hindu cultural revival.</p></Reveal>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="our pillars" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" bind:this={section}>
-			{#each verticals as item, i}
-				<Slider visible={verticalsInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 200}>
+		<Slide
+			direction="down"
+			distance={260}
+			duration={900}
+			stagger={180}
+			start="top 75%"
+			end="top 25%"
+			scrub={1}
+			targetSelector=".verticals"
+		>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
+				{#each verticals as item}
 					<a class="box blank verticals radius4 overflow-hidden" href={item.href}>
 						<div class="overflow-hidden"><img class="fitted sm:herocard md:port" src={item.image} alt={item.title} /></div>
 						<div class="box rgap16 ptop24 pbot32 px16 lg:px24">
-							<h2 class="txt-4xl ls002m lg:ls004m a-hover w600">{item.title}</h2>
+							<h2 class="txt-3xl lg:txt-4xl ls002m lg:ls004m a-hover w600">{item.title}</h2>
 							<p class="txt-lg grey1 lh14">{item.desc}</p>
 						</div>
 					</a>
-				</Slider>
-			{/each}
-		</div>
+				{/each}
+			</div>
+		</Slide>
 	</section>
 	<section class="wrapper-std growingline alternate">
 		{#if latestItems}
 			<Title text="Latest at Bodha" />
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" bind:this={sectionTwo}>
+		<Slide
+			direction="down"
+			distance={120}
+			duration={500}
+			stagger={180}
+			start="top 90%"
+			end="top 15%"
+			scrub={1}
+			targetSelector=".newitems"
+		>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 				{#each latestItems as item, i}
-					<Slider visible={secondInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<a class="box p24 md:p32 blank whitestone b-main" href={item.link}>
+						<a class="box p24 md:p32 blank whitestone b-main newitems" href={item.link}>
 							<p class="txt-xs w500 tt-u grey1">{item.badge}</p>
-							<h3 class="txt-2xl lh12 w600 a-hover ptop8 pbot16 ls001m">{item.title}</h3>
+							<h3 class="txt-xl lg:txt-2xl lh12 w600 a-hover ptop8 pbot16 ls001m">{item.title}</h3>
 							<p class="grey2 lh14">{item.description}</p>
 						</a>
-					</Slider>
 				{/each}
 			</div>
+		</Slide>
 		{/if}
 	</section>
 	<section class="wrapper-std growingline">
 		{#if blogs.length > 0}
-			<div class="row xbetween ycenter rgap16 mleft mwrap">
+			<div class="row xbetween ycenter rgap8 mleft mcol">
 				<Title text="essays and articles" />
 				<a class="primary" href="/blog"><span>See All</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid" bind:this={sectionThree}>
+			<Slide targetSelector=".blog-items">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each blogs as item, i}
-					<Slider visible={thirdInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 250}>
-						<div class="box whitecard">
+						<div class="box whitestone b-main blog-items">
 							<div class="row cgap4 rgap4 ycenter p16">
 								{#if item.meta.tags && item.meta.tags.length > 0}
 									{#each item.meta.tags as tag}
@@ -114,28 +120,35 @@
 								<img class="fitted landscape" src={item.meta.image} alt={item.meta.title} />
 							</a>
 							<a class="blank box rgap16 lg:rgap24 p16 lg:p32" href={item.linkpath}>
-								<h3 class="txt-3xl source-serif w660 lh12 a-hover">{item.meta.title}</h3>
+								<h3 class="txt-2xl w600 lh12 a-hover">{item.meta.title}</h3>
 								<p class="grey2 lh14">{item.meta.excerpt}</p>
-								<div class="box rgap4 self-bottom">
-									<p class="tt-u txt-sm w600">{item.meta.author}</p>
-									<p class="tt-u txt-xs w500 grey1">{item.formattedDate} | {item.meta.words} words</p>
-								</div>
+
 							</a>
+								<div class="box rgap4 self-bottom p16 lg:px32 lg:py16 bordertop">
+									<p class="tt-u txt-sm w600">{item.meta.author}</p>
+									<div class="row cgap8">
+										<p class="tt-u txt-xs w500 grey1">{item.formattedDate}</p>
+										<div class="row ycenter cgap4">
+										<ReadingT/>
+										<p class="tt-u txt-xs w500 grey1">{item.readingTime} mins</p>
+										</div>
+									</div>
+								</div>
 						</div>
-					</Slider>
 				{/each}
 			</div>
+			</Slide>
 		{/if}
 	</section>
 	<section class="wrapper-std growingline alternate">
 		<Title text="publications" />
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap32" bind:this={sectionFour}>
+		<Slide targetSelector=".books">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap32">
 			{#each publications as pub, i}
-				<Slider visible={fourthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
 					<div class="books rgap16">
 						<img class="fitted port contain" src={pub.image} alt={pub.title} />
-						<div class="box rgap16 p16 lg:p32">
-							<p class="source-serif txt-2xl lg:txt-3xl w650 lh14 ls001m">{pub.title}</p>
+						<div class="box rgap8 lg:rgap16 p16 lg:p32">
+							<p class="txt-2xl w600 lh14 ls001m">{pub.title}</p>
 							<p class="grey2 txt-lg lh14">{pub.desc}</p>
 							<div class="row wrap cgap8 rgap8 mtop8">
 								{#each pub.links as link}
@@ -144,22 +157,22 @@
 							</div>
 						</div>
 					</div>
-				</Slider>
 			{/each}
 		</div>
+		</Slide>
 	</section>
 	<section class="wrapper-std growingline">
 		{#if vids.length > 0}
-			<div class="row xbetween ycenter rgap16 mcol mleft col-span-full">
+			<div class="row xbetween ycenter rgap8 mcol mleft col-span-full">
 				<Title text="recent videos" />
 				<a class="primary" href="/videos"><span>All Videos</span></a>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid" bind:this={sectionFive}>
+		<Slide targetSelector=".video-items">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each vids as item, i}
-					<Slider visible={fifthInView.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={i * 100}>
-						<div class="box blank whitestone theme-line-parent">
+						<div class="box blank whitestone theme-line-parent video-items">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
-							<a class="box rgap8 lg:rgap16 p24" href={item.link} target="_blank" rel="noreferrer">
+							<a class="box rgap8 lg:rgap16 p16 lg:p24" href={item.link} target="_blank" rel="noreferrer">
 								<p class="txt-lg w500">{item.name}</p>
 								<div class="self-bottom box rgap4">
 									<div class="theme-line"></div>
@@ -167,12 +180,12 @@
 								</div>
 							</a>
 						</div>
-					</Slider>
 				{/each}
 			</div>
+		</Slide>
 		{/if}
 	</section>
-	<section class="wrapper-std growingline alternate">
+	<section class="wrapper-std growingline alternate min100vh">
 		<Title text="Knowledge Base" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div>
@@ -189,14 +202,16 @@
 				</Reveal>
 			</div>
 		</div>
+		<Slide targetSelector=".wiki-items">
 		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap16">
 			{#each wikiItems as item}
-				<a class="blank box whitestone p24 lg:p32 rgap8 lg:rgap16 b-main" href={item.link}>
+				<a class="blank box whitestone p16 md:p24 lg:p32 rgap8 lg:rgap16 b-main wiki-items" href={item.link}>
 					<p class="txt-xl w600 a-hover">{item.label}</p>
 					<p class="lh14 grey1">{item.description}</p>
 				</a>
 			{/each}
 		</div>
+		</Slide>
 	</section>
 </Container>
 

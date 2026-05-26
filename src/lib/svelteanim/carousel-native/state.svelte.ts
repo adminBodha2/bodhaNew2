@@ -1,4 +1,5 @@
 import { getContext, setContext } from 'svelte'
+import { areMotionAnimationsDisabled } from '../motionPreference.svelte'
 
 const KEY = Symbol('carousel')
 
@@ -48,7 +49,9 @@ export class CarouselState {
 		const clamped = this.loop
 			? ((target % this.contentSize) + this.contentSize) % this.contentSize
 			: Math.min(Math.max(0, target), max)
-		const opts: ScrollToOptions = { behavior: smooth ? 'smooth' : 'auto' }
+		const opts: ScrollToOptions = {
+			behavior: smooth && !areMotionAnimationsDisabled() ? 'smooth' : 'auto'
+		}
 		if (this.axis() === 'x') opts.left = clamped
 		else opts.top = clamped
 		el.scrollTo(opts)

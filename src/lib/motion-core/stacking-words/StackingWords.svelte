@@ -1,5 +1,10 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
+	import {
+		areMotionAnimationsDisabled,
+		revealMotionElement,
+		waitForMotionLayout,
+	} from "$lib/svelteanim/motionPreference.svelte";
 	import { cn } from "../utils/cn";
 
 	interface Props {
@@ -47,10 +52,10 @@
 		children,
 		class: className = "",
 		start = "top 100%",
-		end = "top 70%",
-		scrub = 2.5,
+		end = "top 50%",
+		scrub = 4,
 		stagger = 0.21,
-		ease = "power3.out",
+		ease = "expo.out",
 		scrollElement,
 		...restProps
 	}: Props = $props();
@@ -69,27 +74,23 @@
 		};
 	};
 
-	// No onMount needed — plugins registered inside $effect after dynamic import
-
 	function killLineTweens() {
 		lineTweens.forEach((tween) => tween.kill());
 		lineTweens = [];
-	}
-
-	async function waitForLayout() {
-		await document.fonts.ready;
-		await new Promise<void>((resolve) =>
-			requestAnimationFrame(() => resolve()),
-		);
-		await new Promise<void>((resolve) =>
-			requestAnimationFrame(() => resolve()),
-		);
 	}
 
 	$effect(() => {
 		if (typeof window === "undefined") return;
 		const node = wrapperRef;
 		if (!node) return;
+
+		if (areMotionAnimationsDisabled()) {
+			splitInstance?.revert();
+			killLineTweens();
+			revealMotionElement(node);
+			return;
+		}
+
 		const triggerStart = start;
 		const triggerEnd = end;
 		const triggerScrub = scrub;
@@ -108,68 +109,78 @@
 		let ctx: any = null;
 
 		const init = async () => {
-			const { gsap } = await import("gsap");
-			const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-			const { SplitText } = await import("gsap/SplitText");
-			gsap.registerPlugin(ScrollTrigger, SplitText);
+			try {
+				const { gsap } = await import("gsap");
+				const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+				const { SplitText } = await import("gsap/SplitText");
+				gsap.registerPlugin(ScrollTrigger, SplitText);
 
-			await waitForLayout();
-			if (cancelled) return;
+				await waitForMotionLayout();
+				if (cancelled) return;
 
-			ctx?.revert();
-			ctx = null;
-			splitInstance?.revert();
-			killLineTweens();
+				ctx?.revert();
+				ctx = null;
+				splitInstance?.revert();
+				killLineTweens();
 
-			ctx = gsap.context(() => {
-				splitInstance = SplitText.create(node, {
-					aria: "hidden",
-					autoSplit: true,
-					linesClass: "stacking-words-line",
-					onSplit: (self: any) => {
-						killLineTweens();
+				ctx = gsap.context(() => {
+					splitInstance = SplitText.create(node, {
+						aria: "hidden",
+						autoSplit: true,
+						linesClass: "stacking-words-line",
+						onSplit: (self: any) => {
+							killLineTweens();
 
-						const words = (self.words ?? []) as HTMLElement[];
-						words.forEach((word) => {
-							const rect = word.getBoundingClientRect();
-							gsap.set(word, {
-								x:
-									window.innerWidth -
-									rect.left +
-									rect.width +
-									OFFSCREEN_MARGIN_PX,
+							const words = (self.words ?? []) as HTMLElement[];
+							words.forEach((word) => {
+								const rect = word.getBoundingClientRect();
+								gsap.set(word, {
+									x:
+										window.innerWidth -
+										rect.left +
+										rect.width +
+										OFFSCREEN_MARGIN_PX,
+								});
 							});
-						});
 
-						(self.lines ?? []).forEach((line: HTMLElement) => {
-							const tween = gsap.to(
-								line.querySelectorAll(".stacking-words-word"),
-								{
-									ease: wordEase,
-									stagger: wordStagger,
-									x: 0,
-									scrollTrigger: {
-										trigger: line,
-										start: triggerStart,
-										end: triggerEnd,
-										scrub: triggerScrub,
-										scroller: triggerScroller,
-										invalidateOnRefresh: true,
+							(self.lines ?? []).forEach((line: HTMLElement) => {
+								const tween = gsap.to(
+									line.querySelectorAll(".stacking-words-word"),
+									{
+										ease: wordEase,
+										stagger: wordStagger,
+										x: 0,
+										scrollTrigger: {
+											trigger: line,
+											start: triggerStart,
+											end: triggerEnd,
+											scrub: triggerScrub,
+											scroller: triggerScroller,
+											invalidateOnRefresh: true,
+										},
 									},
-								},
-							);
-							lineTweens.push(tween);
-						});
+								);
+								lineTweens.push(tween);
+							});
 
-						ScrollTrigger.refresh();
-					},
-					tag: "span",
-					type: "lines, words",
-					wordsClass: "stacking-words-word",
-				});
+							ScrollTrigger.refresh();
+						},
+						tag: "span",
+						type: "lines, words",
+						wordsClass: "stacking-words-word",
+					});
 
-				gsap.set(node, { autoAlpha: 1 });
-			}, node);
+					gsap.set(node, { autoAlpha: 1 });
+				}, node);
+			} catch {
+				if (cancelled) return;
+				ctx?.revert();
+				ctx = null;
+				killLineTweens();
+				splitInstance?.revert();
+				splitInstance = null;
+				revealMotionElement(node);
+			}
 		};
 
 		void init();
@@ -193,19 +204,17 @@
 	{@render children?.()}
 </div>
 
-<style>
-	.stacking-words {
-		visibility: hidden;
-		overflow: hidden;
-	}
+<style lang="sass">
 
-	.stacking-words :global(.stacking-words-line),
-	.stacking-words :global(.stacking-words-line-mask) {
-		display: block;
-	}
+.stacking-words
+	visibility: hidden
+	overflow: hidden
 
-	.stacking-words :global(.stacking-words-word) {
-		display: inline-block;
-		will-change: transform;
-	}
+.stacking-words :global(.stacking-words-line), .stacking-words :global(.stacking-words-line-mask)
+	display: block
+
+.stacking-words :global(.stacking-words-word)
+	display: inline-block
+	will-change: transform
+
 </style>

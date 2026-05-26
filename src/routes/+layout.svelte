@@ -11,11 +11,8 @@
 	import Bottom from '$lib/comps/pagebottom.svelte';
 	import SearchModal from '$lib/comps/searchmodal.svelte';
 
-	const pageTransitionClass = 'page-transition';
-
 	let { children } = $props();
 	let width = $state(0);
-	let count = $state(0);
 	$effect(() => {
 		$iW = width < 1025;
 	});
@@ -41,23 +38,16 @@
 		}
 	}
 
-	onNavigate((navigation) => {
-		if (!document.startViewTransition) return;
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-		if (navigation.from?.url.pathname === navigation.to?.url.pathname) return;
+onNavigate((navigation) => {
+	if (!document.startViewTransition) return;
 
-		return new Promise((resolve) => {
-			document.documentElement.classList.add(pageTransitionClass);
-			document
-				.startViewTransition(async () => {
-					resolve(undefined);
-					await navigation.complete;
-				})
-				.finished.finally(() => {
-					document.documentElement.classList.remove(pageTransitionClass);
-				});
+	return new Promise((resolve) => {
+		document.startViewTransition(async () => {
+			resolve();
+			await navigation.complete;
 		});
 	});
+});
 </script>
 
 <svelte:window bind:innerWidth={width} onkeydown={handleKeydown} />
@@ -98,39 +88,21 @@
 	background: var(--color-back)
 
 main
-	transition: background-size 0.35s ease
-	view-transition-name: page
 	background: var(--color-back)
 
-:global(::view-transition-old(page))
-	z-index: 1
-
-:global(::view-transition-new(page))
-	z-index: 2
-	animation: page-vertical-wipe 560ms cubic-bezier(0.76, 0, 0.24, 1) both
-
-@media (prefers-reduced-motion: reduce)
-	:global(::view-transition-old(page)),
-	:global(::view-transition-new(page))
-		animation: none
-		mix-blend-mode: normal
-
-::view-transition-group(*)
-	animation: none
-
-@keyframes page-vertical-wipe
+@keyframes slideFromTop
 	from
-		clip-path: inset(0 0 100% 0)
-		opacity: 0.92
-	to
-		clip-path: inset(0 0 0 0)
-		opacity: 1
+		transform: translateY(-720px)
 
-@keyframes breathers
-	from
-		background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem
+@keyframes slideToBottom
 	to
-		background-size: 4rem 4rem, 4rem 4rem, 1rem 1rem, 1rem 1rem
+		transform: translateY(720px)
+
+:root::view-transition-old(root)
+	animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideToBottom
+
+:root::view-transition-new(root)
+	animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideFromTop
 
 header
 	width: 100%

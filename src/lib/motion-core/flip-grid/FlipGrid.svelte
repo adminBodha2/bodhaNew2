@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { cn } from "../utils/cn";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 
 	import type { Snippet } from "svelte";
 
@@ -73,17 +74,29 @@
 	});
 
 	$effect(() => {
+		if (areMotionAnimationsDisabled()) {
+			gsapInstance = null;
+			flipPlugin = null;
+			return;
+		}
+
 		let cancelled = false;
 
 		const init = async () => {
-			const { gsap } = await import("gsap");
-			const { Flip } = await import("gsap/Flip");
-			gsap.registerPlugin(Flip);
+			try {
+				const { gsap } = await import("gsap");
+				const { Flip } = await import("gsap/Flip");
+				gsap.registerPlugin(Flip);
 
-			if (cancelled) return;
+				if (cancelled) return;
 
-			gsapInstance = gsap;
-			flipPlugin = Flip;
+				gsapInstance = gsap;
+				flipPlugin = Flip;
+			} catch {
+				if (cancelled) return;
+				gsapInstance = null;
+				flipPlugin = null;
+			}
 		};
 
 		void init();
@@ -97,7 +110,7 @@
 		void className;
 		void computedStyle;
 
-		if (container && flipPlugin) {
+		if (!areMotionAnimationsDisabled() && container && flipPlugin) {
 			const items = container.querySelectorAll(".flip-grid-item");
 			if (items.length > 0) {
 				flipState = flipPlugin.getState([...items, container] as Element[]);
@@ -108,6 +121,11 @@
 	$effect(() => {
 		void className;
 		void computedStyle;
+
+		if (areMotionAnimationsDisabled()) {
+			flipState = null;
+			return;
+		}
 
 		if (flipState && container && flipPlugin && gsapInstance) {
 			const currentState = flipState;

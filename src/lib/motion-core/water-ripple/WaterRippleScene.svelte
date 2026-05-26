@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 	import {
 		Camera,
 		Mesh,
@@ -142,6 +143,8 @@
 	});
 
 	onMount(() => {
+		if (areMotionAnimationsDisabled()) return;
+
 		const targetCanvas = canvas;
 		if (!targetCanvas) return;
 

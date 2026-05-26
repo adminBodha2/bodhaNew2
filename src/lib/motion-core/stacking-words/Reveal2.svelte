@@ -1,5 +1,10 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
+    import {
+        areMotionAnimationsDisabled,
+        revealMotionElement,
+        waitForMotionLayout,
+    } from "$lib/svelteanim/motionPreference.svelte";
     import { cn } from "../utils/cn";
 
     interface Props {
@@ -45,20 +50,19 @@
         lineTweens = [];
     }
 
-    async function waitForLayout() {
-        await document.fonts.ready;
-        await new Promise<void>((resolve) =>
-            requestAnimationFrame(() => resolve()),
-        );
-        await new Promise<void>((resolve) =>
-            requestAnimationFrame(() => resolve()),
-        );
-    }
-
     $effect(() => {
         if (typeof window === "undefined") return;
         const node = wrapperRef;
         if (!node) return;
+
+        if (areMotionAnimationsDisabled()) {
+            splitInstanceLines?.revert();
+            splitInstanceWords?.revert();
+            killLineTweens();
+            revealMotionElement(node);
+            return;
+        }
+
         const triggerStart = start;
         const triggerEnd = end;
         const triggerScrub = scrub;
@@ -77,64 +81,72 @@
         let ctx: any = null;
 
         const init = async () => {
-            const { gsap } = await import("gsap");
-            const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-            const { SplitText } = await import("gsap/SplitText");
-            gsap.registerPlugin(ScrollTrigger, SplitText);
+            try {
+                const { gsap } = await import("gsap");
+                const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+                const { SplitText } = await import("gsap/SplitText");
+                gsap.registerPlugin(ScrollTrigger, SplitText);
 
-            await waitForLayout();
-            if (cancelled) return;
+                await waitForMotionLayout();
+                if (cancelled) return;
 
-            ctx?.revert();
-            ctx = null;
-            splitInstanceLines?.revert();
-            splitInstanceWords?.revert();
-            killLineTweens();
+                ctx?.revert();
+                ctx = null;
+                splitInstanceLines?.revert();
+                splitInstanceWords?.revert();
+                killLineTweens();
 
-            ctx = gsap.context(() => {
-                // 1. First split by lines to create the outer overflow-hidden wrappers
-                splitInstanceLines = SplitText.create(node, {
-                    aria: "hidden",
-                    autoSplit: true,
-                    linesClass: "reveal-mask",
-                    tag: "span",
-                    type: "lines",
-                });
+                ctx = gsap.context(() => {
+                    splitInstanceLines = SplitText.create(node, {
+                        aria: "hidden",
+                        autoSplit: true,
+                        linesClass: "reveal-mask",
+                        tag: "span",
+                        type: "lines",
+                    });
 
-                // 2. Second split nested inside the first to get the actual text to animate
-                splitInstanceWords = SplitText.create(splitInstanceLines.lines, {
-                    linesClass: "reveal-content",
-                    tag: "span",
-                    type: "lines",
-                    onSplit: (self: any) => {
-                        killLineTweens();
+                    splitInstanceWords = SplitText.create(splitInstanceLines.lines, {
+                        linesClass: "reveal-content",
+                        tag: "span",
+                        type: "lines",
+                        onSplit: (self: any) => {
+                            killLineTweens();
 
-                        const innerLines = (self.lines ?? []) as HTMLElement[];
-                        
-                        // Start the text shifted down out of its overflow-hidden mask
-                        gsap.set(innerLines, { yPercent: 100 });
+                            const innerLines = (self.lines ?? []) as HTMLElement[];
+                            gsap.set(innerLines, { yPercent: 100 });
 
-                        const tween = gsap.to(innerLines, {
-                            ease: lineEase,
-                            yPercent: 0,
-                            stagger: lineStagger,
-                            scrollTrigger: {
-                                trigger: node,
-                                start: triggerStart,
-                                end: triggerEnd,
-                                scrub: triggerScrub,
-                                scroller: triggerScroller,
-                                invalidateOnRefresh: true,
-                            },
-                        });
-                        lineTweens.push(tween);
+                            const tween = gsap.to(innerLines, {
+                                ease: lineEase,
+                                yPercent: 0,
+                                stagger: lineStagger,
+                                scrollTrigger: {
+                                    trigger: node,
+                                    start: triggerStart,
+                                    end: triggerEnd,
+                                    scrub: triggerScrub,
+                                    scroller: triggerScroller,
+                                    invalidateOnRefresh: true,
+                                },
+                            });
+                            lineTweens.push(tween);
 
-                        ScrollTrigger.refresh();
-                    }
-                });
+                            ScrollTrigger.refresh();
+                        }
+                    });
 
-                gsap.set(node, { autoAlpha: 1 });
-            }, node);
+                    gsap.set(node, { autoAlpha: 1 });
+                }, node);
+            } catch {
+                if (cancelled) return;
+                ctx?.revert();
+                ctx = null;
+                killLineTweens();
+                splitInstanceLines?.revert();
+                splitInstanceWords?.revert();
+                splitInstanceLines = null;
+                splitInstanceWords = null;
+                revealMotionElement(node);
+            }
         };
 
         void init();

@@ -6,23 +6,18 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
-	import Slider from '$lib/svelteanim/components/Slide.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
-	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
+	import Blur from '$lib/svelteanim/components/Blur.svelte';
+	import Scale from '$lib/svelteanim/components/Scale.svelte';
 	import Policy from '$lib/icons/policy.svelte';
 	import Concern from '$lib/icons/concern.svelte';
 	import Aware from '$lib/icons/aware.svelte';
 
 	const title = 'About Bodha | Hindu Research, IKS, Policy, and Cultural Work';
-	const metaDescription = 'Learn about Bodha, a Hindu research group working across Indian Knowledge Systems, policy, education, cultural experiences, and public thought.';
+	const metaDescription = 'Bodha, a research group and think-tank working across issues of Hindu concern, Indian Knowledge Systems, policy, education, cultural experiences, and public thought.';
 	const metaUrl = absoluteUrl('/about');
 	const metaImage = absoluteImage('/images/bodhacover.png');
-	let referenceOne = $state<HTMLElement | null>(null);
-	let referenceTwo = $state<HTMLElement | null>(null);
-	let isVisible = useInView(() => referenceOne, { threshold: 0.4, once: true });
-	let isTwoVisible = useInView(() => referenceTwo, { threshold: 0.5, once: true });
-	let revref = $state<HTMLElement | null>(null);
-	let revVis = useInView(() => revref, { threshold: 0.4, once: true });
 
 	const jsonld = stringifyJsonLd(
 		webPageJsonLd({
@@ -37,104 +32,120 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-	<Parallax imageLink="/images/heroes/key-aboutbodha.webp" wipe={true}/>
+<Parallax imageLink="/images/heroes/key-aboutbodha.webp" wipe={true}/>
 <Container>
 <Crumb showT={true} title="About Bodha" showD={true} desc={metaDescription} />
 	<section class="wrapper-std">
-		<div class="box rgap32" bind:this={revref}>
-			<Reveal visible={revVis.visible}>
-				<p class="highlight-text width60">Bodha is a <span class="blue">think tank and research group</span> studying contemporary issues of cultural concern. We inform core areas of policy with wisdom derived from Hindu culture and philosophy, and help orient education to the Indian Knowledge Systems (IKS). We also curate cultural experiences of core Hindu institutions like the Hindu temple.</p>
+		<div class="grid grid-cols-1 lg:grid-cols-3 cgap32 rgap16">
+			<div class="col-span-2">
+				<Reveal>
+				<p class="highlight-text">Bodha is a <span class="blue">think tank and research group</span> studying contemporary issues of cultural concern. We inform core areas of policy with wisdom derived from Hindu culture and philosophy, and help orient education to the Indian Knowledge Systems (IKS). We also curate cultural experiences of core Hindu institutions like the Hindu temple.</p>
 			</Reveal>
-			<div class="box rgap32 ptop16">
-				<Title text="Our Mandate" sizeType={true}/>
-				<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 white-grid">
-					<div class="row ycenter cgap16 rgap8 p24 lg:p32 whitecard">
+			</div>
+			<div class="box col-span-1">
+				<Scale targetSelector="link-one"><a class="link-one highlight-text linked" href="/blog/what-bodha-logo-means">Meaning Behind Our Logo</a></Scale>
+				<Scale targetSelector="link-two" start="top 45%"><a class="link-two highlight-text linked" href="/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs">Pyramid of Priorities</a></Scale>
+			</div>
+		</div>
+		<div class="box rgap32">
+			<div class="box rgap16 ptop16">
+				<h3 class="txt-xl">Our Mandate</h3>
+				<Slide targetSelector=".items">
+				<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap16">
+					<div class="box ycenter cgap16 rgap8 std-pad whitecard items b-main">
 						<Policy color="var(--color-theme-dark)" />
 						<p class="txt-lg lh14">Provide an Indian cultural lens to policy and institutional design with research in frontier areas.</p>
 					</div>
-					<div class="row ycenter cgap16 rgap8 p24 lg:p32 whitecard">
+					<div class="box ycenter cgap16 rgap8 std-pad whitecard items b-main">
 						<Concern size={56} color="var(--color-theme-dark)" />
 						<p class="txt-lg lh14">Ask pertinent questions about the most critical cultural problems today.</p>
 					</div>
-					<div class="row ycenter cgap16 rgap8 p24 lg:p32 whitecard">
+					<div class="box ycenter cgap16 rgap8 std-pad whitecard items b-main">
 						<Aware color="var(--color-theme-dark)" />
 						<p class="txt-lg lh14">Create immersive cultural experiences to make our youth more culture aware and active.</p>
 					</div>
 				</div>
+				</Slide>
 			</div>
 		</div>
 	</section>
-	<section class="wrapper-std growingline" bind:this={referenceOne}>
+	<section class="wrapper-std growingline">
 		<Title text="Our Work" />
-		<div class="box rgap1">
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid" id="forlinks">
-			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/research">
-					<p class="txt-xl w600 a-hover">Research</p>
+		<Slide targetSelector=".works">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" id="forlinks">
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/research">
+					<img class="fitted landscape" src="/images/key-research.webp" alt="research"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Research</p>
 					<p class="txt-lg lh14 grey2">Our primary work stream, with projects in current and upcoming pipelines. We point methodological rigor, authenticity, and emic cultural sensitivity towards issues such as Hindu models of temple management, Hindu views of modernity, and more</p>
-					<p class="blue highlight-text arrow self-bottom">→</p>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={200}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/big-questions">
-					<p class="txt-xl w600 a-hover">Big Questions</p>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/big-questions">
+					<img class="fitted landscape" src="/images/key-bigquestions.webp" alt="big-questions"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Big Questions</p>
 					<p class="txt-lg lh14 grey2">With the Big Questions initiative, we're asking provocative questions about the most fundamental problems and open questions that Hindu society faces today.</p>
-					<p class="blue highlight-text arrow self-bottom">→</p>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={400}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/academy">
-					<p class="txt-xl w600 a-hover">Academy</p>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/academy">
+					<img class="fitted landscape" src="/images/key-academy.webp" alt="bodha academy"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Academy</p>
 					<p class="txt-lg lh14 grey2">Bodha Academy envisions creating a line of scholars capable of carrying the Hindu intellectural work forward, and runs critical online courses.</p>
-					<p class="blue highlight-text arrow self-bottom">→</p>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-			<Slider visible={isVisible.visible} direction="down" outDirection="up" distance={200} duration={1000} delay={600}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/anveshi">
-					<p class="txt-xl w600 a-hover">Anveshi</p>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/anveshi">
+					<img class="fitted landscape" src="/images/key-anveshi.webp" alt="anveshi"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Anveshi</p>
 					<p class="txt-lg lh14 grey2">Bodha Anveshi is our flagship cultural immersion program, curating sacred tours to unexplored cultural kshetras and trails.</p>
-					<p class="blue highlight-text arrow self-bottom">→</p>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid" bind:this={referenceTwo}>
-			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/library">
-					<p class="txt-xl w600 a-hover">Bodha Open Library</p>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/library">
+					<img class="fitted landscape" src="/images/heroes/key-bol.webp" alt="bodha open library"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Bodha Open Library</p>
 					<p class="txt-lg lh14 grey2">The Bodha Open Library features 200+ texts ranging from Puranas and Darshanic texts to papers on Indo-European linguistics, IKS, and more.</p>
-					<div class="theme-line"></div>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={200}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/blog">
-					<p class="txt-xl w600 a-hover">Essays, Writings</p>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/blog">
+					<img class="fitted landscape" src="/images/heroes/key-blog.webp" alt="bodha blog"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Essays, Writings</p>
 					<p class="txt-lg lh14 grey2">Read our essays on culture, history, tradition, and more at our blog, featuring 50+ articles that bring together our writings, research, opinions over the years.</p>
-					<div class="theme-line"></div>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={300}>
-				<a class="box rgap8 lg:rgap16 p24 lg:p32 whitestone" href="/inspiration">
-					<p class="txt-xl w600 a-hover">Our Inspiration</p>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/inspiration">
+					<img class="fitted landscape" src="/images/key-inspiration.webp" alt="inspiration"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">Our Inspiration</p>
 					<p class="txt-lg lh14 grey2">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought. We document the schools of thought and thinkers that inspire and inform us.</p>
-					<div class="theme-line"></div>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
-			</Slider>
-			<Slider visible={isTwoVisible.visible} direction="down" outDirection="up" distance={200} duration={500} delay={400}>
-				<div class="box rgap8 lg:rgap16 p24 lg:p32 whitestone">
-					<p class="txt-xl w600 a-hover">Brand and Logo</p>
-					<p class="txt-lg lh14 grey2">This essay by our founder explains the <a class="linkedlight" href="meaning behind our logo">meaning behind our logo</a>, and here he outlines the <a class="linkedlight" href="/blog/bodha-pyramid-of-priorities-nature-of-hindu-orgs">Bodha pyramid of priorities.</a>.</p>
-					<p class="txt-lg lh14 grey2">We're passionate about design and development! Learn more about <a class="linkedlight" href="/designbodha">designBodha,</a> and access our <a class="linkedlight" target="_blank" rel="noreferrer" href="https://github.com/adminBodha2/bodhaNew2">website public repo</a> at Github.</p>
-					<div class="theme-line"></div>
-				</div>
-			</Slider>
+				<a class="works box rgap8 lg:rgap16 whitestone b-main p8" href="/designbodha">
+					<img class="fitted-landscape" src="images/heroes/key-designbodha.webp" alt="designbodha"/>
+					<div class="p8 box rgap8">
+					<p class="txt-2xl w600 a-hover ls002m">designBodha</p>
+					<p class="txt-lg lh14 grey2">An initiative for dharmic design - a call to designers, creators, product developers, and others to develop ethical, harmonious, and regenerative creation across disciplines.</p>
+					</div>
+					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
+				</a>
 		</div>
-		</div>
+		</Slide>
 	</section>
 	<section class="wrapper-std growingline alternate">
 		<Title text="The Team" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+		<Blur targetSelector=".team-member">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 			{#each teamMembers as member, j}
-				<div class="box rgap32 whitestone p24 lg:p32">
+				<div class="box rgap32 whitecard std-pad b-main team-member">
 					<div class="member-image">
 						<img src={member.image} alt={member.name} />
 					</div>
@@ -160,6 +171,7 @@
 				</div>
 			{/each}
 		</div>
+		</Blur>
 	</section>
 </Container>
 

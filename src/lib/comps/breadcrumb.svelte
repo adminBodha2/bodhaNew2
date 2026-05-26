@@ -38,7 +38,6 @@
 	{#if !showT}
 		<h1 class="visually-hidden">{title}</h1>
 	{/if}
-
 	<!------breadcrumb row - automatically adds route links at the top of page ------>
 	<div class="row ycenter xleft cgap4 rgap8 mwrap crumbrow">
 		<a class="crumb-link row cgap4" class:faded={routeDepth > 1} href="/"
@@ -60,7 +59,6 @@
 			{/if}
 		{/if}
 	</div>
-
 	<!-----title and description row - adds title, description - set variables showT and showD to true, define in title and desc ---->
 	<div class="mleft box rgap16" class:ta-c={centered}>
 		{#if showT}
@@ -81,9 +79,7 @@
 		<p class="txt-bs lg:txt-lg lh14 grey2" class:width50={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
-
 	<!-----optional row to add more data in page header area, like tags, buttons, text anything. set showRow to true and then add on page ---->
-
 	<!---a bottom border and padding of 2rem is automatically added to component via styling of crumb-outer below----->
 </div>
 
@@ -97,8 +93,8 @@ h1
 
 .crumb-outer
 	border-bottom: var(--border-main)
-	padding-top: 3rem
-	padding-bottom: 3rem
+	padding-top: 2rem
+	padding-bottom: 2rem
 	row-gap: 1rem
 	&.onblog
 		padding-top: 0rem

@@ -1,8 +1,7 @@
-import { browser } from '$app/environment';
 import { cubicOut } from 'svelte/easing';
 import type { TransitionConfig, EasingFunction } from 'svelte/transition';
 import type { SlideDirection, SlideParams } from '../types';
-import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
+import { areMotionAnimationsDisabled } from '../motionPreference.svelte';
 
 // Re-export so consumers don't need to reach into svelte/transition
 export type { EasingFunction };
@@ -57,10 +56,7 @@ export function slide(
 		opacity = true
 	}: SlideParams = {}
 ): TransitionConfig {
-	const prefersReducedMotion =
-		browser && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-	if (prefersReducedMotion || areScrollAnimationsDisabled()) {
+	if (areMotionAnimationsDisabled()) {
 		return { duration: 0, delay: 0 };
 	}
 
@@ -70,7 +66,7 @@ export function slide(
 	// the node has no box of its own — transforms applied to it are invisible.
 	// Detect this and animate the first child element directly instead.
 	const isContents =
-		browser && (node as HTMLElement).style?.display === 'contents';
+		(node as HTMLElement).style?.display === 'contents';
 
 	if (isContents) {
 		const target = node.firstElementChild as HTMLElement | null;

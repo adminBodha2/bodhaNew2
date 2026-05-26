@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ComponentProps } from "svelte";
 	import Scene from "./FluidImageRevealScene.svelte";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 	import { cn } from "../utils/cn";
 
 	type SceneProps = ComponentProps<typeof Scene>;
@@ -57,19 +58,25 @@
 		blendSoftness = 0.22,
 		...rest
 	}: Props = $props();
+
+	const motionDisabled = $derived(areMotionAnimationsDisabled());
 </script>
 
 <div class={cn("intgrid", className)} {...rest}>
 	<div class="inside-intgrid">
-		<Scene
-			{baseImage}
-			{revealImage}
-			{dissipation}
-			{pointerSize}
-			{velocityDissipation}
-			{pressureIterations}
-			{blendSoftness}
-		/>
+		{#if motionDisabled}
+			<img class="reveal-fallback" src={baseImage} alt="" aria-hidden="true" />
+		{:else}
+			<Scene
+				{baseImage}
+				{revealImage}
+				{dissipation}
+				{pointerSize}
+				{velocityDissipation}
+				{pressureIterations}
+				{blendSoftness}
+			/>
+		{/if}
 	</div>
 </div>
 
@@ -88,5 +95,10 @@
 	bottom: 0
 	left: 0
 	z-index: 0
+
+.reveal-fallback
+	height: 100%
+	width: 100%
+	object-fit: cover
 
 </style>

@@ -8,6 +8,7 @@
 	import { navLinks } from '$lib/utils/localsends'
 
 	let scro = $state(0);
+	let wid = $state(0);
 
 	let firstSubroute = $derived.by(() => {
 		const parts = page.url.pathname.split('/').filter(Boolean);
@@ -23,7 +24,7 @@
 	});
 </script>
 
-<svelte:window bind:scrollY={scro} />
+<svelte:window bind:scrollY={scro} bind:innerWidth={wid}/>
 
 <section class="header-wrapper">
 <div class="row ycenter xbetween header-content">
@@ -36,7 +37,7 @@
 				<img class="rest" src="/images/rest.png" alt="rest" />
 			{/if}
 		</a>
-	{#if !$iW}
+	{#if wid > 1024}
 		<nav class="row ycenter tray">
 			{#each navLinks as link}
 				<a class="nav-link blank" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
@@ -60,7 +61,7 @@
 		</div>
 	{/if}
 </div>
-{#if $menuState && $iW}
+{#if $menuState && wid <= 1024}
 	<Mobilemenu />
 {/if}
 </section>

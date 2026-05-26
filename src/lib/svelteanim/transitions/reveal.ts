@@ -1,7 +1,6 @@
-import { browser } from '$app/environment';
 import { cubicInOut } from 'svelte/easing';
 import type { TransitionConfig, EasingFunction } from 'svelte/transition';
-import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
+import { areMotionAnimationsDisabled } from '../motionPreference.svelte';
 
 /**
  * 'left'     — wipe starts at the left edge, travels right
@@ -108,15 +107,12 @@ export function reveal(
 		slant = 20
 	}: RevealParams = {}
 ): TransitionConfig {
-	const prefersReducedMotion =
-		browser && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-	if (prefersReducedMotion || areScrollAnimationsDisabled()) {
+	if (areMotionAnimationsDisabled()) {
 		return { duration: 0, delay: 0 };
 	}
 
 	const isContents =
-		browser && (node as HTMLElement).style?.display === 'contents';
+		(node as HTMLElement).style?.display === 'contents';
 
 	if (isContents) {
 		const target = node.firstElementChild as HTMLElement | null;

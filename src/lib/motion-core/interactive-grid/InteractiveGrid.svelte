@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Scene from "./InteractiveGridScene.svelte";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 	import { cn } from "../utils/cn";
 
 	interface Props {
@@ -46,6 +47,7 @@
 	let container = $state<HTMLElement>();
 	let mouseX = $state(0);
 	let mouseY = $state(0);
+	const motionDisabled = $derived(areMotionAnimationsDisabled());
 
 	const attachContainer = (node: HTMLElement) => {
 		container = node;
@@ -57,6 +59,7 @@
 	};
 
 	function handleMouseMove(e: MouseEvent) {
+		if (motionDisabled) return;
 		if (!container) return;
 		const rect = container.getBoundingClientRect();
 		mouseX = (e.clientX - rect.left) / rect.width;
@@ -71,15 +74,19 @@
 	{...rest}
 >
 	<div class="inside-intgrid">
-		<Scene
-			{image}
-			{grid}
-			{mouseSize}
-			{strength}
-			{relaxation}
-			{mouseX}
-			{mouseY}
-		/>
+		{#if motionDisabled}
+			<img class="grid-fallback" src={image} alt="" aria-hidden="true" />
+		{:else}
+			<Scene
+				{image}
+				{grid}
+				{mouseSize}
+				{strength}
+				{relaxation}
+				{mouseX}
+				{mouseY}
+			/>
+		{/if}
 	</div>
 </div>
 
@@ -98,5 +105,10 @@
 	bottom: 0
 	left: 0
 	z-index: 0
+
+.grid-fallback
+	height: 100%
+	width: 100%
+	object-fit: cover
 
 </style>

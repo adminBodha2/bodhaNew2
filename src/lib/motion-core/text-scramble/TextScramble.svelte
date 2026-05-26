@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
+	import { areMotionAnimationsDisabled } from "$lib/svelteanim/motionPreference.svelte";
 	import { cn } from "../utils/cn";
 
 	interface ComponentProps {
@@ -75,6 +76,14 @@
 		const target = hoverTarget ?? node;
 		if (!target) return;
 
+		if (areMotionAnimationsDisabled()) {
+			hoverTimeline?.kill();
+			hoverTimeline = null;
+			splitInstance?.revert();
+			splitInstance = null;
+			return;
+		}
+
 		// Capture reactive props before the async gap
 		const capturedDuration = scrambleDuration;
 		const capturedStagger = stagger;
@@ -90,89 +99,101 @@
 		let ctx: any = null;
 
 		const init = async () => {
-			const { gsap } = await import("gsap");
-			const { SplitText } = await import("gsap/SplitText");
-			gsap.registerPlugin(SplitText);
+			try {
+				const { gsap } = await import("gsap");
+				const { SplitText } = await import("gsap/SplitText");
+				gsap.registerPlugin(SplitText);
 
-			if (cancelled) return;
+				if (cancelled) return;
 
-			const createScrambleTimeline = (nodes: HTMLElement[]) => {
-				if (!nodes.length) return null;
+				const createScrambleTimeline = (nodes: HTMLElement[]) => {
+					if (!nodes.length) return null;
 
-				const pool = capturedCharacters.length
-					? capturedCharacters
-					: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-				const timeline = gsap.timeline({ paused: true });
-				const totalDuration = Math.max(0.1, capturedDuration);
-				const stepCount = Math.max(1, Math.floor(capturedCycles));
-				const stepDuration = totalDuration / stepCount;
+					const pool = capturedCharacters.length
+						? capturedCharacters
+						: "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+					const timeline = gsap.timeline({ paused: true });
+					const totalDuration = Math.max(0.1, capturedDuration);
+					const stepCount = Math.max(1, Math.floor(capturedCycles));
+					const stepDuration = totalDuration / stepCount;
 
-				nodes.forEach((charNode, index) => {
-					const finalChar = charNode.dataset.originalChar ?? charNode.textContent ?? "";
-					const charTimeline = gsap.timeline();
+					nodes.forEach((charNode, index) => {
+						const finalChar = charNode.dataset.originalChar ?? charNode.textContent ?? "";
+						const charTimeline = gsap.timeline();
 
-					if (finalChar.trim().length === 0) {
-						charTimeline.call(() => {
-							charNode.textContent = finalChar;
-						});
-					} else {
-						for (let i = 0; i < stepCount; i += 1) {
+						if (finalChar.trim().length === 0) {
 							charTimeline.call(() => {
-								charNode.textContent = getRandomChar(pool);
+								charNode.textContent = finalChar;
 							});
-							charTimeline.to({}, { duration: stepDuration });
+						} else {
+							for (let i = 0; i < stepCount; i += 1) {
+								charTimeline.call(() => {
+									charNode.textContent = getRandomChar(pool);
+								});
+								charTimeline.to({}, { duration: stepDuration });
+							}
+							charTimeline.call(() => {
+								charNode.textContent = finalChar;
+							});
 						}
-						charTimeline.call(() => {
-							charNode.textContent = finalChar;
-						});
-					}
 
-					timeline.add(charTimeline, index * capturedStagger);
-				});
+						timeline.add(charTimeline, index * capturedStagger);
+					});
 
-				return timeline;
-			};
-
-			ctx = gsap.context(() => {
-				splitInstance = SplitText.create(node, {
-					type: "chars",
-					reduceWhiteSpace: false,
-					charsClass: "inline-block",
-				});
-
-				const charNodes = (splitInstance.chars ?? []) as HTMLElement[];
-
-				charNodes.forEach((charNode) => {
-					charNode.style.display = "inline-block";
-					charNode.dataset.originalChar = charNode.textContent ?? "";
-
-					if (!charNode.textContent?.trim()) {
-						charNode.style.whiteSpace = "pre";
-						charNode.style.pointerEvents = "none";
-					}
-				});
-
-				hoverTimeline = createScrambleTimeline(charNodes);
-
-				const handleEnter = () => {
-					if (!hoverTimeline) {
-						hoverTimeline = createScrambleTimeline(charNodes);
-					}
-					hoverTimeline?.restart();
+					return timeline;
 				};
 
-				const handleLeave = () => {
-					hoverTimeline?.progress(1);
-				};
+				ctx = gsap.context(() => {
+					splitInstance = SplitText.create(node, {
+						type: "chars",
+						reduceWhiteSpace: false,
+						charsClass: "inline-block",
+					});
 
-				target.addEventListener("mouseenter", handleEnter);
-				target.addEventListener("mouseleave", handleLeave);
+					const charNodes = (splitInstance.chars ?? []) as HTMLElement[];
 
-				cleanupListeners = () => {
-					target.removeEventListener("mouseenter", handleEnter);
-					target.removeEventListener("mouseleave", handleLeave);
-				};
-			}, node);
+					charNodes.forEach((charNode) => {
+						charNode.style.display = "inline-block";
+						charNode.dataset.originalChar = charNode.textContent ?? "";
+
+						if (!charNode.textContent?.trim()) {
+							charNode.style.whiteSpace = "pre";
+							charNode.style.pointerEvents = "none";
+						}
+					});
+
+					hoverTimeline = createScrambleTimeline(charNodes);
+
+					const handleEnter = () => {
+						if (!hoverTimeline) {
+							hoverTimeline = createScrambleTimeline(charNodes);
+						}
+						hoverTimeline?.restart();
+					};
+
+					const handleLeave = () => {
+						hoverTimeline?.progress(1);
+					};
+
+					target.addEventListener("mouseenter", handleEnter);
+					target.addEventListener("mouseleave", handleLeave);
+
+					cleanupListeners = () => {
+						target.removeEventListener("mouseenter", handleEnter);
+						target.removeEventListener("mouseleave", handleLeave);
+					};
+				}, node);
+			} catch {
+				if (cancelled) return;
+				cleanupListeners?.();
+				cleanupListeners = null;
+				ctx?.revert();
+				ctx = null;
+				hoverTimeline?.kill();
+				hoverTimeline = null;
+				splitInstance?.revert();
+				splitInstance = null;
+			}
 		};
 
 		void init();

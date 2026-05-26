@@ -3,6 +3,7 @@ type PulledEntry = {
 	formattedDate: string;
 	meta: Record<string, any>;
 	linkpath: string;
+	readingTime: number;
 };
 
 type MarkdownModule = {
@@ -37,11 +38,15 @@ function toBlogEntry(path: string, metadata: Record<string, any> | undefined) {
 		return null;
 	}
 
+	const words = parseInt(String(metadata.words ?? '0'), 10);
+	const readingTime = Math.max(1, Math.ceil(words / 200));
+
 	return {
 		date,
 		formattedDate: formatBlogDate(date),
 		meta: metadata,
-		linkpath: path.slice(11, -3)
+		linkpath: path.slice(11, -3),
+		readingTime
 	} satisfies PulledEntry;
 }
 
@@ -95,6 +100,7 @@ function countsFor(entries: PulledEntry[], field: string) {
 export type BlogPost = {
 	linkpath: string;
 	formattedDate: string;
+	readingTime: number;
 	meta: {
 		title: string;
 		image?: string;

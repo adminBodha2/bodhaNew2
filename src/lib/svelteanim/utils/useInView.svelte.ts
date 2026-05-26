@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { areScrollAnimationsDisabled } from '../motionPreference.svelte';
+import { areMotionAnimationsDisabled } from '../motionPreference.svelte';
 
 export interface UseInViewOptions {
 	/**
@@ -67,7 +67,7 @@ export function useInView(
 	let visible = $state(false);
 
 	$effect(() => {
-		if (areScrollAnimationsDisabled()) {
+		if (areMotionAnimationsDisabled()) {
 			visible = true;
 			return;
 		}

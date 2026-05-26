@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { fly, fade } from 'svelte/transition';
-	import { cubicOut, expoOut, expoIn } from 'svelte/easing';
+	import { cubicOut, expoOut, cubicIn } from 'svelte/easing';
 	import { toggleMenuState, menuState } from '$lib/utils/globalstores';
 	import { navLinks } from '$lib/utils/localsends'
 
@@ -26,7 +26,7 @@
 	});
 </script>
 
-<nav class="mm-wrap" in:fly={{ x: 54, duration: 220, easing: cubicOut, opacity: 1 }} out:fly={{ x: 54, duration: 180, easing: expoOut }} aria-label="Mobile navigation">
+<nav class="mm-wrap" in:fly={{ x: 54, duration: 280, easing: cubicOut, opacity: 1 }} out:fly={{ x: 54, duration: 180, easing: cubicIn }} aria-label="Mobile navigation">
 	<div class="mm-inner box xright ta-r">
 		{#each navLinks as link}
 			<a class="mm-link blank tt-u" class:active={firstSubroute === link.link} href={link.link} onclick={toggleMenuState}>
