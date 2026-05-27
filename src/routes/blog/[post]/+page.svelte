@@ -76,25 +76,35 @@
 		readerChromeHidden.set(hidden);
 	}
 
-	$effect(() => {
-		const delta = sY - lastScrollY;
+	// Process scroll changes and decide chrome visibility.
+	// This is called from a narrow $effect below.
+	function processScroll(newY: number) {
+		const delta = newY - lastScrollY;
 		const pointerNearTop = mouseViewportY >= 0 && mouseViewportY <= revealPointerZone;
 
-		if (sY < readerModeStart || pointerNearTop) {
+		if (newY < readerModeStart || pointerNearTop) {
 			upwardScrollDistance = 0;
 			setReaderChromeHidden(false);
 		} else if (delta < 0) {
+			// scrolling upward
 			upwardScrollDistance += Math.abs(delta);
 
 			if (upwardScrollDistance >= revealOnScrollUp) {
 				setReaderChromeHidden(false);
 			}
 		} else if (delta > 0) {
+			// scrolling downward
 			upwardScrollDistance = 0;
 			setReaderChromeHidden(true);
 		}
 
-		lastScrollY = sY;
+		lastScrollY = newY;
+	}
+
+	// Narrow effect: only for reacting to scroll changes and applying the chrome logic.
+	// The decision and state updates are encapsulated in processScroll.
+	$effect(() => {
+		processScroll(sY);
 	});
 
 	$effect(() => {

@@ -5,10 +5,11 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
 	import autoAnimate from '@formkit/auto-animate';
+	import { staggerAnimatePlugin } from '$lib/svelteanim/utils/staggerPlugin';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 	import iksItems from '$lib/serving/db-iks.json';
 	import seoTopicLinks from '$lib/generated/seo-topic-links.json';
-
+	import Responsive from '$lib/comps/responsive-menu.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -39,17 +40,45 @@
 	let iksSearch = $state('');
 	let openIksPaperId = $state<string | null>(null);
 
+	// Define the canonical order of sections
+	const allTabs = ['Thinkers', 'Schools', 'Questions', 'Research', 'Essays', 'Books', 'Labs'] as const;
+
+	// Derive the list of tabs that actually have content for this domain (more robust)
+	const availableTabs = $derived(allTabs.filter((tab) => data.sections.some((section) => section.title === tab)));
+
+	// The currently selected tab
+	let activeTab = $state<string>('');
+
+	// Initialize activeTab reactively (avoids "initial value capture" warning)
+	$effect(() => {
+		if (activeTab === '' && availableTabs.length > 0) {
+			activeTab = availableTabs[0];
+		}
+	});
+
+	// If the current activeTab is no longer available (e.g. data changed), reset it
+	$effect(() => {
+		if (activeTab && !availableTabs.includes(activeTab as any)) {
+			activeTab = availableTabs[0] ?? '';
+		}
+	});
+
+	const selectedSection = $derived(data.sections.find((section) => section.title === activeTab));
+
 	const iksSearchResults = $derived.by(() => {
 		const query = iksSearch.trim().toLowerCase();
 		if (query.length < 2) return [];
 
-		return iksDatabase
-			.filter((item) => item.title?.toLowerCase().includes(query))
-			.slice(0, 24);
+		return iksDatabase.filter((item) => item.title?.toLowerCase().includes(query)).slice(0, 24);
 	});
 
 	function authorList(item: IksItem) {
-		return item.authors?.map((author) => author.name).filter(Boolean).join(', ') || 'Unknown authors';
+		return (
+			item.authors
+				?.map((author) => author.name)
+				.filter(Boolean)
+				.join(', ') || 'Unknown authors'
+		);
 	}
 
 	function publicationInfo(item: IksItem) {
@@ -67,13 +96,11 @@
 
 		const acronyms = new Set(['AI', 'API', 'ICT', 'IKS', 'NEP', 'STEM', 'UGC']);
 
-		return value
-			.toLowerCase()
-			.replace(/\b[\p{L}\p{N}][\p{L}\p{N}'-]*/gu, (word) => {
-				const upper = word.toUpperCase();
-				if (acronyms.has(upper)) return upper;
-				return word.charAt(0).toUpperCase() + word.slice(1);
-			});
+		return value.toLowerCase().replace(/\b[\p{L}\p{N}][\p{L}\p{N}'-]*/gu, (word) => {
+			const upper = word.toUpperCase();
+			if (acronyms.has(upper)) return upper;
+			return word.charAt(0).toUpperCase() + word.slice(1);
+		});
 	}
 
 	function itemKey(item: IksItem) {
@@ -97,7 +124,7 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
 
 <Container>
-	<section class="wrapper-std header-margin">
+	<section class="wrapper-std">
 		<Crumb showT={true} title={data.domain.title} showD={true} desc={data.domain.description} showRow={true}>
 			<div class="box rgap4">
 				<p class="txt-xs tt-u w500 grey0">Connected Knowledge - <span class="theme">{data.totalConnected}</span></p>
@@ -122,7 +149,7 @@
 						{#if iksSearchResults.length}
 							<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
 								{#each iksSearchResults as item (itemKey(item))}
-									<button type="button" class="col-span-1 rgap12 box rgap8 p24 xleft ta-l whitestone" onclick={() => toggleIksPaper(item)} aria-expanded={openIksPaperId === itemKey(item)}  use:autoAnimate>
+									<button type="button" class="col-span-1 rgap12 box rgap8 p24 xleft ta-l whitestone" onclick={() => toggleIksPaper(item)} aria-expanded={openIksPaperId === itemKey(item)} use:autoAnimate>
 										<p class="txt-xs tt-u w500 theme">{publicationInfo(item)}</p>
 										<p class="txt-lg w500">{displayTitle(item.title)}</p>
 										<p class="txt-sm w500 grey3">{authorList(item)}</p>
@@ -142,34 +169,55 @@
 				{/if}
 			</div>
 		{/if}
+	</section>
+	<section class="wrapper-std min100vh" style="justify-content: start">
+		<Responsive>
+			{#each availableTabs as tab}
+				<button class="selection-button" class:active={activeTab === tab} onclick={() => (activeTab = tab)}>
+					{tab}
+				</button>
+			{/each}
+		</Responsive>
 		<div class="box rgap32">
-			{#each data.sections as section}
+			{#if selectedSection && selectedSection.items.length > 0}
 				<div class="domain-section">
-					<h2 class="txt-2xl w600">{section.title}</h2>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
-						{#each section.items as item}
-							<article class="box whitestone p32">
-								<div class="box">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" use:autoAnimate={staggerAnimatePlugin({ stagger: 80, duration: 300 })}>
+						{#each selectedSection.items as item}
+							{#if item.href}
+								<a class="box whitestone tight-pad paper-1" href={item.href}>
 									{#if item.lens}
-										<p class="txt-xs tt-u w500 theme">{item.lens}</p>
+										<p class="txt-00 tt-u w500 theme">{item.lens}</p>
 									{/if}
-									{#if item.href}
-										<a class="txt-xl w500 ptop8 pbot16" href={item.href}>{item.title}</a>
-									{:else}
-										<h3 class="txt-xl w500 ptop8 pbot16">{item.title}</h3>
-									{/if}
+									<p class="txt-xl w600 a-hover ptop16 pbot8">{item.title}</p>
 									{#if item.description}
 										<p class="grey1 lh14 pbot16">{item.description}</p>
 									{/if}
 									{#if item.authors.length}
 										<p class="txt-sm tt-u w500 grey2">{item.authors.join(', ')}</p>
 									{/if}
+								</a>
+							{:else}
+								<div class="box whitecard tight-pad">
+								{#if item.lens}
+									<p class="txt-00 tt-u w500 theme">{item.lens}</p>
+								{/if}
+								<p class="txt-xl w600 ptop16 pbot8">{item.title}</p>
+								{#if item.description}
+									<p class="grey1 lh14 pbot16">{item.description}</p>
+								{/if}
+								{#if item.authors.length}
+									<p class="txt-sm tt-u w500 grey2">{item.authors.join(', ')}</p>
+								{/if}
 								</div>
-							</article>
+							{/if}
 						{/each}
 					</div>
 				</div>
-			{/each}
+			{:else if availableTabs.length === 0}
+				<p class="grey1 p24">No content available for this domain yet.</p>
+			{:else}
+				<p class="grey1 p24">No items available in this section for the current domain.</p>
+			{/if}
 		</div>
 	</section>
 	{#if data.domain.slug === 'indian-knowledge-systems-and-education'}

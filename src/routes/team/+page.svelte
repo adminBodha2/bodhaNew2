@@ -37,11 +37,11 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="wrapper-std rgap32 header-margin">
+	<section class="wrapper-std">
 		<Crumb showT={true} title="Team" showD={true} desc="The founders and researchers behind Bodha — working to establish an Indic lens of inquiry into history, culture, and civilization." />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 			{#each teamMembers as member}
-				<div class="member-card">
+				<div class="rgap16 box b-main std-pad">
 					<div class="member-image">
 						<img src={member.image} alt={member.name} />
 					</div>
@@ -67,20 +67,6 @@
 </Container>
 
 <style lang="sass">
-
-.member-card
-	display: flex
-	flex-direction: column
-	background: var(--color-back)
-	padding: 1.6rem
-	gap: 1rem
-	transition: background 0.15s ease
-	&:hover
-		background: var(--color-stone-1)
-	@media screen and (max-width: 1024px)
-		border-left: var(--border-main)
-		border-bottom: var(--border-main)
-		border-right: var(--border-main)
 
 .member-image
 	img

@@ -379,7 +379,7 @@
 	width: 400px
 	transition: all 120ms ease
 	&:hover
-		background: linear-gradient(154.4deg, #F8F7F4 6.75%, #F9F8F6 89.88%)
+		background: var(--color-stone-0)
 
 
 swiper-slide

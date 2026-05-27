@@ -42,10 +42,10 @@
 />
 
 <Container>
-	<section class="box wrapper-std rgap32 header-margin">
+	<section class="wrapper-std">
 		<Crumb showT={true} title="Videos" showD={true} desc={metaDescription}/>
 		{#if vids && vids.length > 0}
-		<Swipes slidesPerView={3} spaceBetween={8}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 3,spaceBetween: 8}}}>
+		<Swipes slidesPerView={3} spaceBetween={16}	pagination={false} breakpoints={{0: { slidesPerView: 1, spaceBetween: 8}, 1024: {slidesPerView: 3,spaceBetween: 16}}}>
 			{#each vids as item}
 				<swiper-slide>
 					<div class="video-card blank theme-line-parent">

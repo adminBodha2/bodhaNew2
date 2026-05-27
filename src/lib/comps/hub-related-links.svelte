@@ -30,9 +30,9 @@
 {#if visibleItems.length}
 	<section class="wrapper-std" aria-label={title}>
 		<Title text={title} {anveshi} />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid related-links">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16 related-links">
 			{#each visibleItems as page (itemHref(page))}
-				<a class="box rgap16 blank whitestone p24 lg:p32" href={itemHref(page)}>
+				<a class="box rgap16 blank whitestone std-pad b-main" href={itemHref(page)}>
 					<p class="txt-lg w500">{page.title}</p>
 					{#if page.description}
 						<p class="grey1 lh14">{page.description}</p>

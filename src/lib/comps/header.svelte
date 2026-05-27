@@ -77,6 +77,7 @@
 	position: relative
 	transition: all 110ms ease
 	background: none
+	color: var(--color-primary)
 	border: none
 	padding: 0
 	&:after

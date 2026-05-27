@@ -13,8 +13,12 @@
 
 	let { children } = $props();
 	let width = $state(0);
+
+	// Derive the mobile breakpoint decision declaratively.
+	// The $effect is used *only* to sync the decision to the legacy global store.
+	let isMobile = $derived(width < 1025);
 	$effect(() => {
-		$iW = width < 1025;
+		$iW = isMobile;
 	});
 
 	if (!dev) {

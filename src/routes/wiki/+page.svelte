@@ -5,6 +5,9 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
+	import Cut from '$lib/svelteanim/components/Cut.svelte';
 	import WikiGraph from '$lib/comps/wikigraph.svelte';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 
@@ -18,44 +21,74 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
 
-	<Parallax imageLink="/images/heroes/key-wiki.webp" wipe={true} />
+<Parallax imageLink="/images/heroes/key-wiki.webp" wipe={true} />
 <Container>
-<Crumb showT={true} title="Bodha Knowledge Wiki" showD={true} desc="An interactive map of the Bodha knowledge base. Nodes are thinkers, schools, questions, wiki pages, and research projects. Edges show how they connect — who draws on whom, what addresses what, which schools a thinker belongs to." />
+<Crumb showT={true} title="Bodha Knowledge Base" showD={true} desc="An interactive map of the Bodha knowledge base. Nodes are thinkers, schools, questions, wiki pages, and research projects. Edges show how they connect — who draws on whom, what addresses what, which schools a thinker belongs to." />
 	<section class="wrapper-std">
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div class="box rgap16">
-				<p class="highlight-text">At Bodha, we're nerds about archives, knowledge bases, wikis, and repositories. Our ambition is to create a platform for discovery, learning, and research of all things itihasa, Bharata, Dharma, and the Indian Knowledge Systems (IKS).</p>
+				<Reveal>
+					<p class="highlight-text">At Bodha, we're nerds about archives, knowledge bases, wikis, and repositories. Our ambition is to create a platform for discovery, learning, and research of all things itihasa, Bharata, Dharma, and the Indian Knowledge Systems (IKS).</p>
+				</Reveal>
 			</div>
 			<div class="box rgap16">
+				<Reveal start="top 70%">
 				<p class="highlight-text">To this end, the Bodha knowledge wiki is an information and data architecture that facilitates discovery paths for the curious and interested.</p>
+				</Reveal>
+				<Reveal start="top 70%">
 				<p class="highlight-text">It is the central organizing point for - 1) all content at our website, and 2) all general internet content that we curate and list.</p>
+				</Reveal>
 			</div>
 		</div>
-		<div class="box rgap24 bordertop ptop32">
-			<h2 class="txt-2xl w600">Understanding the Wiki</h2>
-			<div class="grid grid-cols-1 lg:grid-cols-3 cgap64 rgap16">
-				<div class="box rgap16 col-span-1">
-					<p class="txt-lg">All content is group along two paths - type of content, and theme.</p>
-					<p class="txt-lg"><span class="theme">Types:</span> essays/articles, books, thinkers, schools, questions, research. Of these, the final 4 groups classify content along Bodha's internal research work.</p>
-					<p class="txt-lg"><span class="theme">Domains:</span> thematic classification used across the website.</p>
-					<p class="txt-lg">Use the graph view below to explore, or navigate by structured pages. <span class="w600">Explore our repository of 200+ Hindu temples <a class="linkedlight" href="/wiki/temples">here.</a></span></p>
-					<p class="txt-lg">Explore our <a class="linkedlight" href="/wiki/indian-knowledge-systems-and-education">IKS publications repository.</a></p>
-				</div>
-				<div class="box rgap16 col-span-2">
-					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
-						{#each data.domains as domain}
-							<a href="/wiki/{domain.slug}" class="blank box whitestone p16 rgap8">
-								<p class="txt-lg w600">{domain.title}</p>
-								<p class="grey1">{domain.description}</p>
-							</a>
-						{/each}
-					</div>
-				</div>
-			</div>
+		<Cut start="top 70%" end="bottom 20%" class=".cut-item">
+		<div class="grid grid-cols-1 lg:grid-cols-4 gap16">
+			<a class="box std-pad rgap8 whitestone cut-item" href="/wiki/domains">
+				<p class="txt-xl w600 a-hover">Explore by Domains</p>
+				<p class="grey2">Domains are thematic supergroups used to organize content across the website.</p>
+			</a>
+			<a class="box std-pad rgap16 stonecard cut-item" href="#graph-section" onclick={(e) => { e.preventDefault(); document.getElementById("graph-section")?.scrollIntoView({ behavior: 'smooth' }); }}>
+				<p class="txt-xl w600">View Graph</p>
+				<p class="grey2">The wiki visualized in graphs and nodes.</p>
+			</a>
+			<a class="box std-pad rgap16 stonecard cut-item" href="/wiki/temples">
+				<p class="txt-xl w600 a-hover">Temples Repository</p>
+				<p class="grey2">300+ and growing registry of Hindu temples across India, major deities, and architecture.</p>
+			</a>
+			<a class="box std-pad rgap16 stonecard cut-item" href="/wiki/indian-knowledge-systems-and-education">
+				<p class="txt-xl w600">IKS Wiki</p>
+				<p class="grey2">Search through IKS journals repository, updated monthly.</p>
+			</a>
 		</div>
+		</Cut>
 	</section>
-	<section class="wrapper-std growingline">
+	<section class="wrapper-std growingline alternate">
+		<Title text="Domains"/>
+		<Slide targetSelector=".slide-item2" end="bottom 40%" duration={400}>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
+				{#each data.domains as domain}
+					<a href="/wiki/{domain.slug}" class="whitestone rgap16 blank box slide-item2 std-pad b-main">
+						<p class="txt-2xl w600">{domain.title}</p>
+						<p class="grey1">{domain.description}</p>
+						<div>
+							<p class="txt-xs tt-u w500" style="color: {domain.color}">{domain.count}</p>
+						<p class="txt-00 grey2 w600">connections</p>
+						</div>
+					</a>
+				{/each}
+			</div>
+		</Slide>
+	</section>
+	<section class="wrapper-std growingline" id="graph-section">
 		<Title text="Graph View" />
 		<WikiGraph nodes={data.nodes} edges={data.edges} />
 	</section>
 </Container>
+
+<style lang="sass">
+
+.cut-item
+	transition: all 90ms cubic-bezier(0, 0, 0.58, 1)
+	&:hover
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px
+
+</style>

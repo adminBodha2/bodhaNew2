@@ -140,9 +140,14 @@
 	let activeTemple = $state<TempleWithCoordinates | undefined>(undefined);
 	let popupPlacement = $state<PopupPlacement | undefined>(undefined);
 	let filterOpen = $state(false);
+	let categoryFilterOpen = $state(false);
 	let searchQuery = $state('');
 	let dismissedSearchQuery = $state('');
 	let showAnveshiOnly = $state(false);
+	let showShivaOnly = $state(false);
+	let showVishnuOnly = $state(false);
+	let showDeviOnly = $state(false);
+	let showGaneshaOnly = $state(false);
 	let mapReady = $state(false);
 
 	const validTemples = (temples as Temple[])
@@ -156,12 +161,40 @@
 
 	const states = [...new Set(validTemples.map((temple) => temple.displayState))].sort();
 
-	let selectedStates = $state<string[]>([...states]);
+	const categories = [...new Set(validTemples.map((temple) => temple.category).filter((c): c is string => !!c))].sort();
 
-	const visibleTemples = $derived(validTemples.filter((temple) => selectedStates.includes(temple.displayState) && (!showAnveshiOnly || temple.is_anveshi)));
+	let selectedStates = $state<string[]>([...states]);
+	let selectedCategories = $state<string[]>([]);
+
+	const visibleTemples = $derived(
+		validTemples.filter((temple) => {
+			// State filter
+			if (!selectedStates.includes(temple.displayState)) return false;
+
+			// Anveshi filter
+			if (showAnveshiOnly && !temple.is_anveshi) return false;
+
+			// Deity filters (show only if toggled)
+			if (showShivaOnly && !temple.shiva_temple) return false;
+			if (showVishnuOnly && !temple.vishnu_temple) return false;
+			if (showDeviOnly && !temple.devi_temple) return false;
+			if (showGaneshaOnly && !temple.ganesha_temple) return false;
+
+			// Category multi-select
+			if (selectedCategories.length > 0) {
+				if (!temple.category || !selectedCategories.includes(temple.category)) return false;
+			}
+
+			return true;
+		})
+	);
 
 	const visibleCount = $derived(visibleTemples.length);
 	const anveshiCount = $derived(validTemples.filter((temple) => temple.is_anveshi).length);
+	const shivaCount = $derived(validTemples.filter((temple) => temple.shiva_temple).length);
+	const vishnuCount = $derived(validTemples.filter((temple) => temple.vishnu_temple).length);
+	const deviCount = $derived(validTemples.filter((temple) => temple.devi_temple).length);
+	const ganeshaCount = $derived(validTemples.filter((temple) => temple.ganesha_temple).length);
 	const templeTopic = seoTopicLinks.topics['hindu-temple'];
 	const relatedTemplePages = $derived(templeTopic?.supportingPages ?? []);
 
@@ -264,6 +297,15 @@
 		popupPlacement = undefined;
 	}
 
+	/** Explicitly validate the active temple after filter changes.
+	 *  Replaces the previous $effect-based sync (anti-pattern).
+	 */
+	function validateActiveTemple() {
+		if (activeTemple && !visibleTemples.some((temple) => temple.slug === activeTemple?.slug)) {
+			closeTemplePopup();
+		}
+	}
+
 	function templeHref(temple: TempleWithCoordinates) {
 		if (temple.is_anveshi && temple.chapter) {
 			return `/anveshi/${temple.chapter}`;
@@ -279,21 +321,102 @@
 	function toggleState(state: string) {
 		selectedStates = selectedStates.includes(state) ? selectedStates.filter((item) => item !== state) : [...selectedStates, state];
 		refreshTempleSource();
+		validateActiveTemple();
 	}
 
 	function selectAllStates() {
 		selectedStates = [...states];
 		refreshTempleSource();
+		validateActiveTemple();
 	}
 
 	function clearStates() {
 		selectedStates = [];
 		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function toggleCategory(category: string) {
+		selectedCategories = selectedCategories.includes(category)
+			? selectedCategories.filter((item) => item !== category)
+			: [...selectedCategories, category];
+		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function selectAllCategories() {
+		selectedCategories = [...categories];
+		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function clearCategories() {
+		selectedCategories = [];
+		refreshTempleSource();
+		validateActiveTemple();
 	}
 
 	function toggleAnveshiTemples() {
 		showAnveshiOnly = !showAnveshiOnly;
 		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function toggleShivaOnly() {
+		const newValue = !showShivaOnly;
+		showShivaOnly = newValue;
+		if (newValue) {
+			showVishnuOnly = false;
+			showDeviOnly = false;
+			showGaneshaOnly = false;
+		}
+		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function toggleVishnuOnly() {
+		const newValue = !showVishnuOnly;
+		showVishnuOnly = newValue;
+		if (newValue) {
+			showShivaOnly = false;
+			showDeviOnly = false;
+			showGaneshaOnly = false;
+		}
+		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function toggleDeviOnly() {
+		const newValue = !showDeviOnly;
+		showDeviOnly = newValue;
+		if (newValue) {
+			showShivaOnly = false;
+			showVishnuOnly = false;
+			showGaneshaOnly = false;
+		}
+		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function toggleGaneshaOnly() {
+		const newValue = !showGaneshaOnly;
+		showGaneshaOnly = newValue;
+		if (newValue) {
+			showShivaOnly = false;
+			showVishnuOnly = false;
+			showDeviOnly = false;
+		}
+		refreshTempleSource();
+		validateActiveTemple();
+	}
+
+	function clearDeityFilters() {
+		showShivaOnly = false;
+		showVishnuOnly = false;
+		showDeviOnly = false;
+		showGaneshaOnly = false;
+		refreshTempleSource();
+		validateActiveTemple();
 	}
 
 	function focusTemple(temple: TempleWithCoordinates) {
@@ -317,13 +440,6 @@
 		setTempleSourceData();
 	});
 
-	$effect(() => {
-		if (!activeTemple) return;
-
-		const isStillVisible = visibleTemples.some((temple) => temple.slug === activeTemple?.slug);
-		if (!isStillVisible) closeTemplePopup();
-	});
-
 	function setTempleSourceData() {
 		const source = map?.getSource('temples') as GeoJSONSource | undefined;
 		source?.setData(templeGeoJson);
@@ -334,11 +450,12 @@
 	}
 
 	$effect(() => {
-		if (!filterOpen) return;
+		if (!filterOpen && !categoryFilterOpen) return;
 
 		function closeFilterOnOutsideClick(event: PointerEvent) {
 			if (filterPanelEl?.contains(event.target as Node)) return;
 			filterOpen = false;
+			categoryFilterOpen = false;
 		}
 
 		document.addEventListener('pointerdown', closeFilterOnOutsideClick);
@@ -579,7 +696,7 @@
 <Optimizer {title} description={metaDescription} url={data.seo.url} siteUrl="https://www.bodharesearch.in" siteName="Bodha" image={data.seo.image} imageAlt={data.seo.imageAlt} type="article" publishedDate={data.seo.publishedDate} tags={data.seo.tags} breadcrumbs={data.seo.breadcrumbs} noindex={false} author="designBodha" twitterCreator="@BodhaResearch" />
 
 <Container>
-	<section class="wrapper-std header-margin">
+	<section class="wrapper-std">
 		<Crumb showT={true} title="Hindu Temples" showD={true} desc={metaDescription} showRow={true}>
 			<div class="box rgap4">
 				<p class="txt-sm grey0">
@@ -598,7 +715,27 @@
 					<button type="button" class="selection-button" class:active={showAnveshiOnly} onclick={toggleAnveshiTemples}>
 						Anveshi Temples ({anveshiCount})
 					</button>
-					<button type="button" class="selection-button" onclick={() => (filterOpen = !filterOpen)}> States </button>
+					<button type="button" class="selection-button" class:active={showShivaOnly} onclick={toggleShivaOnly}>
+						Shiva ({shivaCount})
+					</button>
+					<button type="button" class="selection-button" class:active={showVishnuOnly} onclick={toggleVishnuOnly}>
+						Vishnu ({vishnuCount})
+					</button>
+					<button type="button" class="selection-button" class:active={showDeviOnly} onclick={toggleDeviOnly}>
+						Devi ({deviCount})
+					</button>
+					<button type="button" class="selection-button" class:active={showGaneshaOnly} onclick={toggleGaneshaOnly}>
+						Ganesha ({ganeshaCount})
+					</button>
+
+					{#if showShivaOnly || showVishnuOnly || showDeviOnly || showGaneshaOnly}
+						<button type="button" class="selection-button" onclick={clearDeityFilters}>
+							Clear Deities
+						</button>
+					{/if}
+
+					<button type="button" class="selection-button" onclick={() => { categoryFilterOpen = false; filterOpen = !filterOpen; }}> States </button>
+					<button type="button" class="selection-button" onclick={() => { filterOpen = false; categoryFilterOpen = !categoryFilterOpen; }}> Categories </button>
 				</div>
 				{#if filterOpen}
 					<div class="filter-dropdown">
@@ -614,6 +751,24 @@
 								</span>
 								<i style={`background:${templeColor(state)}`}></i>
 								{state}
+							</button>
+						{/each}
+					</div>
+				{/if}
+
+				{#if categoryFilterOpen}
+					<div class="filter-dropdown" style="left: 120px;">
+						<div class="filter-actions">
+							<button type="button" onclick={selectAllCategories}>Select All</button>
+							<button type="button" onclick={clearCategories}>Deselect All</button>
+						</div>
+
+						{#each categories as category}
+							<button type="button" class="filter-item" onclick={() => toggleCategory(category)}>
+								<span class:checked={selectedCategories.includes(category)}>
+									{selectedCategories.includes(category) ? '✓' : ''}
+								</span>
+								{category}
 							</button>
 						{/each}
 					</div>

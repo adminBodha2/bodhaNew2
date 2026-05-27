@@ -1,0 +1,10 @@
+src/routes/+layout.svelte
+src/routes/anveshi/[chapter]/+page.svelte
+src/routes/blog/+page.svelte
+src/routes/blog/[post]/+page.svelte
+src/routes/blog/external-posts/+page.svelte
+src/routes/blog/tags/+page.svelte
+src/routes/blog/tags/[tag]/+page.svelte
+src/routes/library/(library-subroutes)/+layout.svelte
+src/routes/library/+page.svelte
+src/routes/wiki/temples/+page.svelte
