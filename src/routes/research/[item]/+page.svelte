@@ -58,7 +58,7 @@
 			</nav>
 		</div>
 		<div class="docmain rgap32 box pbot32">
-			<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description} fullP={true} onblog={true}>
+			<Crumb showT={true} showD={true} showRow={true} title={data.title} desc={data.description} fullP={true} isSolo={true}>
 				{#if data.tags && data.tags.length > 0}
 					<div class="row cgap8 rgap4 wrap">
 						{#each data.tags as tag}

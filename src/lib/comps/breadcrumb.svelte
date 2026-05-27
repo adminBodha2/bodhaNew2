@@ -66,7 +66,7 @@
 			{#if libraryType}
 			<h1 class="w600 txt-2xl lg:txt-3xl">{title}</h1>
 			{:else}
-			<h1 class="txt-4xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 tt-c" class:w700={serifed} class:w500={!serifed} class:source-serif={serifed}>{title}</h1>
+			<h1 class="txt-3xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 tt-c" class:w700={serifed} class:w500={!serifed} class:source-serif={serifed}>{title}</h1>
 			{/if}
 		{/if}
 		{#if showRow}
@@ -100,8 +100,8 @@ h1
 		padding-top: 0rem
 		padding-bottom: 2rem
 	&.isSolo
-		padding-bottom: 0
-		padding-top: 2rem
+		padding-bottom: 2rem
+		padding-top: 0rem
 	&.thinBot
 		padding-bottom: 2rem
 	&.thinTop
@@ -119,8 +119,8 @@ h1
 			width: 100%
 			align-items: center
 		&.isSolo
-			padding-bottom: 0
-			padding-top: 1rem
+			padding-bottom: 2rem
+			padding-top: 2rem
 		&.thinBot
 			padding-bottom: 2rem
 		&.thinTop
