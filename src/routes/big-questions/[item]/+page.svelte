@@ -6,7 +6,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
-	import Parallax from '$lib/comps/parallaxhalf-new.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import seoTopicLinks from '$lib/generated/seo-topic-links.json';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
@@ -43,7 +43,7 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} ogType="article" {jsonld} imWidth="1024" imHeight="683" />
 
-<Parallax src={data.icon} alt={data.title} />
+<Parallax imageLink={data.icon} alt={data.title} />
 <Container>
 	<div class="doc-wrapper">
 		<Crumb showT={true} title={data.title} showD={true} desc={data.description} fullP={true} showRow={true}>

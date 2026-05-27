@@ -44,7 +44,7 @@
 				{/if}
 			</div>
 		</Crumb>
-		<div class="card-shell">
+		<div class="doc-header-grid">
 			<aside class="box" aria-label="Card metadata">
 				{#if data.allcards && data.allcards.length > 0}
 					<div class="box stickybox">
@@ -70,36 +70,5 @@
 	padding: 6px 4px
 	&:hover
 		background: var(--color-grey-0)
-
-.card-shell
-	display: grid
-	gap: 2rem
-	border-bottom: var(--border-dark)
-	height: 100%
-	aside
-		grid-area: aside
-	.main-area
-		grid-area: mainarea
-		padding-top: 2rem
-	grid-template-columns: 1fr
-	grid-template-areas: "mainarea" "aside"
-	@media (max-width: 1024px)
-		padding-bottom: 2rem
-		.main-area
-			border-bottom: var(--border-main)
-	@media (min-width: 1025px)
-		grid-template-columns: 360px 1fr
-		grid-template-areas: "aside mainarea"
-		aside
-			height: 100%
-			.stickybox
-				height: calc(100vh - 80px)
-				overflow-y: scroll
-				position: sticky
-				top: 80px
-				padding: 2rem 2rem 2rem 0
-		.main-area
-			padding: 2rem 4rem
-
 
 </style>

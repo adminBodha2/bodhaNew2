@@ -54,7 +54,7 @@
 		end = 'bottom 40%',
 		scrub = true,
 		replay = true,
-		targetSelector,
+		targetSelector = ".slide-item",
 		scrollElement,
 		display = 'block',
 		children,

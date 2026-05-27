@@ -47,7 +47,7 @@
 		duration = 500,
 		delay = 0,
 		stagger = 120,
-		ease = 'power3.out',
+		ease = 'power1.out',
 		start = 'top 90%',
 		end = 'bottom 50%',
 		scrub = 3,

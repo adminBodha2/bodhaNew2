@@ -3,28 +3,29 @@
 	import { page } from '$app/state';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Responsive from '$lib/comps/responsive-menu.svelte'
+	import Container from '$lib/comps/wrapper.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import { slide } from 'svelte/transition'
-	import { quartInOut, quintOut } from 'svelte/easing'
 
 	let { data }: PageProps = $props();
 
-	const groups = $derived([
-		{ label: 'Essays', items: data.grouped.blogs },
-		{ label: 'Books', items: data.grouped.books },
-		{ label: 'Big Questions', items: data.grouped.questions },
-		{ label: 'Research', items: data.grouped.projects },
-		{ label: 'Thinkers', items: data.grouped.thinkers },
-		{ label: 'Schools', items: data.grouped.schools },
-		{ label: 'Labs', items: data.grouped.labs },
-		{ label: 'Essays Outside', items: data.grouped.externalArticles }
-	].filter((group) => group.items.length > 0));
+	const groups = $derived(
+		[
+			{ label: 'Essays', items: data.grouped.blogs },
+			{ label: 'Books', items: data.grouped.books },
+			{ label: 'Big Questions', items: data.grouped.questions },
+			{ label: 'Research', items: data.grouped.projects },
+			{ label: 'Thinkers', items: data.grouped.thinkers },
+			{ label: 'Schools', items: data.grouped.schools },
+			{ label: 'Labs', items: data.grouped.labs },
+			{ label: 'Essays Outside', items: data.grouped.externalArticles }
+		].filter((group) => group.items.length > 0)
+	);
 
-	let isItem = $state(0)
+	let isItem = $state(0);
 
-	function toggleIsItem(newIndex:number){
-		isItem = newIndex
+	function toggleIsItem(newIndex: number) {
+		isItem = newIndex;
 	}
 
 	let description = $derived(data.concept.description || `${data.count} nodes connected to ${data.concept.title}.`);
@@ -40,7 +41,7 @@
 				description: metaDescription,
 				url: metaUrl,
 				image: metaImage,
-		items: data.relatedNodes.map((item) => ({
+				items: data.relatedNodes.map((item) => ({
 					name: item.title,
 					description: item.description,
 					url: item.meta?.route ?? metaUrl
@@ -52,53 +53,54 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
-<section class="box wrapper-std header-margin rgap32">
-	<Crumb showT={true} title={data.concept.title} showRow={true}>
-		<p class="grey">{data.count} nodes connected to this wiki domain.</p>
-	</Crumb>
-	<Responsive>
-		{#each groups as group, i}
-			<button class="selection-button" class:active={isItem=== i} onclick={() => toggleIsItem(i)}>{group.label}</button>
-		{/each}
-	</Responsive>
-	<div class="box containing-graph">
-		{#each groups as group, i (group.label)}
-			{#if i === isItem}
-				<div class="grid lg:grid-cols-3 xl:grid-cols-4 b-main radius" id="node-grid">
-					{#each group.items as item, j (item.id)}
-						<div class="number box">
-							<a
-								class="blank box p16 lg:p32 rgap8"
-								href={item.href}
-								target={item.isExternal ? '_blank' : undefined}
-								rel={item.isExternal ? 'noreferrer' : undefined}
-								in:slide|global={{ delay: j * 30, easing: quintOut }} out:slide={{ easing: quartInOut }}
-							>
-								<p class="paragraph-text w600 tight">{item.title}</p>
-								{#if item.description}
-									<p class="grey tight">{item.description}</p>
-								{/if}
-							</a>
-							<div class="row cgap4 rgap4 wrap ycenter self-bottom bordertop pleft16 lg:pleft32 ptop16 pbot16 tags">
-								{#each item.tags as tag}
-									<a class="tag-pill hollow tt-u" href="/concepts/{tag}">{tag.replaceAll('-',' ')}</a>
+<Container>
+	<section class="wrapper-std tight-stack">
+		<Crumb showT={true} title={data.concept.title} showD={true} desc={data.concept.description} showRow={true}>
+			<div class="row gap4 wrap">
+				<p class="standard-pill">{data.count} connected nodes</p>
+				{#each data.concept.tags as tag}
+					<p class="standard-pill">{tag.replaceAll('-', ' ')}</p>
+				{/each}
+			</div>
+		</Crumb>
+		<div class="doc-header-grid">
+			<aside class="box" aria-label="Card metadata">
+				<nav class="box rgap16 ptop32 stickybox">
+					{#each data.domains as domain (domain.id)}
+						<a class="doclink blank box rgap4 p12 linkonhover" href={`/concepts/${domain.slug}`}>
+							{domain.title}
+						</a>
+					{/each}
+				</nav>
+			</aside>
+			<div class="main-area">
+				<Slide>
+				<div class="box containing-graph">
+					{#each groups as group, i (group.label)}
+						{#if i === isItem}
+							<div class="grid grid-cols-1 lg:grid-cols-3 gap16" id="node-grid">
+								{#each group.items as item, j (item.id)}
+									<a class="blank box rgap8 tight-pad b-main whitestone slide-item" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
+										<p class="txt-00 tt-u w500 grey1">{item.type}</p>
+										<p class="txt-lg w600 a-hover">{item.title}</p>
+										{#if item.description}
+											<p class="grey1">
+												{item.description}
+											</p>
+										{/if}
+										<div class="row wrap ycenter self-bottom bordertop ptop8">
+											{#each item.tags as tag}
+												<p class="txt-00 theme-dark w500 tt-u">{tag.replaceAll('-', ' ')}</p>
+											{/each}
+										</div>
+									</a>
 								{/each}
 							</div>
-						</div>
+						{/if}
 					{/each}
 				</div>
-			{/if}
-		{/each}
-	</div>
-</section>
-
-<style lang="sass">
-
-.tags
-	background: var(--color-grey-2)
-
-#node-grid
-	overflow: hidden
-	gap: 8px
-
-</style>
+				</Slide>
+			</div>
+		</div>
+	</section>
+</Container>

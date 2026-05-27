@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import Parallax from '$lib/comps/parallaxhalf-new.svelte';
-	import Revealing from '$lib/motion-core/stacking-words/RevealingLines.svelte'
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
@@ -11,12 +11,12 @@
 	let iW = $state(0);
 	let sY = $state(0);
 
-	let imageLink = $state('/images/heroes/key-designbodha.webp');
+	let imageLink = $state('/images/designbodha/db19.webp');
 
 	const title = 'designBodha | Dharmic Design, Regenerative Creation, and Hindu Ethics';
 	const metaDescription = 'designBodha is an initiative for dharmic design - ethical, harmonious, and regenerative creation across disciplines.';
 	const metaUrl = absoluteUrl('/designbodha');
-	const metaImage = absoluteImage('/images/heroes/key-designbodha.webp');
+	const metaImage = absoluteImage('/images/designbodha/db19.webp');
 
 	const jsonld = stringifyJsonLd(
 		webPageJsonLd({
@@ -27,14 +27,6 @@
 			type: 'AboutPage'
 		})
 	);
-
-	$effect(() => {
-		if (iW < 1025) {
-			imageLink = '/images/heroes/key-designbodha.webp';
-		} else if (iW > 1024) {
-			imageLink = '/images/heroes/key-designbodha.webp';
-		}
-	});
 </script>
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={sY} />
@@ -49,18 +41,18 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 				<div class="box rgap16">
 					<div>
-					<Revealing>
+					<Reveal>
 					<p class="highlight-text">
 						In an era defined by rapid technological acceleration, environmental degradation, and social fragmentations, the traditional design paradigms - rooted in utilitarianism, consumerism, and market-bound efficiency - are proving insufficient. Despite seeing an unprecedented explosion in the opportunities and avenues for humans to create, we are, as Frances Moore Lappe says -
 					</p>
-					</Revealing>
+					</Reveal>
 					</div>
 					<div>
-					<Revealing>
+					<Reveal>
 					<p class="highlight-text">
 						<i>"together creating a world that as individuals none of us would choose."</i>
 					</p>
-					</Revealing>
+					</Reveal>
 					</div>
 				</div>
 				<div class="box rgap16">
@@ -73,22 +65,29 @@
 				</div>
 		</div>
 	</section>
-	<section class="wrapper-std growingline">
+	<section class="wrapper-std growingline min100vh">
 		<Title text="explore designbodha" />
-		<div class="grid grid-cols-1 lg:grid-cols-3 cgap64 rgap32">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
 			<div class="box rgap16">
+					<Reveal>
 					<p class="txt-xl lg:txt-2xl w600">
-						Dharmic design, that is - <span class="desb">design-by-ṛta</span>, is creatorship grounded in Hindu metaphysics. It redefines <span class="desb">design as a sacred act</span> of aligning human creation with the cosmic order.
+						Dharmic design, that is - <span class="desb">design-by-ṛta</span> is creatorship grounded in Hindu metaphysics. It redefines <span class="desb">design as a sacred act </span> of aligning human creation with the cosmic order.
 					</p>
+					</Reveal>
+					<Reveal>
 					<a class="txt-xl desb" href="/designbodha/monograph-on-dharmic-design">Read our Monograph on Dharmic Design</a>
+					</Reveal>
 			</div>
-			<div class="box rgap16">
+		<Slide>
+			<a class="box rgap16 b-main std-pad whitestone" href="/designbodha/pramana-library">
 				<p class="txt-xl lg:txt-2xl w600">The Pramana Library</p>
 			<p class="txt-lg">The Pramana Library is a set of cognitive and communicative concepts from the Sanskrit intellectual traditions, for designers, researchers, and people building and leading with AI.</p>
 			<p class="txt-lg">Each card here names a move you can make in your work - a question you can ask, a discrimination you can draw - that the available English vocabulary does not give you a clean way to name.</p>
-			<a class="txt-lg desb w500" href="/designbodha/pramana-library">Explore</a>
-			</div>
-			<div class="box rgap16">
+			<p class="txt-lg desb w500">Explore</p>
+			</a>
+		</Slide>
+		<Slide start="top 70%">
+			<div class="box rgap16 b-main std-pad">
 				<p class="txt-xl lg:txt-2xl w600">Design by Dharma Roadmap</p>
 				<div class="box">
 					<p class="txt-lg w500">Phase 1 - Foundation and Taxonomy</p>
@@ -99,6 +98,7 @@
 					<p class="txt-lg">Build practical design tools - the dharmic design canvas - visual tool(s) that orient decision-making, brainstorming, and creativty to intended tethers.</p>
 				</div>
 			</div>
+		</Slide>
 		</div>
 	</section>
 </Container>

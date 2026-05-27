@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import Parallax from '$lib/comps/parallaxhalf-new.svelte';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Revealing from '$lib/motion-core/stacking-words/Reveal2.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';

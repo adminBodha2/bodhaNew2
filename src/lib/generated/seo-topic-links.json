@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T23:24:03.518Z",
+  "generatedAt": "2026-05-27T01:25:40.311Z",
   "source": "sitemaster/seomaster",
   "topics": {
     "hindu-temple": {
@@ -62,36 +62,12 @@
           ]
         },
         {
-          "urlPath": "/inspiration/sk-rama-rao",
-          "absoluteUrl": "https://www.bodharesearch.in/inspiration/sk-rama-rao",
-          "title": "SK Ramachandra Rao | Hindu Temple, Iconography, and Sacred Art",
-          "description": "A Karnataka polymath whose encyclopedic work on Hindu iconography and temple architecture reveals the metaphysical logic embedded in every sculptural form.",
-          "score": 3,
-          "routeFamily": "inspiration",
-          "sources": [
-            "markdown",
-            "sitemap-code"
-          ]
-        },
-        {
           "urlPath": "/research/hindu-models-of-temple-management",
           "absoluteUrl": "https://www.bodharesearch.in/research/hindu-models-of-temple-management",
           "title": "Hindu Models of Temple Management",
           "description": "Research on traditional Hindu temple governance and indigenous models of temple administration.",
           "score": 2,
           "routeFamily": "research",
-          "sources": [
-            "markdown",
-            "sitemap-code"
-          ]
-        },
-        {
-          "urlPath": "/core/temple",
-          "absoluteUrl": "https://www.bodharesearch.in/core/temple",
-          "title": "Hindu Temple | Sacred Architecture, Dharma, and Community Institution",
-          "description": "The Hindu temple as civilization — sacred architecture, institutional governance, cultural transmission, and the living center of community life across India.",
-          "score": 2,
-          "routeFamily": "core",
           "sources": [
             "markdown",
             "sitemap-code"
@@ -136,10 +112,34 @@
         {
           "urlPath": "/blog/gloryofkrishnajanmashtami",
           "absoluteUrl": "https://www.bodharesearch.in/blog/gloryofkrishnajanmashtami",
-          "title": "Recollection: The Glory of Śrī Kṛṣṇa Janmāṣṭamī",
+          "title": "Recollection - The Glory of Śrī Kṛṣṇa Janmāṣṭamī",
           "description": "A pilgrimage to Mathura and an encounter with Krishna Janmashtami, sacred geography, and living divine presence.",
           "score": 2,
           "routeFamily": "blog",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/inspiration/sk-rama-rao",
+          "absoluteUrl": "https://www.bodharesearch.in/inspiration/sk-rama-rao",
+          "title": "SK Ramachandra Rao",
+          "description": "A Karnataka polymath whose encyclopedic work on Hindu iconography and temple architecture reveals the metaphysical logic embedded in every sculptural form.",
+          "score": 2,
+          "routeFamily": "inspiration",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
+          "urlPath": "/library/journal-archaeology/temple-architecture",
+          "absoluteUrl": "https://www.bodharesearch.in/library/journal-archaeology/temple-architecture",
+          "title": "Temple Architecture | Indian Archaeology, Sacred Art, and Hindu Monuments",
+          "description": "Temple architecture is a major recurring theme in the IJA, addressed through architectural surveys, iconographic studies, sculpture catalogues, and textual analysis.",
+          "score": 2,
+          "routeFamily": "library",
           "sources": [
             "markdown",
             "sitemap-code"
@@ -187,7 +187,7 @@
           "urlPath": "/about",
           "absoluteUrl": "https://www.bodharesearch.in/about",
           "title": "About Bodha | Hindu Research, IKS, Policy, and Cultural Work",
-          "description": "Learn about Bodha, a Hindu research group working across Indian Knowledge Systems, policy, education, cultural experiences, and public thought.",
+          "description": "Bodha, a research group and think-tank working across issues of Hindu concern, Indian Knowledge Systems, policy, education, cultural experiences, and public thought.",
           "score": 2,
           "routeFamily": "about",
           "sources": [
@@ -220,12 +220,12 @@
           ]
         },
         {
-          "urlPath": "/inspiration/dharampal",
-          "absoluteUrl": "https://www.bodharesearch.in/inspiration/dharampal",
-          "title": "Dharampal | Indian Knowledge Systems, Decolonization, and Svayambodha",
-          "description": "The historian who went back to British colonial archives and proved that India had thriving educational and industrial systems before colonization destroyed them",
+          "urlPath": "/designbodha/pramana-library/N5-satpratipaksha",
+          "absoluteUrl": "https://www.bodharesearch.in/designbodha/pramana-library/N5-satpratipaksha",
+          "title": "Counterbalanced Reasons",
+          "description": "The Nyaya taxonomy of inferential failure has five canonical members. Most of them name ways an offered reason fails to do its work — a reason that appears in cases where the property is absent (*anaikāntika*), a reason that actually entails the opposite (*viruddha*), a reason that has not been established (*asiddha*), a reason whose conclusion has been ruled out by a stronger means (*bādhita*). *Satpratipakṣa* is the odd one out. It does not name a reason that fails; it names a situation in which an offered reason is individually sound, but a contrary reason — equally sound — is in play for the opposite conclusion.",
           "score": 2,
-          "routeFamily": "inspiration",
+          "routeFamily": "designbodha",
           "sources": [
             "markdown",
             "sitemap-code"
@@ -244,6 +244,18 @@
           ]
         },
         {
+          "urlPath": "/designbodha/pramana-library/N7-anupalabdhi",
+          "absoluteUrl": "https://www.bodharesearch.in/designbodha/pramana-library/N7-anupalabdhi",
+          "title": "Non-perception as Knowledge",
+          "description": "Walk into the kitchen and notice the pot is not on the counter. You know the pot is absent. By what cognitive route? You are not inferring its absence from premises; you are not perceiving its absence in the way you perceive the counter. The Mimamsakas argued that this is a distinct kind of cognition — *anupalabdhi*, the non-perception of what would have been perceived if present — and that it deserves its own status as a *pramāṇa*.",
+          "score": 2,
+          "routeFamily": "designbodha",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
           "urlPath": "/library",
           "absoluteUrl": "https://www.bodharesearch.in/library",
           "title": "Open Library | Bodha",
@@ -256,37 +268,26 @@
           ]
         },
         {
-          "urlPath": "/core/sanskrit",
-          "absoluteUrl": "https://www.bodharesearch.in/core/sanskrit",
-          "title": "Sanskrit | Indian Knowledge Systems, Dharma, and Civilizational Language",
-          "description": "The root language of Indian civilizational consciousness — its role in encoding dharmic knowledge, its displacement by colonial languages, and the imperative of its revival.",
+          "urlPath": "/designbodha/pramana-library/M1-arthapatti",
+          "absoluteUrl": "https://www.bodharesearch.in/designbodha/pramana-library/M1-arthapatti",
+          "title": "Postulation from Inexplicability",
+          "description": "The canonical example: Devadatta is fat. He does not eat during the day. The two observations together are incoherent without a third fact — Devadatta must eat at night. The Mimamsakas argue that the third fact is genuinely known, by its own cognitive route. There is no perception of it; there is no general rule from which it has been inferred. What forces the knowledge claim is the requirement that the observed facts cohere.",
           "score": 2,
-          "routeFamily": "core",
+          "routeFamily": "designbodha",
           "sources": [
             "markdown",
             "sitemap-code"
           ]
         },
         {
-          "urlPath": "/concepts/vrikshayurveda",
-          "absoluteUrl": "https://www.bodharesearch.in/concepts/vrikshayurveda",
-          "title": "vrikshayurveda",
-          "description": "",
+          "urlPath": "/designbodha/pramana-library/N6-tarka",
+          "absoluteUrl": "https://www.bodharesearch.in/designbodha/pramana-library/N6-tarka",
+          "title": "Test of Commitments",
+          "description": "*Tarka* is the Nyaya procedure of saying: \"if this claim were not true, what would follow?\" — and then watching the implications. If the implications are absurd, contradict observation, or violate a more settled commitment, the original claim is supported by the failure of its denial. If the implications are coherent, the original claim is not yet supported and needs other work.",
           "score": 2,
-          "routeFamily": "concepts",
+          "routeFamily": "designbodha",
           "sources": [
-            "route-derived"
-          ]
-        },
-        {
-          "urlPath": "/blog",
-          "absoluteUrl": "https://www.bodharesearch.in/blog",
-          "title": "Bodha Blog | Hindu Culture, Dharma, IKS, and Civilizational Essays",
-          "description": "Essays on Hindu culture, history, festivals, civilizational thought, and more.",
-          "score": 1,
-          "routeFamily": "blog",
-          "sources": [
-            "route-file",
+            "markdown",
             "sitemap-code"
           ]
         }
@@ -371,6 +372,18 @@
           ]
         },
         {
+          "urlPath": "/designbodha/pramana-library/O3-purusharthas",
+          "absoluteUrl": "https://www.bodharesearch.in/designbodha/pramana-library/O3-purusharthas",
+          "title": "Four Aims for Human Flourishing",
+          "description": "The classical Indian tradition names four aims that together constitute a full human life. They are called *puruṣārtha*s — literally \"the aims of the human.\" The four are *dharma*, *artha*, *kāma*, and *mokṣa*. The list is older than systematic philosophy; it appears in the Epics, in Dharmaśāstra, in early ritual literature, and is treated as the basic frame within which other questions about how to live are asked.",
+          "score": 2,
+          "routeFamily": "designbodha",
+          "sources": [
+            "markdown",
+            "sitemap-code"
+          ]
+        },
+        {
           "urlPath": "/library/paths/hinduism-overview",
           "absoluteUrl": "https://www.bodharesearch.in/library/paths/hinduism-overview",
           "title": "Hinduism Overview | Sanatana Dharma, Hindu Texts, and Core Traditions",
@@ -395,36 +408,24 @@
           ]
         },
         {
-          "urlPath": "/inspiration/ram-swarup",
-          "absoluteUrl": "https://www.bodharesearch.in/inspiration/ram-swarup",
-          "title": "Ram Swarup | Hindu Thought, Purva Paksha, and Sanatana Dharma",
-          "description": "The thinker who explained what the Vedic gods actually are, how polytheism works as a philosophical system, and why the prophetic monotheist critique.",
+          "urlPath": "/research/battle-for-dharma-north-east",
+          "absoluteUrl": "https://www.bodharesearch.in/research/battle-for-dharma-north-east",
+          "title": "The Battle for Dharma in North-East",
+          "description": "A policy study on conversion, demographic change, and the Dharmic civilizational fabric of Northeast India.",
           "score": 2,
-          "routeFamily": "inspiration",
+          "routeFamily": "research",
           "sources": [
             "markdown",
             "sitemap-code"
           ]
         },
         {
-          "urlPath": "/core/sanatana-dharma",
-          "absoluteUrl": "https://www.bodharesearch.in/core/sanatana-dharma",
-          "title": "Sanatana Dharma | Hindu Philosophy, Dharma, and Civilizational Thought",
-          "description": "The eternal law — the philosophical, spiritual, and civilizational foundation of Hindu tradition and the animating principle of Bodha's entire research mission.",
+          "urlPath": "/blog/towardsdharmacentricpolity",
+          "absoluteUrl": "https://www.bodharesearch.in/blog/towardsdharmacentricpolity",
+          "title": "Towards Dharma-centric Polity - Lokmanya Tilak and the Universalization of Gaṇeśa Utsava",
+          "description": "An inquiry into what a dharma-centric political order would require within or beyond India current framework.",
           "score": 2,
-          "routeFamily": "core",
-          "sources": [
-            "markdown",
-            "sitemap-code"
-          ]
-        },
-        {
-          "urlPath": "/core/sanskrit",
-          "absoluteUrl": "https://www.bodharesearch.in/core/sanskrit",
-          "title": "Sanskrit | Indian Knowledge Systems, Dharma, and Civilizational Language",
-          "description": "The root language of Indian civilizational consciousness — its role in encoding dharmic knowledge, its displacement by colonial languages, and the imperative of its revival.",
-          "score": 2,
-          "routeFamily": "core",
+          "routeFamily": "blog",
           "sources": [
             "markdown",
             "sitemap-code"
