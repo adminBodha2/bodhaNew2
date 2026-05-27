@@ -9,22 +9,22 @@
 	let { data } = $props();
 </script>
 
-<div class="labelbox title-area">
-	<Crumb showT={true} title={data.title} />
-</div>
+
+<section class="box rgap32">
+<Crumb showT={true} title={data.title} sidebarSoloPad2={true}/>
 <div class="doctext classic-document ptop32 pbot16">
 	<data.content />
 </div>
-<section class="box bordertop ptop32 rgap24">
-	<h2 class="txt-2xl w600">Related</h2>
-	<div class="grid grid-cols-1 lg:grid-cols-2 white-grid related-articles">
+<h2 class="txt-2xl w600">Related</h2>
+	<div class="grid grid-cols-1 lg:grid-cols-3 related-articles gap16">
 		{#each data.relatedArticles as item}
-			<div class="box whitestone p16 lg:p32">
+			<div class="box whitestone std-pad b-main">
 				<p class="txt-xs tt-u w500 theme">{item.pubref}</p>
-				<p class="txt-xl w500 ptop16 pbot8">{item.title}</p>
+				<p class="txt-lg w500 ptop16 pbot8">{item.title}</p>
 				<p class="grey1 pbot16">{item.authors}</p>
 				<a class="linked w500 tt-u" href={item.link} target="_blank" rel="noreferrer">SEE JOURNAL→</a>
 			</div>
 		{/each}
 	</div>
 </section>
+

@@ -92,11 +92,11 @@ main
 
 @keyframes slideFromTop
 	from
-		transform: translateY(-720px)
+		transform: translateY(400px)
 
 @keyframes slideToBottom
 	to
-		transform: translateY(720px)
+		transform: translateY(-400px)
 
 :root::view-transition-old(root)
 	animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideToBottom

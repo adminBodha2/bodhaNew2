@@ -4,6 +4,7 @@ export { default as Slide2 } from './components/Slide2.svelte';
 export { default as Reveal } from './components/Reveal.svelte';
 export { default as Scale }  from './components/Scale.svelte';
 export { default as Blur }   from './components/Blur.svelte';
+export { default as Cut }    from './components/Cut.svelte';
 export { default as Spring } from './components/Spring.svelte';
 
 // ── Raw transition functions ──────────────────────────────────────────────────

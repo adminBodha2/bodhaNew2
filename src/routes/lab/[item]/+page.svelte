@@ -50,7 +50,7 @@
 	<section class="docgrid">
 		<div class="docside">
 			{#if labitems && labitems.length > 0}
-				<nav class="doclist">
+				<nav class="doclist lg:ptop16">
 					<div class="box rgap16">
 					{#each labitems as item}
 						{#if item.meta.title !== data.title}

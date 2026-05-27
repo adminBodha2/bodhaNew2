@@ -1,25 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import type { PageData } from './$types';
 	import '$lib/styles/system/document-layout.sass';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, withContext } from '$lib/utils/seo';
-	import WaterRipple from '$lib/motion-core/water-ripple/WaterRipple.svelte';
-
-	interface Props {
-		data: PageData;
-		brushSize?: number;
-	}
-
-	let { data, brushSize = 100 }: Props = $props();
-
+	let { data } = $props();
 	let sY = $state(0);
-
-	let schools = $derived(data.schools ?? []);
-	let thinkers = $derived(data.thinkers ?? []);
 
 	let title = $derived(data.title + ' | Bodha Inspiration');
 	let metaDescription = $derived(data.description);
@@ -52,18 +40,18 @@
 	<section class="docgrid">
 		<div class="box docside">
 			<nav class="doclist">
-				{#if schools && schools.length > 0}
+				{#if data.schools && data.schools.length > 0}
 					<div class="box rgap16">
-					{#each schools as item}
+					{#each data.schools as item}
 						<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
 							{item.meta.title}
 						</a>
 					{/each}
 					</div>
 				{/if}
-				{#if thinkers && thinkers.length > 0}
+				{#if data.thinkers && data.thinkers.length > 0}
 					<div class="box rgap16">
-					{#each thinkers as item}
+					{#each data.thinkers as item}
 						<a class="doclink txt-bs sm:txt-lg grey2" href={item.linkpath}>
 							{item.meta.title}
 						</a>

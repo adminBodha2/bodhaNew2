@@ -35,13 +35,13 @@
 	<section class="wrapper-std">
 		<Crumb showT={true} title="Bodha Lab" showD={true} desc={metaDescription} />
 		{#if labItems.length > 0}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 				{#each labItems as item, i}
-					<a class="box blank whitestone p24 lg:p32 rgap16" href={item.linkpath}>
+					<a class="box blank whitestone std-pad b-main rgap16" href={item.linkpath}>
 						<p class="txt-xs tt-u w500 grey1">{item.formattedDate}</p>
-						<p class="txt-lg w500">{item.meta.title}</p>
+						<p class="txt-lg w600 a-hover">{item.meta.title}</p>
 						<p class="grey1">{item.meta.excerpt}</p>
-						<p class="txt-00 w500 tt-u theme self-bottom">{item.meta.category}</p>
+						<p class="txt-00 w500 tt-u theme-dark self-bottom">{item.meta.category}</p>
 					</a>
 				{/each}
 			</div>

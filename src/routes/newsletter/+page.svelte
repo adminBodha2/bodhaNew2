@@ -14,6 +14,7 @@
 			id?: number;
 			pdflink?: string;
 			image?: string;
+			description?: string;
 		};
 	};
 
@@ -45,47 +46,24 @@
 <Container>
 	<section class="box wrapper-std rgap32 header-margin">
 		<Crumb showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha." />
-		<div class="grid lg:grid-cols-2 rgap16 cgap16 borderbot pbot32">
-			<p class="highlight-text">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling.</p>
+		<div class="grid lg:grid-cols-2 rgap16 cgap64 borderbot pbot32">
+			<div class="box rgap16">
+				<p class="highlight-text">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling.</p>
+				<p class="highlight-text">To receive the monthly newsletters in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
+			</div>
 			<p class="highlight-text">Bodha’s work is expanding across research, writing, publishing, design, archives, and public education. Rather than letting these efforts remain scattered across different platforms, this newsletter will serve as a regular monthly record of what we are thinking, building, publishing, and preparing.</p>
 		</div>
-		<div class="box rgap8">
-			<p class="txt-lg theme">To receive the monthly newsletters in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>
-		</div>
-		<div class="grid lg:grid-cols-3">
+		<div class="grid grid-cols-1 lg:grid-cols-3">
 			{#each posts as item}
-				<a class="row cgap8 ytop svg-hover has-image-background radius" href={item.linkpath} style="background-image: url('{item.meta.image}')">
-					<div class="box in-screen rgap16 p16 lg:p32 ybottom">
-						<News />
-						<div class="box rgap8">
-							<p class="txt-2xl w600 white">{item.meta.title}</p>
-							<p class="txt-sm tt-u white">{item.meta.date}</p>
-						</div>
+				<a class="box blank b-main stonecard" href={item.linkpath}>
+					<div class="p8"><img class="fitted landscape" src={item.meta.image} alt={item.meta.title}/></div>
+					<div class="box rgap16 std-pad ybottom">
+							<p class="txt-2xl w600 a-hover">{item.meta.title}</p>
+							<p class="grey1">{item.meta.description}</p>
+							<p class="txt-sm tt-u">{item.meta.date}</p>
 					</div>
 				</a>
 			{/each}
 		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-
-a.has-image-background
-	background-size: cover
-	background-position: center center
-	height: 300px
-	max-width: 500px
-	border: var(--border-dark)
-	&:hover
-		.in-screen
-			background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.5) 100%)
-	@media screen and (min-width: 1025px)
-		height: 360px
-
-.in-screen
-	height: 100%
-	width: 100%
-	background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.9) 100%)
-	transition: background 450ms ease
-
-</style>

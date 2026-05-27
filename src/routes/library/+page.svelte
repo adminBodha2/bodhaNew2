@@ -13,6 +13,7 @@
 	import { libCategories, libPaths, libExternal } from '$lib/utils/localsends';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import Blur from '$lib/svelteanim/components/Blur.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { useInView } from '$lib/svelteanim';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
@@ -78,34 +79,34 @@
 			</Reveal>
 		</div>
 	</section>
-	<section class="box wrapper-std rgap32 lg:rgap64 growingline">
+	<section class="wrapper-std growingline">
 		<Title text="Categories" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid" bind:this={ref2}>
+		<Slide>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 			{#each libCategories as cat, i}
-				<Blur visible={visref2.visible} duration={250} delay={i * 100}>
-				<a class="blank box rgap8 p24 lg:p32 whitestone" href={cat.href}>
-					<p class="txt-lg w600 a-hover pbot8">{cat.label}</p>
+				<a class="blank box rgap8 std-pad b-main whitestone slide-item" href={cat.href}>
+					<p class="txt-xl w600 a-hover">{cat.label}</p>
 					<p class="grey2 lh14">{cat.desc}</p>
 						<p class="txt-xs tt-u w500 theme">
 							{#if cat.type === 'arch'}41 issues{:else}{categoryCounts[cat.type]} texts{/if}
 						</p>
 				</a>
-				</Blur>
 			{/each}
 		</div>
+		</Slide>
 	</section>
 	<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate">
 		<Title text="Curated Reading Paths" />
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 white-grid" bind:this={ref3}>
+		<Slide targetSelector=".slide-item2">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 			{#each libPaths as path, i}
-				<Blur visible={visref3.visible} duration={500} delay={i * 150}>
-				<a class="blank box rgap8 p24 lg:p32 whitestone" href={path.href}>
-					<p class="txt-lg w600 a-hover pbot8">{path.label}</p>
+				<a class="blank box rgap8 std-pad b-main whitestone slide-item2" href={path.href}>
+					<p class="txt-xl w600 a-hover">{path.label}</p>
 					<p class="grey2 lh14">{path.desc}</p>
 				</a>
-				</Blur>
 			{/each}
 		</div>
+		</Slide>
 	</section>
 	<section class="box wrapper-std rgap32 lg:rgap64 growingline">
 		<Title text="Bharata1000" />

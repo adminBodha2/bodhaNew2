@@ -3,6 +3,7 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Cut from '$lib/svelteanim/components/Cut.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -34,65 +35,24 @@
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
-	<section class="box wrapper-std rgap32 header-margin">
-		<div class="ontology-head">
-			<Crumb showT={true} title="Ontology" showD={true} desc={metaDescription} />
-			<div class="stats-grid">
-				<div class="box stonecard p16">
-					<p class="citation grey tt-u">Vargas</p>
-					<p class="tight">{data.ontology.length}</p>
-				</div>
-				<div class="box stonecard p16">s
-					<p class="citation grey tt-u">Classified Links</p>
-					<p class="tight">{totalNodes}</p>
-				</div>
+	<section class="wrapper-std">
+		<Crumb showT={true} title="Ontology" showD={true} desc={metaDescription} showRow={true}>
+		<div class="row gap4">
+					<p class="standard-pill">{data.ontology.length} Vargas</p>
+					<p class="standard-pill">{totalNodes} Links</p>
 			</div>
-		</div>
-		<div class="varga-grid grid cgap4 rgap4">
+		</Crumb>
+		<p class="txt-xl">Work in progress, incomplete page.</p>
+		<Cut targetSelector=".cut-item">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 			{#each data.ontology as item (item.varga.id)}
-				<a class="blank box rgap8 ncolor-inv b-main p16 lg:p24 radius" href={`/ontology/${item.varga.slug}`}>
-					<p class="paragraph-text w600 a-hover tight">{item.varga.title}</p>
-					<p class="grey tight">{item.varga.description}</p>
-					{#if item.concepts.length > 0}
-						<p class="tag-text altprim tt-u tight">
-							{item.concepts.slice(0, 4).map((concept) => concept.title).join(', ')}
-						</p>
-					{/if}
-					<div class="row wrap ycenter cgap8 rgap8 self-bottom">
-						<p class="tag-pill tt-u hollow themed dead">{item.varga.tags?.length ?? 0} concepts</p>
-						<p class="tag-pill tt-u hollow themed dead">{item.content.length} nodes</p>
-					</div>
-				</a>
+				<div class="blank box rgap16 b-main std-pad cut-item">
+					<p class="txt-xl w600 a-hover">{item.varga.title}</p>
+					<p class="grey1">{item.varga.description}</p>
+<p class="txt-xs tt-u w500 theme-dark">{item.content.length} nodes</p>
+				</div>
 			{/each}
 		</div>
+		</Cut>
 	</section>
 </Container>
-
-<style lang="sass">
-
-	.ontology-head
-		display: grid
-		grid-template-columns: 1fr
-		gap: 1.5rem
-		@media screen and (min-width: 900px)
-			grid-template-columns: minmax(0, 1fr) 320px
-			align-items: start
-
-	.stats-grid
-		display: grid
-		grid-template-columns: 1fr 1fr
-		gap: 1px
-		background: var(--color-grey-0)
-
-	.varga-grid
-		display: grid
-		grid-template-columns: 1fr 1fr
-		@media screen and (min-width: 721px)
-			grid-template-columns: repeat(2, minmax(0, 1fr))
-		@media screen and (min-width: 1024px)
-			grid-template-columns: repeat(3, minmax(0, 1fr))
-		@media screen and (min-width: 1201px)
-			grid-template-columns: repeat(4, minmax(0, 1fr))
-
-
-</style>

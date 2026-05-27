@@ -33,8 +33,8 @@
 </svelte:head>
 
 <Container>
-	<section class="wrapper-std header-margin">
-		<Crumb showT={true} title="Bodha Members Area" />
+	<section class="wrapper-std">
+		<Crumb showT={true} title="Bodha Members Area" thinBot={true} />
 		{#if data.error || statusMessage}
 			<div class="box rgap16">
 				{#if data.error}
@@ -90,71 +90,9 @@
 				<p class="highlight-text width70">Namaste, please sign in or create an account. By subscribing to Bodha you will receive our monthly newsletters and fortnightly releases of Scrolls of Aryavarta directly in your email inbox.</p>
 			</div>
 			<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
-				<div class="auth-panel box rgap16 b-main p32 radius">
-					<form class="box rgap16" method="POST" action="?/login">
-						<input type="hidden" name="next" value={next} />
-						<p class="label">Sign In</p>
-						<label>
-							<span>Email</span>
-							<input name="email" type="email" autocomplete="email" required />
-						</label>
-						<label>
-							<span>Password</span>
-							<input name="password" type={showLoginPassword ? 'text' : 'password'} autocomplete="current-password" required />
-						</label>
-						<label class="checkbox-row">
-							<input type="checkbox" bind:checked={showLoginPassword} />
-							<span>Show password</span>
-						</label>
-						<button type="submit" class="primary"><span>Sign In</span></button>
-					</form>
-					<form class="forgot-password" method="POST" action="?/requestPasswordReset">
-						<p class="label">Forgot password?</p>
-						<input name="resetEmail" type="email" autocomplete="email" placeholder="Enter your email" required />
-						<button type="submit" class="primary black"><span>Send reset link</span></button>
-					</form>
-					{#if form?.loginError}
-						<p class="form-error">{form.loginError}</p>
-					{/if}
-					{#if form?.resetError}
-						<p class="form-error">{form.resetError}</p>
-					{/if}
-					{#if form?.resetMessage}
-						<p class="notice">{form.resetMessage}</p>
-					{/if}
-				</div>
-				<form class="auth-panel box b-main p32 rgap16 radius" method="POST" action="?/signup">
+				<div class="auth-panel box rgap16 b-main std-pad stonecard">
+				<form class="auth-panel oauth-panel box" method="POST" action="?/google">
 					<input type="hidden" name="next" value={next} />
-					<p class="label">Sign Up</p>
-					<label>
-						<span>Email</span>
-						<input name="email" type="email" autocomplete="email" required />
-					</label>
-					<label>
-						<span>Password</span>
-						<input name="password" type={showSignupPassword ? 'text' : 'password'} autocomplete="new-password" minlength="6" bind:value={signupPassword} required />
-					</label>
-					<label>
-						<span>Confirm password</span>
-						<input name="confirmPassword" type={showSignupPassword ? 'text' : 'password'} autocomplete="new-password" minlength="6" bind:value={signupConfirmPassword} required />
-					</label>
-					<label class="checkbox-row">
-						<input type="checkbox" bind:checked={showSignupPassword} />
-						<span>Show password</span>
-					</label>
-					{#if signupPasswordMismatch}
-						<p class="form-error">Passwords do not match.</p>
-					{/if}
-					<button type="submit" class="primary themed-b" disabled={signupPasswordMismatch}>
-						<span>Sign up</span>
-					</button>
-					{#if form?.signupError}
-						<p class="form-error">{form.signupError}</p>
-					{/if}
-				</form>
-				<form class="auth-panel oauth-panel box b-main p32 rgap16 radius" method="POST" action="?/google">
-					<input type="hidden" name="next" value={next} />
-					<p class="label">Google</p>
 					<button type="submit" class="google-button row xbetween ycenter">
 						<div class="google-row row ycenter xleft">
 							<div class="logo-wrapper">
@@ -167,12 +105,76 @@
 						<p class="form-error">{form.oauthError}</p>
 					{/if}
 				</form>
+					<form class="box rgap16" method="POST" action="?/login">
+						<input type="hidden" name="next" value={next} />
+						<label class="box">
+							<p class="txt-xs grey1 tt-u">Email</p>
+							<input name="email" type="email" autocomplete="email" required />
+						</label>
+						<label class="box">
+							<p class="txt-xs grey1 tt-u">Password</p>
+							<input name="password" type={showLoginPassword ? 'text' : 'password'} autocomplete="current-password" required />
+						</label>
+						<label class="checkbox-row">
+							<input type="checkbox" bind:checked={showLoginPassword} />
+							<p class="txt-00 grey1 tt-u">Show password</p>
+						</label>
+						<button type="submit" class="primary"><span>Sign In</span></button>
+					</form>
+					<form class="forgot-password box rgap16" method="POST" action="?/requestPasswordReset">
+						<div class="box rgap4">
+											<p class="txt-xs grey1 tt-u">Forgot password</p>
+						<input name="resetEmail" type="email" autocomplete="email" placeholder="Enter your email" required />	
+						</div>
+						<button type="submit" class="primary black"><span>Send reset link</span></button>
+					</form>
+					{#if form?.loginError}
+						<p class="form-error">{form.loginError}</p>
+					{/if}
+					{#if form?.resetError}
+						<p class="form-error">{form.resetError}</p>
+					{/if}
+					{#if form?.resetMessage}
+						<p class="notice">{form.resetMessage}</p>
+					{/if}
+				</div>
+				<form class="auth-panel box rgap16 b-main std-pad signup" method="POST" action="?/signup">
+					<input type="hidden" name="next" value={next} />
+					<label class="box rgap4">
+						<p class="txt-xs tt-u grey1">Email</p>
+						<input name="email" type="email" autocomplete="email" required />
+					</label>
+					<label class="box rgap4">
+						<p class="txt-xs tt-u grey1">Password</p>
+						<input name="password" type={showSignupPassword ? 'text' : 'password'} autocomplete="new-password" minlength="6" bind:value={signupPassword} required />
+					</label>
+					<label class="box rgap4">
+						<p class="txt-xs tt-u grey1">Confirm password</p>
+						<input name="confirmPassword" type={showSignupPassword ? 'text' : 'password'} autocomplete="new-password" minlength="6" bind:value={signupConfirmPassword} required />
+					</label>
+					<label class="checkbox-row">
+						<input type="checkbox" bind:checked={showSignupPassword} />
+						<p class="txt-00 w500 grey1 tt-u">Show password</p>
+					</label>
+					{#if signupPasswordMismatch}
+						<p class="form-error">Passwords do not match.</p>
+					{/if}
+					<button type="submit" class="primary themed-b" disabled={signupPasswordMismatch}>
+						<span>Sign up</span>
+					</button>
+					{#if form?.signupError}
+						<p class="form-error">{form.signupError}</p>
+					{/if}
+				</form>
 			</div>
 		{/if}
 	</section>
 </Container>
 
 <style lang="sass">
+
+.signup
+	background: var(--color-stone-1)
 
 .google-button
 	height: 50px
@@ -210,22 +212,10 @@
 		text-align: left
 		padding-left: 16px
 
-.label
-	text-transform: uppercase
-	letter-spacing: 0.08em
-	font-size: 0.75rem
-	color: var(--color-grey-2)
-
-label
-	display: grid
-	gap: 0.4rem
-	font-size: 0.86rem
-	color: var(--color-grey-5)
-
 input
 	width: 100%
 	border: var(--border-main)
-	background: transparent
+	background: var(--color-back)
 	color: inherit
 	padding: 0.8rem 0.9rem
 	font: inherit
@@ -245,12 +235,6 @@ input
 	display: flex
 	flex-wrap: wrap
 	gap: 0.75rem
-
-.forgot-password
-	display: grid
-	gap: 0.75rem
-	border-top: var(--border-main)
-	padding-top: 1rem
 
 .form-error
 	color: var(--color-grey-5)

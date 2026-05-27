@@ -4,6 +4,7 @@ export { default as Slide2 } from './components/Slide2.svelte';
 export { default as Reveal } from './components/Reveal.svelte';
 export { default as Scale }  from './components/Scale.svelte';
 export { default as Blur }   from './components/Blur.svelte';
+export { default as Cut }    from './components/Cut.svelte';
 
 // ── Raw transition functions ──────────────────────────────────────────────────
 // Use these directly with Svelte's in:/out: directives for full control.

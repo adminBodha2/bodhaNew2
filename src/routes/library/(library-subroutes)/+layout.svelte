@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import Container from '$lib/comps/wrapper.svelte';
+	import autoAnimate from '@formkit/auto-animate';
 	import '$lib/styles/system/document-layout.sass';
 	import { libCategories, libPaths } from '$lib/utils/localsends';
 	import libraryItems from '$lib/serving/library-items.json';
@@ -60,14 +61,14 @@
 </script>
 
 <Container>
-	<section class="docgrid scrollside">
+	<section class="docgrid scrollside library">
 		<div class="box docside">
 			<div class="doclist">
 				<div class="box sidebar-acco">
 					<p class="sidebar-label">Categories</p>
 					{#each libCategories as cat}
 						{@const accordionKey = `category:${cat.forLink}`}
-						<div class="accordion-item">
+						<div class="accordion-item" use:autoAnimate>
 							<button class="sidebar-button" class:active={openAccordion === accordionKey} type="button" aria-expanded={openAccordion === accordionKey} aria-controls={`library-category-${cat.forLink}`} onclick={() => toggleAccordion(accordionKey)}>
 								<span>{cat.label}</span>
 								<span class="accordion-icon" aria-hidden="true">{openAccordion === accordionKey ? '-' : '+'}</span>
@@ -91,7 +92,7 @@
 					{#each libPaths as path}
 						{@const pathSlug = path.href.split('/').at(-1)}
 						{@const accordionKey = `path:${pathSlug}`}
-						<div class="accordion-item">
+						<div class="accordion-item" use:autoAnimate>
 							<button class="sidebar-button" class:active={openAccordion === accordionKey} type="button" aria-expanded={openAccordion === accordionKey} aria-controls={`library-path-${pathSlug}`} onclick={() => toggleAccordion(accordionKey)}>
 								<span>{path.label}</span>
 								<span class="accordion-icon" aria-hidden="true">{openAccordion === accordionKey ? '-' : '+'}</span>
@@ -129,7 +130,7 @@
 	gap: 1px
 
 .sidebar-label
-	padding: 1rem 1rem 0.5rem
+	padding: 0.15rem 0.15rem 0.15rem 0
 	color: var(--color-grey-0)
 	font-size: 0.75rem
 	letter-spacing: 0
@@ -169,11 +170,11 @@
 .book-list
 	display: flex
 	flex-direction: column
-	padding: 0.25rem 0 0.75rem
+	padding: 0.15rem 0 0.15rem 0
 
 .book-link
 	display: block
-	padding: 0.4rem 1rem 0.4rem 1.5rem
+	padding: 0.15rem 0 0.15rem 0
 	color: var(--color-grey-2)
 	text-decoration: none
 	transition: background 180ms ease-out, color 180ms ease-out

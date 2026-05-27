@@ -9,12 +9,7 @@
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import Title from '$lib/comps/page-title.svelte';
 
-	interface Props {
-		data: PageData;
-		brushSize?: number;
-	}
-
-	let { data, brushSize = 100 }: Props = $props();
+	let { data } = $props();
 
 	let sY = $state(0);
 

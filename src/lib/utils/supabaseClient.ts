@@ -223,3 +223,13 @@ export async function latest(){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function pathBooks(pathName:string){
+	const { data, error } = await supabase
+	.from('db-bharata1000')
+	.select()
+	.eq('reading-path', pathName)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data	
+}

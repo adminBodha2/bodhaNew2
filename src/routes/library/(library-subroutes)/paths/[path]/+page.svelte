@@ -27,12 +27,12 @@
 
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" {jsonld} />
 
-<section class="box library-book rgap32">
+<section class="box rgap32">
 	<Crumb showT={true} title={data.title} showD={true} desc={data.description} />
-	<div class="grid grid-cols-1 lg:grid-cols-3 white-grid">
+	<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
 		{#each bookItems as item}
-			<a class="blank box rgap16 p24 lg:p32 whitestone" href={item.link}>
-				<p class="txt-xl w500">{item.text}</p>
+			<a class="blank box rgap8 tight-pad whitestone" href={item.link}>
+				<p class="txt-lg w500 a-hover">{item.text}</p>
 				<p class="grey1">{item.description}</p>
 				{#if item.author && item.author !== ''}
 					<p class="txt-sm tt-u w500 grey2">{item.author}</p>

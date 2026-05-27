@@ -36,6 +36,8 @@ a.doclink
 		grid-template-columns: t.$doc-sidebar-width minmax(0, 1fr)
 		grid-template-areas: "sidearea mainarea"
 		border-bottom: var(--border-main)
+		&.library
+			grid-template-columns: 440px 1fr
 		.docmain
 			padding-left: map.get(t.$space-scale, 80)
 			padding-bottom: map.get(t.$space-scale, 64)

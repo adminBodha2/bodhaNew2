@@ -34,19 +34,19 @@
 
 <svelte:window bind:scrollY={scroY} />
 
-<section class="box library-book rgap32">
-	<Crumb showT={true} title="Indian Journal of Archaeology" showD={true} desc={metaDescription} />
+<section class="box rgap32">
+	<Crumb showT={true} title="Indian Journal of Archaeology" showD={true} desc={metaDescription} fullP={true} sidebarSoloPad2={true} />
 	<p class="highlight-text">
 		The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016. "Full access, no subscriptions, and no limitations." This totals to around 41 issues so far, spread over 11 volumes all available on their <a class="linked" target="_blank" rel="noreferrer" href="https://ijarch.com/">website.</a>
 		Here at Bodha Open Library, we've sifted through each issue, sorted and classified the articles, and present the archive in easy to navigate, explore-friendly forms.
 	</p>
-	<div class="box rgap32 bordertop ptop32" id="contents">
+	<div class="box rgap32" id="contents">
 		<h2 class="txt-2xl w600">Themes</h2>
 		{#if groups && groups.length > 0}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each groups as item}
-					<a class="blank p16 whitestone" href={item.linkpath}>
-						<p class="txt-lg w600 a-hover">{item.meta.title}</p>
+					<a class="blank p16 whitestone b-main" href={item.linkpath}>
+						<p class="txt-lg w500 a-hover">{item.meta.title}</p>
 					</a>
 				{/each}
 			</div>

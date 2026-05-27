@@ -31,7 +31,7 @@
 <Head {title} {metaDescription} {metaImage} {metaUrl} imWidth="1536" imHeight="1024" ogType="book" {jsonld} />
 
 <section class="box rgap32">
-	<Crumb libraryType={true} sidebarSoloPad2={true} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
+	<Crumb sidebarSoloPad2={true} showT={true} title={data.name} showD={true} desc="{data.author} | {data.summary}" showRow={true}>
 		<div class="row cgap8 rgap8 mwrap">
 			{#each data.tags as tag}
 				<p class="txt-xs tt-u w500 theme">#{tag.replaceAll('-', ' ')}</p>
@@ -44,9 +44,9 @@
 	{#if relatedBooks && relatedBooks.length > 0}
 		<div class="box bordertop ptop64 rgap32">
 			<Title text="Related Books" sizeType={true}/>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 white-grid">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
 				{#each relatedBooks as item, i}
-					<a class="blank box whitestone p24 lg:p32 rgap16" href={item.linkfinal2}>
+					<a class="blank box whitestone rgap8 tight-pad" href={item.linkfinal2}>
 						<p class="txt-lg w500 a-hover">{item.name}</p>
 						<p class="grey1">{item.short}</p>
 					</a>
