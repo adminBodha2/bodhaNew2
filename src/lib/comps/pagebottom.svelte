@@ -25,7 +25,7 @@
 			<p class="sm:txt-sm light-footer lh16">A think tank and research group grounded in the wisdom of Hindu civilization.</p>
 		</div>
 		<div class="textline2 box rgap16">
-			<p class="sm:txt-sm light-footer lh16"><a href="/members" class="linkedlight">SUBSCRIBE/ LOG IN.</a> <br />Site designed at <a class="linkedlight" href="/designbodha">designBodha</a>. <a class="linkedlight" href="/sitemap.xml">Sitemap</a> | <a class="linkedlight" href="/contact">Contact</a></p>
+			<p class="sm:txt-sm light-footer lh16"><a href="/members" class="light-on-page">SUBSCRIBE/ LOG IN.</a> <br />Site designed at <a class="light-on-page" href="/designbodha">designBodha</a>. <a class="light-on-page" href="/sitemap.xml">Sitemap</a> | <a class="light-on-page" href="/contact">Contact</a></p>
 			<div class="row ycenter cgap16">
 				<Designed />
 				<button class="blank" onclick={toggleTheme}>
@@ -45,13 +45,14 @@
 			<div class="foot-links box">
 				<a class="foot-link blank white" href="/research">Research</a>
 				<a class="foot-link blank white" href="/anveshi">Anveshi</a>
+				<a class="foot-link blank white" href="/academy">Academy</a>
 				<a class="foot-link blank white" href="/big-questions">Big Questions</a>
 			</div>
 		</div>
 		<div class="box foot-col rgap16 grid2">
 			<p class="txt-xs light-footer tt-u">learning</p>
 			<div class="foot-links box">
-				<a class="foot-link blank white" href="/academy">Academy</a>
+				<a class="foot-link blank white" href="/library">Open Library</a>
 				<a class="foot-link blank white" href="/wiki">Knowledge Base</a>
 				<a class="foot-link blank white" href="/wiki/temples">Hindu Temples</a>
 				<!--
@@ -64,11 +65,11 @@
 			<p class="txt-xs light-footer tt-u">Readings</p>
 			<div class="foot-links box">
 				<a class="foot-link blank white" href="/blog">Blog</a>
-				<a class="foot-link blank white" href="/library">Open Library</a>
 				<!--
 					<a class="foot-link blank white" href="/explorer">Explorer</a>
 					-->
 				<a class="foot-link blank white" href="/newsletter">Newsletter</a>
+				<a class="foot-link blank white" href="/aryavarta">Aryavarta</a>
 			</div>
 		</div>
 		<div class="box foot-col rgap16 grid4">
@@ -77,7 +78,6 @@
 				<a class="foot-link blank white" href="/about">About</a>
 				<a class="foot-link blank white" href="/inspiration">Inspiration</a>
 				<a class="foot-link blank white" href="/lab">Lab</a>
-				<a class="foot-link blank white" href="/aryavarta">Aryavarta</a>
 				<!--
 					<button type="button" class="foot-link footer-btn" onclick={openSiteTourSelector}>Site Tour</button>
 					-->
@@ -86,7 +86,7 @@
 		</div>
 		<div class="foot-bottom self-bottom">
 			<div class="foot-legal">
-				<p class="lgrey">© 2026 Bodha Research Pvt Ltd | <a class="linkedlight" href="/docs/terms-and-conditions">T&C</a> | <a class="linkedlight" href="/docs/privacy-policy">Privacy</a> | <a class="linkedlight" href="/docs/refunds-policy">Refunds</a></p>
+				<p class="lgrey">© 2026 Bodha Research Pvt Ltd | <a class="light-on-page" href="/docs/terms-and-conditions">T&C</a> | <a class="light-on-page" href="/docs/privacy-policy">Privacy</a> | <a class="light-on-page" href="/docs/refunds-policy">Refunds</a></p>
 				<p class="lgrey">Svayambodha Centre For Culture Studies Foundation</p>
 			</div>
 			<div class="foot-actions">
@@ -112,19 +112,17 @@
 
 <style lang="sass">
 
-.bigblock
-	@media (max-width: 1024px)
-		row-gap: 2rem
-		padding-top: 1rem
-		padding-bottom: 1rem
-
-p.light-footer
-	color: #a7a7a7
+a.light-on-page
+	color: var(--color-theme-light)
+	&:hover
+		color: var(--color-theme)
 
 .foot-wrap
 	width: 100%
 	position: relative
 	overflow: hidden
+	padding-left: 0.5rem
+	padding-right: 0.5rem
 	background: linear-gradient(180deg,rgba(0, 44, 94, 1) 0%, rgba(0, 28, 59, 1) 53%, rgba(0, 9, 19, 1) 84%, rgba(0, 0, 0, 1) 100%)
 	box-shadow: inset 0 12px 24px -12px rgba(0, 0, 0, 0.85)
 	&::before
@@ -142,51 +140,40 @@ p.light-footer
 		height: 1px
 		background: rgba(255,255,255,.12)
 		pointer-events: none
+		top: 2rem
+	.foot-wide-lines
+		position: absolute
+		inset: 0
+		pointer-events: none
+		z-index: 1
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 2rem
+			height: 1px
+			background: rgba(255,255,255,.12)
 	@media (max-width: 1024px)
 		min-height: 100vh
-		padding-left: 0.5rem
-		padding-right: 0.5rem
-		&::after
-			top: 2rem
 	@media (min-width: 1025px)
 		height: calc(100vh - 80px)
-		padding-left: 1rem
-		padding-right: 1rem
-		&::after
-			top: 4rem
-	@media (min-width: 1601px)
-		padding-left: 2rem
-		padding-right: 2rem
+		min-height: 720px
 		&::after
 			top: 6rem
-
-.foot-wide-lines
-	position: absolute
-	inset: 0
-	pointer-events: none
-	z-index: 1
-	&::before
-		content: ''
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 2rem
-		height: 1px
-		background: rgba(255,255,255,.12)
-	@media (min-width: 1025px)
-		&::before
-			bottom: 4rem
-	@media (min-width: 1201px)
-		&::before
-			bottom: 6rem
+		.foot-wide-lines
+			&::before
+				bottom: 6rem
 
 .foot-inner
 	z-index: 2
-	height: 100%
 	width: 100%
+	height: 100%
 	margin-left: auto
 	margin-right: auto
 	@media (max-width: 1024px)
+		display: flex
+		flex-direction: column
 		border-left: 1px solid rgba(255,255,255,0.1)
 		border-right: 1px solid rgba(255,255,255,0.1)
 		padding-left: 1rem
@@ -195,15 +182,18 @@ p.light-footer
 		margin-top: auto
 		margin-bottom: auto
 	@media (min-width: 1025px)
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: "top top top top top top" "secondblock secondblock bigblock bigblock bigblock bigblock" "bottom bottom bottom bottom bottom bottom"
 		border-left: 1px solid rgba(255,255,255,0.1)
 		border-right: 1px solid rgba(255,255,255,0.1)
 		width: 992px
-		row-gap: 4rem
 		padding-left: 2rem
 		padding-right: 2rem
+		padding-top: 8rem
+		padding-bottom: 8rem
 	@media (min-width: 1201px)
 		width: 1168px
-		row-gap: 6rem
 		padding-left: 4rem
 		padding-right: 4rem
 	@media (min-width: 1441px)
@@ -211,15 +201,14 @@ p.light-footer
 	@media (min-width: 1601px)
 		width: 1472px
 
-.foot-inner
-	display: flex
-	flex-direction: column
-	height: 100%
-	@media (min-width: 1025px)
-		display: grid
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
-		grid-template-areas: "top top top top top top" "secondblock secondblock bigblock bigblock bigblock bigblock" "bottom bottom bottom bottom bottom bottom"
-		align-content: center
+.bigblock
+	@media (max-width: 1024px)
+		row-gap: 2rem
+		padding-top: 1rem
+		padding-bottom: 1rem
+
+p.light-footer
+	color: #a7a7a7
 
 .foot-top
 	grid-area: top
@@ -262,6 +251,7 @@ p.light-footer
 			transform: translateY(-4px)
 	@media screen and (max-width: 1024px)
 		margin-left: auto
+		padding: 0.5rem
 
 .foot-scroll-arrow
 	font-size: 1rem
@@ -282,6 +272,8 @@ p.light-footer
 	opacity: 0.9
 	height: 48px
 	margin-right: auto
+	@media (max-width: 1024px)
+		height: 42px
 
 
 // ── LINK GRID ─────────────────────────────────────────────

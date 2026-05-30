@@ -13,7 +13,6 @@
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import ReadingT from '$lib/icons/readingT.svelte';
 	import Cut from '$lib/svelteanim/components/Cut.svelte';
-	import { animState, toggleAnim } from '$lib/utils/globalstores';
 
 	type Props = Partial<ComponentProps<typeof StackingWords>>;
 
@@ -41,10 +40,10 @@
 		<div class="box rgap16 lg:rgap32 ycenter" id="introduction">
 			<div class="box">
 				<StackingWords>
-					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls009m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
+					<h1 class="txt-4xl md:txt-7xl lg:txt-9xl lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
 				</StackingWords>
 				<StackingWords>
-					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh13 source-serif">and research group,</h1>
+					<h1 class="txt-4xl md:txt-7xl lg:txt-9xl lh13 source-serif">and research group,</h1>
 				</StackingWords>
 			</div>
 			<Reveal start="top 70%"><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that strengthen Hindu cultural revival.</p></Reveal>
@@ -55,7 +54,7 @@
 		<Slide direction="down" distance={260} duration={900} stagger={180} start="top 75%" end="top 25%" scrub={1} targetSelector=".verticals">
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 				{#each verticals as item}
-					<a class="box blank verticals radius4 overflow-hidden" href={item.href}>
+					<a class="box blank verticals radius4 overflow-hidden paper-1" href={item.href}>
 						<div class="overflow-hidden"><img class="fitted sm:herocard md:port" src={item.image} alt={item.title} /></div>
 						<div class="box rgap16 ptop24 pbot32 px16 lg:px24">
 							<h2 class="txt-3xl lg:txt-4xl ls002m lg:ls004m a-hover w600">{item.title}</h2>
@@ -223,6 +222,11 @@
 </Container>
 
 <style lang="sass">
+
+h1.source-serif
+	letter-spacing: -0.05rem
+	@media (min-width: 1025px)
+		letter-spacing: -0.2rem
 
 .padding-wrapper
 	background: linear-gradient(to right, #004e92, #000428)

@@ -52,7 +52,7 @@
 		children,
 		class: className = "",
 		start = "top 100%",
-		end = "top 50%",
+		end = "top 65%",
 		scrub = 4,
 		stagger = 0.21,
 		ease = "expo.out",
