@@ -12,7 +12,6 @@
 	import Menudrop from '$lib/comps/responsive-menu.svelte';
 	import Blur from '$lib/svelteanim/components/Blur.svelte';
 	import { absoluteImage, absoluteUrl, courseJsonLd, stringifyJsonLd } from '$lib/utils/seo';
-	import InteractiveGrid from '$lib/motion-core/interactive-grid/InteractiveGrid.svelte';
 	import type { ComponentProps } from 'svelte';
 
 	const title = 'Introduction to Shri Ram Swarup | Bodha Courses';
@@ -23,9 +22,6 @@
 	const tabs = ['Overview', 'Audience', 'Takeaways', 'Facilitator', 'Sessions'];
 	let active = $state(0);
 	const demoImage = '/images/srg-square.webp';
-	type Props = Partial<ComponentProps<typeof InteractiveGrid>>;
-
-	let { grid = 24, mouseSize = 0.15, strength = 0.5, relaxation = 0.7 }: Props = $props();
 
 	const jsonld = stringifyJsonLd(
 		courseJsonLd({
