@@ -2,7 +2,7 @@
 	import type { PageData } from './$types';
 	import { DEFAULT_IMAGE, SITE_URL, organizationJsonLd, stringifyJsonLd, websiteJsonLd } from '$lib/utils/seo';
 	import Container from '$lib/comps/wrapper.svelte';
-	import { StackingWords } from '$lib/motion-core';
+	import StackingWords from '$lib/svelteanim/components/StackingWords.svelte'
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxfull.svelte';
 	import Title from '$lib/comps/page-title.svelte';
@@ -11,7 +11,8 @@
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import type { ComponentProps } from 'svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
-	import ReadingT from '$lib/icons/readingT.svelte'
+	import ReadingT from '$lib/icons/readingT.svelte';
+	import Cut from '$lib/svelteanim/components/Cut.svelte';
 	import { animState, toggleAnim } from '$lib/utils/globalstores';
 
 	type Props = Partial<ComponentProps<typeof StackingWords>>;
@@ -40,27 +41,18 @@
 		<div class="box rgap16 lg:rgap32 ycenter" id="introduction">
 			<div class="box">
 				<StackingWords>
-					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
+					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls009m lh11 source-serif"><span class="theme">Bodha</span> <span class="underline">is a think tank</span></h1>
 				</StackingWords>
 				<StackingWords>
 					<h1 class="txt-5xl md:txt-7xl lg:txt-9xl ls010m lh13 source-serif">and research group,</h1>
 				</StackingWords>
 			</div>
-			<Reveal><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that strengthen Hindu cultural revival.</p></Reveal>
+			<Reveal start="top 70%"><p class="txt-xl md:txt-2xl lg:txt-3xl lh15 lg:width80">Studying contemporary issues of cultural concern, to inform policy, education, and public thought with wisdom drawn from Hindu traditions. We research, teach, publish, and build experiences that strengthen Hindu cultural revival.</p></Reveal>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="our pillars" />
-		<Slide
-			direction="down"
-			distance={260}
-			duration={900}
-			stagger={180}
-			start="top 75%"
-			end="top 25%"
-			scrub={1}
-			targetSelector=".verticals"
-		>
+		<Slide direction="down" distance={260} duration={900} stagger={180} start="top 75%" end="top 25%" scrub={1} targetSelector=".verticals">
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
 				{#each verticals as item}
 					<a class="box blank verticals radius4 overflow-hidden" href={item.href}>
@@ -77,26 +69,17 @@
 	<section class="wrapper-std growingline alternate">
 		{#if latestItems}
 			<Title text="Latest at Bodha" />
-		<Slide
-			direction="down"
-			distance={120}
-			duration={500}
-			stagger={180}
-			start="top 90%"
-			end="top 15%"
-			scrub={1}
-			targetSelector=".newitems"
-		>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
-				{#each latestItems as item, i}
+			<Slide direction="down" distance={120} duration={500} stagger={180} start="top 90%" end="top 15%" scrub={1} targetSelector=".newitems">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16">
+					{#each latestItems as item, i}
 						<a class="box p24 md:p32 blank whitestone b-main newitems" href={item.link}>
 							<p class="txt-xs w500 tt-u grey1">{item.badge}</p>
 							<h3 class="txt-xl lg:txt-2xl lh12 w600 a-hover ptop8 pbot16 ls001m">{item.title}</h3>
 							<p class="grey2 lh14">{item.description}</p>
 						</a>
-				{/each}
-			</div>
-		</Slide>
+					{/each}
+				</div>
+			</Slide>
 		{/if}
 	</section>
 	<section class="wrapper-std growingline">
@@ -106,8 +89,8 @@
 				<a class="primary" href="/blog"><span>See All</span></a>
 			</div>
 			<Slide targetSelector=".blog-items">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
-				{#each blogs as item, i}
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
+					{#each blogs as item, i}
 						<div class="box whitestone b-main blog-items">
 							<div class="row cgap4 rgap4 ycenter p16">
 								{#if item.meta.tags && item.meta.tags.length > 0}
@@ -122,21 +105,20 @@
 							<a class="blank box rgap16 lg:rgap24 p16 lg:p32" href={item.linkpath}>
 								<h3 class="txt-2xl w600 lh12 a-hover">{item.meta.title}</h3>
 								<p class="grey2 lh14">{item.meta.excerpt}</p>
-
 							</a>
-								<div class="box rgap4 self-bottom p16 lg:px32 lg:py16 bordertop">
-									<p class="tt-u txt-sm w600">{item.meta.author}</p>
-									<div class="row cgap8">
-										<p class="tt-u txt-xs w500 grey1">{item.formattedDate}</p>
-										<div class="row ycenter cgap4">
-										<ReadingT/>
+							<div class="box rgap4 self-bottom p16 lg:px32 lg:py16 bordertop">
+								<p class="tt-u txt-sm w600">{item.meta.author}</p>
+								<div class="row cgap8">
+									<p class="tt-u txt-xs w500 grey1">{item.formattedDate}</p>
+									<div class="row ycenter cgap4">
+										<ReadingT />
 										<p class="tt-u txt-xs w500 grey1">{item.readingTime} mins</p>
-										</div>
 									</div>
 								</div>
+							</div>
 						</div>
-				{/each}
-			</div>
+					{/each}
+				</div>
 			</Slide>
 		{/if}
 	</section>
@@ -144,7 +126,7 @@
 		<Title text="publications" />
 		<Slide targetSelector=".books">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap32">
-			{#each publications as pub, i}
+				{#each publications as pub, i}
 					<div class="books rgap16">
 						<img class="fitted port contain" src={pub.image} alt={pub.title} />
 						<div class="box rgap8 lg:rgap16 p16 lg:p32">
@@ -157,19 +139,44 @@
 							</div>
 						</div>
 					</div>
-			{/each}
-		</div>
+				{/each}
+			</div>
 		</Slide>
 	</section>
-	<section class="wrapper-std growingline">
+</Container>
+<Cut duration={600} end="bottom 10%">
+<section class="padding-wrapper">
+	<div class="inside-section">
+		<div class="grid lg:grid-cols-3 cgap16 rgap32">
+			<a class="box std-pad rgap16" href="/newsletter">
+				<p class="white txt-2xl w500">Monthly Newsletter</p>
+				<p class="txt-lg white lh14">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling.</p>
+				<div class="arrow"><span class="white">→</span></div>
+			</a>
+			<a class="box std-pad rgap16" href="/aryavarta">
+				<p class="white txt-2xl w500">Scrolls of Aryavarta</p>
+				<p class="txt-lg white lh14">Scrolls of Aryavarta is an exercise in creative cultural storytelling, to recreate the Bharata that once was, or could have been. Featuring digital comics exploring different facets of Indian history, new issue every fortnight.</p>
+				<div class="arrow"><span class="white">→</span></div>
+			</a>
+			<a class="box std-pad rgap16" href="/members">
+				<p class="white txt-2xl w500">Subscribe</p>
+				<p class="txt-lg white lh14">Subscribe to receive our monthly newsletters and fortnightly releases of Scrolls of Aryavarta directly in your email inbox.</p>
+				<div class="arrow"><span class="white">→</span></div>
+			</a>
+		</div>
+	</div>
+</section>
+</Cut>
+<Container>
+	<section class="wrapper-std">
 		{#if vids.length > 0}
 			<div class="row xbetween ycenter rgap8 mcol mleft col-span-full">
 				<Title text="recent videos" />
 				<a class="primary" href="/videos"><span>All Videos</span></a>
 			</div>
-		<Slide targetSelector=".video-items">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
-				{#each vids as item, i}
+			<Slide targetSelector=".video-items">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
+					{#each vids as item, i}
 						<div class="box blank whitestone theme-line-parent video-items">
 							<VideoPlayer videoId={item.videoid} title={item.name} loop />
 							<a class="box rgap8 lg:rgap16 p16 lg:p24" href={item.link} target="_blank" rel="noreferrer">
@@ -180,12 +187,12 @@
 								</div>
 							</a>
 						</div>
-				{/each}
-			</div>
-		</Slide>
+					{/each}
+				</div>
+			</Slide>
 		{/if}
 	</section>
-	<section class="wrapper-std growingline alternate min100vh">
+	<section class="wrapper-std growingline min100vh">
 		<Title text="Knowledge Base" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div>
@@ -203,19 +210,26 @@
 			</div>
 		</div>
 		<Slide targetSelector=".wiki-items">
-		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap16">
-			{#each wikiItems as item}
-				<a class="blank box whitestone p16 md:p24 lg:p32 rgap8 lg:rgap16 b-main wiki-items" href={item.link}>
-					<p class="txt-xl w600 a-hover">{item.label}</p>
-					<p class="lh14 grey1">{item.description}</p>
-				</a>
-			{/each}
-		</div>
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap16">
+				{#each wikiItems as item}
+					<a class="blank box whitestone p16 md:p24 lg:p32 rgap8 lg:rgap16 b-main wiki-items" href={item.link}>
+						<p class="txt-xl w600 a-hover">{item.label}</p>
+						<p class="lh14 grey1">{item.description}</p>
+					</a>
+				{/each}
+			</div>
 		</Slide>
 	</section>
 </Container>
 
 <style lang="sass">
+
+.padding-wrapper
+	background: linear-gradient(to right, #004e92, #000428)
+	@media (min-width: 1025px)
+		height: 400px
+		padding-top: 4rem
+		padding-bottom: 4rem
 
 #introduction
 	@media (min-width: 1025px)

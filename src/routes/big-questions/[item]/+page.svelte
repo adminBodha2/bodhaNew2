@@ -10,6 +10,7 @@
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import seoTopicLinks from '$lib/generated/seo-topic-links.json';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
+	import Title from '$lib/comps/page-title.svelte';
 
 	interface Props {
 		data: PageData;
@@ -77,28 +78,21 @@
 					<data.content />
 				</div>
 				<div class="triple-right">
-					<Slide targetSelector=".related-item">
-						<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
-							{#each data.linkedNodes as item (item.nodeId)}
-								<a class="blank box related-item tight-pad b-main whitestone" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
-									<div class="box rgap16">
-										<p class="txt-00 theme w500 tt-u">{item.node.type.replaceAll('-', ' ')}</p>
-										<p class="txt-lg a-hover w600">{item.node.title}</p>
-										{#if item.node.description}
-											<p class="grey1 lh14">{item.node.description}</p>
-										{/if}
-									</div>
-									<div class="row wrap cgap4 rgap4 self-bottom ptop32">
-										{#each item.node.tags as tag (tag)}
-											<p class="txt-xs tt-u w500 grey2">{tag.replaceAll('-', ' ')}</p>
-										{/each}
-									</div>
-								</a>
-							{/each}
+					{#if data.matrixItems && data.matrixItems.length > 0}
+						<div class="box bordertop ptop64 rgap32">
+							<Title text="Also See" sizeType={true} />
+							<Slide targetSelector=".slide-item">
+								<div class="grid grid-cols-1 lg:grid-cols-2 gap16">
+									{#each data.matrixItems as item}
+										<a class="rgap8 box tight-pad slide-item b-main h-paper-1 whitestone" href={item.linkpath}>
+											<p class="txt-00 tt-u w500 grey1">{item.type}</p>
+											<p class="txt-lg a-hover w500">{item.title}</p>
+											<p class="grey2">{item.description}</p>
+										</a>
+									{/each}
+								</div>
+							</Slide>
 						</div>
-					</Slide>
-					{#if data.item === 'core-of-sanatana-dharma'}
-						<HubRelatedLinks title="Further Readings" items={relatedDharmaPages} />
 					{/if}
 				</div>
 			</div>

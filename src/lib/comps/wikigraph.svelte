@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-	import type { WikiGraphEdge, WikiGraphNode } from '$lib/wiki-graph';
+	import { nodeHref } from '$lib/wiki-graph';
+import type { WikiGraphEdge, WikiGraphNode } from '$lib/wiki-graph';
 
 	type WikiNodeType = 'domain' | 'wiki' | 'thinker' | 'school' | 'question' | 'project' | 'blog' | 'book' | 'external-article' | 'lab' | 'concept';
 
@@ -294,9 +295,7 @@
 		return t.replaceAll('-', ' ');
 	}
 
-	function nodeHref(node: GraphPoint) {
-		return ((node.meta as Record<string, unknown>)?.route as string | null) ?? null;
-	}
+	// Use the shared nodeHref (now produces correct /wiki/{domain}/{slug} for wiki nodes)
 
 	// ── Lifecycle ─────────────────────────────────────────────────────────────
 	onMount(async () => {

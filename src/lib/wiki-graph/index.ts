@@ -64,6 +64,7 @@ export type WikiSection = {
 };
 
 const sectionOrder = [
+	{ key: 'wiki', title: 'Wiki Pages' },
 	{ key: 'thinker', title: 'Thinkers' },
 	{ key: 'school', title: 'Schools' },
 	{ key: 'question', title: 'Questions' },
@@ -101,6 +102,13 @@ export function getIncoming(id: string) {
 }
 
 export function routeFor(node: WikiGraphNode) {
+	// Wiki items now live under their domain as nested subroutes: /wiki/{domain}/{slug}
+	if (node.type === 'wiki') {
+		const domainSlug = node.meta?.domain;
+		if (typeof domainSlug === 'string' && domainSlug.length > 0) {
+			return `/wiki/${domainSlug}/${node.slug}`;
+		}
+	}
 	return typeof node.meta?.route === 'string' && node.meta.route.length > 0 ? node.meta.route : null;
 }
 
@@ -109,6 +117,15 @@ export function nodeHref(node: WikiGraphNode) {
 }
 
 export function getNodeByRoute(route: string) {
+	// Support both the new nested wiki routes and the legacy flat routes stored in meta.route
+	const nestedMatch = /^\/wiki\/([^/]+)\/([^/]+)$/.exec(route);
+	if (nestedMatch) {
+		const [, domainSlug, itemSlug] = nestedMatch;
+		const found = nodes.find(
+			(node) => node.type === 'wiki' && node.slug === itemSlug && node.meta?.domain === domainSlug
+		);
+		if (found) return found;
+	}
 	return nodes.find((node) => node.meta?.route === route);
 }
 

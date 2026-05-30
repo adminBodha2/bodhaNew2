@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
+	import Crumb2 from '$lib/comps/crumb-2.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
 	import autoAnimate from '@formkit/auto-animate';
@@ -40,8 +41,8 @@
 	let iksSearch = $state('');
 	let openIksPaperId = $state<string | null>(null);
 
-	// Define the canonical order of sections
-	const allTabs = ['Thinkers', 'Schools', 'Questions', 'Research', 'Essays', 'Books', 'Labs'] as const;
+	// Define the canonical order of sections (must match sectionOrder in $lib/wiki-graph)
+	const allTabs = ['Wiki Pages', 'Thinkers', 'Schools', 'Questions', 'Research', 'Essays', 'Books', 'Labs'] as const;
 
 	// Derive the list of tabs that actually have content for this domain (more robust)
 	const availableTabs = $derived(allTabs.filter((tab) => data.sections.some((section) => section.title === tab)));
@@ -125,7 +126,7 @@
 
 <Container>
 	<section class="wrapper-std">
-		<Crumb showT={true} title={data.domain.title} showD={true} desc={data.domain.description} showRow={true}>
+		<Crumb2 showT={true} title={data.domain.title} showD={true} desc={data.domain.description} showRow={true}>
 			<div class="box rgap4">
 				<p class="txt-xs tt-u w500 grey0">Connected Knowledge - <span class="theme">{data.totalConnected}</span></p>
 				{#if data.domain.tags.length}
@@ -136,7 +137,7 @@
 					</div>
 				{/if}
 			</div>
-		</Crumb>
+		</Crumb2>
 		{#if data.domain.title === 'Indian Knowledge Systems and Education'}
 			<div class="box rgap16">
 				<p class="highlight-text width70">We maintain here a monthly updated registry on publications in IKS. Current month registry holds 600+ academic papers. Search by title here.</p>
@@ -169,8 +170,6 @@
 				{/if}
 			</div>
 		{/if}
-	</section>
-	<section class="wrapper-std min100vh" style="justify-content: start">
 		<Responsive>
 			{#each availableTabs as tab}
 				<button class="selection-button" class:active={activeTab === tab} onclick={() => (activeTab = tab)}>
@@ -184,7 +183,7 @@
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" use:autoAnimate={staggerAnimatePlugin({ stagger: 80, duration: 300 })}>
 						{#each selectedSection.items as item}
 							{#if item.href}
-								<a class="box whitestone tight-pad paper-1" href={item.href}>
+								<a class="box whitestone tight-pad h-paper-1" href={item.href}>
 									{#if item.lens}
 										<p class="txt-00 tt-u w500 theme">{item.lens}</p>
 									{/if}

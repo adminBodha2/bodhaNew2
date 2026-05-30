@@ -2,10 +2,9 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
-	import Revealing from '$lib/motion-core/stacking-words/Reveal2.svelte';
+	import Revealing from '$lib/svelteanim/components/Reveal.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 	import type { PageProps } from './$types';
 

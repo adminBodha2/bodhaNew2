@@ -10,21 +10,28 @@
 		isCenter?: boolean;
 		span?: string;
 		sizeType?: boolean;
+		isWhite?: boolean
 	};
 
-	let { text = 'Title', anveshi = false, isCenter = false, span = 'col-span-full', sizeType=false }: Props = $props();
+	let { text = 'Title', anveshi = false, isCenter = false, span = 'col-span-full', sizeType=false, isWhite=false }: Props = $props();
 
 	let reference = $state<HTMLElement | null>(null);
 	let isVisible = useInView(() => reference, { threshold: 0.2, once: true });
 </script>
 
 <div class="title-wrap row ycenter xleft cgap8 rgap8 mwrap trigger {span}" class:xcenter={isCenter} class:mleft={isCenter} bind:this={reference}>
+	{#if !isWhite}
 	<div class="bob" class:animatenow={isVisible.visible}>
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
-	<StackingLetters direction="left">	<Scramble>	<h2 class="txt-2xl w600 name" class:tt-u={!sizeType} class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
-		{text}
-	</h2></Scramble></StackingLetters>
+	{/if}
+	<StackingLetters direction="left">
+		<Scramble>	
+			<h2 class="txt-2xl w600 name" class:white={isWhite} class:tt-u={!sizeType} class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
+				{text}
+			</h2>
+		</Scramble>
+	</StackingLetters>
 </div>
 
 <style lang="sass">

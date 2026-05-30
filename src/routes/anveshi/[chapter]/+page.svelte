@@ -10,7 +10,7 @@
 	import Rupee from '$lib/icons/rupee.svelte';
 	import Location from '$lib/icons/location.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
-	import Reveal from '$lib/motion-core/stacking-words/RevealingLines.svelte';
+	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 

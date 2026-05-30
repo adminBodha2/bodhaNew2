@@ -5,7 +5,6 @@
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import '$lib/styles/system/index.sass';
-	import '$lib/styles/icons.css';
 	import { darkTheme, iW, openSiteTourSelector, searchState, toggleTheme } from '$lib/utils/globalstores';
 	import Header from '$lib/comps/header.svelte';
 	import Bottom from '$lib/comps/pagebottom.svelte';

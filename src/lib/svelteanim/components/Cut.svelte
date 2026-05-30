@@ -55,7 +55,7 @@
 		ease = 'power4.out',
 		start = 'top 88%',
 		end = 'bottom 35%',
-		scrub = false,
+		scrub = true,
 		replay = true,
 		targetSelector = ".cut-item",
 		scrollElement,

@@ -38,6 +38,7 @@
 	padding-bottom: 2rem
 	padding-left: 12px
 	padding-right: 12px
+	scroll-behavior: smooth
 	.content-wrapper
 		width: 100%
 		margin-left: auto

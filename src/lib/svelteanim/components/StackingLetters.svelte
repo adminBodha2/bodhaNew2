@@ -8,14 +8,47 @@
 	import { cn } from "../utils/cn";
 
 	interface Props {
+		/**
+		 * Text/content to split into lines and letters.
+		 */
 		children?: Snippet;
+		/**
+		 * Additional CSS classes for the wrapper.
+		 */
 		class?: string;
+		/**
+		 * ScrollTrigger start position.
+		 * @default "top 100%"
+		 */
 		start?: string;
+		/**
+		 * ScrollTrigger end position.
+		 * @default "top 50%"
+		 */
 		end?: string;
+		/**
+		 * ScrollTrigger scrub value.
+		 * @default 4
+		 */
 		scrub?: boolean | number;
-		ease?: string;
-		fromOpacity?: number;
+		/**
+		 * Stagger applied across letters inside each line.
+		 * @default 0.045
+		 */
 		stagger?: number;
+		/**
+		 * Easing used for letter translation.
+		 * @default "expo.out"
+		 */
+		ease?: string;
+		/**
+		 * Direction letters slide in from.
+		 * @default "right"
+		 */
+		direction?: "left" | "right";
+		/**
+		 * The element to use as the scroller. Defaults to window.
+		 */
 		scrollElement?: string | HTMLElement | null;
 		[prop: string]: unknown;
 	}
@@ -24,11 +57,11 @@
 		children,
 		class: className = "",
 		start = "top 90%",
-		end = "top 30%",
-		scrub = 1,
-		ease = "power3.out",
-		fromOpacity = 0,
-		stagger = 0.1,
+		end = "top 60%",
+		scrub = 2,
+		stagger = 0.045,
+		ease = "power1.inOut",
+		direction = "right",
 		scrollElement,
 		...restProps
 	}: Props = $props();
@@ -36,6 +69,7 @@
 	let wrapperRef = $state<HTMLElement | null>(null);
 	let splitInstance: any = null;
 	let lineTweens: any[] = [];
+	const OFFSCREEN_MARGIN_PX = 8;
 
 	const attachWrapperRef = (node: HTMLElement) => {
 		wrapperRef = node;
@@ -47,7 +81,10 @@
 	};
 
 	function killLineTweens() {
-		lineTweens.forEach((tween) => tween.kill());
+		lineTweens.forEach((tl) => {
+			tl.scrollTrigger?.kill();
+			tl.kill();
+		});
 		lineTweens = [];
 	}
 
@@ -66,9 +103,9 @@
 		const triggerStart = start;
 		const triggerEnd = end;
 		const triggerScrub = scrub;
-		const lineEase = ease;
-		const lineFromOpacity = fromOpacity;
-		const lineStagger = stagger;
+		const letterStagger = stagger;
+		const letterEase = ease;
+		const letterDirection = direction;
 		const resolvedScroller =
 			typeof scrollElement === "string"
 				? document.querySelector<HTMLElement>(scrollElement)
@@ -100,32 +137,48 @@
 					splitInstance = SplitText.create(node, {
 						aria: "hidden",
 						autoSplit: true,
-						linesClass: "revealing-lines-line",
+						charsClass: "stacking-letters-char",
+						linesClass: "stacking-letters-line",
 						onSplit: (self: any) => {
 							killLineTweens();
 
-							const lines = (self.lines ?? []) as HTMLElement[];
-							gsap.set(lines, { opacity: lineFromOpacity });
-
-							const tween = gsap.to(lines, {
-								ease: lineEase,
-								opacity: 1,
-								stagger: lineStagger,
-								scrollTrigger: {
-									trigger: node,
-									start: triggerStart,
-									end: triggerEnd,
-									scrub: triggerScrub,
-									scroller: triggerScroller,
-									invalidateOnRefresh: true,
-								},
+							const chars = (self.chars ?? []) as HTMLElement[];
+							chars.forEach((char) => {
+								const rect = char.getBoundingClientRect();
+								const startX =
+									letterDirection === "left"
+										? -(rect.right + OFFSCREEN_MARGIN_PX)
+										: window.innerWidth - rect.left + rect.width + OFFSCREEN_MARGIN_PX;
+								gsap.set(char, { x: startX, opacity: 0 });
 							});
-							lineTweens.push(tween);
+
+							(self.lines ?? []).forEach((line: HTMLElement) => {
+								const chars = Array.from(
+									line.querySelectorAll<HTMLElement>(".stacking-letters-char"),
+								);
+								const tl = gsap.timeline({
+									scrollTrigger: {
+										trigger: line,
+										start: triggerStart,
+										end: triggerEnd,
+										scrub: triggerScrub,
+										scroller: triggerScroller,
+										invalidateOnRefresh: true,
+									},
+								});
+								tl.to(chars, {
+									x: 0,
+									opacity: 1,
+									ease: letterEase,
+									stagger: letterStagger,
+								});
+								lineTweens.push(tl);
+							});
 
 							ScrollTrigger.refresh();
 						},
 						tag: "span",
-						type: "lines",
+						type: "lines, chars",
 					});
 
 					gsap.set(node, { autoAlpha: 1 });
@@ -156,18 +209,23 @@
 
 <div
 	{...restProps}
-	class={cn("revealing-lines", className)}
+	class={cn("stacking-letters", className)}
 	{@attach attachWrapperRef}
 >
 	{@render children?.()}
 </div>
 
-<style>
-	.revealing-lines {
-		visibility: hidden;
-	}
+<style lang="sass">
 
-	.revealing-lines :global(.revealing-lines-line) {
-		display: block;
-	}
+.stacking-letters
+	visibility: hidden
+	overflow-x: visible
+
+.stacking-letters :global(.stacking-letters-line), .stacking-letters :global(.stacking-letters-line-mask)
+	display: block
+
+.stacking-letters :global(.stacking-letters-char)
+	display: inline-block
+	will-change: transform
+
 </style>

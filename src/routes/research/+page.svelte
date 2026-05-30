@@ -7,16 +7,12 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
-	import { useInView } from '$lib/svelteanim/utils/useInView.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
-	import Slider from '$lib/svelteanim/components/Slide.svelte';
 
 	let { data }: { data: PageData } = $props();
 	let researchAreas = $derived(data.researchAreas ?? []);
-	let researchItems = $derived(data.research ?? []);
-	let reveal2 = $state<HTMLElement | null>(null);
-	let vis2 = useInView(() => reveal2, { threshold: 0.5, once: true });
+
 
 	const title = 'Bodha Research | Hindu Culture, IKS, Policy, and Ethnography';
 	const metaDescription = "Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities.";
@@ -55,9 +51,8 @@
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="Research Pillars" />
-		<div class="grid grid-cols-1 white-grid" bind:this={reveal2}>
+		<div class="grid grid-cols-1 white-grid">
 			{#each researchAreas as area, i}
-				<Slider visible={vis2.visible} delay={i * 200} direction="down">
 					<div class="row mcol area-wrapper whitecard">
 						<div class="area-inner-image">
 							<img class="fitted herocard" src={area.image} alt={area.title} />
@@ -79,7 +74,6 @@
 							</div>
 						</div>
 					</div>
-				</Slider>
 			{/each}
 		</div>
 	</section>

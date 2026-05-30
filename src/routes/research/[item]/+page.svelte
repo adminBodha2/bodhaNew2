@@ -6,6 +6,7 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { absoluteImage, absoluteUrl, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 	import Title from '$lib/comps/page-title.svelte';
 
@@ -65,24 +66,20 @@
 			<article class="doctext classic-document">
 				<data.content />
 			</article>
-			{#if data.linkedNodes?.length > 0}
-				<div class="box rgap32 bordertop ptop64">
-					<Title text="Related Readings" sizeType={true}/>
-					<div class="grid grid-cols-1 lg:grid-cols-2 white-grid">
-						{#each data.linkedNodes as item (item.nodeId)}
-							<a class="blank box rgap16 lg:rgap24 p24 lg:p32 whitestone" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
-								<div class="box rgap4">
-									<p class="txt-xs theme w500 tt-u">{item.node.type.replaceAll('-',' ')}</p>
-								</div>
-								<div class="box rgap16">
-									<p class="a-hover txt-xl w600">{item.node.title}</p>
-									{#if item.node.description}
-										<p class="grey1 lh14">{item.node.description}</p>
-									{/if}
-								</div>
+			{#if data.matrixItems && data.matrixItems.length > 0}
+				<div class="box bordertop ptop64 rgap32">
+					<Title text="Also See" sizeType={true}/>
+					<Slide targetSelector=".slide-item">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap16">
+						{#each data.matrixItems as item}
+							<a class="rgap8 box tight-pad slide-item b-main h-paper-1 whitestone" href={item.linkpath}>
+								<p class="txt-00 tt-u w500 grey1">{item.type}</p>
+								<p class="txt-lg a-hover w500">{item.title}</p>
+								<p class="grey2">{item.description}</p>
 							</a>
 						{/each}
 					</div>
+					</Slide>
 				</div>
 			{/if}
 		</div>

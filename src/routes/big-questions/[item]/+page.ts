@@ -1,5 +1,6 @@
 import { allQuestions } from '$lib/utils/localpulls';
 import researchPaths from '$lib/serving/research-paths.json';
+import projectsQuestions from '$lib/serving/projects-questions.json';
 import { getNode, getNodeByRoute, nodeHref } from '$lib/wiki-graph';
 
 const uniqueTags = (tags: string[] = []) => [...new Set(tags.filter((tag) => tag.length > 0))];
@@ -33,6 +34,10 @@ export async function load({ params }: { params: { item: string } }) {
 		})
 		.filter((step) => step !== null) ?? [];
 
+	const matrixItems = (projectsQuestions as any[]).filter(
+		(entry) => entry[params.item] === true
+	);
+
 	return {
 		content,
 		title,
@@ -44,6 +49,7 @@ export async function load({ params }: { params: { item: string } }) {
 		tags: uniqueTags(tags),
 		questions,
 		researchPath,
-		linkedNodes
+		linkedNodes,
+		matrixItems
 	};
 }

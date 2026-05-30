@@ -10,8 +10,8 @@
 	interface Props {
 		visible?: boolean;
 		direction?: RevealDirection;
-		/** Diagonal slant depth as % of element width. Default: 20 */
-		slant?: number;
+		/** GSAP ease for the reveal tween. Default: 'power3.out' */
+		ease?: string;
 		/** ScrollTrigger start. Default: 'top 90%' */
 		start?: string;
 		/** ScrollTrigger end. Default: 'top 40%' */
@@ -29,7 +29,7 @@
 	let {
 		visible = true,
 		direction = 'up',
-		slant = 20,
+		ease = 'power3.out',
 		start = 'top 90%',
 		end = 'top 40%',
 		scrub = 1,
@@ -51,13 +51,13 @@
 		}
 	}
 
-	function revealedClipPath(dir: RevealDirection, s: number): string {
+	function revealedClipPath(dir: RevealDirection): string {
 		switch (dir) {
 			case 'left': return 'inset(0 0% 0 0)';
 			case 'right': return 'inset(0 0 0 0%)';
 			case 'up': return 'inset(0 0 0% 0)';
 			case 'down': return 'inset(0% 0 0 0)';
-			case 'diagonal': return `polygon(0% 0%, ${100 + s}% 0%, 100% 100%, 0% 100%)`;
+			case 'diagonal': return 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)';
 		}
 	}
 
@@ -84,7 +84,7 @@
 		}
 
 		const dir = direction;
-		const s = slant;
+		const triggerEase = ease;
 		const triggerStart = start;
 		const triggerEnd = end;
 		const triggerScrub = scrub;
@@ -144,8 +144,8 @@
 							gsap.set(lines, { clipPath: hiddenClipPath(dir) });
 
 							const tween = gsap.to(lines, {
-								clipPath: revealedClipPath(dir, s),
-								ease: 'none',
+								clipPath: revealedClipPath(dir),
+								ease: triggerEase,
 								stagger: lineStagger,
 								scrollTrigger: {
 									trigger: target,
