@@ -49,7 +49,7 @@
 		direction = 'up',
 		slant = 0,
 		opacity = false,
-		duration = 450,
+		duration = 350,
 		delay = 0,
 		stagger = 140,
 		ease = 'power4.out',

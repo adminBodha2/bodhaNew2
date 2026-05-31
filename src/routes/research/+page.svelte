@@ -8,6 +8,8 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
+	import Slide from '$lib/svelteanim/components/Slide2.svelte';
+	import Hover from '$lib/svelteanim/components/SplitHover.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
 	let { data }: { data: PageData } = $props();
@@ -51,14 +53,15 @@
 	</section>
 	<section class="wrapper-std growingline">
 		<Title text="Research Pillars" />
-		<div class="grid grid-cols-1 white-grid">
+		<Slide targetSelector=".slide-item" stagger={400}>
+		<div class="grid grid-cols-1">
 			{#each researchAreas as area, i}
-					<div class="row mcol area-wrapper whitecard">
+					<div class="row mcol area-wrapper whitecard slide-item">
 						<div class="area-inner-image">
 							<img class="fitted herocard" src={area.image} alt={area.title} />
 						</div>
 						<div class="area-inner-body box p16 lg:p32 rgap16">
-							<h2 class="txt-3xl w690">{area.title}</h2>
+							<Hover><h2 class="txt-3xl w690">{area.title}</h2></Hover>
 							<div class="area-inner-body-links box">
 								{#each area.items as item, i}
 									<div class="project-holder">
@@ -76,6 +79,7 @@
 					</div>
 			{/each}
 		</div>
+		</Slide>
 	</section>
 </Container>
 

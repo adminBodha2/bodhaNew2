@@ -42,14 +42,16 @@
 			{#each navLinks as link}
 				<a class="navbar-link" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
 			{/each}
-			<button class="navbar-link" onclick={toggleSearch}>search</button>
+				<button class="blank" onclick={toggleSearch}>
+					<Search size={27}/>
+				</button>
 		</nav>
 
 		<!-- Mobile tray — hidden on desktop via CSS -->
 		<div class="row ycenter cgap16 mobile-tray">
 			{#if !$menuState}
 				<button class="blank" onclick={toggleSearch}>
-					<Search />
+					<Search size={27}/>
 				</button>
 			{/if}
 			<button class="blank" onclick={toggleMenuState}>

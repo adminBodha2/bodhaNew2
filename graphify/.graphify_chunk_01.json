@@ -1,0 +1,1086 @@
+{
+  "nodes": [
+    {
+      "id": "bharata1000_1_narrative_gateway",
+      "label": "The Narrative Gateway",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/1-narrative-gateway.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_1_itihasa",
+      "label": "Itihasa (Epics and Core Storytelling)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/1-narrative-gateway.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_2_seeker_path",
+      "label": "The Seeker's Path",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/2-seeker-path.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_2_non_dualism",
+      "label": "Non-Dualism (Advaita / Direct Realization)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/2-seeker-path.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_3_intellectual_path",
+      "label": "The Intellectual Path",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/3-intellectual-path.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_3_six_darshanas",
+      "label": "Six Darshanas (Formal Indian Philosophical Schools)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/3-intellectual-path.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_4_aesthete_path",
+      "label": "The Aesthete's Path",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/4-aesthete-path.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_4_dharmic_aesthetics",
+      "label": "Dharmic Aesthetics (Art, Music, Culture, Literary Theory)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/4-aesthete-path.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_5_expert_apex",
+      "label": "The Expert's Apex",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/5-expert-apex.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_5_primary_source_shastras",
+      "label": "Primary Source Immersion and Technical Shastras",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/5-expert-apex.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_6_evolutionary_spirit",
+      "label": "The Evolutionary Spirit",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/6-evolutionary-spirit.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_6_integral_yoga",
+      "label": "Integral Yoga and Spiritual Evolution (Sri Aurobindo)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/6-evolutionary-spirit.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_7_awakened_hindu",
+      "label": "The Awakened Hindu",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/7-awakened-hindu.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_7_practical_vedanta",
+      "label": "Practical Vedanta in Action (Swami Vivekananda)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/7-awakened-hindu.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_8_narrative_mirror",
+      "label": "The Narrative Mirror",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/8-narrative-mirror.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_8_epic_modern_ethics",
+      "label": "Sanskrit Epics and Modern Ethical Critique",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/8-narrative-mirror.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_9_decolonial_lens",
+      "label": "The Decolonial Lens",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/9-decolonial-lens.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_9_civilizational_identity",
+      "label": "Civilizational Identity and Indic Self-Defense",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/9-decolonial-lens.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_10_daily_dharma",
+      "label": "The Daily Dharma",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/10-daily-dharma.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_10_householder_wisdom",
+      "label": "Practical Wisdom for the Householder (Daily Dharma)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/10-daily-dharma.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_11_path_of_devotion",
+      "label": "The Path of Devotion",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/11-path-of-devotion.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_11_bhakti_traditions",
+      "label": "Bhakti Traditions and Ecstatic Poetry",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/11-path-of-devotion.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_12_divine_feminine",
+      "label": "The Divine Feminine",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/12-divine-feminine.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_12_shakta_goddess",
+      "label": "Shakta and Goddess Traditions (Devi)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/12-divine-feminine.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_13_esoteric_way",
+      "label": "The Esoteric Way",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/13-esoteric-way.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_13_tantra_yoga",
+      "label": "Tantra, Kundalini, and Classical Yoga",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/13-esoteric-way.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_14_shramana_interface",
+      "label": "The Shramana Interface",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/14-shramana-interface.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_14_buddhism_jainism",
+      "label": "Buddhist and Jain Philosophies (Shramana Traditions)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/14-shramana-interface.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_15_grammar_of_reality",
+      "label": "The Grammar of Reality",
+      "file_type": "document",
+      "source_file": "src/routes/library/bharata1000/15-grammar-of-reality.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bharata1000_15_sanskrit_linguistics",
+      "label": "Sanskrit Linguistics, Semantics, and Sound Philosophy",
+      "file_type": "concept",
+      "source_file": "src/routes/library/bharata1000/15-grammar-of-reality.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_vedic_archaeology",
+      "label": "Vedic Archaeology (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_ocp_complex",
+      "label": "Ochre Colour Pottery (OCP) Complex",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_sinauli_chariots",
+      "label": "Sinauli Chariot Burials",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_deity_iconography_continuity",
+      "label": "Deity Iconography Continuity (Garuda, Proto-Shiva, Skanda)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_iron_age_india",
+      "label": "Iron Age India (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/iron-age-india.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_pgw_nbpw",
+      "label": "Painted Grey Ware and Northern Black Polished Ware (PGW/NBPW)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/iron-age-india.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_copper_hoards",
+      "label": "Copper Hoards (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_nigohi_hoard",
+      "label": "Nigohi Hoard (Largest Copper Hoard, 222 Artefacts)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_ring_currency",
+      "label": "Ring Currency (Copper Ring-Bangles, Tola Weight Standard)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_anthropomorphic_figures",
+      "label": "Copper Anthropomorphic Figures (Skanda/Garuda Cult)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_regional_surveys",
+      "label": "Regional Surveys (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/regional-surveys.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_sacred_geography",
+      "label": "Sacred Geography (Overlapping Archaeological and Sacred Landscapes)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/regional-surveys.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_indus_valley",
+      "label": "Indus Valley Civilization / Harappan (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_alamgirpur",
+      "label": "Alamgirpur (Easternmost Harappan Site, Bridge to Gangetic Sequence)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_rakhigarhi",
+      "label": "Rakhigarhi (Harappan Metropolis)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_numismatics",
+      "label": "Numismatics (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/numismatics.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_punch_marked_coins",
+      "label": "Punch-Marked Coins (Magadha Imperial Series)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/numismatics.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_panchala_coins",
+      "label": "Panchala Dynastic Coins (Numismatic Series)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/numismatics.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_megalithic_culture",
+      "label": "Megalithic Culture (IJA)",
+      "file_type": "document",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/megalithic-culture.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_vidarbha_megaliths",
+      "label": "Vidarbha Megalithic Burials (Horse-Gear, Iron Age)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/megalithic-culture.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "journal_archaeology_living_megalithic",
+      "label": "Living Megalithic Traditions (Munda, Mizo)",
+      "file_type": "concept",
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/megalithic-culture.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "bharata1000_1_narrative_gateway",
+      "target": "bharata1000_1_itihasa",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/1-narrative-gateway.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_2_seeker_path",
+      "target": "bharata1000_2_non_dualism",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/2-seeker-path.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_3_intellectual_path",
+      "target": "bharata1000_3_six_darshanas",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/3-intellectual-path.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_4_aesthete_path",
+      "target": "bharata1000_4_dharmic_aesthetics",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/4-aesthete-path.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_5_expert_apex",
+      "target": "bharata1000_5_primary_source_shastras",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/5-expert-apex.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_6_evolutionary_spirit",
+      "target": "bharata1000_6_integral_yoga",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/6-evolutionary-spirit.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_7_awakened_hindu",
+      "target": "bharata1000_7_practical_vedanta",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/7-awakened-hindu.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_8_narrative_mirror",
+      "target": "bharata1000_8_epic_modern_ethics",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/8-narrative-mirror.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_9_decolonial_lens",
+      "target": "bharata1000_9_civilizational_identity",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/9-decolonial-lens.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_10_daily_dharma",
+      "target": "bharata1000_10_householder_wisdom",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/10-daily-dharma.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_11_path_of_devotion",
+      "target": "bharata1000_11_bhakti_traditions",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/11-path-of-devotion.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_12_divine_feminine",
+      "target": "bharata1000_12_shakta_goddess",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/12-divine-feminine.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_13_esoteric_way",
+      "target": "bharata1000_13_tantra_yoga",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/13-esoteric-way.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_14_shramana_interface",
+      "target": "bharata1000_14_buddhism_jainism",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/14-shramana-interface.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_15_grammar_of_reality",
+      "target": "bharata1000_15_sanskrit_linguistics",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/bharata1000/15-grammar-of-reality.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_vedic_archaeology",
+      "target": "journal_archaeology_ocp_complex",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_vedic_archaeology",
+      "target": "journal_archaeology_sinauli_chariots",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_vedic_archaeology",
+      "target": "journal_archaeology_deity_iconography_continuity",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_iron_age_india",
+      "target": "journal_archaeology_pgw_nbpw",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/iron-age-india.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_copper_hoards",
+      "target": "journal_archaeology_nigohi_hoard",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_copper_hoards",
+      "target": "journal_archaeology_ring_currency",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_copper_hoards",
+      "target": "journal_archaeology_anthropomorphic_figures",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_copper_hoards",
+      "target": "journal_archaeology_ocp_complex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_regional_surveys",
+      "target": "journal_archaeology_sacred_geography",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/regional-surveys.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_regional_surveys",
+      "target": "journal_archaeology_ocp_complex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/regional-surveys.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_indus_valley",
+      "target": "journal_archaeology_alamgirpur",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_indus_valley",
+      "target": "journal_archaeology_rakhigarhi",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_indus_valley",
+      "target": "journal_archaeology_ocp_complex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_numismatics",
+      "target": "journal_archaeology_punch_marked_coins",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/numismatics.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_numismatics",
+      "target": "journal_archaeology_panchala_coins",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/numismatics.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_numismatics",
+      "target": "journal_archaeology_ring_currency",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/numismatics.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_megalithic_culture",
+      "target": "journal_archaeology_vidarbha_megaliths",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/megalithic-culture.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_megalithic_culture",
+      "target": "journal_archaeology_living_megalithic",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/megalithic-culture.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_megalithic_culture",
+      "target": "journal_archaeology_iron_age_india",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/megalithic-culture.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_iron_age_india",
+      "target": "journal_archaeology_ocp_complex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/iron-age-india.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "journal_archaeology_iron_age_india",
+      "target": "journal_archaeology_indus_valley",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/iron-age-india.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "bharata1000_1_narrative_gateway",
+      "target": "bharata1000_8_narrative_mirror",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/1-narrative-gateway.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "bharata1000_2_seeker_path",
+      "target": "bharata1000_10_daily_dharma",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/2-seeker-path.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "bharata1000_6_integral_yoga",
+      "target": "bharata1000_13_tantra_yoga",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/6-evolutionary-spirit.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "bharata1000_7_practical_vedanta",
+      "target": "bharata1000_2_non_dualism",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/7-awakened-hindu.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "bharata1000_3_six_darshanas",
+      "target": "bharata1000_14_buddhism_jainism",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/3-intellectual-path.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "bharata1000_9_decolonial_lens",
+      "target": "bharata1000_3_intellectual_path",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/routes/library/bharata1000/9-decolonial-lens.md",
+      "source_location": null,
+      "weight": 0.65
+    },
+    {
+      "source": "journal_archaeology_anthropomorphic_figures",
+      "target": "journal_archaeology_deity_iconography_continuity",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "journal_archaeology_sacred_geography",
+      "target": "journal_archaeology_vedic_archaeology",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/regional-surveys.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "journal_archaeology_ring_currency",
+      "target": "journal_archaeology_punch_marked_coins",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/copper-hoards.md",
+      "source_location": null,
+      "weight": 0.65
+    },
+    {
+      "source": "bharata1000_12_shakta_goddess",
+      "target": "bharata1000_11_bhakti_traditions",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/12-divine-feminine.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "bharata1000_15_sanskrit_linguistics",
+      "target": "bharata1000_5_primary_source_shastras",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/routes/library/bharata1000/15-grammar-of-reality.md",
+      "source_location": null,
+      "weight": 0.65
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyperedge_ocp_copper_vedic",
+      "label": "OCP-Copper Hoard-Vedic Archaeology Interpretive Triangle",
+      "members": [
+        "journal_archaeology_ocp_complex",
+        "journal_archaeology_copper_hoards",
+        "journal_archaeology_vedic_archaeology"
+      ],
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/vedic-archaeology.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "id": "hyperedge_ivc_iron_regional",
+      "label": "Harappan-Iron Age-Regional Survey Settlement Continuity",
+      "members": [
+        "journal_archaeology_indus_valley",
+        "journal_archaeology_iron_age_india",
+        "journal_archaeology_regional_surveys"
+      ],
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/routes/library/(library-subroutes)/journal-archaeology/indus-valley-civilization.md",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "id": "hyperedge_bharata1000_devotional_paths",
+      "label": "Bharata1000 Devotional and Experiential Reading Paths",
+      "members": [
+        "bharata1000_11_path_of_devotion",
+        "bharata1000_12_divine_feminine",
+        "bharata1000_13_esoteric_way"
+      ],
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/routes/library/bharata1000/11-path-of-devotion.md",
+      "source_location": null,
+      "weight": 0.75
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -50,13 +50,28 @@
 		padding-top: 2rem
 	grid-template-columns: 1fr
 	grid-template-areas: "mainarea" "aside"
+	&.inverted
+		grid-template-areas: "aside" "mainarea"
 	@media (max-width: 1024px)
 		padding-bottom: 2rem
 		.main-area
 			border-bottom: var(--border-main)
+		&.inverted
+			aside
+				padding-top: 1rem
+				padding-bottom: 1rem
+				border-bottom: var(--border-main)
+			.main-area
+				padding-top: 0
 	@media (min-width: 1025px)
 		grid-template-columns: 360px 1fr
 		grid-template-areas: "aside mainarea"
+		&.inverted
+			grid-template-areas: "aside mainarea"
+		&.wide-aside
+			grid-template-columns: 480px 1fr
+			.main-area
+				padding: 2rem 0
 		aside
 			height: 100%
 			.stickybox

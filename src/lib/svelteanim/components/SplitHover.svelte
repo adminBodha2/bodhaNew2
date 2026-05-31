@@ -199,7 +199,7 @@
 <span
 	{...restProps}
 	class={cn(
-		"font-inherit relative inline-flex overflow-hidden align-baseline leading-none text-inherit",
+		"main-item",
 		className,
 	)}
 	{@attach attachWrapperRef}
@@ -209,9 +209,30 @@
 	</span>
 	<span
 		{@attach attachCloneSpan}
-		class="pointer-events-none absolute inset-0"
+		class="inside-item"
 		aria-hidden="true"
 	>
 		{@render children?.()}
 	</span>
 </span>
+
+<style lang="sass">
+
+.main-item
+	font-family: inherit
+	position: relative
+	display: inline-flex
+	overflow: hidden
+	vertical-align: baseline
+	line-height: 1.2
+	color: inherit
+
+.inside-item
+	pointer-events: none
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+</style>

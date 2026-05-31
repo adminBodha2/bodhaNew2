@@ -29,10 +29,10 @@
 	let {
 		visible = true,
 		direction = 'up',
-		ease = 'power3.out',
+		ease = 'power4.out',
 		start = 'top 90%',
 		end = 'top 40%',
-		scrub = 1,
+		scrub = 3,
 		stagger = 0.15,
 		scrollElement,
 		children,

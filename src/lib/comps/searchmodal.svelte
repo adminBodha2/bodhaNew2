@@ -140,7 +140,7 @@
 <style lang="sass">
 
 .search-dialog
-	border-radius: 0.75rem
+	border-radius: 4px
 	padding: 1rem
 	max-width: 64rem
 	width: 90vw
@@ -150,13 +150,13 @@
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.035), 0 1px 0 0 rgba(225, 225, 225, 0.55), 0 6px 14px -6px rgba(0, 0, 0, 0.10), 0 1.5px 3px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 5px 10px -4px rgba(195, 195, 195, 0.42)
 	opacity: 1
 	transform: translateY(0)
-	transition: opacity 0.25s ease, transform 0.25s ease, overlay 0.25s allow-discrete, display 0.25s allow-discrete
+	transition: opacity 150ms ease, transform 150ms ease, overlay 150ms allow-discrete, display 150ms allow-discrete
 	margin-bottom: auto
 	margin-top: 10vh
 	&::backdrop
 		background: rgba(0, 0, 0, 0.5)
 		backdrop-filter: blur(5px)
-		transition: background 0.25s ease, backdrop-filter 0.25s ease, overlay 0.25s allow-discrete, display 0.25s allow-discrete
+		transition: background 150ms ease, backdrop-filter 150ms ease, overlay 150ms allow-discrete, display 150ms allow-discrete
 	&:not([open])
 		opacity: 0
 		transform: translateY(100px)

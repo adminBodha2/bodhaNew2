@@ -25,7 +25,7 @@
 		<Arrow size={20} color={anveshi ? '#D3633A' : undefined} />
 	</div>
 	{/if}
-	<StackingLetters direction="left">
+	<StackingLetters direction="left" ease="power3.out" start="top 95%">
 		<Scramble>	
 			<h2 class="txt-2xl w600 name" class:white={isWhite} class:tt-u={!sizeType} class:md:txt-4xl={!sizeType} class:animatenow={isVisible.visible}>
 				{text}

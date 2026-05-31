@@ -28,11 +28,11 @@
 	},
 	"editor.defaultFormatter": "svelte.svelte-vscode",
 	"prettier.printWidth": 400,
-	"editor.fontSize": 18,
+	"editor.fontSize": 17,
 	"prettier.tabWidth": 4,
 	"editor.tabSize": 4,
 	"markdown.preview.fontFamily": "\"Google Sans Flex\", sans-serif",
-	"editor.fontFamily": "\"Google Sans Flex\", sans-serif",
+	"editor.fontFamily": "\"Google Sans\", sans-serif",
 	"editor.formatOnPaste": true,
 	"editor.rename.enablePreview": false,
 	"editor.parameterHints.enabled": false,
@@ -40,5 +40,7 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.formatOnSave": false,
-	"prettier.bracketSameLine": true
+	"prettier.bracketSameLine": true,
+	"editor.allowVariableFonts": false,
+	"editor.codeLensFontFamily": "\"Google Sans\", sans-serif"
 }
