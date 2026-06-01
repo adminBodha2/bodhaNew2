@@ -1,9 +1,10 @@
 import type { PageLoad } from './$types'
-import { academyScholars, acadCourses } from '$lib/utils/localsends'
+import { academyScholars } from '$lib/utils/localsends'
+import { getCoursePayloads } from '$lib/courses/course-data'
 
 export const load: PageLoad = async() => {
 	const scholars = academyScholars;
-	const courses = acadCourses;
+	const courses = getCoursePayloads();
 	return {
 		scholars,
 		courses

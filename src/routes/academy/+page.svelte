@@ -57,27 +57,28 @@
 		<Slider targetSelector=".course-item">
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
 			{#each courses as course, i}
-					{#if course.page === true}
-						<a class="box course-item b-main p8 whitestone" href="/academy/courses/{course.slug}">
+				{@const detail = course.detail}
+					{#if detail.page === true}
+						<a class="box course-item b-main p8 whitestone" href="/academy/{detail.slug}">
 							<div class="p8">
-								<img class="fitted landscape" src={course.image} alt={course.title} />
+								<img class="fitted landscape" src={detail.image ?? '/images/key-academy.webp'} alt={detail.title} />
 							</div>
 							<div class="box rgap16 std-pad">
-								<h3 class="txt-2xl lh12 w600 a-hover ls001m lg:ls003m">{course.title}</h3>
-								<p class="txt-lg lh14 grey2">{course.desc}</p>
+								<h3 class="txt-2xl lh12 w600 a-hover ls001m lg:ls003m">{detail.title}</h3>
+								<p class="txt-lg lh14 grey2">{detail.description}</p>
 							</div>
-							<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">{course.instructor} | {course.status}</p>
+							<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">{detail.instructor} | {detail.status}</p>
 						</a>
 					{:else}
 						<div class="box course-item b-main p8">
 							<div class="p8">
-								<img class="fitted landscape" src={course.image} alt={course.title} />
+								<img class="fitted landscape" src={detail.image ?? '/images/key-academy.webp'} alt={detail.title} />
 							</div>
 							<div class="box rgap16 std-pad">
-								<h3 class="txt-2xl lh12 w600 a-hover ls001m lg:ls003m">{course.title}</h3>
-								<p class="txt-lg lh14 grey2">{course.desc}</p>				
+								<h3 class="txt-2xl lh12 w600 a-hover ls001m lg:ls003m">{detail.title}</h3>
+								<p class="txt-lg lh14 grey2">{detail.description}</p>
 							</div>
-							<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">{course.instructor} | {course.status}</p>
+							<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">{detail.instructor} | {detail.status}</p>
 						</div>
 					{/if}
 			{/each}
