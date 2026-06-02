@@ -31,11 +31,19 @@ a.doclink
 		overflow-x: auto
 		padding-bottom: map.get(t.$space-scale, 8)
 		flex-direction: column
+	&.inverted
+		grid-template-areas: "sidearea" "mainarea"
+		.docside
+			padding-bottom: 0
 	@media (min-width: 1025px)
 		display: grid
 		grid-template-columns: t.$doc-sidebar-width minmax(0, 1fr)
 		grid-template-areas: "sidearea mainarea"
 		border-bottom: var(--border-main)
+		&.inverted
+			grid-template-areas: "sidearea mainarea"
+			.docside
+				padding-bottom: map.get(t.$space-scale, 16)
 		&.library
 			grid-template-columns: 440px 1fr
 		&.tightest

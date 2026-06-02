@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { onNavigate } from '$app/navigation';
-	import { dev } from '$app/environment';
+	import { afterNavigate, onNavigate } from '$app/navigation';
+	import { browser, dev } from '$app/environment';
+	import { tick } from 'svelte';
 	import favicon from '$lib/assets/favicon.svg';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
@@ -40,6 +41,23 @@
 			$searchState = !$searchState;
 		}
 	}
+
+	function openClassicDocumentLinksInNewTabs() {
+		if (!browser) return;
+
+		for (const link of document.querySelectorAll<HTMLAnchorElement>('.classic-document a')) {
+			link.target = '_blank';
+			const rel = new Set(link.rel.split(/\s+/).filter(Boolean));
+			rel.add('noopener');
+			rel.add('noreferrer');
+			link.rel = [...rel].join(' ');
+		}
+	}
+
+	afterNavigate(async () => {
+		await tick();
+		openClassicDocumentLinksInNewTabs();
+	});
 
 onNavigate((navigation) => {
 	if (!document.startViewTransition) return;

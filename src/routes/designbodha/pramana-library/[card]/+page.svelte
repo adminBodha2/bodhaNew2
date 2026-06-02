@@ -44,18 +44,18 @@
 				{/if}
 			</div>
 		</Crumb>
-		<div class="doc-header-grid">
-			<aside class="box" aria-label="Card metadata">
+		<div class="docgrid library">
+			<aside class="docside" aria-label="Card metadata">
 				{#if data.allcards && data.allcards.length > 0}
-					<div class="box stickybox">
+					<div class="doclist">
 					{#each data.allcards as item}
 						<a class="sidebar-link grey3" href={item.linkpath}>{item.meta.title}</a>
 					{/each}
 					</div>
 				{/if}
 			</aside>
-			<div class="main-area">
-				<article class="classic-document">
+			<div class="docmain">
+				<article class="classic-document classic-type-2">
 					<data.content />
 				</article>
 			</div>

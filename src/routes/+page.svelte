@@ -230,6 +230,8 @@ h1.source-serif
 
 .padding-wrapper
 	background: linear-gradient(to right, #004e92, #000428)
+	padding-top: 2rem
+	padding-bottom: 2rem
 	@media (min-width: 1025px)
 		height: 400px
 		padding-top: 4rem

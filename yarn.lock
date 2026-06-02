@@ -641,7 +641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/dom@npm:^1.7.1":
+"@floating-ui/dom@npm:^1.7.1, @floating-ui/dom@npm:^1.7.6":
   version: 1.7.6
   resolution: "@floating-ui/dom@npm:1.7.6"
   dependencies:
@@ -2049,6 +2049,7 @@ __metadata:
     "@embedpdf/plugin-spread": "npm:^2.14.1"
     "@embedpdf/plugin-viewport": "npm:^2.14.1"
     "@embedpdf/plugin-zoom": "npm:^2.14.1"
+    "@floating-ui/dom": "npm:^1.7.6"
     "@formkit/auto-animate": "npm:^0.9.0"
     "@internationalized/date": "npm:^3.12.1"
     "@playwright/test": "npm:^1.60.0"

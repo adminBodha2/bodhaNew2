@@ -22,9 +22,10 @@
 		libraryType?:boolean;
 		children?: Snippet;
 		noBorder?:boolean;
+		hindiTitle?:boolean;
 	};
 
-	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, libraryType = false, onblog = false, desc = ' ', centered = false, sidebarSoloPad2 = false, isSolo=false, serifed = true, thinBot = false, thinTop = false, noBorder = false, fullP = false, children }: Props = $props();
+	let { showT = false, title = ' ', rgap = 0, showRow = false, showD = false, libraryType = false, onblog = false, desc = ' ', centered = false, sidebarSoloPad2 = false, isSolo=false, serifed = true, thinBot = false, thinTop = false, noBorder = false, fullP = false, hindiTitle = false, children }: Props = $props();
 
 	let routeSegments = $derived(page.url.pathname.split('/').filter(Boolean));
 
@@ -59,25 +60,29 @@
 				<span class="divider">\</span>
 			{/if}
 		{/if}
+		{#if routeDepth > 3}
+			<span class="divider">\</span>
+			<a class="crumb-link" href="/{firstSegment}/{secondSegment}/{thirdSegment}">{thirdSegment}</a>
+		{/if}
 	</div>
 	<!-----title and description row - adds title, description - set variables showT and showD to true, define in title and desc ---->
 	<div class="mleft box rgap16" class:ta-c={centered}>
 		{#if showT}
 			{#if libraryType}
-			<h1 class="w600 txt-2xl lg:txt-3xl">{title}</h1>
+			<h1 class="w600 txt-2xl lg:txt-4xl" class:hind={hindiTitle}>{title}</h1>
 			{:else}
-			<h1 class="txt-3xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 tt-c" class:w700={serifed} class:w500={!serifed} class:source-serif={serifed}>{title}</h1>
+			<h1 class="txt-3xl md:txt-6xl ls002m lg:txt-7xl md:ls007m lg:ls009m lh11 tt-c" class:w700={serifed} class:w500={!serifed} class:source-serif={serifed && !hindiTitle} class:hind={hindiTitle}>{title}</h1>
 			{/if}
 		{/if}
 		{#if showRow}
 		<div class="box rgap32">
-			<div class="whitecard box width60"><p class="txt-bs lg:txt-lg lh14 grey2">{desc}</p></div>
+			<div class="whitecard box width60"><p class="txt-bs lh14 grey2">{desc}</p></div>
 			<div class="box whitecard">
 				{@render children?.()}
 			</div>
 		</div>
 		{:else}
-		<p class="txt-bs lg:txt-lg lh14 grey2" class:width50={!centered && !fullP}>{desc}</p>
+		<p class="txt-bs lh14 grey2" class:width50={!centered && !fullP}>{desc}</p>
 		{/if}
 	</div>
 	<!-----optional row to add more data in page header area, like tags, buttons, text anything. set showRow to true and then add on page ---->
@@ -101,7 +106,7 @@ h1
 		padding-bottom: 2rem
 	&.isSolo
 		padding-bottom: 2rem
-		padding-top: 0rem
+		padding-top: 2rem
 	&.thinBot
 		padding-bottom: 2rem
 	&.thinTop
@@ -121,6 +126,7 @@ h1
 		&.isSolo
 			padding-bottom: 2rem
 			padding-top: 2rem
+			row-gap: 1rem
 		&.thinBot
 			padding-bottom: 2rem
 		&.thinTop

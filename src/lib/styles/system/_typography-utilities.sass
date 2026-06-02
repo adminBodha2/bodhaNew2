@@ -71,6 +71,9 @@
 	.#{$prefix}stix-two
 		font-family: 'STIX Two Text', serif
 
+	.hind-var
+		font-family: 'Hind', sans-serif
+
 	.#{$prefix}bold
 		font-weight: 700
 
@@ -140,7 +143,8 @@ li
 	h2
 		font-size: var(--txt-2xl)
 		margin-bottom: 1.25rem
-		margin-top: 2.5rem
+		margin-top: 3rem
+		font-weight: 600
 	li
 		padding-left: 0
 		margin-left: 0
@@ -154,9 +158,21 @@ li
 		max-height: 400px
 	table
 		margin-bottom: 1.25rem
+	code
+		font-style: italic
+		color: var(--color-theme-light3)
 	@media (min-width: 1025px)
 		p, pre, li
 			font-size: calc( var(--txt-xl) * 0.95)
+		h2
+			margin-top: 4rem
+		&.classic-type-2
+			p, pre, li
+				font-size: calc( var(--txt-xl) * 0.9)
+			p, pre
+				line-height: 1.7
+			h2
+				font-size: var(--txt-xl)
 
 .sidebar-text
 	font-size: 1.125rem

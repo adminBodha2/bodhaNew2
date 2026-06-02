@@ -7,7 +7,7 @@ these are initial required product specs for the `synaptic-upgrade` project on t
 
 ## build elements
 1. foundation - panini's ashtadhyayi and the dhatus of dhatupatha.
-2. extension 1 - from each dhatu to the words that form from it, guna and vriddhi. reference - 
+2. extension 1 - from each dhatu to the words that form from it, guna and vriddhi. 
 3. extension 2 - adding dictionary layers, apte and monier-williams.
 4. extension 3 - adding puranic encyclopedia and vedic concordance
 5. extension 4 - add rigveda
@@ -36,7 +36,8 @@ these are initial required product specs for the `synaptic-upgrade` project on t
 	</section>
 </Container>
 ```
-4. maintain all your notes, dev notes, comments, questions and answers received to them at `/src/sitemaster/synaptic-dev-notes.md`
+4. maintain all your notes, dev notes, comments, questions and answers received to them at `/sitemaster/synaptic-dev-notes.md`
+5. maintain a `/sitemaster/synaptic-readme.md` as a complete developer guide for the setup. update it after each change.
 
 ## foundation
 - ability to see any rule from ashtadhyayi
@@ -51,3 +52,10 @@ these are initial required product specs for the `synaptic-upgrade` project on t
 ## development phase 1
 - implement the foundation level features
 - identify the sources of data in the reference sites - use same, or discuss alternates.
+
+## extension 1
+- incorporate the apte and monier-williams sanskrit to english dictionaries with universal word-list.
+- replicate the view of words from dhatu, and then meaning of any word, that exists at https://sanskritdictionary.com/roots.php, with reference images at `/static/images/sitemaster` - list-dhatus, list-dhatu-words, list-dhatu-word-meanings.
+
+## development phase 2
+- implement all features of extension 1.
