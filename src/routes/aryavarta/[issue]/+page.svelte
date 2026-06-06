@@ -7,7 +7,7 @@
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
-	import PDFReader from '$lib/comps/pdfreader.svelte';
+	import PDFReader from '$lib/comps/pdf-lean.svelte';
 	import { iW } from '$lib/utils/globalstores';
 	import { absoluteUrl, absoluteImage, articleJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
@@ -65,7 +65,7 @@
 			{/if}
 		</div>
 		<div class="pdf-reader">
-			<PDFReader src={pdfSrc} title={data.title} height="82vh" doubleSpread={!$iW} />
+			<PDFReader src={pdfSrc} title={data.title} height="82vh" />
 		</div>
 	</section>
 </Container>

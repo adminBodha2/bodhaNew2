@@ -3,7 +3,7 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Title from '$lib/comps/page-title.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
-	import PDFReader from '$lib/comps/pdfreader.svelte';
+	import PDFReader from '$lib/comps/pdf-lean.svelte';
 	import { absoluteImage, absoluteUrl, bookJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();

@@ -154,7 +154,6 @@
 		{@const ts = tradStyle(t)}
 		<button
 			class="card"
-			role="listitem"
 			onclick={() => openCard(card)}
 			aria-label="Open card: {card.meta.title}"
 		>

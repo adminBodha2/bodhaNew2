@@ -45,6 +45,20 @@
   let loading     = $state(true);
   let errorMsg    = $state('');
   let rendering   = $state(false);
+  let fitMode     = $state(true);  // default: fit page to frame
+
+  // ── Pinch-to-zoom ──────────────────────────────────────────────────────────
+  let pinchScale   = $state(1);   // live CSS scale multiplier during gesture
+  let pinchOriginX = $state(50);  // transform-origin X as percentage
+  let pinchOriginY = $state(50);  // transform-origin Y as percentage
+  let isPinching      = false;
+  let pinchStartDist  = 0;
+  let pinchStartScale = 1;
+  // Trackpad wheel state
+  let wheelPinching = false;
+  let wheelPinchTimer: ReturnType<typeof setTimeout> | null = null;
+  let swipeDeltaX = 0;
+  let swipeTimer: ReturnType<typeof setTimeout>  | null = null;
 
   const ZOOM_STEPS = [0.5, 0.67, 0.75, 0.8, 0.9, 1.0, 1.1, 1.25, 1.5, 1.75, 2.0, 2.5, 3.0];
   let zoomIdx = $state(5); // 1.0
@@ -69,13 +83,30 @@
   let loadToken = 0;
 
   // ── Lifecycle ──────────────────────────────────────────────────────────────
-  onMount(async () => {
-    pdfLib = await import('pdfjs-dist');
-    // Use jsDelivr CDN for the worker — no extra vite config needed
-    pdfLib.GlobalWorkerOptions.workerSrc =
-      `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfLib.version}/build/pdf.worker.min.mjs`;
-    loadedSrc = src;
-    await load(src);
+  // CDN version — bump this string to upgrade (keep main + worker in sync)
+  const PDFJS_VERSION = '4.4.168';
+  const PDFJS_CDN     = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${PDFJS_VERSION}/build`;
+
+  onMount(() => {
+    // ResizeObserver declared here so the sync cleanup below can reference it
+    const ro = new ResizeObserver(() => { if (fitMode) fitToFrame(); });
+
+    // Async work runs in a fire-and-forget IIFE so onMount stays sync
+    (async () => {
+      // Dynamic CDN import — no npm install required
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      pdfLib = await import(/* @vite-ignore */ `${PDFJS_CDN}/pdf.min.mjs`);
+      pdfLib.GlobalWorkerOptions.workerSrc = `${PDFJS_CDN}/pdf.worker.min.mjs`;
+      loadedSrc = src;
+      await load(src);
+
+      // Start observing after initial load so the first fit isn't double-triggered
+      if (scrollArea) ro.observe(scrollArea);
+    })();
+
+    // Sync cleanup — called by Svelte when the component is destroyed
+    return () => ro.disconnect();
   });
 
   $effect(() => {
@@ -104,7 +135,7 @@
       loading     = false;
 
       await tick();
-      await renderAll();
+      await fitToFrame();
     } catch (e: any) {
       if (token !== loadToken) return;
       errorMsg = e?.message ?? 'Could not load PDF';
@@ -159,20 +190,25 @@
 
   // ── Zoom ───────────────────────────────────────────────────────────────────
   async function applyZoom(idx: number) {
+    fitMode = false;
     zoomIdx = Math.max(0, Math.min(ZOOM_STEPS.length - 1, idx));
     scale   = ZOOM_STEPS[zoomIdx];
     await renderAll();
   }
 
-  async function fitWidth() {
-    if (!pdfDoc || !scrollArea || !canvas1) return;
+  async function fitToFrame() {
+    if (!pdfDoc || !scrollArea) return;
     const page   = await pdfDoc.getPage(currentPage);
     const baseVp = page.getViewport({ scale: 1, rotation });
-    const gap    = dualView ? 88 : 48;
-    const ns     = (scrollArea.clientWidth - gap) / baseVp.width;
-    scale        = ns;
-    zoomIdx      = ZOOM_STEPS.reduce((ci, v, i) =>
-      Math.abs(v - ns) < Math.abs(ZOOM_STEPS[ci] - ns) ? i : ci, 0);
+    // padding: 28px top + 36px bottom, 24px each side (from .scroll-area CSS)
+    const availW = scrollArea.clientWidth  - 48;
+    const availH = scrollArea.clientHeight - 64;
+    // fit both dimensions — whichever axis is tighter wins
+    const ns = Math.min(availW / baseVp.width, availH / baseVp.height);
+    scale    = Math.max(0.1, ns);
+    fitMode  = true;
+    zoomIdx  = ZOOM_STEPS.reduce((ci, v, i) =>
+      Math.abs(v - scale) < Math.abs(ZOOM_STEPS[ci] - scale) ? i : ci, 0);
     await renderAll();
   }
 
@@ -196,6 +232,129 @@
     if (e.key === '+'  || e.key === '=') applyZoom(zoomIdx + 1);
     if (e.key === '-')                   applyZoom(zoomIdx - 1);
   }
+
+  // ── Touch: pinch-to-zoom + swipe navigation ────────────────────────────────
+  let swipeStartX = 0;
+  let swipeStartY = 0;
+
+  function getTouchDist(t: TouchList): number {
+    return Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+  }
+
+  function onTouchStart(e: TouchEvent) {
+    if (e.touches.length === 2) {
+      // ── Pinch start ──
+      e.preventDefault();
+      isPinching      = true;
+      pinchStartDist  = getTouchDist(e.touches);
+      pinchStartScale = scale;
+      // Set transform origin to the midpoint of the two fingers
+      const rect   = scrollArea!.getBoundingClientRect();
+      pinchOriginX = ((e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left) / rect.width  * 100;
+      pinchOriginY = ((e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top)  / rect.height * 100;
+    } else if (e.touches.length === 1) {
+      // ── Swipe start ──
+      swipeStartX = e.touches[0].clientX;
+      swipeStartY = e.touches[0].clientY;
+    }
+  }
+
+  function onTouchMove(e: TouchEvent) {
+    if (!isPinching || e.touches.length !== 2) return;
+    e.preventDefault();
+    const ratio = getTouchDist(e.touches) / pinchStartDist;
+    // Clamp so effective scale stays in [0.25, 5]
+    pinchScale = Math.max(0.25 / pinchStartScale, Math.min(5 / pinchStartScale, ratio));
+  }
+
+  async function onTouchEnd(e: TouchEvent) {
+    if (isPinching) {
+      // ── Pinch end: commit scale ──
+      isPinching       = false;
+      const newScale   = Math.max(0.25, Math.min(5, pinchStartScale * pinchScale));
+      pinchScale       = 1;   // reset CSS transform before re-render
+      scale            = newScale;
+      fitMode          = false;
+      zoomIdx          = ZOOM_STEPS.reduce((ci, v, i) =>
+        Math.abs(v - newScale) < Math.abs(ZOOM_STEPS[ci] - newScale) ? i : ci, 0);
+      await renderAll();
+      return;
+    }
+
+    // ── Swipe end: navigate pages ──
+    if (e.changedTouches.length !== 1) return;
+    const dx = e.changedTouches[0].clientX - swipeStartX;
+    const dy = e.changedTouches[0].clientY - swipeStartY;
+    const isHorizontal = Math.abs(dx) > Math.abs(dy);
+    if (isHorizontal && Math.abs(dx) > 40) {
+      dx < 0 ? next() : prev();
+    }
+  }
+
+  // ── Wheel: trackpad pinch (ctrl+scroll) + horizontal swipe ───────────────
+  function onWheel(e: WheelEvent) {
+    // ── Trackpad pinch ────────────────────────────────────────────────────
+    if (e.ctrlKey) {
+      e.preventDefault();
+
+      if (!wheelPinching) {
+        // Lock in start values and anchor origin to the cursor position
+        wheelPinching   = true;
+        pinchStartScale = scale;
+        pinchScale      = 1;
+        const rect      = scrollArea!.getBoundingClientRect();
+        pinchOriginX    = (e.clientX - rect.left) / rect.width  * 100;
+        pinchOriginY    = (e.clientY - rect.top)  / rect.height * 100;
+      }
+
+      // Normalise across deltaMode (pixels / lines / pages)
+      const delta  = e.deltaY * (e.deltaMode === 1 ? 20 : e.deltaMode === 2 ? 300 : 1);
+      const factor = 1 - delta * 0.008;
+      // Update CSS transform live — no canvas re-render yet
+      pinchScale = Math.max(0.2 / pinchStartScale, Math.min(6 / pinchStartScale, pinchScale * factor));
+
+      // Commit to canvas once the wheel settles
+      if (wheelPinchTimer) clearTimeout(wheelPinchTimer);
+      wheelPinchTimer = setTimeout(async () => {
+        wheelPinching      = false;
+        const newScale     = Math.max(0.25, Math.min(5, pinchStartScale * pinchScale));
+        pinchScale         = 1;
+        scale              = newScale;
+        fitMode            = false;
+        zoomIdx            = ZOOM_STEPS.reduce((ci, v, i) =>
+          Math.abs(v - newScale) < Math.abs(ZOOM_STEPS[ci] - newScale) ? i : ci, 0);
+        await renderAll();
+      }, 120);
+      return;
+    }
+
+    // ── Horizontal swipe: page navigation ────────────────────────────────
+    // Only trigger when the frame isn't scrollable sideways (page fits width)
+    const scrollable = scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth + 2;
+    if (!scrollable && Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      swipeDeltaX += e.deltaX;
+      if (swipeTimer) clearTimeout(swipeTimer);
+      swipeTimer = setTimeout(() => {
+        if (Math.abs(swipeDeltaX) > 60) swipeDeltaX > 0 ? next() : prev();
+        swipeDeltaX = 0;
+      }, 80);
+    }
+  }
+
+  // Add touch listeners with passive:false so we can preventDefault during pinch
+  $effect(() => {
+    if (!scrollArea) return;
+    scrollArea.addEventListener('touchstart', onTouchStart, { passive: false });
+    scrollArea.addEventListener('touchmove',  onTouchMove,  { passive: false });
+    scrollArea.addEventListener('touchend',   onTouchEnd);
+    scrollArea.addEventListener('wheel',      onWheel,      { passive: false }); // passive:false needed for ctrlKey preventDefault
+    return () => {
+      scrollArea!.removeEventListener('touchstart', onTouchStart);
+      scrollArea!.removeEventListener('touchmove',  onTouchMove);
+      scrollArea!.removeEventListener('touchend',   onTouchEnd);
+      scrollArea!.removeEventListener('wheel',      onWheel);
+    };
+  });
 </script>
 
 <svelte:window on:keydown={onKeydown} />
@@ -267,8 +426,8 @@
 
     <!-- Actions -->
     <div class="btn-group">
-      <!-- Fit to width -->
-      <button class="icon-btn" onclick={fitWidth} title="Fit to width">
+      <!-- Fit to frame -->
+      <button class="icon-btn" class:active={fitMode} onclick={fitToFrame} title="Fit to frame">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
           <circle cx="10" cy="10" r="3.5"/>
           <line x1="10" y1="2"  x2="10" y2="5.5"/>
@@ -326,7 +485,13 @@
       </div>
 
     {:else}
-      <div class="pages-row" class:dual={dualView}>
+      <div
+        class="pages-row"
+        class:dual={dualView}
+        style:--ps={pinchScale}
+        style:--ox="{pinchOriginX}%"
+        style:--oy="{pinchOriginY}%"
+      >
         <div class="page-card">
           <canvas bind:this={canvas1}></canvas>
         </div>
@@ -341,218 +506,201 @@
   </div>
 </div>
 
-<style>
-  /* ── Container ─────────────────────────────────────────────────────────── */
-  .pdf-reader {
-    display: flex;
-    flex-direction: column;
-    height: var(--h, 82vh);
-    background: #525659;
-    border-radius: 6px;
-    overflow: hidden;
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 13px;
-    color: #222;
-  }
+<style lang="sass">
+// ── Container ────────────────────────────────────────────────────────────────
+.pdf-reader
+	display: flex
+	flex-direction: column
+	height: var(--h, 82vh)
+	background: #525659
+	border-radius: 6px
+	overflow: hidden
+	font-family: system-ui, -apple-system, sans-serif
+	font-size: 13px
+	color: #222
 
-  /* ── Toolbar ───────────────────────────────────────────────────────────── */
-  .toolbar {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    gap: 2px;
-    padding: 0 10px;
-    height: 44px;
-    background: #ffffff;
-    border-bottom: 1px solid #e2e2e2;
-    box-shadow: 0 1px 3px rgba(0,0,0,.07);
-    z-index: 1;
-    user-select: none;
-  }
+// ── Toolbar ──────────────────────────────────────────────────────────────────
+.toolbar
+	display: flex
+	align-items: center
+	flex-shrink: 0
+	gap: 2px
+	padding: 0 10px
+	height: 44px
+	background: #fff
+	border-bottom: 1px solid #e2e2e2
+	box-shadow: 0 1px 3px rgba(0,0,0,.07)
+	z-index: 1
+	user-select: none
 
-  .btn-group {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-  }
+.btn-group
+	display: flex
+	align-items: center
+	gap: 2px
 
-  .divider {
-    width: 1px;
-    height: 20px;
-    background: #d6d6d6;
-    margin: 0 6px;
-    flex-shrink: 0;
-  }
+.divider
+	width: 1px
+	height: 20px
+	background: #d6d6d6
+	margin: 0 6px
+	flex-shrink: 0
 
-  /* ── Icon buttons ──────────────────────────────────────────────────────── */
-  .icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    background: transparent;
-    cursor: pointer;
-    color: #555;
-    transition: background 0.1s ease, color 0.1s ease;
-    text-decoration: none;
-  }
+// ── Icon buttons ──────────────────────────────────────────────────────────────
+.icon-btn
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 32px
+	height: 32px
+	padding: 0
+	border: none
+	border-radius: 5px
+	background: transparent
+	cursor: pointer
+	color: #555
+	transition: background 0.1s ease, color 0.1s ease
+	text-decoration: none
 
-  .icon-btn svg {
-    width: 17px;
-    height: 17px;
-    flex-shrink: 0;
-  }
+	svg
+		width: 17px
+		height: 17px
+		flex-shrink: 0
 
-  .icon-btn:hover:not(:disabled) {
-    background: #f0f0f0;
-    color: #111;
-  }
+	&:hover:not(:disabled)
+		background: #f0f0f0
+		color: #111
 
-  .icon-btn:active:not(:disabled) {
-    background: #e6e6e6;
-  }
+	&:active:not(:disabled)
+		background: #e6e6e6
 
-  .icon-btn:disabled {
-    opacity: 0.3;
-    cursor: default;
-  }
+	&:disabled
+		opacity: 0.3
+		cursor: default
 
-  .icon-btn.active {
-    background: #e8f0fe;
-    color: #1a73e8;
-  }
+	&.active
+		background: #e8f0fe
+		color: #1a73e8
 
-  /* ── Page indicator ────────────────────────────────────────────────────── */
-  .page-indicator {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 0 2px;
-  }
+// ── Page indicator ────────────────────────────────────────────────────────────
+.page-indicator
+	display: flex
+	align-items: center
+	gap: 5px
+	padding: 0 2px
 
-  .page-input {
-    width: 38px;
-    height: 26px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 13px;
-    color: #333;
-    padding: 0;
-    background: #fff;
-    appearance: textfield;
-    -moz-appearance: textfield;
-    transition: border-color 0.12s;
-  }
+.page-input
+	width: 38px
+	height: 26px
+	border: 1px solid #ccc
+	border-radius: 4px
+	text-align: center
+	font-size: 13px
+	color: #333
+	padding: 0
+	background: #fff
+	appearance: textfield
+	-moz-appearance: textfield
+	transition: border-color 0.12s
 
-  .page-input::-webkit-inner-spin-button,
-  .page-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-  }
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button
+		-webkit-appearance: none
 
-  .page-input:focus {
-    outline: none;
-    border-color: #1a73e8;
-    box-shadow: 0 0 0 2px rgba(26,115,232,.15);
-  }
+	&:focus
+		outline: none
+		border-color: #1a73e8
+		box-shadow: 0 0 0 2px rgba(26,115,232,.15)
 
-  .page-sep {
-    color: #888;
-    white-space: nowrap;
-  }
+.page-sep
+	color: #888
+	white-space: nowrap
 
-  /* ── Zoom label ────────────────────────────────────────────────────────── */
-  .zoom-label {
-    min-width: 40px;
-    text-align: center;
-    color: #444;
-    font-variant-numeric: tabular-nums;
-  }
+// ── Zoom label ────────────────────────────────────────────────────────────────
+.zoom-label
+	min-width: 40px
+	text-align: center
+	color: #444
+	font-variant-numeric: tabular-nums
 
-  /* ── Scroll area ───────────────────────────────────────────────────────── */
-  .scroll-area {
-    flex: 1;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    padding: 28px 24px 36px;
-  }
+// ── Scroll area ───────────────────────────────────────────────────────────────
+.scroll-area
+	flex: 1
+	overflow: auto
+	display: flex
+	justify-content: center
+	padding: 28px 24px 36px
 
-  /* ── Pages layout ──────────────────────────────────────────────────────── */
-  .pages-row {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    justify-content: center;
-  }
+	&::-webkit-scrollbar
+		width: 8px
+		height: 8px
 
-  /* ── Page card (white paper with shadow) ───────────────────────────────── */
-  .page-card {
-    background: #fff;
-    border-radius: 2px;
-    line-height: 0;
-    box-shadow:
-      0 1px 3px rgba(0,0,0,.22),
-      0 4px 12px rgba(0,0,0,.16),
-      0 12px 32px rgba(0,0,0,.10);
-  }
+	&::-webkit-scrollbar-track
+		background: transparent
 
-  .page-card canvas {
-    display: block;
-  }
+	&::-webkit-scrollbar-thumb
+		background: rgba(255,255,255,.2)
+		border-radius: 4px
 
-  /* ── Overlay states ────────────────────────────────────────────────────── */
-  .state-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: rgba(255,255,255,.55);
-    min-height: 260px;
-    text-align: center;
-    max-width: 320px;
-    margin: auto;
-  }
+		&:hover
+			background: rgba(255,255,255,.35)
 
-  .state-overlay p {
-    margin: 0;
-    font-size: 14px;
-    color: rgba(255,255,255,.7);
-  }
+// ── Pages layout ──────────────────────────────────────────────────────────────
+.pages-row
+	display: flex
+	gap: 16px
+	align-items: flex-start
+	justify-content: center
+	transform: scale(var(--ps, 1))
+	transform-origin: var(--ox, 50%) var(--oy, 50%)
+	will-change: transform
 
-  .state-overlay small {
-    font-size: 12px;
-    color: rgba(255,255,255,.4);
-    line-height: 1.5;
-  }
+// ── Page card (white paper with shadow) ───────────────────────────────────────
+.page-card
+	background: #fff
+	border-radius: 2px
+	line-height: 0
+	box-shadow: 0 1px 3px rgba(0,0,0,.22), 0 4px 12px rgba(0,0,0,.16), 0 12px 32px rgba(0,0,0,.10)
 
-  .state-overlay.error {
-    color: #ff9e9e;
-  }
+	canvas
+		display: block
 
-  /* ── Spinner ───────────────────────────────────────────────────────────── */
-  .spinner {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border: 3px solid rgba(255,255,255,.15);
-    border-top-color: rgba(255,255,255,.65);
-    border-radius: 50%;
-    animation: spin 0.75s linear infinite;
-  }
+// ── Overlay states ────────────────────────────────────────────────────────────
+.state-overlay
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	gap: 12px
+	color: rgba(255,255,255,.55)
+	min-height: 260px
+	text-align: center
+	max-width: 320px
+	margin: auto
 
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+	p
+		margin: 0
+		font-size: 14px
+		color: rgba(255,255,255,.7)
 
-  /* ── Scrollbar styling (WebKit) ────────────────────────────────────────── */
-  .scroll-area::-webkit-scrollbar        { width: 8px; height: 8px; }
-  .scroll-area::-webkit-scrollbar-track  { background: transparent; }
-  .scroll-area::-webkit-scrollbar-thumb  { background: rgba(255,255,255,.2); border-radius: 4px; }
-  .scroll-area::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.35); }
+	small
+		font-size: 12px
+		color: rgba(255,255,255,.4)
+		line-height: 1.5
+
+	&.error
+		color: #ff9e9e
+
+// ── Spinner ───────────────────────────────────────────────────────────────────
+.spinner
+	display: block
+	width: 30px
+	height: 30px
+	border: 3px solid rgba(255,255,255,.15)
+	border-top-color: rgba(255,255,255,.65)
+	border-radius: 50%
+	animation: spin 0.75s linear infinite
+
+@keyframes spin
+	to
+		transform: rotate(360deg)
 </style>

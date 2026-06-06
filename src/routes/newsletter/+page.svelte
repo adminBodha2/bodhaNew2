@@ -45,8 +45,8 @@
 
 <Container>
 	<section class="box wrapper-std rgap32 header-margin">
-		<Crumb showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha." />
-		<div class="grid lg:grid-cols-2 rgap16 cgap64 borderbot pbot32">
+		<Crumb isSolo={true} showT={true} title="Bodha Newsletter" showD={true} desc="Bodha Newsletter is a monthly release bringing together the many strands of work unfolding at Bodha." />
+		<div class="grid lg:grid-cols-2 rgap16 cgap64">
 			<div class="box rgap16">
 				<p class="highlight-text">Our monthly newsletter brings together the many strands of work unfolding at Bodha - longform essays, research notes, updates from ongoing projects, new publications, cultural reflections, and creative experiments in storytelling.</p>
 				<p class="highlight-text">To receive the monthly newsletters in your email inbox, please <a href="/members" class="linked">subscribe.</a></p>

@@ -66,11 +66,11 @@
 	</section>
 	<section class="wrapper-std growingline min100vh">
 		<Title text="explore designbodha" />
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap32">
 			<div class="box rgap16">
 					<Reveal>
 					<p class="txt-xl lg:txt-2xl w600">
-						Dharmic design, that is - <span class="desb">design-by-ṛta</span> is creatorship grounded in Hindu metaphysics. It redefines <span class="desb">design as a sacred act </span> of aligning human creation with the cosmic order.
+						Dharmic design, that is - <span class="desb">design by ṛta</span> - is creatorship grounded in Hindu metaphysics. It redefines design as an act of aligning human creation with the cosmic order.
 					</p>
 					</Reveal>
 					<Reveal>
