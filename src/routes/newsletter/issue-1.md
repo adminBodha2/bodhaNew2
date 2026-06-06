@@ -1,5 +1,5 @@
 ---
-title: Bodha Newsletter Issue 1 - Research, Essays, and Updates
+title: Issue 1 - May
 date: May 2026
 id: 1
 description: The first Bodha Newsletter issue, gathering updates, essays, research, and institutional work from May 2026.

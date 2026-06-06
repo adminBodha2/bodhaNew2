@@ -18,7 +18,6 @@
 	};
 
 	let { data }: { data: PageData } = $props();
-	let mobileMenuOpen = $state(false);
 	let firstMenuItem: HTMLButtonElement | undefined = $state();
 
 	let externalPosts = $derived((data.externalPosts ?? []) as ExternalPost[]);
@@ -44,32 +43,15 @@
 		)
 	);
 
-	function closeMobileMenu() {
-		mobileMenuOpen = false;
-	}
-
-	function onWindowKeydown(event: KeyboardEvent) {
-		if (event.key === 'Escape') {
-			closeMobileMenu();
-		}
-	}
-
-	$effect(() => {
-		if (!mobileMenuOpen) return;
-
-		tick().then(() => {
-			firstMenuItem?.focus();
-		});
-	});
 </script>
 
-<svelte:window onkeydown={onWindowKeydown} />
+<svelte:window/>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 
 <Container>
 	<PageHead title="External Essays | Bodha" />
-	<section class="wrapper-std header-margin" style="row-gap: 2rem">
+	<section class="wrapper-std header-margin rgap32">
 		<ResponsiveMenu>
 			<a class="small-button tt-u active" href="/blog/external-posts">External Posts</a>
 			<a class="small-button tt-u" href="/blog/writers">Writers</a>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { tick } from 'svelte';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import ResponsiveMenu from '$lib/comps/responsive-menu-2.svelte';
@@ -12,8 +11,6 @@
 
 	let route = $derived(data.route);
 	let posts = $derived(data.posts ?? []);
-	let mobileMenuOpen = $state(false);
-	let firstMenuItem: HTMLButtonElement | undefined = $state();
 
 	let title = $derived('Tag | ' + route);
 	let metaDescription = $derived('All essays tagged ' + route + ' at Bodha Blog.');
@@ -34,24 +31,6 @@
 			})
 		)
 	);
-
-	function closeMobileMenu() {
-		mobileMenuOpen = false;
-	}
-
-	function onWindowKeydown(event: KeyboardEvent) {
-		if (event.key === 'Escape') {
-			closeMobileMenu();
-		}
-	}
-
-	$effect(() => {
-		if (!mobileMenuOpen) return;
-
-		tick().then(() => {
-			firstMenuItem?.focus();
-		});
-	});
 </script>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />

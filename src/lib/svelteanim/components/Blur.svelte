@@ -49,7 +49,7 @@
 		stagger = 120,
 		ease = 'power1.out',
 		start = 'top 90%',
-		end = 'bottom 50%',
+		end = 'top 50%',
 		scrub = 3,
 		replay = true,
 		targetSelector,

@@ -163,7 +163,6 @@
 				</div>
 				<div class="temple-main box sm:ptop32">
 					<p class="paragraph-text">{data.temple.description}</p>
-	<p class="paragraph-text">{data.temple.description}</p>
 				</div>
 			</div>
 			{/if}

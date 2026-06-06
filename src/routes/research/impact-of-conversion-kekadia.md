@@ -7,6 +7,7 @@ tags:
   - conversions
   - shatrubodha
 id: 7
+active: false
 ---
 
 Kekadia is a tribal majority village in Bhopal district of Madhya Pradesh  This village has seen massive conversions to Christianity in the past with a majority of the population being Christian at one point of time. This state of affairs exists in a state which is not known for its Christian population or Christian missionary activities, and near its capital city of Bhopal, in the very district, at the very center of India. The present study at Bodha aims to understand the very cause of targeting such a village by Christian missionaries. This is one of the goals of the study. But the most important part of the story of this village is that most of the families that had converted in Kekadia, have now reverted back to their ancestral religion and dharmic traditions. Most of them are now Hindu.

@@ -7,6 +7,7 @@ tags:
   - civilizational consciousness
   - history
 id: 11
+active: true
 ---
 
 The study of history is never a neutral accumulation of facts alone. Every major historiographical tradition approaches the past through certain assumptions about time, causation, human agency, evidence, society, and meaning. Marxist historiography foregrounds class relations and material conditions, the Annales School emphasizes long-duration social and civilizational patterns, positivist historiography prioritizes archival verification and empirical objectivity, postmodern approaches examine discourse, power, and the instability of historical truth, and Subaltern Studies recovers the agency of those excluded from elite narratives. Each of these schools has contributed important tools to historical understanding, but each also carries its own philosophical premises and limitations.

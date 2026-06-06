@@ -72,6 +72,12 @@
 			grid-template-columns: 480px 1fr
 			.main-area
 				padding: 2rem 0
+		&.right-aside
+			grid-template-columns: 1fr 360px
+			grid-template-areas: "mainarea aside"
+		&.right-aside.wide-aside
+			grid-template-columns: 1fr 480px
+			grid-template-areas: "mainarea aside"
 		aside
 			height: 100%
 			.stickybox

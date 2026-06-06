@@ -119,12 +119,6 @@ main
 	to
 		transform: translateY(-400px)
 
-:root::view-transition-old(root)
-	animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideToBottom
-
-:root::view-transition-new(root)
-	animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideFromTop
-
 header
 	width: 100%
 	position: sticky
@@ -146,5 +140,7 @@ footer
 	width: 100%
 	border-top: 1px solid var(--color-grey-0)
 	z-index: 999
+
+/* :root::view-transition-old(root) animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideToBottom | :root::view-transition-new(root) animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slideFromTop */
 
 </style>

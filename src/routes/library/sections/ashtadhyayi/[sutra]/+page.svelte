@@ -67,9 +67,9 @@
 			</aside>
 			<div class="docmain">
 				<article class="classic-document">
-					<div class="box std-pad b-main stonecard" style="margin-bottom: 2rem">
+					<div class="box std-pad b-main stonecard mbot32">
 						{#if data.rule.english}
-							<p class="txt-xl" style="margin-bottom: 0">{data.rule.english}</p>
+							<p class="txt-xl mbot0">{data.rule.english}</p>
 						{/if}
 					</div>
 			{#if data.rule.explainer}

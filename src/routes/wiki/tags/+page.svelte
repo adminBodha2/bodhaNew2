@@ -3,6 +3,7 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/crumb-2.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import CardGrid from '$lib/comps/card-grid.svelte';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 	import Responsive from '$lib/comps/responsive-menu-2.svelte'
 
@@ -46,6 +47,18 @@
 		return items;
 	});
 
+	const filteredCards = $derived(
+		filteredItems.map((item: any) => ({
+			id: item.id,
+			title: item.title,
+			description: item.description,
+			type: item.type,
+			href: item.href,
+			external: item.isExternal ?? undefined,
+			tags: item.tags
+		}))
+	);
+
 	function toggleTag(tag: string) {
 		selectedTags = selectedTags.includes(tag)
 			? selectedTags.filter((t) => t !== tag)
@@ -76,7 +89,7 @@
 				<div class="stickybox box rgap16">
 					<input
 						type="search"
-						class="fordesk"
+						class="input-std fordesk"
 						placeholder="Search tags..."
 						bind:value={tagSearch}
 					/>
@@ -123,34 +136,15 @@
 			<div class="main-area rgap32 box">
 				<input
 					type="search"
+					class="input-std"
 					placeholder="Search results..."
 					bind:value={itemSearch}
 				/>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
+				<div>
 					{#if selectedTags.length === 0}
 					<p>Select tag(s).</p>
 					{:else}
-					{#each filteredItems as item (item.id)}
-						<a
-							class="box whitestone tight-pad b-main"
-							href={item.href}
-							target={item.isExternal ? '_blank' : undefined}
-							rel={item.isExternal ? 'noreferrer' : undefined}
-						>
-							<p class="txt-00 tt-u w500 grey1">{item.type}</p>
-							<p class="txt-lg w600 a-hover">{item.title}</p>
-							{#if item.description}
-								<p class="grey1">{item.description}</p>
-							{/if}
-							{#if item.tags?.length}
-								<div class="row wrap gap4 ptop8">
-									{#each item.tags.slice(0, 5) as t}
-										<span class="txt-00 tt-u w500 grey2">{displayTag(t)}</span>
-									{/each}
-								</div>
-							{/if}
-						</a>
-					{/each}
+					<CardGrid items={filteredCards} columns={3} compact={true} />
 					{/if}
 				</div>
 				{#if filteredItems.length === 0}
@@ -170,12 +164,5 @@
 .fordesk
 	@media (max-width: 1024px)
 		display: none
-
-input
-	padding: 0.5rem 1rem
-	border: var(--border-darker)
-	border-radius: 4px
-	font-size: 0.9rem
-	width: 100%
 
 </style>

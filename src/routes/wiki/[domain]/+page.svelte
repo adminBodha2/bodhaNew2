@@ -5,6 +5,8 @@
 	import Crumb2 from '$lib/comps/crumb-2.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import HubRelatedLinks from '$lib/comps/hub-related-links.svelte';
+	import CardGrid from '$lib/comps/card-grid.svelte';
+	import TagList from '$lib/comps/tag-list.svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import { staggerAnimatePlugin } from '$lib/svelteanim/utils/staggerPlugin';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
@@ -65,6 +67,17 @@
 	});
 
 	const selectedSection = $derived(data.sections.find((section) => section.title === activeTab));
+
+	const sectionCards = $derived(
+		(selectedSection?.items ?? []).map((item) => ({
+			id: item.title,
+			title: item.title,
+			description: item.description,
+			lens: item.lens ?? undefined,
+			authors: item.authors,
+			href: item.href ?? undefined
+		}))
+	);
 
 	const iksSearchResults = $derived.by(() => {
 		const query = iksSearch.trim().toLowerCase();
@@ -130,11 +143,7 @@
 			<div class="box rgap4">
 				<p class="txt-xs tt-u w500 grey0">Connected Knowledge - <span class="theme">{data.totalConnected}</span></p>
 				{#if data.domain.tags.length}
-					<div class="tag-list">
-						{#each data.domain.tags as tag}
-							<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-', ' ')}</p>
-						{/each}
-					</div>
+					<TagList tags={data.domain.tags} color="theme" compact={true} />
 				{/if}
 			</div>
 		</Crumb2>
@@ -179,39 +188,7 @@
 		</Responsive>
 		<div class="box rgap32">
 			{#if selectedSection && selectedSection.items.length > 0}
-				<div class="domain-section">
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" use:autoAnimate={staggerAnimatePlugin({ stagger: 80, duration: 300 })}>
-						{#each selectedSection.items as item}
-							{#if item.href}
-								<a class="box whitestone tight-pad h-paper-1" href={item.href}>
-									{#if item.lens}
-										<p class="txt-00 tt-u w500 theme">{item.lens}</p>
-									{/if}
-									<p class="txt-xl w600 a-hover ptop16 pbot8">{item.title}</p>
-									{#if item.description}
-										<p class="grey1 lh14 pbot16">{item.description}</p>
-									{/if}
-									{#if item.authors.length}
-										<p class="txt-sm tt-u w500 grey2">{item.authors.join(', ')}</p>
-									{/if}
-								</a>
-							{:else}
-								<div class="box whitecard tight-pad">
-								{#if item.lens}
-									<p class="txt-00 tt-u w500 theme">{item.lens}</p>
-								{/if}
-								<p class="txt-xl w600 ptop16 pbot8">{item.title}</p>
-								{#if item.description}
-									<p class="grey1 lh14 pbot16">{item.description}</p>
-								{/if}
-								{#if item.authors.length}
-									<p class="txt-sm tt-u w500 grey2">{item.authors.join(', ')}</p>
-								{/if}
-								</div>
-							{/if}
-						{/each}
-					</div>
-				</div>
+				<CardGrid items={sectionCards} columns={4} animated={true} />
 			{:else if availableTabs.length === 0}
 				<p class="grey1 p24">No content available for this domain yet.</p>
 			{:else}
@@ -239,14 +216,5 @@
 	border: var(--border-dark)
 	@media (min-width: 721px)
 		width: 320px
-
-.tag-list
-	display: flex
-	flex-wrap: wrap
-	gap: 7px
-
-.domain-section
-	display: grid
-	gap: 12px
 
 </style>

@@ -3,6 +3,8 @@
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
+	import CardGrid from '$lib/comps/card-grid.svelte';
+	import TagList from '$lib/comps/tag-list.svelte';
 	import { absoluteImage, absoluteUrl } from '$lib/utils/seo';
 	import { nodeHref } from '$lib/wiki-graph';
 
@@ -16,6 +18,26 @@
 	const authors = $derived(data.node.meta?.author ?? []);
 	const lens = $derived(data.node.meta?.lens || null);
 	const cleanTags = $derived((data.node.tags ?? []).filter((t) => t && t.trim().length > 0));
+
+	const referencedByCards = $derived(
+		data.referencedBy.map((item) => ({
+			id: item.id,
+			title: item.title,
+			description: item.description,
+			type: item.type.replaceAll('-', ' '),
+			href: nodeHref(item)
+		}))
+	);
+
+	const relatedCards = $derived(
+		data.related.map((item) => ({
+			id: item.id,
+			title: item.title,
+			description: item.description,
+			type: item.type.replaceAll('-', ' '),
+			href: nodeHref(item)
+		}))
+	);
 </script>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" />
@@ -38,10 +60,8 @@
 		{/if}
 
 		{#if cleanTags.length}
-			<div class="tag-list ptop8">
-				{#each cleanTags as tag}
-					<span class="txt-xs tt-u w500 grey0">{tag.replaceAll('-', ' ')}</span>
-				{/each}
+			<div class="ptop8">
+				<TagList tags={cleanTags} color="grey0" compact={true} />
 			</div>
 		{/if}
 	</section>
@@ -51,34 +71,14 @@
 			{#if data.referencedBy.length > 0}
 				<div class="box rgap16">
 					<p class="txt-00 tt-u w600 grey0">Referenced by</p>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
-						{#each data.referencedBy as item (item.id)}
-							<a class="box whitestone tight-pad paper-1" href={nodeHref(item)}>
-								<p class="txt-xs tt-u w500 theme">{item.type.replaceAll('-', ' ')}</p>
-								<p class="txt-lg w600 a-hover ptop12 pbot4">{item.title}</p>
-								{#if item.description}
-									<p class="grey1 lh14 txt-sm">{item.description}</p>
-								{/if}
-							</a>
-						{/each}
-					</div>
+					<CardGrid items={referencedByCards} columns={3} compact={true} />
 				</div>
 			{/if}
 
 			{#if data.related.length > 0}
 				<div class="box rgap16">
 					<p class="txt-00 tt-u w600 grey0">Draws on &amp; addresses</p>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap16">
-						{#each data.related as item (item.id)}
-							<a class="box whitestone tight-pad paper-1" href={nodeHref(item)}>
-								<p class="txt-xs tt-u w500 theme">{item.type.replaceAll('-', ' ')}</p>
-								<p class="txt-lg w600 a-hover ptop12 pbot4">{item.title}</p>
-								{#if item.description}
-									<p class="grey1 lh14 txt-sm">{item.description}</p>
-								{/if}
-							</a>
-						{/each}
-					</div>
+					<CardGrid items={relatedCards} columns={3} compact={true} />
 				</div>
 			{/if}
 
@@ -88,21 +88,3 @@
 		</div>
 	</section>
 </Container>
-
-<style lang="sass">
-
-.tag-list
-	display: flex
-	flex-wrap: wrap
-	gap: 7px
-
-	a, span
-		padding: 2px 8px
-		border-radius: 3px
-		background: rgba(0, 0, 0, 0.03)
-
-	a:hover
-		background: rgba(211, 99, 58, 0.1)
-		color: var(--theme)
-
-</style>

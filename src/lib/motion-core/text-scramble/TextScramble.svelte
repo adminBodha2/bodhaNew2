@@ -46,7 +46,7 @@
 		scrambleDuration = 0.6,
 		stagger = 0.03,
 		cycles = 12,
-		characters = "BODHAISACULTURALTHINKTANKANDRESEARCHGROUP",
+		characters = "कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसह",
 		...restProps
 	}: ComponentProps = $props();
 

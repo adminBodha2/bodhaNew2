@@ -53,14 +53,13 @@
 			</div>
 			<p class="highlight-text">Bodha’s work is expanding across research, writing, publishing, design, archives, and public education. Rather than letting these efforts remain scattered across different platforms, this newsletter will serve as a regular monthly record of what we are thinking, building, publishing, and preparing.</p>
 		</div>
-		<div class="grid grid-cols-1 lg:grid-cols-3">
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
 			{#each posts as item}
-				<a class="box blank b-main stonecard" href={item.linkpath}>
+				<a class="box blank b-main whitestone" href={item.linkpath}>
 					<div class="p8"><img class="fitted landscape" src={item.meta.image} alt={item.meta.title}/></div>
 					<div class="box rgap16 std-pad ybottom">
 							<p class="txt-2xl w600 a-hover">{item.meta.title}</p>
 							<p class="grey1">{item.meta.description}</p>
-							<p class="txt-sm tt-u">{item.meta.date}</p>
 					</div>
 				</a>
 			{/each}

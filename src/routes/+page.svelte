@@ -239,7 +239,7 @@ h1.source-serif
 
 #introduction
 	@media (min-width: 1025px)
-		height: 64vh
+		height: 80vh
 
 //verticals──────────────────────────────────────
 

@@ -26,7 +26,7 @@
 
 <Container>
 	<section class="wrapper-std">
-		<Crumb showT={true} title={`√${data.dhatu.rootIast}`} showD={true} desc={data.dhatu.meaningIast} fullP={true} />
+		<Crumb isSolo={true} showT={true} title={`√${data.dhatu.rootIast}`} showD={true} desc={data.dhatu.meaningIast} fullP={true} />
 		<div class="box rgap24">
 			<div class="box rgap8 std-pad whitestone b-main">
 				<p class="txt-xs tt-u w500 theme">Gaṇa {data.dhatu.gana} · {data.dhatu.ganaName} · {data.dhatu.id}</p>

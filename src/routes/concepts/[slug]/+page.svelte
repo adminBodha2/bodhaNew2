@@ -4,6 +4,8 @@
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Container from '$lib/comps/wrapper.svelte';
+	import CardGrid from '$lib/comps/card-grid.svelte';
+	import TagList from '$lib/comps/tag-list.svelte';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
 
@@ -23,6 +25,21 @@
 	);
 
 	let isItem = $state(0);
+
+	const groupCards = $derived(
+		groups.map((group) => ({
+			label: group.label,
+			items: group.items.map((item: any) => ({
+				id: item.id,
+				title: item.title,
+				description: item.description,
+				type: item.type?.replaceAll('-', ' ') ?? '',
+				href: item.href,
+				external: item.isExternal ?? undefined,
+				tags: item.tags
+			}))
+		}))
+	);
 
 	function toggleIsItem(newIndex: number) {
 		isItem = newIndex;
@@ -58,9 +75,9 @@
 		<Crumb showT={true} title={data.concept.title} showD={true} desc={data.concept.description} showRow={true}>
 			<div class="row gap4 wrap">
 				<p class="standard-pill">{data.count} connected nodes</p>
-				{#each data.concept.tags as tag}
-					<p class="standard-pill">{tag.replaceAll('-', ' ')}</p>
-				{/each}
+				{#if data.concept.tags?.length}
+					<TagList tags={data.concept.tags ?? []} color="theme-dark" compact={true} />
+				{/if}
 			</div>
 		</Crumb>
 		<div class="doc-header-grid">
@@ -76,26 +93,9 @@
 			<div class="main-area">
 				<Slide>
 				<div class="box containing-graph">
-					{#each groups as group, i (group.label)}
+					{#each groupCards as group, i (group.label)}
 						{#if i === isItem}
-							<div class="grid grid-cols-1 lg:grid-cols-3 gap16" id="node-grid">
-								{#each group.items as item, j (item.id)}
-									<a class="blank box rgap8 tight-pad b-main whitestone slide-item" href={item.href} target={item.isExternal ? '_blank' : undefined} rel={item.isExternal ? 'noreferrer' : undefined}>
-										<p class="txt-00 tt-u w500 grey1">{item.type}</p>
-										<p class="txt-lg w600 a-hover">{item.title}</p>
-										{#if item.description}
-											<p class="grey1">
-												{item.description}
-											</p>
-										{/if}
-										<div class="row wrap ycenter self-bottom bordertop ptop8">
-											{#each item.tags as tag}
-												<p class="txt-00 theme-dark w500 tt-u">{tag.replaceAll('-', ' ')}</p>
-											{/each}
-										</div>
-									</a>
-								{/each}
-							</div>
+							<CardGrid items={group.items} columns={3} compact={true} />
 						{/if}
 					{/each}
 				</div>

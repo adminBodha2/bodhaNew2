@@ -55,16 +55,16 @@
 		</p>
 		<div class="row cgap16 ycenter">
 			<a class="blank" href="https://x.com/BodhaResearch" rel="noreferrer" target="_blank">
-				<Twitter size="24" color={'var(--color-theme-dark'} />
+				<Twitter size="24" color={'var(--color-theme-dark)'} />
 			</a>
 			<a class="blank" href="https://www.facebook.com/profile.php?id=61584291760187" rel="noreferrer" target="_blank">
-				<FB size="24" color={'var(--color-theme-dark'} />
+				<FB size="24" color={'var(--color-theme-dark)'} />
 			</a>
 			<a class="blank" href="https://www.instagram.com/bodharesearch" rel="noreferrer" target="_blank">
-				<Insta size="24" color={'var(--color-theme-dark'} />
+				<Insta size="24" color={'var(--color-theme-dark)'} />
 			</a>
 			<a class="blank" href="https://www.linkedin.com/company/bodha-research/" rel="noreferrer" target="_blank">
-				<Linkedin size="24" color={'var(--color-theme-dark'} />
+				<Linkedin size="24" color={'var(--color-theme-dark)'} />
 			</a>
 		</div>
 		<p class="highlight-text">For queries on website, to report bugs/broken links etc., please write to sitemaster@bodharesearch.in</p>

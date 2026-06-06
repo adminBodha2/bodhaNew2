@@ -7,6 +7,7 @@ tags:
   - hindu-institutions
   - temple
 id: 2
+active: true
 ---
 
 Our temples have been the center of our civilization for millennia, serving as the heartbeats of our cultural and spiritual identity. These sacred spaces stand as living examples of indigenous management and administration, meticulously crafted over centuries by devoted communities. Beyond their architectural grandeur, Hindu temples embody the essence of our collective ethos, playing multifaceted roles in our society. They serve as spiritual, religious, cultural, socio-economic, social welfare and paralegal institutions.

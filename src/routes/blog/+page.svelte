@@ -135,7 +135,7 @@
 
 <Container>
 	<PageHead title="Blog | Bodha" />
-	<section class="wrapper-std header-margin" style="row-gap: 2rem">
+	<section class="wrapper-std header-margin rgap32">
 		<ResponsiveMenu>
 			<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
 			<a class="small-button tt-u" href="/blog/writers">Writers</a>

@@ -95,6 +95,23 @@
 		</div>
 		</Slide>
 	</section>
+	<section class="wrapper-std growingline alternate">
+		<Title text="Special Sections"/>
+		<p>These sections feature indexed, searchable texts or dictionary collections.</p>
+		<Slide targetSelector=".slide-item-sections">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
+				<a class="blank box rgap8 std-pad b-main whitestone slide-item-sections" href="/library/sections/ashtadhyayi">
+					<p class="txt-xl w600 a-hover">Aṣṭādhyāyī</p>
+				</a>
+				<a class="blank box rgap8 std-pad b-main whitestone slide-item-sections" href="/library/sections/dhatus">
+					<p class="txt-xl w600 a-hover">Dhātupāṭha</p>
+				</a>
+				<a class="blank box rgap8 std-pad b-main whitestone slide-item-sections" href="/library/sections/words">
+					<p class="txt-xl w600 a-hover">Dictionary</p>
+				</a>
+			</div>
+		</Slide>
+	</section>
 	<section class="box wrapper-std rgap32 lg:rgap64 growingline alternate">
 		<Title text="Curated Reading Paths" />
 		<Slide targetSelector=".slide-item2">

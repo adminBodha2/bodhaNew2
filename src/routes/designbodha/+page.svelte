@@ -8,7 +8,6 @@
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, webPageJsonLd } from '$lib/utils/seo';
 
-	let iW = $state(0);
 	let sY = $state(0);
 
 	let imageLink = $state('/images/designbodha/db19.webp');
@@ -29,7 +28,7 @@
 	);
 </script>
 
-<svelte:window bind:innerWidth={iW} bind:scrollY={sY} />
+<svelte:window bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 

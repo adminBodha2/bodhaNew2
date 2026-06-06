@@ -6,6 +6,7 @@ description: "Field research documenting Hindu philanthropy in cash, kind, and s
 tags:
   - hindu-institutions
 id: 4
+active: false
 ---
 
 It is often alleged that Hindus do not engage in charity enough and that is why agents like Christian missionaries and western churches had to fill the gap by providing charity to create educational, healthcare and other fundamental institutions in India. By experience, Hindus know that this is wrong but due to the dharmic injunction of not talking about charity, Hindus are not used to document or showcase their philanthropic activities.

@@ -60,7 +60,7 @@
 
 <Container>
 	<PageHead title="All Tags at the Blog | Bodha" />
-	<section class="wrapper-std header-margin" style="row-gap: 2rem">
+	<section class="wrapper-std header-margin rgap32">
 			<ResponsiveMenu>
 				<a class="small-button tt-u" href="/blog">Blog</a>
 				<a class="small-button tt-u" href="/blog/external-posts">External Posts</a>
@@ -139,9 +139,6 @@
 	display: flex
 	flex-direction: column
 	gap: 1rem
-
-.results-label
-	padding-bottom: 0.5rem
 
 .main-btn
 	&.active

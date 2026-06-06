@@ -7,6 +7,7 @@ tags:
   - aesthetics
   - purva-paksha
 id: 9
+active: false
 ---
 
 We have often read value judgements of Indian art in books written by western artists or art critics like: “Hindu painting is unaware of chronological sequence”; and that “Hindu art shows a lack of knowledge of anatomy”. These generalized statements which castigate entire civilization’s art with one sentence are not just stray comments but are part of textbooks that are taught not just in the West, but also in India. Because it is the West, which has so far in modern times, looked upon other cultures and their art and written about them, creating a narrative which shows more the Western mindset than the reality that they claim to cogitate upon.

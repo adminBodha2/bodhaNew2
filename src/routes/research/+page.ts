@@ -9,6 +9,7 @@ type ResearchEntry = {
 		type?: string;
 		image?: string;
 		description?: string;
+		active?: boolean;
 	};
 };
 
@@ -77,7 +78,8 @@ export const load: PageLoad = async () => {
 					.sort(compareByResearchId)
 					.map((item) => ({
 						label: item.meta.title,
-						href: item.linkpath
+						href: item.linkpath,
+						active: item.meta.active
 					}))
 			};
 		})

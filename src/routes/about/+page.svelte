@@ -89,7 +89,7 @@
 				<a class="works box rgap8 whitestone b-main p8" href="/big-questions">
 					<img class="fitted landscape" src="/images/key-bigquestions.webp" alt="big-questions"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">Big Questions</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">Big Questions</p>
 					<p class="lh16 grey2">With the Big Questions initiative, we're asking provocative questions about the most fundamental problems and open questions that Hindu society faces today.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
@@ -97,7 +97,7 @@
 				<a class="works box rgap8 whitestone b-main p8" href="/academy">
 					<img class="fitted landscape" src="/images/key-academy.webp" alt="bodha academy"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">Academy</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">Academy</p>
 					<p class="lh16 grey2">Bodha Academy envisions creating a line of scholars capable of carrying the Hindu intellectural work forward, and runs critical online courses.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
@@ -105,7 +105,7 @@
 				<a class="works box rgap8 whitestone b-main p8" href="/anveshi">
 					<img class="fitted landscape" src="/images/key-anveshi.webp" alt="anveshi"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">Anveshi</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">Anveshi</p>
 					<p class="lh16 grey2">Bodha Anveshi is our flagship cultural immersion program, curating sacred tours to unexplored cultural kshetras and trails.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
@@ -113,7 +113,7 @@
 				<a class="works box rgap8 whitestone b-main p8" href="/library">
 					<img class="fitted landscape" src="/images/heroes/key-bol.webp" alt="bodha open library"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">Bodha Open Library</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">Bodha Open Library</p>
 					<p class="lh16 grey2">The Bodha Open Library features 200+ texts ranging from Puranas and Darshanic texts to papers on Indo-European linguistics, IKS, and more.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
@@ -121,7 +121,7 @@
 				<a class="works box rgap8 whitestone b-main p8" href="/blog">
 					<img class="fitted landscape" src="/images/heroes/key-blog.webp" alt="bodha blog"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">Essays, Writings</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">Essays, Writings</p>
 					<p class="lh16 grey2">Read our essays on culture, history, tradition, and more at our blog, featuring 50+ articles that bring together our writings, research, opinions over the years.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
@@ -129,15 +129,15 @@
 				<a class="works box rgap8 whitestone b-main p8" href="/inspiration">
 					<img class="fitted landscape" src="/images/key-inspiration.webp" alt="inspiration"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">Our Inspiration</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">Our Inspiration</p>
 					<p class="lh16 grey2">No work emerges in isolation. Every idea, method, and conviction is shaped by a longer continuum of thought. We document the schools of thought and thinkers that inspire and inform us.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 				</a>
 				<a class="works box rgap8 whitestone b-main p8" href="/designbodha">
-					<img class="fitted-landscape" src="images/heroes/key-designbodha.webp" alt="designbodha"/>
+					<img class="fitted landscape" src="/images/heroes/key-designbodha.webp" alt="designbodha"/>
 					<div class="box rgap16 p16">
-					<p class="ttxt-2xl lg:txt-3xl w600 a-hover ls002m">designBodha</p>
+					<p class="txt-2xl lg:txt-3xl w600 a-hover ls002m">designBodha</p>
 					<p class="lh16 grey2">An initiative for dharmic design - a call to designers, creators, product developers, and others to develop ethical, harmonious, and regenerative creation across disciplines.</p>
 					</div>
 					<p class="a-hover highlight-text arrow self-bottom px8">→</p>

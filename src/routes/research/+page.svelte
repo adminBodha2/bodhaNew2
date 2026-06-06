@@ -64,11 +64,14 @@
 							<Hover><h2 class="txt-3xl w690">{area.title}</h2></Hover>
 							<div class="area-inner-body-links box">
 								{#each area.items as item, i}
-									<div class="project-holder">
+									<div class="project-holder row ycenter cgap16 mwrap rgap4">
 									{#if item.href}
-										<a class="txt-lg lg:txt-xl area-link row xbetween" href={item.href}>
+										<a class="txt-lg lg:txt-xl area-link" href={item.href}>
 											{item.label}
 										</a>
+										{#if item.active === true}
+										<p class="txt-sm tt-u w500 theme">ACTIVE</p>
+										{/if}
 									{:else}
 										<p class="area-link-dim">{item.label}</p>
 									{/if}
@@ -112,7 +115,6 @@
 	justify-content: space-between
 	color: var(--color-primary)
 	transition: all 220ms cubic-bezier(0.22, 1, 0.36, 1)
-	border-bottom: var(--border-main)
 	&:hover
 		background: var(--color-back)
 		padding-left: 8px

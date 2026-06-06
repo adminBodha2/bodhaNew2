@@ -6,6 +6,7 @@ description: "An ethnographic study of Hajong Hindu festivals, rituals, and iden
 tags:
   - north-east-india
 id: 8
+active: false
 ---
 
 The Hajongs are a Scheduled Tribe community living mainly in the Garo Hills, Meghalaya. Despite being officially recognized as a Scheduled Tribe, the Hajong community continues to face neglect and exclusion from public services, employment opportunities, and political representation. Their marginalization is often sharpened by their identity as Hindus in a largely Christian region.

@@ -109,7 +109,7 @@
 					</div>
 					{/each}
 				{:else if active === 4}
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16 all-sessions">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16 all-sessions" class:lg:grid-cols-4={detail.title === "Introduction to Shri Ram Swarup"} class:lg:grid-cols-3={detail.title === "Civilization Theory - Dhatus as Civilizational Code"}>
 						{#each data.sessions as session}
 							<div class="box rgap16 whitecard std-pad b-main">
 								<p class="txt-xs tt-u w500 theme">Session {session.id}</p>

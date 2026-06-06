@@ -10,9 +10,6 @@
 
 	let { data }: PageProps = $props();
 
-	let iW = $state(0);
-	let sY = $state(0);
-
 	let imageLink = '/images/designbodha/pramana-library.webp';
 
 	const title = 'Pramana Library | Bodha';
@@ -30,8 +27,6 @@
 		})
 	);
 </script>
-
-<svelte:window bind:innerWidth={iW} bind:scrollY={sY} />
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="2560" imHeight="1440" {jsonld} />
 

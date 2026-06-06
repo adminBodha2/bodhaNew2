@@ -1,10 +1,10 @@
 <script lang="ts">
-
 	import type { PageData } from './$types';
 	import Container from '$lib/comps/wrapper.svelte';
 	import Crumb from '$lib/comps/breadcrumb.svelte';
 	import Head from '$lib/comps/headcomponent.svelte';
 	import Responsive from '$lib/comps/responsive-menu.svelte';
+	import CardGrid from '$lib/comps/card-grid.svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import { staggerAnimatePlugin } from '$lib/svelteanim/utils/staggerPlugin';
 	import { absoluteImage, absoluteUrl, collectionPageJsonLd, stringifyJsonLd } from '$lib/utils/seo';
@@ -28,11 +28,77 @@
 				url: metaUrl,
 				image: metaImage,
 				items: Object.values(data.grouped).flat().map((node) => ({
-          			name: node.title,
-          			url: node.slug ? `/${node.slug}` : metaUrl
-        		}))
+					name: node.title,
+					url: node.slug ? `/${node.slug}` : metaUrl
+				}))
 			})
 		)
+	);
+
+	const blogCards = $derived(
+		data.grouped.blogs.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: nodeHref(node),
+			tags: node.tags
+		}))
+	);
+
+	const bookCards = $derived(
+		data.grouped.books.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: '/library',
+			tags: node.tags
+		}))
+	);
+
+	const questionCards = $derived(
+		data.grouped.questions.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: nodeHref(node)
+		}))
+	);
+
+	const projectCards = $derived(
+		data.grouped.projects.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: nodeHref(node)
+		}))
+	);
+
+	const thinkerCards = $derived(
+		data.grouped.thinkers.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: nodeHref(node)
+		}))
+	);
+
+	const schoolCards = $derived(
+		data.grouped.schools.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: nodeHref(node)
+		}))
+	);
+
+	const labCards = $derived(
+		data.grouped.labs.map((node) => ({
+			id: node.id,
+			title: node.title,
+			description: node.description,
+			href: nodeHref(node),
+			tags: node.tags
+		}))
 	);
 </script>
 
@@ -56,78 +122,21 @@
 					<button class="selection-button" class:active={active === i} onclick={() => (active = i)}>{tab}</button>
 				{/each}
 		</Responsive>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap16" use:autoAnimate={staggerAnimatePlugin({ stagger: 160, duration: 300 })}>
+		<div use:autoAnimate={staggerAnimatePlugin({ stagger: 160, duration: 300 })}>
 		{#if active === 0}
-	 	{#each data.grouped.blogs as node, i (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href={nodeHref(node)}>
-    		<p class="txt-xl w600 a-hover">{node.title}</p>
-			<p class="txt-sm grey2">{node.description}</p>
-			{#if node.tags && node.tags.length > 0}
-				<div class="row wrap cgap4 self-bottom">
-						{#each node.tags as tag}
-							<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-',' ')}</p>
-						{/each}
-				</div>
-			{/if}
-		</a>
-  		{/each}	
+			<CardGrid items={blogCards} columns={4} animated={false} />
 		{:else if active === 1}
-	 	{#each data.grouped.books as node (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href="/library">
-    	<p class="txt-xl w600 a-hover">{node.title}</p>
-		<p class="txt-sm grey2">{node.description}</p>
-		{#if node.tags && node.tags.length > 0}
-			<div class="row wrap cgap4 self-bottom">
-					{#each node.tags as tag}
-						<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-',' ')}</p>
-					{/each}
-			</div>
-		{/if}
-		</a>
-  		{/each}
+			<CardGrid items={bookCards} columns={4} animated={false} />
 		{:else if active === 2}
-	 	{#each data.grouped.questions as node (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href={nodeHref(node)}>
-    	<p class="txt-xl w600 a-hover">{node.title}</p>
-		<p class="txt-sm grey2">{node.description}</p>
-		</a>
-  		{/each}
+			<CardGrid items={questionCards} columns={4} animated={false} />
 		{:else if active === 3}
-	 	{#each data.grouped.projects as node (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href={nodeHref(node)}>
-    	<p class="txt-xl w600 a-hover">{node.title}</p>
-		<p class="txt-sm grey2">{node.description}</p>
-		</a>
-  		{/each}
+			<CardGrid items={projectCards} columns={4} animated={false} />
 		{:else if active === 4}
-	 	{#each data.grouped.thinkers as node (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href={nodeHref(node)}>
-    	<p class="txt-xl w600 a-hover">{node.title}</p>
-		<p class="txt-sm grey2">{node.description}</p>
-		</a>
-  		{/each}
+			<CardGrid items={thinkerCards} columns={4} animated={false} />
 		{:else if active === 5}
-	 	{#each data.grouped.schools as node (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href={nodeHref(node)}>
-    	<p class="txt-xl w600 a-hover">{node.title}</p>
-		<p class="txt-sm grey2">{node.description}</p>
-		</a>
-  		{/each}
+			<CardGrid items={schoolCards} columns={4} animated={false} />
 		{:else if active === 6}
-	 	{#each data.grouped.labs as node (node.id)}
-		<a class="box p16 whitestone blank rgap8 b-main" href={nodeHref(node)}>
-    	<p class="txt-xl w600 a-hover">{node.title}</p>
-		<p class="txt-sm grey2">{node.description}</p>
-		{#if node.tags && node.tags.length > 0}
-			<div class="row wrap cgap4 self-bottom">
-					{#each node.tags as tag}
-						<p class="txt-xs tt-u w500 theme">{tag.replaceAll('-',' ')}</p>
-					{/each}
-			</div>
-		{/if}
-		</a>
-  		{/each}
-
+			<CardGrid items={labCards} columns={4} animated={false} />
 		{/if}
 		</div>
 		</div>
