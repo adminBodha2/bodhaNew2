@@ -10,7 +10,9 @@ export const allDetails = [
 	status: 'Concluded',
 	page: true,
 	image: '/images/srg-square.webp',
-	instructor: 'Pankaj Saxena'
+	instructor: 'Pankaj Saxena',
+	paylink: `<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sxe3Ik5y2uNtRb" async> </script> </form>`,
+	paylinkD: `<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Sxe492M4Gg7an2" async> </script> </form>`
 	}
 ]
 

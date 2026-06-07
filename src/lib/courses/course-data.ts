@@ -13,6 +13,8 @@ export type CourseDetail = {
 	status?: string;
 	page?: boolean;
 	instructor?: string;
+	paylink?: string;
+	paylinkD?: string;
 };
 
 export type CourseOverview = {

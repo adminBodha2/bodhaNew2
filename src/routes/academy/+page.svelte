@@ -66,6 +66,9 @@
 							<div class="box rgap16 std-pad">
 								<h3 class="txt-2xl lh12 w600 a-hover ls001m lg:ls003m">{detail.title}</h3>
 								<p class="txt-lg lh14 grey2">{detail.description}</p>
+							{#if detail.status === "OPEN NOW"}
+								<p class="txt-xs tt-u w500 theme">{detail.dates} | {detail.price}</p>
+							{/if}
 							</div>
 							<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">{detail.instructor} | {detail.status}</p>
 						</a>

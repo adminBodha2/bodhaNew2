@@ -13,6 +13,7 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import Blur from '$lib/svelteanim/components/Blur.svelte';
 	import Menudrop from '$lib/comps/responsive-menu.svelte';
+	import RazorpayButton from '$lib/comps/RazorpayButton.svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import { staggerAnimatePlugin } from '$lib/svelteanim/utils/staggerPlugin';
 	let { data }: PageProps = $props();
@@ -23,6 +24,14 @@
 	let metaImage = $derived(absoluteImage(detail.image ?? '/images/key-academy.webp'));
 	const tabs = ['Overview', 'Audience', 'Takeaways', 'Facilitator', 'Sessions'];
 	let active = $state(0);
+
+	function extractRazorpayId(html: string): string | null {
+		const match = html.match(/data-payment_button_id="([^"]+)"/);
+		return match ? match[1] : null;
+	}
+
+	let paylinkId = $derived(extractRazorpayId(detail.paylink ?? ''));
+	let paylinkDId = $derived(extractRazorpayId(detail.paylinkD ?? ''));
 </script>
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" />
@@ -33,7 +42,7 @@
 			<div class="box rgap32 down" id="top-left">
 				<Crumb isSolo={true}/>
 				<div class="box rgap24 lg:rgap32">
-					<h1 class="txt-4xl lh11 md:txt-5xl lg:txt-8xl ls001m md:ls004m lg:ls009m source-serif">{detail.title}</h1>
+					<h1 class="txt-4xl lh11 md:txt-5xl lg:txt-6xl ls001m md:ls004m lg:ls009m source-serif">{detail.title}</h1>
 					<p class="txt-xl lh14 grey2">{detail.description}</p>
 					<div class="grid grid-cols-2 lg:grid-cols-4 white-grid mtop16">
 						<div class="box rgap8 p16 lg:p32 whitecard">
@@ -53,6 +62,25 @@
 							<p class="txt-sm tt-u w500">{detail.price}</p>
 						</div>
 					</div>
+					{#if detail.status === "OPEN NOW"}
+						<div class="box gap8">
+							<p class="txt-xs tt-u w600">Payment Links (refresh if links not visible):</p>
+							<div class="row paybuttons gap16 mwrap">
+								{#if paylinkId}
+									<div class="box">
+<RazorpayButton buttonId={paylinkId} />
+<p class="txt-00 tt-u">Indian Payments</p>
+									</div>
+								{/if}
+								{#if paylinkDId}
+									<div class="box">
+<RazorpayButton buttonId={paylinkDId} />
+<p class="txt-00 tt-u">Intl. Payments</p>
+									</div>
+								{/if}
+							</div>
+						</div>
+					{/if}
 				</div>
 			</div>
 			<div class="box up" id="top-right">

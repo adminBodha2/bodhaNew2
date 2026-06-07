@@ -75,6 +75,7 @@
 							<p class="txt-xs w500 tt-u grey1">{item.badge}</p>
 							<h3 class="txt-xl lg:txt-2xl lh12 w600 a-hover ptop8 pbot16 ls001m">{item.title}</h3>
 							<p class="grey2 lh14">{item.description}</p>
+<p class="a-hover highlight-text arrow self-bottom px8">→</p>
 						</a>
 					{/each}
 				</div>
