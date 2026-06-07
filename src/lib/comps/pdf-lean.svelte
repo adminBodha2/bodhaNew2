@@ -526,12 +526,16 @@
 	flex-shrink: 0
 	gap: 2px
 	padding: 0 10px
-	height: 44px
 	background: #fff
 	border-bottom: 1px solid #e2e2e2
 	box-shadow: 0 1px 3px rgba(0,0,0,.07)
 	z-index: 1
 	user-select: none
+	flex-wrap: wrap
+	@media (max-width: 1024px)
+		justify-content: center
+	@media (min-width: 1025px)
+		height: 44px
 
 .btn-group
 	display: flex
@@ -628,7 +632,8 @@
 	overflow: auto
 	display: flex
 	justify-content: center
-	padding: 28px 24px 36px
+	@media (min-width: 1025px)
+		padding: 28px 24px 36px
 
 	&::-webkit-scrollbar
 		width: 8px
@@ -653,6 +658,9 @@
 	transform: scale(var(--ps, 1))
 	transform-origin: var(--ox, 50%) var(--oy, 50%)
 	will-change: transform
+	@media (max-width: 1024px)
+		width: 100%
+		height: 100%
 
 // ── Page card (white paper with shadow) ───────────────────────────────────────
 .page-card
@@ -660,9 +668,15 @@
 	border-radius: 2px
 	line-height: 0
 	box-shadow: 0 1px 3px rgba(0,0,0,.22), 0 4px 12px rgba(0,0,0,.16), 0 12px 32px rgba(0,0,0,.10)
+	@media (max-width: 1024px)
+		width: 100%
+		height: 100%
 
 	canvas
 		display: block
+		@media (max-width: 1024px)
+			width: 100%
+			height: 100%
 
 // ── Overlay states ────────────────────────────────────────────────────────────
 .state-overlay

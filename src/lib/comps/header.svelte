@@ -4,10 +4,23 @@
 	import Search from '$lib/icons/search.svelte';
 	import Close from '$lib/icons/close.svelte';
 	import Mobilemenu from '$lib/comps/mobilemenu.svelte';
+	import { clickOutsideAction } from '$lib/utils/clickoutside';
+	import { autoAnimate } from '@formkit/auto-animate';
 	import { menuState, toggleMenuState, toggleSearch, darkTheme, iW } from '$lib/utils/globalstores';
 	import { navLinks } from '$lib/utils/localsends';
 
 	let scro = $state(0);
+	let dropvis = $state(false);
+
+	function toggleDrop(){
+		dropvis = !dropvis
+	}
+
+	function handleClickOutside (){
+		if (dropvis === true) {
+			dropvis = false
+		}
+	}
 
 	let firstSubroute = $derived.by(() => {
 		const parts = page.url.pathname.split('/').filter(Boolean);
@@ -42,8 +55,18 @@
 			{#each navLinks as link}
 				<a class="navbar-link" class:active={firstSubroute === link.link} href={link.link}>{link.title}</a>
 			{/each}
+				<div class="header-dropdown" use:clickOutsideAction onclickoutside={handleClickOutside}>
+					<button class="navbar-link" onclick={toggleDrop}>More</button>
+					<button class="blank dropdown-inside" class:visible={dropvis} onclick={handleClickOutside}>
+						<a class="in-navbar-link" href="/newsletter">Newsletter</a>
+						<a class="in-navbar-link" href="/aryavarta">Aryavarta</a>
+						<a class="in-navbar-link" href="/designbodha">designbodha</a>
+						<a class="in-navbar-link" href="/wiki">Wiki</a>
+						<a class="in-navbar-link" href="/lab">Lab</a>
+					</button>
+				</div>
 				<button class="blank" onclick={toggleSearch}>
-					<Search size={27}/>
+					<Search size={20}/>
 				</button>
 		</nav>
 
@@ -70,6 +93,33 @@
 </section>
 
 <style lang="sass">
+
+.header-dropdown
+	position: relative	
+
+.dropdown-inside
+	display: none
+	position: absolute
+	min-width: 200px
+	background: var(--color-back)
+	border: var(--border-main)
+	right: -16px
+	text-align: right
+	box-shadow: 2px 3px 6px rgba(0,0,0,0.1)
+	border-radius: 4px
+	padding: 8px
+	transition: all 110ms ease
+	a
+		display: block
+		padding: 16px
+		text-transform: uppercase
+		font-size: 16px
+		font-weight: 500
+		letter-spacing: -0.02rem
+		&:hover
+			background: var(--color-stone-3)
+	&.visible
+		display: block
 
 .navbar-link
 	text-transform: uppercase
