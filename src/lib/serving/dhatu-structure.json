@@ -1,0 +1,417 @@
+{
+	"title": "Dhatu Forge: Civilizational Path",
+	"subtitle": "8 levels exploring 8 sessions of The Word as Civilization",
+	"levels": [
+		{
+			"id": 1,
+			"title": "Session 1 - What Holds and What Flows",
+			"session": {
+				"id": 1,
+				"title": "Session 1 - What Holds and What Flows",
+				"text": "The twin foundations of √dhṛ and √ṛ - and the method that reads them."
+			},
+			"newMechanics": {
+				"resonanceMeter": "Each crafted concept adds resonance; low resonance = concepts blur together",
+				"divineNameChallenge": "Craft concepts from dhatu-derived devata names (Agni, Indra, Varuna)",
+				"rtaVisualization": "Cosmic order bar fills as concepts are crafted"
+			},
+			"unlockedDhatuIds": [
+				"dhr",
+				"r",
+				"agn",
+				"ind",
+				"var",
+				"saṃ",
+				"vi"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"sam",
+					"up",
+					"ni"
+				],
+				"required": [
+					"sam"
+				]
+			},
+			"specialRules": {
+				"devataRoots": "Must include at least 2 devata root concepts"
+			}
+		},
+		{
+			"id": 2,
+			"title": "Session 2 - Action, Refinement, Culture",
+			"session": {
+				"id": 2,
+				"title": "Session 2 - Action, Refinement, Culture",
+				"text": "√kr - to do, to make, to act. The most consequential root..."
+			},
+			"newMechanics": {
+				"samskaraTracker": "Each crafted concept leaves a life-rite residue",
+				"karmaYogaMode": "Craft concepts emphasizing action without attachment",
+				"lifeCycleRites": "Craft 5 concepts from different action verbs to complete life-cycle"
+			},
+			"unlockedDhatuIds": [
+				"kr",
+				"sam-kr",
+				"dā",
+				"dhā",
+				"kṣa",
+				"vic",
+				"su"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"sam",
+					"sam-"
+				],
+				"required": [
+					"none",
+					"sam"
+				]
+			},
+			"specialRules": {
+				"karmaYogaMode": "Action must be detached from outcome"
+			}
+		},
+		{
+			"id": 3,
+			"title": "Session 3 - Consciousness, Mind, and Ultimate Reality",
+			"session": {
+				"id": 3,
+				"title": "Session 3 - Consciousness, Mind, and Ultimate Reality",
+				"text": "An exploration of √cit, √man, √bṛh, and √at."
+			},
+			"newMechanics": {
+				"ashramaMode": "Shift between 4 ashrama phases (Brahmacarya, Grihastha, Vanaprastha, Sannyasa)",
+				"consciousnessLadder": "Visual representation of √cit ascending to Brahman",
+				"tatTvamAsiPuzzle": "Match individual consciousness concepts to universal reality"
+			},
+			"unlockedDhatuIds": [
+				"cit",
+				"man",
+				"bhr",
+				"brh",
+				"at",
+				"puru"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"pra",
+					"vi",
+					"sam"
+				],
+				"required": [
+					"none"
+				]
+			},
+			"specialRules": {
+				"ashramaMode": "4 crafting rules per ashrama phase"
+			}
+		},
+		{
+			"id": 4,
+			"title": "Session 4 - The Bearers and the Purifiers",
+			"session": {
+				"id": 4,
+				"title": "Session 4 - The Bearers and the Purifiers",
+				"text": "The semantic archaeology of proper nouns."
+			},
+			"newMechanics": {
+				"properNameForge": "Craft concepts from proper nouns (Puru, Bharata, Puruṣa)",
+				"soundOntology": "Audio visualization of how name-sound carries reality",
+				"lineageTree": "Visualize the Puru-Bharata lineage of civilization"
+			},
+			"unlockedDhatuIds": [
+				"pu",
+				"bhr",
+				"puru",
+				"bhr-putra"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none"
+				],
+				"required": []
+			},
+			"specialRules": {
+				"properNameForge": "Must use bare root (none prefix) only"
+			}
+		},
+		{
+			"id": 5,
+			"title": "Session 5 - Sacrifice and Technology",
+			"session": {
+				"id": 5,
+				"title": "Session 5 - Sacrifice and Technology",
+				"text": "Two verbs that define a civilization's relationship to power."
+			},
+			"newMechanics": {
+				"yajnaTechneToggle": "Switch between Indic (yajña) and Western (techne) crafting modes",
+				"channelingChallenge": "Craft concepts that channel power rather than extract",
+				"cosmicSacrificeBar": "Fill the bar to reveal Puruṣa Sūkta cosmology"
+			},
+			"unlockedDhatuIds": [
+				"yaj",
+				"yantr",
+				"dā",
+				"cakra",
+				"ghaṭa"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"upa",
+					"pra"
+				],
+				"required": []
+			},
+			"specialRules": {
+				"channelingChallenge": "Must use yantr or yantra derivative"
+			}
+		},
+		{
+			"id": 6,
+			"title": "Session 6 - Memory and Hearing",
+			"session": {
+				"id": 6,
+				"title": "Session 6 - Memory and Hearing",
+				"text": "How a civilization remembers."
+			},
+			"newMechanics": {
+				"transmissionChain": "Craft concepts in a chain that must be remembered across sessions",
+				"interruptionMode": "Random forgetting events challenge players to recall concepts",
+				"itihasaVsItiSaPuzzle": "Distinguish between narrative and fact in knowledge transmission"
+			},
+			"unlockedDhatuIds": [
+				"smr",
+				"shru",
+				"smara",
+				"śrota"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"pra",
+					"ni",
+					"upa"
+				],
+				"required": []
+			},
+			"specialRules": {
+				"transmissionChain": "Chain length and interruption rules"
+			}
+		},
+		{
+			"id": 7,
+			"title": "Session 7 - Life and Death",
+			"session": {
+				"id": 7,
+				"title": "Session 7 - Life and Death",
+				"text": "The boundary conditions of all civilizational existence."
+			},
+			"newMechanics": {
+				"rebirthCycle": "Craft concepts that die and rebirth across sessions",
+				"amritaChallenge": "Craft concepts that achieve immortality through grammar",
+				"civilizationalDNA": "Store concepts as seeds that germinate in future playthroughs"
+			},
+			"unlockedDhatuIds": [
+				"jiv",
+				"mr",
+				"sva",
+				"lī"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"pra",
+					"vi",
+					"sam"
+				],
+				"required": []
+			},
+			"specialRules": {
+				"amritaChallenge": "Criteria for immortal concepts"
+			}
+		},
+		{
+			"id": 8,
+			"title": "Session 8 - The Grammar of Others",
+			"session": {
+				"id": 8,
+				"title": "Session 8 - The Grammar of Others",
+				"text": "When we apply the method comparatively - reading Greek, Hebrew, Arabic, and Chinese civilizational terms through their root structures."
+			},
+			"newMechanics": {
+				"civilizationComparisonMode": "Side-by-side comparison of Indic vs. Greek/Hebrew/Arabic/Chinese roots",
+				"rootDivergenceMeter": "Visualize how roots diverge across civilizations",
+				"uniqueCaseBadge": "Earn badges for crafting concepts unique to Indic tradition"
+			},
+			"unlockedDhatuIds": [
+				"vid",
+				"jñā",
+				"logos",
+				"physis",
+				"bara",
+				"davar",
+				"ʿilm",
+				"ʾilm",
+				"dao",
+				"de"
+			],
+			"prefixRules": {
+				"allowed": [
+					"none",
+					"sam",
+					"vi",
+					"pra"
+				],
+				"required": []
+			},
+			"specialRules": {
+				"civilizationComparisonMode": "Comparative crafting with side-by-side layout"
+			}
+		}
+	],
+	"comparativeRoots": {
+		"greek": [
+			{
+				"root": "logos",
+				"script": "λόγος",
+				"meaning": "to speak, gather, account, reason",
+				"derivations": [
+					"logos - the account, the reason",
+					"philo-logos - lover of words/knowledge"
+				],
+				"civilizationInsight": "Western civilization built on discourse - speaking before being. The word as an external instrument of power."
+			},
+			{
+				"root": "physis",
+				"script": "φύσις",
+				"meaning": "to sprout, grow, emerge",
+				"derivations": [
+					"physis - nature, the emerging process",
+					"phýō - to grow, to be born"
+				],
+				"civilizationInsight": "Greek civilization focused on physis as the process of coming-to-be, contrasted with dharmic civilization's focus on dhāraṇa (holding)."
+			}
+		],
+		"hebrew": [
+			{
+				"root": "bara",
+				"script": "בָּרָא",
+				"meaning": "to create from nothing, shape, fashion",
+				"derivations": [
+					"bara - ex nihilo creation (God only)",
+					"asah - to make, to do (human)"
+				],
+				"civilizationInsight": "Abrahamic civilization: creation as ex nihilo, divine creator vs. human creation. Bara places a gap between creator and created."
+			},
+			{
+				"root": "davar",
+				"script": "דָּבָר",
+				"meaning": "word, thing, matter, event",
+				"derivations": [
+					"davar - divine word has material creative force",
+					"davara - spoken word commands"
+				],
+				"civilizationInsight": "Hebrew: the divine word is material. When prophet speaks, word commands. Contrast with mantra - transforms consciousness through sound."
+			}
+		],
+		"arabic": [
+			{
+				"root": "ʿlm",
+				"script": "ع-ل-م",
+				"meaning": "to know, to teach, to learn",
+				"derivations": [
+					"ʿalima - to know (Form I)",
+					"ʿallama - to teach (Form II)",
+					"taʿallama - to learn (Form V)",
+					"ʿilm - knowledge (verbal noun)"
+				],
+				"civilizationInsight": "Arabic: knowledge transmission through formalized teaching (ʿallama) and learning (taʿallama). Knowledge as acquisition through structured pedagogy."
+			}
+		],
+		"chinese": [
+			{
+				"root": "dao",
+				"script": "道",
+				"meaning": "way, path, to speak",
+				"derivations": [
+					"dao - the eternal way that cannot be named",
+					"dao - to guide, to show the way"
+				],
+				"civilizationInsight": "Chinese: Dao is ineffable. The Way that can be named is not the eternal Way. Chinese civilization built around a concept declaring its own linguistic inadequacy."
+			},
+			{
+				"root": "de",
+				"script": "德",
+				"meaning": "virtue, inherent power, goodness",
+				"derivations": [
+					"de - inherent force and power that moves the world",
+					"de - moral virtue, psychic quality of the king"
+				],
+				"civilizationInsight": "Chinese: De as both moral virtue and psychic life force. The Dao de jing shows de as activation of dao in the visible world."
+			}
+		]
+	},
+	"sessionExcerpts": [
+		{
+			"session": 1,
+			"excerpts": [
+				"Rgveda 1.50.1: 'Ṛta is the order of the cosmos... the cosmic law that holds.'"
+			]
+		},
+		{
+			"session": 2,
+			"excerpts": [
+				"Bhagavad Gita 3.21: 'Whatever action a man does causes him to become like that action.'",
+				"Yoga Sutras 2.1: 'yogo vidyate, yogo viddhi, yogo nityah' - 'yoga is known, yoga is to be known, yoga is eternal.'"
+			]
+		},
+		{
+			"session": 3,
+			"excerpts": [
+				"Mandukya Upanishad 1: 'Prana, prana, prana, prana - the four states of consciousness'."
+			]
+		},
+		{
+			"session": 4,
+			"excerpts": [
+				"Shrikant Talageri: 'The Puru-Bharata lineage - Pūru purifier, Bharata bearer.'",
+				"The names encode the ontological reality of the named within their sound."
+			]
+		},
+		{
+			"session": 5,
+			"excerpts": [
+				"Rgveda 10.90 (Puruṣa Sūkta): 'The cosmos generated through sacrifice.'",
+				"Heidegger: 'Techness is the revealing of the world as standing-reserve - extraction and domination.'"
+			]
+		},
+		{
+			"session": 6,
+			"excerpts": [
+				"Ram Swarup: 'Smṛti is law that changes with memory - adaptable, era-specific.'",
+				"Mahaabharata Adi Parva: 'So indeed it was' - itihāsa as narrative of what was heard."
+			]
+		},
+		{
+			"session": 7,
+			"excerpts": [
+				"Kaṭha Upanishad: 'Death is not the end - the atman persists through death.'",
+				"Aurobindo: 'A civilization that has stored its bija - its seed - in sufficiently robust transmission systems can pass through death and germinate again.'"
+			]
+		},
+		{
+			"session": 8,
+			"excerpts": [
+				"Rajiv Malhotra: 'Integrative unity vs. synthetic unity - the core civilizational divergence.'",
+				"Pollock: 'The Sanskrit Cosmopolis - how language served as technology of power.'"
+			]
+		}
+	]
+}

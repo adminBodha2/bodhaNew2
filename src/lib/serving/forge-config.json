@@ -1,0 +1,392 @@
+{
+	"title": "Dhatu Forge",
+	"subtitle": "Collect roots. Apply transformations. Craft a civilization.",
+	"levels": {
+		"thresholds": [
+			0,
+			5,
+			12,
+			20,
+			30
+		],
+		"labels": [
+			"Level 1",
+			"Level 2",
+			"Level 3",
+			"Level 4",
+			"Level 5"
+		]
+	},
+	"dhatus": [
+		{
+			"id": "dhr",
+			"root": "√dhṛ",
+			"meaning": "to hold, sustain",
+			"level": 1
+		},
+		{
+			"id": "r",
+			"root": "√ṛ",
+			"meaning": "to move, flow",
+			"level": 1
+		},
+		{
+			"id": "kr",
+			"root": "√kṛ",
+			"meaning": "to do, make",
+			"level": 1
+		},
+		{
+			"id": "sam-kr",
+			"root": "√saṃ-skṛ",
+			"meaning": "to make well together",
+			"level": 1
+		},
+		{
+			"id": "cit",
+			"root": "√cit",
+			"meaning": "to perceive, shine",
+			"level": 2
+		},
+		{
+			"id": "man",
+			"root": "√man",
+			"meaning": "to think, measure",
+			"level": 2
+		},
+		{
+			"id": "bhr",
+			"root": "√bhṛ",
+			"meaning": "to bear, nourish",
+			"level": 2
+		},
+		{
+			"id": "pu",
+			"root": "√pū",
+			"meaning": "to purify",
+			"level": 2
+		},
+		{
+			"id": "brh",
+			"root": "√bṛh",
+			"meaning": "to expand, grow",
+			"level": 3
+		},
+		{
+			"id": "at",
+			"root": "√at",
+			"meaning": "to go, wander",
+			"level": 3
+		},
+		{
+			"id": "yaj",
+			"root": "√yaj",
+			"meaning": "to offer, exchange",
+			"level": 3
+		},
+		{
+			"id": "yantr",
+			"root": "√yantr",
+			"meaning": "to restrain, channel",
+			"level": 3
+		},
+		{
+			"id": "smr",
+			"root": "√smṛ",
+			"meaning": "to remember",
+			"level": 4
+		},
+		{
+			"id": "shru",
+			"root": "√śru",
+			"meaning": "to hear",
+			"level": 4
+		},
+		{
+			"id": "jiv",
+			"root": "√jīv",
+			"meaning": "to live",
+			"level": 4
+		},
+		{
+			"id": "mr",
+			"root": "√mṛ",
+			"meaning": "to die, dissolve",
+			"level": 4
+		}
+	],
+	"prefixes": [
+		{
+			"id": "none",
+			"label": "bare root",
+			"display": "—"
+		},
+		{
+			"id": "sam",
+			"label": "sam-",
+			"display": "sam-"
+		},
+		{
+			"id": "pra",
+			"label": "pra-",
+			"display": "pra-"
+		},
+		{
+			"id": "vi",
+			"label": "vi-",
+			"display": "vi-"
+		},
+		{
+			"id": "upa",
+			"label": "upa-",
+			"display": "upa-"
+		},
+		{
+			"id": "a",
+			"label": "ā-",
+			"display": "ā-"
+		}
+	],
+	"recipes": {
+		"dhr+none": {
+			"name": "Dharma",
+			"derivation": "√dhṛ → dhāraṇa → dharma",
+			"meaning": "That which holds. The structural principle sustaining civilization in coherence - not a law imposed, but the intrinsic holding-pattern of reality.",
+			"civ": "A civilization built on dharma discovers order rather than legislating it. Law is recognition, not invention."
+		},
+		"dhr+sam": {
+			"name": "Saṃdhāraṇa",
+			"derivation": "sam + √dhṛ → saṃdhāraṇa",
+			"meaning": "Collective holding. When a community holds together - the bonds that make a people cohere without external coercion.",
+			"civ": "The village, the kula, the jāti - social structures that persist through mutual holding, not contract."
+		},
+		"dhr+a": {
+			"name": "Ādhāra",
+			"derivation": "ā + √dhṛ → ādhāra",
+			"meaning": "The substrate, the base, the container that holds. The ground on which something rests.",
+			"civ": "Every concept needs an ādhāra - a ground. Consciousness needs a body. Dharma needs a people. The question is always: what holds what?"
+		},
+		"r+none": {
+			"name": "Ṛta",
+			"derivation": "√ṛ → ṛta",
+			"meaning": "Cosmic order as movement - the sun moves because it is its nature to move. Order that flows rather than being imposed.",
+			"civ": "Before dharma was articulated, there was ṛta. The Ṛgvedic cosmos runs on inherent rhythm, not command."
+		},
+		"r+pra": {
+			"name": "Pravṛtti",
+			"derivation": "pra + √ṛ → pravṛtti",
+			"meaning": "Forward-movement. Engagement with the world, active participation in the flow of things.",
+			"civ": "Pravṛtti-mārga: the path of engagement. A civilization that honors worldly action as sacred, not merely permitted."
+		},
+		"r+vi": {
+			"name": "Nivṛtti",
+			"derivation": "vi/ni + √ṛ → nivṛtti",
+			"meaning": "Turning back, withdrawal. The return movement - disengagement from the flow.",
+			"civ": "Nivṛtti-mārga: the path of withdrawal. Sannyāsa is built into the civilizational grammar as the complement to engagement."
+		},
+		"kr+none": {
+			"name": "Karma",
+			"derivation": "√kṛ → karma",
+			"meaning": "Action, making, doing. Every act leaves a trace. The universe keeps accounts through the structure of action itself.",
+			"civ": "Karma is not punishment or reward. It is the grammar of action - the fact that doing has consequences encoded in the doing itself."
+		},
+		"kr+pra": {
+			"name": "Prakṛti",
+			"derivation": "pra + √kṛ → prakṛti",
+			"meaning": "The first making. Primordial nature - that which was made before everything else, the material substrate of manifestation.",
+			"civ": "Sāṃkhya builds its entire cosmology on this: prakṛti as the creative matrix, puruṣa as the witness. The root tells you the relationship."
+		},
+		"kr+vi": {
+			"name": "Vikṛti",
+			"derivation": "vi + √kṛ → vikṛti",
+			"meaning": "Transformation, modification, distortion. What happens when the original making is altered.",
+			"civ": "Āyurveda diagnoses vikṛti - deviation from prakṛti. Health is return to original making. Disease is distorted action."
+		},
+		"sam-kr+none": {
+			"name": "Saṃskāra",
+			"derivation": "√saṃ-skṛ → saṃskāra",
+			"meaning": "Making-well-together. Refinement through collective process. The sixteen life-rites that shape a person from conception to death.",
+			"civ": "Culture (saṃskṛti) is literally 'well-made-together.' A civilization that names itself by its refining process rather than its territory or blood."
+		},
+		"sam-kr+pra": {
+			"name": "Saṃskṛti",
+			"derivation": "sam + pra + √kṛ → saṃskṛti",
+			"meaning": "Culture, civilization. The collective product of sustained refinement across generations.",
+			"civ": "Bhārata calls its civilizational identity saṃskṛti - the process of making well. Identity lies in the verb, not the noun."
+		},
+		"cit+none": {
+			"name": "Cit / Citta",
+			"derivation": "√cit → cit, citta",
+			"meaning": "Consciousness, awareness, the shining-forth of knowing. The field in which all experience arises.",
+			"civ": "A civilization that begins with √cit builds temples oriented inward. Consciousness is primary, matter is derivative."
+		},
+		"cit+pra": {
+			"name": "Praciti",
+			"derivation": "pra + √cit → praciti",
+			"meaning": "Recognition, conviction. Consciousness directed forward - the flash of knowing that hits.",
+			"civ": "Yogic pratyaya: the moment consciousness grasps its object with certainty. The epistemology is built into the root."
+		},
+		"cit+vi": {
+			"name": "Vicitra",
+			"derivation": "vi + √cit → vicitra",
+			"meaning": "Variegated, wonderful, manifold. Consciousness dispersed into multiplicity.",
+			"civ": "The world's beauty is vi-cit: consciousness scattered into endless forms. Aesthetics encoded in a prefix."
+		},
+		"man+none": {
+			"name": "Manas",
+			"derivation": "√man → manas",
+			"meaning": "Mind, the thinking instrument. Not consciousness itself but the tool consciousness uses to think.",
+			"civ": "Manas is not ātman. The mind is an instrument, not the self. This distinction - which English collapses - generates the entire yogic project."
+		},
+		"man+pra": {
+			"name": "Pramāṇa",
+			"derivation": "pra + √man → pramāṇa",
+			"meaning": "Means of valid knowledge. The measure by which knowing is measured.",
+			"civ": "Every darśana begins by declaring its pramāṇas. Epistemology before metaphysics - you must know how you know before you claim what is."
+		},
+		"man+sam": {
+			"name": "Sammati",
+			"derivation": "sam + √man → sammati",
+			"meaning": "Consensus, agreement, common thinking. When minds come together.",
+			"civ": "Governance by sammati - thinking-together - rather than voting or decree. The sabha tradition."
+		},
+		"bhr+none": {
+			"name": "Bhārata",
+			"derivation": "√bhṛ → bhārata",
+			"meaning": "The one who bears, nourishes, maintains. The name of the civilization - 'those who bear/nourish.'",
+			"civ": "A civilization that names itself 'the bearers' - those who carry and nourish the tradition forward. Identity as responsibility."
+		},
+		"bhr+sam": {
+			"name": "Saṃbhāra",
+			"derivation": "sam + √bhṛ → saṃbhāra",
+			"meaning": "Provisions, materials gathered together. The collecting of what is needed.",
+			"civ": "Before any yajña, the saṃbhāra must be gathered. Civilization requires material preparation alongside spiritual intent."
+		},
+		"pu+none": {
+			"name": "Pūjā / Pāvana",
+			"derivation": "√pū → pūjā, pāvana, puṇya",
+			"meaning": "Purification, worship as purification, merit as the purified residue of right action.",
+			"civ": "Worship is purification. Puṇya is what remains when the impure is burned away. The sacred is the clean."
+		},
+		"pu+vi": {
+			"name": "Vipāvana",
+			"derivation": "vi + √pū → vipāvana",
+			"meaning": "Thorough purification, complete cleansing. The intensified purificatory act.",
+			"civ": "Prāyaścitta - the restoration of purity after transgression. A civilization that encodes recovery, not permanent damnation."
+		},
+		"brh+none": {
+			"name": "Brahman",
+			"derivation": "√bṛh → brahman",
+			"meaning": "The expansive. That which grows without limit. The absolute as boundless expansion.",
+			"civ": "The highest reality named by a verb of growth. Brahman is not a static absolute - it is ceaseless expansion."
+		},
+		"brh+pra": {
+			"name": "Prabṛhaṇa",
+			"derivation": "pra + √bṛh → prabṛhaṇa",
+			"meaning": "Great expansion, nourishment, growth outward.",
+			"civ": "The brāhmaṇa's function: to expand knowledge. The priest is named for what the root does - grows the sacred."
+		},
+		"at+none": {
+			"name": "Atithi",
+			"derivation": "√at → atithi",
+			"meaning": "The one who wanders, the guest. One who arrives without fixed schedule (a-tithi: without a date).",
+			"civ": "Atithi devo bhava: the wanderer is god. A civilization that sacralizes the unexpected arrival - hospitality encoded in the root of movement."
+		},
+		"at+pra": {
+			"name": "Praṭana",
+			"derivation": "pra + √at → praṭana",
+			"meaning": "Going forth, wandering with purpose. The directed journey.",
+			"civ": "Tīrtha-yātrā: the sacred wandering. Movement itself as spiritual practice, not mere transit."
+		},
+		"yaj+none": {
+			"name": "Yajña",
+			"derivation": "√yaj → yajña",
+			"meaning": "Offering, exchange, sacrifice. The cosmic transaction that sustains the world.",
+			"civ": "Yajña is the operating logic of the Vedic cosmos. Gods and humans sustain each other through reciprocal offering. The universe runs on exchange, not extraction."
+		},
+		"yaj+pra": {
+			"name": "Prayāja",
+			"derivation": "pra + √yaj → prayāja",
+			"meaning": "The preliminary offering. What must be offered first before the main act begins.",
+			"civ": "Every endeavor requires a prayāja - an initial giving-up before receiving. The grammar of preparation."
+		},
+		"yaj+upa": {
+			"name": "Upayāja",
+			"derivation": "upa + √yaj → upayāja",
+			"meaning": "Subsidiary offering. The supporting sacrifice that makes the main one possible.",
+			"civ": "Nothing stands alone. Every central act has upayājas - supporting structures. Civilization as layered offering."
+		},
+		"yantr+none": {
+			"name": "Yantra",
+			"derivation": "√yantr → yantra",
+			"meaning": "That which channels, restrains, holds in form. Instrument, machine, sacred diagram.",
+			"civ": "A yantra channels cosmic energy into form. Technology and sacred geometry share a root - both are instruments of channeling."
+		},
+		"yantr+sam": {
+			"name": "Saṃyama",
+			"derivation": "sam + √yam → saṃyama",
+			"meaning": "Total restraint. In yoga: dhāraṇā + dhyāna + samādhi held together.",
+			"civ": "Patañjali's saṃyama: the three highest limbs fused. Mastery is channeling held steady. The yogi as living yantra."
+		},
+		"smr+none": {
+			"name": "Smṛti",
+			"derivation": "√smṛ → smṛti",
+			"meaning": "Memory, remembered tradition. What the civilization carries forward through human recall.",
+			"civ": "Smṛti is law that changes with memory - adaptable, era-specific. The tradition distinguishes what is heard (permanent) from what is remembered (contextual)."
+		},
+		"smr+pra": {
+			"name": "Prasmṛti",
+			"derivation": "pra + √smṛ → prasmṛti",
+			"meaning": "Deep remembrance, recollection. Memory that reaches back to origin.",
+			"civ": "Itihāsa: 'so indeed it was.' History as deep remembrance, not documentation. The civilization trusts trained memory over inscription."
+		},
+		"shru+none": {
+			"name": "Śruti",
+			"derivation": "√śru → śruti",
+			"meaning": "That which is heard. Revelation received through listening - the Vedas as heard truth.",
+			"civ": "The highest authority is not written or reasoned - it is heard. A civilization that places listening above argumentation as the route to truth."
+		},
+		"shru+pra": {
+			"name": "Praśruti",
+			"derivation": "pra + √śru → praśruti",
+			"meaning": "Fame, renown - that which is heard widely. When what you are is heard across distance.",
+			"civ": "Reputation as 'being heard far.' Character produces resonance. Dharmic fame is not self-promotion but audibility of virtue."
+		},
+		"shru+upa": {
+			"name": "Upaniṣad",
+			"derivation": "upa + ni + √sad (via √śru) → upaniṣad",
+			"meaning": "Sitting close to listen. The knowledge transmitted in proximity - guru to śiṣya.",
+			"civ": "The highest texts named for a posture of listening. Knowledge requires nearness. Truth is not broadcast - it is whispered to the ready ear."
+		},
+		"jiv+none": {
+			"name": "Jīva",
+			"derivation": "√jīv → jīva",
+			"meaning": "The living one, the life-principle. Individual soul as the one who lives.",
+			"civ": "Jīva is not 'soul' as substance but 'the living' as verb-become-noun. You are not a thing that has life - you are the living itself."
+		},
+		"jiv+pra": {
+			"name": "Prājīvya",
+			"derivation": "pra + √jīv → prājīvya",
+			"meaning": "Livelihood, the means by which one lives forward.",
+			"civ": "Vṛtti - livelihood - is a dharmic category. How you sustain life is not secular but sacred. Economics as a branch of dharma."
+		},
+		"mr+none": {
+			"name": "Mṛtyu",
+			"derivation": "√mṛ → mṛtyu",
+			"meaning": "Death as dissolution. Not ending but un-making - the return to unformed state.",
+			"civ": "Death is √mṛ: dissolution, not extinction. What was made (√kṛ) is un-made. Rebirth follows because making never stops."
+		},
+		"mr+pra": {
+			"name": "Pralaya",
+			"derivation": "pra + √mṛ/√lī → pralaya",
+			"meaning": "The great dissolution. Cosmic death - when everything returns to the unmanifest.",
+			"civ": "Pralaya is not apocalypse. It is rest between creations. The cosmos breathes: sṛṣṭi (emission) and pralaya (reabsorption). Death at cosmic scale is a pause."
+		},
+		"mr+vi": {
+			"name": "Vimukti",
+			"derivation": "vi + √muc (related √mṛ) → vimukti",
+			"meaning": "Liberation, release. The final dissolution of bondage.",
+			"civ": "Mokṣa is a form of dying - dying to saṃsāra while alive. Liberation is death done right, on purpose."
+		}
+	}
+}

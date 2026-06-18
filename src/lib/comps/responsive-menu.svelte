@@ -117,7 +117,6 @@
 	right: 0
 	z-index: 24
 	display: flex
-	flex-direction: column
 	gap: 0.5rem
 	padding: 1rem 0.5rem
 	border-radius: 2px
@@ -142,6 +141,7 @@
 		display: flex
 		flex-direction: row
 		align-items: center
+		flex-wrap: wrap
 		gap: 1px
 		padding: 0
 		background: var(--color-border)
@@ -156,6 +156,7 @@
 			position: static
 			display: flex
 			flex-direction: row
+			flex-wrap: wrap
 			align-items: center
 			gap: 1px
 			padding: 0

@@ -91,7 +91,10 @@
 					</p>
 				</Reveal>
 				<Slider>
-					<a class="primary anveshi" href="/anveshi/badami"><span>OPEN NOW - BADAMI CHAPTER</span></a>
+					<div class="row gap8 mwrap">
+						<a class="primary anveshi" href="/anveshi/badami"><span>OPEN - BADAMI</span></a>
+						<a class="primary anveshi" href="/anveshi/odisha"><span>OPEN - ODISHA</span></a>
+					</div>
 				</Slider>
 			</div>
 		</div>
