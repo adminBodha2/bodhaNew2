@@ -55,7 +55,7 @@
 <Container>
 	<Crumb showT={true} title="{data.slug} Chapter" showD={true} desc={data.description} showRow={data.isOpen}>
 		{#if data.isOpen}
-			<p class="anveshi-pill">OPEN NOW!</p>
+			<p class="anveshi-pill">REGISTER NOW!</p>
 		{/if}
 	</Crumb>
 	<!--------------introduction with details like date, pricing etc.------------------>
