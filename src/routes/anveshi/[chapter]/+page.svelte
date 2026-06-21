@@ -96,12 +96,12 @@
 						<p class="txt-xs grey1 tt-u">Temples</p>
 					</div>
 					{#if data.isOpen}
-					<div class="icon-box box std-pad b-main ycenter xcenter ta-c whitestone">
+					<div class="anveshi-color-box box std-pad b-main ycenter xcenter ta-c">
 							<a class="txt-lg tt-u w600" href={data.registerLink} target="_blank" rel="noreferrer"><span>Register Now</span></a>
 					</div>
 						{/if}
 					{#if data.brochureLink}
-					<div class="icon-box box std-pad b-main ycenter xcenter ta-c">
+					<div class="anveshi-color-box box std-pad b-main ycenter xcenter ta-c">
 						<a class="txt-lg tt-u w600" href={data.brochureLink} target="_blank" rel="noreferrer"><span>Brochure</span></a>
 					</div>
 					{/if}

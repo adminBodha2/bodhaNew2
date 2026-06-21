@@ -1,0 +1,76 @@
+{
+	"title": "Dhatu Forge — World",
+	"width": 2500,
+	"height": 600,
+	"startPosition": {
+		"x": 80,
+		"y": 300
+	},
+	"biomes": [
+		{
+			"id": 1,
+			"name": "Grove",
+			"level": 1,
+			"x": 0,
+			"width": 500,
+			"color": "#a8b888",
+			"accent": "#8a9a6a",
+			"dhatuIds": ["dhr", "r", "kr", "sam-kr"],
+			"prefixIds": ["none", "sam", "pra", "vi", "a"],
+			"forge": { "x": 250, "y": 460 },
+			"gate": { "x": 500, "label": "Gate → Riverbed" }
+		},
+		{
+			"id": 2,
+			"name": "Riverbed",
+			"level": 2,
+			"x": 500,
+			"width": 500,
+			"color": "#8ca5a0",
+			"accent": "#6a8580",
+			"dhatuIds": ["cit", "man", "bhr", "pu"],
+			"prefixIds": ["none", "sam", "pra", "vi"],
+			"forge": { "x": 750, "y": 460 },
+			"gate": { "x": 1000, "label": "Gate → Kiln-hill" }
+		},
+		{
+			"id": 3,
+			"name": "Kiln-hill",
+			"level": 3,
+			"x": 1000,
+			"width": 500,
+			"color": "#c08868",
+			"accent": "#9a6848",
+			"dhatuIds": ["brh", "at", "yaj", "yantr"],
+			"prefixIds": ["none", "sam", "pra", "upa"],
+			"forge": { "x": 1250, "y": 460 },
+			"gate": { "x": 1500, "label": "Gate → Library" }
+		},
+		{
+			"id": 4,
+			"name": "Library",
+			"level": 4,
+			"x": 1500,
+			"width": 500,
+			"color": "#9a8a6a",
+			"accent": "#7a6a4a",
+			"dhatuIds": ["smr", "shru", "jiv", "mr"],
+			"prefixIds": ["none", "pra", "upa", "vi"],
+			"forge": { "x": 1750, "y": 460 },
+			"gate": { "x": 2000, "label": "Gate → Sanctum" }
+		},
+		{
+			"id": 5,
+			"name": "Sanctum",
+			"level": 5,
+			"x": 2000,
+			"width": 500,
+			"color": "#b8a888",
+			"accent": "#988878",
+			"dhatuIds": [],
+			"prefixIds": [],
+			"forge": { "x": 2300, "y": 460 },
+			"gate": null
+		}
+	]
+}

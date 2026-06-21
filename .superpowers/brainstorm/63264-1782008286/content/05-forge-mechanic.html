@@ -1,0 +1,48 @@
+<h2>How does forging happen inside the world?</h2>
+<p class="subtitle">You said the bench lives inside the world. Where does the avatar actually combine items?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>A. Approach forge &rarr; modal overlay</h3>
+      <p>Walk to a forge structure in the biome. Press E. The existing /dhatu-forge panel opens as an overlay on the world. Reuses the current crafting UI 1:1.</p>
+      <div class="mockup" style="margin-top:0.5rem;background:#f4efe4;padding:0.75rem;border:1px solid #d6cdb8;position:relative;height:140px;overflow:hidden">
+        <div style="background:#a8b888;height:100%;opacity:0.5"></div>
+        <div style="position:absolute;left:30%;top:30%;width:30px;height:30px;background:#7a4a2a;border-radius:50%"></div>
+        <div style="position:absolute;right:10%;bottom:30%;width:30px;height:30px;background:#3a2a1a;clip-path:polygon(50% 0,80% 100%,20% 100%)"></div>
+        <div style="position:absolute;inset:20px;background:#f4efe4;border:1px solid #b6a98a;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#7a6a4a">
+          [forge modal overlay]
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>B. In-world forge panel</h3>
+      <p>Walk to the forge. A small crafting panel appears <em>at the forge's location</em> in the world (not full overlay). Pick dhatu + prefix from world inventory; result floats out into the world.</p>
+      <div class="mockup" style="margin-top:0.5rem;background:#f4efe4;padding:0.75rem;border:1px solid #d6cdb8;position:relative;height:140px;overflow:hidden">
+        <div style="background:#a8b888;height:100%;opacity:0.7"></div>
+        <div style="position:absolute;left:30%;top:30%;width:30px;height:30px;background:#7a4a2a;border-radius:50%"></div>
+        <div style="position:absolute;right:10%;bottom:30%;width:30px;height:30px;background:#3a2a1a;clip-path:polygon(50% 0,80% 100%,20% 100%)"></div>
+        <div style="position:absolute;right:5%;bottom:5%;width:90px;height:50px;background:#f4efe4;border:1px solid #7a4a2a;display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:#7a4a2a">
+          [in-world panel]
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>C. Open inventory, combine anywhere</h3>
+      <p>No forge location. Press I to open inventory anywhere. Two slots inside, combine. World pauses while inventory is open. Lighter on world geometry; less ceremonial.</p>
+      <div class="mockup" style="margin-top:0.5rem;background:#f4efe4;padding:0.75rem;border:1px solid #d6cdb8;position:relative;height:140px;overflow:hidden">
+        <div style="background:#a8b888;height:100%;opacity:0.5"></div>
+        <div style="position:absolute;left:30%;top:30%;width:30px;height:30px;background:#7a4a2a;border-radius:50%"></div>
+        <div style="position:absolute;inset:30px;background:#f4efe4;border:1px solid #b6a98a;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#7a6a4a">
+          [inventory panel]
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

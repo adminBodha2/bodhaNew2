@@ -1,0 +1,34 @@
+<h2>How big is the world on screen?</h2>
+<p class="subtitle">Two ways to fit a 5-biome world into the viewport. Pick the one that feels right.</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>A. Whole world visible, no scroll</h3>
+      <p>One big map, all 5 biomes at once. Avatar is small but you can see the whole landscape. Feels like a god-view civilization map.</p>
+      <div class="mockup" style="margin-top:0.5rem;background:#f4efe4;padding:0.75rem;border:1px solid #d6cdb8">
+        <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:1px">
+          <div style="grid-column:span 12;background:#a8b888;height:20px;font-size:0.6rem;display:flex;align-items:center;justify-content:center;color:#fff">Grove L1</div>
+          <div style="grid-column:span 12;background:#8ca5a0;height:20px;font-size:0.6rem;display:flex;align-items:center;justify-content:center;color:#fff">Riverbed L2</div>
+          <div style="grid-column:span 12;background:#c08868;height:20px;font-size:0.6rem;display:flex;align-items:center;justify-content:center;color:#fff">Kiln-hill L3</div>
+          <div style="grid-column:span 12;background:#9a8a6a;height:20px;font-size:0.6rem;display:flex;align-items:center;justify-content:center;color:#fff">Library L4</div>
+          <div style="grid-column:span 12;background:#b8a888;height:20px;font-size:0.6rem;display:flex;align-items:center;justify-content:center;color:#fff">Sanctum L5</div>
+        </div>
+        <div style="margin-top:0.5rem;font-size:0.7rem;color:#7a6a4a;text-align:center">[avatar is small, you see everything]</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>B. Camera follows avatar, scrolls</h3>
+      <p>One screen at a time, camera follows as you walk. Avatar is big and detailed. Feels like a real game; you discover biomes as you reach them.</p>
+      <div class="mockup" style="margin-top:0.5rem;background:#f4efe4;padding:0.75rem;border:1px solid #d6cdb8">
+        <div style="background:#a8b888;height:120px;display:flex;align-items:center;justify-content:center">
+          <div style="width:24px;height:24px;background:#7a4a2a;border-radius:50%;border:2px solid #fff"></div>
+        </div>
+        <div style="margin-top:0.5rem;font-size:0.7rem;color:#7a6a4a;text-align:center">[one biome at a time, scroll as you walk]</div>
+      </div>
+    </div>
+  </div>
+</div>
