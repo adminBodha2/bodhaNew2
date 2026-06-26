@@ -40,6 +40,9 @@
 		The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016. "Full access, no subscriptions, and no limitations." This totals to around 41 issues so far, spread over 11 volumes all available on their <a class="linked" target="_blank" rel="noreferrer" href="https://ijarch.com/">website.</a>
 		Here at Bodha Open Library, we've sifted through each issue, sorted and classified the articles, and present the archive in easy to navigate, explore-friendly forms.
 	</p>
+	<p class="highlight-text">
+		All article links on this page lead directly to the corresponding issues and content on the official Indian Journal of Archaeology website. Bodha Open Library does not host or reproduce the journal's articles or PDFs.
+	</p>
 	<div class="box rgap32" id="contents">
 		<h2 class="txt-2xl w600">Themes</h2>
 		{#if groups && groups.length > 0}
