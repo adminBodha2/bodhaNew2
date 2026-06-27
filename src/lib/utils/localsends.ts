@@ -87,7 +87,7 @@ export const libCategories = [
 		{ label: 'Scriptural', href: '/library/categories/scriptural', type: 'scriptural', forLink: 'scriptural', desc: 'Sources in shruti, smriti, puranic, and sacred-historical traditions.' },
 		{ label: 'Shatrubodha', href: '/library/categories/shatrubodha', type: 'shatrubodha', forLink: 'shatrubodha', desc: 'Texts dealing with critique, conflict, ideology, and civilisational self-understanding.' },
 		{ label: 'Svayambodha', href: '/library/categories/svayambodha', type: 'svayambodha', forLink: 'svayambodha', desc: 'Books oriented toward self-understanding, cultural continuity, and Hindu civilisational confidence.' },
-		{ label: 'Indian Archaeology', href: '/library/journal-archaeology', type: 'arch', forLink: 'journal-archaeology', desc: 'The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016.'}
+	//	{ label: 'Indian Archaeology', href: '/library/journal-archaeology', type: 'arch', forLink: 'journal-archaeology', desc: 'The Indian Journal of Archaeology (IJA) has made public each of their journal issues since 2016.'}
 ];
 
 
