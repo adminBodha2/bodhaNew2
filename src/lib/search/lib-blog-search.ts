@@ -20,7 +20,6 @@ export async function createSearchIndex(data: SearchResult[]) {
   // We concatenate name + author so both fields are searchable.
   searchIndex = new Index({ tokenize: 'forward' });
   items = data;
-
   await Promise.all(
     data.map((item, i) => {
       const content = `${item.name} ${item.author}`;
