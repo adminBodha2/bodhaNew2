@@ -6,6 +6,7 @@ category: Culture Today
 tags:
   - ecology
   - storytelling
+  - bhakti
 date: 2026-07-07
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/blog-articles/ajanvriksha.webp
 excerpt: About a tree named Ajanvriksha, growing in the campus of Samadhi mandir of sant Jnaneshvar Maharaj, a pioneering saint of the Varkari Sampradaya.
