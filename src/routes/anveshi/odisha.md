@@ -4,7 +4,7 @@ description: "Bodha Anveshi - Odisha Chapter - brings to you 20 magnificent temp
 image: https://www.bodharesearch.in/images/anveshi/odishahero.webp
 id: 5
 isOpen: true
-dates: 24 - 28 Oct 2026
+dates: 25 - 28 Oct 2026
 price: ₹44,999/-
 duration: 4N 4D
 temples: 20
