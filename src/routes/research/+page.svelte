@@ -15,7 +15,6 @@
 	let { data }: { data: PageData } = $props();
 	let researchAreas = $derived(data.researchAreas ?? []);
 
-
 	const title = 'Bodha Research | Hindu Culture, IKS, Policy, and Ethnography';
 	const metaDescription = "Field research in culture studies, ethnography, anthropology and sociology — aimed at grounding India's policy in Hindu cultural sensibilities.";
 	const metaUrl = absoluteUrl('/research');
