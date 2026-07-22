@@ -102,10 +102,9 @@ export const actions: Actions = {
 		emailRedirectTo.searchParams.set('next', next);
 
 		if (!credentials) {
-			return fail(400, { signupError
-			pnpm build&& pnpmtau: 'Enter both email and password.' });
+			return fail(400, { signupError: 'Enter both email and password.' });
 		}
-text-lb2
+
 		if (!passwordsMatch(formData)) {
 			return fail(400, { signupError: 'Passwords do not match.' });
 		}
