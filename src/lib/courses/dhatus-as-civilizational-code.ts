@@ -7,7 +7,7 @@ export const allDetails = [
 	sessions: '8 sessions',
 	timings: '7 - 8 PM',
 	price: '₹ 2499 | $ 40',
-	status: 'OPEN NOW',
+	status: 'Concluded',
 	page: true,
 	image: '/images/heroes/dhatus-as-code.webp',
 	instructor: 'Amritanshu Pandey',
