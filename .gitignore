@@ -9,8 +9,6 @@ node_modules
 /.svelte-kit
 /build
 src/routes/site-docs/
-CLAUDE.md
-AGENTS.md
 temp
 temp/
 docs
