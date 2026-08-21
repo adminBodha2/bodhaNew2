@@ -1,0 +1,166 @@
+# Bodha Research
+
+> Bodha Research is a think tank studying contemporary cultural issues through the lens of Hindu traditions.
+
+The organization produces research essays, long-form writing, books, digital comics, and a journal (Aryavarta). It also runs an academy with courses, a library of Sanskrit and Indic texts, an ontology drawn from the Amarakosha, and Anveshi — a program of immersive temple journeys across India.
+
+## Core
+
+- [Home](https://bodharesearch.in): Main site entry point for all Bodha Research content and programs.
+- [About](https://www.bodharesearch.in/about): Overview of the organization's mission and approach.
+- [Team](https://www.bodharesearch.in/team): Profiles of Bodha Research members and contributors.
+- [Contact](https://www.bodharesearch.in/contact): Contact details and inquiry form.
+
+## Research
+
+- [Research](https://www.bodharesearch.in/research): Index of long-form research essays on Hindu institutions and culture.
+- [Research — Hindu Frameworks of Education](https://www.bodharesearch.in/research/hindu-frameworks-of-education): Essay on Hindu models of education.
+- [Research — Hindu Models of Temple Management](https://www.bodharesearch.in/research/hindu-models-of-temple-management): Essay on temple governance structures.
+- [Research — Hindu Response to Enlightenment](https://www.bodharesearch.in/research/hindu-response-to-enlightenment): Essay on Hindu intellectual responses to Western Enlightenment thought.
+- [Research — Hindu School of History](https://www.bodharesearch.in/research/hindu-school-of-history): Essay on Hindu historiographical traditions.
+- [Research — Structure of Hindu Charity](https://www.bodharesearch.in/research/structure-of-hindu-charity): Essay on charitable frameworks in Hindu society.
+- [Research — Battle for Dharma in North East](https://www.bodharesearch.in/research/battle-for-dharma-north-east): Essay on Hindu cultural challenges in Northeast India.
+- [Research — Impact of Conversion in Kekadia](https://www.bodharesearch.in/research/impact-of-conversion-kekadia): Field study on conversion's effects in a specific community.
+- [Research — Year in a Hajong Village](https://www.bodharesearch.in/research/year-in-hajong-village): Ethnographic study of a Hajong village.
+- [Research — Temples of Madhya Pradesh](https://www.bodharesearch.in/research/temples-of-madhya-pradesh): Survey of temples in Madhya Pradesh.
+- [Research — Interchanging Dynamics of Hindu Family](https://www.bodharesearch.in/research/interchanging-dynamics-of-hindu-family): Essay on shifts in Hindu family structures.
+- [Research — Artist in Art](https://www.bodharesearch.in/research/artist-in-art): Essay on the role of the artist in Hindu aesthetic traditions.
+
+## Big Questions
+
+- [Big Questions](https://www.bodharesearch.in/big-questions): Index of essays addressing foundational questions about Hindu civilization.
+- [Core of Sanatana Dharma](https://www.bodharesearch.in/big-questions/core-of-sanatana-dharma): Essay on the essential principles of Sanatana Dharma.
+- [Hindu Renaissance](https://www.bodharesearch.in/big-questions/hindu-renaissance): Essay on the conditions for a Hindu cultural revival.
+- [Hindu Unity and Diversity](https://www.bodharesearch.in/big-questions/hindu-unity-and-diversity): Essay on internal diversity within Hindu traditions.
+- [Modernity and Hindu Values](https://www.bodharesearch.in/big-questions/modernity-and-hindu-values): Essay on tensions between modernity and Hindu values.
+- [What Will Save Sanatana Dharma](https://www.bodharesearch.in/big-questions/will-save-sanatana-dharma): Essay on pathways for preserving Hindu traditions.
+- [Being Indian](https://www.bodharesearch.in/big-questions/being-indian): Essay on Indian identity and civilizational belonging.
+- [Hindu Institution Generate](https://www.bodharesearch.in/big-questions/hindu-institution-generate): Essay on how Hindu institutions are formed and sustained.
+- [New Indian Republic](https://www.bodharesearch.in/big-questions/new-indian-republic): Essay on Hindu perspectives on the Indian republic.
+
+## Academy
+
+- [Academy](https://www.bodharesearch.in/academy): Overview of Bodha Research's educational programs.
+- [Academy Courses](https://www.bodharesearch.in/academy/courses): Index of available courses.
+- [Course — Introduction to Shri Ram Swarup](https://www.bodharesearch.in/academy/courses/introduction-to-shri-ram-swarup): Course on the thought of Ram Swarup.
+
+## Anveshi (Temple Journeys)
+
+- [Anveshi](https://www.bodharesearch.in/anveshi): Overview of immersive temple journey experiences.
+- [Anveshi — Badami](https://www.bodharesearch.in/anveshi/badami): Temple journey program at Badami.
+- [Anveshi — Gujarat](https://www.bodharesearch.in/anveshi/gujarat): Temple journey program in Gujarat.
+- [Anveshi — Kannur](https://www.bodharesearch.in/anveshi/kannur): Temple journey program in Kannur, Kerala.
+- [Anveshi — Kullu](https://www.bodharesearch.in/anveshi/kullu): Temple journey program in Kullu, Himachal Pradesh.
+
+## Library
+
+- [Library](https://www.bodharesearch.in/library): Index of books, texts, and reading paths in Indic knowledge.
+- [Library Journal Archaeology](https://www.bodharesearch.in/library/journal-archaeology): Archive of journal entries and library additions.
+- [Book — The Knowledge Structure in the Amarakosha](https://www.bodharesearch.in/library/books/the-knowledge-structure-in-the-amarakosha): Study of the organizational structure of the Amarakosha.
+- [Book — Amarakosha English Translation](https://www.bodharesearch.in/library/books/amarakosha-english-translation): English translation of the Amarakosha.
+- [Reading Path — Hinduism Overview](https://www.bodharesearch.in/library/paths/hinduism-overview): Curated reading list for an overview of Hinduism.
+- [Reading Path — Vedic and Upanishadic Texts](https://www.bodharesearch.in/library/paths/vedic-and-upanishadic-texts): Curated reading list for Vedic and Upanishadic literature.
+- [Reading Path — Darshanas and Philosophy](https://www.bodharesearch.in/library/paths/darshanas-and-philosophy): Curated reading list for Hindu philosophical schools.
+- [Reading Path — Indian Knowledge Systems](https://www.bodharesearch.in/library/paths/indian-knowledge-systems): Curated reading list for Indian knowledge traditions.
+- [Reading Path — History, Polity and Society](https://www.bodharesearch.in/library/paths/history-polity-and-society): Curated reading list for Hindu history and social thought.
+- [Reading Path — Arts, Performance and Aesthetics](https://www.bodharesearch.in/library/paths/arts-performance-and-aesthetics): Curated reading list for Hindu arts and aesthetics.
+- [Reading Path — Language, Logic and Sanskrit](https://www.bodharesearch.in/library/paths/language-logic-and-sanskrit): Curated reading list for Sanskrit and Indian logic.
+- [Reading Path — Puranic and Itihasic Literature](https://www.bodharesearch.in/library/paths/puranic-and-itihasic-literature): Curated reading list for Puranas and Itihasas.
+- [Reading Path — Dharma, Ethics and Law](https://www.bodharesearch.in/library/paths/dharma-ethics-and-law): Curated reading list for dharmic ethics and law.
+- [Reading Path — Indology and Civilizational Critique](https://www.bodharesearch.in/library/paths/indology-and-civilizational-critique): Curated reading list for Indological and civilizational studies.
+
+## Ontology (Amarakosha)
+
+- [Ontology](https://www.bodharesearch.in/ontology): Index of ontological categories derived from the Amarakosha.
+- [Naksatram — Word Entry](https://www.bodharesearch.in/library/sections/words/naksatram): Entry for the Sanskrit word naksatram.
+- [AK Svarga](https://www.bodharesearch.in/ontology/ak-svarga): Amarakosha section on the heavenly realm.
+- [AK Bhumi](https://www.bodharesearch.in/ontology/ak-bhumi): Amarakosha section on earth and land.
+- [AK Kala](https://www.bodharesearch.in/ontology/ak-kala): Amarakosha section on time.
+- [AK Manushya](https://www.bodharesearch.in/ontology/ak-manushya): Amarakosha section on human beings.
+- [AK Natya](https://www.bodharesearch.in/ontology/ak-natya): Amarakosha section on performance and drama.
+- [AK Vanaushadhi](https://www.bodharesearch.in/ontology/ak-vanaushadhi): Amarakosha section on plants and herbs.
+
+## Publications
+
+- [Aryavarta](https://www.bodharesearch.in/aryavarta): Overview of the Aryavarta journal/publication.
+- [Aryavarta Vol. 1 Issue 1](https://www.bodharesearch.in/aryavarta/v1-i1): First issue of the Aryavarta journal.
+- [Aryavarta Vol. 1 Issue 2](https://www.bodharesearch.in/aryavarta/v1-i2): Second issue of the Aryavarta journal.
+- [Design Bodha](https://www.bodharesearch.in/designbodha): Overview of Bodha's design-focused work and publications.
+- [Monograph on Dharmic Design](https://www.bodharesearch.in/designbodha/monograph-on-dharmic-design): Monograph exploring design principles rooted in dharmic thought.
+
+## Blog
+
+- [Blog](https://www.bodharesearch.in/blog): Index of all blog posts and essays.
+- [Blog Tags](https://www.bodharesearch.in/blog/tags): Browse blog content by topic tag.
+- [Blog Writers](https://www.bodharesearch.in/blog/writers): Index of contributing writers.
+- [External Posts](https://www.bodharesearch.in/blog/external-posts): Curated posts published on external platforms.
+
+## Newsletter
+
+- [Newsletter](https://www.bodharesearch.in/newsletter): Newsletter subscription and archive overview.
+- [Newsletter Issue 1](https://www.bodharesearch.in/newsletter/issue-1): First newsletter issue.
+- [Newsletter Issue 2](https://www.bodharesearch.in/newsletter/issue-2): Second newsletter issue.
+- [Newsletter Issue 3](https://www.bodharesearch.in/newsletter/issue-3): Third newsletter issue.
+
+## Explorer and Concepts
+
+- [Explorer](https://www.bodharesearch.in/explorer): Tool for exploring Bodha Research content and connections.
+- [Explorer Graph](https://www.bodharesearch.in/explorer/graph): Visual graph of content relationships.
+- [Concepts](https://www.bodharesearch.in/concepts): Index of key concepts used across Bodha Research.
+- [Wiki](https://www.bodharesearch.in/wiki): Wiki-style reference pages on Hindu topics.
+- [Wiki — Temples](https://www.bodharesearch.in/wiki/temples): Wiki entries on Hindu temples.
+- [Wiki — Indian Knowledge Systems and Education](https://www.bodharesearch.in/wiki/indian-knowledge-systems-and-education): Wiki entries on Indian knowledge systems.
+- [Docs](https://www.bodharesearch.in/docs): Documentation and reference materials.
+
+## Lab
+
+- [Lab](https://www.bodharesearch.in/lab): Shorter notes, reports, and exploratory pieces.
+- [Lab — Bangladesh Riots Report](https://www.bodharesearch.in/lab/bangladesh-riots-report): Report on the Bangladesh riots and their context.
+- [Lab — Dharma as Design](https://www.bodharesearch.in/lab/dharma-as-design): Note on dharma as a design principle.
+- [Lab — Foundations of Indian Culture](https://www.bodharesearch.in/lab/foundations-of-indian-culture): Note on the foundational elements of Indian culture.
+- [Lab — Islamization of Indonesia](https://www.bodharesearch.in/lab/islamization-of-indonesia): Note on the historical Islamization of Indonesia.
+- [Lab — Sanskrit Roots and Ontic Bloom](https://www.bodharesearch.in/lab/sanskrit-roots-ontic-bloom): Note on Sanskrit's ontological dimensions.
+
+## Inspiration
+
+- [Inspiration](https://www.bodharesearch.in/inspiration): Index of thinkers and intellectual schools that inform Bodha Research.
+- [Ram Swarup](https://www.bodharesearch.in/inspiration/ram-swarup): Profile of Ram Swarup as an intellectual influence.
+- [Dharampal](https://www.bodharesearch.in/inspiration/dharampal): Profile of Dharampal as an intellectual influence.
+- [Sri Aurobindo School](https://www.bodharesearch.in/inspiration/sri-aurobindo-school): Overview of the Sri Aurobindo intellectual school.
+- [Voice of India / Shatrubodha School](https://www.bodharesearch.in/inspiration/voice-of-india-shatrubodha-school): Overview of the Voice of India intellectual tradition.
+- [Swami Vivekananda School](https://www.bodharesearch.in/inspiration/swami-vivekananda-school): Overview of the Swami Vivekananda intellectual school.
+
+## Members
+
+- [Members](https://www.bodharesearch.in/members): Information on membership and community participation.
+- [Videos](https://www.bodharesearch.in/videos): Video content produced by Bodha Research.
+
+## Optional
+
+- [Blog — Mahagauri](https://bodharesearch.in/blog/mahagauri): Essay on the Navaratri deity Mahagauri.
+- [Blog — Civilizations as Karmic Streams](https://www.bodharesearch.in/blog/civilizations-as-karmic-streams): Essay on civilizations viewed through the lens of karma.
+- [Blog — History vs Itihasa](https://www.bodharesearch.in/blog/historyvsitihasa): Essay distinguishing Western history from the Itihasic tradition.
+- [Blog — How to Build a Civilization](https://www.bodharesearch.in/blog/how-to-build-a-civilization): Essay on civilizational construction and Hindu frameworks.
+- [Blog — Dharmic Lens on Civilizational Theory](https://www.bodharesearch.in/blog/dharmic-lens-civilizational-theory): Essay applying a dharmic lens to civilizational theory.
+- [Blog — Journey with Anveshi](https://www.bodharesearch.in/blog/journey-with-anveshi): Personal account of an Anveshi temple journey.
+- [Blog — Kannur: Sacred Heart of Kerala](https://www.bodharesearch.in/blog/kannur-sacred-heart-of-kerala): Essay on Kannur's sacred geography and traditions.
+- [Blog — Valley of Gods: Kullu Chapter](https://www.bodharesearch.in/blog/valley-of-gods-kullu-chapter): Essay on the sacred landscape of Kullu.
+- [Blog — Scrolls of Aryavarta](https://www.bodharesearch.in/blog/about-scrolls-of-aryavarta): Introduction to the Aryavarta publication series.
+- [Blog — What the Bodha Logo Means](https://www.bodharesearch.in/blog/what-bodha-logo-means): Explanation of the symbolism in the Bodha Research logo.
+- [Blog — Svayambodha and Shatrubodha Review](https://www.bodharesearch.in/blog/svayambodha-and-shatrubodha-review): Review of the Svayambodha and Shatrubodha framework.
+- [Blog — Decolonizing Language](https://www.bodharesearch.in/blog/decolonizinglanguage): Essay on reclaiming language from colonial frameworks.
+- [Blog — Indic Environmentalism](https://www.bodharesearch.in/blog/indicenvironmentalism): Essay on Hindu and Indic approaches to ecology.
+- [Blog — Artificial Intelligence (Part 1)](https://www.bodharesearch.in/blog/artificialintelligence): Essay on AI viewed through a Hindu civilizational lens.
+- [Blog — Towards a Dharma-Centric Polity](https://www.bodharesearch.in/blog/towardsdharmacentricpolity): Essay on dharma as a basis for political organization.
+- [Lab — On the Pagan View](https://www.bodharesearch.in/lab/on-the-pagan-view): Note on pagan traditions and their relevance to Hindu thought.
+- [Lab — Modernity in TV Drama](https://www.bodharesearch.in/lab/modernity-in-tv-drama): Note on representations of modernity in Indian television.
+- [Lab — On Mesoamerican History](https://www.bodharesearch.in/lab/on-mesoamerican-history): Note on Mesoamerican civilizational history.
+- [Inspiration — Ivan Illich](https://www.bodharesearch.in/inspiration/ivan-illich): Profile of Ivan Illich as an intellectual influence.
+- [Inspiration — Nassim Nicholas Taleb](https://www.bodharesearch.in/inspiration/nassim-nicholas-taleb): Profile of Nassim Nicholas Taleb as an intellectual influence.
+- [Inspiration — VS Naipaul](https://www.bodharesearch.in/inspiration/vs-naipaul): Profile of VS Naipaul as an intellectual influence.
+- [Inspiration — Narrative Non-Fiction School](https://www.bodharesearch.in/inspiration/narrative-non-fiction-school): Overview of the narrative non-fiction intellectual school.
+- [Ontology — AK Kshatriya](https://www.bodharesearch.in/ontology/ak-kshatriya): Amarakosha section on the Kshatriya varna.
+- [Ontology — AK Vyoma](https://www.bodharesearch.in/ontology/ak-vyoma): Amarakosha section on sky and space.
+- [Ontology — AK Vari](https://www.bodharesearch.in/ontology/ak-vari): Amarakosha section on water.
+- [All Ontology Entries](https://www.bodharesearch.in/ontology): 20+ additional Amarakosha section pages covering terms from the Amarakosha across categories including grammar, cosmology, society, and nature.
+- [All Library Word/Dhatu Entries](https://www.bodharesearch.in/library): 50+ individual Sanskrit word and dhatu (root) entries from the Amarakosha and related texts.
