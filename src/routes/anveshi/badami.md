@@ -3,7 +3,7 @@ title: Badami Chapter | Bodha Anveshi Hindu Temple Architecture Tour
 description: Karnataka is a world on its own. And Badami is a good representative of the rich diversity of its cultural heritage.
 image: https://www.bodharesearch.in/images/anveshi/badamihero.webp
 id: 3
-isOpen: true
+isOpen: false
 dates: 14 - 18 Aug 2026
 price: ₹42,999/-
 duration: 4N 4D
