@@ -92,7 +92,6 @@
 				</Reveal>
 				<Slider>
 					<div class="row gap8 mwrap">
-						<a class="primary anveshi" href="/anveshi/badami"><span>OPEN - BADAMI</span></a>
 						<a class="primary anveshi" href="/anveshi/odisha"><span>OPEN - ODISHA</span></a>
 					</div>
 				</Slider>
@@ -106,10 +105,10 @@
 		<div class="box rgap16" use:autoAnimate>
 			<div class="grid grid-cols-1 lg:grid-cols-3 cgap32 rgap32">
 				<div class="box rgap16 col-span-2">
-					<Reveal><p class="highlight-text">Man is born to search: for truth; for beauty and meaning in life; for Anveṣaṇa.</p></Reveal>
+					<Reveal><p class="highlight-text">Man is born to search: for truth; for beauty and meaning in life; for Anveshana.</p></Reveal>
 					<Reveal>
 						<p class="highlight-text">
-							The word anveṣaṇa means discovery, and the one who searches is called – anveṣī – the discoverer. Kaśmīr Śaiva darśana tells us that, vimarṣa - Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
+							The word anveshana means discovery, and the one who searches is called – anveshi – the discoverer. Kashmira Shaiva darshana tells us that, vimarsha - Shiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the
 							cosmos, life and existence.
 						</p>
 					</Reveal>
@@ -128,17 +127,17 @@
 					<div class="grid grid-cols-1 lg:grid-cols-2 col-span-full rgap16 cgap32">
 						<div class="box textbox">
 							<p class="highlight-text">
-								A favorite theme of literature is wanderlust—fernweh—the innate urge to go out and discover the world. This desire for discovery is fundamental to human nature: to seek the new, to unravel the hidden, to find joy in the very act of anveṣaṇa. Human history is shaped by such courageous journeys—taken by individuals and communities—that have transformed the course of civilizations.
+								A favorite theme of literature is wanderlust—fernweh—the innate urge to go out and discover the world. This desire for discovery is fundamental to human nature: to seek the new, to unravel the hidden, to find joy in the very act of anveshana. Human history is shaped by such courageous journeys—taken by individuals and communities—that have transformed the course of civilizations.
 							</p>
 							<p class="highlight-text">
 								This urge is biological; most species possess the instinct to chart new waters and explore unknown territories. Yet, there is a deeper, inner dimension to this impulse. In discovering the world, we also seek to discover the self. In our pursuit of the new, we yearn for the eternal. In our search for change, we long for what is unchanging. In essence, every outer journey becomes an
-								inner anvekṣaṇa.
+								inner anvekshana.
 							</p>
 						</div>
 						<div class="box">
-							<p class="highlight-text">In Bhāratavarṣa and the Hindu dhārmic tradition, these two seemingly opposing impulses are beautifully harmonized through the tradition of yātrā to sacred kṣetrās—a journey where both the inner and outer quests are fulfilled in ways that are joyful, meaningful, and spiritually elevating.</p>
+							<p class="highlight-text">In Bharatavarsha and the Hindu dharmic tradition, these two seemingly opposing impulses are beautifully harmonized through the tradition of yatra to sacred kshetras—a journey where both the inner and outer quests are fulfilled in ways that are joyful, meaningful, and spiritually elevating.</p>
 							<p class="highlight-text">
-								Anveṣī seeks to contemporize the ancient Indian tradition of yātrā by taking modern seekers to sacred kṣetrās of India - places that are largely unexplored by most of us, yet are rich in architectural, sculptural, and cultural splendor. These are not just historical sites, but living systems that have sustained vibrant cultural traditions for thousands of years.
+								Anveshi seeks to contemporize the ancient Indian tradition of yatra by taking modern seekers to sacred kshetras of India - places that are largely unexplored by most of us, yet are rich in architectural, sculptural, and cultural splendor. These are not just historical sites, but living systems that have sustained vibrant cultural traditions for thousands of years.
 							</p>
 						</div>
 					</div>
