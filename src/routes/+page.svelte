@@ -57,7 +57,7 @@
 					<a class="box blank verticals radius4 overflow-hidden paper-1" href={item.href}>
 						<div class="overflow-hidden"><img class="fitted sm:herocard md:port" src={item.image} alt={item.title} /></div>
 						<div class="box rgap16 ptop24 pbot32 px16 lg:px24">
-							<h2 class="txt-3xl lg:txt-4xl ls002m lg:ls004m a-hover w600">{item.title}</h2>
+							<h2 class="txt-3xl lg:txt-4xl ls002m lg:ls004m a-hover w600 lh11">{item.title}</h2>
 							<p class="txt-lg grey1 lh14">{item.desc}</p>
 						</div>
 					</a>

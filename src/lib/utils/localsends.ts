@@ -41,10 +41,10 @@ export const verticals = [
 		kicker: 'culture'
 	},
 	{
-		title: 'Academy',
-		href: '/academy',
+		title: 'Indian Knowledge Systems',
+		href: '/indian-knowledge-systems',
 		image: '/images/key-academy.webp',
-		desc: 'Training, transmission, and the patient cultivation of thinkers rooted in Indic methods.',
+		desc: 'Timeless disciplines reimagined to anchor the modern Indian intellect.',
 		kicker: 'learning'
 	},
 	{
@@ -54,7 +54,7 @@ export const verticals = [
 		desc: 'Major questions that shape the contemporary Hindu condition and the path beyond confusion.',
 		kicker: 'research'
 	}
-]
+];
 
 export const publications = [
 	{
@@ -133,8 +133,8 @@ export const navLinks = [
 		link: '/big-questions',
 	},
 	{
-		title: 'Academy',
-		link: '/academy',
+		title: 'IKS',
+		link: '/indian-knowledge-systems',
 	},
 	{
 		title: 'Library',
