@@ -42,5 +42,8 @@
 	"editor.formatOnSave": false,
 	"prettier.bracketSameLine": true,
 	"editor.allowVariableFonts": false,
-	"editor.codeLensFontFamily": "\"Google Sans\", sans-serif"
+	"editor.codeLensFontFamily": "\"Google Sans\", sans-serif",
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	}
 }
