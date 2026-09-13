@@ -6,6 +6,7 @@
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
 	import Title from '$lib/comps/page-title.svelte';
+	import RazorpayButton from '$lib/comps/RazorpayButton.svelte';
 
 	type SupportArea = {
 		title: string;
@@ -89,6 +90,27 @@
 		</Reveal>
 	</section>
 	<section class="wrapper-std growingline alternate">
+		<Title text="Contribute" />
+		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
+			<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
+				<p class="txt-sm tt-u w500 theme">Recurring Support</p>
+				<p class="txt-xl lg:txt-2xl w600 lh12">Sustain the Work</p>
+				<p class="txt-lg lh14 grey2">Subscribe to a recurring contribution and keep the research, dialogue, and scholar training going.</p>
+				<div class="paybuttons">
+					<RazorpayButton buttonId="pl_TTWX3ioZrkUk0m" type="subscription" theme="brand-color" />
+				</div>
+			</div>
+			<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
+				<p class="txt-sm tt-u w500 theme">One-Time</p>
+				<p class="txt-xl lg:txt-2xl w600 lh12">Make a Donation</p>
+				<p class="txt-lg lh14 grey2">Contribute a one-time amount towards any vertical — research, Big Questions, or academy.</p>
+				<div class="paybuttons">
+					<RazorpayButton buttonId="pl_TTWgfy1ExBHCJl" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="wrapper-std growingline">
 		<Title text="Sustain the Work" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<Reveal>
@@ -158,5 +180,10 @@
 
 .support-list li
 	padding-left: 0.25rem
+
+.paybuttons
+	min-height: 44px
+	display: flex
+	align-items: flex-start
 
 </style>
