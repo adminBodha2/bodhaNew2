@@ -21,7 +21,6 @@
     "seo:manager": "node scripts/launch-workbench.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.60.0",
     "@sveltejs/adapter-vercel": "^6.3.3",
     "@sveltejs/enhanced-img": "^0.10.4",
     "@sveltejs/kit": "^2.57.0",
