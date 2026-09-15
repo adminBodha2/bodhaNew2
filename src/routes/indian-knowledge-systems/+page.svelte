@@ -45,12 +45,17 @@
 				<p class="grey0">Sri Aurobindo</p>
 			</div>
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16" bind:this={revealref}>
+			<div class="box rgap32">
 			<Reveal>
 				<p class="highlight-text">True civilizational growth is a conscious renewal, a deliberate synthesis with the roots that give us vitality. The Indian Knowledge Systems (IKS) represent rigorous, experiential inquiry that refused to divorce the observer from the observed, intuition from empirical observation, or human well-being from ecological balance.</p>
+				<a class="primary" href="/indian-knowledge-systems/internship"><span>IKS Internship</span></a>
 			</Reveal>
+			</div>
+			<div class="box">
 			<Reveal start="top 70%">
 					<p class="highlight-text">Bodha’s work is to develop, and help develop battle-tested blueprints for IKS-tethered research, methodology, disciplines, and the foundational work of creating the next generation of scholars - marching knowledge to knowledge and enlarging previous knowledge as Sri Aurobindo would have us do.</p>
 			</Reveal>
+				</div>
 		</div>
 	</section>
 	<section class="wrapper-std growingline" bind:this={reference}>
