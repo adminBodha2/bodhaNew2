@@ -45,7 +45,7 @@
 			<div class="foot-links box">
 				<a class="foot-link blank white" href="/research">Research</a>
 				<a class="foot-link blank white" href="/anveshi">Anveshi</a>
-				<a class="foot-link blank white" href="/academy">Academy</a>
+				<a class="foot-link blank white" href="/indian-knowledge-systems">IKS</a>
 				<a class="foot-link blank white" href="/big-questions">Big Questions</a>
 			</div>
 		</div>
