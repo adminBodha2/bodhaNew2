@@ -195,7 +195,7 @@
 	<section class="wrapper-std growingline alternate">
 		<Title text="Thematic Area" />
 		<Reveal>
-			<p class="highlight-text width80">This internship is offered under Theme 2 - Historical and Civilizational Sciences (इतिहास एवं सभ्यता विभाग), IKS Division, Ministry of Education, Govt. of India.</p>
+			<p class="highlight-text width80">This internship is offered under Theme 2 - Historical and Civilizational Sciences (इतिहास एवं सभ्यता विभाग), <a class="linked w500" href="https://iks.aicte-india.org/" target="_blank" rel="noreferrer">IKS Division</a>, Ministry of Education, Govt. of India.</p>
 		</Reveal>
 	</section>
 	<section class="wrapper-std growingline">
@@ -211,7 +211,7 @@
 			</div>
 			<Reveal start="top 70%">
 				<div class="box rgap12">
-					<p class="txt-lg lh14 grey2">In collaboration with the IKS Division, Ministry of Education, Government of India.</p>
+					<p class="txt-lg lh14 grey2">In collaboration with the <a class="linked w500" href="https://iks.aicte-india.org/" target="_blank" rel="noreferrer">IKS Division</a>, Ministry of Education, Government of India.</p>
 					<p class="txt-bs lh14 grey2">This internship is part of Bodha's ongoing research project on <a class="linked w500" href="/research/hindu-models-of-temple-management">Hindu Models of Temple Management →</a></p>
 				</div>
 			</Reveal>
