@@ -48,7 +48,6 @@
 			<div class="box rgap32">
 			<Reveal>
 				<p class="highlight-text">True civilizational growth is a conscious renewal, a deliberate synthesis with the roots that give us vitality. The Indian Knowledge Systems (IKS) represent rigorous, experiential inquiry that refused to divorce the observer from the observed, intuition from empirical observation, or human well-being from ecological balance.</p>
-				<a class="primary" href="/indian-knowledge-systems/internship"><span>IKS Internship</span></a>
 			</Reveal>
 			</div>
 			<div class="box">
@@ -58,7 +57,23 @@
 				</div>
 		</div>
 	</section>
-	<section class="wrapper-std growingline" bind:this={reference}>
+	<section class="wrapper-std growingline">
+		<Title text="Internships" />
+		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">
+			<a class="box course-item b-main p8 whitestone" href="/indian-knowledge-systems/internship">
+				<div class="p8">
+					<img class="fitted landscape" src="/images/internship.jpeg" alt="IKS Internship" />
+				</div>
+				<div class="box rgap16 std-pad">
+					<h3 class="txt-2xl lh12 w600 a-hover ls001m lg:ls003m">Hindu Models of Temple Management</h3>
+					<p class="txt-lg lh14 grey2">A field research internship documenting indigenous temple governance traditions across India — studying the temple as a spiritual, educational, and socio-economic institution.</p>
+					<p class="txt-xs tt-u w500 theme">Oct 2026 – Feb 2027</p>
+				</div>
+				<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">IKS Internship | Applications Open</p>
+			</a>
+		</div>
+	</section>
+	<section class="wrapper-std growingline alternate" bind:this={reference}>
 		<Title text="courses" />
 		<Slider targetSelector=".course-item">
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap16">

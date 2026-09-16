@@ -12,17 +12,16 @@
 	import Blur from '$lib/svelteanim/components/Blur.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 
-	const title = 'Internship: Hindu Models of Temple Management';
-	const metaDescription = 'Field research in Hindu temple governance - Bodha × IKS Division, Ministry of Education, Govt. of India.';
+	const title = 'IKS Internship';
+	const metaDescription = 'Field research in Hindu temple governance — in collaboration with the IKS Division, Ministry of Education, Govt. of India.';
 	const metaUrl = absoluteUrl('/indian-knowledge-systems/internship');
-	const metaImage = absoluteImage('/images/temples/brihadeeswarar-temple.jpg');
+	const metaImage = absoluteImage('/images/temples/iksinternship.png');
 	const applyLink = 'https://forms.gle/dsXeEFfXiVTfjRy79';
 
 	const stats = [
 		{ value: '₹10,000 / month', label: 'Monthly fellowship' },
-		{ value: '5 Months', label: 'April – August 2026' },
-		{ value: '12 Positions', label: 'Open seats' },
-		{ value: '4 Clusters', label: 'Regional research areas' }
+		{ value: '5 Months', label: 'Oct 2026 – Feb 2027' },
+		{ value: '12 Positions', label: 'Open seats' }
 	];
 
 	const institution = [
@@ -43,7 +42,7 @@
 	const fellowship = [
 		{ label: 'Monthly Fellowship', value: '₹10,000 / month', text: '' },
 		{ label: 'Duration', value: '5 months', text: '' },
-		{ label: 'Certification', value: 'IKS Division', text: 'Completion certificate from the IKS Division, Ministry of Education.' }
+		{ label: 'Certification', value: 'IKS Division', text: '' }
 	];
 
 	const eligibility = [
@@ -66,16 +65,15 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" />
 
-<Parallax imageLink="/images/temples/brihadeeswarar-temple.jpg" wipe={true} />
+<Parallax imageLink="/images/temples/iksinternship.png" wipe={true} />
 <Container>
-<Crumb showT={true} title="Hindu Models of Temple Management" showD={true} desc={metaDescription} />
+<Crumb showT={true} title="IKS Internship" showD={true} desc="In collaboration with the IKS Division, Ministry of Education, Govt. of India." />
 	<section class="wrapper-std">
-		<div class="box rgap16 width60">
-			<p class="txt-xs tt-u w500 theme">Internship Opportunity</p>
-			<p class="txt-2xl theme source-serif italic">Field Research in Hindu Temple Governance</p>
-			<p class="grey0">Bodha × IKS Division, Ministry of Education, Govt. of India</p>
+		<div class="box rgap8 width60">
+			<p class="txt-xs tt-u w600 theme">Internship Opportunity</p>
+			<p class="txt-2xl w600 source-serif">Hindu Models of Temple Management</p>
 		</div>
-		<div class="grid grid-cols-2 lg:grid-cols-4 white-grid">
+		<div class="grid grid-cols-2 lg:grid-cols-3 white-grid">
 			{#each stats as stat}
 				<div class="box rgap8 p16 lg:p32 whitecard">
 					<p class="txt-xl lg:txt-2xl w600">{stat.value}</p>
@@ -83,8 +81,11 @@
 				</div>
 			{/each}
 		</div>
-		<div class="row cgap8 rgap8 mwrap">
-			<a class="primary" href={applyLink} target="_blank" rel="noreferrer"><span>Apply Now →</span></a>
+		<div class="box rgap8">
+			<p class="txt-sm grey2">Applications close on <strong>30 September 2026</strong>.</p>
+			<div class="row cgap8 mwrap">
+				<a class="primary" href={applyLink} target="_blank" rel="noreferrer"><span>Apply Now →</span></a>
+			</div>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
@@ -104,6 +105,9 @@
 				</Reveal>
 				<Reveal start="top 70%">
 					<p class="highlight-text">Bodha’s research project documents these living traditions rigorously, building the evidentiary foundation for alternative models of temple governance that are conducive to Hindu culture. Interns will be embedded in one of four regional clusters, conducting structured field research under the direct mentorship of Bodha’s research leadership.</p>
+				</Reveal>
+				<Reveal start="top 70%">
+					<a class="linked w500" href="/research/hindu-models-of-temple-management">Read more about the project →</a>
 				</Reveal>
 			</div>
 		</div>
@@ -199,14 +203,17 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div class="box rgap16">
 				<Reveal>
-					<p class="highlight-text">Applications are reviewed on a rolling basis. Write to us at <a class="linked w500" href="mailto:contact@svayambodha.in">contact@svayambodha.in</a> for any enquiry.</p>
+					<p class="highlight-text">Applications close on <strong>30 September 2026</strong>. Write to us at <a class="linked w500" href="mailto:contact@svayambodha.in">contact@svayambodha.in</a> for any enquiry.</p>
 				</Reveal>
 				<div class="row cgap8 rgap8 mwrap">
 					<a class="primary" href={applyLink} target="_blank" rel="noreferrer"><span>Apply Here →</span></a>
 				</div>
 			</div>
 			<Reveal start="top 70%">
-				<p class="txt-lg lh14 grey2">A collaboration between Svayambodha Centre For Culture Studies Foundation (Bodha) and the IKS Division, Ministry of Education, Government of India.</p>
+				<div class="box rgap12">
+					<p class="txt-lg lh14 grey2">In collaboration with the IKS Division, Ministry of Education, Government of India.</p>
+					<p class="txt-bs lh14 grey2">This internship is part of Bodha's ongoing research project on <a class="linked w500" href="/research/hindu-models-of-temple-management">Hindu Models of Temple Management →</a></p>
+				</div>
 			</Reveal>
 		</div>
 	</section>
