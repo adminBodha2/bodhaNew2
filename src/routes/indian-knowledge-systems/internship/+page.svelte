@@ -82,10 +82,7 @@
 			{/each}
 		</div>
 		<div class="box rgap8">
-			<p class="txt-sm grey2">Applications close on <strong>30 September 2026</strong>.</p>
-			<div class="row cgap8 mwrap">
-				<a class="primary" href={applyLink} target="_blank" rel="noreferrer"><span>Apply Now →</span></a>
-			</div>
+			<p class="txt-sm grey2"><strong>Applications are now closed.</strong> We received over 150 registrations and have closed the application window ahead of the original deadline of 30 September 2026.</p>
 		</div>
 	</section>
 	<section class="wrapper-std growingline">
@@ -203,11 +200,8 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<div class="box rgap16">
 				<Reveal>
-					<p class="highlight-text">Applications close on <strong>30 September 2026</strong>. Write to us at <a class="linked w500" href="mailto:contact@svayambodha.in">contact@svayambodha.in</a> for any enquiry.</p>
+					<p class="highlight-text"><strong>Applications are now closed.</strong> We received over 150 registrations and have closed the application window ahead of the original deadline of 30 September 2026. Write to us at <a class="linked w500" href="mailto:contact@svayambodha.in">contact@svayambodha.in</a> for any enquiry.</p>
 				</Reveal>
-				<div class="row cgap8 rgap8 mwrap">
-					<a class="primary" href={applyLink} target="_blank" rel="noreferrer"><span>Apply Here →</span></a>
-				</div>
 			</div>
 			<Reveal start="top 70%">
 				<div class="box rgap12">

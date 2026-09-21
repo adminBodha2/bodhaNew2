@@ -69,7 +69,7 @@
 					<p class="txt-lg lh14 grey2">A field research internship documenting indigenous temple governance traditions across India — studying the temple as a spiritual, educational, and socio-economic institution.</p>
 					<p class="txt-xs tt-u w500 theme">Oct 2026 – Feb 2027</p>
 				</div>
-				<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">IKS Internship | Applications Open</p>
+				<p class="txt-sm tt-u w500 grey3 bordertop px16 lg:px32 py16 self-bottom">IKS Internship | Applications Closed</p>
 			</a>
 		</div>
 	</section>
