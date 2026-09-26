@@ -75,6 +75,7 @@
 		<div class="box foot-col rgap16 grid4">
 			<p class="txt-xs light-footer tt-u">Other</p>
 			<div class="foot-links box">
+				<a class="foot-link blank white" href="/support">Support Us</a>
 				<a class="foot-link blank white" href="/about">About</a>
 				<a class="foot-link blank white" href="/inspiration">Inspiration</a>
 				<a class="foot-link blank white" href="/lab">Lab</a>

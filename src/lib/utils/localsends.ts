@@ -121,38 +121,38 @@ export const acadCourses = [
 
 export const navLinks = [
 	{
-		title: 'Research',
-		link: '/research',
+		title: 'Anveshi',
+		link: '/anveshi'
 	},
 	{
-		title: 'Anveshi',
-		link: '/anveshi',
+		title: 'Research',
+		link: '/research'
 	},
 	{
 		title: 'Big Questions',
-		link: '/big-questions',
+		link: '/big-questions'
 	},
 	{
 		title: 'IKS',
-		link: '/indian-knowledge-systems',
+		link: '/indian-knowledge-systems'
 	},
 	{
 		title: 'Library',
-		link: '/library',
+		link: '/library'
 	},
 	{
 		title: 'Blog',
-		link: '/blog',
+		link: '/blog'
 	},
 	{
-		title: 'Inspiration',
-		link: '/inspiration',
+		title: 'Support Us',
+		link: '/support'
 	},
 	{
 		title: 'Team',
-		link: '/team',
+		link: '/team'
 	}
-]
+];
 
 export const researchAreas = [
 		{

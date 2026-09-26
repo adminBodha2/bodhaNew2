@@ -474,4 +474,3 @@ When editing this page:
 ## current checklist
 - fix SEO
 - standard final styling
-- playwright setup

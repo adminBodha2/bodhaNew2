@@ -60,6 +60,7 @@
 					<button class="blank dropdown-inside" class:visible={dropvis} onclick={handleClickOutside}>
 						<a class="in-navbar-link" href="/newsletter">Newsletter</a>
 						<a class="in-navbar-link" href="/aryavarta">Aryavarta</a>
+						<a class="in-navbar-link" href="/inspiration">Inspiration</a>
 						<a class="in-navbar-link" href="/designbodha">designbodha</a>
 						<a class="in-navbar-link" href="/wiki">Wiki</a>
 						<a class="in-navbar-link" href="/lab">Lab</a>

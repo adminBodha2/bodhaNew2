@@ -57,6 +57,17 @@
 	afterNavigate(async () => {
 		await tick();
 		openClassicDocumentLinksInNewTabs();
+		// Re-measure GSAP triggers for the new page. Without this, StackingWords /
+		// Reveal / Slide / Cut positions computed for the previous page go stale
+		// after client-side navigation and scroll animations never fire.
+		if (browser) {
+			try {
+				const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+				ScrollTrigger.refresh();
+			} catch {
+				// GSAP not loaded on this page — animated components refresh on init.
+			}
+		}
 	});
 
 onNavigate((navigation) => {

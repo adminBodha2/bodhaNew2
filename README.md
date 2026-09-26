@@ -39,7 +39,7 @@ bodharesearch.in/
 ├── svelte.config.js      # SvelteKit configuration
 ├── tsconfig.json         # TypeScript configuration
 ├── vite.config.ts        # Vite build configuration
-├── yarn.lock             # Yarn lock file
+├── pnpm-lock.yaml         # pnpm lock file
 └── README.md             # This file
 ```
 
@@ -47,7 +47,7 @@ bodharesearch.in/
 
 **Prerequisites**
 - Node.js (v18 or higher recommended)
-- Yarn (`npm install -g yarn`)
+- pnpm (`corepack prepare pnpm --activate`, or `npm install -g pnpm`)
 - A .env file with `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 - If you don't want to use Supabase, remove all code that imports from src/lib/utils/supabaseClient, then delete that file.
 
@@ -57,16 +57,16 @@ git clone https://github.com/adminBodha2/bodhaNew2
 cd bodhaNew2
 
 # Install dependencies
-yarn install
+pnpm install
 
 # Run development server
-yarn dev
+pnpm dev
 
 # Build for production
-yarn build
+pnpm build
 
 # Preview production build
-yarn preview
+pnpm preview
 ```
 
 The website code in this repository is licensed under [MIT License](https://mit-license.org/).
