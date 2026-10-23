@@ -12,6 +12,7 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
+	import { arunachalDays, type ArunachalPlate } from '$lib/data/arunachal-itinerary';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
@@ -30,6 +31,31 @@
 	$effect(() => {
 		templeStatus = data.templetext === false ? 4 : 1;
 	});
+
+	// Each plate's column spans are chosen from the length of its narration, so a
+	// one-line caption never gets a sliver of a column and a long paragraph never
+	// gets squeezed. Sides alternate to give the day a left-right rhythm.
+	function plateKind(narration?: string) {
+		const length = (narration ?? '').trim().length;
+		if (length === 0) return 'p-full';
+		if (length <= 110) return 'p-brief';
+		if (length <= 260) return 'p-even';
+		return 'p-long';
+	}
+
+	function layoutPlates(plates: ArunachalPlate[]) {
+		let sided = 0;
+		return plates.map((plate, i) => {
+			const kind = plateKind(plate.narration);
+			return {
+				...plate,
+				kind,
+				flip: kind !== 'p-full' && sided++ % 2 === 1,
+				seq: i + 1,
+				total: plates.length
+			};
+		});
+	}
 
 	let jsonld = $derived(
 		stringifyJsonLd(
@@ -59,7 +85,7 @@
 		{/if}
 	</Crumb>
 	<!--------------introduction with details like date, pricing etc.------------------>
-	<section class="wrapper-std">
+	<section class="wrapper-std first-box">
 		<Slide targetSelector=".slide-item">
 			<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16 content-highlights slide-item">
 				<data.content />
@@ -126,6 +152,45 @@
 		{/if}
 		</div>
 	</section>
+	{#if data.slug === "arunachal"}
+	<section class="arunachal wrapper-std growingline">
+		{#each arunachalDays as day (day.n)}
+			<div class="aru-day">
+				<aside class="aru-aside">
+					<div class="aru-sticky box rgap16">
+						<div class="box ytop rgap16">
+							<p class="aru-date txt-xs tt-u w600 ls008p anveshi-bright">{day.date}</p>
+							<h2 class="aru-title w600 lh12">Day {day.n} - {day.place}</h2>
+						</div>
+						<p class="aru-exp txt-sm lh16 grey1">{day.experience}</p>
+						<div class="aru-label row ycenter cgap8 ptop16">
+							<p class="txt-sm tt-u w600 anveshi-bright-text ls010p">Itinerary</p>
+						</div>
+						<pre class="aru-itin txt-bs grey">{day.itinerary}</pre>
+					</div>
+				</aside>
+				<div class="aru-plates">
+					{#each layoutPlates(day.plates) as plate (plate.image)}
+						<div class="aru-plate {plate.kind}" class:flip={plate.flip}>
+							<div class="aru-shot">
+								<img src={plate.image} alt={plate.narration ?? `Day ${day.n} — ${day.place}`} loading="lazy" />
+							</div>
+							{#if plate.narration}
+								<div class="aru-note box rgap8">
+									<span class="aru-rule"></span>
+									<p class="lh15 grey3">{plate.narration}</p>
+									<span class="aru-seq txt-00 w600 grey0 ls010p">
+										{String(plate.seq).padStart(2, '0')} / {String(plate.total).padStart(2, '0')}
+									</span>
+								</div>
+							{/if}
+						</div>
+					{/each}
+				</div>
+			</div>
+		{/each}
+	</section>
+	{:else}
 	<!--------------temples------------------>
 	<section class="wrapper-std growingline">
 		<Title text="Temples" anveshi={true} />
@@ -154,7 +219,7 @@
 			</Swipes>
 		{/if}
 	</section>
-
+	{/if}
 	<!--------------faq section------------------>
 	<section class="box wrapper-std growingline">
 		<FAQ />
@@ -193,5 +258,151 @@
 .dates, .price
 	@media screen and (max-width: 1024px)
 		border-bottom: var(--border-main)
+
+// ── arunachal day-wise narrative ─────────────────────────────
+
+.arunachal
+	row-gap: 4rem
+	@media screen and (min-width: 1025px)
+		row-gap: 6.5rem
+
+.aru-day
+	display: grid
+	grid-template-columns: minmax(0, 1fr)
+	row-gap: 2rem
+	@media screen and (min-width: 1025px)
+		grid-template-columns: 360px minmax(0, 1fr)
+		column-gap: 4rem
+	@media screen and (min-width: 1441px)
+		grid-template-columns: 400px minmax(0, 1fr)
+		column-gap: 5rem
+
+.aru-aside
+	// the aside has to fill the row, otherwise the sticky child has no
+	// travel room — same pattern as .doc-header-grid aside .stickybox
+	@media screen and (min-width: 1025px)
+		height: 100%
+
+.aru-sticky
+	// 80px clears the sticky site header, as .doc-header-grid .stickybox does
+	@media screen and (min-width: 1025px)
+		position: sticky
+		top: calc(80px + 1.5rem)
+		max-height: calc(100vh - 80px - 3rem)
+		overflow-y: auto
+		padding-bottom: 1.5rem
+		scrollbar-width: thin
+		border-right: var(--border-main)
+		&::-webkit-scrollbar
+			width: 2px
+		&::-webkit-scrollbar-thumb
+			background: var(--color-border)
+
+.aru-title
+	font-size: var(--txt-2xl)
+	letter-spacing: -0.02rem
+	flex: 1 1 auto
+	min-width: 0
+	@media screen and (min-width: 1281px)
+		font-size: var(--txt-3xl)
+
+.aru-date
+	flex: 0 0 auto
+	white-space: nowrap
+
+.aru-exp
+	letter-spacing: 0.02rem
+
+.aru-label
+	&::after
+		content: ''
+		flex: 1
+		height: 1px
+		background: var(--color-border-dark)
+		opacity: 0.45
+
+.aru-itin
+	line-height: 1.8
+	@media screen and (min-width: 1025px)
+		font-size: var(--txt-lg)
+		line-height: 1.75
+
+.aru-plates
+	display: flex
+	flex-direction: column
+	row-gap: 4rem
+	@media screen and (min-width: 1025px)
+		row-gap: 6.5rem
+
+.aru-plate
+	display: grid
+	grid-template-columns: minmax(0, 1fr)
+	row-gap: 1rem
+	img
+		width: 100%
+		display: block
+	@media screen and (min-width: 1025px)
+		grid-template-columns: repeat(6, minmax(0, 1fr))
+		column-gap: 1rem
+		row-gap: 1.5rem
+		align-items: center
+		&.p-full .aru-shot
+			grid-column: span 6
+		&.p-brief
+			.aru-shot
+				grid-column: span 3
+			.aru-note
+				grid-column: span 3
+		&.p-even
+			.aru-shot
+				grid-column: span 3
+			.aru-note
+				grid-column: span 3
+		&.p-long
+			.aru-shot
+				grid-column: span 6
+			.aru-note
+				grid-column: 2 / 6
+				justify-self: center
+				text-align: center
+		&.flip
+			.aru-shot
+				order: 2
+			.aru-note
+				order: 1
+		&.p-long.flip
+			.aru-shot
+				order: 1
+			.aru-note
+				order: 2
+
+.aru-rule
+	width: 2rem
+	height: 2px
+	background: var(--color-anveshi2)
+
+.aru-plate.p-long .aru-rule
+	@media screen and (min-width: 1025px)
+		align-self: center
+
+.aru-note
+	p
+		font-size: var(--txt-lg)
+	@media screen and (min-width: 1025px)
+		p
+			font-size: var(--txt-xl)
+
+.aru-plate.p-brief .aru-note
+	@media screen and (min-width: 1025px)
+		p
+			font-size: var(--txt-xl)
+			line-height: 1.45
+
+.aru-plate.p-long .aru-note
+	@media screen and (min-width: 1025px)
+		p
+			font-size: var(--txt-2xl)
+			line-height: 1.45
+			color: var(--color-primary)
 
 </style>
