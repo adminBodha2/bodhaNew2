@@ -4,9 +4,9 @@ description: "Eastern Arunachal — where the Brahmaputra leaves the mountains a
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/arunachal/herolandscape.webp
 id: 6
 isOpen: false
-dates: 24 – 29 Dec 2026
+dates: 23 – 28 Dec 2026
 price: ₹59,999/-
-duration: 4N 4D
+duration: 5N 4D
 temples: 18
 slug: arunachal
 registerLink: ""

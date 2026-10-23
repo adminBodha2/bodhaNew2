@@ -19,7 +19,7 @@ export type ArunachalDay = {
 export const arunachalDays: ArunachalDay[] = [
 	{
 		n: 1,
-		date: '25th Dec',
+		date: '24th Dec',
 		place: 'Namsai, Lohit and Lower Dibang Valley',
 		experience: 'Buddhist Pagodas · Hindu Kshetras · Historic Forts · Khampti Tribe',
 		itinerary: 'Depart for Parashuram Kund in the morning\n- Golden Pagoda, Namsai\n- Parashuram Kund and Temple, Lohit\n\nLunch at Parashuram Kund and then depart from Bhismaknagar \n- Bhismaknagar Fort, Bhismaknagar, Lower Dibang Valley\n- RIWATCH Museum, Roing, Lower Dibang Valley\n\nDinner and night stay at Tinsukia',
@@ -59,7 +59,7 @@ export const arunachalDays: ArunachalDay[] = [
 	},
 	{
 		n: 2,
-		date: '26th Dec',
+		date: '25th Dec',
 		place: 'Changlang and Tinsukia',
 		experience: 'Indigenous Temples · Coal and Oil Museums · Buddhist Monasteries · Tangsa and Singpo Tribes',
 		itinerary: 'Enter Arunachal at Kongsa for Changlang in the morning\n- Changlang Rangfrah Temple\n- Rangfrah Vidya Niketan Visit \n\nLunch at Singpho Margherita near Ledo\n- Digboi Centenary Museum, Digboi\n- Coal Museum, Margherita\n- Mounglang Monastery, Ledo',
@@ -93,7 +93,7 @@ export const arunachalDays: ArunachalDay[] = [
 	},
 	{
 		n: 3,
-		date: '27th Dec',
+		date: '26th Dec',
 		place: 'Tinsukia, Dibrugarh and Lower Siang',
 		experience: 'Hindu Temple Ruins · Revived Ahom Heritage · Contemporary Temples · The Majestic Brahmaputra · Tea Gardens',
 		itinerary: 'Depart in the morning for Silapathar\n- Silapathar Buddhist Monastery\n- Malinithan Temple\n- Archaeological Museum\n\nLunch on the way to Dibrugarh\n\nDibrugarh\n- Raidongia Doul\n- Anthropological Museum\n\nTilinga Temple\nGangabari Tea Garden\n\nReturn to and night stay in Tinsukia',
@@ -134,7 +134,7 @@ export const arunachalDays: ArunachalDay[] = [
 	},
 	{
 		n: 4,
-		date: '28th Dec',
+		date: '27th Dec',
 		place: 'Tirap',
 		experience: 'Indigenous Temples · Heritage Village Walk · Nocte Vaishnava Naga Tribe · Myanmar Border · Shaman Experience',
 		itinerary: 'Depart in the morning for Khonsa\n\nKhonsa Town Visit\n- Hindu Temple & Meeting with Indigenous Elders\n\nLapnan Village Visit\n- Basti Tour - Nocte Naga Hindu Experience\n\nLunch at Lapnan Basti, following by Thinsa Village visit \n- Rangjouban Temple\n- Meeting the Last Shaman of Thinsa\n\nReturn and night stay at Tinsukia',
