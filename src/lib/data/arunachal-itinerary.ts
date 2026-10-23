@@ -22,7 +22,7 @@ export const arunachalDays: ArunachalDay[] = [
 		date: '24th Dec',
 		place: 'Namsai, Lohit and Lower Dibang Valley',
 		experience: 'Buddhist Pagodas · Hindu Kshetras · Historic Forts · Khampti Tribe',
-		itinerary: 'Depart for Parashuram Kund in the morning\n- Golden Pagoda, Namsai\n- Parashuram Kund and Temple, Lohit\n\nLunch at Parashuram Kund and then depart from Bhismaknagar \n- Bhismaknagar Fort, Bhismaknagar, Lower Dibang Valley\n- RIWATCH Museum, Roing, Lower Dibang Valley\n\nDinner and night stay at Tinsukia',
+		itinerary: 'Arrive a night before on 23rd Dec. Depart for Parashuram Kund in the morning\n- Golden Pagoda, Namsai\n- Parashuram Kund and Temple, Lohit\n\nLunch at Parashuram Kund and then depart from Bhismaknagar \n- Bhismaknagar Fort, Bhismaknagar, Lower Dibang Valley\n- RIWATCH Museum, Roing, Lower Dibang Valley\n\nDinner and night stay at Tinsukia',
 		plates: [
 			{
 				image: 'https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/arunachal/landscape/1-1.webp',
@@ -137,7 +137,7 @@ export const arunachalDays: ArunachalDay[] = [
 		date: '27th Dec',
 		place: 'Tirap',
 		experience: 'Indigenous Temples · Heritage Village Walk · Nocte Vaishnava Naga Tribe · Myanmar Border · Shaman Experience',
-		itinerary: 'Depart in the morning for Khonsa\n\nKhonsa Town Visit\n- Hindu Temple & Meeting with Indigenous Elders\n\nLapnan Village Visit\n- Basti Tour - Nocte Naga Hindu Experience\n\nLunch at Lapnan Basti, following by Thinsa Village visit \n- Rangjouban Temple\n- Meeting the Last Shaman of Thinsa\n\nReturn and night stay at Tinsukia',
+		itinerary: 'Depart in the morning for Khonsa\n\nKhonsa Town Visit\n- Hindu Temple & Meeting with Indigenous Elders\n\nLapnan Village Visit\n- Basti Tour - Nocte Naga Hindu Experience\n\nLunch at Lapnan Basti, following by Thinsa Village visit \n- Rangjouban Temple\n- Meeting the Last Shaman of Thinsa\n\nReturn and night stay at Tinsukia, departure next morning on 28th.',
 		plates: [
 			{
 				image: 'https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/arunachal/landscape/4-1.webp',

@@ -1,15 +1,15 @@
 ---
 title: Arunachal Chapter | Bodha Anveshi Sacred Geography Tour
-description: "Eastern Arunachal — where the Brahmaputra leaves the mountains at Parashuram Kund, where the kings of Bhismakanagar ruled, and where the indigenous dharma of the hills still holds its ground."
+description: "Eastern Arunachal - where the Brahmaputra leaves the mountains at Parashuram Kund, where the kings of Bhismakanagar ruled, and where the indigenous dharma of the hills still holds its ground."
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/arunachal/herolandscape.webp
 id: 6
-isOpen: false
+isOpen: true
 dates: 23 – 28 Dec 2026
 price: ₹59,999/-
 duration: 5N 4D
 temples: 18
 slug: arunachal
-registerLink: ""
+registerLink: https://docs.google.com/forms/d/e/1FAIpQLSf3ohGoZ5w394QvXakWH3jhy74z9iW3iGdv87QfMy_0P5MG4Q/viewform
 brochureLink: ""
 quote: This Anveshi is a masterclass on the north-east - what it is now and what it means for the future of Bharatavarsha. Come with us to take a leap of imagination, adventure, culture, religion and history, along with the staple Anveshi architecture and sculpture. This Anveshi, we're upping the game.
 templetext: false
