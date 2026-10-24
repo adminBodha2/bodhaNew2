@@ -3,13 +3,13 @@ title: Odisha Chapter | Bodha Anveshi Sacred Geography Tour
 description: "Bodha Anveshi - Odisha Chapter - brings to you 20 magnificent temples, dedicated to all five deities of panchayatana worship in Bharatavarsha, in various different corners of Odisha, in an exciting tour of four days."
 image: https://www.bodharesearch.in/images/anveshi/odishahero.webp
 id: 5
-isOpen: true
+isOpen: false
 dates: 24 - 28 Oct 2026
 price: ₹44,999/-
 duration: 4N 4D
 temples: 20
 slug: odisha
-registerLink: https://docs.google.com/forms/d/e/1FAIpQLSePdUwg9O5M7tr5atYNac5vlfdMQ_hwjZuUpMWLKp5SMSAWOw/viewform
+registerLink: ''
 brochureLink: ''
 quote: Bodha Anveshi - Odisha Chapter - brings to you 20 magnificent temples, dedicated to all five deities of panchayatana worship in Bharatavarsha, in various different corners of Odisha, in an exciting tour of four days.
 templetext: true
