@@ -12,7 +12,7 @@
 	import Parallax from '$lib/comps/parallaxhalf.svelte';
 	import Reveal from '$lib/svelteanim/components/Reveal.svelte';
 	import Slide from '$lib/svelteanim/components/Slide2.svelte';
-	import { arunachalDays, type ArunachalPlate } from '$lib/data/arunachal-itinerary';
+	import { arunachalDays, arunachalDaysTwo, type ArunachalPlate } from '$lib/data/arunachal-itinerary';
 	import { absoluteImage, absoluteUrl, stringifyJsonLd, touristTripJsonLd } from '$lib/utils/seo';
 
 	let { data } = $props();
@@ -116,11 +116,13 @@
 						<p class="txt-bs w500 ptop16 pbot4">{data.duration}</p>
 						<p class="txt-xs grey1 tt-u">Duration</p>
 					</div>
+					{#if data.slug !== 'arunachal'}
 					<div class="icon-box box temples std-pad b-main">
 						<Location fill="var(--color-anveshi)" />
 						<p class="txt-bs w500 ptop16 pbot4">{data.temples}</p>
 						<p class="txt-xs grey1 tt-u">Temples</p>
 					</div>
+					{/if}
 					{#if data.isOpen}
 					<div class="anveshi-color-box box std-pad b-main ycenter xcenter ta-c">
 							<a class="txt-lg tt-u w600" href={data.registerLink} target="_blank" rel="noreferrer"><span>Register Now</span></a>
@@ -154,7 +156,7 @@
 	</section>
 	{#if data.slug === "arunachal"}
 	<section class="arunachal wrapper-std growingline">
-		{#each arunachalDays as day (day.n)}
+		{#each arunachalDaysTwo as day (day.n)}
 			<div class="aru-day">
 				<aside class="aru-aside">
 					<div class="aru-sticky box rgap16">
@@ -166,7 +168,13 @@
 						<div class="aru-label row ycenter cgap8 ptop16">
 							<p class="txt-sm tt-u w600 anveshi-bright-text ls010p">Itinerary</p>
 						</div>
-						<pre class="aru-itin txt-bs grey">{day.itinerary}</pre>
+						<pre class="aru-itin txt-sm grey1">{day.mid0}</pre>
+						<pre class="aru-itin txt-bs">{day.itin1}</pre>
+						<pre class="aru-itin txt-sm grey1">{day.midA}</pre>
+						<pre class="aru-itin txt-bs">{day.itin2}</pre>
+						{#if day.midB}
+						<pre class="aru-itin txt-sm grey1">{day.midB}</pre>
+						{/if}
 					</div>
 				</aside>
 				<div class="aru-plates">
@@ -271,11 +279,8 @@
 	grid-template-columns: minmax(0, 1fr)
 	row-gap: 2rem
 	@media screen and (min-width: 1025px)
-		grid-template-columns: 360px minmax(0, 1fr)
+		grid-template-columns: 480px minmax(0, 1fr)
 		column-gap: 4rem
-	@media screen and (min-width: 1441px)
-		grid-template-columns: 400px minmax(0, 1fr)
-		column-gap: 5rem
 
 .aru-aside
 	// the aside has to fill the row, otherwise the sticky child has no
@@ -291,6 +296,7 @@
 		max-height: calc(100vh - 80px - 3rem)
 		overflow-y: auto
 		padding-bottom: 1.5rem
+		padding-right: 2rem
 		scrollbar-width: thin
 		border-right: var(--border-main)
 		&::-webkit-scrollbar
@@ -324,8 +330,13 @@
 .aru-itin
 	line-height: 1.8
 	@media screen and (min-width: 1025px)
-		font-size: var(--txt-lg)
-		line-height: 1.75
+		&.txt-bs
+			font-size: var(--txt-lg)
+			line-height: 1.75
+		&.txt-sm
+			font-size: var(--txt-bs)
+			line-height: 1.5
+			font-style: italic
 
 .aru-plates
 	display: flex
