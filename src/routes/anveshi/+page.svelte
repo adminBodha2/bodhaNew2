@@ -92,7 +92,7 @@
 				</Reveal>
 				<Slider>
 					<div class="row gap8 mwrap">
-						<a class="primary anveshi" href="/anveshi/odisha"><span>OPEN - ODISHA</span></a>
+						<a class="primary anveshi" href="/anveshi/arunachal"><span>OPEN - ARUNACHAL</span></a>
 					</div>
 				</Slider>
 			</div>

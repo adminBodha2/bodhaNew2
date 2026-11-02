@@ -189,7 +189,7 @@ export const arunachalDaysTwo: ArunachalDayTwo[] = [
 		date: '24th Dec',
 		place: 'Namsai, Lohit and Lower Dibang Valley',
 		experience: 'Buddhist Pagodas · Hindu Kshetras · Historic Forts · Khampti Tribe',
-		mid0: 'Arrive on 23rd Dec. Depart for Parashuram Kund in the morning',
+		mid0: 'Arrive on 23rd Dec. Depart for Parashuram Kund in the morning\nNearest airport - Mohanbari Airport, Nearest Railway Stations - Tinsukia, Dibrugarh',
 		itin1: '- Golden Pagoda, Namsai\n- Parashuram Kund and Temple, Lohit',
 		midA: 'Lunch at Parashuram Kund and then depart from Bhismaknagar',
 		itin2: '- Bhismaknagar Fort, Bhismaknagar, Lower Dibang Valley\n- RIWATCH Museum, Roing, Lower Dibang Valley',
