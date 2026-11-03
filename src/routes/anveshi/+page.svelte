@@ -154,7 +154,7 @@
 		<section class="wrapper-std growingline alternate" id="current-chapter">
 			<Title text="current chapter" anveshi={true} />
 			{#each currproj as item, i}
-					<a class="grid grid-cols-1 lg:grid-cols-3 ordered" href="/anveshi{item.link}">
+					<a class="grid grid-cols-1 lg:grid-cols-3 ordered" href="/anveshi/arunachal">
 						<div class="box up col-span-1">
 							<Blur>
 								<img class="fitted h-also" src={item.gallery} alt={item.chapter} />
