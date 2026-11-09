@@ -79,11 +79,19 @@
 
 <Parallax wipe={true} imageLink={data.image} />
 <Container>
-	<Crumb showT={true} title="{data.slug} Chapter" showD={true} desc={data.description} showRow={data.isOpen}>
+	{#if data.slug === 'arunachal'}
+		<Crumb showT={true} title="Arunachal East Chapter" showD={true} desc={data.description} showRow={data.isOpen}>
 		{#if data.isOpen}
 			<a class="anveshi-pill" href={data.registerLink} target="_blank" rel="noreferrer">REGISTER NOW!</a>
 		{/if}
 	</Crumb>
+	{:else}
+		<Crumb showT={true} title="{data.slug} Chapter" showD={true} desc={data.description} showRow={data.isOpen}>
+		{#if data.isOpen}
+			<a class="anveshi-pill" href={data.registerLink} target="_blank" rel="noreferrer">REGISTER NOW!</a>
+		{/if}
+	</Crumb>
+	{/if}
 	<!--------------introduction with details like date, pricing etc.------------------>
 	<section class="wrapper-std first-box">
 		<Slide targetSelector=".slide-item">
