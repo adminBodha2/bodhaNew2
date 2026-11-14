@@ -1,5 +1,5 @@
 ---
-title: Arunachal East Chapter | Bodha Anveshi Sacred Geography Tour
+title: East Arunachal Chapter | Bodha Anveshi Sacred Geography Tour
 description: "Eastern Arunachal - where the Brahmaputra leaves the mountains at Parashuram Kund, where the kings of Bhismakanagar ruled, and where the indigenous dharma of the hills still holds its ground."
 image: https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/anveshi/arunachal/herolandscape.webp
 id: 6

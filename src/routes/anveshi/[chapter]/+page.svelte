@@ -80,7 +80,7 @@
 <Parallax wipe={true} imageLink={data.image} />
 <Container>
 	{#if data.slug === 'arunachal'}
-		<Crumb showT={true} title="Arunachal East Chapter" showD={true} desc={data.description} showRow={data.isOpen}>
+		<Crumb showT={true} title="East Arunachal Chapter" showD={true} desc={data.description} showRow={data.isOpen}>
 		{#if data.isOpen}
 			<a class="anveshi-pill" href={data.registerLink} target="_blank" rel="noreferrer">REGISTER NOW!</a>
 		{/if}
