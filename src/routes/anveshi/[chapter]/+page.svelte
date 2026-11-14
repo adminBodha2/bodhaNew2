@@ -291,13 +291,11 @@
 		column-gap: 4rem
 
 .aru-aside
-	// the aside has to fill the row, otherwise the sticky child has no
-	// travel room — same pattern as .doc-header-grid aside .stickybox
 	@media screen and (min-width: 1025px)
+		position: relative
 		height: 100%
 
 .aru-sticky
-	// 80px clears the sticky site header, as .doc-header-grid .stickybox does
 	@media screen and (min-width: 1025px)
 		position: sticky
 		top: calc(80px + 1.5rem)
@@ -307,6 +305,8 @@
 		padding-right: 2rem
 		scrollbar-width: thin
 		border-right: var(--border-main)
+		> *
+			flex-shrink: 0
 		&::-webkit-scrollbar
 			width: 2px
 		&::-webkit-scrollbar-thumb
