@@ -27,6 +27,7 @@
 	let metaDescription = $derived(data.description);
 	let metaUrl = $derived(absoluteUrl('/anveshi/' + data.slug));
 	let metaImage = $derived(absoluteImage(data.image));
+	let isColumns = $derived(data.slug === 'arunachal' ? 6 : 6);
 
 	$effect(() => {
 		templeStatus = data.templetext === false ? 4 : 1;
@@ -108,7 +109,7 @@
 	<section class="wrapper-std growingline alternate">
 		<div class="box rgap16">
 		<Slide targetSelector=".icon-box">
-				<div class="grid grid-cols-2 lg:grid-cols-6 gap16">
+				<div class="grid grid-cols-2 lg:grid-cols-{isColumns} gap16">
 					<div class="icon-box box dates std-pad b-main">
 						<Calendar fill="var(--color-anveshi)" />
 						<p class="txt-bs w500 ptop16 pbot4">{data.dates}</p>
@@ -131,10 +132,20 @@
 						<p class="txt-xs grey1 tt-u">Temples</p>
 					</div>
 					{/if}
+					{#if data.slug === 'arunachal'}
+					<div class="icon-box box temples std-pad b-main" style="grid-column: span 2; line-height: 1.5">
+						<p>Where to Reach - <a class="linked" href="https://maps.app.goo.gl/XSUXn2waFh3JHZtE8" target="_blank" rel="noreferrer"><b>Palm Resorts, Tinsukia</b></a></p>
+						<p>Nearest Airport - Dibrugarh (Mohanbari)Railway - Tinsukia</p>
+						<p style="margin-bottom: 0.5rem">Nearest Railway Station - Tinsukia</p>
+						<p>When to Reach - <span class="anveshi-o">23rd Dec</span></p>
+						<p>When to Leave - <span class="anveshi-o">28th Dec</span></p>
+					</div>
+					{/if}
 					{#if data.isOpen}
 					<div class="anveshi-color-box box std-pad b-main ycenter xcenter ta-c">
 							<a class="txt-lg tt-u w600" href={data.registerLink} target="_blank" rel="noreferrer"><span>Register Now</span></a>
 					</div>
+
 						{/if}
 					{#if data.brochureLink}
 					<div class="anveshi-color-box box std-pad b-main ycenter xcenter ta-c">
