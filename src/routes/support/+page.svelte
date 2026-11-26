@@ -73,20 +73,22 @@
 	<section class="wrapper-std">
 		<Crumb showT={true} title="Support Us" showD={true} desc={metaDescription} />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
-			<p class="highlight-text">
-				Modern India is governed by frameworks that often remain disconnected from its own civilizational logic. Bodha exists to correct this. We are a research group and think tank working at the intersection of culture, policy, and Indian knowledge systems (IKS) - drawing from Hindu knowledge systems to engage with contemporary questions. Our work is to translate the wisdom of Hindu traditions
-				into rigorous, field-tested insights that can inform policy, shape education, and guide our collective future.
-			</p>
-
-			<p class="highlight-text">
-				This means:<br />
-				- Field research into living Hindu institutions<br />
-				- Deep theoretical work rooted in dharmic frameworks<br />
-				- Training a new generation of scholars<br />
-				- Asking, and attempting to answer, the hardest questions facing Hindu society today<br />
-				- Embedding IKS into curriculum, pedagogy, and methodologies
-			</p>
-		</div>
+				<p class="highlight-text">
+					Modern India is governed by frameworks that often remain disconnected from its own civilizational logic. Bodha exists to correct this. We are a research group and think tank working at the intersection of culture, policy, and Indian knowledge systems (IKS) - drawing from Hindu knowledge systems to engage with contemporary questions. Our work is to translate the wisdom of Hindu traditions into rigorous, field-tested insights that can inform policy, shape education, and guide our collective future.
+				</p>
+				<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
+					<p class="txt-sm tt-u w500 theme">This means</p>
+					<ul class="support-list box rgap12">
+						<li class="txt-lg lh14 grey2">Field research into living Hindu institutions</li>
+						<li class="txt-lg lh14 grey2">Deep theoretical work rooted in dharmic frameworks</li>
+						<li class="txt-lg lh14 grey2">Training a new generation of scholars</li>
+						<li class="txt-lg lh14 grey2">Asking the hardest questions facing Hindu society today</li>
+						<li class="txt-lg lh14 grey2">Embedding IKS into curriculum, pedagogy, and methodologies</li>
+					</ul>
+				</div>
+			</div>
+	</section>
+	<section class="wrapper-std growingline">
 		<div class="box gap32">
 			<Title text="Ways to Support" />
 			<Reveal>
@@ -116,7 +118,6 @@
 			</div>
 			<p class="txt-sm grey2">Donations are eligible for deduction under Section 80G of the Income Tax Act, 1961. · Svayambodha Centre for Culture Studies Foundation · Registered under Section 12A.</p>
 		</div>
-	</section>
 	<section class="wrapper-std growingline alternate">
 		<Title text="What Your Support Makes Possible" />
 		<Slide targetSelector=".support-area">
@@ -263,5 +264,21 @@
 	line-height: 1
 	padding: 0.25rem 0.5rem
 	cursor: pointer
+
+.this-means
+	margin: 0
+	padding: 0
+	list-style: none
+
+.this-means li
+	padding-left: 1rem
+	position: relative
+	color: var(--color-grey-2)
+
+.this-means li::before
+	content: '—'
+	position: absolute
+	left: 0
+	color: var(--color-theme)
 
 </style>
