@@ -120,6 +120,7 @@
 			</div>
 			<p class="txt-sm grey2">Donations are eligible for deduction under Section 80G of the Income Tax Act, 1961. · Svayambodha Centre for Culture Studies Foundation · Registered under Section 12A.</p>
 		</div>
+	</section>
 	<section class="wrapper-std growingline alternate">
 		<Title text="What Your Support Makes Possible" />
 		<Slide targetSelector=".support-area">
@@ -267,20 +268,5 @@
 	padding: 0.25rem 0.5rem
 	cursor: pointer
 
-.this-means
-	margin: 0
-	padding: 0
-	list-style: none
-
-.this-means li
-	padding-left: 1rem
-	position: relative
-	color: var(--color-grey-2)
-
-.this-means li::before
-	content: '—'
-	position: absolute
-	left: 0
-	color: var(--color-theme)
 
 </style>
