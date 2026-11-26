@@ -33,7 +33,7 @@
 			points: ['Training scholars in Indic anthropology and sociology', 'Building intellectual depth that compounds over decades']
 		}
 	];
-	const supportAudience = ['Believe that India must think from within its own civilization', 'Feel that policy and academia are disconnected from cultural reality', 'Want to contribute to a long-term Hindu intellectual renaissance', 'Prefer building institutions over funding events'];
+	const supportAudience = ['Believe that India must think from within its own civilization', 'Feel that policy and academia are disconnected from cultural reality', 'Want to contribute to a long-term Hindu intellectual renaissance', 'Are committed to building institutions'];
 	const jsonld = stringifyJsonLd(
 		webPageJsonLd({
 			name: title,
