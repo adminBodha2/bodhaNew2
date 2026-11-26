@@ -114,6 +114,7 @@
 					<p>Select Monthly Amount</p>
 				</div>
 			</div>
+			<p class="txt-sm grey2">Donations are eligible for deduction under Section 80G of the Income Tax Act, 1961. · Svayambodha Centre for Culture Studies Foundation · Registered under Section 12A.</p>
 		</div>
 	</section>
 	<section class="wrapper-std growingline alternate">
@@ -161,7 +162,10 @@
 		<Title text="Sponsor a Complete Vertical" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<Reveal>
-				<p class="highlight-text">If you prefer precision, you can fund clearly defined units of work.</p>
+				<div class="box rgap16">
+					<p class="highlight-text">If you prefer precision, you can fund clearly defined units of work.</p>
+					<p class="txt-lg lh14 grey2">Write to us at <a class="linked w500" href="mailto:contact@bodharesearch.in">contact@bodharesearch.in</a> to discuss how your contribution can be directed.</p>
+				</div>
 			</Reveal>
 			<Slide targetSelector=".vertical-option">
 				<div class="grid grid-cols-1 gap16">
