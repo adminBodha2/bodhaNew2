@@ -8,6 +8,7 @@
 	import Title from '$lib/comps/page-title.svelte';
 	import RazorpayButton from '$lib/comps/RazorpayButton.svelte';
 	import { browser } from '$app/environment';
+	import Parallax from '$lib/comps/parallaxhalf.svelte';
 
 	type SupportArea = {
 		title: string;
@@ -69,6 +70,7 @@
 
 <Head {title} {metaDescription} {metaUrl} {metaImage} imWidth="1536" imHeight="1024" {jsonld} />
 
+<Parallax imageLink="https://sddlbohniijgegvypkfk.supabase.co/storage/v1/object/public/bodhasite/supportus/support%20us.webp" wipe={true} />
 <Container>
 	<section class="wrapper-std">
 		<Crumb showT={true} title="Support Us" showD={true} desc={metaDescription} />
