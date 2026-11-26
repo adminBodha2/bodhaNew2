@@ -80,7 +80,7 @@
 				</p>
 				<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
 					<p class="txt-sm tt-u w500 theme">This means</p>
-					<ul class="support-list box rgap12">
+					<ul class="support-list rgap12">
 						<li class="txt-lg lh14 grey2">Field research into living Hindu institutions</li>
 						<li class="txt-lg lh14 grey2">Deep theoretical work rooted in dharmic frameworks</li>
 						<li class="txt-lg lh14 grey2">Training a new generation of scholars</li>
@@ -128,7 +128,7 @@
 				{#each supportAreas as area}
 					<article class="box whitestone b-main p16 md:p24 lg:p32 rgap16 support-area">
 						<h3 class="txt-2xl lg:txt-3xl w600 lh12 ls001m">{area.title}</h3>
-						<ol class="support-list box rgap12">
+						<ol class="support-list rgap12">
 							{#each area.points as point}
 								<li class="txt-lg lh14 grey2">{point}</li>
 							{/each}
@@ -153,7 +153,7 @@
 			<Reveal start="top 70%">
 				<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
 					<p class="txt-sm tt-u w500 theme">You can</p>
-					<ul class="support-list box rgap12">
+					<ul class="support-list rgap12">
 						<li class="txt-lg lh14 grey2">Support a month, a quarter, or a full year of work</li>
 						<li class="txt-lg lh14 grey2">Become a long-term institutional patron</li>
 						<li class="txt-lg lh14 grey2">Help us operate without constantly optimizing for short-term funding</li>
@@ -198,7 +198,7 @@
 			<Reveal start="top 70%">
 				<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
 					<p class="txt-sm tt-u w500 theme">You may consider supporting Bodha if you</p>
-					<ul class="support-list box rgap12">
+					<ul class="support-list rgap12">
 						{#each supportAudience as point}
 							<li class="txt-lg lh14 grey2">{point}</li>
 						{/each}
@@ -239,6 +239,9 @@
 
 .support-list li
 	padding-left: 0.25rem
+
+.support-list li + li
+	margin-top: 0.75rem
 
 .paybuttons
 	min-height: 44px
