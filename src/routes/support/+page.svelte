@@ -33,7 +33,7 @@
 			points: ['Training scholars in Indic anthropology and sociology', 'Building intellectual depth that compounds over decades']
 		}
 	];
-	const supportAudience = ['Believe that India must think from within its own civilization', 'Feel that policy and academia are disconnected from cultural reality', 'Want to contribute to a long-term Hindu intellectual renaissance', 'Are committed to building institutions'];
+	const supportAudience = ['Believe that India must think from within its own civilization', 'Feel that policy and academia are disconnected from cultural reality', 'Want to contribute to a long-term Hindu intellectual renaissance', 'Are committed to building long term institutions'];
 	const jsonld = stringifyJsonLd(
 		webPageJsonLd({
 			name: title,
@@ -193,7 +193,7 @@
 		<Title text="Who Should Support Bodha" />
 		<div class="grid grid-cols-1 lg:grid-cols-2 cgap64 rgap16">
 			<Reveal>
-				<p class="highlight-text">Supporting Bodha is closer to sponsoring a gurukula, patronizing a scholar, or sustaining a parampara. Your participation ensures that the right questions are asked, the right frameworks built, and the long-term seeds for continuance are sown.</p>
+				<p class="highlight-text">Your participation ensures that the right questions are asked, the right frameworks built, and the long-term seeds for continuance are sown.</p>
 			</Reveal>
 			<Reveal start="top 70%">
 				<div class="box whitestone b-main p16 md:p24 lg:p32 rgap16">
